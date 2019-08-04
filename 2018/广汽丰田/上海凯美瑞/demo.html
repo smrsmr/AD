@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>第八代凯美瑞 真正意义上的彻底换代</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        #cnzz_stat_icon_1260102516, #cnzz_stat_icon_1260842227, #cnzz_stat_icon_1260919928, #cnzz_stat_icon_1255711023, #cnzz_stat_icon_1260771396, #cnzz_stat_icon_1261301380, #cnzz_stat_icon_1261327484 {
+            display: none;
+        }
+        img {
+            border: none;
+            vertical-align: middle;
+            max-width: 100%;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 750px;
+            background-color: #eaeaee;
+        }
+        .con6 {
+            position: relative;
+        }
+        .form input, .form select {
+            width: 9.5rem;
+            height: 1.5rem;
+            background: transparent;
+            padding-left: 0.5rem;
+        }
+        .form select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 10rem;
+            height: 1.59rem;
+        }
+        #name, #tel, #series_id, #dealers {
+            position: absolute;
+            right: 2.7rem;
+            top: 12.7rem;
+        }
+        #tel {
+            top: 14.76rem;
+        }
+        #series_id {
+            top: 16.76rem;
+        }
+        #dealers {
+            top: 18.88rem;
+        }
+        #submit {
+            position: absolute;
+            width: 5rem;
+            height: 5rem;
+            left: 10.4rem;
+            top: 21.7rem;
+            background: transparent;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="con1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/15/99/204/13290360.jpg" alt="图片" > </div>
+    <div class="con2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/16/99/204/13290361.jpg" alt="图片" > </div>
+    <div class="con4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/17/99/204/13290362.jpg" alt="图片" > </div>
+    <div class="con5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/18/99/204/13290363.jpg" alt="图片" > </div>
+    <div class="con5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/19/99/204/13290364.jpg" alt="图片" > </div>
+    <div class="con6">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/230/16/204/13269410.jpg" alt="图片" >
+        <div class="form">
+            <input type="text" id="name">
+            <input type="tel" id="tel" maxlength="11">
+            <select id="series_id">
+                <option value="0">-请选择车型-</option>
+                <option value="449">凯美瑞双擎</option>
+                <option value="154">凯美瑞</option>
+            </select>
+            <select id="dealers">
+                <option value="0">-请选项经销商-</option>
+                <option value="广汽丰田上海开隆徐汇店">广汽丰田上海开隆徐汇店</option>
+                <option value="广汽丰田上海美兰沪西店">广汽丰田上海美兰沪西店</option>
+                <option value="广汽丰田上海长宇浦东店">广汽丰田上海长宇浦东店</option>
+                <option value="广汽丰田上海和展闵行店">广汽丰田上海和展闵行店</option>
+                <option value="广汽丰田上海新港杨浦店">广汽丰田上海新港杨浦店</option>
+                <option value="广汽丰田上海永达长荣店">广汽丰田上海永达长荣店</option>
+                <option value="广汽丰田上海绅瑞真南店">广汽丰田上海绅瑞真南店</option>
+                <option value="广汽丰田上海晨隆诸光店">广汽丰田上海晨隆诸光店</option>
+                <option value="广汽丰田上海交运滨江店">广汽丰田上海交运滨江店</option>
+            </select>
+            <button id="submit"></button>
+        </div>
+    </div>
+    <div class="con7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/231/16/204/13269411.jpg" alt="图片" > </div>
+</div>
+</body>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    //报名
+    var flag = true;
+    $("#submit").on('click', function() {
+        if (flag) {
+            var name = $("#name").val(),  //姓名
+                tel = $("#tel").val(),       //电话
+                series_id = $("#series_id").val(),  //车型
+                dealer = $("#dealers").val(),  //经销商
+                brand_id = 18, //品牌
+                act_id = 860, //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+                    act_id: act_id,
+                    dealers: dealer
+                }
+
+            if (name == '姓名' || tel == '手机') {
+                alert('信息没有填写完整');
+                return false;
+            }
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+            if (dealer == "0") {
+                alert('请选择经销商');
+                return false;
+            }
+
+            flag = false;
+            //发送请求
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert("恭喜你，报名成功了");
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    } else {
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

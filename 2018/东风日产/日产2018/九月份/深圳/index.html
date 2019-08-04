@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>东风日产x NBA中国赛 一起上场 智控全场</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {
+            position: relative;
+        }
+        .video{
+            position: absolute;
+            left: 50%;
+            top: 4rem;
+            width: 24rem;
+            margin-left: -12rem;
+            height: 14.4rem;
+            overflow: hidden;
+        }
+        .video span {
+            position: absolute;
+            top: 5.6rem;
+            left: 10.6rem;
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/226/77/210/13675111.png) no-repeat top center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background-size: 100% 100%;
+        }
+        .video video, .video img {width: 24rem;height: 14.4rem;}
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 6.6rem;
+            width: 19rem;
+            height: 14.9rem;
+            margin-left: -9.36rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 1.1rem;
+            padding-left: 1rem;
+        }
+        .bmk p {
+            width: 17.3rem;
+            height: 2.6rem;
+            margin-left: 0;
+            margin-top: 0;
+            margin-bottom: 0.65rem;
+        }
+        .bmk .series,.bmk .dealers {
+            width: 18.3rem;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 0;
+            top: 13rem;
+            width: 100%;
+        }
+        .privacyPolicy input{width:1.4rem !important;height:1.4rem !important}
+        .privacyPolicy span{display:inline-block;font-size:1.2rem;color:#000;position: relative;top: -4px;}
+        .privacyPolicy a{color:#000}
+        #submit {
+            position: absolute;
+            left: 50%;
+            top: 21.4rem;
+            width: 23rem;
+            height: 2.7rem;
+            margin-left: -11.6rem;
+            background: transparent;
+        }
+        .swi {
+            position: absolute;
+            left: 50%;
+            top: 4.5rem;
+            width: 100%;
+            height: 13.5rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+            border-radius: 100%;
+            background: #fff;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #c90229;
+            width: 20px;
+            border-radius: 10px;
+        }
+        .list {
+            position: absolute;
+            left: 50%;
+            top: 5rem;
+            width: 24rem;
+            height: 27rem;
+            margin-left: -12rem;
+            overflow: auto;
+        }
+        .list ul {
+            width: 90%;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #dddddd;
+            overflow: hidden;
+            padding-bottom: 0.5rem;
+        }
+        .list ul li {
+            line-height: 1.7rem;
+        }
+        .list ul li:first-child {
+            font-size: 1.2rem;
+        }
+        .mCSB_inside > .mCSB_container {
+             margin-right: 0px;
+        }
+        .mCSB_inside > .mCSB_container{margin-right:0px}
+        .mCSB_scrollTools .mCSB_draggerRail{width:8px;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
+        .mCSB_scrollTools .mCSB_draggerRail{background-color:#c90329 !important}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:white !important}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/232/77/210/13675117.png" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/233/77/210/13675118.png" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/234/77/210/13675119.png" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/235/77/210/13675120.png" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/77/210/13675121.png" alt="">
+        <div class="video">
+            <span style="display: block;"></span>
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/231/77/210/13675116.png" style="display: inline;">
+            <video id="video1" class="my-video" title="" playsinline="" webkit-playsinline="" width="100%" height="100%" preload="" src="http://mat1.gtimg.com/autoguangzhou/video/xy0921.mov"></video>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/77/210/13675122.png" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+        </div>
+        <button id="submit"></button>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/77/210/13675123.png" alt="">
+        <div class="swi">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/200/76/210/13674830.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/201/76/210/13674831.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/202/76/210/13674832.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/203/76/210/13674833.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/239/77/210/13675124.jpg" alt="">
+        <div class="list">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des=[
+        {"name":"东风日产深圳东风南方华鹏专营店","nameCode":"G2912","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-82378000","Xtel":"0755-82378225","address":"深圳市罗湖区清水河三路深业车城博丰大厦裙楼4楼"},
+        {"name":"东风日产深圳东风南方华新专营店","nameCode":"G2920","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-27473099","Xtel":"0755-27473022","address":"深圳市宝安区前进一路与新安四路交汇处，天虹沃尔玛旁"},
+        {"name":"东风日产深圳东风南方华翔专营店","nameCode":"G2921","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-89628098","Xtel":"0755-89628111","address":"深圳市龙岗中心城如意路与沙园路交叉段（龙城街道办旁）"},
+        {"name":"东风日产深圳裕朋专营店","nameCode":"G2922","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-88316603","Xtel":"0755-88316602,","address":"深圳市福田区北环大道7028号（香梅北天桥旁）"},
+        {"name":"东风日产深圳东风南方华旭专营店","nameCode":"G2923","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-86112500","Xtel":"0755-26720506","address":"深圳市南山区白石路桂庙新村118号（深圳大学南门旁）"},
+        {"name":"东风日产深圳新大兴专营店","nameCode":"G2925","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-27283333","Xtel":"0755-27283502","address":"深圳市宝安区沙井西环路2111号（海上田园路口）"},
+        {"name":"东风日产深圳东风南方华瑞专营店","nameCode":"G2926","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-83052038","Xtel":"0755-83888866","address":"深圳市福田区深南大道6068号联合华鹏汽车交易广场C1-2(香蜜湖度假村旁边)"},
+        {"name":"东风日产深圳东风南方华龙专营店","nameCode":"G2927","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-27706789","Xtel":"0755-27706789","address":"深圳市龙华新区布龙路龙胜新村B区281号（地铁4号线龙胜站B出口胜龙加油站旁）"},
+        {"name":"东风日产深圳东风南方华昌专营店","nameCode":"H2980","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-23126855","Xtel":"0755-23158889","address":"深圳市宝安区福永立新路与福洲大道交汇处花园酒店旁（福永地铁站D出口右行300米）"},
+        {"name":"东风日产深圳东风南方华景专营店","nameCode":"H2986","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-89733301","Xtel":"0755-89762999","address":"深圳市龙岗大道信义汽车城(荷坳地铁站A出口、水晶之城公交站旁)"},
+        {"name":"东风日产深圳东风南方华盛专营店","nameCode":"H2988","city":"深圳市","cityCode":"311","prov":"广东省","provCode":"24","Ftel":"0755-28010668","Xtel":"0755-28030666","address":"深圳市龙华新区观澜福兴围社区观平路182号（观平加油站旁）"},
+    ];
+    var ser=[
+        {"SERIES_ID":"211","SERIES_NAME":"轩逸·纯电","SERIES_NAME_EN":"轩逸·纯电"},
+        {"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2"},
+        {"SERIES_ID":"26","SERIES_NAME":"轩逸经典","SERIES_NAME_EN":"sylphy"},
+        {"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟"},
+        {"SERIES_ID":"203","SERIES_NAME":"全新天籁",},
+        {"SERIES_ID":"21","SERIES_NAME":"逍客","SERIES_NAME_EN":"qashqai"},
+        {"SERIES_ID":"32","SERIES_NAME":"奇骏","SERIES_NAME_EN":"x-trail"},
+        {"SERIES_ID":"31","SERIES_NAME":"楼兰","SERIES_NAME_EN":"murano"},
+        {"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA","SERIES_NAME_EN":"new-tiida"},
+        {"SERIES_ID":"208","SERIES_NAME":"劲客","SERIES_NAME_EN":"P02F"},
+        {"SERIES_ID":"200","SERIES_NAME":"西玛","SERIES_NAME_EN":"Maxima"},
+        {"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA"},
+    ]
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable :true,
+        },
+        loop:true,
+    })
+</script>
+<script>
+    //渲染数据
+    for(var i=0;i<des.length;i++){
+        var ul = '<ul>'+
+            '<li>'+des[i].name+'</li>'+
+            '<li>'+des[i].Xtel+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '</ul>';
+        $('.list').append(ul)
+        $('#dealers').append('<option value="'+des[i].nameCode+'">'+des[i].name+'</option>')
+    }
+    for (var j=0;j<ser.length;j++){
+        $('#series').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+    }
+    $('.video span').click(function() {
+        $(this).hide();
+        $('#video1')[0].pause();
+        $('.video img').hide();
+        $('#video1')[0].play();
+    });
+    function autoVideo(auto){
+        auto.onclick=function(){
+            if(auto.paused){
+                auto.play();
+                $('.video span').hide()
+            }else{
+                auto.pause();
+                $('.video span').show()
+            }
+        }
+    }
+    var auto = document.getElementById("video1");
+    autoVideo(auto);
+    auto.addEventListener("ended",function(){
+        $('.video img').show();
+        $('.video span').show();
+    })
+    //报名
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(),        //电话
+                city_id = 311,  //城市id
+                city = '深圳市',    //城市名字
+                province = 24,  //省份
+                detail_id = 233,  //detail_id
+                brand_id = 11, //品牌
+                series_id = $('#series').val(),  //车型id
+                car_name = $('#series option:checked').text(),  //车型名字
+                dealers_code = $('#dealers').val(),   //经销商id
+                dealers = $('#dealers option:checked').text(),   //经销商名字
+                Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+
+                    city_id: city_id,
+                    city:city,
+                    dealers: dealers,
+                    province: province,
+                    car_name: car_name,
+                    dealers_code: dealers_code,
+
+                    detail_id:detail_id,
+                    // type: 0,
+                    // smartcode: 'A0000-000-000-00-00000'
+                    type: 1,
+                    smartcode: 'A2018-1608-6131-3006-140004'
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if(series_id=='0'){
+                alert('请选择车型');
+                return false;
+            }
+            if(dealers_code=='0'){
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    console.log(data)
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    $(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+
+</script>
+</html>

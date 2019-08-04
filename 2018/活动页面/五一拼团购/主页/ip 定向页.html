@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>跳转中。。。</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA"></script>
+    <style>
+
+    </style>
+    <script>
+        if(navigator.userAgent.match(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)/i)){
+            var geolocation = new BMap.Geolocation();
+            geolocation.getCurrentPosition(function(r){
+                if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                    console.log(r.address.city);
+                    var city = r.address.city;
+                    switch (city){
+                        case '广州市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/PTG0426.htm';
+                            break;
+                        case '东莞市':
+                            location.href = 'http://dongguan.auto.qq.com/zhuanti/DG51.htm';
+                            break;
+                        case '深圳市':
+                            location.href = 'http://shenzhen.auto.qq.com/zt2018/qyxpg0426/index.htm';
+                            break;
+                        case '佛山市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/789.htm';
+                            break;
+                        case '中山市':
+                            location.href = 'http://zhongshan.auto.qq.com/zt2018/zswuyi/index.htm';
+                            break;
+                    }
+                }
+                else {
+                    alert('failed'+this.getStatus());
+                }
+            },{enableHighAccuracy: true})
+        } else {
+            var citylocation,city;
+            //获取城市列表接口设置中心点
+            citylocation = new qq.maps.CityService({
+                complete : function(result){
+                    city = result.detail.name;
+                    alert(city);
+                    switch (city){
+                        case '广州市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/PTG0426.htm';
+                            break;
+                        case '东莞市':
+                            location.href = 'http://dongguan.auto.qq.com/zhuanti/DG51.htm';
+                            break;
+                        case '深圳市':
+                            location.href = 'http://shenzhen.auto.qq.com/zt2018/qyxpg0426/index.htm';
+                            break;
+                        case '佛山市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/789.htm';
+                            break;
+                        case '中山市':
+                            location.href = 'http://zhongshan.auto.qq.com/zt2018/zswuyi/index.htm';
+                            break;
+                    }
+                }
+            });
+            //调用searchLocalCity();方法    根据用户IP查询城市信息。
+            citylocation.searchLocalCity();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+</html>

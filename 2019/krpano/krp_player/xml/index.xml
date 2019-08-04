@@ -1,0 +1,39 @@
+<krpano version="1.0.8"> 
+
+	<include url="./global.xml" />
+	
+	<view hlookat="-9.494365" vlookat="-10.999712" fov="99" maxpixelzoom="1.0" fovmax="150" />
+	
+	<preview type="CUBESTRIP" url="../img/preview.jpg" />
+
+	<image type="CUBE">
+		<left  url="../img/pano_l_0101.jpg" />
+		<front url="../img/pano_f_0101.jpg" />
+		<right url="../img/pano_r_0101.jpg" />
+		<back  url="../img/pano_b_0101.jpg" />
+		<up    url="../img/pano_u_0101.jpg" />
+		<down  url="../img/pano_d_0101.jpg" />
+
+		<!-- mobile phone / iphone images -->
+		<!-- <mobile>
+			<left  url="kirche.tiles/mobile_l.jpg" />
+			<front url="kirche.tiles/mobile_f.jpg" />
+			<right url="kirche.tiles/mobile_r.jpg" />
+			<back  url="kirche.tiles/mobile_b.jpg" />
+			<up    url="kirche.tiles/mobile_u.jpg" />
+			<down  url="kirche.tiles/mobile_d.jpg" />
+		</mobile> -->
+
+		<!-- tablet pc / ipad images -->
+		<!-- <tablet>
+			<left  url="kirche.tiles/tablet_l.jpg" />
+			<front url="kirche.tiles/tablet_f.jpg" />
+			<right url="kirche.tiles/tablet_r.jpg" />
+			<back  url="kirche.tiles/tablet_b.jpg" />
+			<up    url="kirche.tiles/tablet_u.jpg" />
+			<down  url="kirche.tiles/tablet_d.jpg" />
+		</tablet> -->
+	</image>
+
+</krpano>
+

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>无挑战 不英雄</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .cn {
+            position: relative;
+        }
+
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 2.5rem;
+            width: 22rem;
+            height: 20rem;
+            margin-left: -10.8rem;
+        }
+
+        .bmk p input, .bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            padding-left: 0.5rem;
+            font-size: 1.2rem;
+            background: transparent;
+        }
+
+        .bmk p {
+            width: 21rem;
+            height: 2.43rem;
+        }
+
+        .bmk .tel {
+            margin-top: 1.45rem;
+        }
+
+        .bmk .series, .bmk .pay {
+            width: 21.5rem;
+            margin-top: 1.48rem;
+        }
+
+        .privacyPolicy {
+            position: absolute;
+            left: 5rem;
+            top: 12rem;
+        }
+
+        .privacyPolicy input {
+            width: 16px !important;
+            height: 16px !important
+        }
+
+        .privacyPolicy span {
+            display: inline-block;
+            font-size: 16px;
+            color: #000;
+            position: relative;
+            top: -2px;
+        }
+
+        .privacyPolicy a {
+            color: #000
+        }
+
+        .bmk .submit {
+            width: 15rem;
+            height: 3rem;
+            margin-top: 4.5rem;
+            margin-left: 4rem;
+        }
+
+        .swiper {
+            position: absolute;
+            left: 50%;
+            top: 7rem;
+            width: 100%;
+            height: 17rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+
+        .ac-1000 {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #featured-area {
+            height: 15rem;
+            width: 100%;
+            margin: 0 auto 0;
+            border: none;
+            position: absolute;
+            top: 2px;
+        }
+
+        #featured-area img {
+            border: none;
+        }
+
+        .roundabout-holder {
+            list-style: none;
+            height: 15rem;
+            width: 24rem;
+            margin: 0 auto;
+        }
+
+        .roundabout-moveable-item {
+            font-size: 12px !important;
+            height: 15rem;
+            width: 24rem;
+            cursor: pointer;
+        }
+
+        .roundabout-moveable-item img {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        .roundabout-in-focus {
+            cursor: auto;
+        }
+
+        /*.roundabout-in-focus:hover {-webkit-box-shadow:0px 0px 20px #787878; -moz-box-shadow:0px 0px 20px #787878;}*/
+        .roundabout-holder span {
+            display: none;
+            font-size: 11px;
+        }
+
+        /*.roundabout-in-focus:hover span	{display:inline; position:absolute; bottom:5px; right:5px; padding:0px 0px;color:#8A428B; z-index:999; -webkit-border-top-left-radius: 5px; -moz-border-radius-topLeft: 5px; font-size : 11px; border-left:1px solid #aaaaaa; border-top:1px solid #aaaaaa;}*/
+        .roundabout a:active, .roundabout a:focus, .roundabout a:visited {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .roundabout li {
+            margin: 0
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/77/161/210/13696382.jpg" alt=""></div>
+    <div class="cn cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/78/161/210/13696383.jpg" alt=""></div>
+    <div class="cn cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/79/161/210/13696384.jpg" alt=""></div>
+    <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/28/164/210/13697098.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机号码" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">车型</option>
+                    <option value="117">睿骋CC</option>
+                    <option value="108">悦翔V3</option>
+                    <option value="111">长安CS15</option>
+                    <option value="112">悦翔V7</option>
+                    <option value="113">逸动</option>
+                    <option value="114">逸动XT</option>
+                    <option value="115">长安CS35</option>
+                    <option value="116">长安CS75</option>
+                    <option value="573">长安CS95</option>
+                    <option value="574">长安CS55</option>
+                    <option value="601">凌轩</option>
+                    <option value="654">悦翔V5</option>
+                    <option value="854">逸动DT</option>
+                </select>
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox">
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+        </div>
+    </div>
+    <div class="cn cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/119/192/210/13704329.jpg" alt=""></div>
+    <div class="cn cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/83/161/210/13696388.jpg" alt="">
+        <div class="swiper">
+            <div class="ac-1000">
+                <div id="featured-area" class="ppt">
+                    <ul class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
+                        <li class="roundabout-moveable-item"><img
+                                src="http://img1.gtimg.com/autoguangzhou/pics/hv1/31/162/210/13696591.png"></li>
+                        <li class="roundabout-moveable-item"><img
+                                src="http://img1.gtimg.com/autoguangzhou/pics/hv1/120/192/210/13704330.png"></li>
+                        <li class="roundabout-moveable-item"><img
+                                src="http://img1.gtimg.com/autoguangzhou/pics/hv1/164/160/210/13696214.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cn cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/84/161/210/13696389.jpg" alt=""></div>
+    <div class="cn cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/85/161/210/13696390.jpg" alt=""></div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.roundabout.min.js"></script>
+<script>
+    var flag = true;
+    $("#submit").click(function () {
+        if (flag) {
+            var name = $("#name").val(),  //姓名
+                tel = $("#tel").val(), //电话
+                brand_id = 15, //品牌id
+                series_id = $("#series").val(),    //车型id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id: 3273,
+                };
+            //判断填写是否正确
+            if (name == '' || tel == '') {
+                alert('信息没有填写完整');
+                return false;
+            }
+            if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))) {
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    $(document).ready(function () {
+        $('.swiper ul').roundabout({
+            duration: 750,
+            btnPrev: ".ban_r_btn", // 右按钮
+            btnNext: ".ban_l_btn", // 左按钮
+            enableDrag: true,           // 在移动端可以拖拽播放
+            minOpacity: 0.1,         //最小的透明度
+            maxOpacity: 1,         //最大的透明度
+            autoplay: true,          //是否开启自动播放
+            autoplayDuration: 4000,   //自动播放时间
+            autoplayPauseOnHover: true, // 鼠标移入元素内是否自动播放，为true不播放，false还自动播放
+        });
+    });
+</script>
+</html>

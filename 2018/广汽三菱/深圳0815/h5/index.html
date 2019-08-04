@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>龙星行汇尊广汽三菱专场</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .cn {
+            position: relative;
+            margin-top: -1px;
+        }
+        .tgBmk {
+            position: absolute;
+            left: 50%;
+            bottom: 25rem;
+            width: 7rem;
+            height: 2rem;
+            cursor: pointer;
+            margin-left: 3.8rem;
+        }
+        .shade {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            width: 0;
+            transition: width 0.3s ease;
+            z-index: -1;
+        }
+        .tkBmk {
+            position: absolute;
+            right: 0;
+            width: 0;
+            transition: width 0.5s ease;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/135/190/209/13638810.png") center center no-repeat;
+            max-width: 22.536rem;
+            background-size: 100% 100%;
+            height: 17.071rem;
+            z-index: -1;
+        }
+        .close {
+            position: absolute;
+            right: 1.8rem;
+            top: 2rem;
+            width: 2.2rem;
+            height: 2rem;
+            cursor: pointer;
+        }
+        .tkBmk p input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 1rem;
+            padding-left: 1rem;
+            color: #1252b8;
+        }
+        .tkBmk p {
+            width: 10.3rem;
+            height: 1.94rem;
+        }
+        .tkBmk .tkName,.tkBmk .tkTel {
+            margin-top: 5.7rem;
+            margin-left: 5.6rem;
+        }
+        .tkBmk .tkTel {
+            margin-top: 0.8rem;
+        }
+        .tkBmk .tkSubmit {
+            height: 3rem;
+            margin-left: 6rem;
+            margin-top: 1.8rem;
+        }
+        .tkBmk input:-ms-input-placeholder{
+            color: #1252b8;opacity:1;
+        }
+        .tkBmk input::-webkit-input-placeholder{
+            color: #1252b8;opacity:1;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/222/209/209/13643742.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/223/209/209/13643743.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/224/209/209/13643744.jpg" alt="">
+        <a href="javascript:;" class="tgBmk" data-series="1206"></a>
+        <a href="javascript:;" class="tgBmk" style="bottom:3rem;margin-left: -9.6rem " data-series="450"></a>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/225/209/209/13643745.jpg" alt="">
+        <a href="javascript:;" class="tgBmk" style="bottom: 23rem;margin-left: 3.2rem" data-series="451"></a>
+        <a href="javascript:;" class="tgBmk" style="bottom:4rem;margin-left: -9.6rem " data-series="452"></a>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/226/209/209/13643746.jpg" alt="">
+        <a href="javascript:;" class="tgBmk" style="bottom:4rem;margin-left: 3.8rem " data-series=""></a>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/227/209/209/13643747.jpg" alt="">
+    </div>
+    <div class="shade"></div>
+    <div class="tkBmk">
+        <i class="close"></i>
+        <p class="tkName">
+            <input type="text" id="tkName" placeholder="请输入姓名">
+        </p>
+        <p class="tkTel">
+            <input type="text" id="tkTel" placeholder="请输入电话" maxlength="11">
+        </p>
+        <p class="tkSubmit">
+            <input type="button" id="tkSubmit" style="cursor: pointer;outline: none;">
+        </p>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    var series=0;
+    $('.tgBmk').click(function () {
+        $('.shade').css({width:'100%',zIndex:'9999'});
+        $('.tkBmk').css({top:$(window).scrollTop()+102,width:'100%',right:'50%',marginRight:'-11.5rem',zIndex:'999999'});
+        series=$(this).attr('data-series');
+        console.log(series)
+    });
+    $('.close').click(function () {
+        $('.shade').css({width:'0',zIndex:'-1'});
+        $('.tkBmk').css({top:'0',width:'0',right:'0',marginRight:'0',zIndex:'-1'});
+    });
+    $(window).on('resize scroll',function(){
+        scoTop=($(window).height() - $('.tkBmk').outerHeight())/4 + $(window).scrollTop();
+        $('.tkBmk').css('top' , scoTop );
+    });
+    $("#tkSubmit").on('click', function() {
+        var name = $("#tkName").val(),  //姓名
+            tel = $("#tkTel").val(),       //电话
+            series_id = series,  //车型
+            brand_id = 79, //品牌
+            act_id = 3088, //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                series_id: series_id,
+                brand_id: brand_id,
+                act_id: act_id,
+            };
+
+        if (name == '姓名' || tel == '手机') {
+            alert('信息没有填写完整');
+            return false;
+        }
+        if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+            alert('请输入正确的中文名');
+            return false;
+        }
+        if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            alert('手机格式不正确');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type: "post",
+            url: Url,
+            data: Data,
+            async: true,
+            dataType: "jsonp",
+            success: function (data) {
+                if (data.status == 1) {
+                    alert("恭喜你，报名成功了");
+                    window.location.href = location.href + '?time=' + ((new Date()).getTime());
+                } else {
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    });
+</script>
+<script>
+    //分享
+    var appId     = "{$data['appId']}";       //公众号的唯一标识
+    var timestamp = "{$data['timestamp']}";   //生成签名的时间戳
+    var nonceStr  = "{$data['nonceStr']}";    //生成签名的随机串
+    var signature = "{$data['signature']}";   //签名
+    wx.config({
+        debug: false,
+        appId: appId,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline',
+            'openLocation',
+        ]
+    });
+    var share_title = '腾讯汽车 Q友砍价团汇尊三菱专场';
+    var share_desc = '千万豪礼  厚惠有期 广汽三菱超级品牌日-深圳站';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/179/208/209/13643444.jpg';
+    var share_link = window.location.href;
+    wx.ready(function () {
+        // 在这里调用 API
+        wx.onMenuShareAppMessage({
+            title: share_title, // 分享标题
+            desc: share_desc, // 分享描述
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: share_title, // 分享标题
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+    });
+</script>
+</html>

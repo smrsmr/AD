@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>内页模板</title>
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="http://dongguan.auto.qq.com/js/publicJS/conmon.css"/>
+    <style type="text/css">
+        html,body { color: #333;}
+        /*.blod { font-weight: bold;}*/
+        .pink { color: #f43350;}
+        .red { color: #f44833;}
+        .blue { color: #2267cc;}
+        .line1 { font-size: 24px !important; line-height: 32px !important;}
+        .line3 { font-size: 20px !important; line-height: 26px !important;}
+
+        .banner { width: 100%;}
+        .banner .banner1 img { width: 100%;}
+        .content-wrap { position: relative; overflow: hidden; background: #F1F4FB;}
+        .con-bg { width: 100%;}
+        .con-bg0 { background: #fff;}
+        .con-bg1 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+        .con-bg2 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_02.jpg) center top no-repeat; height: 359px;}
+        .con-bg3 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_03.jpg) center top no-repeat; height: 360px;}
+        .con-bg4 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+        .con-bg5 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_02.jpg) center top no-repeat; height: 359px;}
+        .con-bg6 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_03.jpg) center top no-repeat; height: 360px;}
+        .con-bg7 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+
+        .con-body { width: 1000px; position: absolute; top: 650px; left: 50%; margin-left: -500px;}
+
+        .bm-wrap { width: 100%; background: #FFFFFF; padding-bottom: 20px;}
+        .bmk { width: 1000px; margin: 0 auto; padding-top: 40px; height: auto; min-height: 300px; overflow: hidden; position: relative;}
+        .bmk h3, .process h3, .car-swrap h3, .brand-info h3 { font-size: 40px; font-weight: bold; color: #2267cc; text-align: center;}
+        .bmk h5, .process h5, .car-swrap h5, .brand-info h5 { color: #888; font-size: 13px; text-align: center; line-height: 50px;}
+        .bmk .bm-center { width: 936px; height: auto; min-height: 130px; border: 2px solid #2267cc; padding: 20px 30px;}
+        .bmk .bm-center .bmtit { width: 141px; float: left; margin-right: 20px; margin-top: -3px;}
+        .bmk .bm-center .car { width: 650px; overflow: hidden;}
+        .bmk .bm-center .car h4 { width: 115px; line-height: 35px; color: #2267cc; font-size: 20px;font-weight: bold; float: left;}
+        .bmk .btns { width: 535px; font-size: 16px; float: left;}
+        .bmk label { width: 115px; display: inline-block; margin-right: 0; color: #2267cc; font-size: 20px; line-height: 40px;vertical-align: middle; font-weight: bold;}
+        .bmk input { width: 190px; height: 32px; margin-bottom: 14px; padding-left: 5px; background: #f1f1f1; border: 1px solid #2764cf; border-radius: 6px;}
+        .bmk select { width: 195px; height: 32px; margin-right: 5px; margin-bottom: 17px; margin-left: 0px; padding-left: 5px;background: transparent; border: none;}
+        input:nth-of-type(1) { margin-right: 20px; }
+        #submit { width: 140px; height: 100px; cursor: pointer; background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bmbtn.jpg) top center no-repeat;  color: #fff; border: none; font-size: 20px; position: absolute; right: 10px; top: 170px;}
+
+        .btns a { display: inline-block;height: 32px;font-size: 15px;width: 150px;text-align: center;line-height: 32px;margin-bottom: 10px;margin-right: 12px;background-color: #8cb1f3;border-radius: 6px;font-weight: bold;color: #fff;cursor: pointer; }
+        .btns a.active { background-color: #2764cf; }
+
+        .process { width: 100%; padding-bottom: 30px; background: #FFFFFF;}
+        .process-bg { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_00.jpg) top center no-repeat; height: 156px;}
+
+        .car-swrap ul { margin-left: -50px; padding: 30px 0;}
+        .car-swrap li { width: 1100px; background: #fff; overflow: hidden; zoom: 1; margin-bottom: 30px;}
+        .car-swrap .fl { width: 695px; height: 325px; overflow: hidden; float: left;}
+        .car-swrap .fr { width: 340px; height: 265px; padding:30px; color: #333; float: right; position: relative;}
+        .car-swrap .fr h2 { font-size: 32px; font-weight: bold; margin-bottom: 6px;}
+        .car-swrap .fr .price { display: inline-block; line-height: 26px; font-size: 20px; border-bottom: 2px solid #999; margin-bottom: 12px;}
+        .car-swrap .fr>p.sale:nth-of-type(2) { font-size: 26px; line-height: 36px;}
+        .car-swrap .fr>p.sale:nth-of-type(3) { font-size: 24px; line-height: 32px;}
+        .car-swrap .fr>p.sale:nth-of-type(4) { font-size: 24px; line-height: 32px;}
+        .car-swrap .fr .gobm-btn { width: 150px; height: 40px; font-size: 20px; color: #fff; background: #f43350; position: absolute; bottom: 30px; cursor: pointer;}
+        .car-swrap li.activeIn button { transition: all 0.3s ease-in-out; border-radius: 20px;}
+        .car-swrap li.activeOut button { transition: all 0.5s ease-in-out; border-radius: 0px;}
+
+        .brand-wrap { width: 100%; padding-bottom: 80px; padding-top: 40px; background: #fff; position: absolute; bottom: 0;}
+        .brand-info { width: 1000px; margin: 0 auto;}
+        .brand-info img { float: left; max-width: 180px; margin-right: 20px;}
+        .brand-info .info-text { padding-top: 6px; color: #666; overflow: hidden; zoom: 1;}
+        .brand-info .info-text h4 { font-size: 20px; font-weight: bold; line-height: 30px; margin-bottom: 6px;}
+        .brand-info .info-text p { float: left; width: 800px; line-height: 24px;}
+    </style>
+</head>
+<body>
+<!--自适应头图-->
+<div class="banner">
+    <div class="banner1"><img src=""/></div>
+</div>
+
+<div class="content-wrap">
+    <!-- <div style="width: 1000px; height: 500px; overflow-y: scroll; overflow-x: hidden; margin: 0 auto;"><iframe height="1200" width="1000" scrolling="no" src="https://wj.qq.com/s/1509923/cc44" frameborder="0" allowfullscreen></iframe></div>-->
+    <!--报名-->
+    <div class="bm-wrap">
+        <div class="bmk">
+            <h3><span class="pink">立即</span>报名</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;SIGN UP IMMEDIATELY&nbsp;&nbsp;&nbsp;――――</h5>
+            <div class="bm-center">
+                <div class="bmtit"><img src="http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bmimg.jpg"/></div>
+                <div class="car">
+                    <h4>意向车型：</h4>
+                    <div class="btns">
+                    </div>
+                </div>
+                <p>
+                    <label for="name">您的姓名：</label><input type="text" name="name" id="name" value="" placeholder="姓名" />
+                    <label for="phone">联系电话：</label><input type="tel" name="phone" id="phone" value="" maxlength="11" placeholder="电话" />
+                </p>
+
+                <!--提交-->
+                <input type="hidden" name="brand_id" id="brand_id" value="" />
+                <input type="hidden" name="act_id" id="act_id" value="" />
+                <input type="button" id="submit" value="" />
+            </div>
+
+        </div>
+    </div>
+    <!--报名end-->
+
+    <div class="process">
+        <h3><span class="pink">购车</span>流程</h3>
+        <h5>――――&nbsp;&nbsp;&nbsp;CAR PROCESS&nbsp;&nbsp;&nbsp;――――</h5>
+        <div class="process-bg"></div>
+    </div>
+
+    <!--主体背景-->
+    <div class="con-bg0 con-bg"></div>
+    <div class="con-bg1 con-bg"></div>
+    <div class="con-bg2 con-bg"></div>
+    <div class="con-bg3 con-bg"></div>
+    <div class="con-bg4 con-bg"></div>
+    <div class="con-bg5 con-bg"></div>
+    <div class="con-bg6 con-bg"></div>
+    <div class="con-bg7 con-bg"></div>
+    <div class="con-bg8 con-bg"></div>
+    <div class="con-bg9 con-bg"></div>
+    <div class="con-bg10 con-bg"></div>
+    <div class="con-bg11 con-bg"></div>
+    <div class="con-bg12 con-bg"></div>
+    <div class="con-bg13 con-bg"></div>
+    <div class="con-bg14 con-bg"></div>
+    <div class="con-bg15 con-bg"></div>
+
+    <!--品牌介绍-->
+    <div class="brand-wrap">
+        <div class="brand-info">
+            <h3><span class="pink">品牌</span>故事</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;BRAND STORY&nbsp;&nbsp;&nbsp;――――</h5>
+            <div class="brand-con">
+                <img src="http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bmimg.jpg"/>
+                <div class="info-text">
+                    <h4><span class="name"></span>品牌介绍</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--品牌end-->
+
+    <!--主体浮层-->
+    <div class="con-body">
+        <div class="car-swrap">
+            <h3><span class="pink">热销</span>车型</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;HOT MODELS&nbsp;&nbsp;&nbsp;――――</h5>
+            <ul>
+            </ul>
+        </div>
+        <!--主体end-->
+
+    </div>
+</div>
+
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    //////////////////////////////////////
+    //填充内容开始
+    ///////////////////////////////
+    var carsInfo = [
+        {
+            carName:'宝马1系',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/198/244/200/13067418.jpg',
+            carId:'239',
+            minPrice:'20.48',
+            sale:[{Line:1,Text:'优惠高达7.82万元'},{Line:3,Text:'首付低至4.1万'},{Line:3,Text:'月供2615元'},{Line:3,Text:''}]
+        },
+        {
+            carName:'宝马3系',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/207/244/200/13067427.jpg',
+            carId:'59',
+            minPrice:'28.8',
+            sale:[{Line:1,Text:'优惠高达9.74万元'},{Line:1,Text:'首付低至5.8万'},{Line:1,Text:'月供3672元'}]
+        },
+        {
+            carName:'宝马5系',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/215/244/200/13067435.jpg',
+            carId:'185',
+            minPrice:'43.99',
+            sale:[{Line:1,Text:'优惠高达5.39万元'},{Line:3,Text:'首付低至8.8万'},{Line:1,Text:'月供2288元'}]
+        },
+        {
+            carName:'宝马7系',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/225/244/200/13067445.jpg',
+            carId:'20',
+            minPrice:'89.80',
+            sale:[{Line:1,Text:'优惠高达54.8万'},{Line:3,Text:' 首付低至17.96万'},{Line:1,Text:'月供3272元'},{Line:3,Text:'BMW车主置换或者重购更享3年/6万公里免费保养服务'}]
+        },
+        {
+            carName:'宝马X1',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/232/244/200/13067452.jpg',
+            carId:'58',
+            minPrice:'28.6',
+            sale:[{Line:1,Text:'优惠高达6.93万起'},{Line:3,Text:'首付低至5.8万'},{Line:1,Text:'月供3039元'}]
+        },
+        {
+            carName:'宝马X5',
+            carImg:'http://img1.gtimg.com/autoshenzhen/pics/hv1/84/152/203/13238919.jpg',
+            carId:'569',
+            minPrice:'75.8',
+            sale:[{Line:1,Text:'优惠高达17.25万元'},{Line:3,Text:'首付低至15.16万'},{Line:3,Text:'月供3222元'}]
+        },
+        {
+            carName:'宝马6系GT',
+            carImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/194/39/208/13535339.jpg',
+            carId:'300',
+            minPrice:'71.08',
+            sale:[{Line:1,Text:'优惠高达4.61万元'},{Line:3,Text:'首付低至14.21万'},{Line:3,Text:'月供3142元'}]
+        },
+        {
+            carName:'宝马5系混合动力',
+            carImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/195/39/208/13535340.jpg',
+            carId:'185',
+            minPrice:'49.89',
+            sale:[{Line:3,Text:'免购置税、免摇号、免拍牌、享政府地方双重补贴'}]
+        },
+        {
+            carName:'宝马X1混合动力',
+            carImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/196/39/208/13535341.jpg',
+            carId:'21',
+            minPrice:'39.88',
+            sale:[{Line:3,Text:'优惠高达2.52万元'},{Line:3,Text:'免购置税、免摇号、免拍牌、享政府地方双重补贴'}]
+        },
+
+    ]
+    var brandInfo = {
+        Name:'华晨宝马',
+        Img:'http://img1.gtimg.com/autoshenzhen/pics/hv1/18/245/200/13067493.png',
+        Text:'华晨宝马汽车有限公司成立于2003年5月，是宝马集团和华晨汽车集团控股有限公司共同设立的合资企业，业务涵盖BMW品牌汽车在中国的生产、研发、销售 、售后服务以及采购。华晨宝马在中国工业的中心地带——辽宁省沈阳市配有先进的生产基地，并连续11年成为沈阳优秀纳税企业。在北京设有分公司，销售和服务网络遍及全国。',
+        Url:'http://www.bmw-brilliance.cn/cn/zh/pr/bba.html',
+    };
+    var banner = {
+        Url:'http://img1.gtimg.com/autoguangzhou/pics/hv1/153/43/208/13536318.jpg',
+        Height:800,
+    }
+    //品牌id
+    var Brand_id = 1;
+    //活动id
+    var Act_id = 1983;
+    //页面标题
+    var Title = '华晨宝马钜惠鹏城';
+
+    //////////////////////////////////////
+    //填充内容结束
+    ///////////////////////////////
+</script>
+<script src="http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/InsideModel.DGbanner.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="InsideModel.DGbanner.min.js" type="text/javascript" charset="utf-8"></script>-->
+</body>
+</html>

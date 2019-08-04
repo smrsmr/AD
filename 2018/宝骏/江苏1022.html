@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 不允许用户点击屏幕放大浏览 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=1200,user-scalable=yes"/>
+    <title>你有多会玩 生活就有多好玩</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://guangzhou.auto.qq.com/css/swiper-4.1.6.min.css"/>
+    <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.6.min.js" type="text/javascript" charset="utf-8"></script>
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="http://www.gongjuji.net/Content/files/jquery.md5.js"></script>
+</head>
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    html, body {
+        font-family: "微软雅黑";
+        font-size: 14px;
+    }
+
+    body, h1, h2, h3, h4, h5, div, span, p, ul, ol, dl, dt, dd, a, input, img, select {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 0;
+        font-weight: normal;
+        outline: none;
+    }
+
+    input, select {
+        cursor: pointer;
+    }
+
+    .content {
+        width: 100%;
+        margin: auto;
+        max-width: 1920px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .content > div {
+        width: 100%;
+    }
+
+    /*正式样式*/
+    .con1 {
+        height: 673px;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/12/152/210/13694022.jpg) center top no-repeat;
+    }
+
+    .con2 {
+        height: 625px;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/13/152/210/13694023.jpg) center top no-repeat;
+    }
+
+    .con3 {
+        height: 1678px;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/192/151/210/13693947.jpg) center top no-repeat;
+    }
+
+    .con4 {
+        height: 1088px;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/193/151/210/13693948.jpg) center top no-repeat;
+    }
+
+    .baoming {
+        width: 1200px !important;
+        height: auto;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        margin-left: -600px;
+        z-index: 3;
+    }
+
+    /*正式样式结束*/
+    .footernew {
+        width: 910px;
+        height: 100px;
+        color: #515151;
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px;
+        margin: 12px auto 20px auto;
+        overflow: hidden;
+    }
+
+    .footheight {
+        height: 60px;
+    }
+
+    .footernew a {
+        color: #515151;
+        text-decoration: none;
+    }
+
+    .footernew a.lchot {
+        color: #bd0a01;
+    }
+
+    .footernew a:hover {
+        color: #bd0a01;
+        text-decoration: underline;
+    }
+
+    .footernew a:visited {
+        color: #515151;
+    }
+
+    .footernew div {
+        width: 546px;
+        margin: 0 auto;
+    }
+
+    .footernew p {
+        float: left;
+        width: 120px;
+        height: 50px;
+        border: 1px solid #d2d2d2;
+        padding: 0;
+        line-height: 20px;
+        margin: 6px;
+        font-size: 12px;
+    }
+
+    .footernew .fl {
+        float: left;
+        padding: 3px;
+    }
+
+    .footernew .fr {
+        float: right;
+        width: 72px;
+        padding: 5px 3px 0 3px;
+    }
+
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {
+        display: none;
+    }
+
+    /*3横报名框*/
+    .baoming-3h {
+        border: 1px solid transparent;
+        margin-bottom: 320px;
+    }
+
+    .baoming-3h .bmk-3h {
+        width: 940px;
+        margin: auto;
+        font-size: 0px;
+    }
+
+    .bmk-3h > .row input, .bmk-3h > .row select {
+        box-sizing: border-box;
+        width: 300px;
+        padding-left: 10px;
+        height: 42px;
+        margin-bottom: 19px;
+        color: black;
+        font-size: 18px;
+        background: transparent;
+        vertical-align: top;
+    }
+
+    .bmk-3h > .row select {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+    }
+
+    #submit {
+        width: 300px;
+        height: 42px;
+        background: transparent;
+        margin: auto;
+    }
+
+    option {
+        color: #000;
+    }
+
+    :-moz-placeholder {
+        color: #000;
+    }
+
+    ::-moz-placeholder {
+        color: #000;
+    }
+
+    :-ms-input-placeholder {
+        color: #000;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #000;
+    }
+
+    /*条款*/
+    .ifAgree {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 4px;
+        margin-top: -12px;
+    }
+
+    .ifAgree #check {
+        width: 14px;
+        height: 14px;
+        vertical-align: sub;
+    }
+
+    .ifAgree span {
+        color: white;
+    }
+
+    /*正式样式结束*/
+    /*#DownSwiper,#DownSwiper1{width: 92%;height: 590px;border: 1px solid transparent;margin-top: 110px;}
+    #DownSwiper .swiper-slide,#DownSwiper1 .swiper-slide{background-size: cover;background-position: center;background-repeat: no-repeat;width: 100%;height: 93%;}
+    #DownSwiper .swiper-pagination-bullet,#DownSwiper1 .swiper-pagination-bullet{border-radius: 0;width: 25px;}
+    .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0px;}
+    .swiper-pagination-bullet-active{background-color:white}*/
+    /*滚动条*/
+    #scroll {
+        width: 100%;
+        height: 100%;
+    }
+
+    #scroll h3 {
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: bold;
+        margin-top: 8px;
+    }
+
+    #scroll p {
+        font-size: 12px;
+        text-align: left;
+        line-height: 18px;
+    }
+
+    /*插件修改*/
+    /*长滑条*/
+    .mCSB_scrollTools .mCSB_draggerRail {
+        background-color: #000;
+    }
+
+    .mCSB_inside > .mCSB_container {
+        margin-right: 0px;
+    }
+
+    /*短滑块*/
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        /*background-color: red;*/
+    }
+
+    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        width: 8px;
+    }
+
+    #leRiSwiper, #leRiSwiper1 {
+        width: 100%;
+        height: 486px;
+        border: 1px solid transparent;
+    }
+
+    #leRiSwiper .swiper-slide, #leRiSwiper1 .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide-active {
+        width: 81% !important;
+        z-index: 10 !important;
+    }
+
+    .swiper-slide-prev {
+        width: 34.5% !important;
+    }
+
+    /*.swiper-slide-next{z-index: 1!important;}*/
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        right: 4%;
+        background-image: url(http://mat1.gtimg.com/autoguangzhou/images/ri-black.png);
+        background-size: 100%;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        width: 44px;
+        height: 85px;
+        opacity: 0.9;
+    }
+
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        left: 4%;
+        background-image: url(http://mat1.gtimg.com/autoguangzhou/images/le-black.png);
+        background-size: 100%;
+    }
+
+    .swiper-slide {
+        background-size: 100%;
+    }
+
+    #tap, #tap1 {
+        width: 100%;
+        height: 60px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #tap li {
+        display: inline-block;
+        color: black;
+        font-size: 38px;
+        margin: 0 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #tap li.cur {
+        color: white;
+        text-shadow: 0 0 3px white;
+    }
+
+    /*手动 */
+    .parameter table {
+        width: 100%
+    }
+
+    .parameter {
+        font-size: 16px;
+        width: 1100px;
+        margin: 0 auto;
+        background: white;
+    }
+
+    .parameter #tap_bo {
+        height: 40px;
+        font-size: 0;
+        text-align: center
+    }
+
+    .parameter #tap_bo li {
+        display: inline-block;
+        height: 38px;
+        margin: 0 1px;
+        address: #000;
+        border: 1px #000 solid
+    }
+
+    .parameter #tap_bo li.on {
+        background: #fff
+    }
+
+    .parameter #tap_bo li a {
+        display: block;
+        height: 100%;
+        color: #bbb;
+        font-size: 16px;
+        text-align: center;
+        line-height: 2em
+    }
+
+    .parameter #tap_bo li.on a {
+        color: #000
+    }
+
+    .parameter table {
+        width: 100%
+    }
+
+    .parameter #parameter_title {
+    }
+
+    .parameter #parameter_title td {
+        border-left: 1px #444243 solid;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5em;
+        box-sizing: border-box;
+        width: 98px
+    }
+
+    .parameter #parameter_title td:first-child {
+        border-left: 0 none;
+        padding: 0.625em;
+        text-align: left;
+        width: 125px
+    }
+
+    .parameter #parameter_title .title1 td {
+        background: #363636;
+        font-weight: bold
+    }
+
+    .parameter #parameter_title .title2 td {
+        background: #464646;
+        font-weight: bold
+    }
+
+    .parameter #parameter_title .title3 td {
+        background: #535152;
+        font-weight: bold
+    }
+
+    .parameter #parameter_title .title4 td {
+        background: #535152;
+        font-weight: bold
+    }
+
+    .parameter #parameter_title td {
+        border-left: 1px #444243 solid;
+        color: #fff;
+        text-align: center;
+        line-height: 1.5em;
+        width: 98px
+    }
+
+    .parameter #parameter_main tr td {
+        color: #464646;
+        text-align: left;
+        box-sizing: border-box
+    }
+
+    .parameter #parameter_main tr td {
+        border-left: 1px #cdcdcd solid;
+        border-bottom: 1px #cdcdcd solid;
+        text-align: center;
+        width: 98px
+    }
+
+    .parameter #parameter_main tr.subtitle td {
+        background: #464646;
+        color: #fff;
+        text-align: left;
+        border-left: 0 none;
+        border-bottom: 0 none
+    }
+
+    .parameter #parameter_main td:first-child {
+        border-left: 0 none;
+        padding: 0.625em;
+        text-align: left;
+        width: 118px
+    }
+
+    .parameter .scroll_p {
+        overflow-y: auto
+    }
+
+    .parameter .scroll_p {
+        position: relative;
+        height: 556px
+    }
+
+    /*自动*/
+    #tap1 li {
+        display: none;
+    }
+
+    #tap1 li.cur {
+        display: block;
+    }
+</style>
+<body>
+<div class="content">
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="con3"></div>
+    <div class="con4"></div>
+    <div class="baoming">
+        <div style="margin-bottom: 143px;">
+            <img width="100%" id="kv" src=""/>
+        </div>
+        <div class="baoming-3h">
+            <div class="bmk-3h">
+                <div class="row">
+                    <input type="text" name="name" id="name" value="" placeholder="姓名"/>
+                    <input style="margin: 0 20px;" type="text" name="phone" id="phone" value="" placeholder="手机"
+                           maxlength="11"/>
+                    <select name="" id="car_name">
+                        <option value="宝骏510">宝骏510</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <select name="" id="pros">
+                        <option value="0">省份</option>
+                        <option value="16">山东省</option>
+                        <option value="6">山西省</option>
+                        <option value="26">云南省</option>
+                        <option value="5">河北省</option>
+                        <option value="22">四川省</option>
+                        <option value="24">贵州省</option>
+                        <option value="11">江苏省</option>
+                        <option value="20">广东省</option>
+                        <option value="17">河南省</option>
+                    </select>
+                    <select name="" style="margin: 0 20px;" id="city">
+                        <option value="0">城市</option>
+                    </select>
+                    <select name="" id="dealercode">
+                        <option value="0">经销商</option>
+                    </select>
+                </div>
+                <div class="ifAgree">
+                    <input id="check" type="checkbox" checked="checked">
+                    <span>我同意<a style="color: white;text-decoration: none;" target="_blank"
+                                href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+                </div>
+                <p style="text-align: center;"><input type="submit" id="submit" value=""/></p>
+            </div>
+        </div>
+        <div style="margin-bottom: 320px;">
+            <div class="swiper-container " id="leRiSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/244/146/210/13692724.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/245/146/210/13692725.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/246/146/210/13692726.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/247/146/210/13692727.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/248/146/210/13692728.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/249/146/210/13692729.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/250/146/210/13692730.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/251/146/210/13692731.jpg)"></div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div style="margin-bottom: 354px;">
+            <div class="swiper-container " id="leRiSwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/233/146/210/13692713.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/234/146/210/13692714.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/235/146/210/13692715.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/236/146/210/13692716.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/237/146/210/13692717.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/238/146/210/13692718.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/239/146/210/13692719.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/240/146/210/13692720.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/241/146/210/13692721.jpg)"></div>
+                    <div class="swiper-slide"
+                         style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/242/146/210/13692722.jpg)"></div>
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div style="width:100%;margin-left: 0%;height: 1100px;border: 1px solid transparent;overflow: hidden;">
+            <div style="width: 100%;height: 830px;">
+                <ul id="tap">
+                    <li class="cur">手动挡</li>
+                    <li>自动挡</li>
+                </ul>
+                <ul id="tap1">
+                    <li class="cur">
+                        <div class="part parameter">
+                            <ul class="tap_bo" id="tap_bo" style="display: none;">
+                            </ul>
+                            <div class="parameter_title_bo">
+                                <table id="parameter_title">
+                                    <tbody>
+                                    <tr class="title1">
+                                        <td class="item_first">&nbsp;</td>
+                                        <td class="item_last" colspan="5">宝骏510 1.5L 手动</td>
+                                    </tr>
+                                    <tr class="title2">
+                                        <td class="item_first">车型</td>
+                                        <td colspan="1" width="166px">手动舒适型</td>
+                                        <td colspan="1" width="166px">手动时尚型</td>
+                                        <td colspan="1" width="166px">手动豪华型</td>
+                                        <td colspan="1" width="166px">手动优享型</td>
+                                        <td class="item_last" colspan="1" width="166px">手动尊享型</td>
+                                    </tr>
+                                    <tr class="title3">
+                                        <td class="item_first">官方指导价（单位：元）</td>
+                                        <td colspan="1" width="166px">54,800</td>
+                                        <td colspan="1" width="166px">62,800</td>
+                                        <td colspan="1" width="166px">69,800</td>
+                                        <td colspan="1" width="166px">69,800</td>
+                                        <td class="item_last" colspan="1" width="166px">71,800</td>
+                                    </tr>
+                                    <tr class="title4">
+                                        <td class="item_first">座位数</td>
+                                        <td colspan="1" width="166px">5座</td>
+                                        <td colspan="1" width="166px">5座</td>
+                                        <td colspan="1" width="166px">5座</td>
+                                        <td colspan="1" width="166px">5座</td>
+                                        <td class="item_last" colspan="1" width="166px">5座</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="img scroll_p scrollbar-inner scrollbar-vista" id="scroll_p">
+                                <p class="permanent_main_bo">
+                                </p>
+                                <table id="parameter_main">
+                                    <tbody>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">整车参数</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">长(mm)</td>
+                                        <td colspan="5" class="item_last">4220</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">宽(mm)</td>
+                                        <td colspan="5" class="item_last">1740</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">高(mm)</td>
+                                        <td colspan="5" class="item_last">1625</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">轴矩(mm)</td>
+                                        <td colspan="5" class="item_last">2550</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">油箱容量(L)</td>
+                                        <td colspan="5" class="item_last">45</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">基本性能</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">排量(L)</td>
+                                        <td colspan="5" class="item_last">1.485</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">变速箱类型</td>
+                                        <td colspan="5" class="item_last">6挡手动</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">额定功率(kw/rpm)</td>
+                                        <td colspan="5" class="item_last">82/5800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">最大扭矩(Nm/rpm)</td>
+                                        <td colspan="5" class="item_last">146.5/（3600~4000）</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">百公里综合工况油耗(L/100km)</td>
+                                        <td colspan="5" class="item_last">6.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">排放标准</td>
+                                        <td colspan="5" class="item_last">国五</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">系统结构</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">转向系统</td>
+                                        <td colspan="5" class="item_last">电动助力</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驱动方式</td>
+                                        <td colspan="5" class="item_last">前置前驱</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">制动系统</td>
+                                        <td colspan="5" class="item_last">前盘后盘</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前悬挂/后悬挂</td>
+                                        <td colspan="5" class="item_last">麦弗逊式独立悬挂/扭转梁半独立悬挂</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">轮胎规格</td>
+                                        <td colspan="5" class="item_last">205/60 R16</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">外观</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前雾灯</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">LED日间行车灯</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">矩阵式高亮黑前格栅</td>
+                                        <td colspan="3">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">透镜大灯</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">LED大灯</td>
+                                        <td colspan="4">—</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车顶行李架</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">间歇式无骨雨刮</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后雨刮</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后扰流板+高位刹车灯</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">运动双色精车轮毂</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">内饰</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">无钥匙进入/一键启动系统</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">行车电脑</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">多功能方向盘</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">方向盘换挡</td>
+                                        <td colspan="5" class="item_last">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">皮质方向盘</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">皮座椅</td>
+                                        <td colspan="1" width="166px">织物</td>
+                                        <td colspan="1" width="166px">织物+皮革</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">自动恒温空调</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">立体式LED自发光组合仪表</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排座中央扶手箱</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后排座椅比例放倒</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驾驶座4向电动+2向手动调节</td>
+                                        <td colspan="1" width="166px">4向手动</td>
+                                        <td colspan="1" width="166px">6向手动</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">可开启式全景天窗</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驾驶侧车窗带一键降</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">四门玻璃遥控下降</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">手动防炫目内后视镜</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电动调节</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电加热</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电动折叠</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">5门中控+尾门触碰遥控开启</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">安全科技</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ABS+EBD</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ESP车身稳定系统</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">VDC车辆动态控制系统</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">TCS牵引力控制功能</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">HBA刹车辅助功能</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">HHC上坡辅助功能</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排正面双安全气囊</td>
+                                        <td colspan="1" width="166px">仅驾驶位</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排侧气囊</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">胎压监测</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ISOFIX儿童座椅固定装置</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车速感应自动落锁</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">电子防盗</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">发动机防盗装置</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">倒车雷达</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">可视倒车影像</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">系统功能</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">8英寸液晶触控屏</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">蓝牙功能</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">手机映射(SSPLink)</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">定速巡航系统</td>
+                                        <td colspan="1" width="166px">—</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">收音机+USB接口</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" width="166px">●</td>
+                                        <td colspan="1" class="item_last" width="166px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">扬声器</td>
+                                        <td colspan="1" width="166px">2</td>
+                                        <td colspan="1" width="166px">4</td>
+                                        <td colspan="3" class="item_last">6</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="6">车身颜色</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车身颜色</td>
+                                        <td colspan="5" class="item_last">糖果白、极光银、金属红、星夜蓝、闪晶橙</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="part parameter">
+                            <ul class="tap_bo" id="tap_bo" style="display: none;">
+                            </ul>
+                            <div class="parameter_title_bo">
+                                <table id="parameter_title">
+                                    <tbody>
+                                    <tr class="title1">
+                                        <td class="item_first">&nbsp;</td>
+                                        <td class="item_last" colspan="4">宝骏510 1.5L 自动</td>
+                                    </tr>
+                                    <tr class="title2">
+                                        <td class="item_first">车型</td>
+                                        <td colspan="1" width="200px">自动时尚型</td>
+                                        <td colspan="1" width="200px">自动豪华型</td>
+                                        <td colspan="1" width="200px">自动优享型</td>
+                                        <td class="item_last" colspan="1" width="200px">自动尊享型</td>
+                                    </tr>
+                                    <tr class="title3">
+                                        <td class="item_first">官方指导价（单位：元）</td>
+                                        <td colspan="1" width="200px">68,800</td>
+                                        <td colspan="1" width="200px">75,800</td>
+                                        <td colspan="1" width="200px">75,800</td>
+                                        <td class="item_last" colspan="1" width="200px">77,800</td>
+                                    </tr>
+                                    <tr class="title4">
+                                        <td class="item_first">座位数</td>
+                                        <td colspan="1" width="200px">5座</td>
+                                        <td colspan="1" width="200px">5座</td>
+                                        <td colspan="1" width="200px">5座</td>
+                                        <td class="item_last" colspan="1" width="200px">5座</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="img scroll_p scrollbar-inner scrollbar-vista" id="scroll_p">
+                                <p class="permanent_main_bo">
+                                </p>
+                                <table id="parameter_main">
+                                    <tbody>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">整车参数</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">长(mm)</td>
+                                        <td colspan="4" class="item_last">4220</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">宽(mm)</td>
+                                        <td colspan="4" class="item_last">1740</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">高(mm)</td>
+                                        <td colspan="4" class="item_last">1625</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">轴矩(mm)</td>
+                                        <td colspan="4" class="item_last">2550</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">油箱容量(L)</td>
+                                        <td colspan="4" class="item_last">45</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">基本性能</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">排量(L)</td>
+                                        <td colspan="4" class="item_last">1.485</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">变速箱类型</td>
+                                        <td colspan="4" class="item_last">手自一体自动</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">额定功率(kw/rpm)</td>
+                                        <td colspan="4" class="item_last">82/5800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">最大扭矩(Nm/rpm)</td>
+                                        <td colspan="4" class="item_last">146.5/(3600~4000)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">百公里综合工况油耗(L/100km)</td>
+                                        <td colspan="4" class="item_last">6.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">排放标准</td>
+                                        <td colspan="4" class="item_last">国五</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">系统结构</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">转向系统</td>
+                                        <td colspan="4" class="item_last">电动助力</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驱动方式</td>
+                                        <td colspan="4" class="item_last">前置前驱</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">制动系统</td>
+                                        <td colspan="4" class="item_last">前盘后盘</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前悬挂/后悬挂</td>
+                                        <td colspan="4" class="item_last">麦弗逊式独立悬挂/扭转梁半独立悬挂</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">轮胎规格</td>
+                                        <td colspan="4" class="item_last">205/60 R16</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">外观</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前雾灯</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">LED日间行车灯</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">矩阵式高亮黑前格栅</td>
+                                        <td colspan="2">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">透镜大灯</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">LED大灯</td>
+                                        <td colspan="3">—</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车顶行李架</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">间歇式无骨雨刮</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后雨刮</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后扰流板+高位刹车灯</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">运动双色精车轮毂</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">内饰</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">无钥匙进入/一键启动系统</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">行车电脑</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">多功能方向盘</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">方向盘换挡</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">皮质方向盘</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">皮座椅</td>
+                                        <td colspan="1" width="200px">织物+皮革</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">自动恒温空调</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">立体式LED自发光组合仪表</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排座中央扶手箱</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">后排座椅比例放倒</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驾驶座4向电动+2向手动调节</td>
+                                        <td colspan="1" width="200px">6向手动</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">可开启式全景天窗</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">驾驶侧车窗带一键降</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">四门玻璃遥控下降</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">手动防炫目内后视镜</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电动调节</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电加热</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">外后视镜电动折叠</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">5门中控+尾门触碰遥控开启</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">安全科技</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ABS+EBD</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ESP车身稳定系统</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">VDC车辆动态控制系统</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">TCS牵引力控制功能</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">HBA刹车辅助功能</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">HHC上坡辅助功能</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排正面双安全气囊</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">前排侧气囊</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">胎压监测</td>
+                                        <td colspan="1" width="200px">—</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">ISOFIX儿童座椅固定装置</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车速感应自动落锁</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">电子防盗</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">发动机防盗装置</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">倒车雷达</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">可视倒车影像</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">系统功能</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">8英寸液晶触控屏</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">蓝牙功能</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">手机映射(SSPLink)</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">定速巡航系统</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">收音机+USB接口</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" width="200px">●</td>
+                                        <td colspan="1" class="item_last" width="200px">●</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">扬声器</td>
+                                        <td colspan="1" width="200px">4</td>
+                                        <td colspan="3" class="item_last">6</td>
+                                    </tr>
+                                    <tr class="subtitle">
+                                        <td class="item_first" colspan="5">车身颜色</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="item_first">车身颜色</td>
+                                        <td colspan="4" class="item_last">糖果白、极光银、金属红、星夜蓝、闪晶橙</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <p></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--<div id="scroll">
+                <img width="100%" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/146/210/13692733.jpg"/>
+            </div>-->
+        </div>
+    </div>
+</div>
+
+<!--底部 开始-->
+<div>
+
+
+    <div class="foot" id="footer" bossZone="footer">
+        <div class="footernew" role="contentinfo" style="height:124px;">
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a
+                href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a
+                href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a
+                href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a
+                href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a
+                href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a
+                href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a
+                href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">腾讯公益</a> | <a
+                href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/"
+                                                                                      target="_blank" rel="nofollow">网站导航</a>
+            | <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a
+                href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank"
+                rel="nofollow">版权所有</a><br>
+            <a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">深圳公安局</a> | <a
+                href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot"
+                                                                                                         href="http://www.gdis.cn/admin/newstext_netsun.asp"
+                                                                                                         target="_blank"
+                                                                                                         rel="nofollow"
+                                                                                                         style="color: #bd0a01;">阳光·绿色网络工程</a>
+            | <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a
+                href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+            <span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a> <a
+                    href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a
+                    href="http://www.qq.com/cbst.shtml" target="_blank"
+                    rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+                                                                      rel="nofollow">粤B2-20090059</a> <a
+                    href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+		 </span><br>
+            <a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a
+                href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+            违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备 44030002000001号</span><img
+                style="vertical-align: text-bottom;" } src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png"
+                width="16" height="16"></a><br>
+            <span style="font-family:Arial;">Copyright  1998 - 2017 Tencent. All Rights Reserved</span>
+        </div>
+    </div>
+    <div class="footernew footheight" style="width:1000px;" bossZone="footer">
+        <div style="width:680px;">
+            <p>
+                <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow"><img width="35" height="43" border="0"
+                                                                        alt="经营性网站备案信息"
+                                                                        src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+                <span class="fr"><a target="_blank" class="lcblack"
+                                    href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow">经营性网站<br>
+				备案信息</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img
+                        width="44" height="44" border="0" alt="中国互联网举报中心"
+                        src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank"
+                                                        rel="nofollow">中国互联网<br>
+				举报中心</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img
+                        width="44" height="42" border="0" alt="中国文明网传播文明"
+                        src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank"
+                                                        rel="nofollow">中国文明网<br>传播文明</a></span>
+            </p>
+            <p style="width:128px;height:52px;border:0;">
+                <span style="padding:0;" class="fl"><a
+                        href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337"
+                        target="_blank" rel="nofollow"><img border="0" alt="诚信网站"
+                                                            src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a
+                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank"
+                        rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg"
+                                            title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack"
+                                                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+                                                        target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+            </p>
+        </div>
+    </div>
+    <a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+       bossZone="fankui"></a>
+    <a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none"
+       bossZone="defaulthome"></a>
+    <a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+    <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+       style="display:none" bossZone="minidown"></a>
+    <!--e6dcd797284a2fe7c374538dde98ca6b--><!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+    <!--底部 结束-->
+</div>
+</body>
+<script type="text/javascript">
+    $('#tap li').on('click', function () {
+        console.log($(this).val())
+        $(this).addClass('cur').siblings().removeClass('cur');
+        $('#tap1 li').eq($(this).index()).addClass('cur').siblings().removeClass('cur');
+    })
+</script>
+<script src="https://www.sgmw.com.cn/js/510dealer_data.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $('#kv').attr('src', 'http://img1.gtimg.com/autoguangzhou/pics/hv1/25/152/210/13694035.jpg')
+    var proDatas = provinceData;
+    var proName = '江苏省', proId = '';
+
+
+    /*$proDom='<option value="0">省份</option>';
+    for(var i =0,l=proDatas.length;i<l;i++){
+        $proDom += '<option value="'+proDatas[i].proid+'">'+proDatas[i].proname+'</option>'
+//		if(proDatas[i].proname==proName){
+//			proId = proDatas[i].proid;
+//		}
+    }
+    $('#pros').append($proDom);*/
+
+    $('#pros').change(function () {
+        proId = $(this).val();
+        $('#city').empty().append(repeat('城市', proId))
+        $('#dealercode').empty().append('<option value="0">经销商</option>')
+    })
+    var cityDatas = cityData;
+
+    function repeat(name, preId) {
+        var $dom = '<option value="0">' + name + '</option>';
+        for (var i = 0, l = cityDatas.length; i < l; i++) {
+            if (cityDatas[i].proID == preId) {
+                $dom += '<option value="' + cityDatas[i].cityID + '">' + cityDatas[i].cityName + '</option>'
+            }
+        }
+
+        return $dom;
+    }
+
+
+    function repeat1(name, preId) {
+        $('#dealercode').empty()
+        var $dom = '<option value="0">' + name + '</option>';
+        for (var i = 0, l = dealersData.length; i < l; i++) {
+            if (dealersData[i].city == preId) {
+                $dom += '<option value="' + dealersData[i].dealerCode + '">' + dealersData[i].company + '</option>'
+            }
+        }
+        return $dom;
+    }
+
+    $('#city').on('change', function () {
+        if ($(this).val() != 0) {
+            $('#dealercode').append(repeat1('经销商', Number($(this).val())))
+        } else {
+            $('#dealercode').empty().append('<option value="0">经销商</option>')
+        }
+    })
+    //	$('#dealercode').on('change',function(){
+    //	})
+</script>
+<script type="text/javascript">
+    var swiper = new Swiper('#leRiSwiper', {
+        autoplay: true,
+        loop: true,
+        initialSlide: 1,
+        effect: 'coverflow',
+        slidesPerView: 2,
+        centeredSlides: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 1000,
+            depth: 2000,
+            modifier: 0.1,
+            slideShadows: true
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var swiper = new Swiper('#leRiSwiper1', {
+        autoplay: true,
+        loop: true,
+        initialSlide: 1,
+        effect: 'coverflow',
+        slidesPerView: 2,
+        centeredSlides: true,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 1000,
+            depth: 2000,
+            modifier: 0.1,
+            slideShadows: true
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    $(window).load(function () {
+        $("#scroll").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+
+
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        /*---报名---*/
+        var flag = true;
+        $("#submit").click(function () {
+            if (flag) {
+                var name = $("#name").val(),  //姓名
+                    phone = $("#phone").val(),   //电话
+                    key = $.md5(phone),
+                    key = key.toUpperCase(),
+                    k_y = key.substr(0, 10),
+                    car = '宝骏510',//车型
+                    pro = $('#pros').val(),//省份
+                    dealer_code = $("#dealercode").val(),
+                    city = $("#city").val(),//城市
+                    Url = "https://www.sgmw.com.cn/ashx/reservation_json.aspx",
+                    Data = {
+                        fid: 670,//客户给
+                        aid: 556,//客户给
+                        lid: 0,
+                        name: name,
+                        phone: phone,
+                        key: k_y,//用md5加密手机号，然后取前十位具体看对接文档。
+                        province: pro,
+                        city: city,
+                        dealercode: dealer_code,
+                        cartype: car,
+                        mark: '',
+                        source: '宝骏510十月区域促销传播项目' + phone,//专题名称加手机号
+                        sales_man: '',
+                        deposit: 0,
+                        ordering: 0,
+                        driving: 1,
+                        credit: 0,
+                    };
+                console.log(Data)
+                //判断填写是否正确
+                if (name == '') {
+                    alert('请输入您的姓名');
+                    return false;
+                }
+                if (phone == '') {
+                    alert('请输入您的手机号码');
+                    return false;
+                }
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|19[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(phone)) {
+                    alert('手机格式不正确');
+                    return false;
+
+                }
+                if ($('#pros').val() == 0) {
+                    alert('请选择省份');
+                    return false;
+                }
+
+                if (city == '0') {
+                    alert('请选择城市');
+                    return false;
+                }
+                if ($('#dealercode').val() == '0') {
+                    alert('请选择经销商');
+                    return false;
+                }
+                if ($("input[type='checkbox']").is(':checked') == false) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+                flag = false;
+                //发送请求
+                $.ajax({
+                    type: "POST",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (result, data) {
+                        console.log(result)
+                        console.log(data)
+                        if (result.success) {
+                            console.log(result)
+                            // console.log(result)
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+                        } else {
+                            alert("很抱歉，你报名失败。");
+                        }
+
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert("失败");
+                    }
+                });
+                /*数据传yetcar*/
+                dataYetcar()
+
+                function dataYetcar() {
+                    var urls = 'http://www.yetcar.com' + '/index.php?s=/Home/GeneralActivity/baoming.html';
+                    var datas = {
+                        name: $("#name").val(),
+                        phone: $("#phone").val(),
+                        brand_id: 32,
+                        series_id: 374,
+                        act_id: 3269,
+                        dealers: $("#dealercode").find("option:selected").text()
+                    }
+                    $.ajax({
+                        type: "post",
+                        url: urls,
+                        async: true,
+                        data: datas,
+                        dataType: "jsonp",
+                        success: function (data) {
+                            if (data.status == 1) {
+                            } else {
+                            }
+                        }
+                    });
+                }
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+
+        /*---报名结束---*/
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

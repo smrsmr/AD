@@ -1,0 +1,349 @@
+<!--2018年-12月-05号 星期三 15:14:53 -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="applicable-device" content="mobile">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no,email=no">
+        <title>浑然天成 大有可观</title>
+        <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+        <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+        <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+        <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+        <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+        <style>
+            .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {position: relative;}
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 5.17rem;
+            width: 24rem;
+            height: 28rem;
+            margin-left: -11.9rem;
+        }
+        .bmk p input, .bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            font-size: 1.5rem;
+            background: transparent;
+            padding-left: 1rem;
+            color: #999999;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color: #999999; opacity:1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color: #999999;opacity:1;
+        }
+        input:-ms-input-placeholder{
+            color: #999999;opacity:1;
+        }
+        input::-webkit-input-placeholder{
+            color: #999999;opacity:1;
+        }
+        .bmk p {
+            width: 22.6rem;
+            height: 3.3rem;
+            margin-bottom: 0.8rem;
+        }
+        .bmk .series,.bmk .city,.bmk .dealers {
+            width: 23.6rem;
+            height: 3.3rem;
+            margin-top: 0.85rem;
+        }
+        .bmk .city {
+            margin-top: -0.1rem;
+        }
+        .bmk .dealers {
+            margin-top: 1rem;
+        }
+        .privacyPolicy input{
+            position: absolute;
+            left: 0rem;
+            top: 21rem;
+            width: 18px !important;
+            height: 18px !important;
+        }
+        .privacyPolicy span{
+            display: inline-block;
+            position: absolute;
+            left: 1.8rem;
+            top: 20.9rem;
+            font-size: 16px;
+            color: #768292;
+        }
+        .privacyPolicy a{color:#768292}
+        .bmk .submit {
+            width: 23.58rem;
+            margin-top: 3.4rem;
+        }
+        #cs {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: absolute;
+            left: 50%;
+            top: 3.4rem;
+            width: 5rem;
+            height: 2.4rem;
+            margin-left: -2rem;
+            background: transparent;
+            color: white;
+            font-weight: bold;
+        }
+        #cs option {
+            color: black;
+        }
+        .list {
+            position: absolute;
+            left: 50%;
+            top: 7rem;
+            width: 22.2rem;
+            height: 19rem;
+            margin-left: -11.3rem;
+            overflow: auto;
+        }
+        .list ul {
+            width: 95%;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dashed #768292;
+        }
+        .list ul:last-child {
+            border: none;
+        }
+        .list ul li {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            color: white;
+        }
+        .list ul li:first-child {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 0.1rem;
+        }
+        .mCSB_inside > .mCSB_container{margin-right:0px}
+        .mCSB_scrollTools .mCSB_draggerRail{width:10px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}
+        .mCSB_scrollTools .mCSB_draggerRail{background-color:#c7c7c7 !important}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:8px;-webkit-border-radius:0;-moz-border-radius:0x;border-radius:0}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#aee0f4 !important}
+    </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/125/67/211/13737485.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/126/67/211/13737486.jpg" alt="">
+                <div class="bmk">
+                    <p class="name">
+                        <input type="text" id="name" placeholder="姓名">
+                    </p>
+                    <p class="tel">
+                        <input type="tel" id="tel" placeholder="手机" maxlength="11">
+                    </p>
+                    <p class="series select">
+                        <select id="series">
+                            <option value="96">途观</option>
+                        </select>
+                    </p>
+                    <p class="city select">
+                        <select id="city">
+                            <option value="0">请选择</option>
+                        </select>
+                    </p>
+                    <p class="dealers select">
+                        <select id="dealers">
+                            <option value="0">请选择</option>
+                        </select>
+                    </p>
+                    <div class="privacyPolicy">
+                        <input type="checkbox" checked>
+                        <span>我同意<a href="//www.qq.com/privacy.htm">《隐私政策》</a></span>
+                    </div>
+                    <p class="submit">
+                        <input type="button" id="submit">
+                    </p>
+                </div>
+            </div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/127/67/211/13737487.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/128/67/211/13737488.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/129/67/211/13737489.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/130/67/211/13737490.jpg" alt="">
+                <select id="cs">
+                    <option value="0">城市</option>
+                </select>
+                <div class="list">
+                   
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+    <script>
+        var des = [
+            { "prov": "重庆", "city": "重庆", "name": "重庆百事达华众汽车销售服务有限公司", "tel": "023-86392999", "address": "重庆市南坪南湖路12号" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆博众汽车销售服务有限公司", "tel": "023-89112118", "address": "重庆市经济技术开发区经开园金渝大道99号" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆苏创申众汽车销售服务有限公司", "tel": "023-63268888", "address": "重庆市九龙坡区经纬大道1111号" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆渝众汽车销售服务有限公司", "tel": "023-68600174", "address": "重庆市九龙坡区石桥铺石新路176号（巴山车管所斜对面）" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆新威众汽车销售服务有限公司", "tel": "023-67907733", "address": "重庆市江北区南桥寺盘溪路304号（市中医院对面）" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆景通汽车服务有限公司", "tel": "023-67645551", "address": "重庆市渝北区人和镇万年路2号" },
+            { "prov": "重庆", "city": "万州", "name": "重庆万通汽车销售服务有限公司", "tel": "023-58580999", "address": "重庆市万州区沙龙路三段1109号（光彩市场对面）" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆长航南方汽车销售服务有限公司", "tel": "023-62592813", "address": "重庆市巴南区花溪街道红光大道18号" },
+            { "prov": "重庆", "city": "永川", "name": "重庆百事达华恒汽车销售服务有限公司", "tel": "023-85359696", "address": "重庆市永川区昌州大道中段23号" },
+            { "prov": "重庆", "city": "涪陵", "name": "重庆巨众汽车销售服务有限公司", "tel": "023-72379996", "address": "重庆市涪陵区迎宾大道59号(新五中后门红绿灯处）" },
+            { "prov": "重庆", "city": "垫江", "name": "重庆华威联众汽车销售服务有限公司", "tel": "023-74611777", "address": "重庆市垫江县牡丹大道88号温州商贸城A4-1-218" },
+            { "prov": "重庆", "city": "重庆", "name": "重庆荣达惠众汽车销售服务有限公司", "tel": "023-67081195", "address": "重庆市渝北区黄泥塝红黄路399号" },
+            { "prov": "重庆", "city": "璧山", "name": "重庆渝众曦城汽车销售服务有限公司", "tel": "023-41566566", "address": "重庆市璧山区璧青路永嘉大道路口（车管所往青杠方向红绿灯右转对面）" },
+            { "prov": "重庆", "city": "合川", "name": "重庆宝众汽车销售服务有限公司", "tel": "023-42715666", "address": "重庆市合川区工业园区北部汽车园内（啤酒厂前行500米）" },
+            { "prov": "重庆", "city": "奉节", "name": "重庆友众汽车销售有限公司", "tel": "023-56803333", "address": "重庆市奉节县清水十字路口（西晟汽车）" },
+            { "prov": "重庆", "city": "潼南", "name": "重庆市辰众汽车销售有限公司", "tel": "023-44315555", "address": "重庆市潼南区凉风垭工业园区创业大道99号（辰宇汽车园内）" },
+            { "prov": "重庆", "city": "长寿", "name": "重庆广德众锐汽车销售服务有限公司", "tel": "023-40668911", "address": "重庆市长寿区渡舟街道桃源北支路1号附8号" },
+            { "prov": "重庆", "city": "黔江", "name": "重庆百事达华黔汽车销售服务有限公司", "tel": "023-85086777", "address": "重庆市黔江区正阳机动车交易中心百事达汽车黔江分公司综合办公室" },
+            { "prov": "重庆", "city": "忠县", "name": "重庆百事达华昶汽车销售服务有限公司", "tel": "023-85820000", "address": "重庆市忠县忠州街道大桥路17号" },
+            { "prov": "重庆", "city": "荣昌", "name": "重庆瑞众汽车销售服务有限公司", "tel": "023-46558866", "address": "重庆市荣昌区昌州街道昌州大道东段11号" },
+            { "prov": "重庆", "city": "江津", "name": "重庆市悦众汽车销售有限公司", "tel": "023-47287788 ", "address": "重庆市江津区德感工业园区上汽大众4S店" },
+        ]
+    </script>
+    <script>
+        //城市 经销商 数据
+        for (var i = 0; i < des.length; i++) {
+            if ($('#city').html().indexOf(des[i].city) < 0) {
+                $('#city').append('<option value="' + des[i].city + '">' + des[i].city + '</option>')
+                $('#cs').append('<option value="' + des[i].city + '">' + des[i].city + '</option>')
+            }
+            var $ul = '<ul>' +
+                '<li>' + des[i].name + '</li>' +
+                '<li>' + des[i].address + '</li>' +
+                '<li>' + des[i].tel + '</li>' +
+                '</ul>'
+            $('.list').append($ul)
+        }
+        $('#city').change(function () {
+            $("#dealers").find("option:not(:first)").remove();
+            for (var i = 0; i < des.length; i++) {
+                if ($('#city option:checked').text() == des[i].city) {
+                    $('#dealers').append('<option value="' + des[i].name + '">' + des[i].name + '</option>')
+                }
+            }
+        });
+        $('#cs').change(function () {
+            $('.list .mCSB_container').html('');
+            $(".list").mCustomScrollbar("destroy");
+            for (var i = 0; i < des.length; i++) {
+                if ($('#cs option:checked').text() == des[i].city) {
+                    var $ul = '<ul>' +
+                        '<li>' + des[i].name + '</li>' +
+                        '<li>' + des[i].address + '</li>' +
+                        '<li>' + des[i].tel + '</li>' +
+                        '</ul>'
+                    $('.list').append($ul)
+                } else if ($('#cs option:checked').val() == '0') {
+                    var $ul = '<ul>' +
+                        '<li>' + des[i].name + '</li>' +
+                        '<li>' + des[i].address + '</li>' +
+                        '<li>' + des[i].tel + '</li>' +
+                        '</ul>'
+                    $('.list').append($ul)
+                }
+            }
+            $(".list").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        })
+        //报名
+        var flag = true;
+        $("#submit").click(function () {
+            if (flag) {
+                var name = $("#name").val(),  //姓名
+                    tel = $("#tel").val(), //电话
+                    series_id = $('#series').val(),    //车型id
+                    sex = $('#sex').val(), // 性别
+                    brand_id = 13, //品牌
+                    dealers = $("#dealers").val(), //经销商
+                    act_id = 3382,  //活动id
+                    city = $('#city').val(),
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        brand_id: brand_id,
+                        series_id: series_id,
+                        sex: sex,
+                        act_id: act_id,
+                        dealers: dealers
+                    };
+                //判断填写是否正确
+                if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == '0') {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (city == '0') {
+                    alert('请选择城市');
+                    return false;
+                }
+                if (dealers == '0') {
+                    alert('请选择经销商');
+                    return false;
+                }
+                if (!($("input[type='checkbox']").prop('checked'))) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        } else {
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+        $(window).load(function () {
+            $(".list").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        })
+    </script>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>空投来袭 Q友限拼购</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+<div class="main">
+    <!--首页-->
+    <div class="page1 pg" style="display: block">
+        <div class="home">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/74/208/13544206.jpg" alt="">
+            <a id="page1Bmk"></a>
+            <a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/330.htm" style="bottom: 2.55rem"></a>
+            <a id="tk"></a>
+        </div>
+        <div class="popup">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/137/74/208/13544207.png" alt="">
+        </div>
+    </div>
+    <!--报名页-->
+    <div class="page2 pg">
+        <div class="banner">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/204/75/208/13544529.jpg" alt="">
+        </div>
+        <div class="bmk">
+            <p style="height: 0.1rem"></p>
+            <p class="name">
+                <input type="text" id="name" placeholder="您的姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="您的电话" maxlength="11">
+            </p>
+            <p class="brand">
+                <select id="brand">
+                    <option value="0">意向品牌</option>
+                </select>
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/143/76/208/13544723.png" alt=""></i>
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                </select>
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/143/76/208/13544723.png" alt=""></i>
+            </p>
+            <p class="code">
+                <input type="tel" id="code" placeholder="验证码">
+                <input type="button" id="getCode" value="获取">
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" value="确认报名" style="background-color: #e3c796;color: #8f6b2c;padding-left: 0">
+            </p>
+        </div>
+    </div>
+    <!--集字页-->
+    <div class="page3 pg">
+        <!--背景图-->
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/78/208/13545090.jpg" alt="" style="position: relative;">
+        <!--分享好友帮忙集字-->
+        <h1>分享好友帮忙集字</h1>
+        <div class="jzL">
+            <ul>
+                <!--腾讯汽车 四张小卡片-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/4/78/208/13545094.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/8/78/208/13545098.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/78/208/13545097.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/78/208/13545096.png" alt=""></li>-->
+            </ul>
+        </div>
+        <div class="ts">
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/243/95/208/13549668.png" alt=""></i><span class="friend">XXX</span>已帮您助力，恭喜你获得【车】字
+        </div>
+        <div class="textList">
+            <ul>
+                <li>1.活动时间：即日起至2018年5月31日</li>
+                <li>2.转发一次朋友圈或者微信群可获得三次抽取字的机会，也可通过邀请朋友参加来获得集字的机会</li>
+                <li>3.请填写正确的手机号码，方便短信的接收，红包的领取 腾讯汽车在法律允许范围内享有本活动解释权</li>
+                <li style="height: 0.5rem"></li>
+            </ul>
+        </div>
+        <!--分享好友按钮-->
+        <a id="share" href="javascript:void(0)">分享给好友</a>
+        <a id="prize" href="javascript:void(0)" style="display: none">去领奖</a>
+        <div class="shareImg">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/30/136/207/13494885.png" alt="">
+        </div>
+    </div>
+    <!--收集完成提示领取红包页面-->
+    <div class="page4 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/151/81/208/13546006.jpg" alt="" style="position: relative;">
+        <button id="getMoy"></button>
+    </div>
+    <div class="page5 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/158/81/208/13546013.jpg" alt="" style="position: relative;">
+        <p>
+            <!--红包金额-->
+            <span id="setNum">0.00</span><span>元</span>
+        </p>
+    </div>
+    <!--活动结束页面-->
+    <div class="page6 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/46/94/208/13549216.png" width="100%" height="100%" alt="">
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="js.js"></script>
+</html>

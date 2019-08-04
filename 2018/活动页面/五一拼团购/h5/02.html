@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>东风日产：幸福大巴，送你回家</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <link rel="shortcut icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" type="text/css" href="http://www.yetcar.com/Public/static/bus/css/loading.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.yetcar.com/Public/static/bus/css/swiper-3.4.2.min.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.yetcar.com/Public/static/bus/css/animate.css" />
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.yetcar.com/Public/static/bus/css/cropper.css" />
+    <link rel="stylesheet" type="text/css" href="http://www.yetcar.com/Public/static/bus/css/style.css" />
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script type="text/javascript">
+        //适配 rem
+        (function(doc) {
+            var scale = 1 / devicePixelRatio;
+            doc.querySelector('meta[name="viewport"]').setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            doc.documentElement.style.fontSize = doc.documentElement.clientWidth / 10 + 'px';
+        })(document);
+        //分享
+        var appId = "wxe87ee9f000380f00";
+        var timestamp = "1525334157";
+        var nonceStr = "1msEEKMC4PattPa2";
+        var signature = "ac619b2343afaafe5d1319858680b21a9116d5d1";
+
+
+        wx.config({
+            debug: false,
+            appId: appId,
+            timestamp: timestamp,
+            nonceStr: nonceStr,
+            signature: signature,
+            jsApiList: [
+                // 所有要调用的 API 都要加到这个列表中
+                'onMenuShareAppMessage',
+                'onMenuShareTimeline'
+            ]
+        });
+
+        var share_title = '东风日产： 幸福大巴，送爱回家';
+        var share_desc = '#东风日产联合腾讯汽车广州站新春公益活动#';
+        var share_image = 'http://img1.gtimg.com/autodongguan/pics/hv1/172/61/207/13475902.jpg';
+        /*var share_link = window.location.href;*/
+        var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";
+        wx.ready(function () {
+            // 在这里调用 API
+            wx.onMenuShareAppMessage({
+                title: share_title, // 分享标题
+                desc: share_desc, // 分享描述
+                link: share_link, // 分享链接
+                imgUrl: share_image, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    //alert("分享取消");
+                }
+            });
+
+            wx.onMenuShareTimeline({
+                title: share_title, // 分享标题
+                link: share_link, // 分享链接
+                imgUrl: share_image, // 分享图标
+                success: function () {
+                    //alert("分享成功");
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    //alert("分享取消");
+                }
+            });
+        });
+
+    </script>
+    <style>
+        .page1 .pagebg {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/136/74/208/13544206.jpg") top center no-repeat;
+            background-size: 100% auto;
+        }
+    </style>
+
+    <!--不产生缓存设置，写完删除-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />-->
+
+</head>
+
+<body>
+<!--loading遮罩-->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_one"></div>
+        </div>
+        <p>幸福大巴，送爱回家</p>
+    </div>
+</div>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide page1 active">
+            <div class="pagebg"></div>
+            <div class="content">
+                <div class="next"></div>
+            </div>
+        </div>
+        <div class="swiper-slide page2 ">
+            <div class="pagebg"></div>
+            <div class="content">
+                <a class="pc-link"></a>
+                <div class="next"></div>
+            </div>
+        </div>
+        <div class="swiper-slide page3">
+            <div class="float"></div>
+            <div class="pagebg"></div>
+            <div class="content">
+                <canvas id="myCanvasPage3"></canvas>
+                <div class="up-bgimg">
+                    <!--capture 调用相机 accept="image/*" capture="camera"-->
+                    <input type="file" class="upload" name="" id="" value="" />
+                    <img id="imgHide" src="">
+                </div>
+                <div class="page3-btn-wrap">
+                    <div class="jc-btn"></div>
+                    <div class="upload-btn zoom">
+                        <input type="file" name="" id="page3inp" value="" />
+                    </div>
+                    <div class="next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide page4 ">
+            <div class="pagebg"></div>
+            <div class="content">
+                <div class="wrap">
+                    <img width="100%" src="/Public/static/bus/img/b2_2.jpg" />
+                </div>
+                <img class="upload" src="/Public/static/bus/img/bus_page3_upfile.jpg" />
+                <!--<PC class="gohome" src="PC/bus_page4_wait.png" />-->
+                <span id="word"></span>
+                <div class="page4-btn-wrap">
+                    <div class="wraps-btn"></div>
+                    <!--<div class="words-btn"></div>-->
+                    <div class="next"></div>
+                </div>
+
+                <div class="wraps-sel">
+                    <div class="btn"></div>
+                    <div class="swiper-container wraps-sel-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!--<PC src="PC/0_02.jpg" />-->
+                            </div>
+                            <div class="swiper-slide">
+                                <!--<PC src="/Public/static/bus/PC/b2_1.jpg" />-->
+                            </div>
+                            <!--<div class="swiper-slide">
+                              <PC src="/Public/static/bus/PC/2_02.png" />
+                            </div>-->
+                            <!--<div class="swiper-slide">
+                              <PC src="PC/3_02.png" />
+                            </div>
+                            <div class="swiper-slide">
+                              <PC src="PC/b1_1.png" />
+                            </div>
+                            <div class="swiper-slide">
+                              <PC src="PC/b2_1.png" />
+                            </div>
+                            <div class="swiper-slide">
+                              <PC src="PC/b3_1.png" />
+                            </div>
+
+                            <div class="swiper-slide">
+                              <PC src="PC/b4_1.png" />
+                            </div>
+
+                            <div class="swiper-slide">
+                              <PC src="PC/b5_1.png" />
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="words-sel">
+                    <div class="btn"></div>
+                    <input type="text" name="" maxlength="8" id="" value="" /><button>确定</button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide page5" id="page5">
+            <canvas id="myCanvasPage5"></canvas>
+            <img class="hide" id="page5bg" src="http://www.yetcar.com/Public/static/bus/img/bus_page5.jpg" />
+            <img class="hide" id="page5wrap" src="http://www.yetcar.com/Public/static/bus/img/bus_page3_upfile.jpg" />
+            <img class="hide" id="page5logorc" src="http://www.yetcar.com/Public/static/bus/img/bus_page5_logorc.png" />
+            <img class="hide" id="page5ewm" src="http://www.yetcar.com/Public/static/bus/img/bus_page5_ewm.png" />
+            <img class="hide" id="page5logotx" src="http://www.yetcar.com/Public/static/bus/img/bus_page5_logotx.png" />
+            <img class="hide" id="photo" src="http://www.yetcar.com/Public/static/bus/img/bus_page3_upfile.jpg" />
+            <p class="hide" id="page5text"></p>
+        </div>
+        <div class="swiper-slide page6 ">
+            <div class="pagebg"></div>
+            <div class="content">
+                <form>
+                    <div class="secTop">
+                        <p>
+                            <select name="" id="count">
+                                <option value="1">1人</option>
+                                <option value="2">2人</option>
+                                <option value="3">3人</option>
+                            </select>
+                        </p>
+                        <p>
+                            <select name="" id="line">
+                                <option value="1">广州 → 湛江</option>
+                                <option value="1">广州 → 茂名</option>
+                                <option value="1">广州 → 阳江</option>
+                                <option value="1">广州 → 云浮</option>
+                                <option value="1">广州 → 肇庆</option>
+                                <option value="1">广州 → 江门</option>
+                                <option value="1">广州 → 清远</option>
+                                <option value="1">广州 → 珠海</option>
+                                <option value="1">广州 → 中山</option>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div class="ck-wrap">
+                        <div class="sec sec-one one">
+                            <p><input type="text" name="name" id="ck1_name" value="" /></p>
+                            <p><input type="tel" name="tel" id="ck1_tel" value="" /></p>
+                        </div>
+                    </div>
+
+                    <p class="btn-wrap">
+                        <input type="button" id="submit" value=""/>
+                        <a id="act-link" href="http://guangzhou.auto.qq.com/zhuanti/2018zt/nissanXF0122.htm" target="_blank"></a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="http://www.yetcar.com/Public/static/bus/js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://www.yetcar.com/Public/static/bus/js/cropper.js" type="text/javascript" charset="utf-8"></script>
+<!--拍照旋转问题-->
+<script src="http://www.yetcar.com/Public/static/bus/js/exif.min.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/popAlert.create.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="js/PC.allow.bug.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+    var swiper = new Swiper('.wraps-sel-list', {
+        direction: 'horizontal',
+        slidesPerView: 4,
+        spaceBetween: 0,
+    });
+
+    var pop=new Popup('#ca0028',1,'腾讯汽车提示');
+    var pop2=new Popup('#ca0028',2,'腾讯汽车提示');
+
+    var getImg = false;
+    var jcsrc = '';
+    //适配宽高比比普通手机高的手机
+    var ratioDesign = 1.612;
+    var dh = document.body.clientWidth*ratioDesign;
+    var sx = 0,
+        sy = 0,
+        sw = 0,
+        sh = 0,
+        w = document.body.clientWidth * 0.755,
+        h = dh * 0.579,
+        xend = document.body.clientWidth * 0.5,
+        yend = dh*0.786;
+
+    //      var rezise = (function(){
+    //      	var sw = document.body.clientWidth;
+    //      	var sh = document.body.clientHeight;
+    //      	var ratio = sh/sw;
+    //      	if(ratio > ratioDesign){
+    //      		ratioDesign = sh/sw;
+    //      	}
+    //      }
+    //      rezise();
+    //预加载
+    var loading = function(){
+        var loadingDiv = document.getElementById('loading');
+        var imglinks = [
+            '/Public/static/bus/img/bus_page1.jpg',
+            '/Public/static/bus/img/bus_page2.jpg',
+            '/Public/static/bus/img/bus_page3.jpg',
+            '/Public/static/bus/img/bus_page3_jc.jpg',
+            '/Public/static/bus/img/1_03.png',
+            '/Public/static/bus/img/2_03.png',
+            '/Public/static/bus/img/3_03.png',
+            '/Public/static/bus/img/4_03.png',
+//          'PC/5_03.jpg',
+//          'PC/6_03.png',
+
+        ];
+        function preloadimages(imgarr){
+            var newimages=[], loadedimages=0
+            function imageloadpost(){
+                loadedimages++;
+                if (loadedimages==imgarr.length){
+                    //alert("图片已经加载完成")
+                    loadingDiv.style.display = 'none';
+                }
+            }
+            for (var i=0; i<imgarr.length; i++){
+                newimages[i]=new Image()
+                newimages[i].src=imgarr[i]
+                newimages[i].onload=function(){
+                    imageloadpost()
+                }
+                newimages[i].onerror=function(){
+                    imageloadpost()
+                }
+            }
+        }
+        //第四页的图片先不加
+//      	for(var i=0;i<document.querySelectorAll('.page4 PC').length;i++){
+//      		imglinks.push(document.querySelectorAll('.page4 PC')[i].src);
+//      	}
+        //	console.log(imglinks)
+        preloadimages(imglinks);
+    }
+    loading();
+
+    //文字随机
+    var textRandom = function(){
+        var txtList = [
+            '#送爱回家，温暖出发#',
+            '#是什么牵动你的归途？#',
+            '#在外面每一天，都会想家#',
+            '#为了生活，你已付出太多#',
+            '#带你回家，待你回家#'
+        ];
+        var t = txtList[Math.floor((Math.random()*txtList.length))];
+        $('#word').text(t);
+        $('#page5text').text(t);
+        xend = xend - $('#word').width()/2;
+    }
+
+
+    //上传
+    var upload = (function() {
+        var upBtn = $('.page3 input');
+        var upBgImg = $('.up-bgimg');
+        var html = $('.upload-btn').html();
+        var canvas = document.getElementById('myCanvasPage3');
+        var upImg = document.getElementById('imgHide');
+        var orient = null;
+
+        canvas.width = document.getElementById('myCanvasPage3').clientWidth;
+        canvas.height = document.getElementById('myCanvasPage3').clientHeight;
+        ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'transparent';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        function getPhotoOrientation(file){
+            EXIF.getData(file, function () {
+                EXIF.getAllTags(this);
+                orient = EXIF.getTag(this, 'Orientation');
+            });
+        }
+
+        upBtn.change(function() {
+            $('.float').show();
+            $('.up-bgimg').addClass('active');
+            $('.jc-btn').addClass('zoom');
+            $('.up-bgimg input').css('z-index','0');
+            var upFile = this.files[0];
+            var upImgSrc = window.URL.createObjectURL(upFile)|| window.webkitURL.createObjectURL(upFile);
+            //照片拍摄方向
+            getPhotoOrientation(this.files[0]);
+
+            upImg.src = upImgSrc;
+            $('.jc-btn').show();
+
+            $('.up-bgimg > img').cropper({
+                aspectRatio: 1 / 1.236,
+                crop: function(data) {
+                    sx = parseInt(data.x);
+                    sy = parseInt(data.y);
+                    sw = parseInt(data.width);
+                    sh = parseInt(data.height);
+                    $('.float').hide();
+                }
+            });
+        })
+
+        $('.jc-btn').click(function() {
+            $(this).hide();
+            $(this).parents('.content').find('.up-bgimg').hide();
+            $(this).nextAll('.next').addClass('zoom');
+            console.log(upImg)
+
+            //处理方向
+            if( orient != undefined && orient != '' && orient != 1){
+                //alert('旋转')
+                //alert(orient)
+                switch(orient){
+                    case 6:
+                        //顺时针90度旋转
+                        ctx.translate(w, 0);
+                        ctx.rotate(90 * Math.PI / 180);
+                        ctx.drawImage(upImg, sx-0.05*document.body.clientWidth, sy, sh, sw, 0, 0, h, w);
+                        break;
+                    case 8:
+                        //逆时针90度旋转
+                        ctx.translate(0,h);
+                        ctx.rotate(-90 * Math.PI / 180);
+                        ctx.drawImage(upImg, sx-0.05*document.body.clientWidth, sy, sh, sw, 0, 0, h, w);
+                        break;
+                    case 3:
+                        //逆时针180度旋转
+                        ctx.translate(w,h)
+                        ctx.rotate(-180 * Math.PI / 180);
+                        ctx.drawImage(upImg, sx, sy, sw, sh, 0, 0, w, h);
+                        break;
+                }
+            }else{
+                //alert('不旋转')
+                //不作处理
+                ctx.drawImage(upImg, sx, sy, sw, sh, 0, 0, w, h);
+            }
+
+            jcsrc = canvas.toDataURL("image/jpeg");
+            getImg = true;
+            $('.page4 .upload').attr('src', jcsrc);
+        })
+
+    })();
+
+    //选择
+    var selects = (function() {
+        var wrapSrcArr = [
+//           '/Public/static/bus/PC/bus_page4_wrap.jpg',
+            '/Public/static/bus/img/b2_2.jpg',
+            /*'PC/2_03.png',
+            '/Public/static/bus/PC/3_03.png',
+            '/Public/static/bus/PC/b1_2.png',
+            '/Public/static/bus/PC/b2_2.png',
+            '/Public/static/bus/PC/b3_2.png',
+            '/Public/static/bus/PC/b4_2.png',
+            '/Public/static/bus/PC/b5_2.png'*/
+
+        ]
+        $('#page5wrap').attr('src',wrapSrcArr[0]);
+        $('.wraps-btn').click(function() {
+            $('.words-sel').removeClass('active');
+            $('.wraps-sel').addClass('active');
+        })
+        $('.btn').click(function() {
+            $('.wraps-sel').removeClass('active');
+            $('.words-sel').removeClass('active');
+        })
+        $('.wraps-sel .swiper-slide').click(function() {
+            var index = $(this).index();
+            $('.wrap img').attr('src', wrapSrcArr[index]);
+            $('#page5wrap').attr('src',wrapSrcArr[index]);
+        })
+
+        $('.words-btn').click(function() {
+            $('.wraps-sel').removeClass('active');
+            $('.words-sel').addClass('active');
+        })
+        $('.words-sel input').focus(function(){
+            var This = this;
+            setTimeout(function(){
+                This.scrollIntoViewIfNeeded(true);
+            },100)
+        })
+//        $('.words-sel button').click(function() {
+//          $('#word').text($(this).prev().val());
+//          $('#page5text').text($(this).prev().val());
+//          xend = xend - $('#word').width()/2;
+////          yend = yend - $('#word').height()/2;
+//          //textDrag();
+//        })
+
+    })();
+
+    //文字
+    var textDrag = function(){
+        var x_start,y_start,x_move,y_move,x_end,y_end,left_start,top_start;
+        document.getElementById("word").addEventListener("touchstart",function(e)
+        {
+            x_start=e.touches[0].pageX;
+            y_start=e.touches[0].pageY;
+            left_start=$("#word").css("left");
+            top_start=$("#word").css("top");
+        })
+        document.getElementById("word").addEventListener("touchmove",function(e)
+        {
+            x_move=e.touches[0].pageX;
+            y_move=e.touches[0].pageY;
+            $("#word").css("left",parseFloat(x_move)-parseFloat(x_start)+parseFloat(left_start)+"px");
+            $("#word").css("top",parseFloat(y_move)-parseFloat(y_start)+parseFloat(top_start)+"px");
+        })
+        document.getElementById("word").addEventListener("touchend",function(e)
+        {
+            var x_end=e.changedTouches[0].pageX;
+            var y_end=e.changedTouches[0].pageY;
+            var bw = document.body.clientWidth;
+            var bh = dh;
+            xend = xend - $('#word').width()/2;
+            yend = e.changedTouches[0].pageY + 0.08 * dh;
+            console.log(xend/+'/'+yend);
+        })
+        $('body').on('touchmove', function (event) {
+            event.preventDefault();
+        });
+    };
+
+
+    var nextPage = function() {
+        $(this).addClass('move');
+        setTimeout(function() {
+            $(this).removeClass('active').addClass('hide').next('.swiper-slide').addClass('active');
+        }.bind($(this)), 800)
+    }
+
+    //合成
+    var showImg = function() {
+        var photo = document.getElementById('photo');
+        var canvas5 = document.getElementById('myCanvasPage5');
+        canvas5.width = document.getElementById('myCanvasPage5').clientWidth;
+        canvas5.height = document.getElementById('myCanvasPage5').clientHeight;
+        ctx5 = canvas5.getContext('2d');
+        ctx5.fillStyle = '#fff';
+        ctx5.fillRect(0, 0, canvas5.width, canvas5.height);
+        photo.src = jcsrc;
+
+
+        var wl = 0.0467 * document.body.clientWidth;
+        var wt = 0.0265 * dh;
+        var ww = 0.904 * document.body.clientWidth;
+        var wh = 0.9297 * dh;
+
+        var rcl = 0.14 * document.body.clientWidth;
+        var rct = 0.026 * dh;
+        var rcw = 0.68 * document.body.clientWidth;
+        var rch = 0.103 * dh;
+
+        var txl = 0.316 * document.body.clientWidth;
+        var txt = 0.833 * dh;
+        var txw = 0.348 * document.body.clientWidth;
+        var txh = 0.037 * dh;
+
+        var ewml = 0.704 * document.body.clientWidth;
+        var ewmt = 0.7725 * dh;
+        var ewmw = 0.1733 * document.body.clientWidth;
+        var ewmh = 0.1075 * dh;
+
+        var pl = 0.119 * document.body.clientWidth;
+        var pt = 0.1836 * dh;
+
+        console.log(w+'/'+h)
+        ctx5.drawImage(document.getElementById('page5bg'), 0, 0, canvas5.width, canvas5.height);
+        ctx5.drawImage(document.getElementById('page5wrap'), wl, wt, ww, wh);
+
+        ctx5.drawImage(photo,  pl, pt,  photo.offsetWidth, photo.offsetHeight);
+
+        ctx5.drawImage(document.getElementById('page5logorc'), rcl, rct, rcw, rch);
+        ctx5.drawImage(document.getElementById('page5logotx'), txl, txt, txw, txh);
+        ctx5.drawImage(document.getElementById('page5ewm'), ewml, ewmt, ewmw, ewmh);
+        var fontSize = document.body.clientWidth/(1242/43)+'px';
+        ctx5.font="bold "+fontSize+" 微软雅黑";
+        ctx5.fillStyle = 'black';
+        ctx5.textBaseline = 'top';
+//        alert(document.getElementById('page5text').innerHTML);
+        //document.getElementById('page5text').innerHTML
+        //alert(xend)
+        ctx5.fillText(document.getElementById('page5text').innerHTML, xend, yend);
+
+        var saveSrc = canvas5.toDataURL("image/jpeg");
+        document.getElementById('page5').innerHTML = "<img id='savePhoto'  style='vertical-align:top;' src='" + saveSrc + "' alt='from canvas'/>";
+        setTimeout(function(){
+            canvas5.style.display = 'none';
+
+            pop.showNotice('合成成功！长按保存',function(){
+                setTimeout(function(){
+                    pop2.showNotice('前往报名？',function(){
+                        nextPage.call($('.page5'));
+                    });
+                },4000);
+            });
+
+        },1000);
+    }
+
+    //页面切换
+    var slidePage = (function() {
+        var btnNextPage = function() {
+            $(this).parents('.swiper-slide').addClass('move');
+            setTimeout(function() {
+                $(this).parents('.swiper-slide').removeClass('active').addClass('hide').next('.swiper-slide').addClass('active');
+            }.bind($(this)), 800)
+        }
+
+        $('.page1 .next').click(function() {
+            btnNextPage.call($(this));
+        })
+        $('.page2 .next').click(function() {
+            btnNextPage.call($(this));
+        })
+        $('.page2 .pc-link').click(function(){
+            $(this).parents('.swiper-slide').addClass('move');
+            $('.page6').css('z-index',8);
+            setTimeout(function() {
+                $(this).parents('.swiper-slide').removeClass('active').addClass('hide').parents('.swiper-wrapper').find('.page6').addClass('active');
+            }.bind($(this)), 800)
+        })
+        $('.page3 .next').click(function() {
+            if(!getImg) {
+                return;
+            }
+            xend = xend - $('#word').width()/2;
+            textRandom();
+            showImg();
+
+            $(this).parents('.swiper-slide').addClass('move');
+            setTimeout(function() {
+                $(this).parents('.swiper-slide').removeClass('active').addClass('hide').parents('.swiper-wrapper').find('.page5').addClass('active');
+            }.bind($(this)), 800)
+        })
+//        $('.page4 .next').click(function() {
+//        })
+    })();
+
+
+    //报名
+    var sign = function(){
+        var count = $('#count').val();
+
+        $('#count').change(function(){
+            count = $(this).val();
+            var secEls = [];
+            var wrap = $('.ck-wrap');
+            var classArr = ['sec sec-one','sec sec-two','sec sec-three'];
+            var secHtml = '<p><input type="text" name="name" id="" value=""></p>'+
+                '<p><input type="tel" name="tel" id="" value=""></p>';
+            wrap.html('');
+            for(var i=0;i<1;i++){
+                var secDiv = $('<div></div>');
+                secDiv.html(secHtml);
+                secEls.push(secDiv)
+                secEls[i].addClass(classArr[i]);
+                wrap.append(secDiv)
+            }
+        })
+
+        //报名
+        $('#submit').click(function(){
+            var line = $('#line option:checked').text();
+            var ck1_name = $('.sec-one').find('input[name="name"]').val();
+            var ck1_tel = $('.sec-one').find('input[name="tel"]').val();
+//	    			var ck2_name = $('.sec-two').find('input[name="name"]').val()?$('.sec-two').find('input[name="name"]').val():'';
+//	    			var ck2_tel = $('.sec-two').find('input[name="tel"]').val()?$('.sec-two').find('input[name="tel"]').val():'';
+//	    			var ck3_name = $('.sec-three').find('input[name="name"]').val()?$('.sec-three').find('input[name="name"]').val():'';
+//	    			var ck3_tel = $('.sec-three').find('input[name="tel"]').val()?$('.sec-three').find('input[name="tel"]').val():'';
+
+            if(ck1_name==''||ck1_tel==''){
+                pop.showNotice('信息没有填写完整');
+                return false;
+            }
+            if(!ck1_name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                pop.showNotice('请输入的中文姓名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(ck1_tel)) {
+                pop.showNotice('手机号格式不正确');
+                return false;
+            }
+
+//      		if(count==2){
+//      			if(ck2_name==''||ck2_tel==''){
+//								alert('乘客二信息没有填写完整');
+//								return false;
+//							}
+//      			if(!ck2_name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+//								alert('请输入乘客二的中文姓名');
+//								return false;
+//							};
+//							if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(ck2_tel)) {
+//								alert('乘客二的手机号格式不正确');
+//								return false;
+//							}
+//      		}
+//
+//      		if(count==3){
+//      			if(ck2_name==''||ck2_tel==''){
+//								alert('乘客二信息没有填写完整');
+//								return false;
+//							}
+//      			if(ck3_name==''||ck3_tel==''){
+//								alert('乘客三信息没有填写完整');
+//								return false;
+//							}
+//      			if(!ck2_name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+//								alert('请输入乘客二的中文姓名');
+//								return false;
+//							};
+//							if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(ck2_tel)) {
+//								alert('乘客二的手机号格式不正确');
+//								return false;
+//							}
+//      			if(!ck3_name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+//								alert('请输入乘客三的中文姓名');
+//								return false;
+//							};
+//							if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(ck3_tel)) {
+//								alert('乘客三的手机号格式不正确');
+//								return false;
+//							}
+//      		}
+
+            $.ajax({
+                type:"get",
+                url:"http://www.yetcar.com/index.php?s=/Home/Bus/bus_baoming",
+                data:{
+                    num:count,
+                    route:line,
+                    name_one:ck1_name,
+                    phone_one:ck1_tel,
+
+//      				name_two:ck2_name,
+//      				phone_two:ck2_tel,
+//
+//      				name_three:ck3_name,
+//      				phone_three:ck3_tel,
+                },
+                dataType:'jsonp',
+                async:true,
+                success:function(data){
+                    if(data.status==1){
+                        pop.showNotice('恭喜你，报名成功');
+                        $('.page6 input').val('');
+                        //$('.page6').find('select').get(0).options[0].selected=true;
+                    }else{
+                        pop.showNotice('请求超时，请重新尝试')
+                    }
+                },
+                error:function(){
+                    pop.showNotice('请求超时，请重新尝试')
+                }
+
+            });
+        })
+    }
+    sign();
+</script>
+
+
+</body>
+
+</html>

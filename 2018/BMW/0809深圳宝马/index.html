@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>创新BMW X2：反其道而型</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+            overflow: hidden;
+            position: relative;
+        }
+        .cn {
+            position: relative;
+        }
+        .pa {
+            position: absolute;
+            left: 50%;
+        }
+        .cn1 a {
+            top: 14.8rem;
+            width: 9rem;
+            height: 2rem;
+            margin-left: -11.5rem;
+            cursor: pointer;
+        }
+        .cn4 {
+            max-width: 750px;
+            height: 47rem;
+        }
+        .cn4 .che1 {
+            top: 1rem;
+            width: 22.6rem;
+            height: auto;
+            margin-left: -11.25rem;
+        }
+        .cn4 #swiper1 {
+            width: 100%;
+        }
+        .cn4 #swiper1 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/79/171/209/13633909.png);
+            left: 10px;
+            right: auto;
+        }
+        .cn4 #swiper1 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/80/171/209/13633910.png);
+            right: 10px;
+            left: auto;
+        }
+        .cn4 .che2 {
+            top: 28rem;
+            width: 100%;
+            height: 19rem;
+            transform: translateX(-50%);
+        }
+        .cn4 .che2 i {
+            position: absolute;
+            left: 3.5rem;
+            top: 1rem;
+            width: 5.6rem;
+        }
+        .cn4 .che2 ul {
+            width: 100%;
+        }
+        .cn4 .che2 ul li {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .cn6 {
+            max-width: 750px;
+            height: 16rem;
+            overflow: hidden;
+        }
+        .cn6 .che3 {
+            top: 1rem;
+            width: 100%;
+            transform: translateX(-50%);
+            height: auto;
+        }
+        .cn6 .che3 .swiper-container {
+            overflow: initial;
+        }
+        .cn6 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: -24px;
+        }
+        .cn6 .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #000;
+        }
+        .cn8 {
+            max-width: 750px;
+            height: 12rem;
+        }
+        .cn8 ul {
+            width: 100%;
+        }
+        .cn8 ul li {
+            margin-top: -1px;
+            position: relative;
+        }
+        .cn8 ul li i {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 6rem;
+            height: 6rem;
+            margin-left: -3rem;
+            margin-top: -3rem;
+        }
+        .shade {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.5);
+            display: none;
+            z-index: 11;
+        }
+        .videoList {
+            position: fixed;
+            left: 1rem;
+            top: 6rem;
+            z-index: 22;
+        }
+        .videoList ul li {
+            position: absolute;
+            left: -999999px;
+            top: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .videoList ul li.on {
+            left: 0;
+        }
+        .videoList ul li a {
+            position: absolute;
+            left: 19.3rem;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            padding: 1rem;
+        }
+        .yysj {
+            position: fixed;
+            right: 0;
+            top: 21rem;
+            width: 2rem;
+        }
+        .bmk {
+            position: absolute;
+            right: 0;
+            width: 0;
+            transition: width 0.3s ease;
+            z-index: 99999999;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/70/172/209/13634155.png") center center no-repeat;
+            max-width: 750px;
+            background-size: 100% 100%;
+            height: 47.8rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            font-size: 1.2rem;
+            padding-left: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+        .bmk p {
+            width: 17.2rem;
+            height: 2.4rem;
+        }
+        .bmk .name {
+            margin-top: 15.2rem;
+            margin-left: 4.2rem;
+        }
+        .bmk .tel {
+            margin-top: 0.9rem;
+            margin-left: 4.2rem;
+        }
+        .bmk .series {
+            margin-top: 0.8rem;
+            margin-left: 4.2rem;
+            width: 18.2rem;
+        }
+        .bmk .submit {
+            margin-top: 2.6rem;
+            margin-left: 4.2rem;
+            width: 18.2rem;
+        }
+        .privacyPolicy input{position:absolute;left:4.1rem;top:24.7rem;width:1.2rem !important;height:1.2rem !important}
+        .privacyPolicy span{display:inline-block;position:absolute;left:6rem;top:24.6rem;font-size:1.1rem;color:#fff}
+        .privacyPolicy a{color:#fff}
+        .bmk .fh {
+            position: absolute;
+            left: 0;
+            top: 22.6rem;
+            width: 1.2rem;
+            height: 6rem;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/53/171/209/13633883.jpg" alt="">
+        <a href="javascript:;" class="pa"></a>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/54/171/209/13633884.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/171/209/13633885.jpg" alt=""></div>
+    <div class="cn cn4">
+        <div class="che1 pa">
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/61/171/209/13633891.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/62/171/209/13633892.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/63/171/209/13633893.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/64/171/209/13633894.png" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="che2 pa">
+            <ul>
+                <li style="display: block"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/65/171/209/13633895.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/66/171/209/13633896.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/67/171/209/13633897.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/68/171/209/13633898.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/69/171/209/13633899.png" alt=""></li>
+            </ul>
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/71/171/209/13633901.png" alt=""></i>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/56/171/209/13633886.jpg" alt=""></div>
+    <div class="cn cn6">
+        <div class="che3 pa">
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/72/171/209/13633902.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/73/171/209/13633903.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/57/171/209/13633887.jpg" alt=""></div>
+    <div class="cn cn8">
+        <ul>
+            <li><img src="http://mat1.gtimg.com/autoguangzhou/gif/v1.gif" alt=""><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/74/171/209/13633904.png" alt=""></i></li>
+        </ul>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/59/171/209/13633889.jpg" alt=""></div>
+    <div class="shade"></div>
+    <div class="videoList">
+        <ul>
+            <li>
+                <video width="100%" height="auto" id="m-video-0" preload="metadata" poster="" playsinline="" controls="" style="width: 23.214rem; height: 14.623rem;">
+                    <source src="http://www.bmw.com.cn/content/dam/bmw/marketCN/campaign/2018/x2_launch/mobi/_common/_video/x2_full_x264.mp4" type="video/mp4" playsinline="">
+                </video>
+                <a href="javascript:;" style="left: 22.3rem;"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/campaign/2018/x2_launch/mobi/_common/_img/x.png" alt=""></a>
+            </li>
+        </ul>
+    </div>
+    <div class="yysj">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/172/209/13634140.png" alt="">
+    </div>
+    <div class="bmk">
+        <p class="name">
+            <input type="text" id="name" placeholder="姓名 |">
+        </p>
+        <p class="tel">
+            <input type="tel" id="tel" placeholder="电话 |" maxlength="11">
+        </p>
+        <p class="series">
+            <select id="series">
+                <!--<option value="0">意向车型</option>-->
+                <option value="1205">宝马X2</option>
+            </select>
+        </p>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+        <p class="submit">
+            <input type="button" id="submit">
+        </p>
+        <div class="fh"></div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script>
+    var mySwiper1 = new Swiper('#swiper1', {
+        autoplay: 5000,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+        loop: true,
+    });
+    var mySwiper2 = new Swiper('#swiper2', {
+        autoplay: 4588,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+        pagination : '.swiper-pagination',
+        loop: true,
+    })
+</script>
+<script>
+    //车图轮播
+    function autoSwiper() {
+        var Index=0;
+        var t=setInterval(function () {
+            Index++;
+            if (Index>4) Index=0;
+            $('.che2 ul li').eq(Index).fadeIn(300).siblings().fadeOut(300)
+        },3000)
+    }
+    autoSwiper();
+    //弹出视频
+    $('.cn8 ul li').click(function () {
+        var i=$(this).index();
+        $('.shade').show();
+        $('.videoList ul li').eq(i).addClass('on').siblings().removeClass('on');
+        $('#m-video-'+i)[0].play();
+    });
+    $('.videoList ul li a').click(function () {
+        var i=$(this).parent('li').index();
+        $('.shade').hide();
+        $('.videoList ul li').removeClass('on');
+        $('#m-video-'+i)[0].pause();
+    });
+    var oLogin=$('.bmk');
+    //弹出报名框
+    var scoTop=0;
+    $('.yysj').click(function () {
+        oLogin.css({width:'100%',right:'0',top:$(window).scrollTop()})
+    });
+    $('.cn1 a').click(function () {
+        oLogin.css({width:'100%',right:'0',top:'0'})
+    });
+    //报名框弹出
+    $(window).on('resize scroll',function(){
+        scoTop=($(window).height() - oLogin.outerHeight())/4 + $(window).scrollTop();
+        oLogin.css('right' , 0 );
+        oLogin.css('top' , scoTop );
+    });
+    //报名框返回
+    $('.bmk .fh').click(function () {
+        oLogin.css({width:'0',right:'0'})
+    });
+    //报名
+    var flag = true;
+    $("#submit").click(function () {
+        if (flag) {
+            var name = $("#name").val(),  //名字
+                tel = $("#tel").val(),   //电话
+                dealers = '', //经销商
+                brand_id = 1, //品牌id
+                series_id = 1205, //车型id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    act_id: 3061,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    dealers: dealers,
+                };
+            //判断填写是否正确
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert('恭喜你，报名成功！');
+                        location.reload();
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>推广单品牌页面</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .cn {
+            position: relative;
+            margin-top: -1px;
+        }
+
+        .pa {
+            position: absolute;
+            left: 50%
+        }
+
+        .cn1 p {
+            top: 2rem;
+            width: 8.65rem;
+            height: 0.66rem;
+            margin-left: -4.35rem;
+            text-align: center;
+            line-height: 0.66rem;
+            color: white;
+            font-size: 0.5rem;
+            font-weight: bold;
+        }
+
+        .cn2 .che {
+            top: 0.13rem;
+            width: 8.14rem;
+            height: 4.52rem;
+            margin-left: -4.07rem;
+        }
+
+        .cn2 .che i {
+            position: absolute;
+            left: 0;
+            top: -0.04rem;
+            width: 1rem;
+            height: 1rem;
+            display: block;
+        }
+
+        .cn2 .che .cheImg {
+            width: 8.054rem;
+            height: 4.01rem;
+            margin: 0.45rem auto 0;
+            border-radius: 0.1rem;
+            overflow: hidden;
+        }
+
+        .cn3 .timer {
+            top: 0.47rem;
+            width: 3.7rem;
+            height: 0.64rem;
+            margin-left: -2.23rem;
+        }
+
+        .cn3 .timer span {
+            display: inline-block;
+            width: 0.9rem;
+            height: 0.64rem;
+            line-height: 0.64rem;
+            font-size: 0.5rem;
+            font-weight: bold;
+            margin-right: 0.25rem;
+            letter-spacing: 0.17rem;
+        }
+
+        .cn3 .timer span:nth-child(1) {
+            margin-left: 0.07rem;
+        }
+        .cn3 .timer span:nth-child(2) {
+            margin-left: 0.02rem;
+        }
+        .cn3 .timer span:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .cn3 .bmNum {
+            top: 0.33rem;
+            width: 2.22rem;
+            height: 0.85rem;
+            margin-left: 1.84rem;
+        }
+
+        .cn3 .bmNum > p {
+            width: 100%;
+            height: 0.4rem;
+            text-align: center;
+            font-size: 0.3rem;
+            line-height: 0.4rem;
+            color: #1d7dff;
+        }
+
+        .cn3 .bmNum > p:first-child {
+            margin-bottom: 0.03rem;
+        }
+
+        .cn3 .bmNum > p:last-child span:first-child {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .cn3 .bmNum > p:last-child span:last-child {
+            font-size: 12px;
+        }
+
+        .cn3 .info {
+            top: 1.4rem;
+            width: 8.1rem;
+            height: 7.7rem;
+            margin-left: -4.05rem;
+            color: #fff;
+        }
+
+        .cn3 .info .title {
+            width: 100%;
+            font-size: 0.39rem;
+            margin-left: -0.2rem;
+            font-weight: bold;
+            letter-spacing: 0.01rem;
+        }
+
+        .cn3 .info .gcbz {
+            margin-top: 0.3rem;
+            position: relative;
+            font-size: 0.35rem;
+        }
+
+        .cn3 .info .gcbz > span, .cn3 .info .cxxz > span {
+            display: inline-block;
+        }
+
+        .cn3 .info .gcbz > span:nth-child(1), .cn3 .info .cxxz > span:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .cn3 .info .gcbz > span:nth-child(2), .cn3 .info .cxxz > span:nth-child(2) {
+            position: absolute;
+            left: 1.48rem;
+            top: 0.05rem;
+            width: 0.08rem;
+            height: 0.38rem;
+            background: #1d7dff;
+            border-radius: 1rem;
+        }
+
+        .cn3 .info .gcbz ul {
+            position: absolute;
+            left: 1.7rem;
+            top: 0rem;
+            width: 6.5rem;
+            overflow: hidden;
+        }
+
+        .cn3 .info .gcbz ul li {
+            float: left;
+            margin-right: 0.4rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .cn3 .info .gcbz ul li i {
+            width: 0.4rem;
+            height: 0.4rem;
+            display: inline-block;
+            margin-right: 0.05rem;
+        }
+
+        .cn3 .info .gcbz ul li:last-child, .cn3 .info .gcbz ul li:nth-child(3) {
+            margin-right: 0;
+        }
+
+        .cn3 .info .cxxz {
+            margin-top: 0.9rem;
+            position: relative;
+            font-size: 0.35rem;
+        }
+
+        .cn3 .info .cxxz ul {
+            position: absolute;
+            left: 1.7rem;
+            top: 0rem;
+            width: 6.7rem;
+            overflow: auto;
+            max-height: 2.7rem;
+        }
+
+        .cn3 .info .cxxz ul li {
+            float: left;
+            margin-right: 0.2rem;
+            text-align: center;
+            padding: 0.1rem 0.2rem;
+            border: 2px solid #fff;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+            font-size: 0.3rem;
+        }
+
+        .cn3 .info .cxxz ul li.active {
+            border: solid 2px #1d7dff;
+            position: relative;
+        }
+
+        .cn3 .info .cxxz ul li.active:after {
+            clear: both;
+            content: '';
+            display: block;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/25/142/209/13626460.png") no-repeat;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 15px;
+            height: 13px
+        }
+
+        .cn3 .info .cxxz ul li:last-child {
+            margin-right: 0
+        }
+
+        .cn3 .info .mCSB_inside > .mCSB_container {
+            margin-right: 6px
+        }
+
+        .cn3 .info .cxxz .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background-color: #0f3677 !important
+        }
+
+        .cn3 .info .cxxz .mCSB_scrollTools .mCSB_draggerRail {
+            width: 6px
+        }
+
+        .cn3 .info .cxxz .mCSB_scrollTools .mCSB_draggerRail {
+            background-color: #1d7dff !important
+        }
+
+        .cn3 .info .cxxz .ts {
+            font-size: 0.3rem;
+            letter-spacing: 1px;
+            color: #1d7dff;
+            margin-top: 2.4rem;
+            margin-left: 1.6rem;
+        }
+
+        .cn3 .info .cxxz .hdsj, .cn3 .info .cxxz .hddd {
+            margin-top: 0.2rem;
+            font-size: 0.46rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .cn4 .bmk {
+            top: 0.1rem;
+            width: 8.12rem;
+            height: 5rem;
+            margin-left: -4.06rem;
+        }
+
+        .cn4 .bmk input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .cn4 .bmk p {
+            width: 7rem;
+            height: 1rem;
+        }
+
+        .cn4 .bmk .name {
+            margin-top: 0.05rem;
+        }
+
+        .cn4 .bmk .tel {
+            margin-top: 0.59rem;
+        }
+
+        .cn4 .bmk .submit {
+            margin-top: 0.59rem;
+            width: 8rem;
+        }
+
+        input:focus::-webkit-input-placeholder {
+            opacity: 0
+        }
+
+        .cn5 .cn5Text {
+            top: 1.98rem;
+            width: 8.84rem;
+            height: 1.64rem;
+            margin-left: -4.46rem;
+        }
+
+        .cn5 .cn5Text ul {
+            position: relative;
+            top: 0;
+            width: 8.4rem;
+            height: 1.64rem;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .cn5 .cn5Text ul li {
+            margin: 0.05rem 0;
+            width: 100%;
+            height: 0.5rem;
+        }
+
+        .cn5 .cn5Text ul li span {
+            display: inline-block;
+            width: 1.7rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .cn5 .cn5Text ul li span:nth-child(1) {
+            width: 1.4rem;
+        }
+
+        .cn5 .cn5Text ul li span:nth-child(2) {
+            width: 2.5rem;
+        }
+
+        .cn5 .cn5Text ul li span:nth-child(3) {
+            width: 1.71rem;
+            color: #eb0019;
+        }
+
+        .cn5 .cn5Text ul li span:nth-child(4) {
+            width: 1rem;
+        }
+
+        .cn6 .hdld {
+            top: 1.98rem;
+            width: 8.8rem;
+            height: 23.3rem;
+            margin-left: -4.46rem;
+        }
+
+        .cn6 .hdld ul {
+            width: 100%;
+        }
+
+        .cn6 .hdld ul li {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/234/166/209/13632789.png) center center no-repeat;
+            width: 7.6rem;
+            height: 3.3rem;
+            background-size: 100% 100%;
+            margin: 0.5rem auto;
+        }
+
+        .cn6 .hdld ul li h1 {
+            width: 100%;
+            height: 1.22rem;
+            text-align: center;
+            line-height: 1.22rem;
+            font-size: 0.7rem;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+        }
+
+        .cn6 .hdld ul li .text {
+            width: 100%;
+            height: 2.09rem;
+            text-align: center;
+            font-size: 0.5rem;
+        }
+
+        .cn6 .hdld ul li .text p:first-child {
+            margin-top: 0.3rem;
+            margin-bottom: 0.1rem;
+        }
+
+        .cn6 .hdld .c1, .cn6 .hdld .c2 {
+            position: absolute;
+            left: 0.4rem;
+            top: 3.28rem;
+            width: 2rem;
+            height: 1rem;
+        }
+
+        .cn6 .hdld .c2 {
+            left: 6.35rem;
+            top: 14.9rem;
+        }
+
+        .cn8 .rmtg {
+            top: 1.97rem;
+            width: 8.68rem;
+            height: 16rem;
+            margin-left: -4.46rem;
+        }
+
+        .cn8 .rmtg ul {
+            width: 100%;
+        }
+
+        .cn8 .rmtg ul li {
+            width: 8.68rem;
+            height: 4.66rem;
+            position: relative;
+            margin-bottom: 0.678rem;
+        }
+
+        .cn8 .rmtg ul li i {
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .cn8 .rmtg ul li .c1 {
+            width: 100%;
+            height: 3.8rem;
+            overflow: hidden;
+        }
+
+        .cn8 .rmtg ul li .c2 {
+            width: 100%;
+            height: 0.86rem;
+            overflow: hidden;
+        }
+
+        .cn8 .rmtg ul li .c2 p {
+            float: left;
+            text-align: center;
+            height: 0.86rem;
+            line-height: 0.86rem;
+        }
+
+        .cn8 .rmtg ul li .c2 > P:first-child {
+            width: 6.2rem;
+            color: #0f3677;
+            font-size: 0.5rem;
+            font-weight: bold;
+        }
+
+        .cn8 .rmtg ul li .c2 > P:last-child {
+            width: 2.48rem;
+        }
+
+        .cn8 .rmtg ul li .c2 > P:last-child a {
+            width: 1.8rem;
+            height: 0.6rem;
+            background-color: #1d7dff;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 0.6rem;
+        }
+
+        .moveTop {
+            position: fixed;
+            top: 14rem;
+            right: 0.3rem;
+            width: 0.8rem;
+            height: 0.8rem;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .shade {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 99
+        }
+
+        .tk {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/162/164/209/13632207.png) center center no-repeat;
+            width: 9rem;
+            height: 6rem;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -4.5rem;
+            margin-top: -4rem;
+            z-index: 100;
+            background-size: 100% 100%;
+        }
+
+        .tk p {
+            position: absolute;
+            left: 0.2rem;
+            top: 2.2rem;
+            width: 8.6rem;
+            height: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            color: white;
+            font-size: 0.6rem;
+            letter-spacing: 0.05rem;
+        }
+
+        .tk .tkBtn {
+            position: absolute;
+            left: 2rem;
+            top: 3.8rem;
+            width: 5rem;
+            height: 1.3rem;
+            cursor: pointer;
+            background: transparent;
+        }
+        @media only screen and (device-width: 414px){
+            .cn3 .timer span:nth-child(3) {
+                letter-spacing: 0.14rem;
+            }
+        }
+        @media screen and (max-width: 320px) {
+            .cn3 .info .gcbz > span:nth-child(2), .cn3 .info .cxxz > span:nth-child(2) {
+                left: 1.55rem;
+            }
+            .cn3 .timer span:nth-child(2) {
+                margin-left: 0;
+                margin-right: 0.2rem;
+            }
+            .cn3 .info .gcbz ul li {
+                margin-right: 0.32rem;
+            }
+            .cn3 .timer span:nth-child(3) {
+                letter-spacing: 0.17rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/164/209/13632299.jpg" alt="">
+        <!--标题-->
+        <p class="pa">广州宝马大型团购会（限14字）</p>
+    </div>
+    <div class="cn cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/165/209/13632300.jpg" alt="">
+        <div class="che pa">
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/142/209/13626440.png" alt=""></i>
+            <div class="cheImg">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/142/209/13626441.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="cn cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/1/165/209/13632301.jpg" alt="">
+        <div class="timer pa">
+            <span class="t_d">00</span>
+            <span class="t_h">00</span>
+            <span class="t_m">00</span>
+        </div>
+        <div class="bmNum pa">
+            <p>本期报名</p>
+            <p><span class="seTbmNum">1699</span><span>人</span></p>
+        </div>
+        <div class="info pa">
+            <p class="title">【8月28-29日】配置升级 全新宝马等你开启</p>
+            <div class="gcbz">
+                <span>购车保障</span>
+                <span></span>
+                <ul>
+                    <li><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/142/209/13626442.png" alt=""></i>正规车源
+                    </li>
+                    <li><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/142/209/13626442.png" alt=""></i>低价保证
+                    </li>
+                    <li><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/142/209/13626442.png" alt=""></i>购车基金
+                    </li>
+                    <li><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/142/209/13626442.png" alt=""></i>全国联保
+                    </li>
+                    <li><i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/142/209/13626442.png" alt=""></i>极速提车
+                    </li>
+                </ul>
+            </div>
+            <div class="cxxz">
+                <span>车型选择</span>
+                <span></span>
+                <ul></ul>
+                <p class="ts">您已选择<span class="tsText"></span>，尽快报名，即刻了解最新优惠</p>
+                <p class="hdsj">活动时间：8月28日-8月29日</p>
+                <p class="hddd">活动地点：广州全城4S店</p>
+            </div>
+        </div>
+    </div>
+    <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/2/165/209/13632302.jpg" alt="">
+        <div class="bmk pa">
+            <p class="name">
+                <input type="text" id="name" placeholder="请输入您的姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" maxlength="11" placeholder="请输入您的电话号码">
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+    </div>
+    <div class="cn cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/165/209/13632303.jpg" alt="">
+        <div class="cn5Text pa">
+            <ul>
+                <li><span>刘车友1</span><span>１3******000</span><span>宝马X5</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友2</span><span>１3******000</span><span>宝马X1</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友3</span><span>１3******000</span><span>宝马X2</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友4</span><span>１3******000</span><span>宝马X3</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友5</span><span>１3******000</span><span>宝马X4</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友6</span><span>１3******000</span><span>宝马X6</span><span>广州</span><span>23分钟前</span></li>
+                <li><span>刘车友7</span><span>１3******000</span><span>宝马X7</span><span>广州</span><span>23分钟前</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cn cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/4/165/209/13632304.jpg" alt="">
+        <div class="hdld pa">
+            <ul>
+                <li>
+                    <h1>厂家让利</h1>
+                    <div class="text">
+                        <p>经销商冲量</p>
+                        <p>报名团购价更优！</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>现场看车</h1>
+                    <div class="text">
+                        <p>解答车牌、车险、车型、保养</p>
+                        <p>VIP式购车体验！</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>厂家让利</h1>
+                    <div class="text">
+                        <p>经销商冲量</p>
+                        <p>报名团购价更优！</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>厂家让利</h1>
+                    <div class="text">
+                        <p>经销商冲量</p>
+                        <p>报名团购价更优！</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>厂家让利</h1>
+                    <div class="text">
+                        <p>经销商冲量</p>
+                        <p>报名团购价更优！</p>
+                    </div>
+                </li>
+                <li>
+                    <h1>厂家让利</h1>
+                    <div class="text">
+                        <p>经销商冲量</p>
+                        <p>报名团购价更优！</p>
+                    </div>
+                </li>
+            </ul>
+            <!--小车图片-->
+            <i class="c1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/166/209/13632791.png" alt=""></i>
+            <i class="c2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/166/209/13632792.png" alt=""></i>
+        </div>
+    </div>
+    <div class="cn cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/165/209/13632305.jpg" alt=""></div>
+    <div class="cn cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/165/209/13632306.jpg" alt="">
+        <div class="rmtg pa">
+            <ul>
+                <li>
+                    <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/142/209/13626440.png" alt=""></i>
+                    <div class="c1">
+                        <!--车图-->
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/27/143/209/13626717.jpg" alt="">
+                    </div>
+                    <div class="c2">
+                        <p>北京(限11字)</p>
+                        <p>
+                            <a class="goTg" href="javascript:;">去团购</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/142/209/13626440.png" alt=""></i>
+                    <div class="c1">
+                        <!--车图-->
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/27/143/209/13626717.jpg" alt="">
+                    </div>
+                    <div class="c2">
+                        <p>北京(限11字)</p>
+                        <p>
+                            <a class="goTg" href="javascript:;">去团购</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/142/209/13626440.png" alt=""></i>
+                    <div class="c1">
+                        <!--车图-->
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/27/143/209/13626717.jpg" alt="">
+                    </div>
+                    <div class="c2">
+                        <p>北京(限11字)</p>
+                        <p>
+                            <a class="goTg" href="javascript:;">去团购</a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cn cn9"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/203/166/209/13632758.jpg" alt=""></div>
+    <a class="moveTop" href="javascript:;">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/216/166/209/13632771.png" alt="">
+    </a>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    //弹框方法
+    function tk(str,callback) {
+        if(!document.getElementById('shade')){
+            var html='<div class="shade" id="shade" style="display: none;"></div><div class="tk" style="display: none;"><p></p><button class="tkBtn"></button></div>';
+            $('.main').append(html);
+        }else {
+            $('.tk>p').text(str);
+            $('.shade').fadeIn(300);
+            $('.tk').fadeIn(300);
+        }
+        $(document).on('click','.tkBtn',function () {
+            $('.shade').fadeOut(300);
+            $('.tk').fadeOut(300);
+            callback&&callback()
+        });
+    }
+    tk()
+</script>
+<script>
+    var act_id = 2986;  //活动专题id
+    var barID = 11;     //品牌id
+    var timer = '2018/8/30 17:00:59'; //倒计时
+</script>
+<script>
+    //车型选择
+    $('body').on('click', '.cn3 .info .cxxz ul li', function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.ts .tsText').text($(this).text());
+    });
+
+    //获取车型
+    function GetSeries(a) {
+        $.ajax({
+            type: "get",
+            url: 'http://www.yetcar.com/index.php?s=/Home/Data/getModels',
+            data: {series_id: a},
+            async: true,
+            dataType: "jsonp",
+            success: function (data) {
+                for (var i = 0; i < data.data.length; i++) {
+                    var series = $('<li data-brand="' + a + '" data-series="' + data.data[i].id + '">' + data.data[i].name + '</li>');
+                    $('.cxxz ul').append(series)
+                }
+                $('.cxxz ul li:first-child').addClass('active');
+            }
+        });
+    }
+
+    GetSeries(barID);
+    //报名
+    $('#submit').click(function () {
+        var name = $('#name').val(),  //姓名
+            tel = $('#tel').val(), //电话
+            brand_id = $('.cn3 .cxxz>ul li.active').attr('data-brand'), //品牌
+            series_id = $('.cn3 .cxxz>ul li.active').attr('data-series'),    //车型id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                brand_id: brand_id,
+                series_id: series_id,
+                act_id: act_id,
+            };
+        //判断填写是否正确
+        if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+            tk('请输入正确的中文名');
+            return false;
+        }
+        if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            tk('手机格式不正确');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type: "post",
+            url: Url,
+            data: Data,
+            async: true,
+            dataType: "jsonp",
+            success: function (data) {
+                if (data.status == 1) {
+                    // pop.showNotice('恭喜你，报名成功！',function () {
+                    //     window.location.href = location.href;
+                    // });
+                    tk('恭喜你，报名成功！',function () {
+                        window.location.href = location.href;
+                    })
+                } else {
+                    tk("很抱歉，你报名失败。",function () {
+                        window.location.href = location.href;
+                    });
+                }
+            }
+        });
+    })
+    /*--倒计时--*/
+    var EndTime = new Date(timer), tt;
+
+    function toTens(i) {
+        if (i < 10 && i >= 0) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function GetRTime() {
+        var NowTime = new Date();
+        var t = EndTime.getTime() - NowTime.getTime();
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+        var m = Math.floor(t / 1000 / 60 % 60);
+        $('.t_d').text(toTens(d));
+        $('.t_h').text(toTens(h));
+        $('.t_m').text(toTens(m));
+        if (t < 0) {
+            clearInterval(tt);
+            $('.t_d').text("00");
+            $('.t_h').text("00");
+            $('.t_m').text("00");
+        }
+    }
+
+    tt = setInterval(GetRTime, 0);
+    /*--倒计时结束--*/
+    //文字滚动
+    var listPanel = $('.cn5Text ul');
+    var z = 0;//向上滚动top值
+    function up() {//向上滚动
+        listPanel.animate({
+            'top': (z - 4) + 'px'
+        }, 1500, 'linear', function () {
+            listPanel.css({'top': '0'})
+                .find("li:first").appendTo(listPanel);
+            up();
+        });
+    }
+    up();
+
+
+
+    //返回顶部
+    $('.moveTop').click(function () {
+        $('html,body').animate({scrollTop: '0'}, 1000)
+    });
+    //滚动条
+    $(window).load(function () {
+        $('.ts .tsText').text($('.cn3 .cxxz>ul li.active').text());
+        $(".cn3 .info .cxxz ul").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    });
+</script>
+</html>

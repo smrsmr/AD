@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>荣耀故里 芯动之选</title>
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://act.yetcar.com/zxq_projectCode/yqmzdGD/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        img {
+            border: none;
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 750px;
+            background-color: #eaeaee;
+        }
+        .swiper-container{
+            height: 100%;
+        }
+        /*.swiper-slide{
+            text-align: center;
+            font-size: 18px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            position: relative;
+        }*/
+        .resize {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -25px;
+            z-index: 9999;
+        }
+        .resize img {
+            width: 50px;
+        }
+        input:focus::-webkit-input-placeholder{
+            opacity: 0;
+        }
+        .slider3 {
+            position: relative;
+        }
+        .form input, .form select {
+            width: 8.1rem;
+            height: 1.6rem;
+            background: transparent;
+            font-size: 14px;
+        }
+        .form select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        #name,#tel,#Select1,#dealersSelect,#Select2,#Select3 {
+            position: absolute;
+            left: 4.7rem;
+            top: 17rem;
+        }
+        #tel {
+            left: 17.3rem;
+        }
+        #Select1 {
+            top: 19rem;
+        }
+        #Select2 {
+            top: 19rem;
+            left: 17.3rem;
+        }
+        #dealersSelect {
+            top: 21rem;
+        }
+        #Select3 {
+            top: 21rem;
+            left: 17.3rem;
+        }
+        #submit {
+            position: absolute;
+            right: 2rem;
+            top: 23rem;
+            width: 4.5rem;
+            height: 1.8rem;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .sw .swiper-container {
+            width: 25.5rem;height: 14.5rem;
+        }
+        #swiper2 {
+            position: absolute;
+            left: 0.5rem;top: 26rem;
+        }
+        #swiper2 .swiper-slide {
+            background: yellow;
+        }
+        .slider4 {
+            position: relative;
+        }
+        .title {
+            position: absolute;
+            width: 26.3rem;
+            height: 2rem;
+            background: white;
+            top: 16rem;
+            left: 0.2rem;
+        }
+        .title p {
+            font-size: 16px;
+        }
+        .p1,.p2,.p3,.p4,.p5 ,.p6,.p7{
+            position: absolute;
+            top: 16.3rem;
+            left: 0.5rem;
+            color: #c90029;
+            font-weight: bold;
+        }
+        .p2 {
+            left: 5.2rem;
+        }
+        .p3 {
+            left: 9.2rem;
+        }
+        .p4 {
+            left: 16rem;
+        }
+        .p5 {
+            left: 19rem;
+        }
+        .p6 {
+            left: 21.5rem;
+        }
+        .p7 {
+            left: 24rem;
+        }
+        .p5,.p6,.p7 {
+            transform: skew(0deg);
+            cursor: pointer;
+        }
+        p i {
+            font-weight: bold;
+            transform: skew(0deg);
+        }
+        .active {
+            color: #fff;
+            background: #c9002a;
+            -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .3) inset;
+            -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .3) inset;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .3) inset;
+            transform: skew(-15deg);
+        }
+        .list {
+            position: absolute;
+            width: 26.3rem;
+            height: 12.4rem;
+            top: 18.1rem;
+            left: 0.2rem;
+            /*border: 1px solid red;*/
+            /*overflow: auto;*/
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        table {
+            margin: 0 auto;
+            width: 24rem;
+        }
+        table tr {
+            height: 4rem;
+        }
+        table td {
+            color: white;
+            font-size: 12px;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            height: 2.4rem;
+        }
+    </style>
+</head>
+<body style="background: rgb(0, 0, 0);">
+<div class="swiper-container"  id="swiper1">
+    <div class="swiper-wrapper">
+        <!--page 1-->
+        <div class="swiper-slide slider1">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp " swiper-animate-duration="1.3s" swiper-animate-delay="0.5s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/210/200/13058699.png"></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/121/20/207/13465396.jpg" />
+            </div>
+        </div>
+        <!--page 2-->
+        <div class="swiper-slide slider2">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp " swiper-animate-duration="1.3s" swiper-animate-delay="0.5s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/210/200/13058699.png"></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/122/20/207/13465397.jpg" />
+            </div>
+        </div>
+       <!--  page 3 -->
+        <div class="swiper-slide slider3">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp " swiper-animate-duration="1.3s" swiper-animate-delay="0.5s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/210/200/13058699.png"></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/123/20/207/13465398.jpg" />
+                <div class="form">
+                    <input type="text" id="name">
+                    <input type="tel" id="tel" maxlength="11">
+                    <select id="Select1">
+                        <option value="0">-请选择省份-</option>
+                        <option value="21" data-id="75" data-sc="A2018-1249-4652-2680-113772">湖南省</option>
+                        <option value="25" data-id="76" data-sc="A2018-1249-4652-2679-113771">广西省</option>
+                        <option value="22" data-id="77" data-sc="A2018-1249-4652-2681-113773">江西省</option>
+                    </select>
+                    <select id="Select2">
+                        <option value="0">-请选择城市-</option>
+                    </select>
+                    <select id="dealersSelect">
+                        <option value="0">-请选择经销商-</option>
+                    </select>
+                    <select id="Select3">
+                        <option value="0">-请选择车型-</option>
+                        <option value="34">全新轩逸</option>
+                        <option value="26">轩逸·经典</option>
+                        <option value="194">蓝鸟</option>
+                        <option value="208">劲客</option>
+                        <option value="72">骐达</option>
+                        <option value="28">阳光</option>
+                    </select>
+                    <button id="submit"></button>
+                </div>
+                <div class="sw">
+                    <div class="swiper-container" id="swiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car1.jpg" alt=""></div>
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car3.jpg" alt=""></div>
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car4.jpg" alt=""></div>
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car5.jpg" alt=""></div>
+                            <div class="swiper-slide"><img width="100%" height="100%" src="http://123.207.87.32/act/nissanpc/imgnissanXYHZ0111/car6.jpg" alt=""></div>
+                          </div>
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!--page 4-->
+        <div class="swiper-slide slider4">
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/124/20/207/13465399.jpg" />
+                <p class="title">
+                    <p class="p1">专营店</p>
+                    <p class="p2">城市</p>
+                    <p class="p3">电话</p>
+                    <p class="p4">地址</p>
+                    <div class="dro">
+                        <p class="p5 active"><i>湖南</i></p>
+                        <p class="p6"><i>广西</i></p>
+                        <p class="p7"><i>江西</i></p>
+                    </div>
+                </p>
+                <div class="list">
+                    <table cellspacing="0" cellpadding="0" id="table">
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<script type="text/javascript">
+    var der = [
+        {"name":"长沙星沙","code":"F2501","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-82873888","address":"湖南省长沙市经济技术开发区中南汽车大世界金茂西路东头H13、H14栋"},
+        {"name":"长沙兰天河西","code":"F2506","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-88799999","address":"湖南省长沙市岳麓区岳麓大道375号"},
+        {"name":"长沙兰天含浦","code":"F2510","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-88799008","address":"湖南省长沙市岳麓区云栖路与含浦大道交汇路口（过猴子石大桥西行2公里）"},
+        {"name":"长沙兰天城南","code":"F2509","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-85553399","address":"长沙市雨花区环保科技产业园黄谷路878号（汽车南站往南2公里）东风日产长沙兰天城南专营店"},
+        {"name":"长沙兰天城西","code":"F2505","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-88965111","address":"湖南省长沙市岳麓大道西段河西汽车城M3栋"},
+        {"name":"长沙华洋星城","code":"F2502","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-85981188","address":"湖南省长沙市雨花区万家丽中路一段370号"},
+        {"name":"浏阳中拓诚丰集里","code":"F2508","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-83217888","address":"浏阳市西环路平水工业小区"},
+        {"name":"宁乡中拓瑞宁","code":"F2507","city":"长沙市","cityCode":"263","pre":"湖南省","preCode":"21","tel":"0731-87210000","address":"长沙市宁乡县白马桥乡正龙村（宁乡县二环南路汽车南站旁）"},
+        {"name":"株洲海联","code":"F2503","city":"株洲市","cityCode":"464","pre":"湖南省","preCode":"21","tel":"0731-28456888","address":"株洲市红港路（国家）汽车城内"},
+        {"name":"株洲兰天河西","code":"F2522","city":"株洲市","cityCode":"464","pre":"湖南省","preCode":"21","tel":"0731-22113311","address":"株洲市天元区湘山路47号"},
+        {"name":"株洲兰天攸县","code":"F2526","city":"株洲市","cityCode":"464","pre":"湖南省","preCode":"21","tel":"0731-24338899","address":"湖南省攸县江桥街道办事处谭桥社区张家塘组"},
+        {"name":"衡阳高卫","code":"F2512","city":"衡阳市","cityCode":"266","pre":"湖南省","preCode":"21","tel":"0734-8877888","address":"湖南省衡阳市蒸湘区杨柳村二组杨柳汽贸城（西外环路）"},
+        {"name":"衡阳高翔","code":"F2524","city":"衡阳市","cityCode":"266","pre":"湖南省","preCode":"21","tel":"0734-8113888","address":"衡阳市107国道旁（华源市场往南岳方向500米）"},
+        {"name":"永州高翔","code":"F2520","city":"永州市","cityCode":"273","pre":"湖南省","preCode":"21","tel":"0746-8662888","address":"湖南省永州市冷水滩区永州大道润之路交叉口东北角"},
+        {"name":"郴州日通","code":"F2514","city":"郴州市","cityCode":"265","pre":"湖南省","preCode":"21","tel":"0735-2861111","address":"湖南省郴州市郴江路石榴湾处（第一职中旁）"},
+        {"name":"常德柳城","code":"F2523","city":"常德市","cityCode":"264","pre":"湖南省","preCode":"21","tel":"0736-7200008","address":"东风日产柳城店位于常德市火车站往东1000米，市公路局对面。"},
+        {"name":"常德日丰","code":"F2513","city":"常德市","cityCode":"264","pre":"湖南省","preCode":"21","tel":"0736-7199998","address":"常德市武陵区常德大道3555号（新世纪汽车城对面）"},
+        {"name":"岳阳华日","code":"F2511","city":"岳阳市","cityCode":"274","pre":"湖南省","preCode":"21","tel":"0730-8721111","address":"湖南省岳阳市巴陵东路402号（原107国道收费处）"},
+        {"name":"岳阳华日南苑","code":"F2529","city":"岳阳市","cityCode":"274","pre":"湖南省","preCode":"21","tel":"0730-8921999","address":"湖南省岳阳市岳阳楼区学院路郭镇汽车城"},
+        {"name":"怀化兰天恒裕","code":"F2516","city":"怀化市","cityCode":"267","pre":"湖南省","preCode":"21","tel":"0745-2371278","address":"湖南省怀化市沿河路58号"},
+        {"name":"娄底兰天","code":"F2519","city":"娄底市","cityCode":"269","pre":"湖南省","preCode":"21","tel":"0738-8386699","address":"娄底市娄星区扶青路上瑞高速连接线（武警支队前600米）"},
+        {"name":"邵阳兰天","code":"F2517","city":"邵阳市","cityCode":"270","pre":"湖南省","preCode":"21","tel":"0739-5299199","address":"邵阳市双清区邵阳大道与大兴路交叉路口"},
+        {"name":"湘潭九华","code":"F2515","city":"湘潭市","cityCode":"271","pre":"湖南省","preCode":"21","tel":"0731-58308358","address":"湖南省湘潭市九华经济区吉利中路8号"},
+        {"name":"益阳兰天","code":"F2518","city":"益阳市","cityCode":"272","pre":"湖南省","preCode":"21","tel":"0737-4280000","address":"湖南省益阳市十州路"},
+        {"name":"吉首吉日","code":"F2521","city":"吉首市","cityCode":"268","pre":"湖南省","preCode":"21","tel":"0743-8258666","address":"湖南省吉首市武陵东路大田湾（城东加油站下200米）"},
+        {"name":"南宁弘帆","code":"G3001","city":"南宁市","cityCode":"319","pre":"广西省","preCode":"25","tel":"0771-4920111","address":"南宁市国凯大道2-6号（国凯大道与钦州路交汇处）"},
+        {"name":"南宁瑞帆","code":"G3002","city":"南宁市","cityCode":"319","pre":"广西省","preCode":"25","tel":"0771-3326611","address":"广西南宁市秀厢大道199号金源汽车城(邕宾立交旁)"},
+        {"name":"南宁广缘","code":"G3003","city":"南宁市","cityCode":"319","pre":"广西省","preCode":"25","tel":"0771-3211182","address":"广西南宁市高新区科园大道45-1号"},
+        {"name":"南宁弘天","code":"G3005","city":"南宁市","cityCode":"319","pre":"广西省","preCode":"25","tel":"0771-4950800","address":"广西南宁市南站大道16号南站汽车城"},
+        {"name":"南宁广缘仙葫","code":"G3006","city":"南宁市","cityCode":"319","pre":"广西省","preCode":"25","tel":"0771-8051900","address":"南宁市青秀区仙葫大道中14号（天池山对面）"},
+        {"name":"桂林友爱","code":"G3011","city":"桂林市","cityCode":"323","pre":"广西省","preCode":"25","tel":"0773-2639888","address":"广西壮族自治区桂林市灵川八里街工业园区29-2-1号"},
+        {"name":"桂林真龙大成","code":"G3021","city":"桂林市","cityCode":"323","pre":"广西省","preCode":"25","tel":"0773-5588511","address":"广西省桂林市临桂县临桂镇鲁山工业园"},
+        {"name":"柳州航盛","code":"G3012","city":"柳州市","cityCode":"324","pre":"广西省","preCode":"25","tel":"0772-3160303","address":"广西省柳州市鱼锋区西江路86-91号"},
+        {"name":"柳州骏朋","code":"G3020","city":"柳州市","cityCode":"324","pre":"广西省","preCode":"25","tel":"0772-8816333","address":"柳州市双拥大道特8号B地块东风日产柳州骏朋专营店"},
+        {"name":"玉林弘鹏","code":"G3013","city":"玉林市","cityCode":"327","pre":"广西省","preCode":"25","tel":"0775-2689866","address":"玉林市二环路名山镇绿杨养马坡开发区"},
+        {"name":"玉林汇利成","code":"G3026","city":"玉林市","cityCode":"327","pre":"广西省","preCode":"25","tel":"0775-2263818","address":"广西玉林市一环北路城西金龙大转盘天桥左侧"},
+        {"name":"梧州合利丰","code":"G3017","city":"梧州市","cityCode":"326","pre":"广西省","preCode":"25","tel":"0774-3897888","address":"广西壮族自治区梧州市长洲区舜帝大道18号之一"},
+        {"name":"贵港金港","code":"G3016","city":"贵港市","cityCode":"322","pre":"广西省","preCode":"25","tel":"0775-4582322","address":"贵港市金港大道东段（市交警考试场对面）"},
+        {"name":"北海弘盛","code":"G3015","city":"北海市","cityCode":"320","pre":"广西省","preCode":"25","tel":"0779-2075881","address":"广西壮族自治区北海市南珠大道中段（广汇汽车城内）"},
+        {"name":"防城港鑫广达","code":"G3022","city":"防城港市","cityCode":"321","pre":"广西省","preCode":"25","tel":"0770-3238008","address":"广西防城港市防城区防钦路888号（距高速路出入口约1公里）"},
+        {"name":"河池弘池","code":"G3018","city":"河池","cityCode":"329","pre":"广西省","preCode":"25","tel":"0778-2301133","address":"广西省河池市金城江区南环路温峒隧道口东侧"},
+        {"name":"贺州合利诚","code":"G3025","city":"贺州","cityCode":"330","pre":"广西省","preCode":"25","tel":"0774-5228222","address":"广西壮族自治区贺州市八步区创业路（人才公寓旁）"},
+        {"name":"钦州广缘金海湾","code":"G3019","city":"钦州市","cityCode":"325","pre":"广西省","preCode":"25","tel":"0777-2899848","address":"广西钦州市钦南区金海湾东大街95号（北部湾建材城旁）"},
+        {"name":"百色广缘城东","code":"G3023","city":"百色","cityCode":"328","pre":"广西省","preCode":"25","tel":"0776-2996768","address":"广西壮族自治区百色市右江区城东大道大华厂路口北侧武警支队下坡300米处"},
+        {"name":"来宾广利","code":"G3028","city":"来宾市","cityCode":"3301","pre":"广西省","preCode":"25","tel":"0772-4823888","address":"广西来宾市河南工业园东片来武二级公路东面"},
+        {"name":"南昌洪城","code":"F2401","city":"南昌市","cityCode":"277","pre":"江西省","preCode":"22","tel":"0791-83721088","address":"江西南昌市红谷滩汽车广场C区1号"},
+        {"name":"南昌洪都","code":"F2402","city":"南昌市","cityCode":"277","pre":"江西省","preCode":"22","tel":"0791-88216633","address":"江西省南昌市青云谱区洪都南大道378号（麦德龙超市旁）"},
+        {"name":"南昌汇恒","code":"F2403","city":"南昌市","cityCode":"277","pre":"江西省","preCode":"22","tel":"0791-88333131","address":"江西省南昌市青山湖区民营科技园科技大道799号"},
+        {"name":"南昌东维高鑫","code":"F2405","city":"南昌市","cityCode":"277","pre":"江西省","preCode":"22","tel":"0791-88307688","address":"南昌市高新南大道939号（都市阳光海鲜城斜对面、大千一号公馆旁）"},
+        {"name":"赣州东维","code":"F2411","city":"赣州市","cityCode":"279","pre":"江西省","preCode":"22","tel":"0797-8179111","address":"赣州市杨梅渡大桥桥头杨公路5号滨江城市广场"},
+        {"name":"赣州东维红金","code":"F2419","city":"赣州市","cityCode":"279","pre":"江西省","preCode":"22","tel":"0797-8398555","address":"江西省赣州市经济开发区金潭大道南侧（精品汽车4S店一条街）"},
+        {"name":"赣州利泰赣县","code":"F2428","city":"赣州市","cityCode":"279","pre":"江西省","preCode":"22","tel":"0797-4488000","address":"江西赣州赣县323国道红金物流中心"},
+        {"name":"宜春东维林泰","code":"F2416","city":"宜春市","cityCode":"286","pre":"江西省","preCode":"22","tel":"0795-3571288","address":"宜春市环城西路328号"},
+        {"name":"宜春利泰袁州","code":"F2426","city":"宜春市","cityCode":"286","pre":"江西省","preCode":"22","tel":"0795-3563888","address":"宜春市马王塘经济开发区雷桥加油站旁"},
+        {"name":"九江东浔","code":"F2415","city":"九江市","cityCode":"282","pre":"江西省","preCode":"22","tel":"0792-8373818","address":"江西省九江市经济技术开发区九瑞大道230号"},
+        {"name":"萍乡东安","code":"F2413","city":"萍乡市","cityCode":"283","pre":"江西省","preCode":"22","tel":"0799-6682866","address":"萍乡市安源区五里牌流万大市场1号（高专后门对面）"},
+        {"name":"上饶东信","code":"F2412","city":"上饶市","cityCode":"284","pre":"江西省","preCode":"22","tel":"0793-8459811","address":"上饶市三清西大道汽贸园汽车专卖区"},
+        {"name":"景德镇和谐","code":"F2417","city":"景德镇市","cityCode":"281","pre":"江西省","preCode":"22","tel":"0798-8252828","address":"江西省景德镇市浮梁县洪源镇中桥工业基地206国道西侧"},
+        {"name":"吉安东维兴达利","code":"F2418","city":"吉安市","cityCode":"280","pre":"江西省","preCode":"22","tel":"0796-8115888","address":"江西省吉安市吉州区工业园"},
+        {"name":"新余利隆仙女湖","code":"F2421","city":"新余市","cityCode":"285","pre":"江西省","preCode":"22","tel":"0790-6857666","address":"江西省新余市仙女湖万商红物流园内东风日产新余利隆专营店"},
+        {"name":"鹰潭鑫亚天洁","code":"F2429","city":"鹰潭市","cityCode":"287","pre":"江西省","preCode":"22","tel":"0701-2186666","address":"鹰潭市经开区天洁西路28号"},
+        {"name":"抚州汇恒抚北","code":"F2420","city":"抚州市","cityCode":"278","pre":"江西省","preCode":"22","tel":"0794-7061111","address":"抚州市抚北工业园区四海路与广银大道交汇处（原区三路与主干道交汇处）"},
+        {"name":"吉安通九州青原","code":"F2430","city":"吉安市","cityCode":"280","pre":"江西省","preCode":"22","tel":"0796-2198588","address":"江西省吉安市青原区汽车文化产业园(东风日产4S店)"},
+    ]
+</script>
+<script>
+    $(function () {
+        var swiper1 = new Swiper ('#swiper1', {
+        direction: 'vertical',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    var swiper2 = new Swiper('#swiper2', {
+        loop : true,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    
+    //城市切换框
+    var temp = [],dyArr = '',str = [],des = [],code = [];
+    $("#Select1").change(function(event) {
+        $("#Select2").find("option:not(:first)").remove();
+        $("#dealersSelect").find("option:not(:first)").remove();
+        temp.splice(0,temp.length);
+        str.splice(0,str.length);
+        des.splice(0,des.length);
+        for ( var i = 0; i < der.length; i++ ) {
+            if($('#Select1 option:checked').text() == der[i].pre) {
+                if (temp.indexOf(der[i].city) == -1 ) {
+                    temp.push(der[i].city);
+                    str.push(der[i].cityCode);
+                }
+            }
+
+        } 
+        for (var j = 0; j < temp.length; j++) {
+            $("#Select2").append("<option value="+str[j]+">"+temp[j]+"</option>")   
+        }
+    });
+    $("#Select2").change(function(){
+        $("#dealersSelect").find("option:not(:first)").remove();
+        des.splice(0,des.length);
+        code.splice(0,code.length);
+        for ( var i = 0; i < der.length; i++ ) {
+            if($('#Select2 option:checked').text() == der[i].city ) {
+                des.push(der[i].name);
+                code.push(der[i].code);
+            }
+        }
+        for (var i = 0; i < des.length; i++) {
+            $("#dealersSelect").append("<option value="+code[i]+">"+des[i]+"</option>") 
+        }
+    });
+
+    //经销商
+    function qh(el) {
+        for ( var i = 0; i < der.length; i++ ) {
+            if (der[i].pre == el+'省') {
+                $('#table').append("<tr>"+"<td width='70'>"+der[i].name+"</td>"+"<td width='60'>"+der[i].city+"</td>"+"<td width='100'>"+der[i].tel+"</td>"+"<td width='120'>"+der[i].address+"</td>"+"</tr>")
+            }
+        }
+    }
+    qh('湖南');
+
+    //省份切换
+    $('.dro p').click(function(event) {
+        $('table').html('');
+        $(this).addClass('active').siblings().removeClass('active');
+        var cy = $(this).text();
+        qh(cy);
+        $('.list').mCustomScrollbar("scrollTo","top",{
+            scrollInertia:1000
+        });
+    });
+        //报名
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),        //电话
+                    city_id = $('#Select2').val(),  //城市id
+                    city = $('#Select2 option:checked').text(),
+                    province = $('#Select1').val(),  //省份
+                    detail_id = $('#Select1 option:checked').attr("data-id"),  //detail_id
+                    sc = $('#Select1 option:checked').attr("data-sc"),  //detail_id
+                    series_id = $('#Select3').val(),  //车型id
+                    car_name = $('#Select3 option:checked').text(),
+                    brand_id = 11, //品牌
+                    dealers_code = $('#dealersSelect').val(),
+                    dealers = $('#dealersSelect option:checked').text(),
+                    Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+
+                        city_id: city_id,
+                        city:city,
+                        dealers: dealers,
+                        province: province,
+                        car_name: car_name,
+                        dealers_code: dealers_code,
+
+                        detail_id:detail_id,
+                        type: 1,
+                        smartcode: sc
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(province==0){
+                    alert('请选择省份');
+                    return false;
+                }
+                if(city_id==0){
+                    alert('请选择城市');
+                    return false;
+                }
+                if(dealers_code==0){
+                    alert('请选择经销商');
+                    return false;
+                }
+                if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+
+        })
+
+        $(window).load(function(){
+            $(".list").mCustomScrollbar({
+                scrollInertia :750,//滚动延迟
+                // autoHideScrollbar: true
+            });
+
+        });
+
+    })
+</script>
+</body>
+</html>

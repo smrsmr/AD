@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="http://mat1.gtimg.com/www/icon/favicon2.ico" type="image/x-icon" rel="shortcut icon">
+    <title>心驰所享 无畏青春</title>
+    <script src="http://dongguan.auto.qq.com/js/publicJS/webm.rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/css-reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.css">
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/popAlert.m.css">
+    <!--<link rel="stylesheet" type="text/css" href="http://act.yetcar.com/zxq_projectCode/yqmzdGD/css/jquery.mCustomScrollbar.css"/>-->
+    <style type="text/css">
+        .container { width: 10rem; text-align: center; margin: 0 auto; font-family: "微软雅黑";}
+        .container>img { width: 10rem;}
+        .rel { position: relative;}
+
+        /*******报名*******/
+        .sign { width: 8.8267rem; height: 9.3333rem; position: absolute; top: 1.3333rem; left: .6rem;}
+        .sign p { height: 1.2267rem; margin-bottom: .3333rem;}
+        .sign p:nth-of-type(2) { margin-bottom: .29rem;}
+        .sign input, .sign select { width: 8.8267rem; height: 1.2267rem;/* color: #00213d; */text-align: left; vertical-align: top; border: none; background: transparent;  font-size: 0.4533rem; box-sizing: border-box; padding-left: 0.233333rem; outline: none; font-family: "微软雅黑";}
+        .sign select { -webkit-appearance: none; appearance: none; line-height:1.2267rem; }
+        .sign select option { font-size: initial;}
+        .sign p:nth-of-type(4) select { width: 4.36rem;}
+        .sign p:nth-of-type(4) select:nth-of-type(1), #series_id a:nth-of-type(1) { margin-right: .1067rem;}
+        #series_id a {display: inline-block; width: 4.0667rem; height: 1.2267rem; padding-left: .2667rem; text-align: left; font-size: 0.4533rem; line-height: 1.2267rem; color: #333; text-decoration: unset; vertical-align: top;background: url(http://img1.gtimg.com/autodongguan/pics/hv1/210/62/210/13671270.jpg) top center no-repeat; background-size: contain;}
+        #series_id a.tap { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/211/62/210/13671271.jpg) top center no-repeat; background-size: contain;}
+        #dealer { width: 6.0333rem;}
+        .sign .dealer-box { padding-left: 0;}
+        .sign p:nth-of-type(5) {margin-bottom: 1.5567rem;}
+        .sign .agree { position: absolute; left: 0; top: 7.7rem; height: .48rem; margin-bottom: 0; font-size: .34rem; color: #333; font-family: "微软雅黑";}
+        #agreeCheck { width: .4267rem; height: .4267rem; margin-right: .1333rem; vertical-align: middle; position: relative; top: -2px;}
+        .agree a { color: inherit;}
+        #submit { width: 8.8267rem; height: 1.2267rem;}
+
+        /*******车图*******/
+        .swiper-car { width: 10rem; height: 5.3rem; position: absolute; top: 1.8rem; left: 0; overflow: hidden;}
+        .swiper-car .swiper-slide img { width: 10rem; height: 5.3rem;}
+        .swiper-pagination-bullet-active { background: #c62020;}
+        .swiper-button-next, .swiper-button-prev { width: 54px; height: 88px; top: 42%;}
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next { background-image: url(http://img1.gtimg.com/autodongguan/pics/hv1/221/62/210/13671281.png); background-size: contain;}
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev { background-image: url(http://img1.gtimg.com/autodongguan/pics/hv1/222/62/210/13671282.png); background-size: contain;}
+        /*******经销商*******/
+        /*.dealers { width: 8.8rem; height: 13.3333rem; margin-left: .5333rem; position: absolute; top: 1.6333rem; font-family: "微软雅黑";}
+
+        .dealer-top { width: 8.8rem; height: 0.9233rem; margin-bottom: 0.1833rem; padding-left: .2667rem; text-align: left; font-size: .2667rem;}
+        .dealer-top .swrap { display: inline-block; width: 1.6rem; height: 0.88rem;}
+        .dealer-top select { width: 1.6rem; height: 0.88rem; outline: none; background: transparent; text-align: center; border: none; color: #fff; line-height: 0.88rem; vertical-align: top; font-size: 0.4533rem; font-weight: bold; -webkit-appearance: none; appearance: none;}
+        .dealer-top select option { color: #333;}
+        .dealer-wrap { height: 12rem;}
+        .delaer-ul {  height: 12rem;}
+        .dealers li { margin-bottom: 0.2rem; padding-bottom: 0.133rem; border-bottom: 0.0133rem solid #575a61;}
+        .dealers p { text-align: left; color: #fff; padding-left: 0.2666rem;}
+        .dealers p.dealer-title { font-size: 0.4rem; line-height: 0.6666rem; font-weight: bold;}
+        .dealers p.dealer-address { font-size: 0.32rem; line-height: 0.5333rem;}
+        .dealers p.dealer-tel { font-size: 0.32rem; line-height: 0.5333rem;}
+
+        .mCSB_scrollTools { width: 0.18rem !important; border-radius: 0.2rem; background: #11161c;}
+        .mCSB_dragger { width: 0.1rem !important; margin-left: 0.04rem; background: #334053; border-radius: 0.05rem;}
+        .mCSB_draggerRail,.mCSB_dragger_bar { background: transparent !important;}*/
+        .container img {
+            margin-top: -1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/201/67/210/13672536.jpg" alt="" />
+</div>
+<div class="container">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/103/98/210/13680343.jpg" alt="" />
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/25/63/210/13671340.jpg"/>
+    <div class="sign">
+        <p><input type="text" name="name" id="name" value="" placeholder="输入姓名" /></p>
+        <p><input type="tel" name="phone" id="phone" value="" placeholder="输入电话" maxlength="11" /></p>
+        <!-- <p><select name="series_id" id="series_id">
+          <option value="151">奥迪A8L</option>
+        </select></p> -->
+        <p id="series_id"><a href="javascript:;" class="tap">威驰三厢</a><a href="javascript:;">威驰FS</a></p>
+        <p><select name="prov" id="prov">
+            <option value="0">-省份-</option>
+        </select><select name="city" id="city">
+            <option value="0">-城市-</option>
+        </select></p>
+        <p><select name="dealers" id="dealers">
+            <option value="0">-选择经销商-</option>
+        </select></p>
+        <p class="agree"><input type="checkbox" checked="" id="agreeCheck" name="checkbox" class="radio">您的个人资料有可能会提交至一汽丰田厂商的授权经销商，与您进一步沟通试驾、购车等事宜。</p>
+        <p><input type="button" id="submit" value="" /></p>
+    </div>
+</div>
+<div class="container sign-wrap rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/104/98/210/13680344.jpg" alt="" />
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/217/61/210/13671022.jpg" alt="" />
+    <div class="swiper-container swiper-car">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/38/63/210/13671353.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/39/63/210/13671354.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/40/63/210/13671355.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/208/67/210/13672543.png"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/209/67/210/13672544.png"/>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/popAlert.create.js"></script>
+<!--<script src="http://dongguan.auto.qq.com/js/fute/dealers.FT.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="http://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="http://act.yetcar.com/zxq_projectCode/yqmzdGD/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>-->
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-car', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+    var pop=new Popup('rgba(193,28,32,1)',1,'一汽丰田');
+
+    var data = [
+        {"prov":"安徽","city":"安庆","fname":"安庆环丰丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"蚌埠","fname":"蚌埠润业丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"亳州","fname":"亳州环丰丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"滁州","fname":"滁州风之星丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"阜阳","fname":"阜阳中源丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"阜阳","fname":"阜阳豫中丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"阜阳","fname":"阜阳中源丰田汽车销售服务有限公司临泉分公司"},
+        {"prov":"安徽","city":"合肥","fname":"合肥风之星丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"合肥","fname":"合肥安平丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"合肥","fname":"合肥通源丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"合肥","fname":"合肥恒信丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"合肥","fname":"合肥风之星丰田汽车销售服务有限公司巢湖分公司"},
+        {"prov":"安徽","city":"淮北","fname":"淮北环丰丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"六安","fname":"六安鑫宝丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"马鞍山","fname":"马鞍山丰盛丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"铜陵","fname":"铜陵山水丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"芜湖","fname":"芜湖亚夏丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"芜湖","fname":"芜湖伟策丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"宿州","fname":"宿州市利泰丰田汽车销售服务有限公司"},
+        {"prov":"安徽","city":"宿州","fname":"宿州市利泰丰田汽车销售服务有限公司灵璧分公司"},
+        {"prov":"安徽","city":"宣城","fname":"宣城亚夏丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京方庄丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京奥德行丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京迎宾中升丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京金冠兴业丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京花乡桥丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京运通博裕丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京中业丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京苹果园丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京花园桥丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京凯百隆丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京三元桥丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京广丰通田汽车贸易有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京首汽丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京北苑丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京华通丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京东仁天宇丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京五方桥丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京博丰长久丰田汽车销售服务有限公司"},
+        {"prov":"北京","city":"北京","fname":"北京凯百隆丰田汽车销售服务有限公司昌平分公司"},
+        {"prov":"北京","city":"北京","fname":"北京北苑丰田汽车销售服务有限公司怀柔分公司"},
+        {"prov":"福建","city":"福州","fname":"福州中升丰田汽车销售有限公司"},
+        {"prov":"福建","city":"福州","fname":"福州玖玖丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"福州","fname":"福州前横中升丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"福州","fname":"福清宏元丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"福州","fname":"福州市华强丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"福州","fname":"福州玖玖丰田汽车销售服务有限公司福清分公司"},
+        {"prov":"福建","city":"龙岩","fname":"龙岩海翼泰成丰田汽车服务有限公司"},
+        {"prov":"福建","city":"龙岩","fname":"龙岩闽盛丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"龙岩","fname":"龙岩闽盛丰田汽车销售服务有限公司上杭分公司"},
+        {"prov":"福建","city":"南平","fname":"南平华通丰田汽车服务有限公司"},
+        {"prov":"福建","city":"宁德","fname":"宁德华强丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"莆田","fname":"福建大川丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"泉州宾联丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"晋江新中利丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"泉州市大长江丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"泉州美东丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"南安室万事达丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"泉州","fname":"泉州市大长江丰田汽车销售服务有限公司石狮分公司"},
+        {"prov":"福建","city":"泉州","fname":"泉州市大长江丰田汽车销售服务有限公司安溪分公司"},
+        {"prov":"福建","city":"泉州","fname":"晋江新中利丰田汽车销售服务有限公司惠安分公司"},
+        {"prov":"福建","city":"泉州","fname":"南安市万事达丰田汽车销售服务有限公司南安水头分公司"},
+        {"prov":"福建","city":"泉州","fname":"南安市万事达丰田汽车销售服务有限公司永春分公司"},
+        {"prov":"福建","city":"三明","fname":"三明玖玖丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"厦门","fname":"厦门中达丰田汽车服务有限公司"},
+        {"prov":"福建","city":"厦门","fname":"厦门中升丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"厦门","fname":"厦门盛元丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"厦门","fname":"厦门中达丰田汽车服务有限公司翔安分公司"},
+        {"prov":"福建","city":"厦门","fname":"厦门盛元丰田汽车销售服务有限公司同安分公司"},
+        {"prov":"福建","city":"漳州","fname":"漳州盛元丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"漳州","fname":"漳州盛兴丰田汽车销售服务有限公司"},
+        {"prov":"福建","city":"漳州","fname":"漳州盛元丰田汽车销售服务有限公司漳浦分公司"},
+        {"prov":"甘肃","city":"白银","fname":"白银海天高新丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"定西","fname":"甘肃省定西市安定区南川开发区丰田4S店"},
+        {"prov":"甘肃","city":"酒泉","fname":"酒泉赛弛丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"兰州","fname":"兰州赛弛丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"兰州","fname":"兰州航天龙腾丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"平凉","fname":"平凉恒信丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"庆阳","fname":"庆阳大昌丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"天水","fname":"天水天合华通丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"武威","fname":"武威金色丰田汽车销售服务有限公司"},
+        {"prov":"甘肃","city":"张掖","fname":"张掖高新丰田汽车销售服务有限公司"},
+        {"prov":"格尔木","city":"格尔木","fname":"西宁康南丰田汽车销售服务有限公司格尔木分公司"},
+        {"prov":"广东","city":"潮州","fname":"潮州合和丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市永佳丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市南城丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市东部丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞龙华丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞大昌行深业丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市天下行丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞东美丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市百力恒丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞东城丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市安信丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞东美丰田汽车销售服务有限公司凤岗分公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市天下行丰田汽车销售服务有限公司企石分公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市永佳丰田汽车销售服务有限公司大朗分公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市东部丰田汽车销售服务有限公司望牛墩分公司"},
+        {"prov":"广东","city":"东莞","fname":"东莞市东城丰田汽车销售服务有限公司牛山分公司"},
+        {"prov":"广东","city":"佛山","fname":"南海桂城丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市顺德合诚丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市强劲丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市龙江丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市三水丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山骏安丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市南海合诚丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市高明南菱丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"佛山","fname":"顺德合诚丰田汽车销售服务有限公司容桂分公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市强劲丰田汽车销售服务有限公司南海大沥分公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市龙江丰田汽车销售服务有限公司西樵分公司"},
+        {"prov":"广东","city":"佛山","fname":"佛山市三水丰田汽车销售服务有限公司狮山分公司"},
+        {"prov":"广东","city":"广州","fname":"广州广保丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州沙河丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州骏佳广保丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州迎宾丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州华通丰田汽车服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州市顺协丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州南菱丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州新钜丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州宗远丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州庆丰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州骏辉丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州广博丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州中升丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州永佳丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州兆方丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州芳村永佳丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"广州","fname":"广州广保丰田汽车销售服务有限公司从化分公司"},
+        {"prov":"广东","city":"广州","fname":"广州庆丰丰田汽车销售服务有限公司人和分公司"},
+        {"prov":"广东","city":"广州","fname":"广州宗远丰田汽车销售服务有限公司萝岗分公司"},
+        {"prov":"广东","city":"广州","fname":"广州兆方丰田汽车销售服务有限公司石滩分公司"},
+        {"prov":"广东","city":"广州","fname":"广州永佳丰田汽车销售服务有限公司南沙分公司"},
+        {"prov":"广东","city":"广州","fname":"广州骏辉丰田汽车销售服务有限公司花都分公司 "},
+        {"prov":"广东","city":"广州","fname":"广州兆方丰田汽车销售服务有限公司白云分公司"},
+        {"prov":"广东","city":"广州市","fname":"广州兆方丰田汽车销售服务有限公司黄埔分公司"},
+        {"prov":"广东","city":"河源","fname":"河源中裕丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"河源","fname":"河源中裕丰田汽车销售服务有限公司龙川分公司"},
+        {"prov":"广东","city":"河源","fname":"河源中裕丰田汽车销售服务有限公司东源分公司"},
+        {"prov":"广东","city":"河源","fname":"河源中裕丰田汽车销售服务有限公司紫金分公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州俊峰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州展通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州骏爵丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州市金瑞兴丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州俊峰丰田汽车销售服务有限公司惠东分公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州展通丰田汽车销售服务有限公司博罗分公司"},
+        {"prov":"广东","city":"惠州","fname":"惠州骏爵丰田汽车销售服务有限公司仲恺分公司"},
+        {"prov":"广东","city":"江门","fname":"江门华通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"江门","fname":"江门市强劲丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"江门","fname":"江门市永佳丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"江门","fname":"开平华通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"江门","fname":"江门致泰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"江门","fname":"江门华通丰田汽车销售服务有限公司鹤山分公司"},
+        {"prov":"广东","city":"江门","fname":"江门市永佳丰田汽车销售服务有限公司恩平分公司"},
+        {"prov":"广东","city":"江门","fname":"江门华通丰田汽车销售服务有限公司新会分公司 "},
+        {"prov":"广东","city":"揭阳","fname":"揭阳合胜丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"揭阳","fname":"揭阳合胜丰田汽车销售服务有限公司普宁分公司"},
+        {"prov":"广东","city":"揭阳","fname":"揭阳合胜丰田汽车销售服务有限公司砲台分公司"},
+        {"prov":"广东","city":"乐昌","fname":"韶关利泰丰田汽车销售服务有限公司乐昌分公司"},
+        {"prov":"广东","city":"茂名","fname":"茂名华通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"茂名","fname":"茂名致泰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"茂名","fname":"茂名华通丰田汽车销售服务有限公司高州分公司"},
+        {"prov":"广东","city":"茂名","fname":"茂名华通丰田汽车销售服务有限公司化州分公司"},
+        {"prov":"广东","city":"茂名","fname":"茂名华通丰田汽车销售服务有限公司信宜分公司"},
+        {"prov":"广东","city":"梅州","fname":"梅州深业丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"梅州","fname":"梅州中裕丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"梅州","fname":"梅州深业丰田汽车销售服务有限公司兴宁分公司"},
+        {"prov":"广东","city":"梅州","fname":"梅州深业丰田汽车销售服务有限公司五华分公司"},
+        {"prov":"广东","city":"清远","fname":"清远南方丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"清远","fname":"清远宗远丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"汕头","fname":"汕头华通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"汕头","fname":"汕头合众丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"汕头","fname":"汕尾中溢丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"汕尾","fname":"汕尾中溢丰田汽车销售服务有限公司海丰分公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关安正丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司翁源分公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司始兴分公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司新丰分公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司南雄分公司"},
+        {"prov":"广东","city":"韶关","fname":"韶关利泰丰田汽车销售服务有限公司乳源分公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳大升汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市华日丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市深业丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳骏爵丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市都通丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市易达丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳中升丰田汽车服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市红彤丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳宝安大兴丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市大兴观澜丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市深业隆华丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳中升迎宾丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市兴业丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市光明新区光明丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市都通丰田汽车销售服务有限公司坪山分公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市都通丰田汽车销售服务有限公司平湖分公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市华日丰田汽车销售服务有限公司盐田分公司"},
+        {"prov":"广东","city":"深圳","fname":"深圳市大兴丰田汽车销售有限公司南湾分公司"},
+        {"prov":"广东","city":"阳江","fname":"阳江中熙丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"阳江","fname":"阳江广利丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"阳江","fname":"阳江市中熙丰田汽车销售有限公司阳春分公司"},
+        {"prov":"广东","city":"云浮","fname":"云浮中裕丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"云浮","fname":"云浮中裕丰田汽车销售服务有限公司新兴分公司"},
+        {"prov":"广东","city":"云浮","fname":"云浮中裕丰田汽车销售服务有限公司罗定分公司"},
+        {"prov":"广东","city":"湛江","fname":"湛江市骏华丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"湛江","fname":"湛江正联丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"湛江","fname":"湛江市骏华丰田汽车销售有限公司徐闻分公司"},
+        {"prov":"广东","city":"湛江","fname":"湛江市骏华丰田汽车销售有限公司廉江分公司"},
+        {"prov":"广东","city":"湛江","fname":"湛江市骏华丰田汽车销售服务有限公司雷州分公司"},
+        {"prov":"广东","city":"肇庆","fname":"肇庆东联丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"肇庆","fname":"四会市广利丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"肇庆","fname":"四会广利丰田汽车销售服务有限公司怀集分公司"},
+        {"prov":"广东","city":"肇庆","fname":"四会广利丰田汽车销售服务有限公司高要分公司"},
+        {"prov":"广东","city":"肇庆","fname":"四会市广利丰田汽车销售服务有限公司德庆分公司"},
+        {"prov":"广东","city":"肇庆","fname":"四会市广利丰田汽车销售服务有限公司广宁分公司"},
+        {"prov":"广东","city":"肇庆市","fname":"四会广利丰田汽车销售服务有限公司鼎湖分公司"},
+        {"prov":"广东","city":"中山","fname":"中山中裕丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"中山","fname":"中山三联丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"中山","fname":"中山市创世纪丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"中山","fname":"中山小榄庆丰丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"中山","fname":"中山市创世纪丰田汽车销售服务有限公司三乡分公司"},
+        {"prov":"广东","city":"中山","fname":"中山中裕丰田汽车销售服务有限公司金三分公司"},
+        {"prov":"广东","city":"珠海","fname":"珠海市珠光丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"珠海","fname":"珠海市腾达丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"珠海","fname":"珠海骏达丰田汽车销售服务有限公司"},
+        {"prov":"广东","city":"珠海","fname":"珠海市腾达丰田汽车销售服务有限公司斗门分公司"},
+        {"prov":"广西","city":"百色","fname":"百色广缘丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"北海","fname":"北海易达丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"北海","fname":"北海易达丰田汽车销售服务有限公司合浦分店"},
+        {"prov":"广西","city":"崇左","fname":"南宁广缘丰田汽车销售服务有限公司崇左分公司"},
+        {"prov":"广西","city":"防城港","fname":"防城港市易达丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"贵港","fname":"广西贵港骏业丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"桂林","fname":"桂林中达丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"桂林","fname":"桂林明渝丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"河池","fname":"河池明骏丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"河池","fname":"南宁中达丰田汽车销售服务有限公司河池分公司"},
+        {"prov":"广西","city":"贺州","fname":"贺州中南丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"来宾","fname":"来宾利成丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"柳州","fname":"柳州航盛丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"柳州","fname":"柳州庆鸿丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"南宁","fname":"南宁广缘丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"南宁","fname":"南宁中达丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"南宁","fname":"南宁天下行丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"南宁","fname":"南宁长久博丰丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"南宁","fname":"南宁中达丰田汽车销售服务有限公司武鸣分公司"},
+        {"prov":"广西","city":"钦州","fname":"钦州中达丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"梧州","fname":"梧州中裕丰田汽车销售服务有限公司"},
+        {"prov":"广西","city":"玉林","fname":"广西玉林骏业丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"安顺","fname":"安顺恒信丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"毕节","fname":"贵阳通源丰田汽车销售服务有限公司毕节分公司"},
+        {"prov":"贵州","city":"贵阳","fname":"贵阳通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"贵阳","fname":"贵州贵广丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"贵阳","fname":"贵州润丰汽车服务有限公司"},
+        {"prov":"贵州","city":"贵阳","fname":"贵阳通源丰田汽车销售服务有限公司清镇分公司"},
+        {"prov":"贵州","city":"凯里","fname":"贵州凯里经济开发区通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"六盘水","fname":"六盘水通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"黔南","fname":"都匀通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"铜仁","fname":"铜仁恒信丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"兴义","fname":" 黔西南州通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"兴义","fname":"贵阳通源丰田汽车销售服务有限公司兴义分公司"},
+        {"prov":"贵州","city":"遵义","fname":"遵义通源丰田汽车销售服务有限公司"},
+        {"prov":"贵州","city":"遵义","fname":"遵义众悦丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"海口","fname":"海口中升丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"海口","fname":"海口日之星丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"海口","fname":"海口展通丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"海口","fname":"海口日之星丰田汽车销售服务有限公司屯昌分公司"},
+        {"prov":"海南","city":"三亚","fname":"三亚丰正华丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"三亚","fname":"三亚丰正华丰田汽车销售服务有限公司儋州分公司"},
+        {"prov":"海南","city":"三亚","fname":"三亚丰正华丰田汽车销售服务有限公司万宁分公司"},
+        {"prov":"海南","city":"三亚","fname":"三亚丰正华丰田汽车销售服务有限公司东方分公司"},
+        {"prov":"海南","city":"三亚","fname":"三亚丰正华一汽丰田崖城分店"},
+        {"prov":"海南","city":"文昌","fname":"文昌日之星丰田汽车销售服务有限公司"},
+        {"prov":"海南","city":"海口","fname":"海口日之星丰田汽车销售服务有限公司琼海分公司"},
+        {"prov":"河北","city":"保定","fname":"保定轩宇诗丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"保定","fname":"保定通泰丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"保定","fname":"保定庞大丰煜丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"沧州","fname":"沧州运捷丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"沧州","fname":"沧州庞大丰致丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"沧州","fname":"任丘市运诚丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"沧州","fname":"沧州联盛丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"沧州","fname":"沧州运捷丰田汽车销售服务有限公司任丘分公司"},
+        {"prov":"河北","city":"承德","fname":"承德弘冀行丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"邯郸","fname":"邯郸环东丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"邯郸","fname":"邯郸庞大龙盛丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"衡水","fname":"衡水裕华丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"衡水","fname":"衡水裕华丰田汽车销售服务有限公司开发区分公司"},
+        {"prov":"河北","city":"廊坊","fname":"廊坊奥德行丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"迁安","fname":"唐山冀东丰田汽车销售服务有限公司迁安分公司"},
+        {"prov":"河北","city":"秦皇岛","fname":"秦皇岛龙之俊丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"秦皇岛","fname":"秦皇岛东港丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"秦皇岛","fname":"秦皇岛龙之俊丰田汽车销售服务有限公司青龙分店"},
+        {"prov":"河北","city":"秦皇岛","fname":"秦皇岛龙之俊丰田汽车销售服务有限公司昌黎分店"},
+        {"prov":"河北","city":"秦皇岛","fname":"唐山冀东丰田汽车销售服务有限公司滦南分公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄新华丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄裕华丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄纪元丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄建华丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄纪元丰田汽车销售服务有限公司辛集市分公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄纪元丰田汽车销售服务有限公司正定分公司"},
+        {"prov":"河北","city":"石家庄","fname":"石家庄纪元丰田汽车销售服务有限公司鹿泉分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山弘德丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司曹妃甸区分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山弘德丰田汽车销售服务有限公司滦县分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山弘德丰田汽车销售服务有限公司玉田县分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山弘德丰田汽车销售服务有限公司迁西分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山弘德丰田汽车销售服务有限公司乐亭分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司高新区分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司滦南分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司开平分公司"},
+        {"prov":"河北","city":"唐山","fname":"唐山冀东丰田汽车销售服务有限公司古冶分公司 "},
+        {"prov":"河北","city":"邢台","fname":"邢台威龙丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"邢台","fname":"邢台丰和丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"邢台","fname":"邢台威龙丰田汽车销售服务有限公司邢台分公司"},
+        {"prov":"河北","city":"邢台","fname":"邢台威龙一汽丰田宁晋城市展厅"},
+        {"prov":"河北","city":"邢台","fname":"邢台丰和丰田汽车销售服务有限公司任县分公司"},
+        {"prov":"河北","city":"邢台","fname":"邢台威龙丰田汽车销售服务有限公司南宫分公司"},
+        {"prov":"河北","city":"邢台","fname":"邢台威龙丰田汽车销售服务有限公司平乡分公司  "},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司张北分公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司赤城分公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司市区分公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司宣化区分公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司蔚县分公司"},
+        {"prov":"河北","city":"张家口","fname":"张家口华铃丰田汽车销售服务有限公司怀来分公司"},
+        {"prov":"河北","city":"涿州","fname":"涿州朝阳嘉和丰田汽车销售服务有限公司"},
+        {"prov":"河北","city":"遵化","fname":"唐山冀东丰田汽车销售服务有限公司遵化分公司"},
+        {"prov":"河南","city":"安阳","fname":"安阳市凯丰丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"鹤壁","fname":"鹤壁九州丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"焦作","fname":"焦作博汇丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"开封","fname":"开封豫中丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"洛阳","fname":"洛阳九都丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"洛阳","fname":"洛阳富源丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"洛阳","fname":"洛阳德众丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"漯河","fname":"漯河豫龙丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"漯河","fname":"漯河豫龙丰田汽车销售服务有限公司舞阳分公司"},
+        {"prov":"河南","city":"南阳","fname":"南阳顺达尔丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"南阳","fname":"南阳恒信丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"南阳","fname":"南阳顺达尔丰田汽车销售服务有限公司西峡分公司"},
+        {"prov":"河南","city":"南阳","fname":"南阳顺达尔丰田汽车销售服务有限公司邓州分公司"},
+        {"prov":"河南","city":"平顶山","fname":"平顶山世纪丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"平顶山","fname":"平顶山平宝丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"平顶山","fname":"平顶山世纪丰田汽车销售服务有限公司汝州分公司"},
+        {"prov":"河南","city":"平顶山","fname":"平顶山世纪丰田汽车销售服务有限公司舞钢分公司"},
+        {"prov":"河南","city":"濮阳","fname":"濮阳市世纪丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"三门峡","fname":"三门峡豫中丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"三门峡","fname":"三门峡豫中丰田汽车销售服务有限公司灵宝分公司"},
+        {"prov":"河南","city":"商丘","fname":"商丘中豪丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"商丘","fname":"商丘大行丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"新乡","fname":"新乡冠誉丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"新乡","fname":"长垣大合丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"信阳","fname":"信阳世纪行丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"许昌","fname":"许昌豫中丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"许昌","fname":"许昌豫中丰田汽车销售服务有限公司禹州分公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州富达丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州豫中丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州世纪鸿图丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州裕华丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州凯佳丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州润捷丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州富达丰田汽车销售服务有限公司登封分公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州裕华丰田汽车销售服务有限公司巩义分公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州世纪鸿图丰田汽车销售服务有限公司荥阳分公司"},
+        {"prov":"河南","city":"郑州","fname":"郑州豫中丰田汽车销售服务有限公司新密分公司"},
+        {"prov":"河南","city":"周口","fname":"周口明星丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"周口","fname":"周口乐铭丰田汽车销售服务有限公司"},
+        {"prov":"河南","city":"驻马店","fname":"驻马店威龙丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"大庆","fname":"大庆吉昌龙丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"大庆","fname":"大庆名派丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"大庆","fname":"大庆名派丰田汽车销售服务有限公司开发区分公司 "},
+        {"prov":"黑龙江","city":"大兴安岭","fname":"黑龙江省大兴安岭地区加格达奇区西出口路1号"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨华通丰田汽车服务有限公司"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨龙晟丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨运通丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨中升丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨运通丰田汽车销售服务有限公司阿城分公司"},
+        {"prov":"黑龙江","city":"哈尔滨","fname":"哈尔滨龙晟丰田汽车销售服务有限公司道里分公司 "},
+        {"prov":"黑龙江","city":"鹤岗","fname":"鹤岗东山龙晟丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"黑河","fname":"黑河嘉德利丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"黑河","fname":"哈尔滨运通丰田汽车销售服务有限公司黑河分公司"},
+        {"prov":"黑龙江","city":"鸡西","fname":"鸡西名派丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"佳木斯","fname":"佳木斯友谊华通丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"牡丹江","fname":"牡丹江名派丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"七台河","fname":"哈尔滨华通丰田汽车服务有限公司七台河分公司"},
+        {"prov":"黑龙江","city":"齐齐哈尔","fname":"齐齐哈尔骏合丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"齐齐哈尔","fname":"齐齐哈尔汇达丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"双鸭山","fname":"双鸭山华通丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"绥化","fname":"绥化市庞大丰雅丰田汽车销售服务有限公司"},
+        {"prov":"黑龙江","city":"绥化","fname":"绥化市庞大丰雅丰田汽车销售服务有限公司肇东分公司"},
+        {"prov":"黑龙江","city":"绥化","fname":"绥化市庞大丰雅丰田汽车销售有限公司庆安分公司"},
+        {"prov":"黑龙江","city":"五常","fname":"哈尔滨运通丰田汽车销售服务有限公司五常分公司"},
+        {"prov":"黑龙江","city":"伊春","fname":"哈尔滨运通丰田汽车销售服务有限公司伊春分公司"},
+        {"prov":"湖北","city":"鄂州","fname":"鄂州双益丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"恩施","fname":"恩施恒信丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"黄冈","fname":"黄冈世纪汇恒丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"黄冈","fname":"黄冈世纪汇恒丰田汽车销售有限公司麻城分公司"},
+        {"prov":"湖北","city":"黄石","fname":"黄石恒信东方丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"荆门","fname":"荆门讯隆丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"荆门","fname":"荆门讯隆丰田汽车销售服务有限公司钟祥分公司"},
+        {"prov":"湖北","city":"荆州","fname":"荆州讯达丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"荆州","fname":"荆州讯达丰田汽车销售服务有限公司洪湖分公司"},
+        {"prov":"湖北","city":"荆州市松滋市","fname":"荆州讯达丰田汽车销售服务有限公司松滋分公司"},
+        {"prov":"湖北","city":"潜江","fname":"潜江讯隆丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"潜江","fname":"荆州迅达一汽丰田汽车销售有限公司潜江分公司"},
+        {"prov":"湖北","city":"十堰","fname":"十堰黄浦丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"随州","fname":"随州星光丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"随州","fname":"武汉中南丰田汽车销售服务有限公司随州分公司"},
+        {"prov":"湖北","city":"天门","fname":"天门中瑞丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉黄浦丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"安利捷（武汉）丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉中南丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉实华丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉骏业丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉中南丰田汽车销售服务有限公司江夏分公司"},
+        {"prov":"湖北","city":"武汉","fname":"武汉中南丰田汽车销售服务有限公司仁和分公司"},
+        {"prov":"湖北","city":"仙桃","fname":"仙桃华庭丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"仙桃","fname":"武汉安利捷丰田汽车销售有限公司仙桃分公司"},
+        {"prov":"湖北","city":"咸宁","fname":"咸宁黄浦丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"襄阳","fname":"襄阳天和丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"襄阳","fname":"襄阳世纪丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"襄阳","fname":"襄阳天和丰田汽车销售服务有限公司枣阳分公司"},
+        {"prov":"湖北","city":"孝感","fname":"孝感黄浦丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"宜昌","fname":"宜昌德龙丰田汽车销售服务有限公司"},
+        {"prov":"湖北","city":"宜昌","fname":"宜昌裕成丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"常德","fname":"常德华运通丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"常德","fname":"常德胡运通一汽丰田汽车销售有限公司澧县分公司"},
+        {"prov":"湖南","city":"衡阳","fname":"衡阳和信丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"衡阳","fname":"衡阳飞宇运通丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"怀化","fname":"怀化凯祥迎宾丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"耒阳","fname":"衡阳和信丰田汽车销售服务有限公司耒阳分公司"},
+        {"prov":"湖南","city":"娄底","fname":"娄底和兴丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"邵阳","fname":"邵阳华运通丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"湘潭","fname":"湘潭力天丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"益阳","fname":"益阳市佳烨丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"益阳","fname":"益阳兰天丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"永州","fname":"永州佳昊丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"岳阳","fname":"岳阳彤达丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"岳阳","fname":"岳阳彤达丰田汽车销售服务有限公司平江分公司"},
+        {"prov":"湖南","city":"张家界","fname":"张家界力天丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙力天丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙申湘丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙华运通丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙和信丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"浏阳庆升丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙华兴通丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙","fname":"长沙彤道丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"长沙 ","fname":"长沙力天丰田汽车销售服务有限公司宁乡分公司"},
+        {"prov":"湖南","city":"株洲","fname":"株洲和信丰田汽车销售服务有限公司"},
+        {"prov":"湖南","city":"株洲","fname":"株洲力天丰田销售服务有限公司"},
+        {"prov":"湖南","city":"株洲","fname":"株洲和信丰田汽车销售服务有限公司攸县分公司"},
+        {"prov":"吉林","city":"白城","fname":"白城经开丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"白城","fname":"白城宝友丰田汽车销售服务有限公司 "},
+        {"prov":"吉林","city":"吉林","fname":"吉林市瑞孚丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"吉林","fname":"吉林神华丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"辽源","fname":"辽源龙福丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"四平","fname":"四平长久博丰丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"松原","fname":"松原金山丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"通化","fname":"通化华阳丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"通化","fname":"通化华阳丰田汽车销售服务有限公司梅河口分公司"},
+        {"prov":"吉林","city":"延吉","fname":"延边金山丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"长春","fname":"长春东环丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"长春","fname":"长春华阳丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"长春","fname":"长春金山丰田汽车销售服务有限公司"},
+        {"prov":"吉林","city":"长春","fname":"长春一汽服贸丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"常熟","fname":"常熟市海邦丰田汽车销售服务有限公司梅李分公司"},
+        {"prov":"江苏","city":"常州","fname":"常州外汽丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"常州","fname":"常州天宁丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"常州","fname":"常州世纪行丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"常州","fname":"溧阳新苏南丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"海安","fname":"如皋益昌盛达丰田汽车销售服务有限公司海安分店"},
+        {"prov":"江苏","city":"淮安","fname":"淮安众和丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"淮安","fname":"淮安帝亚丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"淮安","fname":"淮安众和丰田汽车销售服务有限公司盱眙分公司"},
+        {"prov":"江苏","city":"江阴","fname":"江阴市盛达丰田汽车销售服务有限公司长泾分公司"},
+        {"prov":"江苏","city":"连云港","fname":"连云港天澜丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南京","fname":"南京中升丰田汽车服务有限公司"},
+        {"prov":"江苏","city":"南京","fname":"南京朗驰丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南京","fname":"南京中升迎宾丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南京","fname":"南京江宁中升盈丰丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南京","fname":"江苏浦口冠松丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"南通大生丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"南通长江丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"海门常嘉丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"如皋益昌盛达丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"如东众腾丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"启东市启粮金城丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"南通先锋新城丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"南通","fname":"南通大生丰田汽车销售服务有限公司通州分公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州康福丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"昆山通和丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州华成丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州由由丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州中园丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州裕达丰田汽车销售服务销售有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"常熟市海邦丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"张家港东联丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"太仓市森丰盛达丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"昆山昆嘉丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州裕新丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州中园丰田汽车销售服务有限公司盛泽分公司"},
+        {"prov":"江苏","city":"苏州","fname":"苏州裕达丰田汽车汽车销售服务有限公司常熟分公司"},
+        {"prov":"江苏","city":"苏州","fname":"张家港东联丰田汽车销售服务有限公司公司金港分店"},
+        {"prov":"江苏","city":"泰州","fname":"泰州中升丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"泰州","fname":"泰州中园丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"无锡常隆丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"江阴市盛达丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"无锡市金城丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"无锡中威丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"宜兴新苏南丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"无锡市新洲丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"江阴常隆丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"无锡","fname":"无锡市金城丰田汽车销售服务有限公司惠山分公司"},
+        {"prov":"江苏","city":"无锡","fname":"宜兴新苏南汽车销售服务有限公司环科园分店"},
+        {"prov":"江苏","city":"宿迁","fname":"宿迁天宁丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"宿迁","fname":"沭阳联众丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"徐州","fname":"徐州润东丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"徐州","fname":"徐州常缘丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"盐城","fname":"盐城通和丰田汽车服务有限公司"},
+        {"prov":"江苏","city":"盐城","fname":"盐城东昌丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"扬州","fname":"扬州成辉丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"扬州","fname":"扬州仙达丰田汽车销售服务有限公司"},
+        {"prov":"江苏","city":"镇江","fname":"镇江京鹏丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"抚州","fname":"抚州尚仕丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"赣州","fname":"赣州同驰丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"赣州","fname":"赣州车头丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"吉安","fname":"吉安富源丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"景德镇","fname":"南昌富源丰田汽车销售服务有限公司景德镇分店"},
+        {"prov":"江西","city":"九江","fname":"九江东部丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"南昌","fname":"南昌同驰丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"南昌","fname":"南昌富源丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"南昌","fname":"南昌恒隆丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"南昌","fname":"南昌恒信丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"南昌","fname":"南昌富源丰田汽车销售服务有限公司恒望分公司"},
+        {"prov":"江西","city":"萍乡","fname":"萍乡庞大恒运丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"上饶","fname":"上饶富源丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"新余","fname":"新余东部丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"宜春","fname":"宜春恒阳丰田汽车销售服务有限公司"},
+        {"prov":"江西","city":"鹰潭","fname":"南昌富源丰田汽车销售服务有限公司鹰潭分公司"},
+        {"prov":"辽宁","city":"鞍山","fname":"鞍山北方丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"鞍山","fname":"海城南环丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"鞍山","fname":"鞍山市九洲丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"本溪","fname":"本溪金廊丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"朝阳","fname":"朝阳川达丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"朝阳","fname":"朝阳立达丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连中升丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连中升裕德丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连迎宾中升丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连新盛荣丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连保税区华通丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连荣辉通达丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连汇华丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"大连","fname":"大连保税区华通丰田汽车销售服务有限公司中山分公司"},
+        {"prov":"辽宁","city":"丹东","fname":"丹东弘泰丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"丹东","fname":"丹东弘泰丰田汽车销售服务有限公司东港分公司"},
+        {"prov":"辽宁","city":"抚顺","fname":"抚顺沈抚丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"阜新","fname":"阜新全泰丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"葫芦岛","fname":"葫芦岛于洪川达丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"葫芦岛","fname":"葫芦岛于洪川达丰田汽车销售服务有限公司绥中分公司"},
+        {"prov":"辽宁","city":"锦州","fname":"锦州川达丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"辽阳","fname":"辽阳繁荣丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"盘锦","fname":"盘锦利星丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"盘锦","fname":"盘锦伯骐丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳于洪丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳华通丰田汽车服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳铁西华通丰田汽车服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳金廊丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳中升丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳中晨先锋丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"沈阳","fname":"沈阳于洪丰田汽车销售服务有限公司新民分公司"},
+        {"prov":"辽宁","city":"铁岭","fname":"铁岭金惠源丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"营口","fname":"营口红运丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"营口","fname":"营口川达红运丰田汽车销售服务有限公司"},
+        {"prov":"辽宁","city":"营口","fname":"营口红运丰田汽车销售服务有限公司大石桥分公司"},
+        {"prov":"内蒙古","city":"阿拉善盟","fname":"乌海庞大泓程丰田汽车销售服务有限公司阿拉善盟分公司"},
+        {"prov":"内蒙古","city":"巴彦淖尔","fname":"巴彦淖尔市川河丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"包头","fname":"包头信得惠丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"包头","fname":"包头中升丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"赤峰","fname":"赤峰利丰丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"赤峰","fname":"赤峰名派丰田汽车服务有限公司"},
+        {"prov":"内蒙古","city":"鄂尔多斯","fname":"鄂尔多斯北苑丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"鄂尔多斯","fname":"鄂尔多斯市康泰丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"呼和浩特","fname":"呼和浩特康泰丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"呼和浩特","fname":"呼和浩特金川丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"呼和浩特","fname":"呼和浩特中升丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"呼伦贝尔","fname":"呼伦贝尔市庞大龙盛丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"霍林郭勒","fname":"霍林郭勒市运通宏业丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"通辽","fname":"通辽川达丰田汽车销售有限公司"},
+        {"prov":"内蒙古","city":"乌海","fname":"乌海庞大泓程丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"锡林浩特","fname":"锡林郭勒盟利丰丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"兴安盟","fname":"兴安盟龙晟丰田汽车销售服务有限公司"},
+        {"prov":"内蒙古","city":"兴安盟","fname":"兴安盟龙晟丰田汽车销售服务有限公司科右中旗分公司"},
+        {"prov":"内蒙古","city":"兴安盟扎赉特旗","fname":"兴安盟龙晟丰田汽车销售服务有限公司扎赉特旗分公司"},
+        {"prov":"宁夏","city":"吴忠","fname":"宁夏吴忠上陵丰田汽车销售服务有限公司"},
+        {"prov":"宁夏","city":"银川","fname":"宁夏银川上陵丰田汽车销售服务有限公司"},
+        {"prov":"宁夏","city":"银川","fname":"银川安利捷丰田汽车销售服务有限公司"},
+        {"prov":"青海","city":"西宁","fname":"西宁康南丰田汽车销售服务有限公司"},
+        {"prov":"青海","city":"西宁","fname":"西宁航天龙腾丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"滨州","fname":"滨州市鸿泰丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"德州","fname":"德州天衢丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"德州","fname":"德州利源丰雅丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"东营","fname":"东营泛华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"东营","fname":"东营庞大东盛丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"东营","fname":"东营泛华丰田汽车销售服务有限公司广饶分公司"},
+        {"prov":"山东","city":"东营","fname":"东营泛华丰田汽车销售服务有限公司河口分公司"},
+        {"prov":"山东","city":"菏泽","fname":"菏泽润华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"菏泽","fname":"菏泽悦程丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南明星丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南润华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南鲁鹰丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南嘉瑞丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"章丘明星丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南迎宾中升丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济南","fname":"济南明星丰田汽车销售服务有限公司济阳分公司"},
+        {"prov":"山东","city":"济南","fname":"济南明星丰田汽车销售服务有限公司商河分公司"},
+        {"prov":"山东","city":"济南","fname":"济南明星丰田汽车销售服务有限公司市中分公司"},
+        {"prov":"山东","city":"济宁","fname":"济宁泛华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济宁","fname":"济宁恒升丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"济宁","fname":"济宁泛华丰田汽车销售服务有限公司邹城分公司"},
+        {"prov":"山东","city":"济宁","fname":"济宁泛华丰田汽车销售服务有限公司曲阜分公司"},
+        {"prov":"山东","city":"莱芜","fname":"济南明星丰田汽车销售服务有限公司莱芜分公司 "},
+        {"prov":"山东","city":"聊城","fname":"聊城五州丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"聊城","fname":"聊城光岳丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"聊城","fname":"聊城五州丰田汽车销售服务有限公司临清分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂翔宇丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂和裕丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂燕华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司河东分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司郯城分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司费县分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司临沭分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司蒙阴分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司莒南分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司平邑分公司"},
+        {"prov":"山东","city":"临沂","fname":"临沂泰华丰田汽车销售服务有限公司沂南分公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛世泰丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"青岛","fname":"安利捷（青岛）丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛世鑫丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛中升丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛唐弓丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛安利捷丰田销售有限公司莱西分公司"},
+        {"prov":"山东","city":"青岛","fname":"青岛世泰丰田汽车销售服务有限公司胶州分公司"},
+        {"prov":"山东","city":"日照","fname":"日照鸿发丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"日照","fname":"日照润丰达丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"日照","fname":"日照鸿发丰田汽车销售服务有限公司莒县分公司"},
+        {"prov":"山东","city":"泰安","fname":"泰安东方丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"泰安","fname":"泰安丰乐嘉丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"威海","fname":"威海大友丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"威海","fname":"荣成市凭海西路鑫通汽车城一汽丰田店"},
+        {"prov":"山东","city":"威海","fname":"威海恒德丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"威海","fname":"威海大友丰田汽车销售服务有限公司工业石岛分公司"},
+        {"prov":"山东","city":"威海","fname":"威海大友丰田汽车销售服务有限公司乳山分店"},
+        {"prov":"山东","city":"潍坊","fname":"潍坊玄武丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"潍坊","fname":"潍坊广泰丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"潍坊","fname":"青州明星丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"潍坊","fname":"潍坊丰华汽车销售服务有限公司"},
+        {"prov":"山东","city":"潍坊","fname":"诸城鼎诚丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"潍坊","fname":"寿光富昇丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"烟台","fname":"烟台东联丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"烟台","fname":"烟台中升丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"烟台","fname":"烟台长久丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"烟台","fname":"莱州安利捷丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"枣庄","fname":"枣庄和裕丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"淄博","fname":"淄博世纪丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"淄博","fname":"淄博远方丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"淄博","fname":"淄博锦华丰田汽车销售服务有限公司"},
+        {"prov":"山东","city":"淄博","fname":"淄博世纪丰田汽车销售服务有限公司周村分公司"},
+        {"prov":"山东","city":"淄博","fname":"淄博世纪丰田汽车销售服务有限公司沂源分公司"},
+        {"prov":"山西","city":"大同","fname":"大同合远丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"大同","fname":"大同凯泰丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"大同","fname":"大同合远丰田汽车销售服务有限公司南郊分公司"},
+        {"prov":"山西","city":"河津","fname":"运城黄河丰田汽车销售服务有限公司河津分公司"},
+        {"prov":"山西","city":"晋城","fname":"晋城华洋丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"晋中","fname":"晋中航田丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"晋中","fname":"晋中中部丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"临汾","fname":"临汾锦华丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"临汾","fname":"临汾锦华丰田汽车销售服务有限公司屯里分公司"},
+        {"prov":"山西","city":"吕梁","fname":"吕梁市瑞华丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"朔州","fname":"朔州致远丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"太原","fname":"太原大昌丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"太原","fname":"太原金谷源丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"太原","fname":"庞大丰扬丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"太原","fname":"太原金谷源丰田汽车销售服务有限公司古交分店"},
+        {"prov":"山西","city":"太原","fname":"太原金谷源丰田汽车销售服务有限公司清徐分公司"},
+        {"prov":"山西","city":"忻州","fname":"忻州大昌丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"阳泉","fname":"阳泉联华丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"运城","fname":"运城黄河丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"运城","fname":"运城锦华丰田汽车销售服务有限公司"},
+        {"prov":"山西","city":"长治","fname":"长治大昌丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"安康","fname":"安康华通丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"宝鸡","fname":"宝鸡市威龙丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"宝鸡","fname":"宝鸡市威龙丰田汽车服务有限公司高新分公司"},
+        {"prov":"陕西","city":"汉中","fname":"汉中恒信丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"渭南","fname":"渭南白云丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"西安华通丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"西安航天龙腾丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"西安新铭洋丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"陕西航天盛世丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"西安盛成汇和丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"西安","fname":"西安道恩丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"延安","fname":"延安航天龙腾丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"榆林","fname":"榆林高新丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"榆林","fname":"榆林新铭洋丰田汽车销售服务有限公司"},
+        {"prov":"陕西","city":"榆林","fname":"榆林高新丰田汽车销售服务有限公司府谷分公司"},
+        {"prov":"陕西","city":"榆林","fname":"榆林高新丰田汽车销售服务有限公司靖边分公司"},
+        {"prov":"陕西","city":"榆林市","fname":"榆林高新丰田汽车销售服务有限公司定边分公司"},
+        {"prov":"上海","city":"上海","fname":"上海和裕丰田汽车服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海东昌丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海永达丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海中升丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海中汽丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海天虹丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海冠松丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海锦江丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海协通丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海冠松绅晖丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海万兴丰田汽车销售服务有限公司"},
+        {"prov":"上海","city":"上海","fname":"上海中汽丰田汽车销售服务有限公司松江分公司"},
+        {"prov":"上海","city":"上海","fname":"上海东昌丰田汽车销售服务有限公司奉贤分公司"},
+        {"prov":"上海","city":"上海","fname":"上海冠松丰田汽车销售服务有限公司浦东分公司"},
+        {"prov":"四川","city":"巴中","fname":"巴中金华泰丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都温江中达丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"安利捷（成都）丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都中达丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都三和丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都锦泰丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"四川中升迎宾丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都启阳华通丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都中升丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"都江堰东创丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":" 崇州鑫嘉庆丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"成都","fname":"成都通蓉源丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"达州","fname":"达州启阳丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"德阳","fname":"德阳建国丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"广安","fname":"广安冉越丰田汽车销售服务有限公司 "},
+        {"prov":"四川","city":"广元","fname":"广元富远丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"乐山","fname":"乐山安利捷丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"凉山","fname":"西昌康宁丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"泸州","fname":"泸州通源丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"眉山","fname":"眉山庆丰丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"绵阳","fname":"绵阳高新区丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"绵阳","fname":"绵阳联合丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"南充","fname":"南充通源丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"宜宾","fname":"宜宾广汇丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"资阳","fname":"资阳建国丰田汽车销售服务有限公司"},
+        {"prov":"四川","city":"自贡","fname":"自贡南环丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津柳林丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津东联丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津华苑丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津市中乒丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津和裕丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津浩物丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津柳林金海丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥嘉丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥德行津盛丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津庞大丰雅丰田汽车销售服务有限公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥德行津盛丰田汽车销售服务有限公司宝坻分公司"},
+        {"prov":"天津","city":"天津","fname":"天津庞大丰雅丰田汽车销售服务有限公司南开分公司"},
+        {"prov":"天津","city":"天津","fname":"天津华苑丰田汽车销售服务有限公司北镇分公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥德行津盛丰田汽车销售服务有限公司蓟州分公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥嘉丰田汽车销售服务有限公司王庆坨分店"},
+        {"prov":"天津","city":"天津","fname":"天津奥德行津盛丰田汽车销售服务有限公司西青分公司"},
+        {"prov":"天津","city":"天津","fname":"天津华苑丰田汽车销售服务有限公司开发区分公司"},
+        {"prov":"天津","city":"天津","fname":"天津奥德行津盛丰田汽车销售服务有限公司宁河分公司"},
+        {"prov":"西藏","city":"拉萨","fname":"西藏拉萨新动力丰田汽车销售服务有限公司"},
+        {"prov":"西藏","city":"林芝","fname":"西藏泰立丰田汽车销售服务有限公司林芝分店 "},
+        {"prov":"西藏","city":"日喀则","fname":"西藏泰立丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"阿克苏","fname":"阿克苏华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"昌吉","fname":"昌吉庞大丰雅丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"哈密","fname":"哈密市华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"和田","fname":"和田天汇丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"喀什","fname":"喀什华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"克拉玛依","fname":"克拉玛依华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"库尔勒","fname":"巴州华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"乌鲁木齐","fname":"乌鲁木齐华通丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"乌鲁木齐","fname":"乌鲁木齐天汇博望丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"乌鲁木齐","fname":"乌鲁木齐航天龙腾丰田汽车销售服务有限公司"},
+        {"prov":"新疆","city":"乌鲁木齐","fname":"乌鲁木齐天汇博望丰田汽车销售服务有限公司大湾分公司"},
+        {"prov":"新疆","city":"伊犁","fname":"伊犁东驰丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"保山","fname":"保山联亚丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"楚雄","fname":"楚雄联亚丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"大理","fname":"大理中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"德宏","fname":"德宏骏捷丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"德宏","fname":"昆明联亚丰田汽车销售服务有限公司德宏分公司"},
+        {"prov":"云南","city":"红河","fname":"红河中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昆明","fname":"昆明中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昆明","fname":"云南中升迎宾丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昆明","fname":"昆明联亚丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昆明","fname":"昆明庞大丰雅丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昆明","fname":"昆明捷通达丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"丽江","fname":"丽江大昌行丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"丽江","fname":"昆明联亚丰田汽车销售服务有限公司丽江分公司"},
+        {"prov":"云南","city":"临沧","fname":"临沧捷运丰田汽车销售服务有限公司 "},
+        {"prov":"云南","city":"临沧","fname":"昆明中升丰田汽车销售服务有限公司临沧分公司"},
+        {"prov":"云南","city":"普洱","fname":"普洱裕隆丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"曲靖","fname":"曲靖中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"曲靖","fname":"曲靖宝捷丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"文山","fname":"文山中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"西双版纳景洪市","fname":"西双版纳捷信丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"玉溪","fname":"玉溪中升丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"玉溪","fname":"玉溪通达丰田汽车销售服务有限公司"},
+        {"prov":"云南","city":"昭通","fname":"昭通恒达丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"慈溪","fname":"慈溪常隆丰田汽车销售服务有限公司逍林分店"},
+        {"prov":"浙江","city":"杭州","fname":"杭州金丰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"浙江元通龙通丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州之远江干丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州康桥丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州元通八下里丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州东昌丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州康隆丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州滨文丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州康桥丰田汽车销售服务有限公司蜀山分公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州和诚八下里丰田汽车销售服务有限公司桐庐分公司"},
+        {"prov":"浙江","city":"杭州","fname":"杭州康桥丰田汽车销售服务有限公司大江东分公司"},
+        {"prov":"浙江","city":"湖州","fname":"湖州元通信达丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"湖州","fname":"湖州金丰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"湖州","fname":"长兴众悦丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"嘉兴","fname":"嘉兴宝达丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"嘉兴","fname":"嘉兴良友丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"嘉兴","fname":"海宁佳禾丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"嘉兴","fname":"桐乡常隆丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"嘉兴","fname":"嘉兴宝达丰田汽车销售服务有限公司平湖分公司"},
+        {"prov":"浙江","city":"金华","fname":"金华大江南丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"金华","fname":"金华大昌丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"金华","fname":"义乌市九丰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"金华","fname":"义乌龙田丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"金华","fname":"永康市成长丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"金华","fname":"东阳众运丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"丽水","fname":"丽水市金丰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"临安","fname":"杭州金丰丰田汽车销售服务有限公司临安分公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波中升丰田汽车服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波雅华丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波宁兴丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"慈溪常隆丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波轿辰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"余姚宁兴丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波和信丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"象山龙华丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波奉化宁兴丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波宝利行丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"宁波","fname":"余姚宁兴丰田汽车销售服务有限公司泗门分公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波宁兴丰田汽车销售服务有限公司北仑公司"},
+        {"prov":"浙江","city":"宁波","fname":"宁波龙华丰田汽车服务有限公司镇海分公司"},
+        {"prov":"浙江","city":"衢州","fname":"衢州中恒丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"瑞安","fname":"瑞安市卡卡汽车销售有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"绍兴华泽丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"绍兴五云丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"诸暨中升丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"绍兴上虞胜康丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"嵊州中升丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"绍兴","fname":"绍兴佳禾丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"台州刚泰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"台州市百合丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"温岭宇辰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"临海大江南丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"台州椒江刚泰丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"台州","fname":"台州刚泰丰田汽车销售服务有限公司天台分公司"},
+        {"prov":"浙江","city":"台州","fname":"台州刚泰丰田汽车销售服务有限公司玉环分公司"},
+        {"prov":"浙江","city":"台州","fname":"台州市百合丰田汽车销售服务有限公司分公司"},
+        {"prov":"浙江","city":"温州","fname":"温州华通丰田汽车服务有限公司"},
+        {"prov":"浙江","city":"温州","fname":"温州市瓯通丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"温州","fname":"乐清龙华丰田汽车销售服务有限公司"},
+        {"prov":"浙江","city":"温州","fname":"乐清龙华丰田汽车销售服务有限公司瑞安分公司"},
+        {"prov":"浙江","city":"舟山","fname":"舟山中升丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆渝都丰田汽车服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆龙华人和丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆百事达丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆万家丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆华通丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆百事达华丰丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆两江丰田汽车销售服务有限公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆百事达汽车销售有限公司黔江分公司"},
+        {"prov":"重庆","city":"重庆","fname":"重庆百事达丰田汽车销售服务有限公司永川分公司"},
+    ];
+    var loadData = function (arr) {
+        var $prov = $("#prov");
+        var $city = $("#city");
+        var $dealers = $("#dealers");
+        var p = "<option value=\"0\">-选择省份-</option>";
+        var c = "<option value=\"0\">-选择城市-</option>";
+        var d = "<option value=\"0\">-选择经销商-</option>";
+        $.each(arr, function (index, item) {
+            if(p.indexOf(item.prov)<0){
+                p += "<option value=\""+item.prov+"\">"+item.prov+"</option>";
+            }
+        })
+        $prov.html(p);
+        $prov.change(function () {
+            var prov = $(this).val();
+            c = "<option value=\"0\">-选择城市-</option>";
+
+            $.each(arr, function (index, item) {
+                if(item.prov==prov){
+                    if(c.indexOf(item.city)<0){
+                        c += "<option value=\""+item.city+"\">"+item.city+"</option>";
+                    }
+                }
+            })
+            $city.html(c);
+        })
+        $city.change(function () {
+            var city = $(this).val();
+            d = "<option value=\"0\">-选择经销商-</option>";
+            $.each(arr, function (index, item) {
+                if(item.city==city){
+                    d += "<option value=\""+item.fname+"\">"+item.fname+"</option>";
+                }
+            })
+            $dealers.html(d);
+        })
+    }
+    loadData(data);
+
+
+    //    报名
+    $(function(){
+        var flag = true;
+        var chexing = "威驰三厢";
+        $("#series_id a").click(function () {
+            $("#series_id a").removeClass("tap").siblings().eq($(this).index()).addClass("tap")
+            series_id = $(this).text();
+        })
+        $("#submit").click(function() {
+            if(flag) {
+                var series_id = 42;  //车型id
+                var name=$("#name").val(),  //姓名
+                    tel=$("#phone").val(),        //电话
+                    brand_id = 10, //品牌
+                    act_id = 3206,
+                    prov = $("#prov").val(),
+                    city = $("#city").val(),
+                    dealers = $('#dealers').val(),
+                    agree = $("#agreeCheck").is(':checked'),
+
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        act_id:act_id,
+                        act_province: prov,
+                        act_city: city,
+                        city: city,
+                        dealers:dealers,
+                        car_name: chexing
+                    }
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    pop.showNotice('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    pop.showNotice('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    pop.showNotice('手机格式不正确');
+                    return false;
+                }
+                if(prov==0){
+                    pop.showNotice('请选择省份');
+                    return false;
+                }
+                if(city==0){
+                    pop.showNotice('请选择城市');
+                    return false;
+                }
+                if(chexing==0){
+                    pop.showNotice('请选择车型');
+                    return false;
+                }
+                if(dealers==0){
+                    pop.showNotice('请选择经销商');
+                    return false;
+                }
+                if(!agree){
+                    pop.showNotice('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"get",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            pop.showNotice('恭喜你，报名成功！', function () {
+                                window.location.reload();
+                            });
+                        }else{
+                            pop.showNotice("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                pop.showNotice("请勿重复提交！")
+            }
+
+        })
+
+    })
+
+
+    var imgUrl = "http://img1.gtimg.com/autodongguan/pics/hv1/201/67/210/13672536.jpg";
+    var lineLink = window.location.href;
+    var descContent = "零利惠聚：至高享2年零利率，首付低至2成，2018年9月1日-11月30日";
+    var shareTitle = '心驰所享 无畏青春';
+    var appid = '';
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+            "content": descContent,
+            "url": lineLink,
+        }, function(res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+        });
+    }, false);
+
+
+</script>
+</body>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' style='display:none;' id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

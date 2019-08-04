@@ -1,0 +1,774 @@
+<!--2019年-02月-27号 星期三 15:51:21 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>长安欧尚 汽车下乡启动暨品鉴会</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+		<style>
+			.main {
+				max-width: 1920px;
+				margin: 0 auto;
+			}
+			.cn {position: relative;}
+			.cn2 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/179/238/211/13781144.jpg') center center no-repeat;
+				height: 461px;
+			}
+			.cn3 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/180/238/211/13781145.jpg') center center no-repeat;
+				height: 767px;
+			}
+			.cn4 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/181/238/211/13781146.jpg') center center no-repeat;
+				height: 936px;
+			}
+			.cn5 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/182/238/211/13781147.jpg') center center no-repeat;
+				height: 900px;
+			}
+			.cn6 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/183/238/211/13781148.jpg') center center no-repeat;
+				height: 151px;
+			}
+			.cn7 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/184/238/211/13781149.jpg') center center no-repeat;
+				height: 1282px;
+			}
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 141px;
+				width: 362px;
+				height: 278px;
+				margin-left: 119px;
+			}
+			.bmk p input,.bmk p select {
+				width: 100%;
+				height: 100%;
+				-webkit-appearance: none;
+				appearance: none;
+				background: transparent;
+				font-size: 15px;
+				padding-left: 10px;
+				box-sizing: border-box;
+			}
+			.bmk p {
+				width: 323px;
+    		height: 22px;
+				margin-bottom: 13px;
+			}
+			.bmk .line p {
+				margin-top: 2px;
+				display: inline-block;
+			}
+			.bmk .prov {
+				width: 126px;
+    		margin-right: 9px;
+			}
+			.bmk .city {
+				width: 184px;
+			}
+			.privacyPolicy {
+				position: absolute;
+				left: 62px;
+				top: 249px;
+			}
+			.privacyPolicy input {
+				width: 18px !important;
+				height: 18px !important
+			}
+			.privacyPolicy span {
+				display: inline-block;
+				font-size: 18px;
+				color: #000;
+				position: relative;
+				top: -2px;
+			}
+			.privacyPolicy a {
+				color: #000;
+			}
+			.bmk .submit {
+				width: 150px;
+				height: 42px;
+				margin-top: 25px;
+				margin-left: 67px;
+			}
+			.bmk #submit {
+				cursor: pointer;
+			}
+			.dorSelect {
+				position: absolute;
+				left: 50%;
+				top: 100px;
+				width: 400px;
+				height: 45px;
+				margin-left: -472px;
+			}
+			.dorSelect select {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 103px;
+				height: 31px;
+				background: transparent;
+				font-size: 18px;
+				margin-top: 10px;
+				box-sizing: border-box;
+				padding-left: 6px;
+				margin-right: 13px;
+				cursor: pointer;
+			}
+			.list {
+				width: 945px;
+				height: 900px;
+				margin: 0 auto;
+				border: 4px solid #dedede;
+			}
+			.list ul {
+				width: 100%;
+				padding: 10px 0;
+				margin: 10px auto;
+				overflow: hidden;
+				font-size: 20px;
+			}
+			.list ul:first-child {
+				margin-top: 0;
+			}
+			.list ul:last-child {
+				padding: none;
+				border: none;
+				margin-bottom: 0;
+			}
+			.list ul li {
+				float: left;
+				color: #000;
+			}
+			.list ul:nth-child(odd){
+				background-color: #e1e1e1;
+			}
+			.list ul:nth-child(even){
+				background-color: #f1f1f1;
+			}
+			.list ul li:nth-child(1){
+				padding-left: 8px;
+				width: 346px;
+				text-align: right;
+			}
+			.list ul li:nth-child(2){
+				padding-left: 118px;
+    		width: 221px;
+				min-height: 30px;
+			}
+			.list ul li:nth-child(3){
+				padding-left: 63px;
+				width: 146px;
+			}
+			.mCSB_scrollTools .mCSB_draggerRail {
+					width: 15px;
+					height: 100%;
+					margin: 0 auto;
+					-webkit-border-radius: 0;
+					-moz-border-radius: 0;
+					border-radius: 0;
+				}
+				.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+					position: relative;
+					width: 15px;
+					height: 100%;
+					margin: 0 auto;
+					-webkit-border-radius: 0;
+					-moz-border-radius: 0;
+					border-radius: 0;
+					text-align: center;
+				}
+				.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+					background-color: #ababab !important;
+					filter: "alpha(opacity=75)";
+					-ms-filter: "alpha(opacity=75)";
+				}
+				.mCSB_scrollTools .mCSB_draggerRail {
+					background-color: #e1e1e1 !important;
+					filter: "alpha(opacity=40)";
+					-ms-filter: "alpha(opacity=40)";
+			}
+			.mCSB_inside > .mCSB_container {
+				margin-right: 9px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="banner">
+				<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/178/238/211/13781143.jpg" alt="">
+			</div>
+			<div class="cn cn2">
+				<div class="bmk">
+					<p class="name">
+						<input type="text" id="name">
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" maxlength="11">
+					</p>
+					<div class="line">
+						<p class="prov">
+							<select name="" id="prov">
+								<option value="0">请选择</option>
+							</select>
+						</p>
+						<p class="city">
+							<select name="" id="city">
+								<option value="0">请选择</option>
+							</select>
+						</p>
+					</div>
+					<p class="dealers">
+						<select name="" id="dealers">
+							<option value="0">请选择</option>
+						</select>
+					</p>
+					<p class="series">
+						<select name="" id="series">
+							<option value="0">请选择</option>
+						</select>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit">
+					</p>
+					<div class="privacyPolicy">
+						<input type="checkbox">
+						<span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+					</div>
+				</div>
+			</div>
+			<div class="cn cn3"></div>
+			<div class="cn cn4"></div>
+			<div class="cn cn5"></div>
+			<div class="cn cn6">
+				<div class="dorSelect">
+					<select name="" id="csProv">
+						<option value="0">省份</option>
+					</select>
+					<select name="" id="csCity">
+						<option value="0">城市</option>
+					</select>
+				</div>
+			</div>
+			<div class="cn cn7">
+				<div class="list">
+
+				</div>
+			</div>
+		</div>
+		<div class="base">
+			<div class="footernew" onClick="register0410('footer',1);">
+				<a href="http://www.tencent.com/" target="_blank">关于腾讯</a> | <a href="http://gd.qq.com/gydyym.htm" target="_blank">关于腾讯·大粤</a>
+				| <a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://open.qq.com/" target="_blank">开放平台</a>
+				<a href="http://gd.qq.com/gydyym.htm#ad" target="_blank">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml"
+				 target="_blank">商务洽谈</a> | <a href="http://gd.qq.com/gdzp.htm" target="_blank">腾讯·大粤网招聘</a> | <a href="http://hr.tencent.com/"
+				 target="_blank">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank">腾讯公益</a> | <a href="http://gd.qq.com/gdmap/index.htm"
+				 target="_blank">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">版权所有</a>
+				| <a href="http://gd.qq.com/a/20170228/026676.htm" target="_blank">转载须知</a><br />
+				<a href="http://www.szga.gov.cn" target="_blank">有害短信息举报</a> | <a href="http://www.gdis.cn/admin/newstext_netsun.asp"
+				 class="lchot" target="_blank">阳光·绿色网络工程</a> | <a href="http://www.qq.com/copyright.shtml" target="_blank">版权保护投诉指引</a>
+				| <a href="http://www.gdca.gov.cn/" target="_blank">广东省通管局</a> | <a href="http://www.qq.com/scio.htm" target="_blank">新闻信息服务许可证</a>
+				| <a href="http://www.qq.com/internet_licence.htm" target="_blank">互联网出版许可证</a><br />
+				<span style="line-height:30px;"><a href="http://www.qq.com/xwdz.shtml" target="_blank">粤府新函[2001]87号</a> <a href="http://www.qq.com/culture.shtml"
+					 target="_blank">文网文[2008]084号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank">网络视听许可证1904073号</a>
+					增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml"
+					 target="_blank">B2-20090028</a></span><br />
+				<span style="font-family:Arial;">Copyright &copy; 1998 -
+					<script language="javascript">
+						document.write(new Date().getFullYear());
+					</script> Tencent. All Rights Reserved</span>
+			</div>
+			<div class="footernew footheight">
+				<div style="width:678px;">
+					<p>
+						<span class="fl"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="http://img1.qq.com/www/pics/816/816587.gif"
+								 width="36" height="43" border="0"></a></span>
+						<span class="fr"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank">深圳网络警<br />
+								察报警平台</a></span>
+					</p>
+					<p>
+						<span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank"><img
+								 src="http://img1.qq.com/www/pics/6743/6743671.jpg" width="36" height="42" border="0"></a></span>
+						<span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank">公共信息安<br />
+								全网络监察</a></span>
+					</p>
+					<p>
+						<span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"><img
+								 src="//mat1.gtimg.com/www/images/ind36.gif" width="35" height="43" border="0"></a></span>
+						<span class="fr"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" class="lcblack" target="_blank">经营性网站<br />
+								备案信息</a></span>
+					</p>
+					<p>
+						<span class="fl" style="width:44px;"><a href="http://net.china.cn/chinese/index.htm" target="_blank"><img src="//mat1.gtimg.com/www/images/200709/home_b.gif"
+								 width="44" height="44" border="0"></a></span>
+						<span class="fr" style="width:64px;"><a href="http://net.china.cn/chinese/index.htm" class="lcblack" target="_blank">不良信息<br>
+								举报中心</a></span>
+					</p>
+					<p>
+						<span class="fl" style="width:44px;"><a href="http://www.wenming.cn" target="_blank"><img src="//mat1.gtimg.com/www/images/allskin/wmlogo.gif"
+								 width="44" height="42" border="0"></a></span>
+						<span class="fr" style="width:64px;"><a href="http://www.wenming.cn" class="lcblack" target="_blank">中国文明网<br>传播文明</a></span>
+					</p>
+				</div>
+			</div>
+			<!--底部 结束-->
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+	<script>
+			var des = [
+				{
+					"prov": "广东省",
+					"city": "广州市",
+					"name": "广东长安汽车销售有限公司",
+					"tel": "13883216038",
+					"address": "广东省广州市机场路888号广东汽车市场内"
+				},
+				{
+					"prov": "云南省",
+					"city": "昆明市",
+					"name": "云南万友汽车销售服务有限公司",
+					"tel": "13594399035",
+					"address": "昆明市高新开发区小屯立交桥旁长安汽车4S店"
+				},
+				{
+					"prov": "云南省",
+					"city": "昆明市",
+					"name": "云南万友汽车销售服务有限公司第五销售部",
+					"tel": "19987130616",
+					"address": ""
+				},
+				{
+					"prov": "云南省",
+					"city": "昆明市",
+					"name": "云南机电汽车联合销售有限公司",
+					"tel": "19987130616",
+					"address": ""
+				},
+				{
+					"prov": "云南省",
+					"city": "昆明市",
+					"name": "云南机电汽车联合销售有限公司经开区分公司",
+					"tel": "19987130616",
+					"address": ""
+				},
+				{
+					"prov": "云南省",
+					"city": "昆明市",
+					"name": "云南机电汽车联合销售有限公司高新分公司",
+					"tel": "19987130616",
+					"address": ""
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆金都汽车销售有限公司",
+					"tel": "18723042565",
+					"address": "重庆市渝北区红黄路238号"
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆骏德艾普汽车科技股份有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆万友经济发展有限责任公司江南分公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆星维汽车销售服务有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆都成万禾汽车服务有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆中卫医用汽车销售有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆中卫医用汽车销售有限公司沙坪坝区汽车维修分公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆金赐汽车销售有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "重庆市",
+					"city": "重庆市",
+					"name": "重庆虎王汽车销售有限公司",
+					"tel": "15825919349",
+					"address": " "
+				},
+				{
+					"prov": "河南省",
+					"city": "郑州市",
+					"name": "郑州新纪元",
+					"tel": "13617688290",
+					"address": "郑州市金水路花园南路"
+				},
+				{
+					"prov": "河南省",
+					"city": "开封市",
+					"name": "开封新纪元",
+					"tel": "13393711198",
+					"address": ""
+				},
+				{
+					"prov": "河南省",
+					"city": "平顶山市",
+					"name": "平顶山长源",
+					"tel": "13393711198",
+					"address": ""
+				},
+				{
+					"prov": "安徽省",
+					"city": "合肥市",
+					"name": "安徽华通汽车服务有限公司",
+					"tel": "18055135566",
+					"address": "安徽省合肥市蜀山区产业园名车广场"
+				},
+				{
+					"prov": "安徽省",
+					"city": "合肥市",
+					"name": "肥西岩通汽车销售服务有限公司",
+					"tel": "19965043951",
+					"address": " "
+				},
+				{
+					"prov": "安徽省",
+					"city": "合肥市",
+					"name": "合肥金田汽车销售有限公司",
+					"tel": "19965043951",
+					"address": " "
+				},
+				{
+					"prov": "安徽省",
+					"city": "合肥市",
+					"name": "安徽星宇汽车销售有限公司",
+					"tel": "19965043951",
+					"address": " "
+				},
+				{
+					"prov": "陕西省",
+					"city": "西安市",
+					"name": "陕西瑞安汽车销售有限公司",
+					"tel": "18723041239",
+					"address": "陕西省西安经济技术开发区凤城四路90号蒙清园酒店一层"
+				},
+				{
+					"prov": "陕西省",
+					"city": "西安市",
+					"name": "陕西省汽车贸易公司长安汽车4S店",
+					"tel": "13259935392",
+					"address": ""
+				},
+				{
+					"prov": "陕西省",
+					"city": "西安市",
+					"name": "陕西渝长贸易有限公司",
+					"tel": "13259935392",
+					"address": ""
+				},
+				{
+					"prov": "辽宁省",
+					"city": "沈阳市",
+					"name": "沈阳东灏",
+					"tel": "15923974769",
+					"address": "沈阳市北二中路39号四维体育馆"
+				},
+				{
+					"prov": "辽宁省",
+					"city": "沈阳市",
+					"name": "辽阳诚信",
+					"tel": "17640135511",
+					"address": ""
+				},
+				{
+					"prov": "辽宁省",
+					"city": "沈阳市",
+					"name": "本溪东腾",
+					"tel": "17640135511",
+					"address": ""
+				},
+				{
+					"prov": "辽宁省",
+					"city": "沈阳市",
+					"name": "抚顺东驰",
+					"tel": "17640135511",
+					"address": ""
+				},
+				{
+					"prov": "辽宁省",
+					"city": "沈阳市",
+					"name": "铁岭、新民、辽中（连锁店）",
+					"tel": "17640135511",
+					"address": ""
+				},
+				{
+					"prov": "浙江省",
+					"city": "瑞安市",
+					"name": "五洲汽车商贸集团有限公司",
+					"tel": "18645738366",
+					"address": "浙江省瑞安市塘下镇瑞凤南路61号"
+				},
+				{
+					"prov": "山东省",
+					"city": "青岛市",
+					"name": "青岛北方建达集团有限公司",
+					"tel": "13594318483",
+					"address": "青岛市"
+				},
+				{
+					"prov": "北京市",
+					"city": "北京市",
+					"name": "北京燕兴宏达汽车服务有限公司",
+					"tel": "18723041260",
+					"address": "北京北京市顺义区顺西路30号"
+				},
+				{
+					"prov": "北京市",
+					"city": "北京市",
+					"name": "北京燕兴宏达汽车服务有限公司密云分公司",
+					"tel": "18001323905",
+					"address": ""
+				},
+				{
+					"prov": "北京市",
+					"city": "北京市",
+					"name": "北京燕宏智翔汽车科技有限公司",
+					"tel": "18001323905",
+					"address": ""
+				},
+				{
+					"prov": "北京市",
+					"city": "北京市",
+					"name": "北京宿兴创业汽车有限公司",
+					"tel": "18001323905",
+					"address": ""
+				},
+				{
+					"prov": "北京市",
+					"city": "北京市",
+					"name": "北京燕兴腾达汽车有限公司",
+					"tel": "18001323905",
+					"address": ""
+				},
+				{
+					"prov": "湖南省",
+					"city": "长沙市",
+					"name": "长沙天潮汽车股份有限公司",
+					"tel": "18672777800",
+					"address": "湖南省长沙市长沙县中南汽车世界J07区"
+				},
+				{
+					"prov": "湖南省",
+					"city": "长沙市",
+					"name": "长沙天潮汽车股份有限公司暮云分公司",
+					"tel": "18684657608",
+					"address": ""
+				},
+				{
+					"prov": "湖南省",
+					"city": "长沙市",
+					"name": "长沙捷坤汽车贸易有限公司 ",
+					"tel": "18684657608",
+					"address": ""
+				},
+			]
+		</script>
+	<script>
+		// 获取车型数据
+		$.ajax({
+			type: "get",
+			url: 'https://auto.gdtengnan.com/yetcar/getModelsTrans.php',
+			data: {
+				series_id: 113
+			},
+			async: true,
+			dataType: "jsonp",
+			jsonpCallback: "jsonpReturn",
+			success: function (data) {
+				for (var i = 0; i < data.data.length; i++) {
+					var series = $('<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>');
+					$('#series').append(series)
+				}
+			}
+		});
+			//城市 经销商 数据
+			for (var i = 0; i < des.length; i++) {
+				if ($('#prov').html().indexOf(des[i].prov) < 0) {
+					$('#prov').append('<option value="' + des[i].prov + '">' + des[i].prov + '</option>')
+					$('#csProv').append('<option value="' + des[i].prov + '">' + des[i].prov + '</option>')
+				}
+				var $ul = '<ul>' +
+					'<li>' + des[i].name + '</li>' +
+					'<li>' + des[i].address + '</li>' +
+					'<li>' + des[i].tel + '</li>' +
+					'</ul>'
+				$('.list').append($ul)
+			}
+			$('#prov').change(function () {
+				$("#city").find("option:not(:first)").remove();
+				$("#dealers").find("option:not(:first)").remove();
+				for (var i = 0; i < des.length; i++) {
+					if ($('#prov option:checked').text() == des[i].prov && $('#city').html().indexOf(des[i].city) < 0) {
+						$('#city').append('<option value="' + des[i].city + '">' + des[i].city + '</option>')
+					}
+				}
+			});
+			$('#csProv').change(function () {
+				$("#csCity").find("option:not(:first)").remove();
+				for (var i = 0; i < des.length; i++) {
+					if ($('#csProv option:checked').text() == des[i].prov && $('#csCity').html().indexOf(des[i].city) < 0) {
+						$('#csCity').append('<option value="' + des[i].city + '">' + des[i].city + '</option>')
+					}
+				}
+			});
+			$('#city').change(function () {
+				$("#dealers").find("option:not(:first)").remove();
+				for (var i = 0; i < des.length; i++) {
+					if ($('#city option:checked').text() == des[i].city) {
+						$('#dealers').append('<option value="' + des[i].name + '">' + des[i].name + '</option>')
+					}
+				}
+			});
+			$('#csCity').change(function () {
+				$('.list .mCSB_container').html('');
+				$(".list").mCustomScrollbar("destroy");
+				for (var i = 0; i < des.length; i++) {
+				if ($('#csCity option:checked').text() == des[i].city) {
+					var $ul = '<ul>' +
+						'<li>' + des[i].name + '</li>' +
+						'<li>' + des[i].address + '</li>' +
+						'<li>' + des[i].tel + '</li>' +
+						'</ul>'
+					$('.list').append($ul)
+					} else if ($('#csCity option:checked').val() == '0') {
+						var $ul = '<ul>' +
+							'<li>' + des[i].name + '</li>' +
+							'<li>' + des[i].address + '</li>' +
+							'<li>' + des[i].tel + '</li>' +
+							'</ul>'
+						$('.list').append($ul)
+					}
+				}
+				$(".list").mCustomScrollbar({
+					scrollInertia: 550,
+					autoHideScrollbar: false
+				});
+			});
+			//报名
+			var flag = true;
+			$("#submit").click(function () {
+				if (flag) {
+					var name = $("#name").val(), //姓名
+						tel = $("#tel").val(), //电话
+						series_id = $('#series').val(), //车型id
+						brand_id = 113, //品牌
+						dealers = $("#dealers").val(), //经销商
+						act_id = 3467, //活动id
+						prov = $('#prov').val(),
+						city = $('#city').val(),
+						Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+						Data = {
+							name: name,
+							phone: tel,
+							brand_id: brand_id,
+							series_id: series_id,
+							act_id: act_id,
+							dealers: dealers,
+							chexing: ""
+						};
+					//判断填写是否正确
+					if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+						alert('请输入正确的中文名');
+						return false;
+					}
+					if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+						alert('手机格式不正确');
+						return false;
+					}
+					if (prov == '0') {
+						alert('请选择省份');
+						return false;
+					}
+					if (city == '0') {
+						alert('请选择城市');
+						return false;
+					}
+					if (dealers == '0') {
+						alert('请选择经销商');
+						return false;
+					}
+					if (series_id == '0') {
+						alert('请选择车型');
+						return false;
+					}
+					if (!($("input[type='checkbox']").prop('checked'))) {
+						alert('请同意《隐私政策》');
+						return false;
+					}
+					//发送请求
+					flag = false;
+					$.ajax({
+						type: "post",
+						url: Url,
+						data: Data,
+						async: true,
+						dataType: "jsonp",
+						jsonpCallback: "jsonpReturn",
+						success: function (data) {
+							if (data.status == 1) {
+								alert('恭喜你，报名成功！');
+								window.location.href = location.href;
+							} else {
+								flag = true;
+								alert("很抱歉，你报名失败。");
+							}
+						}
+					});
+				} else {
+					alert("请勿重复提交！")
+				}
+			});
+			$(window).load(function () {
+				$(".list").mCustomScrollbar({
+					scrollInertia: 550,
+					autoHideScrollbar: false
+				});
+			})
+	</script>
+</html>

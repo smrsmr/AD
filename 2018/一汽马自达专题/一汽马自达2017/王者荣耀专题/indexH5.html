@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="gb2312">
+    <title>王者归来 荣耀全城 </title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+
+    <link href="http://dongguan.auto.qq.com/zhuanti/mobile/1607car/index.css" rel="stylesheet">
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+
+        .M_section1 .disable {
+            background: #8C6D6D;
+        }
+
+        .M_section ul {
+            width: 100%;
+        }
+
+        .M_section ul li {
+            padding: 3px 10px;
+        }
+
+        .M_section ul li span {
+            margin-right: 10px;
+        }
+
+        th:first-child {
+            width: 56px;
+        }
+
+        /*.jxs_text{
+            font-size: 14px;
+        }*/
+        .table .jxs_text th {
+            background: #F7F7F7;
+            height: 50px;
+            font: normal 13px/22px "\5B8B\4F53";
+        }
+    </style>
+    <style type="text/css" abt="234"></style>
+    <script>//console.log('a')
+    </script>
+    <script>doAdblock();
+    function doAdblock() {
+        (function () {
+            function A() {
+            }
+
+            A.prototype = {
+                rules: {
+                    'pps_pps': {
+                        'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                        'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                    },
+                    '17173_in': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_in_20150522.swf"
+                    },
+                    '17173_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_out_20150522.swf"
+                    },
+                    '17173_live': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_stream_20150522.swf"
+                    },
+                    '17173_live_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173.out.Live.swf"
+                    }
+                },
+                _done: null,
+                get done() {
+                    if (!this._done) {
+                        this._done = new Array();
+                    }
+                    return this._done;
+                },
+                addAnimations: function () {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                },
+                animationsHandler: function (e) {
+                    if (e.animationName === 'playerInserted') {
+                        this.replace(e.target);
+                    }
+                },
+                replace: function (elem) {
+                    if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)) {
+                        var tag = document.getElementById("playerBox").getAttribute("player")
+                        if (tag == "adt") {
+                            console.log("adt adv")
+                            return;
+                        }
+                    }
+                    if (this.done.indexOf(elem) != -1) return;
+                    this.done.push(elem);
+                    var player = elem.data || elem.src;
+                    if (!player) return;
+                    var i, find, replace = false;
+                    for (i in this.rules) {
+                        find = this.rules[i]['find'];
+                        if (find.test(player)) {
+                            replace = this.rules[i]['replace'];
+                            if ('function' === typeof this.rules[i]['preHandle']) {
+                                this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                            } else {
+                                this.reallyReplace.bind(this, elem, find, replace)();
+                            }
+                            break;
+                        }
+                    }
+                },
+                reallyReplace: function (elem, find, replace) {
+                    elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                    var b = elem.querySelector("param[name='movie']");
+                    this.reloadPlugin(elem);
+                },
+                reloadPlugin: function (elem) {
+                    var nextSibling = elem.nextSibling;
+                    var parentNode = elem.parentNode;
+                    parentNode.removeChild(elem);
+                    var newElem = elem.cloneNode(true);
+                    this.done.push(newElem);
+                    if (nextSibling) {
+                        parentNode.insertBefore(newElem, nextSibling);
+                    } else {
+                        parentNode.appendChild(newElem);
+                    }
+                },
+                init: function () {
+                    var handler = this.animationsHandler.bind(this);
+                    document.body.addEventListener('webkitAnimationStart', handler, false);
+                    document.body.addEventListener('msAnimationStart', handler, false);
+                    document.body.addEventListener('oAnimationStart', handler, false);
+                    document.body.addEventListener('animationstart', handler, false);
+                    this.addAnimations();
+                }
+            };
+            new A().init();
+        })();
+    }
+    // 20140730
+    (function cnbeta() {
+        if (document.URL.indexOf('cnbeta.com') >= 0) {
+            var elms = document.body.querySelectorAll("p>embed");
+            Array.prototype.forEach.call(elms, function (elm) {
+                elm.style.marginLeft = "0px";
+            });
+        }
+    })();
+    //baidu
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        if (document && document.getElementsByTagName && document.getElementById && document.body) {
+            var aa = function () {
+                var all = document.body.querySelectorAll("#content_left div,#content_left table");
+                for (var i = 0; i < all.length; i++) {
+                    if (/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+                all = document.body.querySelectorAll('.result.c-container[id="1"]');
+                for (var i = 0; i < all.length; i++) {
+                    var dataClick = all[i].getAttribute('data-click');
+                    if (dataClick.indexOf('rsv_cd') > -1) continue;
+                    all[i].style.display = "none";
+                    all[i].style.visibility = 'hidden';
+                }
+            }
+            aa();
+            document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified', function () {
+                aa();
+            })
+        }
+        ;
+    }
+    // 20140922
+    (function kill_360() {
+        if (document.URL.indexOf('so.com') >= 0) {
+            document.getElementById("e_idea_pp").style.display = none;
+        }
+    })();
+    //解决腾讯视频列表点击无效
+    if (document.URL.indexOf("v.qq.com") >= 0) {
+        if (document.getElementById("mod_videolist")) {
+            var listBox = document.getElementById("mod_videolist")
+            var list = listBox.getElementsByClassName("list_item")
+            for (i = 0; i < list.length; i++) {
+                list[i].addEventListener("click", function () {
+                    var url = this.getElementsByTagName("a")[0]
+                    url = url.getAttribute("href")
+                    var host = window.location.href
+                    url = host.replace(/cover\/.*/, url)
+                    window.location.href = url
+                })
+            }
+        }
+    }
+    if (document.URL.indexOf("tv.sohu.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    if (document.URL.indexOf("56.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    </script>
+    <style type="text/css">object, embed {
+        -webkit-animation-duration: .001s;
+        -webkit-animation-name: playerInserted;
+        -ms-animation-duration: .001s;
+        -ms-animation-name: playerInserted;
+        -o-animation-duration: .001s;
+        -o-animation-name: playerInserted;
+        animation-duration: .001s;
+        animation-name: playerInserted;
+    }
+
+    @-webkit-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="activity_info_z activity_info_z1">
+    <div id="activityLoad" class="">
+        <div class="activity_intro">
+            <!-- 定义头图 -->
+            <!--<PC class="header_pic" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/56/229/196/12803351.jpg" alt="">-->
+            <img class="header_pic" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/213/166/200/13047543.png" alt="">
+
+            <h3 class="h3_title">王者归来 荣耀全城 </h3>
+            <!-- 					<p style="color: red;font-weight: bold;">限量15台</p> -->
+            <p>寻找最强王者，一汽马自达王者荣耀争霸赛等你来战</p>
+            <p>本活动截至到10月30日</p>
+        </div>
+        <div class="activity_status" id="activityStatus">
+
+            <div class="time">
+                <span id="ttitle">报名倒计时：</span>
+                <span id="t_d">00</span><span>天</span>
+                <span id="t_h">00</span><span>时</span>
+                <span id="t_m">00</span><span>分</span>
+                <span id="t_s">00</span><span>秒</span>
+            </div>
+        </div>
+
+        <div class="skirt_foot"></div>
+        <iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
+        <div class="M_section M_section1 activity_join" id="sign_div">
+            <h1><span>我要报名</span></h1>
+            <form id="form_regist" accept-charset="utf-8" method="post"
+                  action="/index.php?s=/Home/Activity/baoming.html" target="id_iframe">
+                <input type="hidden" name="series_id" value="100">
+                <!--<input type="hidden" name="car_name" value="马自达CX-4">-->
+                <ul class="M_listview " id="joinInActivity">
+                    <li class="required join_name"><input type="text" name="form_70_1" id="ename" placeholder="您的姓名"><span
+                            class="icon_2x icon_warning_2x"></span></li>
+                    <li class="required join_phone join_m"><input type="tel" name="form_1103_1" id="etel" placeholder="您的电话"><span
+                            class="icon_2x icon_warning_2x"></span></li>
+                </ul>
+
+                <input class="btn_red" id="joinInActivitiesBtn" value="立即报名" type="button">
+
+            </form>
+        </div>
+        <div class="M_section M_section1">
+            <h1><span>经销商信息</span></h1>
+            <!-- <ul>
+                <li>
+                    <span style="width: 10%;">城市</span>
+                    <span style="width: 60%;">经销商</span>
+                    <span style="width: 30%;">销售热线</span>
+                </li>
+            </ul> -->
+            <table class="table">
+                <tbody id="yhform">
+                <tr>
+                    <th scope="col">城市</th>
+                    <th scope="col">经销商</th>
+                    <th scope="col">销售热线</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京东仁隆达汽车销售服务有限公司</th>
+                    <th scope="col">010-51193331</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京博瑞翔达汽车销售服务有限公司</th>
+                    <th scope="col">010-62387998</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京首汽腾达汽车销售服务有限公司</th>
+                    <th scope="col">010-63939986</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京车豪汽车有限公司</th>
+                    <th scope="col">010-65759828</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京宏源亚兴汽车贸易有限公司</th>
+                    <th scope="col">010-80497332</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京华日通汽车销售服务有限公司</th>
+                    <th scope="col">010-88438055</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京一汽轿车销售服务有限公司</th>
+                    <th scope="col">010-87813330</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京天一恒远汽车销售服务有限责任公司</th>
+                    <th scope="col">010-68848886</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京东仁隆达北苑分店</th>
+                    <th scope="col">010-52427707</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京首汽腾达密云直营</th>
+                    <th scope="col">010-89098818</th>
+                </tr>
+                <tr class="jxs_text">
+                    <th scope="col">北京</th>
+                    <th scope="col">北京一汽轿车销售服务有限公司榴乡桥分店</th>
+                    <th scope="col">010-87883996</th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="fixed_bottom" id="fixedBottom" style="display: none;">
+    <a href="#" class="btn_red bottom_red" id="goToJoin">我要报名</a>
+</div>
+
+<!-- 倒计时结束时间 -->
+<script>
+    var time = "2017/10/30 23:59:59"
+    //var EndTime= new Date('2016/08/12 23:59:59');
+    var EndTime = new Date(time);
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1260102516"><a href="http://www.cnzz.com/stat/website.php?web_id=1260102516" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260102516&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260102516&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+<script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+<script src="http://dongguan.auto.qq.com/zhuanti/app/index.js" type="text/javascript"></script>
+<span id="cnzz_stat_icon_1260055531"><a href="http://www.cnzz.com/stat/website.php?web_id=1260055531" target="_blank"
+                                        title="站长统计">站长统计</a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260055531" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260055531&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function () {
+        // 验证
+        var flag = true;
+
+
+        $("#form_regist").find('input[type="button"]').click(function () {
+            if (flag) {
+                var name = $('input[name="form_70_1"]').val();
+                var phone = $('input[name="form_1103_1"]').val();
+                var series_id = $('input[name="series_id"]').val();
+                var Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming";
+                var act_id = "528";
+
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确中文姓名');
+                    return false
+                }
+                ;
+                if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(phone))) {
+                    alert('手机格式不对');
+                    return false
+                }
+                ;
+                $("#joinInActivitiesBtn").addClass("disable");
+
+
+                flag = false;
+
+                $.post(Url, {
+                        name: name,
+                        phone: phone,
+                        series_id: series_id,
+                        act_id: act_id,
+                        brand_id: 14, //品牌
+                    },
+                    function (data) {
+                        if (data.status == 1) {
+                            alert('报名成功');
+                        } else {
+                            alert(data.msg);
+                            $("#joinInActivitiesBtn").removeClass("disable");
+                            flag = true;
+                        }
+
+                    }, "jsonp");
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+
+    })
+</script>
+<style>
+    #cnzz_stat_icon_1260055531 a, #cnzz_stat_icon_1260102516 {
+        color: #ffffff;
+        height: 50px;
+        display: none;
+    }
+</style>
+<!--
+		<div class="footer">
+			<div class="footer">
+				<PC src="http://mat1.gtimg.com/autodongguan/zhuanti/mobile/auto_logo.png" />
+			</div>
+		</div>-->
+
+<style>
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {
+        display: none;
+    }
+
+    .footer {
+        background: #fff;
+        height: 50px;
+        vertical-align: middle;
+    }
+
+    .footer img {
+        display: block;
+        width: 158px;
+        height: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 15px;
+        max-width: 100%;
+    }
+</style>
+
+<div class="footer">
+    <div class="footer">
+        <img src="http://img1.gtimg.com/autodongguan/pics/hv1/59/139/184/12000104.png">
+    </div>
+</div>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260102516"></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260102516&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260102516&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260842227"><a href="http://www.cnzz.com/stat/website.php?web_id=1260842227" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s4.cnzz.com/z_stat.php?id=1260842227&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260842227&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260919928"><a href="http://www.cnzz.com/stat/website.php?web_id=1260919928" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260919928&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260919928&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1255711023"><a href="http://www.cnzz.com/stat/website.php?web_id=1255711023" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s11.cnzz.com/z_stat.php?id=1255711023&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1255711023&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260771396"><a href="http://www.cnzz.com/stat/website.php?web_id=1260771396" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260771396&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1260771396&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1261301380"><a href="http://www.cnzz.com/stat/website.php?web_id=1261301380" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s11.cnzz.com/z_stat.php?id=1261301380&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1261301380&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1261327484"><a href="http://www.cnzz.com/stat/website.php?web_id=1261327484" target="_blank"
+                                        title="站长统计"><img border="0" hspace="0" vspace="0"
+                                                          src="https://icon.cnzz.com/img/pic.gif"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1261327484&amp;show=pic" type="text/javascript"></script>
+<script src="https://c.cnzz.com/core.php?web_id=1261327484&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>仔细比一比 这里买车更划算</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <style>
+        .main {max-width: 750px;margin: 0 auto;background-color: #108FF8;position: relative;}
+        .pr{position: relative;}
+        .pa{position: absolute;left: 50%;}
+        .kv .kvImg {top: 0.7rem;width: 25.6rem;height: 6rem;margin-left: -12.8rem;}
+        .kv .kvImg .swiper-slide {position: relative;}
+        .kv .kvImg .swiper-slide p {position: absolute;left: 0;bottom: 0;width: 96%;height: 2.5rem;background: rgba(0,0,0,.4);padding-left: 1rem;line-height: 2.5rem;color: white;font-weight: 600;font-size: 1.2rem;}
+        .kvImg .swiper-container {width: 100%;}
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/61/58/209/13605076.png');right: 10px;left: auto;}
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/60/58/209/13605075.png');left: 10px;right: auto;}
+        .swiper-button-next, .swiper-button-prev {width: 3rem;height: 3rem;-webkit-background-size: 100% 100%;background-size: 100% 100%;margin-top: -1.5rem;}
+        .cn4 .xzSeries {top: 1rem;width: 25.6rem;height: 4.2rem;margin-left: -12.8rem;}
+        .cn4 .xzSeries i {position: absolute;left: 1rem;top: 0;width: 4.1rem;}
+        #wrapper {position: absolute;z-index: 1;height: 4.2rem;top: 0.05rem;left: 5.55rem;width: 20rem;overflow: hidden;-ms-touch-action: none;-webkit-overflow-scrolling: touch;/*这个属性可以使滚动更流畅有左右弹动*/}
+        #scroller {position: absolute;z-index: 1;-webkit-tap-highlight-color: rgba(0,0,0,0);width: auto;height: 4rem;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;}
+        #scroller ul {width: 100%;}
+        #scroller li {padding: 0 0.8rem;height:3.8rem;float: left;line-height: 4rem;border: 1px solid #ccc;font-size: 1.3rem;overflow: hidden;text-align: center;color: black;margin-right: 0.43rem;}
+        #scroller li.active {color: #ff3f3f;border: 1px solid #ff3f3f;}
+        .cn4 h1 {top: 6rem;width: 26rem;margin-left: -13rem;font-size: 1.4rem;text-align: center;}
+        .cn4 .timer {top: 10.8rem;width: 24rem;height: 3rem;margin-left: -12rem;}
+        .cn4 .timer li {float: left;width: 4rem;height: 3rem;margin-right: 2.9rem;font-weight: bold;font-size: 2.4rem;text-align: center;line-height: 2.9rem;letter-spacing: 0.89rem;}
+        .cn4 .timer li:first-child{margin-left: 0.4rem;}
+        .cn4 .timer li:nth-child(2){margin-right: 2.16rem;}
+        .cn4 .timer li:nth-child(3){margin-right: 2.1rem;}
+        .cn4 .timer li:last-child {margin-right: 0;}
+        .cn4 .bmk {top: 15rem;width: 24rem;height: 12rem;margin-left: -12rem;}
+        .cn4 .bmk #name,.cn4 .bmk #tel {width: 23rem;height: 3rem;background: white;font-size: 1.3rem;border: 1px solid #ddd;border-radius: 4px;padding-left: 1rem;}
+        .cn4 .bmk #tel {margin-top: 0.5rem;}
+        .cn4 .bmk #submit {background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/247/68/209/13607812.png") center no-repeat;width: 24rem;height: 3rem;background-size: 100% 100%;margin-top: 2rem;}
+        .cn4 .bmk .privacyPolicy input {position: absolute;left: 0rem;top:7.2rem;width: 18px !important;height: 18px !important;}
+        .cn4 .bmk .privacyPolicy span {display: inline-block;position: absolute;left: 1.8rem;top: 7rem;font-size: 16px;color: black;}
+        .cn4 .bmk .privacyPolicy a {color: black;}
+        .cn4 .hdTime {top: 28rem;width: 24rem;height: 3rem;margin-left: -12rem;}
+        .cn4 .hdTime span {border: 1px solid #000;display: inline-block;text-align: center;height: 1.8rem;line-height: 1.8rem;width: 5rem;border-radius: 6px;margin-right: 0.7rem;}
+        .cn5 h1 {top: 6.5rem;width: 26rem;margin-left: -13rem;color: #ff3f3f;text-align: center;font-weight: bold;}
+        .cn5 .hyJ {top: 8.5rem;width: 24.9rem;height: 11rem;margin-left: -12.25rem;overflow: hidden;}
+        .cn5 .hyJ li {float: left;width: 8.3rem;}
+        .cn6 h1,.cn7 h1 {top: 3.5rem;width: 26rem;margin-left: -13rem;color: #ff3f3f;text-align: center;font-weight: bold;}
+        .cn6 .img6,.cn7 .img7 {top: 5.8rem;width: 24rem;margin-left: -12rem;}
+        .cn8 #wrapper1 {top: 5rem;width: 24rem;height: 12rem;margin-left: -11.7rem;overflow: hidden;}
+        .cn8 #wrapper1 li {float: left;width: 5.5rem;height: 5.5rem;margin-right: 0.5rem;margin-bottom: 0.6rem;}
+        .cn8 #wrapper1 li:last-child {margin-right: 0;}
+        .clibk_btn{bottom: 0rem;height: 4.5rem;cursor: pointer;position: fixed;z-index: 10;}
+        #mb_con{width: 20rem!important;}
+        #mb_ico{display: none!important;}
+        #mb_btn_ok{background-color: #108FF8!important;}
+        .goHome {position: fixed;right: 1rem;bottom: 7rem;width: 5.5rem;height: 5.5rem;z-index: 999999;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="kv pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/224/68/209/13607789.jpg" alt="">
+        <div class="kvImg pa">
+            <div class="swiper-container">
+                <div class="swiper-wrapper"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn4 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/68/209/13607734.jpg" alt="">
+        <div class="xzSeries pa">
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/251/47/209/13602461.png" alt=""></i>
+            <div id="wrapper">
+                <div id="scroller">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h1 class="pa">已有<span style="color:#ff3143" class="actNum">00</span>人报名 报名参加活动</h1>
+        <div class="timer pa">
+            <ul>
+                <li class="t_d">00</li>
+                <li class="t_h">00</li>
+                <li class="t_m">00</li>
+                <li class="t_s">00</li>
+            </ul>
+        </div>
+        <div class="bmk pa">
+            <input type="text" id="name" placeholder="姓名">
+            <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            <p class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </p>
+            <button id="submit"></button>
+        </div>
+        <p class="hdTime pa"><span>活动时间</span><i>2018年7月01日 09:00-18:00</i></p>
+    </div>
+    <div class="cn5 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/170/68/209/13607735.jpg" alt="">
+        <h1 class="pa">活动期间，单品牌购物满额即可再享100-300元不等返现</h1>
+        <ul class="hyJ pa">
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/214/68/209/13607779.png" alt=""></li>
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/215/68/209/13607780.png" alt=""></li>
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/216/68/209/13607781.png" alt=""></li>
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/217/68/209/13607782.png" alt=""></li>
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/218/68/209/13607783.png" alt=""></li>
+            <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/219/68/209/13607784.png" alt=""></li>
+        </ul>
+    </div>
+    <div class="cn6 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/68/209/13607736.jpg" alt="">
+        <h1 class="pa">20多个品牌联合大让利，200种车系爆款年中大放价</h1>
+        <div class="img6 pa">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="cn7 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/172/68/209/13607737.jpg" alt="">
+        <h1 class="pa">20多个品牌联合大让利，200种车系爆款年中大放价</h1>
+        <div class="img7 pa">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="cn8 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/173/68/209/13607738.jpg" alt="">
+        <div id="wrapper1" class="pa">
+            <ul class="logo"></ul>
+        </div>
+    </div>
+    <div class="cn9"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/174/68/209/13607739.jpg" alt=""></div>
+    <div class="cn10"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/166/68/209/13607731.jpg" alt=""></div>
+    <div class="cn11"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/68/209/13607732.jpg" alt=""></div>
+    <a href="javascript:history.back()" class="goHome"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/198/69/209/13608018.png" alt=""></a>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/2018web/iscroll.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://123.207.87.32/act/zxq_commonCode/js/mnAlert.js" charset="utf-8"></script>
+<script>
+    //车型填充数据
+    var cheData=[
+        //品牌id 车型数组【车型kv 车型描述文本 车型名称  车型id 低价狂销图片 分享狂送图片】 活动结束时间 活动日期
+        {
+            'brand':'8',
+            'cheArr':[
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家1','name':'奥迪','serId':'51','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家2','name':'奥迪','serId':'52','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家3','name':'奥迪','serId':'53','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家4','name':'奥迪','serId':'54','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家5','name':'奥迪','serId':'55','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家6','name':'奥迪','serId':'56','img1':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png','img2':'http://img1.gtimg.com/autoguangzhou/pics/hv1/220/68/209/13607785.png'},
+            ],
+            'times':'2018/7/30 16:41:59',
+            'day': '2018年7月01日 09:00-18:00'
+        },
+        {
+            'brand':'11',
+            'cheArr':[
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家7','name':'日产','serId':'51'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家8','name':'日产','serId':'52'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家9','name':'日产','serId':'53'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家10','name':'日产','serId':'54'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家11','name':'日产','serId':'55'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'东风日产：日供77元，轩逸0首付贷回家12','name':'日产','serId':'56'},
+            ],
+            'times':'2018/8/30 16:41:59',
+            'day': '2018年8月01日 09:00-18:00'
+        },
+        {
+            'brand':'5',
+            'cheArr':[
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家13','name':'奥迪','serId':'51'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家14','name':'奥迪','serId':'52'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家15','name':'奥迪','serId':'53'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家16','name':'奥迪','serId':'54'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家17','name':'奥迪','serId':'55'},
+                {'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg','p':'奥迪：日供77元，轩逸0首付贷回家18','name':'奥迪','serId':'56'},
+            ],
+            'times':'2018/8/2 16:25:59',
+            'day': '2018年8月02日 09:00-18:00'
+        },
+    ];
+    //品牌logo数据
+    var logoData=[
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/10/44/209/13601455.png','brand':'8'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/11/44/209/13601456.png','brand':'5'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/14/44/209/13601459.png','brand':'11'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/10/44/209/13601455.png','brand':'8'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/11/44/209/13601456.png','brand':'5'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/14/44/209/13601459.png','brand':'11'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/10/44/209/13601455.png','brand':'8'},
+        {'img':'http://img1.gtimg.com/autoguangzhou/pics/hv1/11/44/209/13601456.png','brand':'5'},
+    ];
+</script>
+<script>
+    //获取url值的方法
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var Request = new Object();
+    Request = GetRequest();
+    var bid = Request['brand'];
+    var aid = Request['actid'];
+    //渲染车型数据
+    var times=[],imglinks=[],objArr=[];
+    function getBrandData(bid) {
+        times.length=0;
+        imglinks.length=0;
+        objArr.length=0;
+        for (var i=0;i<cheData.length;i++){
+            if(bid == cheData[i].brand){
+                for (var j=0;j<cheData[i].cheArr.length;j++){
+                    imglinks.push(cheData[i].cheArr[j].kv);
+                    objArr.push(cheData[i].cheArr[j]);
+                    var li='<li data-brand="'+cheData[i].brand+'" data-series="'+cheData[i].cheArr[j].serId+'">'+cheData[i].cheArr[j].name+'</li>';
+                    $('#scroller ul').append(li);
+                }
+                times.push(cheData[i].times);
+                $('.cn4 .hdTime i').text(cheData[i].day);
+                $('.cn6 .img6 img').attr('src',cheData[i].cheArr[0].img1);
+                $('.cn7 .img7 img').attr('src',cheData[i].cheArr[0].img2);
+            }
+        }
+        $('#scroller ul').find('li:first').addClass('active');
+    }
+    //渲染logo列表
+    for(var i=0;i<logoData.length;i++){
+        var li='<li><img src="'+logoData[i].img+'" alt=""></li>';
+        $('.cn8 .logo').append(li);
+    }
+    getBrandData(8);
+    //预加载
+    var loading = function(){
+        function preloadimages(imgarr){
+            var newimages=[];
+            for (var i=0; i<imgarr.length; i++){
+                newimages[i]=new Image();
+                newimages[i].src=imgarr[i];
+                newimages[i].onload=function(){
+                    console.log('全部加载完成')
+                };
+                newimages[i].onerror=function(){
+                    console.log('加载出错')
+                }
+            }
+        }
+        preloadimages(imglinks);
+    };
+    loading();
+    for (var k=0;k<imglinks.length;k++){
+        var swi='<div class="swiper-slide"><img src="'+imglinks[k]+'" alt=""><p>'+objArr[k].p+'</p></div>'
+        $('.swiper-wrapper').append(swi);
+    }
+    //切换优惠图片
+    function qh(i) {
+        $('.cn6 .img6 img').attr('src',objArr[i].img1);
+        $('.cn7 .img7 img').attr('src',objArr[i].img2);
+    }
+    //获取报名人数方法
+    function getSignNum(aid){
+        $.ajax({
+            type:"post",
+            url:'http://www.yetcar.com/index.php?s=/Home/GeneralActivity/get_baoming',
+            async:true,
+            data:{
+                detail_id: aid,
+                //type:1		//加这个是获取每天的报名人数，如果获取总人数就去掉这个参数
+            },
+            dataType:"jsonp",
+            success:function(data){
+                if(data.status==1){
+                    $('.cn4 .actNum').text(data.data);
+                }
+            }
+        })
+    }
+    getSignNum(2816);
+    $('#scroller li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        var i=$(this).index();
+        mySwiper.slideTo(i, 1000, false);//切换到第一个slide，速度为1秒
+        myScroll.scrollTo(-40*i,0,1000);
+        qh(i)
+    });
+    /*--倒计时--*/
+    var EndTime = new Date(times[0]),tt;
+    function toTens(i){if (i < 10) {i = "0" + i;} return i;}
+    function GetRTime(){
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        $('.t_d').text(toTens(d));
+        $('.t_h').text(toTens(h));
+        $('.t_m').text(toTens(m));
+        $('.t_s').text(toTens(s));
+        if (t < 0) {
+            clearInterval(tt);
+            $('.t_d').text("00");
+            $('.t_h').text("00");
+            $('.t_m').text("00");
+            $('.t_s').text("00");
+        }
+    }
+    tt = setInterval(GetRTime,0);
+    /*--倒计时结束--*/
+    //动态添加宽度
+    var len = $('#scroller li').length;
+    var w = $('#scroller li').width()+40;
+    $('#scroller').css({width:len*w});
+    //动态添加高度
+    var lenY = $('#wrapper1 li').length;
+    var h = $('#wrapper1 li').height()+7;
+    if(lenY>8){$('#wrapper1 .logo').css({height:Math.ceil(lenY/4)*h});}
+    $(window).load(function() {
+        myScroll = new IScroll('#wrapper', {scrollX: true, scrollY: false, preventDefault: false ,mouseWheel: true});
+        myScroll1 = new IScroll('#wrapper1', {scrollX: false, scrollY: true,scrollbars: true, preventDefault: false ,mouseWheel: true});
+    });
+    //固定报名框
+    $('#submit').click(function () {
+        var name = $('#name').val(),
+            tel = $('#tel').val(),
+            series_id = $('#scroller li.active').attr('data-series'),  //车型
+            brand_id = $('#scroller li.active').attr('data-brand'), //品牌
+            act_id = 2816, //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                series_id: series_id,
+                brand_id: brand_id,
+                act_id: act_id,
+            };
+        if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+            $.MsgBox.Alert('请输入正确的中文名');
+            return false;
+        }
+        if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            $.MsgBox.Alert('手机格式不正确');
+            return false;
+        }
+        if (!($(".bmk input[type='checkbox']").prop('checked'))){
+            $.MsgBox.Alert('请同意《隐私政策》');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type: "post",
+            url: Url,
+            data: Data,
+            async: true,
+            dataType: "jsonp",
+            success: function (data) {
+                if (data.status == 1) {
+                    alert("恭喜你，报名成功了");
+                    location.replace(location.href);
+                } else {
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    });
+    var mySwiper = new Swiper('.swiper-container', {
+        //初始化加载
+        onInit: function(swiper){
+            $('#scroller li').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+        },
+        //切换时加载
+        onSlideChangeStart: function(swiper){
+            $('#scroller li').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+            myScroll.scrollTo(-40*swiper.activeIndex,0,1000);
+            qh(swiper.activeIndex)
+        },
+        autoplayDisableOnInteraction : false,
+        loop: false,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    $(function () {
+        var isPageHide = false;
+        window.addEventListener('pageshow', function () {
+            if (isPageHide) {
+                window.location.reload();
+            }
+        });
+        window.addEventListener('pagehide', function () {
+            isPageHide = true;
+        });
+    });
+</script>
+</html>

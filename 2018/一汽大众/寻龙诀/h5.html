@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>一汽-大众寻龙记 为广州国际龙舟赛打call</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {max-width: 750px;margin: 0 auto;background: #f9aa20;overflow: hidden;height: auto;position: relative;}
+        .cn {position: relative;}
+        .pa{position: absolute;left: 50%;}
+        .cn2 .video {width: 8.4rem;height: 4.8rem;top: 0.5rem;margin-left: -4.2rem;}
+        .cn2 .video iframe {width: 8.4rem;height: 4.8rem;}
+        .cn2 .cn2Word {width: 8.4rem;height: 4rem;top: 6rem;margin-left: -4.2rem;}
+        .cn2 .cn2Word p {font-size: 0.35rem;color: #8d6205;letter-spacing: 1px;}
+        .cn2 .cn2Word .p1 {width: 100%;text-align: center;margin-top: 0.1rem;}
+        .cn2 .cn2Word .p1 span {font-size: 0.5rem;color: #6a4b00;}
+        .cn2 .cn2Word .p2 {height: 2.5rem;}
+        .cn2 .cn2Word .p3 {height: 2.5rem;color: #6a4b00;font-size: 0.4rem;}
+        .cn3 .dor {width: 8.45rem;height: 6.55rem;margin-left: -4.2rem;top: 2.76rem;}
+        .cn3 .news {width: 2rem;margin-left: -4.8rem;top: 1.8rem;z-index: 99;}
+        .cn3 .swiper-container {width: 8.45rem;height: 6.55rem;cursor: pointer;}
+        .cn3 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {bottom: 1.5rem;left: 2.5rem;width: 100%;}
+        .cn3 .swiper-pagination-bullet {width: 8px;height: 8px;display: inline-block;border-radius: 100%;background: #edbf70;opacity: 1;}
+        .cn3 .swiper-pagination-bullet-active {opacity: 1;background: #f9aa20;width: 27px;border-radius: 17px;}
+        .cn3 .swiper-slide p {width: 100%;text-align: center;padding: 0.4rem 0 0;color: #8d6205;font-size: 0.4rem;}
+        .cn3 .list {width: 8.45rem;height: 7rem;margin-left: -4.2rem;top: 9.6rem;}
+        .cn3 .list ul {width: 100%}
+        .cn3 .list ul li {margin: 0 auto 0.2rem;}
+        .cn3 ul li .bok {width: 7.7rem;margin: 0 auto;position: relative;}
+        .cn3 ul li .bok .p1 {font-size: 0.48rem;color: #6a4b00;font-weight: bold;padding-top: 0.1rem;padding-bottom: 0.1rem;}
+        a,a:hover,a:active,a:visited,a:link,a:focus{outline:none;background: none;text-decoration: none;color: #8d6205;}
+        .cn3 .list ul li.active {background: #f9aa20;width: 8.45rem;}
+        .cn3 ul li .bok a {padding-bottom: 0.1rem;display: none;font-size: 0.35rem;}
+        .cn3 ul li .bok i {width: 0.15rem;height: 0.5rem;background: #6a4b00;margin-left: -4.1rem;top: 0.18rem;border-radius: 25%;display: none;}
+        .cn4 .ti {margin-left: -3.5rem;top: 3.5rem;font-size: 0.46rem;color: #6a4b00;font-weight: bold;letter-spacing: 1px;}
+        .cn4 .le {margin-left: -3.5rem;top: 4.3rem;}
+        .cn4 .ri {margin-left: -2.2rem;top: 4.3rem;width: 6.4rem;}
+        .cn4 .le li,.cn4 .ri li {color: #6a4b00;font-size: 0.35rem;line-height: 0.6rem;font-weight: bold;}
+        .cn4 .ri li {font-weight: inherit;}
+        .cn4 .che {width: 9.4rem;top: 11rem;margin-left: -4.7rem;overflow: hidden;}
+        .cn4 .che .swiper-container {width: 9rem;height: 100%;overflow: initial;}
+        .cn5 .cn5List {width: 9.6rem;margin-left: -4.8rem;top: 2rem;}
+        .cn5 .cn5List li {width: 100%;position: relative;margin-bottom: 1.2rem;}
+        .cn5 .cn5List li:last-child {margin-bottom: 0;}
+        .cn5 .cn5List li p {position: absolute;text-align: center;left: 0;width: 100%;bottom: 0;height: auto;padding: 0.2rem 0;background: rgba(250,180,73,.8);color: #8d6205;font-size: 0.44rem;}
+        .cn4 h1,.cn5 h1 {width: 6rem;margin-left: -3rem;top: 0rem;font-size: 0.8rem;font-weight: bold;letter-spacing: 4px;text-align: center;color: #6a4b00;}
+        .cn8 {position: fixed;bottom: 0;width: 100%;z-index: 9999;}
+        .show {position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.6);display: none;z-index: 9998;}
+        .show.active {display: block;z-index: 9999;}
+        .bmk {width: 9.6rem;display: none;margin-left: -4.8rem;}
+        .bmk.active {top: 140px; z-index: 9999;max-width: 750px;display: block;}
+        .bmk input,.bmk select {width: 100%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;font-size: 0.44rem;color: #8d6205;}
+        .bmk p {width: 6rem;height: 1rem;position: absolute;}
+        .bmk .name,.bmk .tel {margin-left: 3rem;top: 1.56rem;}
+        .bmk .tel {top: 3.36rem;}
+        .bmk .city {margin-left: 2rem;top: 5.2rem;width: 7rem;}
+        .bmk .dealers {margin-left: 2.5rem;top: 7rem;width: 5.8rem;}
+        .bmk .submit {margin-left: 0.5rem;top: 8.95rem;width: 8.8rem;}
+        .cn6 .city {
+            width: 1.75rem;
+            height: 0.7rem;
+            margin-left: 3rem;
+            top: 2.1rem;
+        }
+        .cn6 .dor {
+            width: 1.75rem;
+            margin-left: 3rem;
+            top: 2.83rem;
+        }
+        .cn6 .dor ul {
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            background: #f9ad28;
+            display: none;
+        }
+        .cn6 .dor ul li {
+            height: 1rem;
+            text-align: center;
+            line-height: 1rem;
+            color: #6a4b00;
+            font-size: 0.39rem;
+        }
+        .cn6 .dor ul li.active {
+            border-bottom: 0.04rem solid #ec9f0b;
+        }
+        .cn6 .list {width: 9.6rem;height: 12rem;margin-left: -4.7rem;top: 3rem;overflow: auto;z-index: 2;}
+        .cn6 .list ul {width: 100%;overflow: hidden;margin-bottom: 0.3rem;border-bottom: 0.05rem solid #8d6205;}
+        .cn6 .list ul li {font-size: 0.4rem;color: #8d6205;margin: 0.05rem 0;}
+        .cn6 .list ul li:first-child {font-weight: bold;}
+        .cn6 .list ul li:first-child span {width: 6.1rem;display: inline-block;}
+        .cn6 .list ul li:last-child {margin-bottom: 0.2rem;}
+        .mCSB_inside > .mCSB_container {margin-right: 0.2rem;}
+        .mCSB_scrollTools .mCSB_draggerRail {background-color: #ec9f0b !important;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {width: 0.1rem;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: #815f02 !important;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/221/208/13581802.jpg" alt=""></div>
+    <div class="cn2 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/175/208/208/13578415.png" alt="">
+        <div class="video pa">
+            <!--视频外链替换vid=o0504r9nvjq-->
+            <iframe frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=n0679epgbcf&tiny=0&auto=0" allowfullscreen scrolling="no"></iframe>
+        </div>
+        <!--活动详情介绍-->
+        <div class="cn2Word pa">
+            <p class="p1"><span>活动 ·</span> 详情介绍</p>
+            <p class="p2">
+                端午时节粽飘香，珠江水上赛龙舟。广府龙舟文化源远流长，丰富多彩，“一汽-大众寻龙记”诚邀你共同踏上“寻龙”之旅，与龙舟比赛来一次亲密接触，和全新一代宝来一起为广州国际龙舟赛打Call！
+            </p>
+            <p class="p3">时间: 5月30日-6月23日</p>
+        </div>
+    </div>
+    <div class="cn3 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/176/208/208/13578416.png" alt="">
+        <div class="news pa"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/179/208/208/13578419.png" alt=""></div>
+        <div class="dor pa">
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper">
+                    <!--龙舟赛轮播图 宽:317  高:193-->
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/100/219/208/13581145.jpg" alt=""><p>青岛亮相，宝来合作广州国际龙舟赛</p></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/101/219/208/13581146.jpg" alt=""><p>猎德水间百舸争流，十八载后宝来蜕变新生</p></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/102/219/208/13581147.jpg" alt=""><p>全新一代宝来于5月28日亮相 或6月份正式上市</p></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="list pa">
+            <ul>
+                <li class="active">
+                    <div class="bok">
+                        <i class="pa" style="display: block"></i>
+                        <!--新闻主标题-->
+                        <p class="p1">青岛亮相，宝来合作广州国际龙舟赛</p>
+                        <!--添加链接的时候 替换 # 字符-->
+                        <a href="http://guangzhou.auto.qq.com/a/20180530/023577.htm" style="display: block">
+                            5月28日，全新一代宝来在青岛惊艳亮相。TA的惊艳亮相不仅给大家带来了不一样的改变，而且还将首次战略合作广州国际龙舟赛。
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="bok">
+                        <i class="pa"></i>
+                        <!--新闻主标题-->
+                        <p class="p1">猎德水间龙船渡，十八载宝来获新生</p>
+                        <!--添加链接的时候 替换 # 字符-->
+                        <a href="http://guangzhou.auto.qq.com/a/20180531/023100.htm">
+                            坐落珠江新城南部，南临珠江，猎德自古就水网纵横，村民多信水神，人们通常会把船造成龙的形状，让龙行驶在江河上以祭祀水神。
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="bok">
+                        <i class="pa"></i>
+                        <!--新闻主标题-->
+                        <p class="p1">全新一代宝来亮相 或6月份正式上市</p>
+                        <!--添加链接的时候 替换 # 字符-->
+                        <a href="http://guangzhou.auto.qq.com/a/20180604/033819.htm">
+                            全新一代宝来于5月28日正式亮相，新车基于MQB平台进行打造，整体造型更加时尚，将搭载1.5L和1.4T动力，预计于6月份正式上市。
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="bok">
+                        <i class="pa"></i>
+                        <!--新闻主标题-->
+                        <p class="p1">探歌牵手海中龙舟开疆拓土且行且歌</p>
+                        <!--添加链接的时候 替换 # 字符-->
+                        <a href="#">
+                            新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容1...
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="bok">
+                        <i class="pa"></i>
+                        <!--新闻主标题-->
+                        <p class="p1">全新一代宝来携沙溪龙舟展王者之风</p>
+                        <!--添加链接的时候 替换 # 字符-->
+                        <a href="#">
+                            新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容新闻内容1...
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cn4 cn">
+        <!--顶部标题文案-->
+        <h1 class="pa">龙舟赛活动</h1>
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/142/219/208/13581187.jpg" alt="">
+        <p class="ti pa">2018广州国际龙舟邀请赛</p>
+        <ul class="le pa">
+            <li>时间 :</li>
+            <li>地点 :</li>
+            <li>内容 :</li>
+        </ul>
+        <ul class="ri pa">
+            <li>6月23号 09：00-16：30</li>
+            <li>中大北门至广州大桥的河段</li>
+            <li>广州国际龙舟邀请赛以“传承龙舟文化，共创美丽广州”，有传统龙、标准龙、彩龙、游龙等比赛项目，生动地展现了广府龙舟丰富的文化内容和艺术特色。</li>
+        </ul>
+        <div class="che pa">
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/220/208/13581355.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/56/220/208/13581356.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/57/220/208/13581357.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/58/220/208/13581358.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cn5 cn">
+        <!--顶部标题文案-->
+        <h1 class="pa">宝来风采</h1>
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/84/220/208/13581384.png" alt="">
+
+        <ul class="cn5List pa">
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/144/219/208/13581189.jpg" alt="">
+                <p>全新一代宝来 驰骋于城市道路间</p>
+            </li>
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/164/219/208/13581209.jpg" alt="">
+                <p>充满力量感 线条感的车身</p>
+            </li>
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/156/219/208/13581201.jpg" alt="">
+                <p>全新一代宝来 兼具运动风尚和精致简约</p>
+            </li>
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/157/219/208/13581202.jpg" alt="">
+                <p>为用户提供舒适的驾乘空间</p>
+            </li>
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/159/219/208/13581204.jpg" alt="">
+                <p>全新一代宝来基于MQB平台进行打造</p>
+            </li>
+            <li>
+                <!--图片像素 宽:360  高:219-->
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/219/208/13581212.jpg" alt="">
+                <p>媲美豪华车的科技配置</p>
+            </li>
+        </ul>
+    </div>
+    <div class="cn6 cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/124/229/208/13583719.png" alt="">
+        <div class="city pa"></div>
+        <div class="dor pa">
+            <ul>
+                <li>广州市</li>
+                <li>深圳市</li>
+                <li>惠州市</li>
+                <li>东莞市</li>
+                <li>珠海市</li>
+                <li>中山市</li>
+                <li>佛山市</li>
+                <li>江门市</li>
+                <li>其他</li>
+            </ul>
+        </div>
+        <div class="list pa"></div>
+    </div>
+    <div class="cn7 cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/125/229/208/13583720.png" alt="">
+    </div>
+    <div class="cn8 cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/48/230/208/13583898.png" alt="">
+    </div>
+    <div class="show"></div>
+    <div class="bmk pa">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/127/229/208/13583722.png" alt="" class="cn">
+        <p class="name">
+            <input type="text" id="name">
+        </p>
+        <p class="tel">
+            <input type="tel" id="tel" maxlength="11">
+        </p>
+        <p class="city">
+            <select id="city">
+                <option value="0">请选择城市</option>
+            </select>
+        </p>
+        <p class="dealers">
+            <select id="dealers">
+                <option value="0">请选择经销商</option>
+            </select>
+        </p>
+        <p class="submit">
+            <input type="button" id="submit">
+        </p>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des=[
+        {"name":"广东君乐汽车贸易有限公司","tel":"020-86328882","address":"广州市白云区机场路888号广物汽贸内","prov":"广东","city":"广州市"},
+        {"name":"广州市锦众汽车贸易有限公司","tel":"020-8216 8618","address":"广州市天河区奥体路53号（地铁4号线黄村站D出口奥体中心东门对面）","prov":"广东","city":"广州市"},
+        {"name":"广州市梅花园汽车销售服务有限公司","tel":"020-37290396","address":"广州市广州大道北梅花园汽车修理厂内一汽-大众","prov":"广东","city":"广州市"},
+        {"name":"广东物通凯骏汽车有限公司","tel":"020-84566281","address":"广州市迎宾路183号物通汽车城广地花园南侧","prov":"广东","city":"广州市"},
+        {"name":"广州市健稳汽车贸易有限公司","tel":"020-34615201","address":"广州市番禺区桥南街蚬涌村市南公路西侧（番禺大道北市桥二桥旁）","prov":"广东","city":"广州市"},
+        {"name":"广州市大吉汽车销售服务有限公司","tel":"020-2880 6918","address":"广州市白云区白云大道北1395号（白云堡立交往从化方向第3个红绿灯调头直行500米南菱汽车城内）","prov":"广东","city":"广州市"},
+        {"name":"广州市南菱万众汽车维修服务有限公司","tel":"020-28615500","address":"广州市花都区新华街镜湖大道10号自编之二","prov":"广东","city":"广州市"},
+        {"name":"广州庞大一众汽车销售服务有限公司","tel":"020-31003688","address":"广州市番禺区石壁街105国道以东","prov":"广东","city":"广州市"},
+        {"name":"广州市安捷鑫众汽车有限公司","tel":"020-62315088","address":"广州市萝岗区科丰路31号G10栋101","prov":"广东","city":"广州市"},
+        {"name":"深圳市奇建贸易有限公司","tel":"0755-83052246","address":"深圳市福田区红荔西路香蜜湖联合华鹏专业市场内","prov":"广东","city":"深圳市"},
+        {"name":"深圳市安进汽车贸易有限公司","tel":"0755-25123322","address":"深圳市罗湖区新秀路东益汽车广场B15号","prov":"广东","city":"深圳市"},
+        {"name":"深圳市昊天林实业有限公司","tel":"0755-27497000","address":"深圳市宝安区107国道西乡段洲石立交西北侧（世纪车城旁）","prov":"广东","city":"深圳市"},
+        {"name":"深圳市南方腾龙汽车销售服务有限公司","tel":"0755-86035166","address":"深圳市南山区南头关口二路嘉进隆前海汽车城A区2层02号","prov":"广东","city":"深圳市"},
+        {"name":"深圳市北奇建贸易有限公司","tel":"0755-28696900","address":"深圳市龙岗区南通道爱南路99号","prov":"广东","city":"深圳市"},
+        {"name":"深圳市清水河奇建贸易有限公司","tel":"0755-29001111","address":"深圳市罗湖区清水河三路18号深业车城博兴大厦BX-101号","prov":"广东","city":"深圳市"},
+        {"name":"深圳市昊天林安琪汽车有限公司","tel":"0755-81701888","address":"深圳市龙华新区观澜环观南路72号（环观南路与观平路交界）","prov":"广东","city":"深圳市"},
+        {"name":"惠州市金瑞欣汽车销售有限公司","tel":"0752-5766366","address":"惠州市三栋镇惠南汽车城旁","prov":"广东","city":"惠州市"},
+        {"name":"惠州市志通恒泰汽车销售服务有限公司","tel":"0752-3916628","address":"惠州市惠阳区淡水桥背村永兴路改","prov":"广东","city":"惠州市"},
+        {"name":"东莞庞大一众汽车销售服务有限公司","tel":"0769-81879888","address":"东莞市长安镇沙头南区振安中路683号","prov":"广东","city":"东莞市"},
+        {"name":"东莞市捷达通贸易有限公司","tel":"0769-22909788","address":"广东省东莞市南城区莞太路新基路段(往虎门方向）","prov":"广东","city":"东莞市"},
+        {"name":"东莞市昌发汽车贸易有限公司","tel":"0769-89271000","address":"东莞市莞太路虎门白沙路段","prov":"广东","city":"东莞市"},
+        {"name":"东莞市新大地汽车贸易有限公司","tel":"0769-83266988","address":"东莞市寮步镇莞樟路塘唇段55号","prov":"广东","city":"东莞市"},
+        {"name":"东莞市鸿众汽车销售服务有限公司","tel":"0769-81915888","address":"东莞市常平镇环常西路桥梓路段桥南路1号","prov":"广东","city":"东莞市"},
+        {"name":"东莞市锦众汽车贸易有限公司","tel":"0769-85992323","address":"东莞市厚街镇三屯村S256省道旁","prov":"广东","city":"东莞市"},
+        {"name":"东莞市东深奇建汽车销售服务有限公司","tel":"0769-39019008","address":"广东省东莞市樟木头镇莞樟西路樟深路交汇处","prov":"广东","city":"东莞市"},
+        {"name":"珠海市珠光汽车有限公司","tel":"07568682009","address":"珠海市南屏珠海大道屏东一路2号","prov":"广东","city":"珠海市"},
+        {"name":"珠海市香洲一汽汽车销售有限公司","tel":"0756-8508552","address":"珠海市香洲区蓝盾路9号（新港机动车检测中心侧）","prov":"广东","city":"珠海市"},
+        {"name":"中山市创世纪汽车有限公司","tel":"0760-88552622","address":"中山市西区彩虹大道40号","prov":"广东","city":"中山市"},
+        {"name":"中山市众腾汽车有限公司","tel":"0760-22448888","address":"中山市东区长江路363号（长虹加油站对面）","prov":"广东","city":"中山市"},
+        {"name":"中山庞大一众汽车销售服务有限公司","tel":"0760-89969933","address":"中山市火炬开发区大岭工业区20号之一2号商铺","prov":"广东","city":"中山市"},
+        {"name":"佛山市合诚汽车销售服务有限公司","tel":"0757-86367111","address":"佛山市南海区桂澜路石啃路段","prov":"广东","city":"佛山市"},
+        {"name":"佛山市顺德区世锦汽车贸易有限公司","tel":"0757-22380030","address":"佛山市顺德区大良105国道广珠公路新松路段顺德世锦一汽大众4S店","prov":"广东","city":"佛山市"},
+        {"name":"佛山市南海区拓华汽车贸易有限公司","tel":"0757-86368988","address":"佛山市南海区桂城文华北路5号","prov":"广东","city":"佛山市"},
+        {"name":"佛山市英丰汽车销售服务有限公司","tel":"0757-66630888","address":"佛山市禅城区五峰四路与东鄱南路交汇处","prov":"广东","city":"佛山市"},
+        {"name":"佛山市瀚众汽车贸易服务有限公司","tel":"0757-88020888","address":"佛山市禅城区南庄镇紫洞路（佛山一环季华西出口）","prov":"广东","city":"佛山市"},
+        {"name":"佛山市广物君乐汽车销售服务有限公司","tel":"0757-85660030","address":"佛山市南海区里水镇佛山一环东侧水口路出口广佛汽车城内","prov":"广东","city":"佛山市"},
+        {"name":"佛山时利和众联汽车销售服务有限公司","tel":"0757-66820888","address":"佛山市南海区狮山镇狮岭村马二经济社上凼地段之一","prov":"广东","city":"佛山市"},
+        {"name":"江门市新众汽车销售服务有限公司","tel":"0750-3688888","address":"江门市江门市建设三路169号","prov":"广东","city":"江门市"},
+        {"name":"江门市钜荣汽车销售服务有限公司","tel":"0750-2637333","address":"江门市江海区银帆路2号5幢","prov":"广东","city":"江门市"},
+        {"QT":"其他","name":"潮州市通达汽车贸易有限公司","tel":"0768-2981491","address":"潮州市潮州大道泰安路","prov":"广东","city":"潮州市"},
+        {"QT":"其他","name":"汕头市裕丰交通经济发展有限公司","tel":"0754-88108562","address":"广东省汕头市金湖路42号","prov":"广东","city":"汕头市"},
+        {"QT":"其他","name":"汕尾市君乐汽车销售服务有限公司","tel":"0660-3419888","address":"广东省汕尾市城区海汕公路浦边工业区","prov":"广东","city":"汕尾"},
+        {"QT":"其他","name":"韶关市亿华汽车贸易有限公司","tel":"0751-8288811","address":"广东省韶关市韶南大道四公里亿华汽车城","prov":"广东","city":"韶关市"},
+        {"QT":"其他","name":"茂名市茂南茂汉汽车贸易有限公司","tel":"0668- 2821188","address":"茂名茂南开发区茂南大道一路83号","prov":"广东","city":"茂名市"},
+        {"QT":"其他","name":"清远南方合众汽车销售服务有限公司","tel":"0763-3856699","address":"清远市清城区人民四路（一汽-大众）","prov":"广东","city":"清远"},
+        {"QT":"其他","name":"揭阳合和汽车销售服务有限公司","tel":"0663-3258999","address":"揭阳市揭东大圆往潮州方向500米","prov":"广东","city":"揭阳市"},
+        {"QT":"其他","name":"河源市德宝汽车贸易有限公司","tel":"0762-6791888","address":"河源市东环路超然汽车市场内","prov":"广东","city":"河源市"},
+        {"QT":"其他","name":"梅州市新宇汽车销售服务有限公司","tel":"0753-8662888","address":"广东省梅县扶大高新区广梅南路286号","prov":"广东","city":"梅州市"},
+        {"QT":"其他","name":"肇庆市安迅汽车有限公司","tel":"18128063288","address":"肇庆市端州区105区肇庆大道北侧","prov":"广东","city":"肇庆市"},
+        {"QT":"其他","name":"阳江安捷源众汽车销售服务有限公司","tel":"0662-3501111","address":"阳江市江城区金山路南侧边","prov":"广东","city":"阳江市"},
+    ]
+</script>
+<script>
+    var mySwiper1 = new Swiper('#swiper1', {
+        autoplay: 5000,//可选选项，自动滑动
+        pagination : '.swiper-pagination',
+        autoplayDisableOnInteraction : false,
+        paginationClickable :true,
+    });
+    var mySwiper2 = new Swiper('#swiper2',{
+        effect : 'coverflow',
+        slidesPerView: 1,
+        autoplay: 5000,//可选选项，自动滑动
+        centeredSlides: true,
+        autoplayDisableOnInteraction : false,
+        loop: true,
+        coverflow: {
+            rotate: 30,
+            stretch: 0,
+            depth: 60,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+    //新闻列表切换
+    $('.cn3 .list ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).find('i').css('display','block').parents('li').siblings().find('i').css('display','none');
+        $(this).find('a').css('display','block').parents('li').siblings().find('a').css('display','none');
+    });
+    //经销商
+    for (var i=0;i<des.length;i++){
+        if ($('#city').html().indexOf(des[i].city)<0){
+            $('#city').append('<option value="'+des[i].city+'">'+des[i].city+'</option>')
+        }
+        var ul='<ul>'+
+            '<li><span>'+des[i].name+'</span>'+des[i].tel+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '</ul>';
+        $('.cn6 .list').append(ul);
+    }
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].city){
+                $('#dealers').append('<option value="'+des[i].name+'">'+des[i].name+'</option>')
+            }
+        }
+    });
+    $('.cn7').click(function () {
+        var nH = $(document).scrollTop();
+        var bH = $('.cn1').height();
+        var pH = (nH-bH)<0?'120':parseInt(nH-bH+300);
+        $('.show').addClass('active');
+        $('.bmk').addClass('active');
+        $('.bmk').css('top',pH);
+    });
+    $('.cn8').click(function () {
+        var nH = $(document).scrollTop();
+        var bH = $('.cn1').height();
+        var pH = (nH-bH)<0?'120':parseInt(nH-bH+300);
+        $('.show').addClass('active');
+        $('.bmk').addClass('active');
+        $('.bmk').css('top',pH);
+    });
+    $(".show").click(function () {
+        $(this).removeClass('active');
+        $('.bmk').removeClass('active');
+    });
+    $('.cn6 .city').click(function () {
+       $('.cn6 .dor ul').fadeIn(300)
+    });
+    $('.cn6 .dor ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.cn6 .list .mCSB_container').html('');
+        $('.cn6 .list').mCustomScrollbar("destroy");
+        for (var i=0;i<des.length;i++){
+            if ($(this).text()==des[i].city){
+                var ul='<ul>'+
+                    '<li><span>'+des[i].name+'</span>'+des[i].tel+'</li>'+
+                    '<li>'+des[i].address+'</li>'+
+                    '</ul>';
+                $('.list').append(ul);
+            }
+            if ($(this).text()==des[i].QT){
+                var ul='<ul>'+
+                    '<li><span>'+des[i].name+'</span>'+des[i].tel+'</li>'+
+                    '<li>'+des[i].address+'</li>'+
+                    '</ul>';
+                $('.list').append(ul);
+            }
+        }
+        $(".cn6 .list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+        $('.cn6 .dor ul').fadeOut(300);
+    });
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                city=$("#city").val(), //城市
+                dealers=$("#dealers").val(), //经销商
+                series_id = 182,    //车型id
+                brand_id = 23, //品牌
+                act_id = 2688,  //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id : act_id,
+                    dealers:dealers,
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( city == '0' ) {
+                alert('请选择城市');
+                return false;
+            }
+            if( dealers == '0' ) {
+                alert('请选择经销商');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    $(window).load(function() {
+        $(".cn6 .list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    });
+</script>
+</html>

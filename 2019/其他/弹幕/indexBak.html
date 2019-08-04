@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>弹幕</title>
+		<link rel="stylesheet" href="css/wall.css" />
+	</head>
+
+	<body>
+		<div id="container" class="container">
+		</div>
+		<div class="input-box">
+			<input type="text" maxlength="15" placeholder="说点什么吧~">
+			<button id="btn" class="btn">发送</button>
+		</div>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="js/barrageWall.js"></script>
+		<script>
+			$("#btn").click(function () {
+				$(this).addClass('disabled');
+				////////////////////////////////////////////////////////////////////////////////////////////
+				////////////////////////////////////////// 注意：///////////////////////////////////////////
+				// 1，一定要限制用户输入的文字长度，尽量避免用户输入的内容长度超过屏幕的宽度/////////////////////////
+				// 2，如果不需要用户的头像和id，可以在js中去掉 elem 的img标签和用户名//
+				// 3，实际使用时，最少应该加上 特殊字符替换 和 发送成功后清除input的内容，/////////
+				/////////////////////////////////////////////////////////////////////////////////////////
+				var vla = $(this).prev("input").val().replace(/(^\s*)|(\s*$)/g, "");
+				if (vla) {
+					setTimeout(function() {
+              $('#btn').removeClass('disabled');
+          }, 3000);
+					//barrageWall.upWall(头像img,name,输入框value,用户输入自定义样式)
+					barrageWall.upWall("images/aq.jpg", "Bad Boy", vla, "valueClass");//初始化弹幕墙
+				}else {
+					alert('请输入内容');
+					return false;
+				}
+				//输入之后 清空输入框内容
+				$(this).prev("input").val("").focus();
+			})
+
+			$(function () {
+				var App = {};
+				//////////////////////////////////////////////////////////////////////
+				////////////////// 注意：请尽量少的使用js去处理css样式！//////////////////
+				///////////////// 尤其是当用户量大时，页面的性能的尤为重要 ////////////////
+				///////////////// 所以，请将你需要的各种动效交个css去实现 ////////////////
+				////////////////////// 注意页面重绘带来的性能影响 //////////////////////
+				////////////////////////////////////////////////////////////////////
+				App.Barrage = function () {
+					App.walltext = [
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t1.JPG', name: 'A', value: '看完感觉那些年被春运支配的恐惧' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t2.JPG', name: 'B', value: '这主人公不就是我本人吗？' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t3.JPG', name: 'C', value: '想家了，想哭' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t4.JPG', name: 'D', value: '我一个不回家的人居然被暖到了' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t5.JPG', name: 'E', value: '我去给我爸妈买波司登了……' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t6.JPG', name: 'F', value: '我和我媳妇儿就是在回家路上认识的' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t7.JPG', name: 'G', value: '还有7天就能回家了，想想就激动' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t8.JPG', name: 'H', value: '为暖心的波司登打call' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t9.JPG', name: 'I', value: '这是我妈最爱的羽绒服品牌，没有之一' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t10.JPG', name: 'J', value: '想吃妈妈做的饭了……' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t11.JPG', name: 'K', value: '被波司登圈粉了' },
+						{ img: 'http://bosideng18gh.energytrust.com.cn/images/t12.JPG', name: 'L', value: '别拦着我，我去买波司登了' }
+					]
+					var option = {
+						container: "#container",//弹幕墙的id
+						barrageLen: 3//弹幕的行数
+					}
+					barrageWall.init(option);//初始化弹幕墙
+					//////////////////////////////////////////////////////////////////////
+					/////// 实际调用时必须设置你的 弹幕墙id 和 弹幕的行数 并 初始化弹幕墙，///////
+					// 然后调用 barrageWall.upWall("用户头像url","用户昵称","用户输入的内容")//
+					/////////////////////////////////////////////////////////////////////
+
+					barrageWall.upWall(App.walltext[0].img, App.walltext[0].name, App.walltext[0].value);//初始化弹幕墙
+
+					var num = 0, timer = setInterval(function () {
+						num++;
+						if (num > 11) {
+							clearInterval(timer)
+							// num = 0;
+						}
+						barrageWall.upWall(App.walltext[num].img, App.walltext[num].name, App.walltext[num].value);
+					}, 3100);
+				}
+				App.Barrage()
+			})
+		</script>
+	</body>
+
+</html>

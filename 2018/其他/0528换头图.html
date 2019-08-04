@@ -1,0 +1,1544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1600,user-scalable=no">
+    <title>2018深港澳国际车展</title>
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <style>
+
+        body,html{font-family: '微软雅黑';width:100%;max-width: 1920px;}
+        ol,p,input{
+            list-style: none;
+            margin:0;
+            padding:0;
+        }
+        *{margin:0 auto;padding: 0; }
+        a{ text-decoration:none;}
+        /*PC{vertical-align: middle;}*/
+        body{position:relative;}
+        #section1{
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/227/188/208/13573367.jpg) no-repeat top center;
+            height: 597px;
+            width: 100%;
+        }
+        #section2{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/190/232/203/13259425.jpg) no-repeat top center;
+            height: 614px;
+            width: 100%;
+            position: relative;
+        }
+        #section3{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/191/160/203/13241066.jpg) no-repeat top center;
+            height: 852px;
+            width: 100%;
+            position: relative;
+        }
+        #section4{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/192/160/203/13241067.jpg) no-repeat top center;
+            height: 451px;
+            width: 100%;
+        }
+        #section5{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/194/160/203/13241069.jpg) no-repeat top center;
+            height: 435px;
+            width: 100%;
+        }
+        #section6{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/195/160/203/13241070.jpg) no-repeat top center;
+            height:581px;
+            width: 100%;
+            position: relative;
+        }
+        #section7{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/196/160/203/13241071.jpg) no-repeat top center;
+            height:392px;
+            width: 100%;
+            position: relative;
+        }
+        #section8{
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/197/160/203/13241072.jpg) no-repeat top center;
+            height: 589px;
+            width: 100%;
+            position: relative;
+        }
+        .section2_container{
+            position: absolute;
+            left: 50%;
+            width: 1000px;
+            top: 194px;
+            margin-left: -500px;
+        }
+        .section2_container .section2_leftImg{
+            width: 545px;
+            height: 337px;
+            position: absolute;
+            left:0;
+            border:2px solid #00EAF7;
+            overflow: hidden;
+        }
+        .section2_leftImg img{
+            width: 100%;
+            height: 100%;
+
+        }
+        .section2_container .section2_rightNew{
+            width: 435px;
+            height: 340px;
+            position: absolute;
+            right: 0;
+        }
+        .section2_rightNew ul{
+            color: #fff;
+            width: 390px;
+            height: 260px;
+            margin:65px 0 0 55px;
+        }
+        .section2_rightNew ul li{
+            height: 32px;
+            width: 390px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        /*车模*/
+
+        .banner,.banner2,.banner3,.banner_section2 {
+            width: 1080px;
+            height: 440px;
+            position: relative;
+            left:0;
+            top: 0;
+            /*margin-left: -600px;*/
+            z-index: 1;
+            overflow: hidden;
+        }
+        .banner{
+            top: 56px;
+        }
+        .banner2{
+            top: -165px;
+        }
+        .banner > ul ,.banner2 > ul ,.banner3 > ul,.banner_section2 > ul  {
+
+            display: none;
+            /*width: 1000%;*/
+            height: 440px;
+            position: absolute;
+            top:0;
+            /*left: 70px;*/
+            margin-left:35px;
+        }
+
+        .banner > ul > li ,.banner2 > ul > li ,.banner3 > ul > li ,.banner_section2 > ul > li{
+            float: left;
+            height: 100%;
+            width: 1000px;
+            list-style: none;
+        }
+
+        .banner > ul > li > a ,.banner2 > ul > li > a,.banner3 > ul > li > a ,.banner_section2 > ul > li > a  {
+            display: block;
+            font-size: 200px;
+            text-align: center;
+            height: 205px;
+            width:150px;
+            font-weight: bold;
+            float: left;
+            margin:5px;
+            text-decoration: none;
+        }
+
+        .left-btn,.right-btn, .left-btn2,.right-btn2, .left-btn3,.right-btn3 ,.left-btn_section2 ,.right-btn_section2  {
+            width: 100px;
+            height: 270px;
+            position: absolute;
+            top: 35%;
+            /* right:-32px;*/
+            cursor: pointer;
+            /*display: none;*/
+        }
+        .left-btn,.right-btn{
+            top: 25%;
+        }
+        .left-btn2,.right-btn2{
+            top:  25%;
+        }
+        .right-btn,.right-btn2,.right-btn3,.right-btn_section2 {
+            background:url(http://img1.gtimg.com/autodongguan/pics/hv1/7/165/203/13242157.png) no-repeat;
+            right:-69px;
+        }
+
+        .left-btn,.left-btn2 ,.left-btn3 ,.left-btn_section2{
+            left: -4px;
+            background:url(http://img1.gtimg.com/autodongguan/pics/hv1/6/165/203/13242156.png) no-repeat;
+        }
+        .right-btn3{
+            right:-41px;
+        }
+        .left-btn3 {
+            left: 23px;
+        }
+        .img-btn-list,.img-btn-list2,.img-btn-list3 ,.img-btn-list_section2 {
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            z-index: 10000;
+            text-align: left;
+            padding-left:260px;
+            display: none;
+        }
+
+
+        .img-btn-list > span ,.img-btn-list2 > span,.img-btn-list3 > span,.img-btn-list_section2 > span  {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 0 5px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.8);
+            cursor: pointer;
+        }
+
+        .img-btn-list> span.current,.img-btn-list2 > span.current,.img-btn-list3 > span.current,.img-btn-list_section2 > span.current  {
+            width: 50px;
+            border-radius:10px;
+        }
+        #section6 .section6_container{
+            position: absolute;
+            width: 1000px;
+            left: 50%;
+            margin-left: -538px;
+            top: 50px;
+        }
+        .section7_container{
+            position: absolute;
+            left: 50%;
+            width: 1000px;
+            margin-left: -529px;
+            top: 35px;
+        }
+        .section7_container .banner3{
+            top: 10px;
+        }
+        .left-btn3,.right-btn3{
+            top: 36%;
+        }
+        .banner3_name{
+            font-size: 18px;
+            color: #fff;
+            font-weight: 100;
+            font-family: '微软雅黑';
+            margin-top: -31px;
+        }
+        .banner3_text{
+            font-size: 16px;
+            color:#666666;
+            font-family: '微软雅黑';
+        }
+        .banner3 > ul > li > a{
+            width: 150px;
+            height: 145px;
+            margin-right: 43px;
+            cursor: pointer;
+
+        }
+        .banner3 > ul > li > a img{
+            border:3px solid #00CEDE;
+        }
+        .banner3 > ul {
+            margin-left: 60px;
+        }
+        .section8_container{
+            width: 1000px;
+            position: absolute;
+            left: 50%;
+            top: 120px;
+            margin-left: -455px;
+        }
+        #d_tab29 ul, #d_tab29 li { margin: 0; padding: 0; list-style: none }
+        #d_tab29 img { border: 0; vertical-align: top }
+        #d_tab29 { position: relative; height: 335px;  text-align: left }
+        #d_tab29 .d_img { position: relative; margin: 0 auto; width: 1100px; height: 100% }
+        #d_tab29 .d_img li { position: absolute; display: none; z-index: 0 }
+        #d_tab29 .d_img .cont{ width:100%; height:87px; background:rgba(0,0,0,0.5); position:absolute; bottom:0px; left:0px; z-index:99999;}
+        #d_tab29 .d_img li img { width: 100% ;border:2px solid #00EAF7;}
+        #d_tab29 .d_img li.d_pos1 { display: block; width: 300px; left: -1%; top: 110px; z-index: 1 }
+        #d_tab29 .d_img li.d_pos2 { display: block; width: 300px; left: -1%; top: 110px; z-index: 2 }
+        #d_tab29 .d_img li.d_pos3 { display: block; width: 560px; left: 15%; top: 16px; z-index: 3 }
+        #d_tab29 .d_img li.d_pos4 { display: block; width: 300px; right:17%; top:110px; z-index: 2 }
+        #d_tab29 .d_img li.d_pos5 { display: block; width: 300px; right: 17%; top: 110px; z-index: 1 }
+        #d_tab29 .d_menu { position: absolute; bottom: 20px; width: 100%; text-align: center }
+        #d_tab29 .d_menu li { display: inline-block; zoom: 1; *display:inline;
+            width: 12px; height: 12px; cursor: pointer; margin-right: 3px }
+        #d_tab29 .d_next { position: absolute; left: 43.5%; margin-left: 491px; top: 184px; z-index: 10; cursor: pointer ;-display: none;}
+        #d_tab29 .d_prev { position: absolute; left: 59.5%; margin-left: -650px; top: 184px; z-index: 10; cursor: pointer;-display: none; }
+
+        .section3_container{
+            position: absolute;
+            width: 1000px;
+            left: 50%;
+            margin-left: -500px;
+            top: 200px;
+        }
+        .section3_list{
+            width: 840px;
+            position: absolute;
+            left: 0;
+            list-style: none;
+            color: #fff;
+            z-index: 1000;
+        }
+        .section3_list li{
+            width: 265px;
+            height: 180px;
+            border:2px solid #00EAF7;
+            float: left;
+            margin:0 0 15px 10px;
+            cursor: pointer;
+        }
+        .list_p1{
+            margin: -80px 0 0 85px;
+            font-size: 16px;
+        }
+        .list_p2{
+            margin:24px 0  0 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .list_p3{
+            margin: -20px 0 0 175px;
+            font-size: 16px;
+        }
+        .last_img_1{
+            width: 265px;
+            height: 180px;
+        }
+        .section3_form1{
+            position: absolute;
+            width: 265px;
+            height: 180px;
+            margin-top: -174px;
+            display: none;
+            z-index: 2000;
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/207/169/203/13243377.png);
+
+        }
+        .section3_form1 form{
+            width: 258px;
+        }
+        .form_title{
+            color: #fff;
+            font-size: 20px;
+            width:200px;
+            text-align: center;
+            height: 25px;
+            padding:10px;
+            margin:0 0 10px 20px;
+            border-bottom:2px solid #fff;
+        }
+        .section3_form1 form label{
+            font-size: 18px;
+            color: #fff;
+            margin:0 0 0 18px;
+            display: inline-block;
+        }
+        #name,#tel{
+            height: 25px;
+            line-height: 25px;
+            margin:0 0 5px 10px;
+            border:none;
+            outline: none;
+        }
+        #submit{
+            height: 30px;
+            width: 220px;
+            margin-left:20px;
+            border:none;
+            outline: none;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #fff;
+            background: #FB4350;
+            text-align: center;
+            cursor: pointer;
+        }
+        #mb_btn_ok{
+            background-color: #FB4350 !important;
+        }
+        .act{
+            transition: .8s;
+            /*transform: scale(.8);*/
+        }
+        /*   a{color: #515151;text-decoration: none;}
+         a:hover{text-decoration:underline;color: red;}
+             .footernew, .footernew p{font-size: 12px;overflow: hidden;}
+             .footernew p {border: 1px solid #D2D2D2; float: left;height: 50px;line-height: 20px;margin: 6px;padding: 0;width: 120px;}
+             .footernew .fl { float: left;padding: 3px;}
+             .footernew .fr {float: right;padding: 5px 3px 0;width: 72px;}*/
+        .section3_riimg{
+            position: absolute;
+            right: -60px;
+            top: -10px;
+            cursor: pointer;
+        }
+        .section2_ma{
+            position: absolute;
+            top:-70px;
+            left: 10px;
+            animation: move 1.3s  infinite linear;
+        }
+        @keyframes move{
+            0%{
+                /*  top:-200px;*/
+                transform: scale(0.8);
+            }
+            50%{
+                /*top:-190px;*/
+                transform: scale(1);
+            }
+            100%{
+                /*top:-170px;*/
+                transform: scale(0.8);
+            }
+
+        }
+        .section2_rightNew a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .floor-nav{
+            /*height: auto;*/
+            width: 160px;
+            text-align: center;
+            position: fixed;
+            top: calc(50% - 207px);
+            left: 0;
+            z-index: 999;
+            height: 450px;
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/191/184/203/13247186.png) no-repeat top center;
+            background-size: cover;
+        }
+        .scroll-nav{
+            display: inline-block;
+            /*background: #fff;*/
+            width:124px;
+            height: 32px;
+            line-height:28px;
+            cursor: pointer;
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 16px;
+            background:url(http://img1.gtimg.com/autodongguan/pics/hv1/195/184/203/13247190.png) no-repeat top center;
+
+        }
+        .scroll-nav:nth-child(1){
+            margin-top: 100px;
+        }
+        .scroll-nav.active{
+            color: #fff;background: url(http://img1.gtimg.com/autodongguan/pics/hv1/212/184/203/13247207.png)  no-repeat top center;
+            width:157px;
+            height: 38px;
+            line-height: 38px;
+            color: #F3CE31;
+        }
+
+        .img_tab_1{
+            width: 550px;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            font-size: 20px;
+            margin-top: -92px;
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            z-index: 1000;
+        }
+        .banner_section2{
+            width: 550px;
+            height: 335px;
+            top: -10px;
+            border:2px solid #00EAF7;
+            left: -20px;
+        }
+        .img-btn-list_section2{
+            display: block;
+        }
+        .banner_section2 img{
+            width: 550px;
+            height: 335px;
+        }
+        .banner_section2 ul{
+            margin-left: -5px;
+            margin-top: -5px;
+        }
+        .left-btn_section2, .right-btn_section2{
+            top: 45%;
+        }
+        .right-btn_section2{
+            right: -69px;
+        }
+        .img-btn-list_section2{
+            width: 550px;
+            /*text-align: center;*/
+            margin: 0px 0 0 100px;
+            bottom: 49px;
+        }
+        .tab{
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            right:5px;
+            list-style: none;
+            color: #fff;
+            top: 68px;
+        }
+
+        .tab li{
+            height: 32px;
+            line-height: 30px;
+            color: 18px;
+        }
+        .tab li a{
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+        }
+        .tab li a:hover{
+            color: #FCD629;
+        }
+        .tab li a span{
+            color: #aaa;
+        }
+        @media screen and (max-width: 1400px) {
+            .scroll-nav {
+                background-size: 100% 100%;
+                width:100px;
+            }
+            .scroll-nav.active{
+                width:130px ;
+                background-size: 100% 100%;
+            }
+            .floor-nav{
+                width: 130px;
+                background-size: 100% 100%;
+            }
+            .section6_container{
+                margin-left: -509px!important;
+            }
+        }
+        .section5_list{width:405px;position:absolute;right:0px;top:75px;list-style:none;}
+        .section5_list li{
+            height: 20px;
+            margin-bottom: 10px;
+            color:#fff;
+        }
+        .section5_list li a{
+            color:#fff;
+            font-size: 17px;
+        }
+        .section5_list li a:hover{
+            color: #F0CB18;
+        }
+    </style>
+</head>
+<body>
+<nav class="floor-nav">
+    <span class="scroll-nav  active">免费拿门票</span>
+    <span class="scroll-nav">车展特供车</span>
+    <span class="scroll-nav">服务</span>
+    <span class="scroll-nav">车模</span>
+    <span class="scroll-nav">专访</span>
+    <span class="scroll-nav">豪车</span>
+</nav>
+<div id="section1"></div>
+<div id="section2" class="scroll-floor floor2">
+    <div class="section2_container">
+        <a  href="http://guangzhou.auto.qq.com/zhuanti/2017/CZGCZT.htm" target="_blank" style="width:860px;height:80px; position:absolute;top:-100px;left:140px;display:block;">
+
+            <img src="http://img1.gtimg.com/autodongguan/pics/hv1/91/174/203/13244536.png"  class="section2_ma">
+
+        </a>
+        <div style="width:500px;position:absolute;top:10px;left:20px;">
+            <div class="banner_section2">
+                <ul class="">
+
+
+                    <li>
+                        <a href="http://guangzhou.auto.qq.com/a/20171118/008367.htm" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/32/44/204/13276352.jpg" >
+                            <p class="img_tab_1">型男靓模齐登场 广州车展你想看的车模都在这里</p></a>
+                    </li>
+
+
+                    <li>
+                        <a href="http://guangzhou.auto.qq.com/a/20171119/008475.htm" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/203/232/2250/146365613.jpg" >
+                            <p class="img_tab_1">全是硬货 广州车展百万级重磅新车盘点</p></a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://kuaibao.qq.com/s/20171121A05VJP00" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/196/9/2252/146438791.jpg" >
+                            <p class="img_tab_1">30万入手130万的车 广州车展新能源车盘点</p></a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://kuaibao.qq.com/s/20171120A0CYC800" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/193/9/2252/146438788.jpg" >
+                            <p class="img_tab_1">除了豪车和车模 这些精彩同样不能错过</p></a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://kuaibao.qq.com/s/20171122A04I6800" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/191/9/2252/146438786.jpg" >
+                            <p class="img_tab_1">自古高手在民间 广州车展改装馆闲逛</p></a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://kuaibao.qq.com/s/20171123A0O4Y100" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/195/9/2252/146438790.jpg" >
+                            <p class="img_tab_1">广州车展上靓丽车模撩人 然而他们也在悄然散发魅力</p></a>
+                    </li>
+
+
+
+                </ul>
+                <div class="left-btn_section2"></div>
+                <div class="right-btn_section2"></div>
+                <div class="img-btn-list_section2"></div>
+            </div>
+        </div>
+
+        <ul class="tab">
+
+            <li><a href="http://guangzhou.auto.qq.com/a/20171126/003005.htm" target="_blank">广州车展最具气场豪华SUV 自带王者光环</a></li>
+
+            <li><a href="http://guangzhou.auto.qq.com/a/20171124/009475.htm" target="_blank">广州车展六款重磅新能源车型 不限购油耗低</a></li>
+
+            <li><a href="http://guangzhou.auto.qq.com/a/20171123/009898.htm" target="_blank">广州车展自主重磅新车 秒杀合资不叫事</a></li>
+
+            <li><a href="http://guangzhou.auto.qq.com/a/20171122/028804.htm" target="_blank">值得期待 车展上20万元内有什么新车可选？</a></li>
+
+            <li><a href="http://guangzhou.auto.qq.com/a/20171121/030238.htm" target="_blank">热门7座SUV都有哪些 最低不到8万元</a></li>
+
+
+
+
+            <li>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020024.htm" target="_blank">宝骏530<span> | </span></a>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020111.htm" target="_blank">宝马M240i M Performance限量750台</a>
+            </li>
+
+            <li>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020252.htm" target="_blank">雷克萨斯LC500h<span> | </span></a>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020235.htm" target="_blank">江淮瑞风R3首发登场</a>
+            </li>
+
+            <li>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020320.htm" target="_blank">丰田新款皇冠首发<span> | </span></a>
+                <a href="http://guangzhou.auto.qq.com/a/20171118/020300.htm" target="_blank">奥迪南方专享系列车上市</a>
+            </li>
+
+
+
+
+        </ul>
+
+        <a style="position:absolute;top:360px;left:0px;width:1000px;height:60px;" href="http://dongguan.auto.qq.com/zhuanti/dongbenGZ11-17-1.htm" target="_blank"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/30/95/204/13289355.jpg" alt="" style="width:100%;height:100%;"></a>
+    </div>
+</div>
+<!--车型优惠信息-->
+<div id="section3"  class="scroll-floor floor3">
+    <div class="section3_container">
+        <ul class="section3_list">
+            <li  class="click1">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/61/168/203/13242976.jpg" class="last_img_1">
+                <p class="list_p1">一丰卡罗拉</p>
+                <p class="list_p2">优惠1.5万元</p>
+                <p class="list_p3">限量25台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名" data-brand="10" data-id="44"  >
+                    </form>
+                </div>
+            </li>
+            <li class="click2">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/187/168/203/13243102.jpg" class="last_img_1">
+                <p class="list_p1" >传祺GS4</p>
+                <p class="list_p2">直降1.8万</p>
+                <p class="list_p3">定制版车型</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名" data-brand="22" data-id="177"  >
+                    </form>
+                </div>
+            </li>
+            <li class="click3">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/41/169/203/13243211.png" class="last_img_1">
+                <p class="list_p1">日产轩逸</p>
+                <p class="list_p2">优惠3万元</p>
+                <p class="list_p3">限量25台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名"  data-brand="11" data-id="72"  >
+                    </form>
+                </div>
+            </li>
+            <li class="click4">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/68/169/203/13243238.png" class="last_img_1">
+                <p class="list_p1" >宝马5系GT</p>
+                <p class="list_p2">优惠36.2万元</p>
+                <p class="list_p3">限量10台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名"  data-brand="1" data-id="196"  >
+                    </form>
+                </div>
+            </li>
+            <li    class="click5">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/86/169/203/13243256.png" class="last_img_1">
+                <p class="list_p1">北汽EU260</p>
+                <p class="list_p2">定金1万抵2万车款</p>
+                <p class="list_p3">限量18台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名" data-brand="96" data-id="786">
+                    </form>
+                </div>
+            </li>
+            <li  class="click6">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/91/169/203/13243261.png" class="last_img_1">
+                <p class="list_p1">启辰D60</p>
+                <p class="list_p2">优惠2000元</p>
+                <p class="list_p3">限量20台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名" data-brand="50" data-id="661" >
+                    </form>
+                </div>
+            </li>
+            <li   class="click7">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/48/170/203/13243473.png" class="last_img_1">
+                <p class="list_p1">广本冠道</p>
+                <p class="list_p2">6万贷回家</p>
+                <p class="list_p3">限量15台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名" data-brand="12" data-id="445" >
+                    </form>
+                </div>
+            </li>
+            <li class="click8">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/99/170/203/13243524.png" class="last_img_1">
+                <p class="list_p1" >奔驰GLA</p>
+                <p class="list_p2">优惠4.2万元</p>
+                <p class="list_p3">限量15台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名"  data-brand="7" data-id="61" >
+                    </form>
+                </div>
+            </li>
+            <li  class="click9">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/108/170/203/13243533.png" class="last_img_1">
+                <p class="list_p1">奥迪A4L</p>
+                <p class="list_p2">优惠8.64万元</p>
+                <p class="list_p3">限量20台</p>
+                <div class="section3_form1">
+                    <form>
+                        <p class="form_title">报名试驾</p>
+                        <label>姓名</label>
+                        <input type="text" id="name"><br>
+                        <label>电话</label>
+                        <input type="text" id="tel">
+                        <input type="button" id="submit" value="确认报名"  data-brand="8" data-id="53"  >
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <div class="section3_riimg">
+            <a href="http://guangzhou.auto.qq.com/zhuanti/2017/CZGCZT.htm" target="_blank"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/86/198/203/13250651.png"></a></div>
+    </div>
+</div>
+<div id="section4" class="scroll-floor floor4"></div>
+<div id="section6"  class="scroll-floor floor5">
+    <div class="section6_container">
+        <div class="banner">
+            <ul class="">
+
+                <!--车模-->
+                <li>
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026090.htm" target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/211/251/2251/146435491.jpg" alt="纯情少女邂逅霸气皮卡" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026170.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/212/251/2251/146435492.jpg" alt="俏佳人难掩诱人长腿" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026279.htm"  style="width:355px;height:205px;"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/213/251/2251/146435493.jpg" alt="冷艳女神上演红裙走秀" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026329.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/214/251/2251/146435494.jpg" alt="娇羞依人甜美卖萌" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026480.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/215/251/2251/146435495.jpg" alt="长腿萌妹显露迷人眼神" style="width:100%;height:100%;"></a>
+                </li>
+
+            </ul>
+            <div class="left-btn"></div>
+            <div class="right-btn"></div>
+            <div class="img-btn-list"></div>
+        </div>
+        <div class="banner2">
+            <ul class="">
+
+                <li>
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026756.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/216/251/2251/146435496.jpg" alt="白皙娇人乖巧倚车旁" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026803.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/218/251/2251/146435498.jpg" alt="端庄美人儿尽显气质" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026837.htm"  style="width:355px;height:205px;"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/219/251/2251/146435499.jpg" alt="气质女模侧身撩秀发" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/026879.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/220/251/2251/146435500.jpg" alt="性感女神俘获众人心" style="width:100%;height:100%;"></a>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171124/027034.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/221/251/2251/146435501.jpg" alt="长裙可儿媚眼传情" style="width:100%;height:100%;"></a>
+                </li>
+
+            </ul>
+            <div class="left-btn2"></div>
+            <div class="right-btn2"></div>
+            <div class="img-btn-list2"></div>
+        </div>
+    </div>
+</div>
+<div id="section7" class="scroll-floor floor3">
+    <div class="section7_container">
+        <div class="banner3">
+            <ul class="">
+                <!--高端访谈-->
+
+
+                <!--专访第一页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171121/041658.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/8/107/2251/146398568.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">李一秀</p>
+                        <p class="banner3_text">广州车展专访<br/>北汽新能源营销公司<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/032963.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/9/107/2251/146398569.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">向毅</p>
+                        <p class="banner3_text">广州车展专访<br/>广汽三菱<br/>副总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171118/027569.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autoganzhou/pics/hv1/144/48/204/13277484.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">麦超</p>
+                        <p class="banner3_text">广州车展专访<br/>东风启辰中区销售部<br/>高级督导</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035639.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/12/107/2251/146398572.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">杨阳</p>
+                        <p class="banner3_text">广州车展专访<br/>斯柯达华南区市场<br/>副总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035943.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/14/107/2251/146398574.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">米振宇</p>
+                        <p class="banner3_text">广州车展专访<br/>东风标致<br/>南区高级督导</p>
+                    </a>
+
+                </li>
+
+
+                <!--专访第二页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171123/031182.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/76/137/204/13300111.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">姚耀</p>
+                        <p class="banner3_text">广州车展专访<br/>广东浩伟集团董事<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/036218.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/221/143/2251/146407961.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">顾迎辉</p>
+                        <p class="banner3_text">广州车展专访<br/>佛山明冠汽车<br/>副总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/033881.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/223/143/2251/146407963.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">杨卓业</p>
+                        <p class="banner3_text">广州车展专访<br/>喜龙集团<br/>市场总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171119/014371.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/52/204/13278529.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">周雄</p>
+                        <p class="banner3_text">广州车展专访<br/>广东君奥汽车<br/>销售总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034032.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/225/143/2251/146407965.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">黄桐娟</p>
+                        <p class="banner3_text">广州车展专访<br/>广州粤宝销售总监<br/>君宝宝马4S店总经理</p>
+                    </a>
+
+                </li>
+
+
+                <!--专访第三页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034280.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/182/144/2251/146408177.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">罗志权</p>
+                        <p class="banner3_text">广州车展专访<br/>广东粤凯凯迪拉克<br/>副总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171118/026587.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/183/144/2251/146408178.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">陈宇轩</p>
+                        <p class="banner3_text">广州车展专访<br/>广汽传祺长盛店<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171122/018953.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/184/144/2251/146408179.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">张智松</p>
+                        <p class="banner3_text">广州车展专访<br/>广汽传褀番禺经典店<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034584.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/185/144/2251/146408180.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">黄河</p>
+                        <p class="banner3_text">广州车展专访<br/>广物汽贸<br/>培训管理部部长</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171119/014489.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/186/144/2251/146408181.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">方荣</p>
+                        <p class="banner3_text">广州车展专访<br/>广州安捷汽车<br/>副总经理</p>
+                    </a>
+
+                </li>
+
+
+                <!--专访第四页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034720.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/66/146/2251/146408571.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">吴钦华</p>
+                        <p class="banner3_text">广州车展专访<br/>宝隆汽车<br/>销售总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034834.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/67/146/2251/146408572.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">廖碧莹</p>
+                        <p class="banner3_text">广州车展专访<br/>比亚迪品牌<br/>CBD销售中心<br/>市场总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/034914.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/70/146/2251/146408575.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">胡先容</p>
+                        <p class="banner3_text">广州车展专访<br/>龙星骏宜汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035059.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/71/146/2251/146408576.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">吴惠玲</p>
+                        <p class="banner3_text">广州车展专访<br/>龙星翔鹏汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171122/018505.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/71/116/204/13294751.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">谭卓杰</p>
+                        <p class="banner3_text">广州车展专访<br/>广州南菱奥申汽车<br/>总经理</p>
+                    </a>
+
+                </li>
+
+
+                <!--专访第五页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171118/027202.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/72/146/2251/146408577.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">黄耀星</p>
+                        <p class="banner3_text">广州车展专访<br/>广州胜亚汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035126.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/166/146/2251/146408671.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">郑伟强</p>
+                        <p class="banner3_text">广州车展专访<br/>广州美狮<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035225.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/167/146/2251/146408672.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">潘文海</p>
+                        <p class="banner3_text">广州车展专访<br/>广州为众汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/036525.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/168/146/2251/146408673.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">韩向前</p>
+                        <p class="banner3_text">广州车展专访<br/>广州万帮金之星<br/>新能源汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/036668.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/169/146/2251/146408674.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">李珊珊</p>
+                        <p class="banner3_text">广州车展专访<br/>广州永佳丰田店<br/>副总经理</p>
+                    </a>
+
+                </li>
+
+
+                <!--专访第六页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035430.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/62/147/2251/146408822.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">何惠娟</p>
+                        <p class="banner3_text">广州车展专访<br/>广东有道WEY旗舰店<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171119/014773.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/63/147/2251/146408823.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">吴海锋</p>
+                        <p class="banner3_text">广州车展专访<br/>广州长悦雷克萨斯<br/>品牌经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/035576.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/65/147/2251/146408825.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">郑辉雄</p>
+                        <p class="banner3_text">广州车展专访<br/>洪榜集团<br/>执行董事及总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171118/027383.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/78/147/2251/146408838.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">陈剑辉</p>
+                        <p class="banner3_text">广州车展专访<br/>龙粤行<br/>营销总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/036830.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/80/147/2251/146408840.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">郭辰腾</p>
+                        <p class="banner3_text">广州车展专访<br/>东风启辰<br/>广州迎宾番禺专营店<br/>总经理</p>
+                    </a>
+
+                </li>
+
+
+
+                <!--专访第七页-->
+
+                <li>
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171123/030773.htm" target="_blank">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/77/137/204/13300112.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">强坤</p>
+                        <p class="banner3_text">广州车展专访<br/>广州盛迪汽车<br/>总经理</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171123/034677.htm"  target="_blank">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/78/137/204/13300113.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">康洁鸣</p>
+                        <p class="banner3_text">广州车展专访<br/>广东龙星行集团<br/>市场总监</p>
+                    </a>
+
+
+                    <a href="http://guangzhou.auto.qq.com/a/20171120/036043.htm"   target="_blank">
+                        <img src="http://img1.gtimg.com/autobeijing/pics/hv1/220/143/2251/146407960.jpg" alt="" style="width:100%;height:100%;">
+                        <p class="banner3_name">郭洪刚</p>
+                        <p class="banner3_text">广州车展专访<br/>东风南方广辰专营店<br/>总经理</p>
+                    </a>
+
+                </li>
+
+
+
+
+
+
+
+            </ul>
+            <div class="left-btn3"></div>
+            <div class="right-btn3"></div>
+            <div class="img-btn-list3"></div>
+        </div>
+    </div>
+</div>
+<div id="section8" class="scroll-floor floor1">
+    <div class="section8_container">
+        <div class="wrap">
+            <div id="d_tab29">
+                <!--豪华车型-->
+                <ul class="d_img">
+
+                    <li class="d_pos1"><a href="http://auto.qq.com/a/20171116/039487.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/46/224/2250/146363416.jpg" alt="奥迪Q8"></a></li>
+
+                    <li class="d_pos2"><a href="http://auto.qq.com/a/20171117/041125.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/225/106/2251/146398530.jpg" alt="捷豹XEL"></a></li>
+
+                    <li class="d_pos3"><a href="http://auto.qq.com/a/20171117/040296.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/192/106/2251/146398497.jpg" alt="保时捷Cayenne"></a></li>
+
+                    <li class="d_pos4"><a href="http://auto.qq.com/a/20171117/040928.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/195/106/2251/146398500.jpg" alt="沃尔沃XC60"></a></li>
+
+                    <li class="d_pos5"><a href="http://auto.qq.com/a/20171117/043054.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/194/106/2251/146398499.jpg" alt="讴歌TLX-L"></a></li>
+
+                    <li class="d_pos6"><a href="http://auto.qq.com/a/20171116/033899.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/47/224/2250/146363417.jpg" alt="宝马6系GT"></a></li>
+
+                    <li class="d_pos7"><a href="http://auto.qq.com/a/20171117/041718.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/191/106/2251/146398496.jpg" alt="AMG E63S"></a></li>
+
+                    <li class="d_pos8"><a href="http://auto.qq.com/a/20171117/025753.htm"  target="_blank"><img src="http://img1.gtimg.com/autobeijing/pics/hv1/49/224/2250/146363419.jpg" alt="宝马M5"></a></li>
+
+
+                </ul>
+                <ul class="d_menu">
+                </ul>
+                <p class="d_prev"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/6/165/203/13242156.png" alt=""></p>
+                <p class="d_next"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/7/165/203/13242157.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .fl img { width: 36px; margin: 0;}
+
+    .footernew {width:910px;height:100px;color:#515151;text-align:center;font-size:12px;line-height:24px;margin:12px auto 20px auto;overflow:hidden;}
+    .footheight{height:60px;}
+    .footernew a {color:#515151;text-decoration:none;}
+    .footernew a.lchot {color:#bd0a01;}
+    .footernew a:hover {color:#bd0a01;text-decoration:underline;}
+    .footernew a:visited {color:#515151;}
+    .footernew div{width:546px; margin:0 auto;}
+    .footernew p{float:left;width:120px;height:50px;border:1px solid #d2d2d2;padding:0;line-height:20px; margin:6px;font-size:12px;}
+    .footernew .fl{float:left;padding:3px;}
+    .footernew .fr{float:right; width:72px;padding:5px 3px 0 3px;}
+
+    @media only screen and (min-width: 100px) and (max-width: 930px) {
+        .footernew { display: none;}
+    }
+</style>
+<!--底部 开始-->
+<div class="footernew" onclick="register0410('footer',1);">
+    <a href="http://www.tencent.com/" target="_blank">关于腾讯</a> | <a href="http://gd.qq.com/gydyym.htm" target="_blank">关于腾讯·大粤网</a> | <a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://open.qq.com/" target="_blank">开放平台</a> | <a href="http://gd.qq.com/gydyym.htm#ad" target="_blank">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank">商务洽谈</a> | <a href="http://gd.qq.com/gdzp.htm" target="_blank">腾讯·大粤网招聘</a> | <a href="http://hr.tencent.com/" target="_blank">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank">腾讯公益</a> | <a href="http://gd.qq.com/gdmap/index.htm" target="_blank">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">版权所有</a> | <a href="http://gd.qq.com/a/20170228/026676.htm" target="_blank">转载须知</a><br>
+
+    <a href="http://www.szga.gov.cn" target="_blank">有害短信息举报</a> | <a href="http://www.gdis.cn/admin/newstext_netsun.asp" class="lchot" target="_blank">阳光·绿色网络工程</a> | <a href="http://www.qq.com/copyright.shtml" target="_blank">版权保护投诉指引</a> | <a href="http://www.gdca.gov.cn/" target="_blank">广东省通管局</a> | <a href="http://www.qq.com/scio.htm" target="_blank">新闻信息服务许可证</a> | <a href="http://www.qq.com/internet_licence.htm" target="_blank">互联网出版许可证</a><br>
+
+    <span style="line-height:30px;"><a href="http://www.qq.com/xwdz.shtml" target="_blank">粤府新函[2001]87号</a> <a href="http://www.qq.com/culture.shtml" target="_blank">文网文[2008]084号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank">B2-20090028</a></span><br>
+    <span style="font-family:Arial;">Copyright &copy; 1998 - <script language="javascript">document.write(new Date().getFullYear());</script>2017 Tencent. All Rights Reserved</span>
+
+</div>
+<div class="footernew footheight">
+    <div style="width:678px;">
+        <p>
+            <span class="fl"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="http://img1.qq.com/www/pics/816/816587.gif" width="36" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank">深圳网络警<br>
+        察报警平台</a></span>
+        </p>
+        <p>
+
+            <span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank"><img src="http://img1.qq.com/www/pics/6743/6743671.jpg" width="36" height="42" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank">公共信息安<br>
+        全网络监察</a></span>
+        </p>
+
+        <p>
+            <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"><img src="http://mat1.qq.com/www/images/ind36.gif" width="35" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" class="lcblack" target="_blank">经营性网站<br>
+
+        备案信息</a></span>
+        </p>
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://net.china.cn/chinese/index.htm" target="_blank"><img src="http://mat1.qq.com/www/images/200709/home_b.gif" width="44" height="44" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://net.china.cn/chinese/index.htm" class="lcblack" target="_blank">不良信息<br>
+        举报中心</a></span>
+        </p>
+
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://www.wenming.cn" target="_blank"><img src="http://mat1.qq.com/www/images/allskin/wmlogo.gif" width="44" height="42" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://www.wenming.cn" class="lcblack" target="_blank">中国文明网<br>传播文明</a></span>
+        </p>
+    </div>
+</div>
+
+<a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none" bossZone="fankui"></a>
+
+<a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none" bossZone="defaulthome"></a>
+
+<a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+
+<a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载" style="display:none" bossZone="minidown"></a>
+<!--e6dcd797284a2fe7c374538dde98ca6b--><!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+<!--底部 结束-->
+<script src="http://123.207.87.32/act/zxq_commonCode/js/jquery-1.11.0.min.js"></script>
+<script src="http://123.207.87.32/act/zxq_projectCode/commonImg/AD/jquery.DB_rotateRollingBanner.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://123.207.87.32/act/zxq_commonCode/js/mnAlert.js" charset="utf-8"></script>
+<script src="http://123.207.87.32/act/zxq_commonCode/js/jquery.SuperSlide.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jQuery(".m-slide").slide({ titCell:".tab li", mainCell:".img",effect:"fold", autoPlay:true});
+</script>
+<script type="text/javascript">
+    function bannerListFn(a,b,c,d,e,f){
+        var $bannerMaxWapDom=a;
+        var windowWidth=$(window).width();
+        var timeShow=0;
+        var array=0;
+        var timeOff=0;
+        var imgPos=$bannerMaxWapDom.find("ul").find("li");
+        var cloneOne=imgPos.first().clone();
+        $bannerMaxWapDom.find("ul").append(cloneOne);
+        $bannerMaxWapDom.find("li").width(windowWidth);
+        var liWidth=imgPos.width();
+        var liLength=$bannerMaxWapDom.find("li").length;
+        $bannerMaxWapDom.find("ul").width(liWidth*(liLength+1));
+        var $imgBtnList=b;
+        setTimeout(function(i){
+            timeShow++;
+            (timeShow == 1) ? $bannerMaxWapDom.find("ul").fadeIn() : $bannerMaxWapDom.find("ul").hide();
+        },20);
+        (e === undefined) ? e=2000 : e=e;
+        function imgListBtn (){
+            for (var i=0; i < liLength-1; i++ ){
+                $imgBtnList.append("<span></span>");
+            }
+            $imgBtnList.children().eq(0).addClass("current");
+            $imgBtnList.children().click(function(){
+                var index=$(this).index();
+                array=index;
+                bannerImgList(index);
+                $imgBtnList.children().eq(array).addClass("current").siblings().removeClass("current");
+            });
+        }
+        imgListBtn();
+        function bannerImgList(a){
+            $bannerMaxWapDom.find("ul").animate({left: -a*windowWidth},400)
+        }
+        function setTime(){
+            timeOff=setInterval(function(){
+                array++;
+                move();
+            },e)
+        }
+        (f) ? setTime() : setTime;
+        c.stop(true).click(function(){
+            array--;
+            move();
+        });
+        d.stop(true).click(function(){
+            array++;
+            move();
+        });
+        function move(){
+            if (array == liLength){
+                $bannerMaxWapDom.find("ul").css({left:0});
+                array=1;
+            }
+            if (array == -1){
+                $bannerMaxWapDom.find("ul").css({left:-liWidth*(liLength-1)});
+                array=liLength-2
+            }
+            $bannerMaxWapDom.find("ul").stop(true).animate({
+                left:-array*liWidth
+            });
+            (array == liLength-1) ? $imgBtnList.children().eq(0).addClass("current").siblings().removeClass("current") : $imgBtnList.children().eq(array).addClass("current").siblings().removeClass("current");
+        }
+        $bannerMaxWapDom.hover(function(){
+            clearInterval(timeOff);
+        },function(){(f) ? setTime() : setTime;});
+    }
+    $('.section3_list li').hover(function() {
+        $(this).find('.section3_form1').css('display','block')
+    }, function() {
+        $(this).find('.section3_form1').css('display','none')
+    });
+
+</script>
+
+<script type="text/javascript">
+    $('#d_tab29').DB_rotateRollingBanner({
+
+        key:"c37080",
+
+        moveSpeed:200,
+
+        autoRollingTime:40000
+
+    })
+
+    bannerListFn(
+        $(".banner"),
+        $(".img-btn-list"),
+        $(".left-btn"),
+        $(".right-btn"),
+        6000,
+        true
+    );
+    bannerListFn(
+        $(".banner2"),
+        $(".img-btn-list2"),
+        $(".left-btn2"),
+        $(".right-btn2"),
+        6000,
+        true
+    );
+    bannerListFn(
+        $(".banner3"),
+        $(".img-btn-list3"),
+        $(".left-btn3"),
+        $(".right-btn3"),
+        6000,
+        true
+    );
+    bannerListFn(
+        $(".banner_section2"),
+        $(".img-btn-list_section2"),
+        $(".left-btn_section2"),
+        $(".right-btn_section2"),
+        6000,
+        true
+    );
+</script>
+<script type="text/javascript" charset="utf-8">
+    (function(window){
+        var defaults = {
+            floorClass : '.scroll-floor',
+            navClass : '.scroll-nav',
+            activeClass : 'active',
+            activeTop : 100,
+            scrollTop : 100,
+            delayTime : 200
+        };
+
+        var $body = $('body'),floorList = null,navList = null;
+        function getItem(_list,newOptions){
+            var data = [];
+            _list.each(function() {
+                var item = {};
+                item.$obj = $body.find(this);
+                item.$activeTop = $body.find(this).offset().top - newOptions.activeTop;
+                item.$scrollTop = $body.find(this).offset().top + newOptions.scrollTop;
+                data.push(item);
+            });
+            return data;
+        }
+
+        function scrollActive(_list,newOptions){
+            var nowScrollTop = $(window).scrollTop();
+            var data = getItem(floorList,newOptions);
+
+            $.each(data,function(i,item){
+                if(nowScrollTop > item.$activeTop){
+                    _list.removeClass(newOptions.activeClass).eq(i).addClass(newOptions.activeClass);
+                }
+            });
+        }
+
+        function clickActive(_index,newOptions){
+            var data = getItem(floorList,newOptions);
+            $('html,body').animate({'scrollTop' : data[_index].$scrollTop},newOptions.delayTime);
+        }
+
+        var scroll_floor = window.scrollFloor = function(options){
+            var newOptions = $.extend({}, defaults, options);
+            floorList = $body.find(newOptions.floorClass);
+            navList = $body.find(newOptions.navClass);
+
+
+            scrollActive(navList,newOptions);
+
+            $(window).bind('scroll',function(){scrollActive(navList,newOptions);});
+            navList.bind('click',function(){
+                var _index = $body.find(this).index();
+                clickActive(_index,newOptions);
+            });
+        }
+    })(window);
+</script>
+<script type="text/javascript">
+    $('.more').click(function(){
+        $(this).hide();
+        $('.floor3').eq(1).css('height',2000);
+    });
+    scrollFloor({
+        floorClass : '.scroll-floor',       //楼层盒子class;默认为'.scroll-floor'
+        navClass : '.scroll-nav',           //导航盒子class;默认为'.scroll-nav'
+        activeClass : 'active',             //导航高亮class;默认为'active'
+        delayTime:300,                      //点击导航，滚动条滑动到该位置的时间间隔;默认为200
+        activeTop:200,                      //楼层到窗口的某个位置时，导航高亮（设置该位置）;默认为100
+        scrollTop:0                         //点击导航，楼层滑动到窗口的某位置;默认为100
+    });
+</script>
+<script type="text/javascript">
+    $(function(){
+        var flag = true;
+        $('.section3_list li').on('click','#submit',function(){
+            if(flag) {
+                var name=$(this).parent().find("#name").val(),  //姓名
+                    tel=$(this).parent().find("#tel").val(),    //电话
+                    brand_id = $(this).attr('data-brand'),//车型
+                    series_id =$(this).attr('data-id'),//车型,
+                    act_id = 829,
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data= {
+                        name:name,
+                        phone:tel,
+                        series_id:series_id,
+                        brand_id:brand_id,
+                        act_id:act_id
+                    };
+                console.log(brand_id)
+                //判断填写是否正确
+                if(name==''){
+                    $.MsgBox.Alert('请输入您的姓名');
+                    return false;
+                }
+                if(tel==''){
+                    $.MsgBox.Alert('请输入您的手机号码');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    $.MsgBox.Alert('请输入正确的中文名');
+                    return false;
+                }
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    $.MsgBox.Alert('手机格式不正确');
+                    return false;
+                }
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            $.MsgBox.Alert('恭喜你，报名成功！');
+                            flag = false;
+                            // $('#myform')[0].reset();
+                            setInterval(function(){
+                                window.location.reload();
+                            },1000)
+
+                        }else{
+                            $.MsgBox.Alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                $.MsgBox.Alert("请勿重复提交！")
+            }
+        })
+    });
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260055531'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260055531' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<style>#cnzz_stat_icon_1260055531,#cnzz_stat_icon_1260102516,#cnzz_stat_icon_1260842227,#cnzz_stat_icon_1260919928,#cnzz_stat_icon_1255711023,#cnzz_stat_icon_1260771396,#cnzz_stat_icon_1261301380,#cnzz_stat_icon_1261327484{display:none;}</style>
+
+</body>
+</html>

@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=1200,user-scalable=no" />
+    <title>焕新生 享前行 全新一代宝来，与新一代进取者共鸣</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .cn2 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/69/95/210/13679544.jpg") top center no-repeat;
+            height: 753px;
+        }
+        .cn3 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/70/95/210/13679545.jpg") top center no-repeat;
+            height: 444px;
+        }
+        .cn4 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/71/95/210/13679546.jpg") top center no-repeat;
+            height: 1147px;
+        }
+        .cn5 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/72/95/210/13679547.jpg") top center no-repeat;
+            height: 667px;
+        }
+        .cn6 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/73/95/210/13679548.jpg") top center no-repeat;
+            height: 833px;
+        }
+        .cn {
+            position: relative;
+        }
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 257px;
+            width: 1200px;
+            height: 480px;
+            margin-left: -600px;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 22px;
+            padding-left: 10px;
+        }
+        .bmk p {
+            width: 535px;
+            height: 60px;
+            margin-left: 0;
+            margin-top: 0;
+            display: inline-block;
+        }
+        .bmk p:nth-child(odd) {
+            margin-right: 113px;
+        }
+        .bmk .prov,.bmk .city,.bmk .dealers,.bmk .series {
+            margin-top: 77px;
+            width: 545px;
+        }
+        .bmk .dealers,.bmk .series {
+            margin-top: 74px;
+        }
+        .bmk .submit {
+            margin-left: 390px;
+            margin-top: 64px;
+            width: 397px;
+            height: 74px;
+            cursor: pointer;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 494px;
+            top: 357px;
+        }
+        .privacyPolicy input{width:18px !important;height:18px !important}
+        .privacyPolicy span{display:inline-block;font-size:18px;color:#000;position: relative;top: -2px;}
+        .privacyPolicy a{color:#000}
+        .cn4Dor {
+            position: absolute;
+            left: 50%;
+            top: 105px;
+            width: 1200px;
+            height: 60px;
+            margin-left: -600px;
+        }
+        .cn4Dor ul {
+            width: 900px;
+            height: 60px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .cn4Dor ul li {
+            position: relative;
+            float: left;
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            -webkit-transform: skew(-10deg);
+            -moz-transform: skew(-10deg);
+            -ms-transform: skew(-10deg);
+            -o-transform: skew(-10deg);
+            transform: skew(-10deg);
+            cursor: pointer;
+        }
+        .cn4Dor ul li.active {
+            color: #bfa47a;
+        }
+        .cn4Dor ul li.active:after {
+            position: absolute;
+            left: 59px;
+            top: 55px;
+            content: '';
+            clear: both;
+            border-bottom: 1px solid #bfa47a;
+            width: 70px;
+        }
+        .cn4Main {
+            position: absolute;
+            left: 50%;
+            top: 231px;
+            width: 1200px;
+            height: 867px;
+            margin-left: -600px;
+        }
+        .cn4Main ul {
+            width: 100%;
+        }
+        .cn4Main ul li {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1200px;
+            height: auto;
+            display: none;
+        }
+        .cn5Main {
+            position: absolute;
+            left: 50%;
+            top: 138px;
+            width: 1000px;
+            height: 450px;
+            margin-left: -500px;
+            overflow: hidden;
+        }
+        .ac-1000 {width: 1000px;margin: 0 auto;position: relative;}
+        #featured-area {height:479px; width: 1000px; margin:0 auto 0; border:none; position:absolute;top:2px;}
+        #featured-area img{border:none;}
+        .roundabout-holder {list-style:none;height:450px; width:703px;  margin:0 auto;}
+        .roundabout-moveable-item {font-size:12px!important; height:450px; width:703px; cursor:pointer;}
+        .roundabout-moveable-item img {height:100%; width:100%; background-color:#FFFFFF; margin:0;}
+        .roundabout-in-focus {cursor:auto;}
+        .roundabout-in-focus:hover {-webkit-box-shadow:0px 0px 20px #787878; -moz-box-shadow:0px 0px 20px #787878; background:#f9f9f9;}
+        .roundabout-holder span	 {display:none; font-size:11px;}
+        .roundabout-in-focus:hover span	{display:inline; position:absolute; bottom:5px; right:5px; padding:0px 0px; background:#f9f9f9; color:#8A428B; z-index:999; -webkit-border-top-left-radius: 5px; -moz-border-radius-topLeft: 5px; font-size : 11px; border-left:1px solid #aaaaaa; border-top:1px solid #aaaaaa;}
+        .roundabout a:active, .roundabout a:focus, .roundabout a:visited {outline:none; text-decoration:none;}
+        .roundabout li {margin:0}
+        #featured-area .ban_l_btn,#featured-area .ban_r_btn{ position: absolute; top: 50%;margin-top:-36px; left:42px; display: block; width: 38px; height: 67px; background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/67/95/210/13679542.png) no-repeat; z-index: 999; overflow: hidden; }
+        #featured-area .ban_r_btn{ left:auto; right:42px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/66/95/210/13679541.png) no-repeat }
+        .table {
+            position: absolute;
+            left: 50%;
+            top: 112px;
+            width: 1240px;
+            height: 351px;
+            margin-left: -600px;
+            overflow: auto;
+        }
+        table td{background: #fff;font-size: 12px; color:#aeaeae; text-align:center;}
+        .ga3 td{ border:1px solid #000;  color:#000;  }
+        .ga33 td{ border:1px solid #000; background-color:#544034;  color:#fff;  }
+        .ga3 tr:nth-child(odd) td{background:#a17c51;}
+        .ga3 tr:nth-child(even) td{ background:#aeaeae; }
+        .uu1 td{background: #6f573c;}
+        #roll1 {position:relative; height:300px; width:1200px; z-index:1;}
+        .mCSB_scrollTools {
+            right: 4px;
+        }
+        .mCSB_inside > .mCSB_container {
+             margin-right: 0px;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail {
+            background-color: #aeaeae !important;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail {
+            width: 12px;
+            height: 100%;
+            margin: 0 auto;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            width: 12px;
+            background-color: #544034 !important;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="banner"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/68/95/210/13679543.jpg" alt=""></div>
+    <div class="cn cn2">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" maxlength="11">
+            </p>
+            <p class="prov" style="margin-right: 103px">
+                <select id="prov"></select>
+            </p>
+            <p class="city">
+                <select id="city">
+                </select>
+            </p>
+            <p class="dealers" style="margin-right: 103px">
+                <select id="dealers"></select>
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="182">全新一代宝来</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="cn cn3"></div>
+    <div class="cn cn4">
+        <div class="cn4Dor">
+            <ul>
+                <li class="active">外观</li>
+                <li>内饰</li>
+                <li>动力</li>
+                <li>安全</li>
+                <li>科技</li>
+            </ul>
+        </div>
+        <div class="cn4Main">
+            <ul>
+                <li style="display: block;"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/74/95/210/13679549.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/81/95/210/13679556.png" alt="">
+                    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/82/95/210/13679557.png" alt="">
+                </li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/77/95/210/13679552.png" alt=""></li>
+                <li>
+                    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/79/95/210/13679554.png" alt="">
+                    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/80/95/210/13679555.png" alt="">
+                </li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/78/95/210/13679553.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cn cn5">
+        <div class="cn5Main">
+            <div class="ac-1000">
+                <div id="featured-area" class="ppt">
+                    <ul class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
+                        <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/83/95/210/13679558.jpg" ></li>
+                        <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/84/95/210/13679559.jpg" ></li>
+                        <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/85/95/210/13679560.jpg" ></li>
+                        <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/86/95/210/13679561.jpg" ></li>
+                        <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/87/95/210/13679562.jpg" ></li>
+                    </ul>
+                    <a href="javascript:void(0)" class="ban_l_btn"></a>
+                    <a href="javascript:void(0)" class="ban_r_btn"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cn cn6">
+        <div class="table">
+            <div class="hh12">
+                <div class="pzhead" >
+                    <table width="1180" cellspacing="0" cellpadding="0" class="ga33" style="  border-collapse:collapse;border:none;line-height:24px;">
+                        <tr>
+                            <td rowspan="2" > 车型 </td>
+                            <td colspan="6" > 1.5L </td>
+                            <td colspan="2" > 280TSI (1.4T) </td>
+                        </tr>
+                        <tr>
+                            <td width="10%"> 手动时尚 </td>
+                            <td width="10%"> 自动时尚 </td>
+                            <td width="10%"> 手动舒适 </td>
+                            <td width="10%"> 自动舒适 </td>
+                            <td width="10%"> 自动精英 </td>
+                            <td width="10%"> 自动豪华 </td>
+                            <td width="10%"> 自动精英 </td>
+                            <td width="10%"> 自动豪华 </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="roll1" class="configuration_bd">
+                    <div class="tabs2_context">
+                        <table width="1180" cellspacing="0" cellpadding="0" class="ga3" style="  border-collapse:collapse;border:none;line-height:24px;">
+                            <tr>
+                                <td colspan="9">参数</td>
+                            </tr>
+                            <tr>
+                                <td >长(mm)</td>
+                                <td colspan="8" >4,663</td>
+                            </tr>
+                            <tr>
+                                <td >宽(mm)</td>
+                                <td colspan="8" >1,815</td>
+                            </tr>
+                            <tr>
+                                <td >高(mm)</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,473</td>
+                                <td width="10%">1,462</td>
+                                <td width="10%">1,473</td>
+                            </tr>
+                            <tr>
+                                <td >轴距(mm)</td>
+                                <td colspan="8" >2,688</td>
+                            </tr>
+                            <tr>
+                                <td >后备厢容积(L)</td>
+                                <td colspan="8" >506</td>
+                            </tr>
+                            <tr>
+                                <td >油箱容积(L)</td>
+                                <td colspan="8" >50</td>
+                            </tr>
+                            <tr>
+                                <td >最小转弯直径(m)</td>
+                                <td colspan="8" >11.3</td>
+                            </tr>
+                            <tr>
+                                <td >最小离地间隙(mm)</td>
+                                <td colspan="8" >126</td>
+                            </tr>
+                            <tr>
+                                <td >整备质量(kg)</td>
+                                <td >1,235 </td>
+                                <td >1,270 </td>
+                                <td >1,235 </td>
+                                <td >1,270 </td>
+                                <td >1,270 </td>
+                                <td >1,270 </td>
+                                <td >1,315 </td>
+                                <td >1,315 </td>
+                            </tr>
+                            <tr>
+                                <td >发动机型式</td>
+                                <td colspan="6" >EA211直列四缸16气阀电控燃油喷射</td>
+                                <td colspan="2" >涡轮增压/直列四缸16气阀电控燃油缸内直接喷射</td>
+                            </tr>
+                            <tr>
+                                <td >发动机排量(L)</td>
+                                <td colspan="6" >1.498</td>
+                                <td colspan="2" >1.395</td>
+                            </tr>
+                            <tr>
+                                <td >额定功率(kW/rpm)</td>
+                                <td colspan="6" >85 / 6,000</td>
+                                <td colspan="2" >110 / 5,000 - 6,000</td>
+                            </tr>
+                            <tr>
+                                <td >最大扭矩(N·m/rpm)</td>
+                                <td colspan="6" >150 / 4,000</td>
+                                <td colspan="2" >250 / 1,750 - 3,000</td>
+                            </tr>
+                            <tr>
+                                <td >变速箱型式</td>
+                                <td >5档手动</td>
+                                <td >6档手/自动一体</td>
+                                <td >5档手动</td>
+                                <td >6档手/自动一体</td>
+                                <td >6档手/自动一体</td>
+                                <td >6档手/自动一体</td>
+                                <td >7档手自动一体DSG®双离合</td>
+                                <td >7档手自动一体DSG®双离合</td>
+                            </tr>
+                            <tr>
+                                <td >最高车速(km/h)</td>
+                                <td >185</td>
+                                <td >185</td>
+                                <td >185</td>
+                                <td >185</td>
+                                <td >185</td>
+                                <td >185</td>
+                                <td >210</td>
+                                <td >210</td>
+                            </tr>
+                            <tr>
+                                <td >0-100km/h加速(s)</td>
+                                <td >11.6</td>
+                                <td >12.6</td>
+                                <td >11.6</td>
+                                <td >12.6</td>
+                                <td >12.6</td>
+                                <td >12.6</td>
+                                <td >8.3</td>
+                                <td >8.3</td>
+                            </tr>
+                            <tr>
+                                <td >综合工况油耗(L/100km)</td>
+                                <td >5.5</td>
+                                <td >5.5</td>
+                                <td >5.5</td>
+                                <td >5.5</td>
+                                <td >5.5</td>
+                                <td >5.5</td>
+                                <td >5.4</td>
+                                <td >5.4</td>
+                            </tr>
+                            <tr>
+                                <td >悬架系统（前/后）</td>
+                                <td colspan="8" >前：麦弗逊式独立悬架 / 后：纵向拖臂式非独立悬架</td>
+                            </tr>
+                            <tr>
+                                <td >制动系统</td>
+                                <td colspan="8" >前通风盘式/后盘式</td>
+                            </tr>
+                            <tr>
+                                <td >转向系统</td>
+                                <td colspan="8" >EPS电子助力转向</td>
+                            </tr>
+                            <tr>
+                                <td >排放标准</td>
+                                <td colspan="8" >国五排放标准</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">外观</td>
+                            </tr>
+                            <tr>
+                                <td >LED动感犀利前大灯</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >LED日间行车灯</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >虎牙式前雾灯（带弯道辅助照明）</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >鹰嘴式LED尾灯</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >LED高位刹车灯</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >外后视镜集成LED侧转向灯</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >外后视镜照地灯</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >15英寸时尚铝轮辋/195轮胎</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >16英寸动感铝轮辋/205轮胎</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >16英寸豪华铝轮辋/205轮胎</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >17英寸运动铝轮辋/225轮胎</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >○2</td>
+                                <td >○2</td>
+                                <td >○2</td>
+                                <td >○2</td>
+                                <td >○2</td>
+                                <td >○2</td>
+                            </tr>
+                            <tr>
+                                <td >散热器格栅镀铬</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >进气格栅镀铬</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >侧窗下沿镀铬装饰条</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前雾灯镀铬</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >车身运动标识</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后保险杠镀铬装饰条</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >双侧装饰镀铬尾管</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >窗式天线</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >动感车顶鲨鱼鳍天线</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >○3</td>
+                                <td >○3</td>
+                                <td >○3</td>
+                                <td >●</td>
+                                <td >○3</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >智能防夹大尺寸电动天窗</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+
+                            <tr>
+                                <td >内饰</td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td >IMD饰条</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >眼镜盒</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >精致织物座椅</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >高级皮革座椅</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >高级真皮座椅</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >6向手动调节司机座椅</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >6向电动调节司机座椅</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >手动无级调节司机座椅腰托</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >可单独分级调节前座椅加热</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >○1</td>
+                                <td >○1</td>
+                                <td >○1</td>
+                                <td >●</td>
+                                <td >○1</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >真皮换挡手柄</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排高度可调中央扶手带储物盒</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排中央通道带杯座</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排中央通道带卡槽</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >司机侧便利卡槽</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后排中央扶手</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前后室内灯带关闭延时功能</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前门扣手和门护板饰条氛围灯</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >仪表板饰条氛围灯</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >司机/副司机遮阳板带化妆镜</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >点烟器/烟灰盒</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前座椅靠背地图袋</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >门槛迎宾饰条 </td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >安全</td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td >激光焊接工艺高强度车身</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >智能电子防盗系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >ESP车身稳定系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >MKB多次碰撞预防系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >ABS防抱死制动系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >ASR驱动防滑系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >HBA液压制动辅助系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >Auto Hold 自动驻车</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >EPB电子手刹</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >RKA智能胎压监控系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排高度可调预紧式安全带</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >司机安全带未系提醒</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >副司机安全带未系提醒</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后排三点式安全带</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后排安全带未系提醒</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >WOKS主动式安全头枕</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前后排高度可调头枕</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后倒车雷达</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前倒车雷达</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >倒车紧急制动</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >泊车后视影像系统</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >Front Assist预碰撞安全系统（带CEB城市紧急制动）</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排正面双安全气囊</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前排侧面双安全气囊</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >两侧头部气帘</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >手动防眩目内后视镜</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >ISOFIX儿童座椅固定装置</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后门儿童安全锁</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >功能</td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td >智能多功能行车电脑</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >彩屏智能多功能行车电脑</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >大灯离回家功能</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >大灯感光自动开启</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >雨量传感器</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >定速巡航</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >发动机启停及能量回收系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >Clean Air PM 2.5高效空气净化系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >节能环保空调</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                            </tr>
+                            <tr>
+                                <td >双区自动恒温空调</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后排出风口</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >高度及长度可调方向盘</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >三幅真皮方向盘</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >多功能方向盘</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >自动后备箱照明</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >电动可调外后视镜</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >可加热外后视镜</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >防紫外线绿色隔热玻璃</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >四门一键式防夹电动车窗</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >车门未关报警 </td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >大灯未关提醒 </td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >遥控钥匙</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >前风窗无骨雨刮</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >后风窗加热</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >行李箱内部开启</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >4/6可分体折叠后排座椅</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >无钥匙进入</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >无钥匙启动系统</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >Eco 经济型驾驶模式</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >MIB-G Standard Update 信息娱乐系统</td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > — </td>
+                                <td > ● </td>
+                                <td > — </td>
+                            </tr>
+                            <tr>
+                                <td >智能车载导航多媒体系统(8寸彩色触摸屏/实时路况导航/自然语音控制/Car Life, Car Play及MirrorLink手机映射/USB 接口)</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >○3</td>
+                                <td >○3</td>
+                                <td >○3</td>
+                                <td >●</td>
+                                <td >○3</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >6喇叭立体声音响系统</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >输入接口 (SD/USB)</td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > — </td>
+                                <td > ● </td>
+                                <td > — </td>
+                            </tr>
+                            <tr>
+                                <td >后排双USB充电接口</td>
+                                <td >—</td>
+                                <td >—</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                                <td >●</td>
+                            </tr>
+                            <tr>
+                                <td >蓝牙手机免提系统</td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                                <td > ● </td>
+                            </tr>
+                            <tr>
+                                <td colspan="9">注：具体车型信息请以实车为准，或咨询当地经销商</td>
+                            </tr>
+                            <tr>
+                                <td colspan="9" >1. ● 标准装备   ○ 选装装备     — 不提供<br />2.选装包定义  (1) 前排座椅加热  (2) 17英寸铝车轮  (3) 智能车载导航多媒体系统<br />3.外饰颜色：星辰蓝、魔力灰、玫瑰红、锰石黑、海贝金、极地白、闪光银</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="base">
+    <!--底部 开始-->
+    <div class="foot" id="footer" bossZone="footer">
+        <div class="footernew" role="contentinfo" style="height:124px;">
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a
+                href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a
+                href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a
+                href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a
+                href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a
+                href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a
+                href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a
+                href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">腾讯公益</a> | <a
+                href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/"
+                                                                                      target="_blank" rel="nofollow">网站导航</a>
+            | <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a
+                href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank"
+                rel="nofollow">版权所有</a><br>
+            <a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">深圳公安局</a> | <a
+                href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot"
+                                                                                                         href="http://www.gdis.cn/admin/newstext_netsun.asp"
+                                                                                                         target="_blank"
+                                                                                                         rel="nofollow"
+                                                                                                         style="color: #bd0a01;">阳光·绿色网络工程</a>
+            | <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a
+                href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+            <span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a> <a
+                    href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a
+                    href="http://www.qq.com/cbst.shtml" target="_blank"
+                    rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+                                                                      rel="nofollow">粤B2-20090059</a> <a
+                    href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+		 </span><br>
+            <a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a
+                href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+            违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备 44030002000001号</span><img
+                style="vertical-align: text-bottom;" } src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png"
+                width="16" height="16"></a><br>
+            <span style="font-family:Arial;">Copyright  1998 - 2017 Tencent. All Rights Reserved</span>
+        </div>
+    </div>
+    <div class="footernew footheight" style="width:1000px;" bossZone="footer">
+        <div style="width:680px;">
+            <p>
+                <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow"><img width="35" height="43" border="0"
+                                                                        alt="经营性网站备案信息"
+                                                                        src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+                <span class="fr"><a target="_blank" class="lcblack"
+                                    href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow">经营性网站<br>
+				备案信息</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img
+                        width="44" height="44" border="0" alt="中国互联网举报中心"
+                        src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank"
+                                                        rel="nofollow">中国互联网<br>
+				举报中心</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img
+                        width="44" height="42" border="0" alt="中国文明网传播文明"
+                        src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank"
+                                                        rel="nofollow">中国文明网<br>传播文明</a></span>
+            </p>
+            <p style="width:128px;height:52px;border:0;">
+                <span style="padding:0;" class="fl"><a
+                        href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337"
+                        target="_blank" rel="nofollow"><img border="0" alt="诚信网站"
+                                                            src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a
+                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank"
+                        rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg"
+                                            title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack"
+                                                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+                                                        target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+            </p>
+        </div>
+    </div>
+    <a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+       bossZone="fankui"></a>
+    <a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none"
+       bossZone="defaulthome"></a>
+    <a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+    <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+       style="display:none" bossZone="minidown"></a>
+    <!--e6dcd797284a2fe7c374538dde98ca6b--><!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+    <!--底部 结束-->
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.roundabout.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des=[
+        {"DEALER_CODE":"S244002","DEALER_NAME":"广州庞大兴众汽车销售有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市荔城区增城大道三联路段（金马香颂居旁）","BRAND_ID":"0","SERVICE_PHONE":"020-26232888","EMAIL":"S244002@part.faw-vw.com","LONGITUDE":"113.796302","LATITUDE":"23.285348","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2016/1/21 14:53:21","UPDATE_USER":"cd2999aa-abd1-442e-a163-a22939dbc9c3","UPDATE_TIME":"2016/4/6 17:24:37","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"广州庞大兴众","DEALER_NAME_EN":"S244002","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S735036","DEALER_NAME":"厦门市海沧盈众汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市海沧区马青路1001号","BRAND_ID":"0","SERVICE_PHONE":"13696902736","LONGITUDE":"113.29022","LATITUDE":"22.77913","CREATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","CREATE_TIME":"2017/8/31 15:31:05","UPDATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","UPDATE_TIME":"2017/8/31 15:31:05","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"厦门海沧盈众","DEALER_NAME_EN":"S735036","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744081","DEALER_NAME":"深圳市安进誉隆汽车销售服务有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙华新区东环一路1号安进誉隆一汽大众","BRAND_ID":"0","SERVICE_PHONE":"13670000508","LONGITUDE":"113.34112","LATITUDE":"23.03362","CREATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","CREATE_TIME":"2017/8/31 15:33:13","UPDATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","UPDATE_TIME":"2017/8/31 15:33:13","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"深圳安进誉隆","DEALER_NAME_EN":"S744081","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S745026","DEALER_NAME":"南宁恒信众联汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西省南宁市高新区罗文大道与大学西路交汇处恒信汽车城内","BRAND_ID":"0","SERVICE_PHONE":"13986647711","LONGITUDE":"108.49489","LATITUDE":"22.55228","CREATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","CREATE_TIME":"2017/8/31 15:39:00","UPDATE_USER":"0adbe99e-ea2c-4490-98e9-0a4793713370","UPDATE_TIME":"2017/8/31 15:39:00","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"南宁恒信众联","DEALER_NAME_EN":"S745026","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S744069","DEALER_NAME":"东莞庞大一众汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市长安镇沙头南区振安中路683号","BRAND_ID":"0","SERVICE_PHONE":"0769-81875958","SALES_PHONE":"0769-81879888","AFTER_SALES_PHONE":"0769-81875958","EMAIL":"2229726626@qq.com","LONGITUDE":"113.764067","LATITUDE":"22.786236","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"dd0a0fde-058e-492f-86e7-ff41f9956bb5","UPDATE_TIME":"2015/9/8 11:34:17","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523861","FAX":"0769-81876049","DEALER_NAME_SIM":"东莞庞大一众","DEALER_NAME_EN":"S744069","DEALER_NAME_EN1":"Dong Guan Pang Da Yi Zhong","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S743035","DEALER_NAME":"湖南兰天众远汽车销售有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南兰天众远汽车销售有限公司","BRAND_ID":"0","SERVICE_PHONE":"00000000","LONGITUDE":"113.2222","LATITUDE":"23.29921","CREATE_USER":"004b85eb-b19e-4b27-994c-c81c3b0c1a8a","CREATE_TIME":"2017/12/5 16:11:55","UPDATE_USER":"004b85eb-b19e-4b27-994c-c81c3b0c1a8a","UPDATE_TIME":"2017/12/5 16:14:32","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"湖南兰天众远","DEALER_NAME_EN":"S743035","distributeNum":"1","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744082","DEALER_NAME":"东莞市永慧汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市塘厦镇林村大陂头12号","BRAND_ID":"0","SERVICE_PHONE":"0769-87908000","LONGITUDE":"113.27847","LATITUDE":"23.15227","CREATE_USER":"004b85eb-b19e-4b27-994c-c81c3b0c1a8a","CREATE_TIME":"2018/6/26 15:09:22","UPDATE_USER":"004b85eb-b19e-4b27-994c-c81c3b0c1a8a","UPDATE_TIME":"2018/6/26 15:09:22","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"东莞永慧","DEALER_NAME_EN":"S744082","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S944002","DEALER_NAME":"广东君乐汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市白云区机场路888号广物汽贸内","BRAND_ID":"0","SERVICE_PHONE":"020-86328882－801/802","SALES_PHONE":"86328882","AFTER_SALES_PHONE":"020-86328680","EMAIL":"ffandcc@163.com","LONGITUDE":"113.267498","LATITUDE":"23.190607","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"0c0d1e45-e435-4201-bb6c-ce658df8fa66","UPDATE_TIME":"2014/11/19 15:05:18","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"510410","FAX":"020-86329249","IsUpdated":"True","DEALER_NAME_SIM":"广东君乐","DEALER_NAME_EN":"S944002","DEALER_NAME_EN1":"Guang Dong Jun Le","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S944012","DEALER_NAME":"深圳市香蜜湖奇建大众","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市福田区红荔西路香蜜湖联合华鹏专业市场内","BRAND_ID":"0","SERVICE_PHONE":"0755-83052273 0755-28696900","SALES_PHONE":"0755-83052246","AFTER_SALES_PHONE":"0755-83052320","EMAIL":"S944012@part.faw-vw.com","LONGITUDE":"114.038352","LATITUDE":"22.547379","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"004b85eb-b19e-4b27-994c-c81c3b0c1a8a","UPDATE_TIME":"2018/1/11 16:49:29","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518048","IsUpdated":"True","DEALER_NAME_SIM":"深圳奇建","DEALER_NAME_EN":"S944012","DEALER_NAME_EN1":"Shen Chou Qi Jian","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744011","DEALER_NAME":"东莞市捷达通贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市南城区莞太路新基路段(往虎门方向）","BRAND_ID":"0","SERVICE_PHONE":"0769-22906933","SALES_PHONE":"0769-22909788","AFTER_SALES_PHONE":"0769-22906933","EMAIL":"JDT1999@163.com","LONGITUDE":"113.738101","LATITUDE":"23.006941","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"73862173-6a37-4b3a-bb8d-fb5dc4be5ae5","UPDATE_TIME":"2015/7/15 10:04:39","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523076","FAX":"0769-22983261","IsUpdated":"True","DEALER_NAME_SIM":"东莞捷达","DEALER_NAME_EN":"S744011","DEALER_NAME_EN1":"Dong Guan Jie Da","distributeNum":"258","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744019","DEALER_NAME":"广州市锦众汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市天河区奥体路53号（地铁4号线黄村站D出口奥体中心东门对面）","BRAND_ID":"0","SERVICE_PHONE":"020-82169028","SALES_PHONE":"020-8216 8618","AFTER_SALES_PHONE":"020-82169028","EMAIL":"s744019@part.faw-vw.com","LONGITUDE":"113.419203","LATITUDE":"23.141369","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"312f53a2-045c-4a03-9e72-39d036848b59","UPDATE_TIME":"2016/6/4 17:03:32","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"530630","FAX":"020-82168654","IsUpdated":"True","DEALER_NAME_SIM":"广州锦众","DEALER_NAME_EN":"S744019","DEALER_NAME_EN1":"Guang Zhou Jin Zhong","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744021","DEALER_NAME":"深圳市安进汽车贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市罗湖区新秀路东益汽车广场B15号","BRAND_ID":"0","SERVICE_PHONE":"0755-25117222","SALES_PHONE":"0755-25123322","AFTER_SALES_PHONE":"0755-25117222","EMAIL":"s744021@part.faw-vw.com","LONGITUDE":"114.149583","LATITUDE":"22.552711","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"06779c8d-1332-4c42-8f2f-6ecedfee2465","UPDATE_TIME":"2015/5/25 17:36:39","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518002","FAX":"0755-25126023","IsUpdated":"True","DEALER_NAME_SIM":"深圳安进","DEALER_NAME_EN":"S744021","DEALER_NAME_EN1":"Shen Chou An Jin","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744031","DEALER_NAME":"佛山市合诚汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区桂澜路石啃路段","BRAND_ID":"0","SERVICE_PHONE":"0757-86367111","SALES_PHONE":"0757-86367111","AFTER_SALES_PHONE":"0757-86264111","EMAIL":"S744031@part.faw-vw.com","LONGITUDE":"113.159425","LATITUDE":"23.00364","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"0d5cfb51-e425-424a-86c8-0419ee1f65de","UPDATE_TIME":"2015/4/17 11:45:34","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"528200","FAX":"0757-86256039","DEALER_NAME_SIM":"佛山合诚","DEALER_NAME_EN":"S744031","DEALER_NAME_EN1":"Fu Shan He Cheng","COMMON_ORDER_GET_TYPE":"province","distributeNum":"126","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744050","DEALER_NAME":"佛山市顺德区世锦汽车贸易有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市顺德区大良105国道广珠公路新松路段顺德世锦一汽大众4S店（桂畔海旁）","BRAND_ID":"0","SERVICE_PHONE":"0757-22380030","SALES_PHONE":"0757-22380030","AFTER_SALES_PHONE":"0757-22380033","EMAIL":"s744050@part.faw-vw.com","LONGITUDE":"113.242381","LATITUDE":"22.856412","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"e86fa967-4fe4-41e2-857b-2037bda3b29f","UPDATE_TIME":"2016/8/18 16:28:08","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"528300","FAX":"0757-22381036","DEALER_NAME_SIM":"佛山顺德世锦","DEALER_NAME_EN":"S744050","DEALER_NAME_EN1":"Fu Shan Shun De Shi Jin","COMMON_ORDER_GET_TYPE":"city","distributeNum":"29","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744035","DEALER_NAME":"东莞市昌发汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市莞太路虎门白沙路段","BRAND_ID":"0","SERVICE_PHONE":"0769-89271000","SALES_PHONE":"0769-89271000","AFTER_SALES_PHONE":"0769-89271008","EMAIL":"S744035@part.faw-vw.com","LONGITUDE":"113.676828","LATITUDE":"22.867519","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"System","UPDATE_TIME":"2014/2/14 11:08:05","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523912","FAX":"0769-85131811","IsUpdated":"True","DEALER_NAME_SIM":"东莞昌发","DEALER_NAME_EN":"S744035","DEALER_NAME_EN1":"Dong Guan Chang Fa","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S945001","DEALER_NAME":"广西弘捷汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西南宁市江南区南站大道北侧","BRAND_ID":"0","SERVICE_PHONE":"0771-4920468","SALES_PHONE":"0771-4920456","AFTER_SALES_PHONE":"0771-4920468","EMAIL":"s945001@part.faw-vw.com","LONGITUDE":"108.25451","LATITUDE":"22.77501","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"1e31514a-4898-4e25-a3d9-96d0a747ef15","UPDATE_TIME":"2015/5/26 10:42:45","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"530031","FAX":"0771-4866886","IsUpdated":"True","DEALER_NAME_SIM":"广西弘捷","DEALER_NAME_EN":"S945001","DEALER_NAME_EN1":"Guang Xi Hong Jie","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S943001","DEALER_NAME":"湖南汽车城永通有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市星沙中南汽车世界H08栋","BRAND_ID":"0","SERVICE_PHONE":"0731-82870939","SALES_PHONE":"0731-82870978","AFTER_SALES_PHONE":"0731-82870939","EMAIL":"S943001@part.faw-vw.com","LONGITUDE":"113.072473","LATITUDE":"28.240693","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"7adad80f-007f-47ab-a868-cbee8e6dc36d","UPDATE_TIME":"2015/8/10 9:28:24","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410100","FAX":"0731-2870921","IsUpdated":"True","DEALER_NAME_SIM":"湖南汽车城永通","DEALER_NAME_EN":"S943001","DEALER_NAME_EN1":"Hu Nan Qi Che Cheng Yong Tong","COMMON_ORDER_GET_TYPE":"city","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S743009","DEALER_NAME":"湖南华洋汽车贸易有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市雨花区黄谷路308号","BRAND_ID":"0","SERVICE_PHONE":"0731-85065555","SALES_PHONE":"0731-85048888","AFTER_SALES_PHONE":"0731-85065555","EMAIL":"276983237@qq.com","LONGITUDE":"113.035815","LATITUDE":"28.087926","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"f4c38d30-e38a-443d-a0f8-311af5dcd76d","UPDATE_TIME":"2016/3/8 11:33:04","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410014","FAX":"0731-85065599","IsUpdated":"True","DEALER_NAME_SIM":"湖南华洋","DEALER_NAME_EN":"S743009","DEALER_NAME_EN1":"Hu Nan Hua Yang","distributeNum":"874","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S935001","DEALER_NAME":"福建省福京汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市仓山区黄山高速连接口华夏汽车城","BRAND_ID":"0","SERVICE_PHONE":"0591-83433311","SALES_PHONE":"4008966222","AFTER_SALES_PHONE":"0591-83495981","EMAIL":"s935001@part.faw-vw.com","LONGITUDE":"119.356488","LATITUDE":"26.018299","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"428527bb-af89-4667-a4ba-740b186b1872","UPDATE_TIME":"2016/3/10 15:18:43","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"350019","FAX":"0591-83402994","IsUpdated":"True","DEALER_NAME_SIM":"福建福京","DEALER_NAME_EN":"S935001","DEALER_NAME_EN1":"Fu Jian Fu Jing","COMMON_ORDER_GET_TYPE":"province","distributeNum":"84","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735011","DEALER_NAME":"福州永力通汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市五四北利嘉路（山姆小镇对面）","BRAND_ID":"0","SERVICE_PHONE":"0591-87956577","SALES_PHONE":"0591-87956577","AFTER_SALES_PHONE":"0591-87957799","EMAIL":"fzyonglitong@163.com","LONGITUDE":"119.326922","LATITUDE":"26.139169","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"0c0d1e45-e435-4201-bb6c-ce658df8fa66","UPDATE_TIME":"2015/7/15 15:54:27","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"350013","FAX":"0591-87921777","DEALER_NAME_SIM":"福州永力通","DEALER_NAME_EN":"S735011","DEALER_NAME_EN1":"Fu Zhou Yong Li Tong","distributeNum":"47","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S744015","DEALER_NAME":"广州市梅花园汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市广州大道北梅花园汽车修理厂内一汽-大众","BRAND_ID":"0","SERVICE_PHONE":"020-37290572","SALES_PHONE":"020-37290396、37290934","AFTER_SALES_PHONE":"020-37290572","EMAIL":"dingdang8004@qq.com","LONGITUDE":"113.325719","LATITUDE":"23.185046","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"cd2999aa-abd1-442e-a163-a22939dbc9c3","UPDATE_TIME":"2016/4/6 17:25:08","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"510510","FAX":"020-37290466","IsUpdated":"True","DEALER_NAME_SIM":"广州梅花园","DEALER_NAME_EN":"S744015","DEALER_NAME_EN1":"Guang Zhou Mei Hua Yuan","COMMON_ORDER_GET_TYPE":"province","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744023","DEALER_NAME":"深圳市昊天林实业有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市宝安区107国道西乡段洲石立交西北侧（世纪车城旁）","BRAND_ID":"0","SERVICE_PHONE":"0755-27497000","SALES_PHONE":"0755-27497000","AFTER_SALES_PHONE":"0755-27497000","EMAIL":"yeqi@htl-auto.com","LONGITUDE":"113.859793","LATITUDE":"22.623908","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"b4ea86fd-2c89-404d-bb57-945ba4400ea6","UPDATE_TIME":"2016/5/4 13:18:08","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518032/518102","FAX":"0755-83708403","DEALER_NAME_SIM":"深圳昊天林","DEALER_NAME_EN":"S744023","DEALER_NAME_EN1":"Shen Chou Hao Tian Lin","COMMON_ORDER_GET_TYPE":"city","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744012","DEALER_NAME":"东莞市新大地汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市寮步镇莞樟路塘唇段55号","BRAND_ID":"0","SERVICE_PHONE":"0769-83266988/ 0769-22600001","SALES_PHONE":"0769-83266988","AFTER_SALES_PHONE":"0769-22266238","EMAIL":"s744012@part.faw-vw.com","LONGITUDE":"113.865091","LATITUDE":"23.022734","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"d613306f-c2ff-4714-96c2-7a2c4c991f70","UPDATE_TIME":"2014/11/14 12:29:24","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523407","FAX":"0769-83266987","DEALER_NAME_SIM":"东莞新大地","DEALER_NAME_EN":"S744012","DEALER_NAME_EN1":"Dong Guan Xin Da Di","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744039","DEALER_NAME":"佛山市南海区拓华汽车贸易有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区桂城文华北路5号","BRAND_ID":"0","SERVICE_PHONE":"0757-86368988","SALES_PHONE":"0757-86368988","AFTER_SALES_PHONE":"0757-86368981","EMAIL":"249788670@qq.com","LONGITUDE":"113.146517","LATITUDE":"23.042977","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"3aa39abb-5ebb-425b-8ac6-a715f8c29ee2","UPDATE_TIME":"2015/4/22 8:58:09","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"528200","FAX":"0757-86368998","IsUpdated":"True","DEALER_NAME_SIM":"佛山南海拓华","DEALER_NAME_EN":"S744039","DEALER_NAME_EN1":"Fu Shan Nan Hai Tuo Hua","COMMON_ORDER_GET_TYPE":"city","distributeNum":"59","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S745015","DEALER_NAME":"广西鑫广达长久汽车商贸有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西南宁市西乡塘区科园大 道55号鑫广达汽车城内","BRAND_ID":"0","SERVICE_PHONE":"0771-3220666","SALES_PHONE":"0771-3220555","AFTER_SALES_PHONE":"0771-3220666","EMAIL":"xgdyqdz@sina.com","LONGITUDE":"108.278116","LATITUDE":"22.864581","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"5162face-bf5c-4f0d-8feb-62494e0dc604","UPDATE_TIME":"2015/6/20 1:40:38","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"530003","FAX":"0771-3213555","IsUpdated":"True","DEALER_NAME_SIM":"广西鑫广达长久","DEALER_NAME_EN":"S745015","DEALER_NAME_EN1":"Guang Xi Xin Guang Da Chang Jiu","COMMON_ORDER_GET_TYPE":"city","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S735007","DEALER_NAME":"厦门市盈众汽车销售有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市湖里区嘉禾路799号(高殿加油站旁)","BRAND_ID":"0","SERVICE_PHONE":"0592-6028088","SALES_PHONE":"0592-6025588","AFTER_SALES_PHONE":"0592-6028088","EMAIL":"498372801@qq.com","LONGITUDE":"118.121437","LATITUDE":"24.52948","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"295f27b5-f858-4223-90e8-b6f87f4da4e2","UPDATE_TIME":"2016/3/2 16:25:23","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"361006","FAX":"0592-6032188","DEALER_NAME_SIM":"厦门盈众","DEALER_NAME_EN":"S735007","DEALER_NAME_EN1":"Xia Men Ying Zhong","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744046","DEALER_NAME":"广东物通凯骏汽车有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市迎宾路183号物通汽车城广地花园南侧","BRAND_ID":"0","SERVICE_PHONE":"020-34820699 020-84566281","SALES_PHONE":"020-84566281","AFTER_SALES_PHONE":"020-84566289","EMAIL":"461846128@qq.com","LONGITUDE":"113.343744","LATITUDE":"23.020868","CREATE_USER":"System","CREATE_TIME":"2007/7/11 8:53:57","UPDATE_USER":"a9d9a2bf-9e5f-445d-8c96-d356bf756d7a","UPDATE_TIME":"2015/1/9 12:02:54","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"511430","FAX":"020-84566223","DEALER_NAME_SIM":"广东物通凯骏","DEALER_NAME_EN":"S744046","DEALER_NAME_EN1":"Guang Dong Wu Tong Kai Jun","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S746004","DEALER_NAME":"海南博世汽车服务有限公司","FK_CITY_ID":"196","FK_PROVINCE_ID":"31","ADDRESS":"海口市南海大道59号中国电信大楼隔壁","BRAND_ID":"0","SERVICE_PHONE":"0898-66830310","SALES_PHONE":"0898-66830320","AFTER_SALES_PHONE":"0898-66830360","EMAIL":"messiahye@qq.com","LONGITUDE":"110.328529","LATITUDE":"20.001223","CREATE_USER":"System","CREATE_TIME":"2007/12/6 8:18:32","UPDATE_USER":"d628ef74-529f-4e9e-9c96-986ea5c75b09","UPDATE_TIME":"2016/2/2 10:38:18","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"570216","FAX":"0898-66808335","DEALER_NAME_SIM":"海南博世","DEALER_NAME_EN":"S746004","DEALER_NAME_EN1":"Hai Nan Bo Shi","distributeNum":"66","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"海南","CITY_NAME":"海口市"},
+        {"DEALER_CODE":"S735023","DEALER_NAME":"福州盈众汽车有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"（盈众汽车城）福州大学城国宾大道源通东路","BRAND_ID":"0","SERVICE_PHONE":"0591-88001999","SALES_PHONE":"0591-88001998/888","AFTER_SALES_PHONE":"0591-88001999","EMAIL":"S735023@part.faw-vw.com","LONGITUDE":"119.207467","LATITUDE":"26.080385","CREATE_USER":"System","CREATE_TIME":"2009/5/4 18:13:18","UPDATE_USER":"e86fa967-4fe4-41e2-857b-2037bda3b29f","UPDATE_TIME":"2016/8/5 10:44:28","DELETE_FLAG":"False","STATUS":"1","FAX":"0591-88001995","IsUpdated":"True","DEALER_NAME_SIM":"福州盈众","DEALER_NAME_EN":"S735023","DEALER_NAME_EN1":"Fu Zhou Ying Zhong","COMMON_ORDER_GET_TYPE":"province","distributeNum":"47","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735022","DEALER_NAME":"厦门致远汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"福建省厦门市湖里区金尚路1968号（车管所路口卢厝加油站旁）","BRAND_ID":"0","SERVICE_PHONE":"0592-5733088","SALES_PHONE":"0592-2195588","AFTER_SALES_PHONE":"0592-5733088","EMAIL":"S735022@part.faw-vw.com","LONGITUDE":"118.155306","LATITUDE":"24.522023","CREATE_USER":"System","CREATE_TIME":"2009/5/5 15:14:51","UPDATE_USER":"4a20c631-7830-46df-bc75-908feb693de2","UPDATE_TIME":"2015/12/29 14:07:44","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"361000","FAX":"0592-5730988","IsUpdated":"True","DEALER_NAME_SIM":"厦门致远","DEALER_NAME_EN":"S735022","DEALER_NAME_EN1":"Xia Men Zhi Yuan","COMMON_ORDER_GET_TYPE":"province","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744048","DEALER_NAME":"广州市健稳汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市番禺区桥南街蚬涌村市南公路西侧（番禺大道北市桥二桥旁）","BRAND_ID":"0","SERVICE_PHONE":"020-34615200","SALES_PHONE":"020-34615201","AFTER_SALES_PHONE":"020-34615200","EMAIL":"gzjwpx@163.com","LONGITUDE":"113.400502","LATITUDE":"22.92565","CREATE_USER":"System","CREATE_TIME":"2009/11/20 15:34:22","UPDATE_USER":"65d850e3-755c-4957-a0a4-68146c7dcab9","UPDATE_TIME":"2015/7/22 9:44:33","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"511483","FAX":"020-84697493","IsUpdated":"True","DEALER_NAME_SIM":"广州健稳","DEALER_NAME_EN":"S744048","DEALER_NAME_EN1":"Guang Zhou Jian Wen","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744049","DEALER_NAME":"广州市大吉汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市白云区白云大道北1395号（白云堡立交往从化方向第3个红绿灯调头直行500米南菱汽车城内）","BRAND_ID":"0","SERVICE_PHONE":"020-28806988","SALES_PHONE":"020-2880 6918","AFTER_SALES_PHONE":"020-28806988","EMAIL":"S744049@part.faw-vw.com","LONGITUDE":"113.311228","LATITUDE":"23.238085","CREATE_USER":"System","CREATE_TIME":"2010/3/8 15:28:31","UPDATE_USER":"c7796b3d-5893-46bf-a96b-45ec42e279c0","UPDATE_TIME":"2016/1/11 16:33:33","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"510440","FAX":"020-28806955","IsUpdated":"True","DEALER_NAME_SIM":"广州大吉","DEALER_NAME_EN":"S744049","DEALER_NAME_EN1":"Guang Zhou Da Ji","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744051","DEALER_NAME":"深圳市南方腾龙汽车销售服务有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市南山区南头关口二路嘉进隆前海汽车城A区2层02号","BRAND_ID":"0","SERVICE_PHONE":"0755-26462895","SALES_PHONE":"0755-86035166","AFTER_SALES_PHONE":"0755-26462895","EMAIL":"s744051@part.faw-vw.com","LONGITUDE":"113.914235","LATITUDE":"22.5421","CREATE_USER":"System","CREATE_TIME":"2010/7/7 13:33:17","UPDATE_USER":"44b40bce-41e8-4c59-8238-dbca758078ab","UPDATE_TIME":"2015/11/18 16:32:54","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518052","FAX":"0755-26462639","DEALER_NAME_SIM":"深圳南方腾龙","DEALER_NAME_EN":"S744051","DEALER_NAME_EN1":"Shen Chou Nan Fang Teng Long","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S743016","DEALER_NAME":"湖南中拓瑞众汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南省长沙市芙蓉南路二段123号","BRAND_ID":"0","SERVICE_PHONE":"0731-85226798","SALES_PHONE":"0731-85226768","AFTER_SALES_PHONE":"0731-85226798","EMAIL":"s743016@part.faw-vw.com","LONGITUDE":"112.995324","LATITUDE":"28.103389","CREATE_USER":"System","CREATE_TIME":"2010/11/9 19:22:32","UPDATE_USER":"41ba3add-48fd-4d02-8d21-ac824ad5bade","UPDATE_TIME":"2015/12/13 13:16:13","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410000","FAX":"0731-84721808","IsUpdated":"True","DEALER_NAME_SIM":"湖南中拓瑞众","DEALER_NAME_EN":"S743016","DEALER_NAME_EN1":"Hu Nan Zhong Tuo Rui Zhong","COMMON_ORDER_GET_TYPE":"city","distributeNum":"874","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S735027","DEALER_NAME":"福州致远汽车销售服务有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福建省福清市龙江街道倪埔村口","BRAND_ID":"0","SERVICE_PHONE":"0591-85970222","SALES_PHONE":"0591-85970333","AFTER_SALES_PHONE":"0591-85970222","EMAIL":"s735027@part.faw-vw.com","LONGITUDE":"119.404579","LATITUDE":"25.697206","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"ea344e3e-b194-4798-b4fc-7181ba2b0e71","UPDATE_TIME":"2015/7/4 10:27:40","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"350300","FAX":"0591-85970883","DEALER_NAME_SIM":"福州致远","DEALER_NAME_EN":"S735027","DEALER_NAME_EN1":"Fu Zhou Zhi Yuan","distributeNum":"46","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735026","DEALER_NAME":"厦门君达汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"福建省厦门市同安区圳南二路89号（同安高速路口旁）","BRAND_ID":"0","SERVICE_PHONE":"0592-7191788","SALES_PHONE":"0592-7153888","AFTER_SALES_PHONE":"0592-7191788","EMAIL":"xmjd@enjoyauto.com","LONGITUDE":"118.137155","LATITUDE":"24.671118","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"0411dae4-6406-4ed6-a6f3-ba7036094538","UPDATE_TIME":"2015/4/28 9:55:50","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"361100","FAX":"0592-7191789","IsUpdated":"True","DEALER_NAME_SIM":"厦门君达","DEALER_NAME_EN":"S735026","DEALER_NAME_EN1":"Xia Men Jun Da","COMMON_ORDER_GET_TYPE":"city","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S746005","DEALER_NAME":"海南博众汽车销售有限公司","FK_CITY_ID":"196","FK_PROVINCE_ID":"31","ADDRESS":"海南省海口市秀英区南海大道237号","BRAND_ID":"0","SERVICE_PHONE":"0898-68603110","SALES_PHONE":"0898-68603399","AFTER_SALES_PHONE":"0898-68603110","EMAIL":"1725375686@qq.com","LONGITUDE":"110.280096","LATITUDE":"20.002527","CREATE_USER":"System","CREATE_TIME":"2012/2/1 11:52:29","UPDATE_USER":"49b7c485-bfec-4825-92a3-2919c57cd26e","UPDATE_TIME":"2017/1/19 9:35:51","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"570125","FAX":"0898-68603939","DEALER_NAME_SIM":"海南博众","DEALER_NAME_EN":"S746005","DEALER_NAME_EN1":"Hai Nan Bo Zhong","COMMON_ORDER_GET_TYPE":"province","distributeNum":"276","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"海南","CITY_NAME":"海口市"},
+        {"DEALER_CODE":"S744057","DEALER_NAME":"东莞市鸿众汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市常平镇环常西路桥梓路段桥南路1号","BRAND_ID":"0","SERVICE_PHONE":"0769-81915999","SALES_PHONE":"0769-81915888","AFTER_SALES_PHONE":"0769-81915999","EMAIL":"S744057@part.faw-vw.com","LONGITUDE":"113.972061","LATITUDE":"22.974472","CREATE_USER":"System","CREATE_TIME":"2012/2/10 14:18:31","UPDATE_USER":"e8cb9ab6-0b5b-407d-bc11-a5da0c9e419e","UPDATE_TIME":"2015/7/3 9:19:38","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523560","FAX":"0769-82523866","DEALER_NAME_SIM":"东莞鸿众","DEALER_NAME_EN":"S744057","DEALER_NAME_EN1":"Dong Guan Hong Zhong","COMMON_ORDER_GET_TYPE":"city","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744060","DEALER_NAME":"东莞市锦众汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市厚街镇三屯村S256省道旁","BRAND_ID":"0","SERVICE_PHONE":"0769-85990101","SALES_PHONE":"0769-85992323","AFTER_SALES_PHONE":"15820861818","EMAIL":"sales@dgjinzhong.com.cn","LONGITUDE":"113.691062","LATITUDE":"22.959262","CREATE_USER":"System","CREATE_TIME":"2012/2/10 14:28:27","UPDATE_USER":"0bed0960-b3ec-402f-8240-24b44b399175","UPDATE_TIME":"2016/2/15 11:03:22","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523960","FAX":"0769-85992012","DEALER_NAME_SIM":"东莞锦众","DEALER_NAME_EN":"S744060","DEALER_NAME_EN1":"Dong Guan Jin Zhong","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744058","DEALER_NAME":"佛山市英丰汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市禅城区五峰四路与东鄱南路交汇处","BRAND_ID":"0","SERVICE_PHONE":"0757-66630868 0757-66630880","SALES_PHONE":"0757-66630888","AFTER_SALES_PHONE":"0757-66630866","EMAIL":"cjfsy@163.com","LONGITUDE":"113.101095","LATITUDE":"23.033114","CREATE_USER":"System","CREATE_TIME":"2012/5/14 15:19:49","UPDATE_USER":"2fd4bad0-a3b2-4f28-b017-8c4b3c6a4364","UPDATE_TIME":"2015/3/30 13:39:03","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"528000","FAX":"0757-82306392","DEALER_NAME_SIM":"佛山英丰","DEALER_NAME_EN":"S744058","DEALER_NAME_EN1":"Fu Shan Ying Feng","COMMON_ORDER_GET_TYPE":"city","distributeNum":"126","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744056","DEALER_NAME":"广州市南菱万众汽车维修服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市花都区新华街镜湖大道10号自编之二","BRAND_ID":"0","SERVICE_PHONE":"020-28615555","SALES_PHONE":"020-28615500","AFTER_SALES_PHONE":"020-28615555","EMAIL":"S744056@part.faw-vw.com","LONGITUDE":"113.249416","LATITUDE":"23.362826","CREATE_USER":"System","CREATE_TIME":"2012/12/27 20:05:34","UPDATE_USER":"65d850e3-755c-4957-a0a4-68146c7dcab9","UPDATE_TIME":"2015/8/6 17:57:05","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"510800","FAX":"020-28615508","DEALER_NAME_SIM":"广州南菱万众","DEALER_NAME_EN":"S744056","DEALER_NAME_EN1":"Guang Zhou Nan Ling Wan Zhong","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S735029","DEALER_NAME":"福建永通达汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市闽侯县祥谦镇枕峰村斜对面","BRAND_ID":"0","SERVICE_PHONE":"0591-22260069","SALES_PHONE":"0591-22260038","AFTER_SALES_PHONE":"0591-22260069","EMAIL":"s735029@part.faw-vw.com","LONGITUDE":"119.40345","LATITUDE":"25.944707","CREATE_USER":"System","CREATE_TIME":"2013/1/7 17:12:56","UPDATE_USER":"b4749846-7e2e-4848-8a71-af9f798a906b","UPDATE_TIME":"2015/5/30 15:49:29","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"350000","FAX":"0591-22260033","DEALER_NAME_SIM":"福建永通达","DEALER_NAME_EN":"S735029","DEALER_NAME_EN1":"Fu Jian Yong Tong Da","distributeNum":"46","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S744063","DEALER_NAME":"深圳市北奇建贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙岗区南通道爱南路99号","BRAND_ID":"0","SERVICE_PHONE":"0755-28696969","SALES_PHONE":"0755-28696900","AFTER_SALES_PHONE":"0755-28696900","EMAIL":"S744063@part.faw-vw.com","LONGITUDE":"114.293598","LATITUDE":"22.714417","CREATE_USER":"System","CREATE_TIME":"2013/1/9 23:53:32","UPDATE_USER":"753bfbbe-d57f-45d3-a94b-27d3cc3a7dfe","UPDATE_TIME":"2016/5/23 18:03:35","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518000","FAX":"0755-28696901","DEALER_NAME_SIM":"深圳北奇建","DEALER_NAME_EN":"S744063","DEALER_NAME_EN1":"Shen Chou Bei Qi Jian","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744067","DEALER_NAME":"佛山市瀚众汽车贸易服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市禅城区南庄镇紫洞路（佛山一环季华西出口）","BRAND_ID":"0","SERVICE_PHONE":"0757-88036853","SALES_PHONE":"0757-88020888","AFTER_SALES_PHONE":"0757-83632999","EMAIL":"fshz88@163.com","LONGITUDE":"113.01306","LATITUDE":"22.999021","CREATE_USER":"System","CREATE_TIME":"2013/1/15 13:24:56","UPDATE_USER":"243d1146-5eba-40b9-91cb-b5ec2b027750","UPDATE_TIME":"2015/10/11 17:03:49","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"528061","FAX":"0757-88038900","IsUpdated":"True","DEALER_NAME_SIM":"佛山瀚众","DEALER_NAME_EN":"S744067","DEALER_NAME_EN1":"Fu Shan Han Zhong","distributeNum":"125","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S735032","DEALER_NAME":"厦门明至汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市集美区岩昌路129号","BRAND_ID":"0","SERVICE_PHONE":"0592-2678999","SALES_PHONE":"0592-5799188","AFTER_SALES_PHONE":"0592-2678999","EMAIL":"S735032@part.faw-vw.com","LONGITUDE":"118.044805","LATITUDE":"24.630854","CREATE_USER":"System","CREATE_TIME":"2013/1/26 20:12:28","UPDATE_USER":"5e585f94-513e-4127-9630-5aab16ecc840","UPDATE_TIME":"2015/6/16 10:08:54","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"361000","FAX":"0592-5772377","IsUpdated":"True","DEALER_NAME_SIM":"厦门明至","DEALER_NAME_EN":"S735032","DEALER_NAME_EN1":"Xia Men Ming Zhi","distributeNum":"52","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S743021","DEALER_NAME":"湖南永通汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市望城区金星北路大湖林场旁","BRAND_ID":"0","SERVICE_PHONE":"0731-8838 9777","SALES_PHONE":"0731-8838 9000","AFTER_SALES_PHONE":"0731-88053900","EMAIL":"S743021@part.faw-vw.com","LONGITUDE":"112.892455","LATITUDE":"28.328558","CREATE_USER":"System","CREATE_TIME":"2013/2/21 15:19:45","UPDATE_USER":"40d80a44-c9e3-4664-9254-4d8a3d786e00","UPDATE_TIME":"2015/7/6 18:26:13","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410219","FAX":"0731-88053911","DEALER_NAME_SIM":"湖南永通","DEALER_NAME_EN":"S743021","DEALER_NAME_EN1":"Hu Nan Yong Tong","distributeNum":"102","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744066","DEALER_NAME":"东莞市东深奇建汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市樟木头镇莞樟西路樟深路交汇处","BRAND_ID":"0","SERVICE_PHONE":"0769-39019006","SALES_PHONE":"0769-39019008","AFTER_SALES_PHONE":"0769-39019006","EMAIL":"s744066@part.faw-vw.com","LONGITUDE":"114.084202","LATITUDE":"22.912123","CREATE_USER":"System","CREATE_TIME":"2013/6/26 9:31:34","UPDATE_USER":"e86fa967-4fe4-41e2-857b-2037bda3b29f","UPDATE_TIME":"2016/9/13 13:34:16","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"523618","DEALER_NAME_SIM":"东莞东深奇建","DEALER_NAME_EN":"S744066","DEALER_NAME_EN1":"Dong Guan Dong Shen Qi Jian","distributeNum":"149","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"s743022","DEALER_NAME":"湖南华洋众广汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市高新区东方红路与枫林三路交汇处麓谷汽车世界B9区","BRAND_ID":"0","SERVICE_PHONE":"0731-88398111","SALES_PHONE":"0731-88441111","AFTER_SALES_PHONE":"0731-88398111","EMAIL":"S743022@part.faw-vw.com","LONGITUDE":"112.901229","LATITUDE":"28.222847","CREATE_USER":"System","CREATE_TIME":"2013/9/2 14:43:22","UPDATE_USER":"10c20653-df96-4b79-acc3-6ee019e06169","UPDATE_TIME":"2015/6/7 10:11:39","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410205","IsUpdated":"True","DEALER_NAME_SIM":"湖南华洋众广","DEALER_NAME_EN":"s743022","DEALER_NAME_EN1":"Hu Nan Hua Yang Zhong Guang","COMMON_ORDER_GET_TYPE":"city","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744068","DEALER_NAME":"广州庞大一众汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市番禺区石壁街105国道以东","BRAND_ID":"0","SERVICE_PHONE":"020-31003699","SALES_PHONE":"020-31003688","AFTER_SALES_PHONE":"020-31003699","EMAIL":"gzpd_sc@163.com","LONGITUDE":"113.285815","LATITUDE":"23.072179","CREATE_USER":"System","CREATE_TIME":"2013/12/20 11:01:39","UPDATE_USER":"5828e797-4742-4541-8958-a9728210b284","UPDATE_TIME":"2015/8/9 11:23:22","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"511400","FAX":"020-31003611","DEALER_NAME_SIM":"广州庞大一众","DEALER_NAME_EN":"S744068","DEALER_NAME_EN1":"Guang Zhou Pang Da Yi Zhong","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S743026","DEALER_NAME":"浏阳永通汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"浏阳市关口工业小区","BRAND_ID":"0","SERVICE_PHONE":"0731-83011999","SALES_PHONE":"0731-83836888","AFTER_SALES_PHONE":"0731-83011999","EMAIL":"16127157@163.com","LONGITUDE":"113.649718","LATITUDE":"28.187748","CREATE_USER":"system","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"3a82a0e5-e01c-41d1-a003-d3161b591d2c","UPDATE_TIME":"2015/8/2 11:07:47","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"410300","FAX":"0731-83288858","DEALER_NAME_SIM":"浏阳永通","DEALER_NAME_EN":"S743026","DEALER_NAME_EN1":"Liu Yang Yong Tong","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S745021","DEALER_NAME":"广西鑫广达博冠汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"南宁市昆仑大道116号大盆坡","BRAND_ID":"0","SERVICE_PHONE":"0771-2869088","SALES_PHONE":"0771-2869688","AFTER_SALES_PHONE":"0771-2869088","EMAIL":"xgdbg2012@126.com","LONGITUDE":"108.399071","LATITUDE":"22.87513","CREATE_USER":"system","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"02797bc7-f505-437d-ab3e-65777fa75ff5","UPDATE_TIME":"2016/4/30 12:23:43","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"530007","FAX":"0771-2448997","DEALER_NAME_SIM":"广西鑫广达博冠","DEALER_NAME_EN":"S745021","DEALER_NAME_EN1":"Guang Xi Xin Guang Da Bo Guan","COMMON_ORDER_GET_TYPE":"city","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S744064","DEALER_NAME":"深圳市清水河奇建贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市罗湖区清水河三路18号深业车城博兴大厦BX-101号","BRAND_ID":"0","SERVICE_PHONE":"0755-29002222","SALES_PHONE":"0755-29001111","AFTER_SALES_PHONE":"0755-82126611","EMAIL":"qingshuiheqijian@163.com","LONGITUDE":"114.117386","LATITUDE":"22.583094","CREATE_USER":"system","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"d5a97058-f3cc-42c8-affa-613661371465","UPDATE_TIME":"2015/10/17 15:28:25","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"518000","FAX":"0755-29001111","DEALER_NAME_SIM":"深圳清水河奇建","DEALER_NAME_EN":"S744064","DEALER_NAME_EN1":"Shen Chou Qing Shui He Qi Jian","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744075","DEALER_NAME":"深圳市昊天林安琪汽车有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙华新区观澜环观南路72号（环观南路与观平路交界）","BRAND_ID":"0","SERVICE_PHONE":"0755-81708777","SALES_PHONE":"0755-81701888","AFTER_SALES_PHONE":"0755-81708777","EMAIL":"meilin@htl-auto.com","LONGITUDE":"114.098523","LATITUDE":"22.706071","CREATE_USER":"7d567463-84a3-4408-8724-13a598aaeeb2","CREATE_TIME":"2014/8/27 15:52:14","UPDATE_USER":"a3d8c527-d59c-482b-b60a-83a57e525f70","UPDATE_TIME":"2016/7/15 10:01:40","DELETE_FLAG":"False","STATUS":"1","FAX":"0755-81701888","DEALER_NAME_SIM":"深圳昊天林安琪","DEALER_NAME_EN":"S744075","DEALER_NAME_EN1":"Shen Chou Hao Tian Lin An Qi","COMMON_ORDER_GET_TYPE":"province","distributeNum":"147","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S743028","DEALER_NAME":"湖南长久博腾汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南省长沙市岳麓区岳麓街道五星村99号","BRAND_ID":"0","SERVICE_PHONE":"0731-85919888","SALES_PHONE":"0731-85919888","AFTER_SALES_PHONE":"0731-89789688","EMAIL":"S743028@part.faw.vw.com","LONGITUDE":"112.954975","LATITUDE":"28.144755","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2014/10/13 10:19:39","UPDATE_USER":"0c0d1e45-e435-4201-bb6c-ce658df8fa66","UPDATE_TIME":"2015/1/9 14:34:24","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"湖南长久博腾","DEALER_NAME_EN":"S743028","DEALER_NAME_EN1":"Hu Nan Chang Jiu Bo Teng Qi Che Xiao Shou Fu Wu You Xian Gong Si","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S743030","DEALER_NAME":"长沙大汉汽车贸易有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市芙蓉区远大路与红旗路交汇处西南角（汇一城）斜对角","BRAND_ID":"0","SERVICE_PHONE":"073189870089","SALES_PHONE":"4000731118","EMAIL":"53955144@qq.com","LONGITUDE":"113.090915","LATITUDE":"28.210719","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2014/12/2 10:27:51","UPDATE_USER":"2679164d-3858-4a59-bf2e-ad9833edebc5","UPDATE_TIME":"2015/10/23 10:43:23","DELETE_FLAG":"False","STATUS":"1","FAX":"0731-89870080","DEALER_NAME_SIM":"长沙大汉汽贸","DEALER_NAME_EN":"S743030","DEALER_NAME_EN1":"Chang Sha Da Han Qi Mao","COMMON_ORDER_GET_TYPE":"city","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744077","DEALER_NAME":"广州市安捷鑫众汽车有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市萝岗区科丰路31号G10栋101","BRAND_ID":"0","SERVICE_PHONE":"020-62315388","SALES_PHONE":"020-62315088","EMAIL":"S744077@part.faw-vw.com","LONGITUDE":"113.471648","LATITUDE":"23.162605","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2014/12/9 9:40:19","UPDATE_USER":"0c0d1e45-e435-4201-bb6c-ce658df8fa66","UPDATE_TIME":"2015/7/29 10:19:48","DELETE_FLAG":"False","STATUS":"1","FAX":"020-62315020","DEALER_NAME_SIM":"广州安捷鑫众","DEALER_NAME_EN":"S744077","DEALER_NAME_EN1":"Guang Zhou An Jie Xin Zhong","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744074","DEALER_NAME":"佛山市广物君乐汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区里水镇佛山一环东侧水口路出口广佛汽车城内","BRAND_ID":"0","SERVICE_PHONE":"0757-85660036","SALES_PHONE":"0757-85660030","AFTER_SALES_PHONE":"0757-85660036","EMAIL":"fsjlqc@163.com","LONGITUDE":"113.178701","LATITUDE":"23.175271","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2014/12/15 14:06:22","UPDATE_USER":"e1fb7a6b-36cc-4e52-9eb2-179522a89ba1","UPDATE_TIME":"2015/1/30 16:48:52","DELETE_FLAG":"False","STATUS":"1","FAX":"0757-85660173","DEALER_NAME_SIM":"佛山广物君乐","DEALER_NAME_EN":"S744074","DEALER_NAME_EN1":"Fu Shan Guang Wu Jun Le","distributeNum":"59","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744073","DEALER_NAME":"佛山时利和众联汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区狮山镇狮岭村马二经济社上凼地段之一","BRAND_ID":"0","SERVICE_PHONE":"0757-6682088","SALES_PHONE":"0757-66820888","AFTER_SALES_PHONE":"0757-6682088","EMAIL":"2830461160@qq.com","LONGITUDE":"112.923929","LATITUDE":"23.155898","CREATE_USER":"1a1074dc-b3ed-4575-97e3-e302c7522bb6","CREATE_TIME":"2014/12/22 10:25:33","UPDATE_USER":"8f2e5b6d-fe90-4dbf-b6c3-371657f28b08","UPDATE_TIME":"2015/1/22 14:32:36","DELETE_FLAG":"False","STATUS":"1","FAX":"0757-6682088","DEALER_NAME_SIM":"佛山时利和众联","DEALER_NAME_EN":"S744073","distributeNum":"58","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S743027","DEALER_NAME":"湖南中拓瑞鑫汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市宁乡县白马南路与瑞良路交汇处（百灵鸟小学斜对面）","BRAND_ID":"0","SERVICE_PHONE":"0731-87362966","SALES_PHONE":"0731-87362568","AFTER_SALES_PHONE":"0731-87362966","EMAIL":"2446749620@qq.com","LONGITUDE":"112.548682","LATITUDE":"28.235545","CREATE_USER":"65d850e3-755c-4957-a0a4-68146c7dcab9","CREATE_TIME":"2014/12/26 11:08:18","UPDATE_USER":"8449e7d5-931a-4026-9950-67d6d88bc0bb","UPDATE_TIME":"2016/6/4 11:43:44","DELETE_FLAG":"False","STATUS":"1","FAX":"0731-87362598","DEALER_NAME_SIM":"湖南中拓瑞鑫","DEALER_NAME_EN":"S743027","COMMON_ORDER_GET_TYPE":"city","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S936005","DEALER_NAME":"江西协众汽车发展有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"江西省南昌市省政府大院北二路102号","BRAND_ID":"0","SERVICE_PHONE":"0791-86234977","SALES_PHONE":"0791-86231169","AFTER_SALES_PHONE":"0791-86234977","EMAIL":"2996184177@qq.com","LONGITUDE":"115.91303","LATITUDE":"28.683727","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"cd2999aa-abd1-442e-a163-a22939dbc9c3","UPDATE_TIME":"2016/6/13 17:45:50","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"330046","IsUpdated":"True","DEALER_NAME_SIM":"江西协众","DEALER_NAME_EN":"S936005","DEALER_NAME_EN1":"Jiang Xi Xie Zhong","distributeNum":"229","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S736005","DEALER_NAME":"南昌欧亚汽车销售有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"江西省南昌市洪都中大道135号","BRAND_ID":"0","SERVICE_PHONE":"0791-88222333","SALES_PHONE":"0791-88216666","AFTER_SALES_PHONE":"0791-88222333","EMAIL":"s736005@part.faw-vw.com","LONGITUDE":"115.934905","LATITUDE":"28.668864","CREATE_USER":"System","CREATE_TIME":"2006/6/23 8:21:30","UPDATE_USER":"0a33fdc0-7f3e-4ed9-b2a4-6153b24df276","UPDATE_TIME":"2015/6/9 14:23:26","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"330002","FAX":"0791-8208682","IsUpdated":"True","DEALER_NAME_SIM":"南昌欧亚","DEALER_NAME_EN":"S736005","DEALER_NAME_EN1":"Nan Chang Ou Ya","COMMON_ORDER_GET_TYPE":"city","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S736017","DEALER_NAME":"江西华宏名众汽车有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"南昌市洪都南大道28号","BRAND_ID":"0","SERVICE_PHONE":"0791-88457777","SALES_PHONE":"0791-88461111","AFTER_SALES_PHONE":"0791-88457777","EMAIL":"S736017@part.faw-vw.com","LONGITUDE":"115.92285","LATITUDE":"28.640648","CREATE_USER":"System","CREATE_TIME":"2011/11/4 16:00:40","UPDATE_USER":"375ab24a-9632-4d0d-944f-72aae0e0c08a","UPDATE_TIME":"2015/6/16 11:32:15","DELETE_FLAG":"False","STATUS":"1","ZIP_CODE":"330001","FAX":"0791-8461119","IsUpdated":"True","DEALER_NAME_SIM":"江西华宏名众","DEALER_NAME_EN":"S736017","DEALER_NAME_EN1":"Jiang Xi Hua Hong Ming Zhong","distributeNum":"228","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S736024","DEALER_NAME":"南昌恒信一路汽车销售服务有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"南昌市新南大道与昌南大道交界处昌东国际汽车城","BRAND_ID":"0","SERVICE_PHONE":"0791-88192776","SALES_PHONE":"0791-88192778","AFTER_SALES_PHONE":"0791-88192779","EMAIL":"S736024@part.faw-vw.com","LONGITUDE":"115.960891","LATITUDE":"28.601902","CREATE_USER":"65d850e3-755c-4957-a0a4-68146c7dcab9","CREATE_TIME":"2014/10/31 11:08:34","UPDATE_USER":"428527bb-af89-4667-a4ba-740b186b1872","UPDATE_TIME":"2015/12/15 9:54:20","DELETE_FLAG":"False","STATUS":"1","DEALER_NAME_SIM":"南昌恒信一路","DEALER_NAME_EN":"S736024","DEALER_NAME_EN1":"Nan Chang Heng Xin Yi Lu","distributeNum":"228","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+    ]
+</script>
+<script>
+    //shuju
+    for(var i=0;i<des.length;i++){
+        if ($('#prov').html().indexOf(des[i].PROVINCE_NAME)<0){
+            $('#prov').append('<option value="'+des[i].PROVINCE_NAME+'">'+des[i].PROVINCE_NAME+'</option>')
+        }
+        if ($('#prov option:checked').text()==des[i].PROVINCE_NAME && $('#city').html().indexOf(des[i].CITY_NAME)<0){
+            $('#city').append('<option value="'+des[i].CITY_NAME+'">'+des[i].CITY_NAME+'</option>')
+        }
+        if ($('#city option:checked').text()==des[i].CITY_NAME){
+            $('#dealers').append('<option value="'+des[i].DEALER_NAME+'">'+des[i].DEALER_NAME+'</option>')
+        }
+    }
+    $('#prov').change(function () {
+        $("#city").html('');
+        $("#dealers").html('');
+        for(var i=0;i<des.length;i++){
+            if ($('#prov option:checked').text()==des[i].PROVINCE_NAME && $('#city').html().indexOf(des[i].CITY_NAME)<0){
+                $('#city').append('<option value="'+des[i].CITY_NAME+'">'+des[i].CITY_NAME+'</option>')
+            }
+            if ($('#city option:checked').text()==des[i].CITY_NAME){
+                $('#dealers').append('<option value="'+des[i].DEALER_NAME+'">'+des[i].DEALER_NAME+'</option>')
+            }
+        }
+    })
+    $('#city').change(function () {
+        $("#dealers").html('');
+        for(var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].CITY_NAME){
+                $('#dealers').append('<option value="'+des[i].DEALER_NAME+'">'+des[i].DEALER_NAME+'</option>')
+            }
+        }
+    })
+    //cn4Dor
+    $('.cn4Dor ul li').click(function () {
+        var index=$(this).index();
+        $(this).addClass('active').siblings().removeClass('active')
+        $('.cn4Main ul li').eq(index).fadeIn(300).siblings().fadeOut(300)
+    })
+    $(document).ready(function () {
+        $('.cn5Main ul').roundabout({
+            duration: 750,
+            btnPrev: ".ban_r_btn", // 右按钮
+            btnNext: ".ban_l_btn", // 左按钮
+            enableDrag:true,           // 在移动端可以拖拽播放
+            minOpacity: 0.1,         //最小的透明度
+            maxOpacity: 1,         //最大的透明度
+            autoplay: true,          //是否开启自动播放
+            autoplayDuration: 4000,   //自动播放时间
+            autoplayPauseOnHover: true, // 鼠标移入元素内是否自动播放，为true不播放，false还自动播放
+        });
+    });
+    $("#roll1").mCustomScrollbar({
+        scrollInertia: 600,
+        autoDraggerLength: false,
+        advanced: {
+            updateOnContentResize: true
+        }
+    });
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name = $('#name').val();
+            var phone = $('#tel').val();
+            var series_id=$('#series').val();
+            var brand_id=23;//品牌id
+            var act_id=	3227;//后台新建活动
+            var dealers=$('#dealers').val();
+            var url ='http://www.yetcar.com' + '/index.php?s=/Home/GeneralActivity/baoming.html';
+            if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确中文姓名');
+                return false
+            }
+            if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(phone)) || phone.length<11 ) {
+                alert('手机格式不对');
+                return false
+            }
+            if(dealers == '0'){
+                alert('请选择经销商');
+                return false
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            flag = false;
+            var data={
+                name: name,
+                phone: phone,
+                brand_id: brand_id,
+                series_id: series_id,
+                act_id: act_id,
+                dealers:dealers
+            };
+            $.ajax({
+                type:"post",
+                url:url,
+                async:true,
+                data:data,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.reload()
+                    }else{
+                        alert("很抱歉，你报名失败。");
+
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</html>

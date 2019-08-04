@@ -1,0 +1,385 @@
+<!--2019年-03月-21号 星期四 14:42:42 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>驾享升舱 纵心真国六</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+		<style>
+			.main {
+				max-width: 750px;
+				margin: 0 auto;
+			}
+			.cn {position: relative;}
+			.bmk{
+			  position: absolute;
+				left: 50%;
+				top: 7.27rem;
+				width: 21rem;
+				margin-left: -10.3rem;
+				height: 24rem;
+			}
+			.bmk p input,.bmk p select{width:100%;height:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:transparent;font-size:1.2rem;padding-left:1rem;box-sizing: content-box;}
+			.bmk p{
+			  width: 22.5rem;
+				height: 2.55rem;
+				margin-left: 0;
+				margin-bottom: 1.28rem;
+			}
+			.bmk .series,.bmk .city,.bmk .tel {
+				margin-bottom: 1.15rem;
+			}
+			.bmk .submit{
+				margin-top: 3rem;
+			}
+			.privacyPolicy input{position:absolute;left:0rem;top:18.6rem;width:18px !important;height:18px !important}
+			.privacyPolicy span{display:inline-block;position:absolute;left:1.8rem;top:18.5rem;font-size:16px;color:#000}
+			.privacyPolicy a{color:#000}
+			.che {
+			  position: absolute;
+				left: 50%;
+				top: 7rem;
+				width: 25rem;
+				height: auto;
+				margin-left: -12.5rem;
+			}
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/254/30/212/13793204.png');
+				margin-left: 9.4rem;
+			}
+			.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/253/30/212/13793203.png');
+				margin-left: -13.25rem;
+			}
+			.swiper-button-next, .swiper-button-prev {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 4rem;
+				height: 4rem;
+				margin-top: -2rem;
+				z-index: 999999999;
+				cursor: pointer;
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+				outline: none;
+			}
+			.list {
+				position: absolute;
+				left: 50%;
+				top: 4.8rem;
+				width: 25rem;
+				height: 33rem;
+				margin-left: -12.5rem;
+				overflow: auto;
+			}
+			.list ul {
+				width: 95%;
+				padding-bottom: 1rem;
+				border-bottom: 1px dashed #c8c8c8;
+				margin-bottom: 1rem;
+				overflow: hidden;
+			}
+			.list ul:last-child{
+				border-bottom: none;
+				padding: 0;
+				margin: 0;
+			}
+			.list ul li {
+				font-size: 1.2rem;
+				line-height: 2.2rem;
+				float: left;
+				width: 100%;
+			}
+			.list ul li:nth-child(1){
+				width: 60%;
+				font-weight: bold;
+				color: #c90329;
+			}
+			.list ul li:nth-child(2){
+				width: 40%;
+				font-weight: bold;
+			}
+			.mCSB_inside > .mCSB_container{margin-right:0px}
+			.mCSB_scrollTools .mCSB_draggerRail{width: 4px;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
+			.mCSB_scrollTools .mCSB_draggerRail{background-color:#dfdfdf !important}
+			.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:10px;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}
+			.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+				background-color: #c90329 !important;
+				width: 10px;
+			} /* 大滑块 */
+		</style>
+</head>
+<body>
+<div class="main">
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/166/35/212/13794391.jpg" alt="驾享升舱 纵心真国六"></div>
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/35/212/13794392.jpg" alt="驾享升舱 纵心真国六"></div>
+	<div class="cn">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/168/35/212/13794393.jpg" alt="驾享升舱 纵心真国六">
+		<div class="bmk">
+					<p class="name">
+						<input type="text" id="name" placeholder="姓名">
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" placeholder="手机" maxlength="11">
+					</p>
+					<p class="city">
+						<select id="city">
+							<option value="0">城市</option>
+						</select>
+					</p>
+					<p class="series">
+						<select id="series">
+							<option value="0">意向车型</option>
+						</select>
+					</p>
+					<p class="dealers">
+						<select id="dealers">
+							<option value="0">经销商</option>
+						</select>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit">
+					</p>
+					<div class="privacyPolicy">
+						<input type="checkbox">
+						<span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+					</div>
+				</div>
+	</div>
+	<div class="cn">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/35/212/13794394.jpg" alt="驾享升舱 纵心真国六">
+		<div class="che">
+					<div class="psd">
+						<div class="swiper-container">
+							<div class="kailongL"></div>
+							<div class="kailongR"></div>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/46/5/212/13786621.jpg" alt="第七代天籁"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/48/5/212/13786623.jpg" alt="全新奇骏"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/20/212/13790403.jpg" alt="全新逍客"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/50/5/212/13786625.jpg" alt="全新轩逸"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/30/212/13793187.jpg" alt="全新劲客"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/51/5/212/13786626.jpg" alt="全新楼兰"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/30/212/13793188.jpg" alt="全新途达"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/54/5/212/13786629.png" alt="新生代TIIDA"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/20/212/13790400.jpg" alt="全新天籁"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/239/30/212/13793189.jpg" alt="全新天籁公爵"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/52/5/212/13786627.jpg" alt="轩逸经典"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/47/5/212/13786622.jpg" alt="轩逸纯电"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/240/30/212/13793190.jpg" alt="阳光"></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/53/5/212/13786628.png" alt="新蓝鸟"></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev"></div><!--左箭头-->
+					<div class="swiper-button-next"></div><!--右箭头-->
+				</div>
+		</div>
+	<div class="cn">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/170/35/212/13794395.jpg" alt="驾享升舱 纵心真国六">
+		<div class="list">
+			<!-- <ul>
+				<li>南宁弘帆</li>
+				<li>0771-4920111</li>
+				<li>南宁市国凯大道2-6号（保利建材市场旁）</li>
+			</ul> -->
+		</div>
+		</div>
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/35/212/13794396.jpg" alt="驾享升舱 纵心真国六"></div>
+</div>
+</body>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+	var des = [
+			{"city":"南宁市","cityCode":"319","name":"南宁弘帆","nameCode":"G3001","Xtel":"0771-4920111","address":"广西壮族自治区南宁市国凯大道2-6号（保利建材市场旁）"},
+			{"city":"南宁市","cityCode":"319","name":"南宁瑞帆","nameCode":"G3002","Xtel":"0771-3326611","address":"广西壮族自治区南宁市秀厢大道199号金源汽车城(邕宾立交旁)"},
+			{"city":"南宁市","cityCode":"319","name":"南宁广缘","nameCode":"G3003","Xtel":"0771-3211182","address":"广西壮族自治区南宁市高新区科园大道45-1号"},
+			{"city":"南宁市","cityCode":"319","name":"南宁弘天","nameCode":"G3005","Xtel":"0771-4950800","address":"广西壮族自治区南宁市南站大道16号南站汽车城"},
+			{"city":"南宁市","cityCode":"319","name":"南宁广缘仙葫","nameCode":"G3006","Xtel":"0771-8051900","address":"广西壮族自治区南宁市青秀区仙葫大道中14号（天池山对面）"},
+			{"city":"桂林市","cityCode":"323","name":"桂林友爱","nameCode":"G3011","Xtel":"0773-2639888","address":"广西壮族自治区桂林市灵川八里街工业园区29-2-1号"},
+			{"city":"桂林市","cityCode":"323","name":"桂林真龙大成","nameCode":"G3021","Xtel":"0773-5588511","address":"广西壮族自治区桂林市桂林临桂机场路真龙汽车博览园"},
+			{"city":"柳州市","cityCode":"324","name":"柳州航盛","nameCode":"G3012","Xtel":"0772-3160303","address":"广西壮族自治区柳州市鱼锋区西江路86-91号"},
+			{"city":"柳州市","cityCode":"324","name":"柳州骏朋","nameCode":"G3020","Xtel":"0772-8816333","address":"广西壮族自治区柳州市双拥大道特8号B地块东风日产柳州骏朋专营店"},
+			{"city":"玉林市","cityCode":"327","name":"玉林弘鹏","nameCode":"G3013","Xtel":"0775-2689866","address":"广西壮族自治区玉林市二环路名山镇绿杨养马坡开发区"},
+			{"city":"玉林市","cityCode":"327","name":"玉林汇利成","nameCode":"G3026","Xtel":"0775-2263818","address":"广西壮族自治区玉林市一环北路城西金龙大转盘天桥左侧"},
+			{"city":"梧州市","cityCode":"326","name":"梧州合利丰","nameCode":"G3017","Xtel":"0774-3897888","address":"广西壮族自治区梧州市长洲区舜帝大道18号之一"},
+			{"city":"贵港市","cityCode":"322","name":"贵港金港","nameCode":"G3016","Xtel":"0775-4582322","address":"广西壮族自治区贵港市金港大道东段（市交警考试场对面）"},
+			{"city":"北海市","cityCode":"320","name":"北海弘盛","nameCode":"G3015","Xtel":"0779-2075881","address":"广西壮族自治区北海市海城区南珠大道中段（广汇汽车城内）"},
+			{"city":"防城港市","cityCode":"321","name":"防城港鑫广达","nameCode":"G3022","Xtel":"0770-3238008","address":"广西壮族自治区防城港市防城区防钦路888号（距高速路出入口约1公里）"},
+			{"city":"河池市","cityCode":"329","name":"河池弘池","nameCode":"G3018","Xtel":"0778-2301133","address":"广西壮族自治区河池市金城江区南环路温峒隧道口东侧"},
+			{"city":"贺州市","cityCode":"330","name":"贺州合利诚","nameCode":"G3025","Xtel":"0774-5228222","address":"广西壮族自治区贺州市八步区创业路（人才公寓旁）"},
+			{"city":"钦州市","cityCode":"325","name":"钦州广缘金海湾","nameCode":"G3019","Xtel":"0777-2899848","address":"广西壮族自治区钦州市钦南区金海湾东大街95号（北部湾建材城旁）"},
+			{"city":"百色市","cityCode":"328","name":"百色广缘城东","nameCode":"G3023","Xtel":"0776-2996768","address":"广西壮族自治区百色市右江区城东大道大华厂路口北侧武警支队下坡300米处"},
+			{"city":"来宾市","cityCode":"3301","name":"来宾广利","nameCode":"G3028","Xtel":"0772-4823888","address":"广西壮族自治区来宾市河南工业园东片来武二级公路东面"},
+			{"city":"崇左市","cityCode":"3201","name":"崇左广利","nameCode":"G3027","Xtel":"0771-7982188","address":"广西壮族自治区崇左市江州区友谊大道2号中国东盟特色产品大市场一层（碧桂园斜对面）"},
+		];
+		var ser=[
+		{"SERIES_ID":"213","SERIES_NAME":"第七代天籁","SERIES_NAME_EN":"第七代天籁","品牌":"日产"},
+		{"SERIES_ID":"205","SERIES_NAME":"全新奇骏","SERIES_NAME_EN":"P32R","品牌":"日产"},
+		{"SERIES_ID":"199","SERIES_NAME":"全新逍客","SERIES_NAME_EN":"全新逍客","品牌":"日产"},
+		{"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2","品牌":"日产"},
+		{"SERIES_ID":"208","SERIES_NAME":"全新劲客","SERIES_NAME_EN":"P02F","品牌":"日产"},
+		{"SERIES_ID":"197","SERIES_NAME":"新楼兰","SERIES_NAME_EN":"new-murano","品牌":"日产"},
+		{"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA","品牌":"日产"},
+		{"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA","SERIES_NAME_EN":"new-tiida","品牌":"日产"},
+		{"SERIES_ID":"20","SERIES_NAME":"骊威","SERIES_NAME_EN":"livina","品牌":"日产"},
+		{"SERIES_ID":"17","SERIES_NAME":"玛驰","SERIES_NAME_EN":"march","品牌":"日产"},
+		{"SERIES_ID":"203","SERIES_NAME":"全新天籁","SERIES_NAME_EN":"","品牌":"日产"},
+		{"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵","SERIES_NAME_EN":"","品牌":"日产"},
+		{"SERIES_ID":"26","SERIES_NAME":"轩逸·经典","SERIES_NAME_EN":"sylphy","品牌":"日产"},
+		{"SERIES_ID":"28","SERIES_NAME":"阳光","SERIES_NAME_EN":"sunny","品牌":"日产"},
+		{"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟","品牌":"日产"},
+		{ "SERIES_ID": "211", "SERIES_NAME": "轩逸纯电", "SERIES_NAME_EN": "轩逸·纯电" },
+    ];
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: true,//可选选项，自动滑动
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			uniqueNavElements: false,
+			loop: true
+		})
+</script>
+<script>
+//渲染数据
+		for (var j=0;j<ser.length;j++){
+				$('#series').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+		}
+		//渲染数据
+    for (var i=0;i<des.length;i++){
+			if ($('#city').html().indexOf(des[i].city)==-1){
+				$('#city').append('<option  value="'+des[i].cityCode+'">'+des[i].city+'</option>');
+			}
+			var ul='<ul>'+
+            '<li>'+des[i].name+'</li>'+
+            '<li>'+des[i].Xtel+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '</ul>';
+      $('.list').append(ul);
+    }
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for(var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].city){
+                $('#dealers').append('<option value="'+des[i].nameCode+'">'+des[i].name+'</option>')
+            }
+        }
+    });
+		//报名
+		var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(),        //电话
+                city_id = $('#city').val(),  //城市id
+                city = $('#city option:checked').text(),    //城市名字
+                province =25,  //省份
+                detail_id = 292,  //detail_id
+                series_id = $('#series').val(),  //车型id
+                car_name = $('#series option:checked').text(),  //车型名字
+                brand_id = 11, //品牌
+                dealers_code = $('#dealers').val(),   //经销商id
+                dealers = $('#dealers option:checked').text(),   //经销商名字
+                Url = "https://auto.gdtengnan.com/yetcar/baomingRichan.php",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+
+                    city_id: city_id,
+                    city:city,
+                    dealers: dealers,
+                    province: province,
+                    car_name: car_name,
+                    dealers_code: dealers_code,
+
+                    detail_id:detail_id,
+                    type: 1,
+                    smartcode: 'A2019-1811-6632-2679-153644'
+                    // type: 0,
+                    // smartcode: 'A0000-000-000-00-00000'
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|14[0145689]|15[0-9]|16[2567]|17[0-8]|18[0-9]|19[189])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+						if(city_id=='0'){
+                alert('请选择城市');
+                return false;
+            }
+						if(series_id=='0'){
+							alert('请选择车型');
+							return false;
+            }
+            if(dealers_code=='0'){
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+								jsonpCallback:"jsonpReturn",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+		$(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+</script>
+</html>

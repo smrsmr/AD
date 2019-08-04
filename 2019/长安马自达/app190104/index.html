@@ -1,0 +1,927 @@
+<!--2019年-01月-04号 星期五 10:18:49 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>年终献礼 暖心大促</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		 <link href="https://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet"/>
+		<style>
+			.main {
+				max-width: 750px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+			.cn {position: relative;}
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 1.02rem;
+				width: 7rem;
+				height: 6rem;
+				margin-left: -2.75rem;
+			}
+			.bmk p input,.bmk p select {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				padding-left: 0.2rem;
+				font-size: .32rem;
+			}
+			.bmk .line p {
+				display: inline-block;
+			}
+			.bmk .line .name {
+				width: 2.15rem;
+				height: 0.65rem;
+				margin-left: 0.85rem;
+			}
+			.bmk .line .sex {
+				margin-left: 0.3rem;
+			}
+			.bmk .line .sex span {
+				position: relative;
+				display: inline-block;
+				width: 0.17rem;
+				height: 0.17rem;
+				border: 1px solid #cccccc;
+				background: white;
+				border-radius: 0.05rem;
+			}
+			.bmk .line .sex span:first-child {
+				margin-right: 0.8rem;
+			}
+			.bmk .line .sex span.active::after {
+				content: '';
+				clear: both;
+				position: absolute;
+				top: 0.01rem;
+				left: 0.01rem;
+				width: 0.15rem;
+				height: 0.15rem;
+				background-color: #a0a0a0;
+				border-radius: 0.01rem;
+			}
+			.bmk .tel,.bmk .series,.bmk .prov,.bmk .city,.bmk .dealers {
+				width: 4.42rem;
+				height: 0.65rem;
+				margin-left: 0.85rem;
+				margin-top: 0.1rem;
+			}
+			.bmk .series,.bmk .prov,.bmk .city,.bmk .dealers {
+				width: 4.62rem;
+			}
+			.bmk .text {
+				margin-top: 0.09rem;
+				margin-left: 0.05rem;
+				color: white;
+				font-size: 0.05rem;
+			}
+			.bmk .text a {
+				color: white;
+			}
+			.bmk .submit {
+				margin-top: 0.04rem;
+				margin-left: 0rem;
+				width: 5.5rem;
+				height: 0.7rem;
+			}
+			.sw1 {
+				position: absolute;
+				left: 50%;
+				top: 1.7rem;
+				width: 10rem;
+				height: 5.4rem;
+				-webkit-transform: translateX(-50);
+				transform: translateX(-50%);
+			}
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+    	.swiper-slide {
+				position: relative;
+				text-align: center;
+				font-size: 18px;
+				/* background: #fff; */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			.sw1pa,.sw8pa {
+				position: absolute;
+				left: 50%;
+				top: 0.9rem;
+				width: 100%;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+			.sw1pa .swiper-pagination-bullet,.sw8pa .swiper-pagination-bullet {
+				width: 3rem;
+				height: 0.7rem;
+				display: inline-block;
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/151/158/211/13760716.png') center no-repeat;
+				background-size: 100%;
+				border-radius: 0;
+				opacity: 1;
+			}
+			.sw1pa .swiper-pagination-bullet:nth-child(2),.sw8pa .swiper-pagination-bullet:nth-child(2){
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/149/158/211/13760714.png') center no-repeat;
+				background-size: 100%;
+			}
+			.sw1pa .swiper-pagination-bullet:nth-child(3),.sw8pa .swiper-pagination-bullet:nth-child(3){
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/152/158/211/13760717.png') center no-repeat;
+				background-size: 100%;
+			}
+			.sw1pa .swiper-pagination-bullet-active,.sw8pa .swiper-pagination-bullet-active {
+				background-color: #b12121 !important;
+				opacity: 1;
+			}
+			#sw1 .sli2 .dor2 {
+				position: absolute;
+				left: 0;
+				top: 1rem;
+				width: 1rem;
+				height: 3rem;
+				display: inline-block;
+				overflow: hidden;
+			}
+			#sw1 .sli2 .dor2 ul {
+				width: 100%;
+			}
+			#sw1 .sli2 .dor2 li {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/163/158/211/13760728.png') center center no-repeat;
+				width: 1rem;
+				height: 0.5rem;
+				background-size: 100%;
+				margin-bottom: 0.3rem;
+			}
+			#sw1 .sli2 .dor2 li:nth-child(2) {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/165/158/211/13760730.png') center center no-repeat;
+				background-size: 100%;
+			}
+			#sw1 .sli2 .dor2 li:nth-child(3) {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/167/158/211/13760732.png') center center no-repeat;
+				background-size: 100%;
+			}
+			#sw1 .sli2 .dor2 li:nth-child(4) {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/168/158/211/13760733.png') center center no-repeat;
+				background-size: 100%;
+			}
+			#sw1 .sli2 .dor2 li.active {
+				background-color: #b12121;
+			}
+			#sw1 .sli2 .con2 {
+				width: 8.9rem;
+				height: 6rem;
+				display: inline-block;
+				margin-left: 1.1rem;
+			}
+			.swiper-pagination-bullet {
+				background: #4f5b71;
+				opacity: 1;
+			}
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+				background: white;
+			}
+			.con2 .paop {
+				left: 0;
+				top: 0;
+			}
+			.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/201/156/211/13760256.png');
+			}
+			.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    		background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/202/156/211/13760257.png');
+			}
+			#sw1 .sli1 .con1 {
+				width: 9.5rem;
+				height: 6.2rem;
+			}
+			#sw1 .sli3 .con3 {
+				width: 9.5rem;
+				height: 6.2rem;
+			}
+			.sw8 {
+				position: absolute;
+				left: 50%;
+				top: 2.3rem;
+				width: 100%;
+				height: 5.6rem;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+			.sw8 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/242/156/211/13760297.png');
+				z-index: 100;
+			}
+			.sw8 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    		background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/241/156/211/13760296.png');
+				z-index: 100;
+			}
+			.sw8 .line {
+				position: absolute;
+				left: 0.26rem;
+				top: 0.2rem;
+				width: 9.45rem;
+				height: 5rem;
+				border: 1px solid white;
+				z-index: 99;
+			}
+			.dor7 {
+				position: absolute;
+				left: 50%;
+				top: 1rem;
+				width: 8.7rem;
+				height: 0.6rem;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+			}
+			.dor7 ul {
+				width: 100%;
+				overflow: hidden;
+			}
+			.dor7 ul li {
+				float: left;
+				width: 1.2rem;
+				height: 0.6rem;
+				margin-right: 0.3rem;
+				line-height: 0.6rem;
+				text-align: center;
+				color: white;
+				font-weight: bold;
+			}
+			.dor7 ul li:last-child {
+				margin-right: 0;
+			}
+			.dor7 ul li.active {
+				background: white;
+				color: #b12121;
+			}
+			.con7 {
+				position: absolute;
+				left: 50%;
+				top: 2rem;
+				width: 9.4rem;
+				height: 6.3rem;
+				-webkit-transform: translateX(-50%);
+				transform: translateX(-50%);
+				overflow: auto;
+			}
+			.con7 ul {
+				width: 100%;
+				overflow: hidden;
+			}
+			.con7 ul:nth-child(odd){
+				background: rgba(61,51,48,.33);
+			}
+			.con7 ul li {
+				float: left;
+				padding: 0.5rem 0;
+				color: white;
+				opacity: 1;
+			}
+			.con7 ul li:nth-child(1){
+				padding-left: 0.2rem;
+				width: 1.6rem;
+			}
+			.con7 ul li:nth-child(2){
+				padding-left: 0.2rem;
+				width: 2rem;
+			}
+			.con7 ul li:nth-child(3){
+				padding-left: 0.2rem;
+				width: 4.7rem;
+			}
+			.mCSB_inside > .mCSB_container {
+				margin-right: 16px;
+			}
+			.cn img {
+				margin-top: -1px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/114/156/211/13760169.jpg" alt=""></div>
+			<div class="cn cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/115/156/211/13760170.jpg" alt=""></div>
+			<div class="cn cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/137/158/211/13760702.jpg" alt=""></div>
+			<div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/117/156/211/13760172.jpg" alt="">
+				<div class="bmk">
+					<div class="line">
+						<p class="name">
+							<input type="text" id="name" placeholder="请输入姓名">
+						</p>
+						<p class="sex">
+							<span class="active"></span>
+							<span></span>
+						</p>
+					</div>
+					<p class="tel">
+						<input type="tel" id="tel" maxlength="11" placeholder="请输入手机号码">
+					</p>
+					<p class="series">
+						<select id="series">
+							<option value="0">选择意向车型</option>
+							<option value="202" data-brand="24">第二代Mazda CX-5</option>
+							<option value="202" data-brand="24">第二代Mazda CX-5 2019年云控版</option>
+							<option value="1237" data-brand="24">Mazda CX-8</option>
+							<option value="183" data-brand="24">新Mazda3 AXELA三厢</option>
+							<option value="183" data-brand="24">新Mazda3 AXELA两厢</option>
+							<option value="799" data-brand="58">全新进口Mazda CX-3</option>
+						</select>
+					</p>
+					<p class="prov">
+						<select id="prov">
+							<option value="0">省份</option>
+						</select>
+					</p>
+					<p class="city">
+						<select id="city">
+							<option value="0">选择城市</option>
+						</select>
+					</p>
+					<p class="dealers">
+						<select id="dealers">
+							<option value="0">选择经销商</option>
+						</select>
+					</p>
+					<p class="text">
+						*点击提交视为您已阅读并同意<a href="//www.qq.com/privacy.htm">《隐私政策》</a>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit">
+					</p>
+				</div>
+			</div>
+			<div class="cn cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/118/156/211/13760173.jpg" alt="">
+			  <div class="swiper-pagination sw1pa"></div>
+			  <div class="sw1">
+					 <div class="swiper-container" id="sw1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide sli2">
+								<div class="dor2">
+									<ul>
+										<li class="active"></li>
+										<li></li>
+										<li></li>
+										<li></li>
+									</ul>
+								</div>
+								<div class="con2">
+									<div class="swiper-container paop" id="sw2" style="display: block">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/177/156/211/13760232.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/178/156/211/13760233.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/179/156/211/13760234.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/180/156/211/13760235.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/181/156/211/13760236.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+									<div class="swiper-container paop " id="sw3">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/173/156/211/13760228.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/174/156/211/13760229.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/175/156/211/13760230.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+									<div class="swiper-container paop " id="sw4">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/165/156/211/13760220.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/166/156/211/13760221.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/156/211/13760222.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/168/156/211/13760223.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/156/211/13760224.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/170/156/211/13760225.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/156/211/13760226.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+									<div class="swiper-container paop " id="sw5">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/157/156/211/13760212.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/158/156/211/13760213.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/159/156/211/13760214.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/160/156/211/13760215.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/161/156/211/13760216.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/162/156/211/13760217.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/163/156/211/13760218.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/164/156/211/13760219.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide sli1">
+								<div class="con1">
+									<div class="swiper-container" id="sw6">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/203/156/211/13760258.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/204/156/211/13760259.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/205/156/211/13760260.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/206/156/211/13760261.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/207/156/211/13760262.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/208/156/211/13760263.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/209/156/211/13760264.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide sli3">
+								<div class="con3">
+									<div class="swiper-container" id="sw7">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/213/156/211/13760268.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/214/156/211/13760269.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/215/156/211/13760270.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/216/156/211/13760271.png" alt=""></div>
+											<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/217/156/211/13760272.png" alt=""></div>
+										</div>
+										<div class="swiper-button-prev"></div><!--左箭头-->
+    								<div class="swiper-button-next"></div><!--右箭头-->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cn cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/243/156/211/13760298.jpg" alt="">
+			<div class="swiper-pagination sw8pa"></div>
+		  <div class="sw8">
+				<div class="swiper-container" id="sw8">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<!-- cx-8 -->
+							<div class="swiper-container" id="sw9">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/231/156/211/13760286.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/232/156/211/13760287.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/233/156/211/13760288.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/234/156/211/13760289.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/235/156/211/13760290.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/156/211/13760291.png" alt=""></div>
+								</div>
+								<div class="swiper-button-prev"></div><!--左箭头-->
+								<div class="swiper-button-next"></div><!--右箭头-->
+								<div class="swiper-pagination"></div>
+								<p class="line"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<!-- cx-5 -->
+							<div class="swiper-container" id="sw10">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/251/156/211/13760306.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/156/211/13760307.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/156/211/13760308.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/156/211/13760309.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/157/211/13760310.png" alt=""></div>
+								</div>
+								<div class="swiper-button-prev"></div><!--左箭头-->
+								<div class="swiper-button-next"></div><!--右箭头-->
+								<div class="swiper-pagination"></div>
+								<p class="line"></p>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<!-- 昂克赛拉 -->
+							<div class="swiper-container" id="sw11">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/226/158/211/13760791.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/227/158/211/13760792.png" alt=""></div>
+									<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/228/158/211/13760793.png" alt=""></div>
+								</div>
+								<div class="swiper-button-prev"></div><!--左箭头-->
+								<div class="swiper-button-next"></div><!--右箭头-->
+								<div class="swiper-pagination"></div>
+								<p class="line"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="cn cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/120/156/211/13760175.jpg" alt="">
+			<div class="dor7">
+				<ul>
+					<li class="active">广东省</li>
+					<li>湖南省</li>
+					<li>福建省</li>
+					<li>海南省</li>
+					<li>江西省</li>
+					<li>广西省</li>
+				</ul>
+			</div>
+			<div class="con7">
+				<!-- <ul>
+					<li>潮州市</li>
+					<li>潮州德隆</li>
+					<li>
+						<p>潮州市潮安县浮洋镇乌洋村干渠东侧</p>
+						<p>0768-5226333</p>
+					</li>
+				</ul> -->
+			</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script>
+		document.write("<script type='text/javascript' src='https://guangzhou.auto.qq.com/js/supervise.js?v=" + Date.now() +"'><\/script>");
+	</script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+	<script>
+		var des = [
+			{ "prov": "江西省", "city": "南昌市", "name": "江西江铃海外马自达汽车销售服务有限公司", "code": "A13258", "tel": "0791-85216600", "address": "江西省南昌市迎宾大道755号" },
+			{ "prov": "江西省", "city": "南昌市", "name": "江西江铃海外福马汽车销售服务有限公司", "code": "M18086", "tel": "0791-85201133", "address": "江西省南昌市高新大道688号" },
+			{ "prov": "江西省", "city": "上饶市", "name": "上饶市福铃达汽车有限公司", "code": "A26096", "tel": "0793-6178689", "address": "江西省上饶市经济开发区三清山西大道1号1栋（国际家俱城旁）" },
+			{ "prov": "江西省", "city": "赣州市", "name": "赣州腾马汽车服务有限公司", "code": "m18118", "tel": "0797-8198599", "address": "赣州开发区蟠龙镇田心村金岭路144号" },
+			{ "prov": "江西省", "city": "宜春市", "name": "宜春津湘万华汽车销售服务有限公司", "code": "M18021", "tel": "0795-3289899", "address": "宜春市袁州区经济技术开发区经发大道36号【香槟国际正对面】" },
+			{ "prov": "江西省", "city": "吉安市", "name": "江西金乐玛汽车销售服务有限公司", "code": "M18138", "tel": "0796-8911188", "address": "江西省吉安市吉州区城南华通物流园3栋1层（华美立家售楼部对面）" },
+			{ "prov": "湖南省", "city": "长沙市", "name": "湖南万达汽车销售服务有限公司", "code": "A13267", "tel": "0731-82977988", "address": "长沙市星沙中南汽车世界A区06号" },
+			{ "prov": "湖南省", "city": "长沙市", "name": "湖南万华汽车销售服务有限公司", "code": "A16677", "tel": "0731-88222822", "address": "长沙市天心区桂花坪街道雀园路长安马自达湖南万华4S店" },
+			{ "prov": "湖南省", "city": "衡阳市", "name": "衡阳津湘万华汽车销售服务有限公司", "code": "A22539", "tel": "0734-3377111", "address": "湖南省衡阳市蒸湘区西外环路杨柳汽贸城长安马自达" },
+			{ "prov": "湖南省", "city": "常德市", "name": "常德万通汽车销售服务有限公司", "code": "A26217", "tel": "0736-7760811", "address": "常德市武陵区常德大道和柳叶大道交汇处" },
+			{ "prov": "湖南省", "city": "永州市", "name": "永州津湘万达汽车销售服务有限公司", "code": "M18123", "tel": "0746-6677555", "address": "湖南省永州市零陵区潇湘汽车城往永连公路方向500米" },
+			{ "prov": "湖南省", "city": "邵阳市", "name": "邵阳津湘万华汽车销售服务有限公司", "code": "M18101", "tel": "0739-5195668", "address": "邵阳市邵阳大道与大兴路交叉口往北200米长安马自达4S店" },
+			{ "prov": "湖南省", "city": "怀化市", "name": "怀化市恒旺汽车销售服务有限公司", "code": "A30495", "tel": "0745-2789666", "address": "怀化市鹤城区南环路国际汽车城长安马自达4S店" },
+			{ "prov": "湖南省", "city": "益阳市", "name": "益阳福顺福达汽车销售服务有限公司", "code": "M18010", "tel": "0737-3555888", "address": "益阳市赫山区汽车东站东方维也纳上S308省道往湘阴方向1000米" },
+			{ "prov": "湖南省", "city": "郴州市", "name": "郴州万马汽车销售服务有限公司", "code": "M18116", "tel": "0735-2235711", "address": "湖南省郴州市北湖区郴州大道城前岭立交桥西长安马自达4S店" },
+			{ "prov": "海南省", "city": "海口市", "name": "海口优之杰汽车服务有限公司", "code": "A13314", "tel": "0898-68640033", "address": "海南省海口市南海大道223号" },
+			{ "prov": "海南省", "city": "三亚市", "name": "三亚优之杰汽车销售服务有限公司", "code": "M18108", "tel": "0898-88719846", "address": "海南省三亚市吉阳区迎宾大道449号" },
+			{ "prov": "广西省", "city": "南宁市", "name": "广西鑫广达长久汽车销售服务有限公司", "code": "A13318", "tel": "0771-4866551", "address": "广西壮族自治区南宁市白沙大道54号" },
+			{ "prov": "广西省", "city": "南宁市", "name": "广西弘骏汽车销售服务有限公司", "code": "A14982", "tel": "0771-3225588", "address": "南宁市秀厢大道199号金源汽车城" },
+			{ "prov": "广西省", "city": "桂林市", "name": "桂林鑫广达博骏汽车销售服务有限公司", "code": "M18009", "tel": "0773-5580992", "address": "桂林市临桂机场路北侧（真龙国际物流园）" },
+			{ "prov": "广西省", "city": "柳州市", "name": "柳州鑫广达博骏汽车销售服务有限公司", "code": "A15116", "tel": "0772-8803390", "address": "广西柳州市广汽路2号汽车贸易园长安马自达4s店" },
+			{ "prov": "广西省", "city": "百色市", "name": "百色万马汽车销售服务有限公司", "code": "M18051", "tel": "0776-2222237", "address": "广西百色市右江区大旺路中段12号大旺汽车广场长安马自达百色万马4S店" },
+			{ "prov": "广西省", "city": "北海", "name": "北海瑞祥盛汽车销售服务有限公司", "code": "M18167", "tel": "0779-3226313", "address": "北海市海城区南珠大道中段青少年宫对面" },
+			{ "prov": "广西省", "city": "钦州", "name": "广西万友汽车销售服务有限公司钦州分公司", "code": "M18171", "tel": "0777-3663608", "address": "广西钦州市钦南区安州大道市三中东侧" },
+			{ "prov": "广东省", "city": "广州市", "name": "广州市福犸汽车有限公司", "code": "A13778", "tel": "020-61196368", "address": "广州市白云区江夏空港大道尚德广场长安马自达 " },
+			{ "prov": "广东省", "city": "广州市", "name": "广州市华灵汽车销售有限公司", "code": "A15775", "tel": "020-22223639", "address": "广州黄埔大道西668号 广州赛马场汽车城南区A栋1号" },
+			{ "prov": "广东省", "city": "广州市", "name": "广州市东富汽车销售服务有限公司", "code": "M18122", "tel": "020-81008999 ", "address": "广州市荔湾区龙溪大道488号长安马自达" },
+			{ "prov": "广东省", "city": "广州市", "name": "广州市华刊汽车销售有限公司", "code": "M18152", "tel": "020-66231646", "address": "广州市番禺区番禺大道北668号南村镇里仁洞村102场地" },
+			{ "prov": "广东省", "city": "广州市", "name": "广州市悦马汽车有限公司", "code": "M18178", "tel": "020-36808686", "address": "广州市花都区镜湖大道自编21号A栋长安马自达4S店" },
+			{ "prov": "广东省", "city": "东莞市", "name": "东莞市通益汽车销售服务有限公司", "code": "A13338", "tel": "0769-81191313", "address": "东莞市寮步镇药勒村蟠龙路" },
+			{ "prov": "广东省", "city": "东莞市", "name": "东莞市莞泰通益汽车销售服务有限公司", "code": "M18055", "tel": "0769-81718868", "address": "东莞市厚街镇莞太路溪头天桥旁马自达4S店" },
+			{ "prov": "广东省", "city": "深圳市", "name": "深圳通利华宝安汽车销售服务有限公司", "code": "A13343", "tel": "0755-29695828", "address": "深圳宝安沙井新和大道与宝安大道交汇处" },
+			{ "prov": "广东省", "city": "深圳市", "name": "深圳通利华福滨汽车服务有限公司", "code": "A18077", "tel": "0755-26609998", "address": "深圳市龙岗区坂田布龙路339号鸿生源大厦A栋首层" },
+			{ "prov": "广东省", "city": "深圳市", "name": "劲达汽车销售服务(深圳)有限公司", "code": "A13548", "tel": "0755-86227337", "address": "深圳市南山区关口二路前海嘉进隆汽车城E02B" },
+			{ "prov": "广东省", "city": "深圳市", "name": "深圳通利华龙城汽车销售服务有限公司", "code": "M18042", "tel": "0755-28678818", "address": "深圳市龙岗区横岗街道荷坳社区长江埔路49号京铁科技工业园A栋 " },
+			{ "prov": "广东省", "city": "佛山市", "name": "佛山海迪汽车有限公司", "code": "A13341", "tel": "0757-82782363", "address": "佛山市禅城区佛山大道381号佛山（国际）车城南区四座一号" },
+			{ "prov": "广东省", "city": "佛山市", "name": "佛山骏迪汽车有限公司", "code": "A21336", "tel": "0757-81853377", "address": "佛山市南海区桂城海八路华南汽车城G13号" },
+			{ "prov": "广东省", "city": "佛山市", "name": "佛山市耀田汽车有限公司", "code": "A19820", "tel": "0757-22816066/0757-22816065", "address": "佛山市顺德区伦教镇105国道边【即伦教周大福旁】" },
+			{ "prov": "广东省", "city": "佛山市", "name": "佛山智迪汽车有限公司", "code": "M18088", "tel": "0757-87778182", "address": "佛山市三水区南丰大道26号长建车城内（荷花世界入口处往芦苞方向1.5公里右侧）" },
+			{ "prov": "广东省", "city": "惠州市", "name": "惠州市通力达汽车销售服务有限公司", "code": "A13339", "tel": "0752-5831111", "address": "惠州市惠博沿江路金山汽车城12号展场" },
+			{ "prov": "广东省", "city": "惠州市", "name": "惠州市通利华汽车贸易有限公司", "code": "M18176", "tel": "0752-2818898", "address": "惠州市惠城区三栋数码工业园惠南汽车城二期D2栋" },
+			{ "prov": "广东省", "city": "中山市", "name": "中山市万事得汽车销售服务有限公司", "code": "A13340", "tel": "0760-88588888", "address": "中山市东区中山六路检验检疫局对面" },
+			{ "prov": "广东省", "city": "中山市", "name": "中山市中洋汽车贸易有限公司", "code": "M18064", "tel": "0760-89828828", "address": "中山市小榄镇菊城大道西176号金宁汽车城内A1栋" },
+			{ "prov": "广东省", "city": "珠海市", "name": "珠海市新通达汽车销售服务有限公司", "code": "A13342", "tel": "0756-8588188", "address": "珠海市香洲区前山工业区华威路126号" },
+			{ "prov": "广东省", "city": "潮州市", "name": "潮州市德隆汽车贸易有限公司", "code": "A28381", "tel": "0768-5226333", "address": "潮州市潮安县浮洋镇乌洋村干渠东侧" },
+			{ "prov": "广东省", "city": "揭阳市", "name": "揭阳恒诚汽车贸易有限公司", "code": "A26216", "tel": "0663-8297777", "address": "揭阳市东山区环市北路与晓翠路交汇处（即黄岐山正对面）" },
+			{ "prov": "广东省", "city": "清远市", "name": "清远市骏昇汽车销售服务有限公司", "code": "A28858", "tel": "0763-3388856", "address": "清远市新城B28号区骏飞汽车城" },
+			{ "prov": "广东省", "city": "汕头市", "name": "汕头市通利华汽车服务有限公司", "code": "M18096", "tel": "0754-82552888/82552999", "address": "汕头市高新区科技西路3号" },
+			{ "prov": "广东省", "city": "江门市", "name": "江门市振宇汽车销售服务有限公司", "code": "A14981", "tel": "0750-3088599", "address": "广东省江门市蓬江区建设三路113号" },
+			{ "prov": "广东省", "city": "江门", "name": "江门市领泰销售服务有限公司", "code": "M18184", "tel": "0750-6166111", "address": "江门市新会区新会大道东4号" },
+			{ "prov": "广东省", "city": "肇庆市", "name": "肇庆美轮庆达汽车有限公司", "code": "M18025", "tel": "0758-2777666", "address": "肇庆市迎宾大道北侧美轮车城长安马自达4S店" },
+			{ "prov": "广东省", "city": "湛江市", "name": "湛江合田汽车销售服务有限公司", "code": "M18044", "tel": "0759-3208877", "address": "广东省湛江市赤坎区椹川大道北50号（瀚龙汽车生活广场内）" },
+			{ "prov": "广东省", "city": "茂名市", "name": "茂名市京粤名达汽车有限公司", "code": "M18077", "tel": "0668-2928828", "address": "广东省茂名市高水公路南香路段厚禄陂村京粤汽车城" },
+			{ "prov": "广东省", "city": "韶关市", "name": "韶关市荣和通达汽车贸易有限公司", "code": "M18071", "tel": "0751-8605666", "address": "广东省韶关市浈江区韶南大道八公里" },
+			{ "prov": "广东省", "city": "阳江市", "name": "阳江市通利华汽车服务有限公司", "code": "M18135", "tel": "0662-2881999", "address": "阳江市江城区南排预留地康泰路7号" },
+			{ "prov": "广东省", "city": "梅州市", "name": "梅州市通利华汽车服务有限公司", "code": "M18106", "tel": "0753-2319808", "address": "梅州市环市西路（平远路口往锭子桥方向500米）" },
+			{ "prov": "广东省", "city": "河源市", "name": "河源市宝恒汽车销售有限公司", "code": "M18139", "tel": "0762-7581299", "address": "广东省河源市江东新区超然汽车城内长安马自达4S店" },
+			{ "prov": "广东省", "city": "云浮市", "name": "云浮美轮庆达汽车有限公司", "code": "M18127", "tel": "0766-8328622", "address": "云浮市云城区环市东路28号美轮车城内长安马自达4S店" },
+			{ "prov": "广东省", "city": "四会", "name": "四会庆达汽车有限公司", "code": "M18181", "tel": "0758-3339996", "address": "四会市城中街道省道263线（即融创书院对面）" },
+			{ "prov": "福建省", "city": "福州市", "name": "福州龙益汽车销售服务有限公司", "code": "A15497", "tel": "0591-88909988", "address": "福建省福州市晋安区新店镇李园路89号" },
+			{ "prov": "福建省", "city": "福州市", "name": "福建源和汽车销售服务有限公司", "code": "A26715", "tel": "0591-28352688", "address": "福建省福州市仓山区盖山投资区高南路2号" },
+			{ "prov": "福建省", "city": "厦门市", "name": "厦门市盛成汽车服务有限公司", "code": "A13337", "tel": "0592-6206666", "address": "厦门市海沧区马青路1285号" },
+			{ "prov": "福建省", "city": "漳州市", "name": "漳州富骏汽车有限公司", "code": "M18068", "tel": "0596-2028899", "address": "福建省漳州市龙文区迎宾大道吉马汽车城B6区  漳州富骏汽车有限公司长安马自达4s店" },
+			{ "prov": "福建省", "city": "泉州市", "name": "泉州盛成汽车销售服务有限公司", "code": "M18081", "tel": "0595-22669969", "address": "福建省泉州市鲤城区南环路站前大道路口（宏源商务酒店旁）" },
+			{ "prov": "福建省", "city": "泉州市", "name": "泉州益成汽车贸易发展有限公司", "code": "A13336", "tel": "0595-22689777", "address": "福建省泉州市丰泽区华大南埔（火烧桥旁）" },
+			{ "prov": "福建省", "city": "龙岩市", "name": "龙岩富骏汽车有限公司", "code": "M18076", "tel": "0597-2368555", "address": "龙岩市新罗区东城东兴路210-1号" },
+			{ "prov": "福建省", "city": "莆田", "name": "莆田龙益汽车销售服务有限公司", "code": "M18169", "tel": "0594-6066899", "address": "福建省莆田市荔城区西天尾镇汀渚村城涵西大道3355号" },
+			{ "prov": "福建省", "city": "三明", "name": "三明市长隆汽车销售服务有限公司", "code": "M18189", "tel": "0598-7505666", "address": "福建省三明市三元区大坂一路36号1号楼" },
+
+		]
+	</script>
+	<script>
+		
+	</script>
+	<script>
+	 //swiper
+	 //车型亮点swiper
+	 var sw1 = new Swiper('#sw1', {
+      pagination: {
+        el: '.sw1pa',
+        dynamicBullets: true,
+				clickable :true,
+      },
+			uniqueNavElements: false,
+			initialSlide :1,
+			// loop: true
+    });
+		// cx-8 swiper
+		var sw2 = new Swiper('#sw2', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		var sw3 = new Swiper('#sw3', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		var sw4 = new Swiper('#sw4', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		var sw5 = new Swiper('#sw5', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		//cx-5 2019年云控版
+		var sw6 = new Swiper('#sw6', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		//昂克赛拉
+		var sw7 = new Swiper('#sw7', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		//cx-8 左侧切换轮播图
+		$('#sw1 .dor2 li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			var i = $(this).index();
+			$('.con2 .paop').eq(i).fadeIn(300).siblings().fadeOut(300);
+		})
+	</script>
+	<script>
+		//精美车图swiper
+		var sw8 = new Swiper('#sw8', {
+      pagination: {
+        el: '.sw8pa',
+        dynamicBullets: true,
+				clickable :true,
+      },
+			uniqueNavElements: false,
+			initialSlide :1,
+			// loop: true
+    });
+		var sw9 = new Swiper('#sw9', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		var sw10 = new Swiper('#sw10', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+		var sw11 = new Swiper('#sw11', {
+      pagination: {
+        el: '.swiper-pagination',
+				clickable :true,
+      },
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+    });
+	</script>
+	<script>
+		//切换sex按钮
+		$('.sex span').click(function () {
+			$(this).addClass('active').siblings().removeClass('active');
+		});
+		//初始化经销商
+		for(var j=0;j<des.length;j++){
+			if('广东省'===des[j].prov){
+				var $ul = '<ul>'+
+				'<li>'+des[j].city+'</li>'+
+				'<li>'+des[j].name+'</li>'+
+				'<li><p>'+des[j].address+'</p><p>'+des[j].tel+'</p></li>'+
+				'</ul>'
+				$('.con7').append($ul)
+			}
+		}
+		//经销商信息省份切换
+		$('.dor7 ul li').click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.con7 .mCSB_container').html('');
+			$(".con7").mCustomScrollbar("destroy");
+			for(var j=0;j<des.length;j++){
+				if($(this).text()===des[j].prov){
+					var $ul = '<ul>'+
+					'<li>'+des[j].city+'</li>'+
+					'<li>'+des[j].name+'</li>'+
+					'<li><p>'+des[j].address+'</p><p>'+des[j].tel+'</p></li>'+
+					'</ul>'
+					$('.con7').append($ul)
+				}
+			}
+			$(".con7").mCustomScrollbar({
+				scrollInertia: 550,
+				autoHideScrollbar: false
+			});
+		})
+		//省份 城市 经销商 报名
+		for (var i = 0; i < des.length; i++) {
+			if ($('#prov').html().indexOf(des[i].prov) < 0) {
+				$('#prov').append('<option value=' + des[i].prov + '>' + des[i].prov + '</option>')
+			}
+		}
+		$('#prov').change(function () {
+			$("#city").find("option:not(:first)").remove();
+			$("#dealers").find("option:not(:first)").remove();
+			for (var i = 0; i < des.length; i++) {
+				if ($('#prov option:checked').text() === des[i].prov && $('#city').html().indexOf(des[i].city) < 0) {
+					$('#city').append('<option value=' + des[i].city + '>' + des[i].city + '</option>')
+				}
+			}
+		});
+		$('#city').change(function () {
+			$("#dealers").find("option:not(:first)").remove();
+			for (var i = 0; i < des.length; i++) {
+				if ($('#city option:checked').text() === des[i].city) {
+					$('#dealers').append('<option value=' + des[i].name + '>' + des[i].name + '</option>')
+				}
+			}
+		});
+		var flag = true;
+		$("#submit").on('click', function () {
+			if (flag) {
+				var prov = $('#prov').val();  //省份
+				var city = $('#city').val();  //城市
+				var dealer = $('#dealers').val();  // 经销商
+				var name = $("#name").val(),  //姓名
+					tel = $("#tel").val(),       //电话
+					series_id = $("#series").val(),  //车型
+					series = $("#series option:checked").text(),  //车型
+					brand_id = $("#series option:checked").attr('data-brand'), //品牌
+					act_id = 3431, //活动id
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,
+						phone: tel,
+						series_id: series_id,
+						prov: series,
+						brand_id: brand_id,
+						act_id: act_id,
+						dealers: dealer
+					}
+
+				if (name == '姓名' || tel == '手机') {
+					alert('信息没有填写完整');
+					return false;
+				}
+				if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(tel))) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (series_id == '0') {
+					alert('请选择车型');
+					return false;
+				}
+				if (prov == "0") {
+					alert('请选择省份');
+					return false;
+				}
+				if (city == "0") {
+					alert('请选择城市');
+					return false;
+				}
+				if (dealer == "0") {
+					alert('请选择经销商');
+					return false;
+				}
+				flag = false;
+				//发送请求
+				$.ajax({
+					type: "post",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					jsonpCallback: "jsonpReturn",
+					// success: function (data) {
+					// 	if (data.status == 1) {
+					// 		alert("恭喜你，报名成功了");
+					// 		window.location.reload();
+					// 	} else {
+					// 		alert("很抱歉，你报名失败。");
+					// 		flag = true;
+					// 	}
+					// }
+					complete: function () {
+						setTimeout(function(){
+							alert('恭喜你，报名成功！');
+							window.location.href = location.href;
+						},1000)
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		});
+		$(window).load(function () {
+			$(".con7").mCustomScrollbar({
+				scrollInertia: 550,
+				autoHideScrollbar: false
+			});
+		})
+	</script>
+
+</html>

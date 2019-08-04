@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 1.5rem;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maxinum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <title>深圳远程汉腾十一车展门票任性送</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            vertical-align: middle;
+            width: 100%;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 750px;
+            background-color: black;
+        }
+        .bg2 {
+            position: relative;
+        }
+        .form {
+            position: absolute;
+            top: 6.7rem;
+            left: 8.5rem;
+        }
+        .form input, .form select, #submit {
+            width: 11rem;
+            height: 1.6rem;
+            font-size: 1.4rem;
+            padding-left: 10px;
+            margin-bottom: 0.6rem;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        #series_id {
+            margin-top: 0rem;
+            height: 2rem;
+            width: 12rem;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        /*IE 浏览器下 隐藏 下拉箭头*/
+        select::-ms-expand{display:none;}
+        #submit {
+            cursor: pointer;
+            margin-top: 0.9rem;
+            margin-left: -1rem;
+            width: 11.6rem;
+            height: 1.8rem;
+        }
+        #cnzz_stat_icon_1260102516,
+
+        #cnzz_stat_icon_1260842227,
+
+        #cnzz_stat_icon_1260919928,
+
+        #cnzz_stat_icon_1255711023,
+
+        #cnzz_stat_icon_1260771396,
+
+        #cnzz_stat_icon_1261301380,
+
+        #cnzz_stat_icon_1261327484
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="bg1">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/85/195/201/13119835.jpg" alt="">
+</div>
+<div class="bg2">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/91/195/201/13119841.jpg" alt="">
+    <div style="position: absolute;width: 100%;left: 0; top: 0;">
+        <div class="form">
+            <input type="text" id="name">
+            <input type="text" id="tel">
+            <select id="series_id">
+            <option value="0">请选择</option>
+            <option value="596">汉腾X7</option>
+            <option value="746">汉腾X5</option>
+            </select>
+            <button id="submit"></button>
+        </div>
+    </div>
+</div>
+<div class="bg3">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/87/195/201/13119837.jpg" alt="">
+</div>
+<div class="bg4">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/88/195/201/13119838.jpg" alt="">
+</div>
+<div class="bg5">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/89/195/201/13119839.jpg" alt="">
+</div>
+<div class="bg6">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/176/195/201/13119926.jpg" alt="">
+</div>
+<div class="bg7">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/178/195/201/13119928.jpg" alt="">
+</div>
+</body>
+<script src="http://gd.qq.com/2015zt/auto/dfrc9y/9y/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    //报名
+    var flag = true;
+    $("#submit").on('click', function() {
+        if (flag) {
+            var name = $("#name").val(),  //姓名
+                tel = $("#tel").val(),       //电话
+                series_id = $("#series_id").val(),  //车型
+                brand_id = 99, //品牌
+                act_id = 560, //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+                    act_id: act_id
+                }
+
+            if (name == '姓名' || tel == '手机') {
+                alert('信息没有填写完整');
+                return false;
+            }
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+
+            flag = false;
+
+            //发送请求
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert("恭喜你，报名成功了");
+                        window.location.reload();
+                    } else {
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</html>

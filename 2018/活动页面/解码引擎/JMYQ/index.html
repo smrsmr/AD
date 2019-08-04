@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>解码引擎 趣味汽车栏目</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+    <link rel="stylesheet" href="css/conmon.css">
+    <script src="js/flexible_css.js"></script>
+    <script src="js/flexible.js"></script>
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <link href="css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="css/animate3.5.1.css" rel="stylesheet">
+    <script src="js/video.js"></script>
+    <style>
+        .main {max-width: 750px;margin: 0 auto;}
+        .pr {position: relative;}
+        .cn3 .video {position: absolute;left: 50%;top: 1.27rem;width: 9rem;height: 4.4rem;margin-left: -4.8rem;border: 0.3rem solid rgba(255,255,255,.5);}
+        .cn3 .video .vjs-poster {background-size: cover;}
+        .cn3 .video .vj {width: 100%;height: 100%;}
+        .cn3 .video-js .vjs-big-play-button {background: url("images/13560876.png") no-repeat;width: 59px;height: 58px;border: none;}
+        .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .vjs-icon-play:before {content: "";}
+        .vjs-big-play-centered .vjs-big-play-button {margin-left: -1em;}
+        .vjs-paused .vjs-big-play-button,.vjs-paused.vjs-has-started .vjs-big-play-button {display: block;}
+        .text {
+            background: url("images/13567560.jpg") top center repeat-y;
+            width: 100%;
+            height: 2rem;
+        }
+        .ts {position: absolute;left: 50%;top: 0.1rem;width: 9rem;margin-left: -4.5rem;height: 1.5rem;}
+        .ts p {font-size: 0.4rem;}
+        .cn4 .swiper {width: 9rem;height: 6rem;position: absolute;left: 50%;top: 9.3rem;margin-left: -4.5rem;}
+        .cn4 .swiper-container {width: 100%;}
+        .cn4 .swiper-button-prev {background-image: url("images/13561295.png");width: 43px;height: 84px;left: -8px;}
+        .cn4 .swiper-button-next {background-image: url("images/13561294.png");width: 43px;height: 84px;right: -8px;}
+        .swiper-button-next, .swiper-button-prev {margin-top: -42px;}
+        .cn4 .blank {position: absolute;left: 50%;top: 0;width: 4.2rem;height: 1.2rem;margin-left: -2.1rem;}
+        .cn5 .bmk {position: absolute;left: 50%;top: 1.5rem;width: 9rem;height: 8rem;margin-left: -4.5rem;}
+        .cn5 .bmk input,.cn5 .bmk select {width: 80%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;font-size: 0.5rem;}
+        .cn5 .bmk label {font-size: 0.5rem;font-weight: bold;margin: 0 0.2rem;}
+        .cn5 .bmk p {width: 8rem;height: 1rem;border: solid 2px #000000;}
+        .cn5 .bmk .name,.cn5 .bmk .tel,.cn5 .bmk .city {margin-left: 0.5rem;margin-top: 0.3rem;}
+        .cn5 .bmk .tel,.cn5 .bmk .city {margin-top: 0.34rem;}
+        .cn5 .bmk .series {margin-left: 0.5rem;margin-top: 0.389rem;}
+        .cn5 .bmk .series select {width: 67%;}
+        .cn5 .bmk .submit {margin-left: 0.4rem;margin-top: 0.389rem;width: 8.2rem;background: #f40030;border: none;height: 1.1rem;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="images/13561347.jpg" alt=""></div>
+    <div class="cn2"><img src="images/13561348.jpg" alt=""></div>
+    <div class="cn3 pr">
+        <img src="images/13567559.jpg" alt="">
+        <div class="video">
+            <video class="video-js vjs-default-skin vjs-big-play-centered vj"
+                   controls preload="auto" poster="images/13562344.jpg" width="900" height="468"
+                   data-setup='{"example_option":true}'>
+                <source src="video/video.mov" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="text pr">
+        <div class="ts">
+            <p>该栏目设计和创作融合了汽车测评、网络娱乐栏目特点. </p>
+        </div>
+    </div>
+    <div class="cn4 pr">
+        <img src="images/13561350.jpg" alt="">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/13561410.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/13561411.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/13561397.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0MjU0MDEwNw==&scene=124#wechat_redirect" class="blank"></a>
+    </div>
+    <div class="cn5 pr">
+        <img src="images/13561351.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <label>姓名</label>
+                <input type="text" id="name">
+            </p>
+            <p class="tel">
+                <label>电话</label>
+                <input type="tel" id="tel" maxlength="11">
+            </p>
+            <p class="city">
+                <label>城市</label>
+                <select name="" id="city">
+                    <option value="0">请选择城市</option>
+                    <option value="广州">广州</option>
+                    <option value="佛山">佛山</option>
+                    <option value="深圳">深圳</option>
+                    <option value="东莞">东莞</option>
+                </select>
+            </p>
+            <p class="series">
+                <label>意向车型</label>
+                <select name="" id="series">
+                    <option value="0">请选择车型</option>
+                    <option value="275">Levante SUV </option>
+                    <option value="274">Ghibli</option>
+                    <option value="273">总裁</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;width: 100%;font-weight: bold;color: white;" value="确认报名">
+            </p>
+        </div>
+    </div>
+    <div class="cn6"><img src="images/13561352.jpg" alt=""></div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/supervise.js"></script>
+<script src="js/swiper.min3.4.2.js"></script>
+<script src="js/swiper.animate.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        loop:true,
+        autoplayDisableOnInteraction : false,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                series_id = $('#series').val(),    //车型id
+                city = $('#city').val(),
+                brand_id = 44, //品牌
+                act_id = 2337,  //活动id
+                // Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Url = "https://auto.gdtengnan.com/interface.php",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id : act_id,
+                    sex: city,
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( city == '0' ) {
+                alert('请选择城市');
+                return false;
+            }
+            if( series_id == '0' ) {
+                alert('请选择车型');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"get",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    console.log(data)
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>全新途达 豪迈上市</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .cn1 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/5/44/208/13536425.jpg") top center no-repeat;
+            height: 662px;
+        }
+        .cn2 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/6/44/208/13536426.jpg") top center no-repeat;
+            height: 630px;
+            position: relative;
+        }
+        .cn3 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/7/44/208/13536427.jpg") top center no-repeat;
+            height: 565px;
+            position: relative;
+        }
+        .cn4 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/61/44/208/13536481.jpg") top center no-repeat;
+            height: 727px;
+            position: relative;
+        }
+        .cn2 .bmk {position: absolute;left: 50%;top: 146px;width: 324px;height: 339px;margin-left: 173px;}
+        .cn2 .bmk input,.cn2 .bmk select {width: 100%;height: 100%;font-size: 20px;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;}
+        .cn2 .bmk p {width: 225px;height: 41px;}
+        .cn2 .bmk .name,.cn2 .bmk .tel,.cn2 .bmk .series,.cn2 .bmk .city,.cn2 .bmk .dealers {margin-left: 87px;margin-top: 11px;}
+        .cn2 .bmk .tel,.cn2 .bmk .series,.cn2 .bmk .city {margin-top: 14px;}
+        .cn2 .bmk .dealers {width: 212px;margin-left: 100px;margin-top: 13px;}
+        .cn2 .bmk .submit {width: 286px;margin-left: 27px;margin-top: 13px;}
+        .cn3 .dor {position: absolute;width: 1000px;height: 30px;left: 50%;top: 98px;margin-left: -462px;}
+        .cn3 .dor li {float: left;line-height: 30px;text-align: left;font-size: 22px;font-weight: bold;margin-right: 56px;cursor: pointer;}
+        .cn3 .dor li.active {color: #946323;-webkit-transform: scale(3);-moz-transform: scale(3);-ms-transform: scale(3);-o-transform: scale(3);transform: scale(3);border-bottom: 3px solid #946323;}
+        .cn3 .che {position: absolute;left: 50%;top: 170px;width: 1032px;height: 410px;margin-left: -516px;overflow: hidden;}
+        .cn4 .desDor,.cn4 .desList {position: absolute;left: 50%;top: 60px;width: 960px;height: 40px;margin-left: -480px;}
+        .cn4 ul {width: 100%;overflow: hidden;}
+        .cn4 .desDor ul li select {width: 100%;height: 100%;background: #946323;font-size: 20px;color: white;}
+        .cn4 .desDor ul li select {width: auto;padding: 0 2%;margin: 0;cursor: pointer;}
+        option{text-align:center;}
+        .cn4 .desDor ul li {float: left;width: 120px;background: #946323;height: 40px;line-height: 40px;text-align: center;margin-right: 46px;font-size: 20px;color: white;}
+        .cn4 .desDor ul li:nth-child(2){margin-right: 120px;}
+        .cn4 .desDor ul li:nth-child(3){margin-right: 210px;}
+        .cn4 .desList {top: 115px;height: 500px;overflow: auto;}
+        .cn4 .desList ul {border-bottom: 1px solid #ccc;margin-bottom: 12px;}
+        .cn4 .desList ul li {float: left;width: 94px;text-align: left;font-size: 20px;margin-right: 68px;padding-bottom: 10px;}
+        .cn4 .desList ul li:first-child {text-align: center;margin-left: 9px;}
+        .cn4 .desList ul li:nth-child(2) {width: 170px;}
+        .cn4 .desList ul li:nth-child(3) {width: 263px;}
+        .cn4 .desList ul li:nth-child(4) {width: 183px;margin-right: 0;}
+        .mCSB_scrollTools .mCSB_draggerRail {background-color: #ccc !important;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {position: relative;width: 10px;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: #946323 !important;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"></div>
+    <div class="cn2">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" maxlength="11">
+            </p>
+            <p class="series">
+                <select name="" id="series">
+                    <option value="0">--请选择车型--</option>
+                </select>
+            </p>
+            <p class="city">
+                <select name="" id="city">
+                    <option value="0">--请选择城市--</option>
+                    <option value="297" data-sc="A2018-1268-5103-2145-117534" data-deid="128">广州市</option>
+                    <option value="300" data-sc="A2018-1268-5103-2453-117528" data-deid="129">佛山市</option>
+                    <option value="299" data-sc="A2018-1268-5103-2144-117522" data-deid="130">东莞市</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">--请选择经销商--</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+        </div>
+    </div>
+    <div class="cn3">
+        <ul class="dor">
+            <li class="active">途达</li>
+            <li>楼兰</li>
+            <li>奇骏</li>
+            <li>逍客</li>
+            <li>劲客</li>
+            <li>轩逸</li>
+        </ul>
+        <div class="che">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/13/44/208/13536433.png" alt="">
+        </div>
+    </div>
+    <div class="cn4">
+        <div class="desDor">
+            <ul>
+                <li>
+                    <select value="" id="Qcity">
+                        <option value="广州市">广州市</option>
+                        <option value="佛山市">佛山市</option>
+                        <option value="东莞市">东莞市</option>
+                    </select>
+                </li>
+                <li>经销商</li>
+                <li>地址</li>
+                <li>电话</li>
+            </ul>
+        </div>
+        <div class="desList"></div>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/2017web/base.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des = [
+        {"name":"佛山时利和南海","QCname":"佛山和悦汽车销售服务有限公司","nameCode":"G2939","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Xtel":"0757-66688999","address":"佛山市南海区狮山镇广云南路（佛山一环狮山立交西侧）"},
+        {"name":"广州风日","QCname":"广州市风日汽车贸易有限公司","nameCode":"H2901","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-86871333","Xtel":"020-86871222","address":"广州市花都区新华镇西城开发区风神大道10号"},
+        {"name":"广州东风南方中大","QCname":"广州东风南方汽车销售服务有限公司","nameCode":"H2902","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-85553008","Xtel":"020-85553008","address":"广州市天河区中山大道北侧棠东895号（骏景花园对面）"},
+        {"name":"广州华溢石槎","QCname":"广州市华溢汽车有限公司","nameCode":"H2903","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-86406638","Xtel":"020-86406628","address":"白云区石槎路自编15号"},
+        {"name":"广州喜龙","QCname":"广东日产汽车贸易有限公司","nameCode":"H2904","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-81519393","Xtel":"020-81510399","address":"广州市荔湾区花地大道中268号"},
+        {"name":"广州金冠","QCname":"广州市番禺金冠汽车有限公司","nameCode":"H2905","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-84566222","Xtel":"020-84567838","address":"广州市番禺区钟村街钟一村钟屏岔道2号之二"},
+        {"name":"广州东风南方广大","QCname":"广州东风南方汽车销售服务有限公司海珠分公司","nameCode":"H2906","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-84293975,020-84293976","Xtel":"020-84293975,020-84293976","address":"广州市海珠区广州大道南1 88号(洛溪桥脚公交站）"},
+        {"name":"广州京安","QCname":"广东广物京安汽车销售服务有限公司","nameCode":"H2908","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-82882339","Xtel":"020-82882338","address":"广东省广州市增城区新塘镇荔新公路上邵村路段"},
+        {"name":"广州广裕","QCname":"广州市佳奔汽车贸易有限公司","nameCode":"H2910","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-39995018","Xtel":"020-39995038","address":"广东省广州市番禺区市桥街东环路126号（交警大队斜对面）"},
+        {"name":"广州广利","QCname":"广东广利汽车销售服务有限公司","nameCode":"H2912","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-86366809","Xtel":"020-86388988","address":"广州市白云区下塘西路614号（雕塑公园正对面）"},
+        {"name":"广州耀骏","QCname":"广州市耀骏汽车销售服务有限公司","nameCode":"H2913","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"400-668-2113","Xtel":"020-22668888","address":"广州市增城荔城三联村钟岗社磨谷地"},
+        {"name":"佛山利泰","QCname":"佛山市利泰汽车销售服务有限公司","nameCode":"H2915","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-86250978","Xtel":"0757-86362808","address":"佛山市南海区华南汽车城桂城海八路中心洲东风日产利泰专营店"},
+        {"name":"顺德协力","QCname":"佛山市顺德区协力汽车销售服务有限公司","nameCode":"H2916","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-22380299","Xtel":"0757-22218999","address":"佛山市顺德区大良广珠公路新松路段新协力汽车城"},
+        {"name":"东莞东风南方莞太","QCname":"东莞东风南方汽车销售服务有限公司","nameCode":"H2918","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-22985906","Xtel":"0769-22985901","address":"东莞市南城区莞太路周溪段172号（广彩城斜对面）"},
+        {"name":"广州龙日","QCname":"广州市龙日汽车服务有限公司","nameCode":"H2920","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-37211118","Xtel":"020-87033666","address":"广东省广州市天河区广汕一路500号中控楼（6）栋之一、二层"},
+        {"name":"广州东风南方黄埔","QCname":"广州东风南方汽车销售服务有限公司黄埔分公司","nameCode":"H2921","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-66312346","Xtel":"020-66312345","address":"广州市黄埔区中山大道东280-1号(地铁5号线-鱼珠站C出口即到)"},
+        {"name":"东莞东风南方大兴","QCname":"东莞东风南方大新汽车销售服务有限公司","nameCode":"H2926","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-22672662","Xtel":"0769-22672318","address":"东莞市东城区莞长路牛山管理区上山门村"},
+        {"name":"南海雄峰","QCname":"佛山市雄峰骏程汽车服务有限公司","nameCode":"H2927","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-86718880","Xtel":"0757-86718881","address":"佛山市南海区佛平四路雄峰车城6号（一环佛平路出口东行）"},
+        {"name":"佛山吉泰","QCname":"佛山市吉泰汽车销售服务有限公司","nameCode":"H2935","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-85381616","Xtel":"0757-85396990","address":"佛山市南庄镇吉利大道西吉利工业园利源一路1号"},
+        {"name":"东莞东风南方莞樟","QCname":"东莞东风南方汽车销售服务有限公司寮步分公司","nameCode":"H2936","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-83523025","Xtel":"0769-83523035","address":"东莞市寮步镇莞樟路富竹山路段"},
+        {"name":"东莞东风南方东益","QCname":"东莞东风南方东益汽车销售服务有限公司","nameCode":"H2939","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-85199988","Xtel":"0769-85199966","address":"东莞市虎门镇白沙村317号"},
+        {"name":"东莞东风南方东深","QCname":"东莞东风南方汽车销售服务有限公司樟木头分公司","nameCode":"H2940","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"400-887-0769","Xtel":"0769-87700811","address":"东莞市樟木头镇东深大道景福路交警大队旁"},
+        {"name":"顺德东炬","QCname":"佛山市庆宏隆汽车销售服务有限公司","nameCode":"H2941","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"400-686-0757","Xtel":"0757-23602308","address":"佛山市顺德区北滘镇105国道与佛陈路交界处（佛碧路2号）"},
+        {"name":"广州南沙大昌行喜龙","QCname":"广东大昌行日产汽车贸易有限公司","nameCode":"H2948","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-34970666 , 020-34970333","Xtel":"020-34970666","address":"广州市南沙区黄阁镇市南大道129号(地铁4号线黄阁站往东300米）"},
+        {"name":"广州华溢街口","QCname":"广州市华谦汽车有限公司","nameCode":"H2949","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-87983122","Xtel":"020-87989288","address":"广州市从化河东北路口（105国道凤院村路口旁）"},
+        {"name":"东莞东风南方莞龙","QCname":"东莞东风南方汽车销售服务有限公司石龙分公司","nameCode":"H2953","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-81389981","Xtel":"0769-81389981","address":"东莞市石龙镇西湖东路155号"},
+        {"name":"东莞东风南方东兴","QCname":"东莞东风南方东升汽车销售服务有限公司","nameCode":"H2955","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-85038606","Xtel":"0769-85038200","address":"东莞市莞太路厚街镇三屯路口(国际家具正对面)"},
+        {"name":"佛山利隆","QCname":"佛山市利隆汽车销售服务有限公司","nameCode":"H2956","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-87789188","Xtel":"0757-87789188","address":"佛山市三水区西南街道南丰大道石湖洲"},
+        {"name":"佛山禅车城","QCname":"佛山市盛泰汽车销售服务有限公司","nameCode":"H2958","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-82782380","Xtel":"0757-83966018","address":"佛山市禅城区佛山大道中83号佛山（国际）车城北区七座"},
+        {"name":"东莞东风南方金美","QCname":"东莞东风南方东合汽车销售服务有限公司","nameCode":"H2959","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-89926622","Xtel":"0769-89926666","address":"东莞常平镇金美村环城路与常朗大道交界处"},
+        {"name":"广州南菱","QCname":"广州市南菱君达汽车有限公司","nameCode":"H2960","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-28272322","Xtel":"020-28272300","address":"广州市白云区白云大道北1401号（白云堡立交北500米）"},
+        {"name":"佛山容泰店","QCname":"佛山市金桂汽车销售服务有限公司","nameCode":"H2963","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-29812588","Xtel":"0757-29812666","address":"佛山市顺德区容桂镇海尾社区广胜二街20号（105国道旁）"},
+        {"name":"东莞东风南方龙平","QCname":"东莞东风南方汽车销售服务有限公司凤岗分公司","nameCode":"H2966","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-81286222","Xtel":"0769-82097333","address":"东莞市凤岗镇龙平西路218号(宏盈工业区对面)"},
+        {"name":"佛山广物锐祥","QCname":"广东广物锐祥汽车贸易有限公司","nameCode":"H2967","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-85618988","Xtel":"0757-85619188","address":"佛山南海里水镇佛山一环东水口路出口200米东风日产广物锐祥专营店"},
+        {"name":"广州东风南方广辰","QCname":"广州东风南方广辰汽车销售服务有限公司","nameCode":"H2972","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-66600227","Xtel":"020-66600226","address":"广州市番禺区大龙街市莲路傍江西村段10号"},
+        {"name":"顺德庆丰龙江","QCname":"佛山市顺德区庆骏汽车销售服务有限公司","nameCode":"H2975","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-28089780","Xtel":"0757-28089788","address":"广东省佛山市顺德区龙江镇龙江洲西路52号"},
+        {"name":"佛山明泰","QCname":"佛山市明泰汽车销售服务有限公司","nameCode":"H2979","city":"佛山市","cityCode":"300","pro":"广东省","proCode":"24","Ftel":"0757-88263362","Xtel":"0757-88263371","address":"佛山市高明区荷城街道万成路和高明大道交汇处"},
+        {"name":"东莞东风南方振安","QCname":"东莞东风南方汽车销售服务有限公司长安分公司","nameCode":"H2981","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-89391966","Xtel":"0769-89391999","address":"广东省东莞市长安镇乌纱蔡屋振荣路2号A"},
+        {"name":"广州金冠明珠","QCname":"广州市番禺金冠汽车有限公司第一分公司","nameCode":"H2989","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-31178338","Xtel":"020-31178228","address":"广东省广州市番禺区迎宾路111之1厦滘工业园"},
+        {"name":"东莞东风南方塘厦","QCname":"东莞东风南方汽车销售服务有限公司塘厦分公司","nameCode":"H2990","city":"东莞市","cityCode":"299","pro":"广东省","proCode":"24","Ftel":"0769-82955300","Xtel":"0769-82955111","address":"广东省东莞市塘厦镇林村新阳三路1号"},
+        {"name":"广州绿日","QCname":"广州绿日汽车销售服务有限公司","nameCode":"H2992","city":"广州市","cityCode":"297","pro":"广东省","proCode":"24","Ftel":"020-36878000","Xtel":"020-36878111","address":"广州市花都区平步大道60号（南菱丰田斜对面）"},
+    ];
+    /****************车型数据*******************/
+    var ser = [
+        {"SERIES_ID":"210","SERIES_NAME":"全新途达"},
+        {"SERIES_ID":"14","SERIES_NAME":"NISSAN GT-R"},
+        {"SERIES_ID":"141","SERIES_NAME":"全新 GT-R"},
+        {"SERIES_ID":"150","SERIES_NAME":"370Z"},
+        {"SERIES_ID":"17","SERIES_NAME":"玛驰"},
+        {"SERIES_ID":"170","SERIES_NAME":"R50X"},
+        {"SERIES_ID":"190","SERIES_NAME":"天籁公爵"},
+        {"SERIES_ID":"191","SERIES_NAME":"途乐"},
+        {"SERIES_ID":"192","SERIES_NAME":"R30"},
+        {"SERIES_ID":"193","SERIES_NAME":"T70"},
+        {"SERIES_ID":"194","SERIES_NAME":"蓝鸟"},
+        {"SERIES_ID":"195","SERIES_NAME":"370Z NISMO"},
+        {"SERIES_ID":"196","SERIES_NAME":"GT-R NISMO"},
+        {"SERIES_ID":"197","SERIES_NAME":"新楼兰"},
+        {"SERIES_ID":"198","SERIES_NAME":"T70X"},
+        {"SERIES_ID":"199","SERIES_NAME":"全新逍客"},
+        {"SERIES_ID":"20","SERIES_NAME":"骊威"},
+        {"SERIES_ID":"200","SERIES_NAME":"西玛"},
+        {"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA"},
+        {"SERIES_ID":"202","SERIES_NAME":"启辰T90 "},
+        {"SERIES_ID":"203","SERIES_NAME":"全新天籁"},
+        {"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵"},
+        {"SERIES_ID":"205","SERIES_NAME":"新奇骏"},
+        {"SERIES_ID":"206","SERIES_NAME":"启辰M50V"},
+        {"SERIES_ID":"207","SERIES_NAME":"启辰D60"},
+        {"SERIES_ID":"208","SERIES_NAME":"劲客"},
+        {"SERIES_ID":"209","SERIES_NAME":"全新T70"},
+        {"SERIES_ID":"21","SERIES_NAME":"逍客"},
+        {"SERIES_ID":"24","SERIES_NAME":"新世代天籁"},
+        {"SERIES_ID":"26","SERIES_NAME":"轩逸经典"},
+        {"SERIES_ID":"28","SERIES_NAME":"阳光"},
+        {"SERIES_ID":"29","SERIES_NAME":"新骐达"},
+        {"SERIES_ID":"30","SERIES_NAME":"新一代轩逸"},
+        {"SERIES_ID":"31","SERIES_NAME":"楼兰"},
+        {"SERIES_ID":"32","SERIES_NAME":"奇骏"},
+        {"SERIES_ID":"33","SERIES_NAME":"贵士"},
+        {"SERIES_ID":"34","SERIES_NAME":"全新轩逸"},
+        {"SERIES_ID":"70","SERIES_NAME":"启辰D50"},
+        {"SERIES_ID":"71","SERIES_NAME":"启辰R50"},
+        {"SERIES_ID":"72","SERIES_NAME":"骐达GTS"},
+        {"SERIES_ID":"73","SERIES_NAME":"E30"},
+    ];
+</script>
+<script>
+    $(function () {
+        for (var j=0; j<ser.length; j++) {
+            //遍历车型数据
+            $('#series').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+        }
+        $('#city').change(function () {
+            //切换城市 找对应经销商
+            $("#dealers").find("option:not(:first)").remove();
+            for (var i=0; i<des.length; i++) {
+                if ($('#city option:checked').text()==des[i].city) {
+                    $('#dealers').append('<option value="'+des[i].nameCode+'">'+des[i].name+'</option>')
+                }
+            }
+        });
+        $('.dor li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            var index = $(this).index();
+            switch (index){
+                case 0:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/13/44/208/13536433.png');
+                    break;
+                case 1:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/11/44/208/13536431.png');
+                    break;
+                case 2:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/12/44/208/13536432.png');
+                    break;
+                case 3:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/14/44/208/13536434.png');
+                    break;
+                case 4:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/10/44/208/13536430.png');
+                    break;
+                case 5:
+                    $('.che img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/15/44/208/13536435.png');
+                    break;
+            }
+        });
+        for (var i=0; i<des.length;i++) {
+            var Qcity = $('#Qcity option:checked').val();
+            if (Qcity == des[i].city) {
+                var ul = '<ul>'+
+                    '<li>'+des[i].city+'</li>'+
+                    '<li>'+des[i].name+'</li>'+
+                    '<li>'+des[i].address+'</li>'+
+                    '<li>'+des[i].Xtel+'</li>'+
+                    '</ul>';
+                $('.desList').append(ul);
+            }
+        }
+        $('#Qcity').change(function () {
+            $('.desList .mCSB_container').html('');
+            $(".desList").mCustomScrollbar("destroy");
+            for (var i=0; i<des.length;i++) {
+                if ($('#Qcity option:checked').val() == des[i].city) {
+                    var ul = '<ul>'+
+                        '<li>'+des[i].city+'</li>'+
+                        '<li>'+des[i].name+'</li>'+
+                        '<li>'+des[i].address+'</li>'+
+                        '<li>'+des[i].Xtel+'</li>'+
+                        '</ul>';
+                    $('.desList').append(ul);
+                }
+            }
+            $(".desList").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        });
+        $(window).load(function() {
+            $(".desList").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        });
+        //报名
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),        //电话
+                    city_id = $('#city').val(),  //城市id
+                    city = $('#city option:checked').text(),    //城市名字
+                    province = 24,  //省份
+                    detail_id = $('#city option:checked').attr('data-deid'),  //detail_id
+                    sc = $('#city option:checked').attr('data-sc'),
+                    series_id = $('#series').val(),  //车型id
+                    car_name = $('#series option:checked').text(),  //车型名字
+                    brand_id = 11, //品牌
+                    dealers_code = $('#dealers').val(),   //经销商id
+                    dealers = $('#dealers option:checked').text(),   //经销商名字
+                    Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+
+                        city_id: city_id,
+                        city:city,
+                        dealers: dealers,
+                        province: province,
+                        car_name: car_name,
+                        dealers_code: dealers_code,
+
+                        detail_id:detail_id,
+                        type: 1,
+                        smartcode: sc
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id=='0'){
+                    alert('请选择车型');
+                    return false;
+                }
+                if(city_id=='0'){
+                    alert('请选择城市');
+                    return false;
+                }
+                if(dealers_code=='0'){
+                    alert('请选择专营店');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+</html>

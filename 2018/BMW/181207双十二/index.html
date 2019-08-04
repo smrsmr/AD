@@ -1,0 +1,457 @@
+<!--2018年-12月-07号 星期五 17:08:27 -->
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>宝马特价车年终聚惠专场</title>
+		<link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<style>
+			.main {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #dc0029;
+        }
+        .pr {
+            position: relative;
+        }
+        .pa {
+            position: absolute;
+        }
+        .timers .timer {
+            left: 50%;
+            top: 0.1rem;
+            margin-left: -2rem;
+            color: white;
+            background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/154/78/211/13740319.png') center center no-repeat;
+            background-size: 100%;
+            width: 4rem;
+            height: .68rem;
+        }
+        .timers .timer ul {
+            width: 100%;
+            overflow: hidden;
+        }
+        .timers .timer ul li {
+            float: left;
+            font-size: .4rem;
+            line-height: .586888rem;
+            font-weight: bold;
+        }
+        .timers .timer ul li:nth-child(1){
+            margin-left: .3rem;
+            margin-right: .1rem;
+        }
+        .timers .timer ul li span {
+            display: inline-block;
+        }
+        .center {
+            width: 100%;
+            height: auto;
+        }
+        .center .cars {
+            left: 50%;
+            top: 0.5rem;
+            width: 9.133333rem;
+            height: 2.9rem;
+            margin-left: -4.566666rem;
+        }
+        .center .cars>li {
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            box-shadow: 0rem 0rem 0rem 0rem rgba(231, 75, 0, 0.73);
+            border-radius: .133333rem;
+            overflow: hidden;
+            margin-bottom: .56000rem;
+        }
+        .center .cars>li .fl,.center .cars>li .fr {
+            float: left;
+            width: 4.04rem;
+            height:2.4rem;
+            margin: .24rem;
+        }
+        .center .cars>li .fr {
+            width: 4.6rem;
+            margin: .24rem 0 .24rem 0;
+            color: #2c2c2c;
+        }
+        .center .cars>li .fr h2 {
+            font-size: .293333rem;
+            margin-bottom: .173333rem;
+        }
+        .center .cars>li .mColor {
+            color: #ff0054;
+        }
+        .center .cars>li .fr .d1 .limit{
+            line-height: .49rem;
+            font-size: .213333rem;
+            margin-left: .266667rem;
+        }
+        .center .cars>li .fr .master {
+            font-size: .293333rem;
+            color: #a2a2a2;
+            text-decoration:line-through; 
+        }
+        .center .cars>li .fr button {
+            width: 3.373333rem;
+            height: .653333rem;
+            background-color: #ffffff;
+            border-radius: .133333rem;
+            border: solid 1px #ff2164;
+            margin-top: .173333rem;
+            color: #ff2164;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .backdrop {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+            display: none;
+            z-index: 100;
+        }
+        .bmk {
+            width: 9.346667rem;
+            height: 5.333333rem;
+            background-image: linear-gradient(#ffffff,  #ffffff), 
+            linear-gradient( #e7e7e7, #e7e7e7);
+            margin: 0 auto;z-index: 101;display: none;
+        }
+        .bmk h2 {
+            margin-top: .626667rem;
+            margin-bottom: .533333rem;
+            width: 100%;
+            text-align: center;
+            font-size: .293333rem;
+            color: #2c2c2c;
+            font-weight: bold;
+        }
+        .bmk input {
+            width: 4.6rem;
+            height: .973333rem;
+            background-color: transparent;
+            color: #808080;
+            font-size: .293333rem;
+        }
+        .bmk p {
+            width: 6.013333rem;
+            height: .973333rem;
+            background-color: #e7e7e7;
+            margin: 0 auto .36rem;
+        }
+        .bmk p label {
+            width: .373333rem;
+            height: .373333rem;
+            line-height: .973333rem;
+            display: inline-block;
+            margin: 0 .36rem;
+        }
+        .bmk p label img {
+            max-width: 100%;
+        }
+        .bmk #btn {
+            left: 50%;
+            top: 4.2rem;
+            width: 2.746667rem;
+            height: .8rem;
+            margin-left: -1.352rem;
+            background-color: #d51b1c;
+            border-radius: .1rem;
+            color: white;
+            cursor: pointer;
+        }
+        .bmk .delect {
+            right: .266667rem;
+            top: .266667rem;
+            width: .253333rem;
+            height: .24rem;
+            cursor: pointer;
+        }
+        .bmtk {
+          cursor: pointer;
+        }
+    </style>
+	</head>
+
+	<body>
+		<div class="main pr">
+			<div class="banner"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/12/111/211/13748592.jpg" alt=""></div>
+			<div class="timers pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/153/78/211/13740318.jpg" alt="">
+				<div class="timer pa">
+					<ul>
+						<li>倒计时</li>
+						<li><span class="t_h">78</span><span style="margin:0 0.1rem;">:</span></li>
+						<li><span class="t_m">34</span><span style="margin:0 0.1rem;">:</span></li>
+						<li><span class="t_s">32</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="center pr">
+				<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/76/211/13739655.jpg" alt="">
+				<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/1/76/211/13739656.jpg" alt="">
+				<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/2/76/211/13739657.jpg" alt="">
+				<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/76/211/13739658.jpg" alt="">
+				<ul class="pa cars">
+					<!-- <li>
+                <div class="fl"><img src="img/car.png" alt=""></div>
+                <div class="fr">
+                    <h2>宝马2系	220i领先多功能旅行版</h2>
+                    <div class="d1 pr">
+                        <h2>秒杀价￥ <span class="mColor">195,605</span> 元<span class="limit pa">限量<i class="mColor">8</i>台</span></h2>
+                    </div>
+                    <p class="master">原价 ￥ <span>269,800</span> 元</p>
+                    <button class="submit">立即报名</button>
+                </div>
+            </li> -->
+				</ul>
+			</div>
+			<div class="backdrop"></div>
+			<div class="bmk pa">
+				<h2>当前选择: <span></span></h2>
+				<p class="name">
+					<label><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/212/76/211/13739867.png" alt=""></label>
+					<input type="text" id="name" placeholder="姓名">
+				</p>
+				<p class="tel">
+					<label><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/213/76/211/13739868.png" alt=""></label>
+					<input type="tel" id="tel" placeholder="电话" maxlength="11">
+				</p>
+				<button id="btn" class="pa">立即报名</button>
+				<i class="pa delect"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/214/76/211/13739869.png" alt=""></i>
+			</div>
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+	<script>
+		//分享
+		var appId = "";       //公众号的唯一标识
+		var timestamp = "";   //生成签名的时间戳
+		var nonceStr = "";    //生成签名的随机串
+		var signature = "";   //签名
+		wx.config({
+			debug: false,
+			appId: appId,
+			timestamp: timestamp,
+			nonceStr: nonceStr,
+			signature: signature,
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'onMenuShareAppMessage',
+				'onMenuShareTimeline'
+			]
+		});
+		var share_title = '宝马特价车年终聚惠专场';
+		var share_desc = '宝马特价车，限时限量，助你底价抢豪车';
+		var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/253/75/211/13739653.jpg';
+		var share_link = window.location.href;
+		/* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+		wx.ready(function () {
+			// 在这里调用 API
+			wx.onMenuShareAppMessage({
+				title: share_title, // 分享标题
+				desc: share_desc, // 分享描述
+				link: share_link, // 分享链接
+				imgUrl: share_image, // 分享图标
+				type: '', // 分享类型,music、video或link，不填默认为link
+				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				success: function () {
+					// 用户成功分享后执行的回调函数
+					setword.getShareLog()
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+					//alert("分享取消");
+				}
+			});
+			wx.onMenuShareTimeline({
+				title: share_title, // 分享标题
+				link: share_link, // 分享链接
+				imgUrl: share_image, // 分享图标
+				success: function () {
+					// 用户成功分享后执行的回调函数
+					setword.getShareLog()
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+					//alert("分享取消");
+				}
+			});
+		});
+
+		// 倒计时日期时间
+		var time = "2018/12/25 23:23:59";
+		//活动id
+		var act_id = 3394;
+		//车型数据填充
+		var cars = [
+			//图片 品牌id 车型id 车型描述 秒杀价 限量台数 原价价格
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/36/81/211/13740966.png', brand: '155', series: '21', h2: 'X1 sDrive 18Li 尊享型 X设计套装', seckill: '220255', num: '8', master: '303800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/19/81/211/13740949.png', brand: '155', series: '185', h2: '525Li M运动套装', seckill: '382287', num: '9', master: '436900' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/18/81/211/13740948.png', brand: '117', series: '1036', h2: '525i M运动套装', seckill: '367564', num: '7', master: '429900' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/53/81/211/13740983.png', brand: '117', series: '1038', h2: 'X3 xDrive30i 领先型M运动套装', seckill: '429732', num: '9', master: '496800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/55/81/211/13740985.png', brand: '1', series: '23', h2: 'X5 xDrive35iM运动豪华型', seckill: '729971', num: '6', master: '929900' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/14/81/211/13740944.png', brand: '155', series: '57', h2: '220i领先多功能旅行版', seckill: '195605', num: '8', master: '269800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/48/81/211/13740978.png', brand: '1', series: '1205', h2: 'X2 sDrive20i M越野套装', seckill: '227493', num: '8', master: '289800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/50/81/211/13740980.png', brand: '1', series: '1205', h2: 'X2 sDrive25i 领先型 M越野套装', seckill: '265489', num: '8', master: '329800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/16/81/211/13740946.png', brand: '1', series: '334', h2: '425i  M运动套装', seckill: '312481', num: '8', master: '369800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/17/81/211/13740947.png', brand: '1', series: '334', h2: '425i 四门 领先型 M运动套装', seckill: '316179', num: '8', master: '369800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/15/81/211/13740945.png', brand: '1', series: '195', h2: '320iGT M运动型', seckill: '333741', num: '8', master: '419800' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/33/81/211/13740963.png', brand: '1', series: '300', h2: '630i GT 豪华型', seckill: '555664', num: '8', master: '649900' },
+
+			{ img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/32/81/211/13740962.png', brand: '117', series: '1037', h2: '630i GT M运动套装', seckill: '596763', num: '8', master: '689900' },
+
+		]
+
+		//报名框弹出
+		var oLogin = $('.bmk');
+		oLogin.css('left', ($(window).width() - oLogin.outerWidth()) / 2);
+		oLogin.css('top', ($(window).height() - oLogin.outerHeight()) / 2.3);
+		$(window).on('resize scroll', function () {
+			oLogin.css('left', ($(window).width() - oLogin.outerWidth()) / 2);
+			oLogin.css('top', ($(window).height() - oLogin.outerHeight()) / 2.3 + $(window).scrollTop());
+		});
+		//数据渲染
+		for (var i = 0; i < cars.length; i++) {
+			var $li = '<li class="bmtk" data-brand=' + cars[i].brand + ' data-series=' + cars[i].series + ' data-title=' + cars[i].h2.replace(/\s+/g, "-") + '>' +
+				'<div class="fl"><img src=' + cars[i].img + ' alt=""></div>' +
+				'<div class="fr">' +
+				'<h2>' + cars[i].h2 + '</h2>' +
+				'<div class="d1 pr">' +
+				'<h2>秒杀价￥ <span class="mColor">' + cars[i].seckill + '</span> 元<span class="limit pa">限量<i class="mColor">' + cars[i].num + '</i>台</span></h2>' +
+				'</div>' +
+				'<p class="master">原价 ￥ <span>' + cars[i].master + '</span> 元</p>' +
+				'<button class="submit">立即报名</button>' +
+				'</li>'
+			$('.cars').append($li)
+		}
+		/*--倒计时--*/
+		var EndTime = new Date(time), tt;
+		function toTens(i) { if (i < 10) { i = "0" + i; } return i; }
+		function GetRTime() {
+			var NowTime = new Date();
+			var t = EndTime.getTime() - NowTime.getTime();
+			var d = Math.floor(t / 1000 / 60 / 60 / 24);  //天
+			var h = Math.floor(t / 1000 / 60 / 60 % 24);   //时
+			var m = Math.floor(t / 1000 / 60 % 60);  //分
+			var s = Math.floor(t / 1000 % 60);   //秒
+			$('.t_d').text(toTens(d));
+			$('.t_h').text(toTens(h + d * 24));
+			$('.t_m').text(toTens(m));
+			$('.t_s').text(toTens(s));
+			if (t < 0) {
+				clearInterval(tt);
+				$('.t_d').text("00");
+				$('.t_h').text("00");
+				$('.t_m').text("00");
+				$('.t_s').text("00");
+			}
+		}
+		tt = setInterval(GetRTime, 0);
+		/*--倒计时结束--*/
+		//报名
+		var title = '', brand, series;
+		$(document).on('click', '.bmtk', function () {
+			title = $(this).attr('data-title').replace(/-/g, " ");
+			brand = $(this).attr('data-brand');
+			series = $(this).attr('data-series');
+			$('.backdrop').fadeIn(300);
+			$('.bmk').fadeIn(300);
+			$('.bmk h2 span').text(title);
+		})
+		$('.delect').click(function () {
+			title = '';
+			$('.backdrop').fadeOut(300);
+			$('.bmk').fadeOut(300);
+		})
+		var flag = true;
+		$("#btn").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //名字
+					tel = $("#tel").val(),   //电话
+					dealers = '', //经销商
+					brand_id = brand, //品牌id
+					series_id = series, //车型id
+					// Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,
+						phone: tel,
+						act_id: act_id,
+						brand_id: brand_id,
+						series_id: series_id,
+						dealers: dealers,
+					};
+				//判断填写是否正确
+				if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type: "get",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					// success: function (data) {
+					//   if (data.status == 1) {
+					//     alert('恭喜你，报名成功！');
+					//     location.reload();
+					//   } else {
+					//     flag = true;
+					//     alert("很抱歉，你报名失败。");
+					//   }
+					// }
+					complete: function () {
+						setTimeout(function () {
+							alert('恭喜你，报名成功！');
+							window.location.href = location.href;
+						}, 1000)
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		})
+	</script>
+
+</html>

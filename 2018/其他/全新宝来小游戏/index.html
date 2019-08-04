@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>乐生活，趣改变</title>
+    <base href="__STATIC__/game/"/>
+   <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/2018web/ZZX/css/css.css">
+    <script src="http://dongguan.auto.qq.com/zxq_commonCode/js/jquery-3.3.1.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+</head>
+<body>
+<div style="margin: auto;width: 100%;height: 100%;" id="gameDiv" class="egret-player"
+     data-entry-class="Main"
+     data-orientation="auto"
+     data-scale-mode="fixedWidth"
+     data-frame-rate="30"
+     data-content-width="640"
+     data-content-height="1040"
+     data-show-paint-rect="false"
+     data-multi-fingered="2"
+     data-show-fps="false" data-show-log="false"
+     data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+</div>
+<script>
+    //分享
+    var appId     = "{$data['appId']}";       //公众号的唯一标识
+    var timestamp = "{$data['timestamp']}";   //生成签名的时间戳
+    var nonceStr  = "{$data['nonceStr']}";    //生成签名的随机串
+    var signature = "{$data['signature']}";   //签名
+    wx.config({
+        debug: false,
+        appId: appId,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline',
+            'openLocation',
+        ]
+    });
+    var share_title = '乐生活，趣改变';
+    var share_desc = '宝来趣味挑战，精彩不止于此。';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/159/48/210/13667649.jpg';
+    var share_link = 'http://www.yetcar.com/index.php?s=/Home/Renewal/index';
+    wx.ready(function () {
+        // 在这里调用 API
+        wx.onMenuShareAppMessage({
+            title: share_title, // 分享标题
+            desc: share_desc, // 分享描述
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户成功分享后执行的回调函数
+                //alert('分享给你')
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: share_title, // 分享标题
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+    });
+</script>
+<script>
+    var loadScript = function (list, callback) {
+        var loaded = 0;
+        var loadNext = function () {
+            loadSingleScript(list[loaded], function () {
+                loaded++;
+                if (loaded >= list.length) {
+                    callback();
+                }
+                else {
+                    loadNext();
+                }
+            })
+        };
+        loadNext();
+    };
+    var loadSingleScript = function (src, callback) {
+        var s = document.createElement('script');
+        s.async = false;
+        s.src = src;
+        s.addEventListener('load', function () {
+            s.parentNode.removeChild(s);
+            s.removeEventListener('load', arguments.callee, false);
+            callback();
+        }, false);
+        document.body.appendChild(s);
+    };
+   var list=['http://guangzhou.auto.qq.com/2018web/ZZX/js/egret.min.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/egret.web.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/game.min.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/tween.min.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/assetsmanager.min.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/promise.min.js','http://guangzhou.auto.qq.com/2018web/ZZX/js/main.min.js']
+    loadScript(list, function () {
+        /**
+         * {
+             * "renderMode":, //Engine rendering mode, "canvas" or "webgl"
+             * "audioType": 0 //Use the audio type, 0: default, 2: web audio, 3: audio
+             * "antialias": //Whether the anti-aliasing is enabled in WebGL mode, true: on, false: off, defaults to false
+             * "calculateCanvasScaleFactor": //a function return canvas scale factor
+             * }
+         **/
+        egret.runEgret({
+            renderMode: "webgl", audioType: 0, calculateCanvasScaleFactor: function (context) {
+                var backingStore = context.backingStorePixelRatio ||
+                    context.webkitBackingStorePixelRatio ||
+                    context.mozBackingStorePixelRatio ||
+                    context.msBackingStorePixelRatio ||
+                    context.oBackingStorePixelRatio ||
+                    context.backingStorePixelRatio || 1;
+                return (window.devicePixelRatio || 1) / backingStore;
+            }
+        });
+    });
+</script>
+<script>
+    window.h6app_shareConfig = {};
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-111273948-3']);
+    _gaq.push(['_trackPageview']);
+    var _hmt = _hmt || [];
+    function ClickEvent(Category, Action, Label) {
+        console.log(Category, Action, Label);
+        _gaq.push(['_trackEvent', Category, Action, Label]);
+        _hmt.push(['_trackEvent', Category, Action, Label]);
+    }
+    function TrackPageview(Page) {
+        console.log(Page);
+        _gaq.push(['_trackPageview', Page]);
+        _hmt.push(['_trackPageview', Page]);
+    }
+    function SetDesc(score) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Lodash</title>
+</head>
+<body>
+	<script src="https://cdn.bootcss.com/lodash.js/4.17.11/lodash.min.js"></script>
+	<script>
+	var users = [
+		{ 'user': 'barney',  'age': 36, 'active': true },
+		{ 'user': 'fred',    'age': 40, 'active': false },
+		{ 'user': 'pebbles', 'age': 1,  'active': true }
+	];
+	var f = _.find(users, function(o) { return o.age < 40; });
+	console.log(f);
+	_.forEach([1, 2], function(value) {
+		console.log(value);
+	});
+	_.map([7,8],(n)=>{
+		console.log(n*n);
+	})
+	console.log(_.join(['vue','react','angular'],'~'))
+	</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Title</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {
+            width: 600px;
+            height: 600px;
+            border: 1px solid #ccc;
+            margin: 0 auto 0;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <form id="form1" method="get" action="">
+        姓名:<input name="name" id="name" class="specialFields"><br>
+        年龄:<input name="age" id="age" type="number" class="specialFields"><br>
+        地址:<input name="address" id="address"><br>
+        兴趣:<p>
+        h1:<input type="checkbox" name="hobby" value="h1" checked="checked">
+        h2:<input type="checkbox" name="hobby" value="h2">
+        h3:<input type="checkbox" name="hobby" value="h3">
+        h4:<input type="checkbox" name="hobby" value="h4">
+        </p>
+        性别:
+        男:<input type="radio" name="sexuality" value="man" checked="checked"><br>
+        女:<input type="radio" name="sexuality" value="girl"><br>
+        <input type="submit" value="submit1" id="sub1">
+        <input type="submit" value="submit2" id="sub2">
+
+        <div id="p1">p</div>
+    </form>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://malsup.github.io/jquery.form.js"></script>
+<script>
+    $('#form1').ajaxForm(options);
+    $("#form1").submit(function () {
+        $('#form1').ajaxSubmit(options)
+        return false;
+    })
+    var options = {
+        url: "", //提交地址：默认是form的action,如果申明,则会覆盖
+        type: "post",   //默认是form的method（get or post），如果申明，则会覆盖
+        beforeSubmit: beforeCheck, //提交前的回调函数
+        success: successfun,  //提交成功后的回调函数
+        target: "#output",  //把服务器返回的内容放入id为output的元素中
+        dataType: "json", //html(默认), xml, script, json...接受服务端返回的类型
+        clearForm: true,  //成功提交后，是否清除所有表单元素的值
+        resetForm: true,  //成功提交后，是否重置所有表单元素的值
+        timeout: 3000     //限制请求的时间，当请求大于3秒后，跳出请求
+    };
+    function beforeCheck(formData, form, options) {
+
+        //利用formData校验
+        //$.param(formData) 可以和formSerialize方法一样，实现表单元素的序列化
+        var queryString = $.param(formData);
+        $("#p1").html(queryString + "<br>")
+
+        for (var i = 0; i < formData.length; i++) {
+            //打印每一个元素的name属性和value值
+            //alert(formData[i].name + "  " + formData[i].value)
+        }
+
+        //利用form校验
+        var formDom = form[0];
+
+        //formDom是jQuery表单对象，感觉类似数组，可以通过下标访问元素
+        //比如：formDom[0].targetName 表示元素标签名，INPUT
+        var name = formDom["name"].value;//这里寻找name为name或者id为name的元素的值
+        var age = formDom["age"].value;
+
+        alert(name+"  "+age)
+        if (!name || !age) {
+            alert("name age 不能为空")
+        }
+
+        //利用fieldValue校验
+        //返回选择元素的value值，是一个数组
+        var name = $("input[name='name']").fieldValue();
+        var hobby = $("input[name='hobby']").fieldValue();
+        if (!name[0] || !hobby[0]) {
+            alert("必须填姓名和选择兴趣")
+        }
+
+        //把表单的元素序列化，：name=姓名&age=年龄；以字符串的方式拼接所有表单元素
+        var formSerializeStr = $("#form1").formSerialize();
+        // alert(formSerializeStr)
+        //序列化某些表单元素 $("#form1 .ss")通过选择器选择某些元素
+        //这里就是选择表单里面，有specialFields样式的元素；但是这里我用属性选择器没有生效，比如$("#form1[name='name']")
+        var formSerializeStr = $("#form1 .specialFields").fieldSerialize();
+        // alert(formSerializeStr)
+        return true;//如果return false，则校验不通过，表单不会提交
+    }
+
+    function successfun(data, status) {
+        //data是提交成功后的返回数据，status是提交结果 比如success
+        //返回数据的类型是通过options对象里面的dataType定义的，比如json、xml，默认是html
+
+        //这里data.success是因为我后天返回的json数据的一个属性 String jsonText = "{'success':'提交成功'}";
+        alert(data.success + "  " + status)
+    }
+</script>
+</html>

@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1400,user-scalable=no">
+    <title>纷享智能生活 一汽马自达</title>
+    <link href="http://mat1.gtimg.com/www/icon/favicon2.ico" type="image/x-icon" rel="shortcut icon">
+    <style>
+        body,
+        html {
+            font-family: '微软雅黑';
+            width: 100%;
+            height: 100%;
+        }
+        ol,
+        ul,
+        p,
+        input,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            vertical-align: middle;
+        }
+        ::-webkit-input-placeholder {
+            /* WebKit browsers */
+            color: #fff;
+        }
+        :-moz-placeholder {
+            /* Mozilla Firefox 4 to 18 */
+            color: #fff;
+        }
+        ::-moz-placeholder {
+            /* Mozilla Firefox 19+ */
+            color: #fff;
+        }
+        :-ms-input-placeholder {
+            /* Internet Explorer 10+ */
+            color: #fff;
+        }
+        /*#block1 img{width: 100%;}*/
+
+        #block1 img,
+        #block2 img,
+        #block3 img,
+        #block4 img,
+        #block5 img,
+        #block6 img,
+        #block7 img,
+        #block8 img,
+        #block9 img,
+        #block10 img,
+        #block11 img,
+        #block12 img,
+        #block13 img,
+        #block14 img {
+            width: 100%;
+        }
+        #block1 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/13/109/210/13683058.jpg)no-repeat top center;
+            height: 441px;
+            width: 100%;
+        }
+        #block2 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/14/109/210/13683059.jpg)no-repeat top center;
+            height: 454px;
+            width: 100%;
+        }
+        #block3 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/15/109/210/13683060.jpg)no-repeat top center;
+            height: 831px;
+            width: 100%;
+        }
+        #block4 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/16/109/210/13683061.jpg)no-repeat top center;
+            height: 663px;
+            width: 100%;
+        }
+
+        #block5 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/17/109/210/13683062.jpg)no-repeat top center;
+            height: 621px;
+            width: 100%;
+        }
+        #block6 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/18/109/210/13683063.jpg)no-repeat top center;
+            height: 613px;
+            width: 100%;
+        }
+        #block7 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/19/109/210/13683064.jpg)no-repeat top center;
+            height: 474px;
+            width: 100%;
+        }
+
+        #block8 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/20/109/210/13683065.jpg)no-repeat top center;
+            height: 487px;
+            width: 100%;
+        }
+        #block9 {
+            background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/21/109/210/13683066.jpg)no-repeat top center;
+            height: 649px;
+            width: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .form_list div {
+            width: 158px;
+            height: 40px;
+            display: inline-block;
+            margin-right: 28px;
+        }
+        .form_list p {
+            height: 40px;
+            width: 350px;
+        }
+        .form_list p,
+        .form_list div {
+            margin-bottom: 10px;
+        }
+        .form_list input,
+        .form_list select {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: none;
+            color: #fff;
+            font-size: 18px;
+            padding-left: 13px;
+            outline: none;
+            /*background: red;*/
+        }
+        #label_ch {
+            margin: 10px 0 0 86px;
+            color: #fff;
+            font-size: 18px;
+            display: block;
+            vertical-align: middle;
+        }
+        #checked1 {
+            width: 18px!important;
+            height: 18px!important;
+            outline: none;
+            background: #fff;
+            vertical-align: middle;
+            margin-top: -2px;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+        }
+        #submit {
+            width: 420px;
+            height: 65px;
+            cursor: pointer;
+            /*background: red;*/
+            margin: 30px 0 0 -35px;
+        }
+        .form_list select option {
+            color: #000;
+        }
+        .pj-Carousel {
+            width: 580px;
+            height: 500px;
+            overflow: hidden;
+            position: absolute;
+        }
+        .pj-Carousel-box {
+            height: 330px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .pj-Carousel-item {
+            float: left;
+            height: 320px;
+            text-align: center;
+            line-height: 420px;
+            font-family: "Arial Black";
+            color: #979797;
+            font-size: 40px;
+        }
+        .pj-Carousel-active {
+            position: absolute;
+            bottom: 100px;
+            margin: auto auto;
+            z-index: 5;
+        }
+        .pj-Carousel-color {
+            background-color: #A2A2A2;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            float: left;
+            margin: 0px 5px;
+        }
+        .pj-Carousel .active {
+            background-color: #272727;
+        }
+        .pj-Carousel-item img {
+            width: 100%;
+            height: 100%;
+        }
+        #pj-lunbo3 {
+            width: 580px;
+            position: relative;
+            left: 50%;
+            margin-left: -290px;
+            top: 29px;
+        }
+        #prev,
+        #next {
+            position: absolute;
+            top: 185px;
+            z-index: 1000;
+            height: 60px;
+            width: 40px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        #prev {
+            left: 12px;
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/94/149/208/13563289.png) no-repeat;
+        }
+        #next {
+            right: 12px;
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/95/149/208/13563290.png) no-repeat;
+        }
+        /*经销商*/
+
+        .wrapper {
+            height: 500px;
+            width: 1000px;
+            position: absolute;
+            top: 68px;
+            left: 50%;
+            margin-left: -500px;
+        }
+        .content {
+            width: 1000px;
+            height: 405px;
+            padding: 10px;
+            overflow: auto;
+        }
+        .content_1 table tr {
+            list-style: none;
+            color: #fff;
+            font-size: 15px;
+            height:55px;
+        }
+        /*.content_1 table tr */
+        .content_1 table tr td:nth-child(1) {
+            width: 60px;
+        }
+        .content_1 table tr td:nth-child(2) {
+            width: 320px;
+        }
+        .content_1 table tr td:nth-child(3) {
+            width: 450px;
+        }
+        .content_1 table tr td:nth-child(4) {
+            width: 150px;
+        }
+        .content_1 table {
+            margin: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .content_1 {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background: #C92625;
+            width: 10px;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail {
+            width: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="block1"></div>
+<div id="block2"></div>
+<div id="block3"></div>
+<div id="block4"></div>
+<div id="block5"></div>
+<div id="block6"></div>
+<div id="block7" style="position: relative;">
+    <div id="pj-lunbo3">
+        <button id="prev"></button>
+        <button id="next"></button>
+        <div class="pj-Carousel">
+            <div class="pj-Carousel-box">
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/191/129/202/13168136.jpg"></div>
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/192/129/202/13168137.jpg"></div>
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/193/129/202/13168138.jpg"></div>
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/194/129/202/13168139.jpg"></div>
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/196/129/202/13168141.jpg"></div>
+                <div class="pj-Carousel-item"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/197/129/202/13168142.jpg"></div>
+            </div>
+            <!--状态-->
+            <div class="pj-Carousel-active"> </div>
+        </div>
+    </div>
+</div>
+<div id="block8" style="position:relative;">
+    <div style="position:absolute;width:500px;left:50%;margin-left:-174px;top:78px;">
+        <form class="form_list">
+            <div class="se">
+                <input type="text" id="name" placeholder="姓名">
+            </div>
+            <div class="se">
+                <select name="sex" id="sex">
+                    <option value="0">称谓</option>
+                    <option value="先生">先生</option>
+                    <option value="女士">女士</option>
+                </select>
+            </div>
+            <p>
+                <input type="text" id="tel" placeholder="手机">
+                <br>
+            </p>
+            <p>
+                <select name="select_id2" id="Select2">
+                    <option value="0">请选择车型</option>
+                    <option value="97">阿特兹</option>
+                    <option value="100">CX-4</option>
+                </select>
+            </p>
+            <div class="se">
+                <select name="select_id3" id="Select3">
+                    <option value="1">广东</option>
+                </select>
+            </div>
+            <div class="se">
+                <select name="select_id1" id="Select1">
+                    <option value="1">佛山市</option>
+                </select>
+            </div>
+            <p>
+                <select class="last" name="dealers" id="dealersSelect">
+                    <option value="0">请选择经销商</option>
+                    <option value="1">佛山市广物驭达汽车销售服务有限公司</option>
+                    <option value="1">佛山市合自达汽车销售服务有限公司</option>
+                    <option value="1">佛山市顺德区万事得汽车销售服务有限公司</option>
+                    <option value="1">佛山市中衡骏达汽车销售服务有限公司</option>
+                </select>
+            </p>
+            <input type="button" id="submit">
+            <label id="label_ch">
+                <input type="checkbox" checked id="checked1" name="checkbox" class="radio" /> 我同意
+                <a href="http://www.qq.com/privacy.htm" target="_blank">《隐私政策》</a>
+            </label>
+        </form>
+    </div>
+</div>
+<div id="block9" style="position:relative;">
+    <div class="wrapper">
+        <div class="content_1 content">
+            <table>
+                <tr>
+                    <td>城市</td>
+                    <td>经销商</td>
+                    <td>地址</td>
+                    <td>销售热线</td>
+                </tr>
+                <tr>
+                    <td>佛山</td>
+                    <td>佛山市广物驭达汽车销售服务有限公司</td>
+                    <td>佛山市南海区里水镇佛山一环东侧水口路出口广佛汽车城内</td>
+                    <td>0757-85660568</td>
+                </tr>
+                <tr>
+                    <td>佛山</td>
+                    <td>佛山市合自达汽车销售服务有限公司</td>
+                    <td>广东省佛山市南海区桂城桂澜路石啃路段</td>
+                    <td>0757-86367666</td>
+                </tr>
+                <tr>
+                    <td>佛山</td>
+                    <td>佛山市顺德区万事得汽车销售服务有限公司</td>
+                    <td>佛山市顺德区大良街道办事处新滘居委会广珠公路新滘段西侧（原新滘大塘）</td>
+                    <td>0757-22801198</td>
+                </tr>
+                <tr>
+                    <td>佛山</td>
+                    <td>佛山市中衡骏达汽车销售服务有限公司</td>
+                    <td>佛山市南海区大沥镇太平路段祺兴汽车城内</td>
+                    <td>0757-81182688</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .fl img {
+        width: 36px;
+        margin: 0;
+    }
+
+    .footernew {
+        width: 910px;
+        height: 100px;
+        color: #515151;
+        text-align: center;
+        font-size: 12px;
+        line-height: 24px;
+        margin: 12px auto 20px auto;
+        overflow: hidden;
+    }
+    .footheight {
+        height: 60px;
+    }
+    .footernew a {
+        color: #515151;
+        text-decoration: none;
+    }
+    .footernew a.lchot {
+        color: #bd0a01;
+    }
+    .footernew a:hover {
+        color: #bd0a01;
+        text-decoration: underline;
+    }
+    .footernew a:visited {
+        color: #515151;
+    }
+    .footernew div {
+        width: 546px;
+        margin: 0 auto;
+    }
+    .footernew p {
+        float: left;
+        width: 120px;
+        height: 50px;
+        border: 1px solid #d2d2d2;
+        padding: 0;
+        line-height: 20px;
+        margin: 6px;
+        font-size: 12px;
+    }
+    .footernew .fl {
+        float: left;
+        padding: 3px;
+    }
+    .footernew .fr {
+        float: right;
+        width: 72px;
+        padding: 5px 3px 0 3px;
+    }
+
+    @media only screen and (min-width: 100px) and (max-width: 930px) {
+        .footernew {
+            display: none;
+        }
+    }
+</style>
+<!--底部 开始-->
+<div class="footernew" onclick="register0410('footer',1);">
+    <a href="http://www.tencent.com/" target="_blank">关于腾讯</a> | <a href="http://gd.qq.com/gydyym.htm" target="_blank">关于腾讯·大粤网</a> | <a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://open.qq.com/" target="_blank">开放平台</a> | <a href="http://gd.qq.com/gydyym.htm#ad" target="_blank">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank">商务洽谈</a> | <a href="http://gd.qq.com/gdzp.htm" target="_blank">腾讯·大粤网招聘</a> | <a href="http://hr.tencent.com/" target="_blank">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank">腾讯公益</a> | <a href="http://gd.qq.com/gdmap/index.htm" target="_blank">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">版权所有</a> | <a href="http://gd.qq.com/a/20170228/026676.htm" target="_blank">转载须知</a>
+    <br>
+    <a href="http://www.szga.gov.cn" target="_blank">有害短信息举报</a> | <a href="http://www.gdis.cn/admin/newstext_netsun.asp" class="lchot" target="_blank">阳光·绿色网络工程</a> | <a href="http://www.qq.com/copyright.shtml" target="_blank">版权保护投诉指引</a> | <a href="http://www.gdca.gov.cn/" target="_blank">广东省通管局</a> | <a href="http://www.qq.com/scio.htm" target="_blank">新闻信息服务许可证</a> | <a href="http://www.qq.com/internet_licence.htm" target="_blank">互联网出版许可证</a>
+    <br>
+    <span style="line-height:30px;"><a href="http://www.qq.com/xwdz.shtml" target="_blank">粤府新函[2001]87号</a> <a href="http://www.qq.com/culture.shtml" target="_blank">文网文[2008]084号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank">B2-20090028</a></span>
+    <br>
+    <span style="font-family:Arial;">Copyright &copy; 1998 - <script language="javascript">document.write(new Date().getFullYear());</script>2017 Tencent. All Rights Reserved</span>
+</div>
+<div class="footernew footheight">
+    <div style="width:678px;">
+        <p>
+            <span class="fl"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="http://img1.qq.com/www/pics/816/816587.gif" width="36" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank">深圳网络警<br>
+        察报警平台</a></span>
+        </p>
+        <p>
+            <span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank"><img src="http://img1.qq.com/www/pics/6743/6743671.jpg" width="36" height="42" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank">公共信息安<br>
+        全网络监察</a></span>
+        </p>
+        <p>
+            <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"><img src="http://mat1.qq.com/www/images/ind36.gif" width="35" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" class="lcblack" target="_blank">经营性网站<br>
+
+        备案信息</a></span>
+        </p>
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://net.china.cn/chinese/index.htm" target="_blank"><img src="http://mat1.qq.com/www/images/200709/home_b.gif" width="44" height="44" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://net.china.cn/chinese/index.htm" class="lcblack" target="_blank">不良信息<br>
+        举报中心</a></span>
+        </p>
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://www.wenming.cn" target="_blank"><img src="http://mat1.qq.com/www/images/allskin/wmlogo.gif" width="44" height="42" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://www.wenming.cn" class="lcblack" target="_blank">中国文明网<br>传播文明</a></span>
+        </p>
+    </div>
+</div>
+<a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none" bossZone="fankui"></a>
+<a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none" bossZone="defaulthome"></a>
+<a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+<a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载" style="display:none" bossZone="minidown"></a>
+<!--e6dcd797284a2fe7c374538dde98ca6b-->
+<!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+<!--底部 结束-->
+<script src="http://act.yetcar.com/zxq_commonCode/js/jquery-1.11.0.min.js"></script>
+<script src="http://act.yetcar.com/zxq_commonCode/js/responsive.js"></script>
+<!-- <script src="http://act.yetcar.com/zxq_projectCode/yqmzdGD/js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+<script src="http://123.207.87.32/act/zxq_commonCode/js/jquery.pj.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#pj-lunbo3").Carousel({
+            'play': 'true', //是否循环播放
+            'prevButton': '#prev', //左按钮
+            'nextButton': '#next', //右按钮
+            'fade': 'true',
+            'playTimer': '3000',
+            'eventClick': 'true'
+        });
+    });
+</script>
+<script>
+    // 报名
+    $(function() {
+        var flag = true;
+        $("#submit").click(function() {
+            if (flag) {
+                var name = $("#name").val(), //姓名
+                    tel = $("#tel").val(), //电话
+                    sex = $("#sex").val(), //性别
+                    sex_name = $("#sex option:checked").text(),
+
+                    city_id = $('#Select1').val(), //城市
+                    city = $('#Select1 option:checked').text(),
+
+                    series_id = $('#Select2').val(), //车型id
+                    car_name = $('#Select2 option:checked').text(),
+
+                    province = $('#Select3').val(), //城市
+                    province = $('#Select3 option:checked').text(),
+
+                    dealers_code = $('#dealersSelect').val(),
+                    dealers = $('#dealersSelect option:checked').text(),
+
+                    act_id = 359,
+                    brand_id = 14, //品牌
+
+
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        sex: sex,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        act_id: act_id,
+                        dealers: dealers,
+                        car_name: car_name,
+                    }
+                //判断填写是否正确
+                if (name == '' || tel == '') {
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (sex == 0) {
+                    alert('请选择性别');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == 0) {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (city_id == 0) {
+                    alert('请选择城市');
+                    return false;
+                }
+                if (province == 0) {
+                    alert('请选择省份');
+                    return false;
+                }
+                if (dealers_code == 0) {
+                    alert('请选择经销商');
+                    return false;
+                }
+                if ($("input[type='checkbox']").is(':checked') == false) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function(data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+
+
+                        } else {
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260055531'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260055531' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<style>
+    #cnzz_stat_icon_1260055531,
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {
+        display: none;
+    }
+</style>
+</body>
+
+</html>

@@ -1,0 +1,576 @@
+<!--2019年-01月-04号 星期五  -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>幸福专列 送爱回家</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		<style>
+			.main {
+				max-width: 750px;
+				margin: 0 auto;
+				background-color: #31194d;
+				position: relative;
+			}
+			.cn {position: relative;}
+			.add {
+				position: absolute;
+				right: 0.25rem;
+				top: 0.07rem;
+				width: 1.8rem;
+				height: 0.7rem;
+				background: transparent;
+				cursor: pointer;
+			}
+			.bmk {
+				position: relative;
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/195/157/211/13760505.jpg') center center no-repeat;
+				width: 10rem;
+				height: 4.506667rem;
+				background-size: 100%;
+			}
+			.bmk input,.bmk select {
+				-webkit-appearance: none;
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				padding-left: 0.1rem;
+				background: transparent;
+				font-size: 0.5rem;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #000; opacity:1;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+				color: #000;opacity:1;
+			}
+			input:-ms-input-placeholder{
+				color: #000;opacity:1;
+			}
+			input::-webkit-input-placeholder{
+				color: #000;opacity:1;
+			}
+			.bmk>p {
+				position: absolute;
+				width: 3.06rem;
+				height: 1.05rem;
+			}
+			.bmk .name {
+				left: 1.23rem;
+				top: 0.42rem;
+			}
+			.bmk .card {
+				left: 4.73rem;
+				top: 0.42rem;
+				width: 4.15rem;
+			}
+			.bmk .tel {
+				left: 1.23rem;
+				top: 1.75rem;
+				width: 3.06rem;
+			}
+			.bmk .bourn {
+				left: 4.73rem;
+				top: 1.75rem;
+				width: 4.2rem;
+			}
+			.bmk .person {
+				left: 1.23rem;
+				top: 3rem;
+				width: 3.15rem;
+			}
+			.bmk .close {
+				position: absolute;
+				right: 0.31rem;
+				top: 0.4rem;
+				width: .573333rem;
+				height: .573333rem;
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/193/157/211/13760503.png') center center no-repeat;
+				background-size: 100%;
+				cursor: pointer;
+			}
+			#activity,#submit {
+				position: absolute;
+				left: 1.2rem;
+				top: 0.3rem;
+				width: 3.2rem;
+				height: 1.2rem;
+				background: transparent;
+				cursor: pointer;
+			}
+			#submit {
+				left: 4.73rem;
+   			width: 4.25rem;
+			}
+			.shade{
+				position:fixed;
+				left:0;top:0;right:0;bottom:0;background:rgba(0,0,0,.5);
+				z-index:99;
+				display: none;
+			}
+			.tk {
+				position:fixed;
+				left:50%;
+				top:50%;
+				width: 9.066667rem;
+				height: auto;
+				-webkit-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+				background-color: #31184d;
+				z-index: 100;
+				border-radius: .3rem;
+				display: none;
+			}
+			.tk .text {
+				width: 100%;
+				height: auto;
+			}
+			.tk .text p {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/192/157/211/13760502.png') center center no-repeat;
+				background-size: 100%;
+				width: 5.786667rem;
+				height: .76rem;
+				margin: 1.005rem auto 0.8rem;
+			}
+			.tk .tkColse {
+				position: absolute;
+				right: -0.35rem;
+    		top: -0.55rem;
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/194/157/211/13760504.png') top center no-repeat;
+				background-size: 100%;
+				width: 1.066667rem;
+				height: 1.066667rem;
+				cursor: pointer;
+			}
+			.tk .tkBtn {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/191/157/211/13760501.png') top center no-repeat;
+				background-size: 100%;
+				width: 7.093333rem;
+				height: 1.173333rem;
+				margin: 0.8rem auto;
+				cursor: pointer;
+			}
+			.tk .tkMain {
+				width: 100%;
+				height: auto;
+			}
+			.tk .tkMain ul {
+				width: 84%;
+				height: auto;
+				margin: 0 auto 0.5rem;
+			}
+			.tk .tkMain ul li {
+				line-height: 0.8rem;
+				font-size: .4rem;
+			}
+			.tk .tkMain ul li span {
+				display: inline-block;
+				color: white;
+				font-weight: bold;
+			}
+			.tk .tkMain ul li span:nth-child(1) {
+				width: 32%;
+			}
+			.tk .tkMain ul li span:nth-child(2) {
+				color: #ffe400;
+			}
+			.cn8 .a {
+				position: absolute;
+				left: 50%;
+				top: 12.8rem;
+				width: 3.3rem;
+				height: 0.4rem;
+				margin-left: -1rem;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/196/157/211/13760506.jpg" alt=""></div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/197/157/211/13760507.jpg" alt=""></div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/198/157/211/13760508.jpg" alt="">
+				<button class="add"></button>
+			</div>
+			<div class="cn cn4">
+				<div class="bmk">
+					<p class="name">
+						<input type="text" id="name" name="name" placeholder="姓名">
+					</p>
+					<p class="card">
+						<input type="tel" id="card" name="card" placeholder="身份证号">
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" name="tel" placeholder="电话" maxlength="11">
+					</p>
+					<p class="bourn">
+						<select id="bourn" name="bourn">
+							<option value="0">目的地</option>
+							<option value="韶关">韶关</option>
+							<option value="郴州西">郴州西</option>
+							<option value="衡阳东">衡阳东</option>
+							<option value="株洲西">株洲西</option>
+							<option value="长沙南">长沙南</option>
+							<option value="武汉">武汉</option>
+						</select>
+					</p>
+					<p class="person">
+						<select id="person" name="person">
+							<option value="普通群众">普通群众</option>
+							<option value="军人">军人</option>
+							<option value="学生">学生</option>
+							<option value="荣誉称号者">荣誉称号者</option>
+							<option value="无偿献血者">无偿献血者</option>
+							<option value="青年志愿者">青年志愿者</option>
+							<option value="贫困证明者">贫困证明者</option>
+						</select>
+					</p>
+				</div>
+			</div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/199/157/211/13760509.jpg" alt="">
+				<button id="activity"></button>
+				<button id="submit"></button>
+			</div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/200/157/211/13760510.jpg" alt=""></div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/201/157/211/13760511.jpg" alt=""></div>
+			<div class="cn cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/202/157/211/13760512.jpg" alt="">
+				<a href="http://gd.qq.com" class="a"></a>
+			</div>
+			<div class="cn cn9"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/203/157/211/13760513.jpg" alt=""></div>
+			<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/205/157/211/13760515.jpg" alt=""></div>
+			<div class="shade" id="shade"></div>
+			<div class="tk">
+				<i class="tkColse"></i>
+				<div class="text">
+					<p></p>
+				</div>
+				<div class="tkMain">
+					<!-- <ul>
+				<li><span>姓名 :</span><span>测试</span></li>
+				<li><span>身份证号码 :</span><span>445122199510223775</span></li>
+				<li><span>电话 :</span><span>13226119526</span></li>
+				<li><span>目的地 :</span><span>衡阳东</span></li>
+				<li><span>人群分类 :</span><span>普通群众</span></li>
+			</ul> -->
+				</div>
+				<div class="tkBtn"></div>
+			</div>
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+	<script>
+		//分享
+		var appId = ""; //公众号的唯一标识
+		var timestamp = ""; //生成签名的时间戳
+		var nonceStr = ""; //生成签名的随机串
+		var signature = ""; //签名
+		wx.config({
+			debug: false,
+			appId: appId,
+			timestamp: timestamp,
+			nonceStr: nonceStr,
+			signature: signature,
+			jsApiList: [
+				// 所有要调用的 API 都要加到这个列表中
+				'onMenuShareAppMessage',
+				'onMenuShareTimeline'
+			]
+		});
+		var share_title = '广州-武汉免费高铁票等你领';
+		var share_desc = '#过年回家要抢票？腾讯·大粤网带来了公益福利，报名领幸福专列车票，一起回家过大年#';
+		var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/206/157/211/13760516.jpg';
+		var share_link = window.location.href;
+		/* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+		wx.ready(function () {
+			// 在这里调用 API
+			wx.onMenuShareAppMessage({
+				title: share_title, // 分享标题
+				desc: share_desc, // 分享描述
+				link: share_link, // 分享链接
+				imgUrl: share_image, // 分享图标
+				type: '', // 分享类型,music、video或link，不填默认为link
+				dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+				success: function () {
+					// 用户成功分享后执行的回调函数
+					setword.getShareLog()
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+					//alert("分享取消");
+				}
+			});
+			wx.onMenuShareTimeline({
+				title: share_title, // 分享标题
+				link: share_link, // 分享链接
+				imgUrl: share_image, // 分享图标
+				success: function () {
+					// 用户成功分享后执行的回调函数
+					setword.getShareLog()
+				},
+				cancel: function () {
+					// 用户取消分享后执行的回调函数
+					//alert("分享取消");
+				}
+			});
+		});
+	</script>
+	<script>
+		//人数满员弹框
+		function m(){
+			$('.shade').fadeIn(300);
+			alert('抱歉，此列车已满员');
+		}
+		m()
+		var name, name1, card, card1, tel, tel1, bourn, bourn1, person, person1;
+		//增加报名框
+		$('.add').click(function () {
+			var len = $('.cn4 .bmk').length;
+			if (len > 1) {
+				alert('你好，最多只能添加一个乘车人');
+				return false;
+			}
+			$('.cn4 .bmk').eq(0).append('<i class="close"></i>');
+			$('.cn4 .bmk').eq(1).append('<i class="close"></i>');
+			var text = "";
+			text += "<div class=\"bmk\">";
+			text += "			<p class=\"name\">";
+			text += "				<input type=\"text\" id=\"name1\" name=\"name\" placeholder=\"姓名\">";
+			text += "			</p>";
+			text += "			<p class=\"card\">";
+			text += "				<input type=\"tel\" id=\"card1\" name=\"card\" placeholder=\"身份证号\">";
+			text += "			</p>";
+			text += "			<p class=\"tel\">";
+			text += "				<input type=\"tel\" id=\"tel1\" name=\"tel\" placeholder=\"电话\" maxlength=\"11\">";
+			text += "			</p>";
+			text += "			<p class=\"bourn\">";
+			text += "				<select id=\"bourn1\" name=\"bourn\">";
+			text += "					<option value=\"0\">目的地</option>";
+			text += "					<option value=\"韶关\">韶关</option>";
+			text += "					<option value=\"郴州西\">郴州西</option>";
+			text += "					<option value=\"衡阳东\">衡阳东</option>";
+			text += "					<option value=\"株洲西\">株洲西</option>";
+			text += "					<option value=\"长沙南\">长沙南</option>";
+			text += "					<option value=\"武汉\">武汉</option>";
+			text += "				</select>";
+			text += "			</p>";
+			text += "			<p class=\"person\">";
+			text += "				<select id=\"person1\" name=\"person\">";
+			text += "					<option value=\"普通群众\">普通群众</option>";
+			text += "					<option value=\"军人\">军人</option>";
+			text += "					<option value=\"学生\">学生</option>";
+			text += "					<option value=\"荣誉称号者\">荣誉称号者</option>";
+			text += "					<option value=\"无偿献血者\">无偿献血者</option>";
+			text += "					<option value=\"青年志愿者\">青年志愿者</option>";
+			text += "					<option value=\"贫困证明者\">贫困证明者</option>";
+			text += "				</select>";
+			text += "			</p>";
+			text += "			<i class=\"close\"></i>";
+			text += "		</div>";
+			$('.cn4').append(text);
+		});
+		//删除报名框
+		$(document).on('click', '.close', function () {
+			var len = $('.cn4 .bmk').length;
+			if (len <= 2) {
+				$('input[name="name"]').attr('id', 'name');
+				$('input[name="card"]').attr('id', 'card');
+				$('input[name="tel"]').attr('id', 'tel');
+				$('select[name="bourn"]').attr('id', 'bourn');
+				$('select[name="person"]').attr('id', 'person');
+			}
+			$(this).parents('.bmk').remove();
+			$('.cn4 .bmk').eq(0).find('i').remove();
+			$('.tkMain').html('');
+		});
+		//提交报名
+		$('#submit').click(function () {
+			var len = $('.cn4 .bmk').length;
+			var html = "";
+			var reg = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;
+			name = $('input[name="name"]').val(); //姓名
+			card = $('input[name="card"]').val(); //身份证
+			tel = $('input[name="tel"]').val(); //手机号
+			bourn = $('select[name="bourn"]').val(); //目的地
+			person = $('select[name="person"]').val(); //人群分类
+			if (!name.match(/^[\u4e00-\u9fa5]{1,5}$/i)) {
+				alert('请输入正确的中文名');
+				return false;
+			}
+			if (reg.test(card) === false) {
+				alert('身份证号码填写错误');
+				return false;
+			}
+			if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+				alert('手机格式不正确');
+				return false;
+			}
+			if (bourn === '0') {
+				alert('请选择目的地');
+				return false;
+			}
+			if (person === '0') {
+				alert('请选择人群分类');
+				return false;
+			}
+			html = '<ul>' +
+				'<li><span>姓名 :</span><span>' + name + '</span></li>' +
+				'<li><span>身份证号码 :</span><span>' + card + '</span></li>' +
+				'<li><span>电话 :</span><span>' + tel + '</span></li>' +
+				'<li><span>目的地 :</span><span>' + bourn + '</span></li>' +
+				'<li><span>人群分类 :</span><span>' + person + '</span></li>' +
+				'</ul>';
+			if (len === 2) {
+				//出现同行乘车人时 进入判断
+				name1 = $('#name1').val();
+				card1 = $('#card1').val();
+				tel1 = $('#tel1').val();
+				bourn1 = $('#bourn1').val();
+				person1 = $('#person1').val();
+				if (!name1.match(/^[\u4e00-\u9fa5]{1,5}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (reg.test(card1) === false) {
+					alert('身份证号码填写错误');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel1)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (bourn1 === '0') {
+					alert('请选择目的地');
+					return false;
+				}
+				if (person1 === '0') {
+					alert('请选择人群分类');
+					return false;
+				}
+				html = '<ul>' +
+					'<li><span>姓名 :</span><span>' + name + '</span></li>' +
+					'<li><span>身份证号码 :</span><span>' + card + '</span></li>' +
+					'<li><span>电话 :</span><span>' + tel + '</span></li>' +
+					'<li><span>目的地 :</span><span>' + bourn + '</span></li>' +
+					'<li><span>人群分类 :</span><span>' + person + '</span></li>' +
+					'</ul>' + '<ul>' +
+					'<li><span>姓名 :</span><span>' + name1 + '</span></li>' +
+					'<li><span>身份证号码 :</span><span>' + card1 + '</span></li>' +
+					'<li><span>电话 :</span><span>' + tel1 + '</span></li>' +
+					'<li><span>目的地 :</span><span>' + bourn1 + '</span></li>' +
+					'<li><span>人群分类 :</span><span>' + person1 + '</span></li>' +
+					'</ul>';
+			}
+			$('.tkMain').append(html);
+			$('.shade').fadeIn(300);
+			$('.tk').fadeIn(300);
+		});
+		//关闭弹出显示框
+		$('.tkColse').click(function () {
+			$('.tkMain').html('');
+			$('.shade').fadeOut(300);
+			$('.tk').fadeOut(300);
+		});
+		//活动详情跳转
+		$('#activity').click(function () {
+			var h = $('.cn9').offset().top;
+			$('html,body').animate({
+				scrollTop: h
+			}, 1000)
+		});
+		//提交报名
+		$('.tkBtn').one('click',function () {
+			var Data = {};
+			var len = $('.cn4 .bmk').length;
+			Data = {
+				name: name,
+				phone: tel,
+				act_id: 3430,
+				series_id: "",
+				brand_id: "",
+				chexing: "",
+				dealers: card + '是' + bourn + '是' + person
+			}
+			if (len === 2) {
+				Data = {
+					name: name + '和' + name1,
+					phone: tel,
+					act_id: 3430,
+					series_id: "",
+					brand_id: "",
+					chexing: "",
+					dealers: card + '是' + bourn + '是' + person
+				}
+			}
+			var flag = true;
+			var url = "";
+			if (flag) {
+				flag = false;
+				$.ajax({
+					type: "get",
+					url: url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					jsonpCallback: "jsonpReturn",
+					success: function (data) {
+						if (data.status == 1) {
+							if (len === 2) {
+								Data = {
+									name: name1 + '和' + name,
+									phone: tel1,
+									act_id: 3430,
+									series_id: "",
+									brand_id: "",
+									chexing: "",
+									dealers: card1 + '是' + bourn1 + '是' + person1
+								};
+								$.ajax({
+									type: "get",
+									url: url,
+									data: Data,
+									async: true,
+									dataType: "jsonp",
+									jsonpCallback: "jsonpReturn",
+									success: function (data) {
+										if (data.status == 1) {
+											alert('恭喜你，报名成功！');
+											window.location.href = location.href;
+										} else {
+											var flag = true;
+											alert("很抱歉，你报名失败。");
+										}
+									}
+								});
+							} else {
+								alert('恭喜你，报名成功！');
+								window.location.href = location.href;
+							}
+						} else {
+							var flag = true;
+							alert("很抱歉，你报名失败。");
+						}
+					}
+				});
+			}
+		})
+	</script>
+
+</html>

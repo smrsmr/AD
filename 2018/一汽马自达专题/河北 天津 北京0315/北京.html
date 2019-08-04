@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=1354,user-scalable=no" />
+    <title>开启全新可能 新春购车季 多重豪礼限时送</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+        .con2 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/188/191/207/13509068.jpg") top center no-repeat;
+            height: 1082px;
+        }
+        .con3 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/190/191/207/13509070.jpg") top center no-repeat;
+            height: 560px;
+            position: relative;
+        }
+        .con4 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/191/191/207/13509071.jpg") top center no-repeat;
+            height: 1273px;
+        }
+        .con5 {  background: #000; height: 650px; position: relative;width: 100%}
+        .bm {  position: absolute;  left: 50%;  top: 180px;  width: 1354px;  height: 338px;  margin-left: -678px;  }
+        .bm input,.bm select {  width: 100%;  height: 100%;  -webkit-appearance: none;  -moz-appearance: none;  appearance: none;  font-size: 20px;  background: transparent;  color: white;  }
+        select>option {  color: #000;  }
+        select::-ms-expand{opacity: 0}
+        .bm .kk P{  display: inline-block;  width: 456px;  height: 38px;  }
+        .bm .name,.bm .series {  margin-left: 143px;  margin-top: 28px;  }
+        .bm .series {  margin-left: 289px;  }
+        .bm .kk .b,.bm .kk .g {  width: 31px;  height: 24px;  margin-left: 140px;  margin-top: 23px;  cursor: pointer;  }
+        .bm .kk .g {  margin-left: 263px;  }
+        .bm .kk .active {  background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/186/191/207/13509066.png") no-repeat;  width: 31px;  height: 24px;  }
+        .bm .kk .city {  margin-left: 416px;  margin-top: 23px;  }
+        .bm .kk .tel,.bm .kk .dealers {  margin-left: 143px;  margin-top: 29px;  }
+        .bm .kk .dealers {  margin-left: 289px;  }
+        .bm .kk .submit {  margin-left: 613px;  margin-top: 48px;  width: 133px;  }
+        .info {
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            width: 1354px;
+            height: 570px;
+            margin-left: -677px;
+            background: #333333;
+        }
+        .title {
+            margin: 50px auto 0;
+            font-size: 50px;
+            color: #555555;
+            width: 600px;
+            text-align: center;
+            letter-spacing: 6px;
+        }
+        .info ul {
+            width: 100%;
+            margin: 60px auto;
+            height: auto;
+            font-size: 40px;
+            color: white;
+        }
+        .info ul li {
+            text-align: center;
+            width: 100%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="banner">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/187/191/207/13509067.jpg" alt="">
+    </div>
+    <div class="con2"></div>
+    <div class="con3">
+        <div class="bm">
+            <div class="kk">
+                <p class="name">
+                    <input type="text" id="name">
+                </p>
+                <p class="series">
+                    <select id="series">
+                        <option value="0">-请选择车型-</option>
+                        <option value="97">全新阿特兹</option>
+                        <option value="100">马自达CX-4</option>
+                    </select>
+                </p>
+            </div>
+            <div class="kk">
+                <div class="sex" style="display: inline-block">
+                    <p class="b active" data-sex="先生"></p>
+                    <p class="g" data-sex="女士"></p>
+                </div>
+                <p class="city">
+                    <select name="" id="city">
+                        <option value="0">-请选择报名地区-</option>
+                    </select>
+                </p>
+            </div>
+            <div class="kk">
+                <p class="tel">
+                    <input type="tel" id="tel" maxlength="11">
+                </p>
+                <p class="dealers">
+                    <select id="dealers">
+                        <option value="0">-选择经销商-</option>
+                    </select>
+                </p>
+            </div>
+            <div class="kk">
+                <p class="submit">
+                    <input type="button" id="submit" style="cursor: pointer;">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="con4"></div>
+    <div class="con5">
+        <div class="info">
+            <p class="title">经销商信息</p>
+            <div class="list" style="overflow: auto;height: 368px;">
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    $(function () {
+        var des = [
+            {"name":"北京市","dealers":"北京东仁隆达汽车销售服务有限公司","address":"北京市朝阳区姚家园路东口甲1号东方基业国际汽车城1区19号","tel":"010-51193331"},
+            {"name":"北京市","dealers":"北京博瑞翔达汽车销售服务有限公司","address":"北京市朝阳区花虎沟2号博瑞汽车园区内","tel":"010-62387998"},
+            {"name":"北京市","dealers":"北京首汽腾达汽车销售服务有限公司","address":"北京市丰台区莲花池西里11号","tel":"022-63939986"},
+            {"name":"北京市","dealers":"北京车豪汽车有限公司","address":"北京市朝阳区朝阳北路45号","tel":"010-65759828"},
+            {"name":"北京市","dealers":"北京宏源亚兴汽车贸易有限公司","address":"北京市顺义区京顺路后沙峪段3号乾博汽车时代广场枯柳树环岛南侧","tel":"010-80497332"},
+            {"name":"北京市","dealers":"北京华日通汽车销售服务有限公司","address":"北京市海淀区杏石口路15号(四季青桥向西900米广本4S店北行200米)","tel":"010-88438055"},
+            {"name":"北京市","dealers":"北京一汽轿车销售服务有限公司","address":"北京市丰台区南四环中路20号(宝辰汽车园内)","tel":"010-87813330"},
+            {"name":"北京市","dealers":"北京天一恒远汽车销售服务有限责任公司","address":"北京市石景山区古城大街(特钢公司厂内)北京国际汽车贸易服务园区A区62号","tel":"010-68848886"},
+            {"name":"北京市","dealers":"北京东仁隆达北苑分店","address":"北京市朝阳区来广营西路18号","tel":"010-52427707"},
+            {"name":"北京市","dealers":"北京首汽腾达密云直营","address":"北京市密云县兴云路3号","tel":"010-89098818"},
+            {"name":"北京市","dealers":"北京一汽轿车销售服务有限公司榴乡桥分店","address":"北京市朝阳区南四环东路99号","tel":"010-87883996"},
+        ];
+        var cityTemp=[];
+        for(var i=0;i<des.length;i++){
+            var ul = '<ul>'+
+                    '<li>'+des[i].dealers+'</li>'+
+                    '<li>'+'地址:&nbsp;'+des[i].address+'</li>'+
+                    '<li>'+'电话:&nbsp;'+des[i].tel+'</li>'+
+                    '</ul>';
+            $('.list').append(ul);
+            if(cityTemp.indexOf(des[i].name)==-1){
+                cityTemp.push(des[i].name);
+            }
+        }
+        console.log(cityTemp)
+        for(var i=0;i<cityTemp.length;i++){
+            $('#city').append('<option value="'+cityTemp[i]+'">'+cityTemp[i]+'</option>')
+        }
+        $('#city').change(function () {
+            $("#dealers").find("option:not(:first)").remove();
+            for(var i=0;i<des.length;i++){
+                if($('#city option:checked').text() == des[i].name){
+                    $('#dealers').append('<option value="'+des[i].dealers+'">'+des[i].dealers+'</option>')
+                }
+            }
+        });
+        $('.sex p').click(function () {
+           $(this).addClass('active').siblings().removeClass('active');
+        });
+        $(window).load(function() {
+            $(".list").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        });
+        //报名
+        var flag = true;
+        $("#submit").click(function () {
+            if (flag) {
+                var name = $("#name").val(),  //名字
+                    tel = $("#tel").val(),   //电话
+                    sex = $('.sex .active').attr('data-sex'), //性别
+                    series_id = $('#series').val(), //车型
+                    dealers = $('#dealers').val(), //经销商
+                    city = $('#city').val(),
+                    brand_id = 14, //品牌
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,  //名字
+                        phone: tel,   //电话
+                        series_id: series_id,
+                        sex: sex,
+                        dealers: dealers, //经销商
+                        act_id: 1631,   //专题id
+                        brand_id: brand_id,      //品牌id
+                    };
+                //判断填写是否正确
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (series_id == 0) {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (city == 0) {
+                    alert('请选择报名地区');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (dealers == 0) {
+                    alert('请选择经销商');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            location.reload();
+                        } else {
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+</html>

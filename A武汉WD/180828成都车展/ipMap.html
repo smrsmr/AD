@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script type="text/javascript">
+        var maps = [
+            //城市和对应的链接
+            {city:"重庆市", page:"http://guangzhou.auto.qq.com/zt2018/cdchezhan/cqzt.htm"},
+            {city:"成都市", page:"http://guangzhou.auto.qq.com/zt2018/cdchezhan/cdchezhan1.htm"},
+            {city:"西安市", page:"http://guangzhou.auto.qq.com/zt2018/cdchezhan/cdchezhan.htm"},
+        ];
+        var citylocation;
+        var init = function() {
+            //获取城市列表接口设置中心点
+            citylocation = new qq.maps.CityService({
+                complete : function(result){
+                    //console.log(result)
+                    var city=result.detail.name;
+                    for (var i=0;i<maps.length;i++){
+                        if (city==maps[i].city){
+                            window.location.href=maps[i].page
+                            return false;
+                        } else {
+                            //没有在城市列表的默认跳到广州的链接
+                            window.location.href='http://guangzhou.auto.qq.com/zt2018/cdchezhan/cdchezhan1.htm'
+                            return false;
+                        }
+                    }
+                }
+            });
+            //调用searchLocalCity();方法    根据用户IP查询城市信息。
+            citylocation.searchLocalCity();
+        }
+    </script>
+</head>
+<body onload="init()">
+
+</body>
+</html>

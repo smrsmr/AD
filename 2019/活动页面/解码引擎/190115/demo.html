@@ -1,0 +1,135 @@
+<!--2019年-01月-15号 星期二 14:11:03 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<style>
+			.che {
+				width: 1200px;
+				height: 500px;
+				margin: 100px auto;
+				overflow: hidden;
+			}
+			.ac-1000 {width: 1200px;margin: 0 auto;position: relative;}
+			#featured-area {height:479px; width: 1200px; margin:0 auto 0; border:none; position:absolute;top:2px;}
+			#featured-area img{border:none;}
+			.roundabout-holder {list-style:none;height:454px; width:850px;  margin:0 auto;}
+			.roundabout-moveable-item {font-size:12px!important; height:454px; width:850px; cursor:pointer;}
+			.roundabout-moveable-item img {height:100%; width:100%; background-color:#FFFFFF; margin:0;}
+			.roundabout-in-focus {cursor:auto;}
+			.roundabout-in-focus:hover {-webkit-box-shadow:0px 0px 20px #787878; -moz-box-shadow:0px 0px 20px #787878; background:#f9f9f9;}
+			.roundabout-holder span	 {display:none; font-size:11px;}
+			.roundabout-in-focus:hover span	{display:inline; position:absolute; bottom:5px; right:5px; padding:0px 0px; background:#f9f9f9; color:#8A428B; z-index:999; -webkit-border-top-left-radius: 5px; -moz-border-radius-topLeft: 5px; font-size : 11px; border-left:1px solid #aaaaaa; border-top:1px solid #aaaaaa;}
+			.roundabout a:active, .roundabout a:focus, .roundabout a:visited {outline:none; text-decoration:none;}
+			.roundabout li {margin:0}
+			#featured-area .ban_l_btn,#featured-area .ban_r_btn{ position: absolute; top: 50%;margin-top:-50px; left:0; display: block; width: 64px; height: 100px; background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/67/88/210/13677757.png) no-repeat; z-index: 999; overflow: hidden; }
+			#featured-area .ban_r_btn{ left:auto; right:0;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/68/88/210/13677758.png) no-repeat }
+		</style>
+	</head>
+	<body>
+		<div class="che">
+			<div class="ac-1000">
+				<div id="featured-area" class="ppt">
+					<ul class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;" id="roundabout"></ul>
+					<a href="javascript:void(0)" class="ban_l_btn"></a>
+					<a href="javascript:void(0)" class="ban_r_btn"></a>
+				</div>
+			</div>
+		</div>
+		<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+		<script>document.write("<script type='text/javascript' src='https://guangzhou.auto.qq.com/js/supervise.js?v=" + Date.now() + "'><\/script>")</script>
+		<script src='https://vm.gtimg.cn/tencentvideo/txp/js/txplayer.js'></script>
+		<script src="https://guangzhou.auto.qq.com/js/jquery.roundabout.min.js"></script>
+		<script>
+			//腾讯视频页面数据列表
+			var SliderList = [
+				//直播视频id
+				{ 'vid': 'e0802a5djd6' },
+				{ 'vid': 'o079490inf8' },
+				{ 'vid': 'l0779s34u42' },
+				{ 'vid': 'g07134npc3b' },
+				{ 'vid': 'n0698751r93' },
+				{ 'vid': 's0664xs3ro9' },
+			];
+			//3D轮播渲染
+			var n = 0;
+			var _l = SliderList.length;
+			$(document).ready(function () {
+				$('.che ul').roundabout({
+					duration: 750,
+					btnPrev: ".ban_r_btn", // 右按钮
+					btnNext: ".ban_l_btn", // 左按钮
+					enableDrag: true,           // 在移动端可以拖拽播放
+					reflect: false,         // 为 true 时是从左向右移动，为 false 从右向左移动 
+					minOpacity: 0.1,         //最小的透明度
+					maxOpacity: 1,         //最大的透明度
+					autoplay: true,          //是否开启自动播放
+					autoplayDuration: 4000,   //自动播放时间
+					autoplayPauseOnHover: true, // 鼠标移入元素内是否自动播放，为true不播放，false还自动播放
+					btnNextCallback: function() {
+						n++
+						if(n>=_l){
+							n=0;
+						}
+					},
+					btnPrevCallback: function() {
+						n--;
+						if(n<0){
+							n=_l-1;
+						}
+					},
+					autoplayCallback: function() {
+						n++;
+						var id = $('.roundabout-in-focus').prev().attr('id');
+						var vid = $('.roundabout-in-focus').prev().attr('data-vid');
+						if(n>=_l){
+							n=0;
+							id = $('.che ul>li').eq(n-1).attr('id');
+					    vid = $('.che ul>li').eq(n-1).attr('data-vid');
+						}
+						videoPlay(id,vid).pause();
+						// console.log(id,vid);
+						// console.log(n);
+					},	// 自动轮播的回调
+				});
+			});
+		</script>
+		<script>
+			//封装腾讯视频播放器方法
+			function videoPlay(el,vid) {
+				return new Txplayer({
+					containerId: el,
+					vid: vid,
+					width: '850',
+					height: '454',
+					autoplay: false,
+				});
+			}
+			SliderList.map(function (v,i) {
+				var $li = '<li id="bf'+i+'" class="roundabout-moveable-item" data-vid="'+v.vid+'"></li>';
+				$('#roundabout').append($li);
+				videoPlay(('bf'+i),v.vid);
+			});
+			//左右切换视频时 停止单前视频播放
+			$('.ban_l_btn,.ban_r_btn').click(function(){
+				var id = $('.roundabout-in-focus').attr('id');
+				var vid = $('.roundabout-in-focus').attr('data-vid');
+				videoPlay(id,vid).pause();
+				// console.log(id,vid);
+			});
+			$('.ban_l_btn,.ban_r_btn,.che ul').hover(function(){
+				$('.che ul').roundabout("stopAutoplay")
+			},function(){
+				$('.che ul').roundabout("startAutoplay")
+			})
+		</script>
+
+		<body>
+
+</html>

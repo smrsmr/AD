@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>预测未来，不如创造未来 2018款BMW 7系，时代由此划分</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <style>
+        * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .cn {
+            position: relative;
+        }
+        .cn2Con {
+            position: absolute;
+            left: 50%;
+            top: 15rem;
+            width: 24rem;
+            height: 13rem;
+            margin-left: -12rem;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .yysj {
+            position: absolute;
+            left: 50%;
+            top: 29.7rem;
+            width: 20rem;
+            height: 2.2rem;
+            margin-left: -10rem;
+            cursor: pointer;
+        }
+        .cn2Con .swiper-slide {
+            position: relative;
+        }
+        .cn2Con .swiper-slide h1,.cn2Con .swiper-slide h2 {
+            width: 100%;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        .cn2Con .swiper-slide h2 {
+            font-size: 1.3rem;
+            margin-top: 0.8rem;
+        }
+        .cn2Con .swiper-slide h3 {
+            margin-top: 0.8rem;
+            line-height: 1px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+        .cn2Con .swiper-slide .icon {
+            display: inline;
+            margin-right: 1rem;
+            width: auto;
+        }
+        .icon-vehicle:before {
+            content: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/91/225/209/13647691.png');
+        }
+        .cn2 .p1 {
+            position: absolute;
+            left: 50%;
+            top: 5rem;
+            width: 21rem;
+            margin-left: -10.5rem;
+        }
+        .cn2Con .swiper-slide .p2 {
+            width: 20rem;
+            text-align: center;
+            margin: 0.6rem auto 0;
+        }
+        #sw1>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+            bottom: -0.2rem;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/92/225/209/13647692.jpg');
+            left: -11px;
+            right: auto;
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/93/225/209/13647693.jpg');
+            right: -11px;
+            left: auto;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 22px;
+            height: 60px;
+            margin-top: -30px;
+            z-index: 10;
+            cursor: pointer;
+            background-size: 100%;
+        }
+        .cn3Con,.cn4Con {
+            position: absolute;
+            left: 50%;
+            top: 5rem;
+            width: 23.2rem;
+            height: 21rem;
+            margin-left: -11.6rem;
+        }
+        .cn3Con .spa2,.cn4Con .spa3 {
+            position: absolute;
+            top: -1.5rem;
+            left: 0;
+        }
+        .cn3Con .swiper-pagination-bullet,.cn4Con .swiper-pagination-bullet{
+            width: 6rem;
+            height: 0.5rem;
+            display: inline-block;
+            border-radius: 0;
+            background: #000;
+            opacity: .2;
+            margin-right: 0.5rem;
+        }
+        .cn3Con .swiper-pagination-bullet-active,.cn4Con .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #007aff;
+        }
+        .cn5Con {
+            position: absolute;
+            left: 50%;
+            top: 3.5rem;
+            width: 23.2rem;
+            height: 17rem;
+            margin-left: -11.6rem;
+        }
+        .bmk {
+            position: absolute;
+            right: 0;
+            width: 0;
+            transition: width 0.3s ease;
+            z-index: 99999999;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/156/225/209/13647756.png") center center no-repeat;
+            max-width: 750px;
+            background-size: 100% 100%;
+            height: 47.8rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            font-size: 1.2rem;
+            padding-left: 1rem;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+        }
+        .bmk p {
+            width: 16rem;
+            height: 1.84rem;
+        }
+        .bmk .name {
+            margin-top: 8.5rem;
+            margin-left: 4.8rem;
+        }
+        .bmk .tel {
+            margin-top: 2.1rem;
+            margin-left: 4.8rem;
+        }
+        .bmk .series {
+            margin-top: 2.1rem;
+            margin-left: 4.7rem;
+            width: 17rem;
+        }
+        .bmk .submit {
+            margin-top: 3.1rem;
+            margin-left: 4.7rem;
+            height: 2.5rem;
+            width: 17rem;
+        }
+        .privacyPolicy input{position:absolute;left:4.8rem;top:23.3rem;width:1.2rem !important;height:1.2rem !important}
+        .privacyPolicy span{display:inline-block;position:absolute;left:6.5rem;top:23.15rem;font-size:1.1rem;color:#fff}
+        .privacyPolicy a{color:#fff}
+        .close {
+            margin-left: 24rem;
+            margin-top: 2rem;
+            width: 2rem;
+            height: 2rem;
+            display: block;
+        }
+        .cn6 {
+            max-width: 750px;
+            width: 100%;
+            height: 3rem;
+            background: white;
+        }
+        .cn6 button {
+            width: 23.2rem;
+            height: 3rem;
+            background: #1c69d4;
+            margin: 0 auto;
+            color: white;
+            display: block;
+            border-radius: 6px;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/99/225/209/13647699.jpg" alt=""></div>
+    <div class="cn cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/100/225/209/13647700.jpg" alt="">
+        <p class="p1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/94/225/209/13647694.png" alt=""></p>
+        <div class="cn2Con">
+            <div class="swiper-container" id="sw1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1>BMW 730Li 领先型 卓越套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 828,000
+                        </h3>
+                        <!--<p class="p1"><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/94/225/209/13647694.png" alt=""></p>-->
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 730Li 领先型 M运动套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 828,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 730Li 尊享型 M运动套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 918,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 730Li 尊享型 卓越套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 918,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 740Li 领先型 卓越套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 1,058,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 740Li 领先型 M运动套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 1,058,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1 style="font-size: 1.3rem">BMW 740Li xDrive 尊享型 卓越套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 1,218,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1 style="font-size: 1.3rem">BMW 740Li xDrive 尊享型 M运动套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 1,218,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW 750Li xDrive M运动套装*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 1,838,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW M760Li xDrive*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 2,488,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1>BMW M760Li xDrive 卓越奢华版*</h1>
+                        <h2>车型指导价：</h2>
+                        <h3>
+                            <span class="icon icon-vehicle"></span>
+                            ¥ 2,488,000
+                        </h3>
+                        <p class="p2">产品车型图片仅供参考，相关具体车型及配置请以当地授权经销商店内为准</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination spa1"></div>
+            </div>
+            <div class="swiper-button-prev prev1"></div><!--左箭头-->
+            <div class="swiper-button-next next1"></div><!--右箭头-->
+        </div>
+        <div class="yysj"></div>
+    </div>
+    <div class="cn cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/101/225/209/13647701.jpg" alt="">
+        <div class="cn3Con">
+            <div class="swiper-container" id="sw2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="margin-top: 0.8rem">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/95/225/209/13647695.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" style="margin-top: 0.8rem">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/96/225/209/13647696.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination spa2"></div>
+            <div class="swiper-button-prev prev2" style="margin-top: -69px;left: -22px;"></div><!--左箭头-->
+            <div class="swiper-button-next next2" style="margin-top: -69px;right: -22px"></div><!--右箭头-->
+        </div>
+    </div>
+    <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/102/225/209/13647702.jpg" alt="">
+        <div class="cn4Con">
+            <div class="swiper-container" id="sw3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="margin-top: 0.8rem">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/97/225/209/13647697.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide" style="margin-top: 0.8rem">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/98/225/209/13647698.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination spa3"></div>
+            <div class="swiper-button-prev prev3" style="margin-top: -69px;left: -22px;"></div><!--左箭头-->
+            <div class="swiper-button-next next3" style="margin-top: -69px;right: -22px"></div><!--右箭头-->
+        </div>
+    </div>
+    <div class="cn cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/103/225/209/13647703.jpg" alt="">
+        <div class="cn5Con">
+            <div class="swiper-container" id="sw4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-1.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861084907.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-5.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085870.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-6.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085749.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-7.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085893.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-8.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085876.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-9.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861086186.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-10.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861084845.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-11.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861084939.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-12.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085098.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-13.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861084847.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://www.bmw.com.cn/content/dam/bmw/marketCN/common/all-models/7-series/sedan/2017/images-and-videos/7s-0907-images-and-videos-14.jpg/_jcr_content/renditions/cq5dam.resized.img.485.low.time1523861085065.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination spa4"></div>
+            </div>
+            <div class="swiper-button-prev prev4" style="margin-top: -53px;left: -22px;"></div><!--左箭头-->
+            <div class="swiper-button-next next4" style="margin-top: -53px;right: -22px"></div><!--右箭头-->
+        </div>
+    </div>
+    <div class="cn cn6">
+        <button onclick="location.href='http://www.bmw.com.cn/zh/topics/owners/bmw-financial-services/calculator.html#/bookmark=aHR0cDovL3d3dy5ibXcuY29tLmNuL2NvbnRlbnQvZGFtL2Jtdy9tYXJrZXRDTi9ibXdfY29tX2NuL3NmLWNhbGMvaW5kZXguaHRtbCMhL2ZzX2NhY3VsYXRvcl9zdGFydA=='">金融计算器</button>
+    </div>
+    <div class="cn cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/225/209/13647853.jpg" alt=""></div>
+    <div class="bmk">
+        <i class="close"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/153/225/209/13647753.png" alt=""></i>
+        <p class="name">
+            <input type="text" id="name">
+        </p>
+        <p class="tel">
+            <input type="tel" id="tel" maxlength="11">
+        </p>
+        <p class="series">
+            <select id="series">
+                <option value="20">宝马7系</option>
+            </select>
+        </p>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+        <p class="submit">
+            <input type="button" id="submit">
+        </p>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    var sw1 = new Swiper('#sw1', {
+        autoplay: false,//可选选项，自动滑动
+        pagination :{
+            el: '.spa1',
+            clickable :true,
+        },
+        navigation: {
+            nextEl: '.next1',
+            prevEl: '.prev1',
+        },
+        uniqueNavElements: false,
+        loop: true,
+    });
+    var sw2 = new Swiper('#sw2', {
+        autoplay: false,//可选选项，自动滑动
+        pagination :{
+            el: '.spa2',
+            clickable :true,
+        },
+        navigation: {
+            nextEl: '.next2',
+            prevEl: '.prev2',
+        },
+        uniqueNavElements: false,
+        loop: true,
+    });
+    var sw3 = new Swiper('#sw3', {
+        autoplay: false,//可选选项，自动滑动
+        pagination :{
+            el: '.spa3',
+            clickable :true,
+        },
+        navigation: {
+            nextEl: '.next3',
+            prevEl: '.prev3',
+        },
+        uniqueNavElements: false,
+        loop: true,
+    })
+    var sw4 = new Swiper('#sw4', {
+        autoplay: false,//可选选项，自动滑动
+        pagination :{
+            el: '.spa4',
+            clickable :true,
+        },
+        navigation: {
+            nextEl: '.next4',
+            prevEl: '.prev4',
+        },
+        uniqueNavElements: false,
+        loop: true,
+    })
+</script>
+<script>
+    var oLogin=$('.bmk');
+    //弹出报名框
+    var scoTop=0;
+    $('.yysj').click(function () {
+        oLogin.css({width:'100%',right:'0',top:$(window).scrollTop()})
+    });
+    //报名框弹出
+    $(window).on('resize scroll',function(){
+        scoTop=($(window).height() - oLogin.outerHeight())/4 + $(window).scrollTop();
+        oLogin.css('right' , 0 );
+        oLogin.css('top' , scoTop );
+    });
+    //关闭报名框
+    $('.close').click(function () {
+        oLogin.css({width:'0',right:'0'})
+    });
+    //报名
+    var flag = true;
+    $("#submit").click(function () {
+        if (flag) {
+            var name = $("#name").val(),  //名字
+                tel = $("#tel").val(),   //电话
+                dealers = '', //经销商
+                brand_id = 1, //品牌id
+                series_id = 20, //车型id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    act_id: 3126,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    dealers: dealers,
+                };
+            //判断填写是否正确
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert('恭喜你，报名成功！');
+                        location.reload();
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</html>

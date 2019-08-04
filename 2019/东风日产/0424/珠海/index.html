@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>黄金5.1 智扫5金</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <link href="https://mat1.gtimg.com/www/icon/favicon2.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="https://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.css">
+    <style>
+        ::-webkit-input-placeholder { /* WebKit browsers */
+            color:#000;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            color:#000;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+            color:#000;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10+ */
+            color:#000;
+        }
+        body{margin:0 auto;max-width: 640px; position: relative;}
+        #section1>img,#section2>img,#section3>img,#section4>img,#section5>img,#section6>img,#section7>img,#section8>img,#section9>img,#section10>img,#section11>img,#section12>img,#section13>img{
+            width:100%;
+            height:100%;
+            display:block;
+        }
+        *{margin:0;padding:0}
+        li{list-style: none;;}
+        #section2,#section8,#section7{
+            position: relative;
+        }
+        .section_form{
+            position: absolute;
+            top:2.3rem;
+            left: 2.5rem;
+        }
+        .section_form input,.section_form select{
+            width:21.3rem;
+            height: 3.3rem;
+            line-height: 3.3rem;
+            border:none;
+            margin-bottom:0.85rem;
+            background:none;
+            outline: none;
+            color: #000;
+            padding-left: 0.8rem;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: '微软雅黑';
+        }
+        .section_form select{
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+        }
+        #submit{
+					outline: none;
+					border:none;
+					cursor: pointer;
+        }
+        #label_ch{
+          color:#000;
+          display: block;
+          margin:0.2rem 0 1.2rem 0rem;
+					vertical-align: middle;
+					font-size: 1rem;
+        }
+        #checked1 {
+          border-radius:0;
+          width:1rem!important;
+          height: 1rem!important;
+          outline: none;
+          background: #000!important;
+          vertical-align: middle;
+          margin:-2px 0 0 0!important; 
+         }
+         a{text-decoration: none;color: #000;}
+        /*轮播*/
+        #section4{position: relative;width: 100%;overflow: hidden;}
+        #mb_con{width: 20rem!important;}
+        #mb_btn_ok{background-color:#C7061B!important; }
+        .swiper-container {
+          width: 100%;
+          height: 100%;
+        }
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+           width:100%;
+            height:100%;
+        }
+        .swiper-slide img{ 
+            width:100%;
+            height:100%;
+        }
+        .swiper-button-prev {
+        background-image:url('http://img1.gtimg.com/autoguangzhou/pics/hv1/242/110/212/13813592.png')
+      }
+         .swiper-button-next{
+            background-image:url('http://img1.gtimg.com/autoguangzhou/pics/hv1/243/110/212/13813593.png');
+
+         }
+        .swiper-button-next, .swiper-button-prev{
+            width:2.5rem;
+            height: 2.5rem;
+            background-size: 100%; 
+            top: 50%;
+            z-index: 1000;
+          /*display: none;*/
+         }
+        .swiper-pagination{display: none;}
+        /*经销商*/
+        .t2 {
+            width: 25.2rem;
+            height:35rem;
+            overflow: auto;
+            position: absolute;
+            z-index: 10;
+            top:3rem;
+            left: 1rem;
+        }
+        .t2 div.li {
+            width:100%;
+            line-height: 2rem;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #ccc;
+        }
+        .t2 p {
+            color: #000;
+            font-size: 1rem;
+           /*line-height: 25px;*/
+            text-align: center;
+            cursor: pointer;
+            text-align: left;
+            vertical-align: top;
+            font-family: '微软雅黑';
+        }
+        .t2 p:nth-child(1){
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        .mCSB_inside > .mCSB_container{margin-right: 10px!important;}
+        .mCSB_scrollTools .mCSB_draggerRail{width: 10px;background-color: #ebebeb; border-radius: 0;}
+        .t2 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: #ce0431 !important;width:10px!important; border-radius: 0;}
+        .swiper1 .swiper-slide{
+            text-align: left;
+            font-size:1.1rem;
+            line-height: 1.5rem;
+            width: 100%;
+            font-family: '微软雅黑';
+        }
+    </style>
+</head>
+<body>
+    <div id="section1"><img src="img/h_01.jpg" alt=""></div>
+    <div id="section2" ><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/9/111/212/13813614.jpg" alt=""></div>
+    <div id="section3"><img src="img/h_03.jpg" alt=""></div>
+    <div id="section4" style="position: relative;">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/110/212/13813602.jpg" alt="">
+		<form action="" class="section_form">
+            <input type="text" id="name" placeholder="请输入姓名"/>
+            <input type="text" id="tel" placeholder="请输入电话" maxlength="11" /><br>
+            <select name="" id="car_name" >
+                <!-- <option value="0">意向车型</option>
+                <option value="213">第七代天籁</option>
+                <option value="205">全新奇骏</option>
+                <option value="199">全新逍客</option>
+                <option value="197">新楼兰</option>
+                <option value="34">轩逸</option>
+                <option value="211">轩逸·纯电</option>
+                <option value="26">轩逸·经典</option>
+                <option value="210">全新途达</option>
+                <option value="194">蓝鸟</option>
+                <option value="208">全新劲客</option>
+                <option value="29">骐达</option>
+                <option value="20">骊威</option>
+                <option value="17">玛驰</option>
+                <option value="203">全新天籁</option>
+                <option value="204">全新天籁公爵</option>
+                <option value="28">阳光</option> -->
+            </select>
+            <select name="" id="dealers" >
+                <option value="0">请选择经销商</option>
+            </select>
+            <label id="label_ch">
+               <input type="checkbox"   id="checked1" name="checkbox" class="radio"/>
+              我同意<a href="http://www.qq.com/privacy.htm" target="_blank">《隐私政策》</a>
+            </label>
+            <input type="button" id="submit"/>
+        </form>
+		</div>
+    <div id="section5" style="position: relative;">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/110/212/13813603.jpg" alt="">
+		<div style="position:absolute;height:13.6rem;top:9.2rem;left:0.85rem;width: 25.1rem;"> 
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/189/20/212/13790589.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/190/20/212/13790590.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/191/20/212/13790591.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/192/20/212/13790592.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/194/20/212/13790594.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/195/20/212/13790595.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/196/20/212/13790596.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/197/20/212/13790597.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/199/20/212/13790599.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/200/20/212/13790600.png"></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/201/20/212/13790601.png"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+		</div>
+    <div id="section6" style="height:40rem;background-color: #fff;position: relative;"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/110/212/13813604.jpg" alt=""><div class="t2"></div></div>
+    <div id="section7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/111/212/13813605.jpg" alt=""></div>
+    <script src="https://dongguan.auto.qq.com/zxq_commonCode/js/jquery-1.11.0.min.js" charset="UTF-8"></script>
+    <script src="https://dongguan.auto.qq.com/zxq_commonCode/js/responsive.js" charset="UTF-8"></script>
+    <script src="https://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js" charset="UTF-8"></script>
+    <script src="https://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+       var JSonData={
+            Information:[
+                {"city":"珠海市","name":"珠海明珠","address":"珠海华宇路123号上冲国际名车城","tel":"0756--3895666","nameCode":"H2933","cityCode":"317","provCode":"24"},
+				{"city":"珠海市","name":"珠海南屏","address":"珠海南屏科技园屏西四路一号","tel":"0756-8915992","nameCode":"H2951","cityCode":"317","provCode":"24"},
+				{"city":"珠海市","name":"珠海黄浦","address":"珠海斗门区白蕉科技工业园白蕉南路37号","tel":"0756-3960771","nameCode":"H2968","cityCode":"317","provCode":"24"},
+				{"city":"珠海市","name":"珠海黄浦金湾店","address":"珠海金湾区红旗镇珠海大道6698号美满车城内","tel":"0756-6888818","nameCode":"G2953","cityCode":"317","provCode":"24"},
+            ]
+        }
+				var ser=[
+		{"SERIES_ID":"208","SERIES_NAME":"全新劲客","SERIES_NAME_EN":"P02F"},
+		{"SERIES_ID":"205","SERIES_NAME":"全新奇骏","SERIES_NAME_EN":"P32R"},
+		{"SERIES_ID":"199","SERIES_NAME":"全新逍客","SERIES_NAME_EN":"全新逍客"},
+		{"SERIES_ID":"197","SERIES_NAME":"新楼兰","SERIES_NAME_EN":"new-murano"},
+		{"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA"},
+		{"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA","SERIES_NAME_EN":"new-tiida"},
+		{"SERIES_ID":"20","SERIES_NAME":"骊威","SERIES_NAME_EN":"livina"},
+		{"SERIES_ID":"17","SERIES_NAME":"玛驰","SERIES_NAME_EN":"march"},
+		{"SERIES_ID":"203","SERIES_NAME":"全新天籁","SERIES_NAME_EN":""},
+		{"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵","SERIES_NAME_EN":""},
+		{"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2"},
+		{"SERIES_ID":"26","SERIES_NAME":"轩逸·经典","SERIES_NAME_EN":"sylphy"},
+		{"SERIES_ID":"211","SERIES_NAME":"轩逸·纯电","SERIES_NAME_EN":""},
+		{"SERIES_ID":"28","SERIES_NAME":"阳光","SERIES_NAME_EN":"sunny"},
+		{"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟"},
+		{"SERIES_ID":"213","SERIES_NAME":"第七代天籁","SERIES_NAME_EN":"第七代天籁"},
+];
+	//渲染数据
+	for (var j=0;j<ser.length;j++){
+			$('#car_name').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+	}
+       //经销商
+        for( var i=0;i<JSonData.Information.length;i++){
+            var ul = '<div class=\'li\'>'+
+                '<p>'+JSonData.Information[i].name+'</p>'+
+                '<p>'+JSonData.Information[i].address+'</p>'+
+                '<p>'+JSonData.Information[i].tel+'</p>'+
+                '</div>';
+            $('.t2').append(ul)
+            $('#dealers').append('<option value="'+JSonData.Information[i].nameCode+'">'+JSonData.Information[i].name+'</option>')
+        }
+        var swiper = new Swiper('.swiper-container', {
+           slidesPerView: 1,
+              paginationClickable: true,
+              nextButton: '.swiper-button-next',
+              prevButton: '.swiper-button-prev',
+
+        });
+        $(window).load(function() {
+            $(".t2").mCustomScrollbar({
+              scrollInertia: 550,
+              autoHideScrollbar: false
+            });
+        });
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    phone=$("#tel").val(),   //电话
+
+                    series_id = $('#car_name').val(),   //车型
+                    car_name=$('#car_name option:checked').text(),
+
+                    province=24,//省份
+
+                    city_id= 317,   //城市
+                    city='珠海市',
+
+                    dealers_code = $('#dealers').val(),  //经销商
+                    dealers=$('#dealers option:checked').text(),
+
+                    brand_id=11,
+                    Url = "https://auto.gdtengnan.com/yetcar/baomingRichan.php",
+                    Data= {
+                        name:name,
+                        phone:phone,
+                      
+
+                        dealers:dealers,
+                        dealers_code:dealers_code,
+
+                        brand_id:brand_id,
+
+                        series_id:series_id,
+                        car_name:car_name,
+
+                        detail_id:290, 
+
+                        province:province,
+                        city_id:city_id,
+                        city:city,
+
+                        // type: 0,
+                        // smartcode: "A0000-000-000-00-00000"
+                        type: 1,
+                        smartcode: "A2019-1811-6618-2690-153171"
+                                
+                    };
+                //判断填写是否正确
+                if(name==''||phone==''){
+                   alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,6}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(phone)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                 if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+                if(city_id==0){
+                    alert('请选择城市');
+                    return false;
+                }
+                if(dealers_code==0){
+                    alert('请选择经销商');
+                    return false;
+                }
+                 if($("input[type='checkbox']").is(':checked') ==false){
+                    alert('请同意《隐私政策》');                            
+                    return false;
+                }
+                flag = false;
+                //发送请求
+                $.ajax({
+                    type:"get",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    jsonpCallback:"jsonpReturn",
+                    success:function(data){
+                        if(data.status==1){
+                               alert('恭喜你，报名成功！');
+                            flag = false;
+                             window.location.reload();
+                        }else{
+                               alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+
+            } else {
+                   alert("请勿重复提交！")
+            }
+        })
+    })
+  </script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260055531'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260055531' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<style>#cnzz_stat_icon_1260055531,#cnzz_stat_icon_1260102516,#cnzz_stat_icon_1260842227,#cnzz_stat_icon_1260919928,#cnzz_stat_icon_1255711023,#cnzz_stat_icon_1260771396,#cnzz_stat_icon_1261301380,#cnzz_stat_icon_1261327484{display:none;}</style>
+
+</body>
+</html>

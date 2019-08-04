@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+		<meta name="viewport" content="width=640,user-scalable=no" />
+		<title>解锁红运 玩转春节</title>
+		<link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="//guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+		<link href="//guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<link href="//guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+		<style>
+			.main {max-width: 640px;margin: 0 auto;background: #000;}
+        .cn {position: relative;}
+        .che {position: absolute;left: 50%;width: 600px;height: 341px;margin-left: -300px;top: 194px;}
+        .che .swiper-container {width: 100%;height: 400px;}
+        .swiper-pagination-bullet-active {opacity: 1;background: white;}
+        .swiper-pagination-bullet {width: 10px;height: 10px;display: inline-block;border-radius: 100%;background: #ccc; /* opacity: .2; */}
+        .bmk {
+					position: absolute;
+					left: 50%;
+					top: 179px;
+					width: 410px;
+					height: 326px;
+					margin-left: -184px;
+				}
+        .bmk input,.bmk select {width: 100%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;color: #a8a6a6;font-size: 20px;}
+        .bmk p {
+					display: inline-block;
+					width: 126px;
+					height: 34px;
+				}
+        .bmk .name,.bmk .sex {margin-left: 44px;margin-top: 0;}
+        .bmk .tel,.bmk .series,.bmk .dealers {
+					margin-left: 42px;
+					margin-top: 11px;
+					width: 301px;
+				}
+        .bmk .series,.bmk .dealers {margin-top: 10px;}
+        .bmk .pro,.bmk .city {margin-left: 44px;margin-top: 12px;}
+        .bmk .submit {
+					margin-left: -7px;
+					margin-top: 35px;
+					width: 386px;
+					height: 59px;
+				}
+        .list {position: absolute;left: 50%;top: 82px;width: 600px;height: auto;margin-left: -284px;}
+				.list .title {
+					position: absolute;
+					top: -26px;
+					left: 50%;
+					width: 300px;
+					margin-left: -133px;
+					color: white;
+					font-size: 23px;
+					overflow: hidden;
+				}
+				.list .title li {
+					width: 150px;
+					float: left;
+				}
+        .list .ul ul {width: 100%;display: inline-block;margin-bottom: 10px;}
+        .list .ul {height: 500px;overflow: auto;margin-top: 30px;}
+        .list .ul ul li {width: 100%;color: white;font-size: 23px;line-height: 40px;}
+        .list .ul ul li:first-child {
+					font-size: 30px;
+					font-weight: bold;
+				}
+        .list .ul ul li:last-child {margin-left: 6px;}
+        .mCSB_inside > .mCSB_container {margin-right: 0px;}
+    </style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="cn1 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/39/146/211/13757544.jpg" alt=""></div>
+			<div class="cn2 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/40/146/211/13757545.jpg" alt="">
+				<div class="bmk">
+					<p class="name">
+						<input type="text" id="name" placeholder="姓名">
+					</p>
+					<p class="sex">
+						<select value="" id="sex">
+							<option value="先生">先生</option>
+							<option value="女士">女士</option>
+						</select>
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" placeholder="手机" maxlength="11">
+					</p>
+					<p class="series">
+						<select name="" id="series">
+							<option value="0">意向车型</option>
+							<option value="97">全新阿特兹</option>
+              <option value="100">马自达CX-4</option>
+						</select>
+					</p>
+					<p class="pro">
+						<select name="" id="pro">
+							<option value="广东">广东</option>
+						</select>
+					</p>
+					<p class="city">
+						<select name="" id="city">
+							<option value="广州">广州</option>
+						</select>
+					</p>
+					<p class="dealers">
+						<select id="dealers">
+							<option value="0">经销商</option>
+						</select>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit">
+					</p>
+				</div>
+			</div>
+			<div class="cn3 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/41/146/211/13757546.jpg" alt=""></div>
+			<div class="cn4 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/42/146/211/13757547.jpg" alt=""></div>
+			<div class="cn5 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/43/146/211/13757548.jpg" alt=""></div>
+			<div class="cn6 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/44/146/211/13757549.jpg" alt="">
+				<div class="che">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/232/228/207/13518547.png" alt=""></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/235/228/207/13518550.png" alt=""></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/228/207/13518551.png" alt=""></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/228/207/13518552.png" alt=""></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/228/207/13518553.png" alt=""></div>
+								<div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/239/228/207/13518554.png" alt=""></div>
+							</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cn7 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/45/146/211/13757550.jpg" alt="">
+				<div class="list">
+					<ul class="title">
+						<li>省份: 广东</li>
+						<li>城市: 广州</li>
+					</ul>
+					<div class="ul">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+	<script>
+		var des = [
+			{ "prov": "广东", "city": "广州", "name": "广东物通驭达汽车有限公司", "tel": "020-66606515", "address": "广州市番禺区番禺大道北75号（物通汽车城内）" },
+			{ "prov": "广东", "city": "广州", "name": "广州博程汽车有限公司", "tel": "020-82300600", "address": "广州市黄埔大道东903号天源大厦1-4层" },
+			{ "prov": "广东", "city": "广州", "name": "广州成远汽车有限公司", "tel": "020-86420080", "address": "广州市白云区石井街庆丰村石丰路南侧" },
+			{ "prov": "广东", "city": "广州", "name": "广州睿翼汽车有限公司", "tel": "020-86282999", "address": "广州市海珠区新滘西路68号（上涌果树公园旁）" },
+		];
+	</script>
+	<script>
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 5000,//可选选项，自动滑动
+			loop: true,
+			autoplayDisableOnInteraction: false,
+			pagination: '.swiper-pagination',
+		})
+		for(var i=0;i<des.length;i++){
+			var ul = '<ul>'+
+			'<li>'+des[i].name+'</li>'+
+			'<li>'+des[i].address+'</li>'+
+			'<li>'+des[i].tel+'</li>'+
+			'</ul>'
+			$('.list .ul').append(ul);
+			$('#dealers').append('<option>'+des[i].name+'</option>')
+		}
+		//报名
+		var flag = true;
+		$("#submit").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //名字
+					tel = $("#tel").val(),   //电话
+					series_id = $('#series').val(), //车型
+					dealers = $('#dealers').val(), //经销商
+					brand_id = 14, //品牌
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,  //名字
+						phone: tel,   //电话
+						series_id: series_id,
+						dealers: dealers, //经销商
+						act_id: 3418,   //专题id
+						brand_id: brand_id,      //品牌id
+					};
+				//判断填写是否正确
+				if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|14[0145689]|15[0-9]|16[2567]|17[0-8]|18[0-9]|19[189])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (series_id == '0') {
+					alert('请选择车型');
+					return false;
+				}
+				if (dealers == '0') {
+					alert('请选择经销商');
+					return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type:"get",
+					url:Url,
+					data:Data,
+					async:true,
+					dataType:"jsonp",
+					jsonpCallback:"jsonpReturn",
+					// success:function(data){
+					// 	if(data.status==1){
+					// 		alert('恭喜你，报名成功！');
+					// 		window.location.reload();
+					// 	}else{
+					// 	 alert('很抱歉，你报名失败。');
+					// 		flag = true;
+					// 	}
+					// }
+					complete: function () {
+						setTimeout(function () {
+							alert('恭喜你，报名成功！');
+							window.location.href = location.href;
+						}, 1000)
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		})
+		$(window).load(function () {
+			$(".ul").mCustomScrollbar({
+				scrollInertia: 550,
+				autoHideScrollbar: false
+			});
+		});
+	</script>
+
+</html>

@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=1200,user-scalable=no" />
+		<title>试驾有礼-广汽本田专场</title>
+		<link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<style>
+			.main {
+				max-width: 1920px;
+				margin: 0 auto;
+				overflow: hidden;
+			}
+
+			.cn1 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/89/154/208/13564559.jpg") top center no-repeat;
+				height: 738px;
+			}
+
+			.cn2 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/90/154/208/13564560.jpg") top center no-repeat;
+				height: 613px;
+			}
+
+			.cn3 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/91/154/208/13564561.jpg") top center no-repeat;
+				height: 149px;
+			}
+
+			.cn4 {
+				background: white;
+				height: 100%;
+			}
+
+			.cn5 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/93/154/208/13564563.jpg") top center no-repeat;
+				height: 678px;
+			}
+
+			.cn6 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/94/154/208/13564564.jpg") top center no-repeat;
+				height: 137px;
+			}
+
+			.cn7 {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/95/154/208/13564565.jpg") top center no-repeat;
+				height: 400px;
+			}
+
+			.pr {
+				position: relative;
+			}
+
+			.po {
+				position: absolute;
+				left: 50%;
+			}
+
+			.cn1 .logo {
+				width: 300px;
+				margin-left: -508px;
+			}
+
+			.cn1 .imgT {
+				top: 244px;
+				width: 608px;
+				height: 426px;
+				margin-left: -16px;
+			}
+
+			.cn1 .title {
+				top: 403px;
+				width: 313px;
+				height: 50px;
+				margin-left: -412px;
+				line-height: 50px;
+				font-size: 43px;
+				text-align: center;
+				letter-spacing: 5px;
+			}
+
+			.cn2 .bmk {
+				top: 100px;
+				width: 320px;
+				height: 534px;
+				margin-left: -502px;
+			}
+
+			.cn2 .bmk input,
+			.cn2 .bmk select {
+				width: 100%;
+				height: 100%;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				background: transparent;
+				font-size: 20px;
+			}
+
+			.cn2 .bmk p {
+				width: 306px;
+				height: 41px;
+			}
+
+			.cn2 .bmk .name,
+			.cn2 .bmk .tel,
+			.cn2 .bmk .series {
+				margin-left: 15px;
+				margin-top: 26px;
+			}
+
+			.cn2 .bmk .tel,
+			.cn2 .bmk .series {
+				margin-top: 32px;
+			}
+
+			.cn2 .bmk .submit {
+				width: 320px;
+				margin-left: 1px;
+				margin-top: 33px;
+			}
+
+			.list {
+				width: 1047px;
+				height: 100%;
+				margin: 10px auto;
+				overflow: hidden;
+			}
+
+			.list ul {
+				width: 100%;
+			}
+
+			.list ul li {
+				width: 467px;
+				height: 239px;
+				float: left;
+				box-shadow: 0px 1px 11px #888888;
+				margin: 10px 10px 50px;
+				background: white;
+			}
+
+			.list ul li:nth-child(even) {
+				float: right;
+			}
+
+			.list ul li .k {
+				width: 440px;
+				height: 210px;
+				margin: 15px auto;
+			}
+
+			.list ul li .k h5 {
+				width: 100%;
+				text-align: left;
+				margin: 10px 0;
+				font-size: 36px;
+				line-height: 36px;
+				letter-spacing: 1px;
+			}
+
+			.list ul li .k .lt,
+			.list ul li .k .ri {
+				width: 220px;
+				height: 162px;
+				float: left;
+			}
+
+			.list ul li .k .lt p {
+				font-size: 17px;
+				line-height: 25px;
+			}
+
+			.list ul li .k .lt .red {
+				color: #b60000;
+				font-weight: bold;
+			}
+
+			.list ul li .k .lt .sub {
+				width: 177px;
+				height: 32px;
+				background-color: #b60000;
+				font-size: 18px;
+				line-height: 21px;
+				letter-spacing: 9px;
+				color: #ffffff;
+				margin-top: 19px;
+				cursor: pointer;
+			}
+
+			.cn7 .logoList {
+				width: 1011px;
+				height: 100%;
+				margin: 0 auto;
+			}
+
+			.cn7 .logoList ul li {
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/204/153/208/13564419.jpg") no-repeat;
+				width: 234px;
+				height: 78px;
+				background-size: cover;
+				float: left;
+				margin-right: 25px;
+				margin-bottom: 20px;
+				cursor: pointer;
+			}
+
+			.cn7 .logoList ul li p {
+				display: inline-block;
+			}
+
+			.cn7 .logoList ul li .loImg {
+				width: 60px;
+				height: 60px;
+				margin: 9px 0 9px 28px;
+			}
+
+			.cn7 .logoList ul li .loTi {
+				font-size: 26px;
+				letter-spacing: 2px;
+				top: 20px;
+				margin-left: -24px;
+			}
+
+			.cn7 .logoList ul li:hover {
+				-webkit-transform: scale(1.1);
+				-moz-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+			}
+
+			.cn7 .logoList ul li:nth-child(4),
+			.cn7 .logoList ul li:nth-child(8) {
+				margin-right: 0;
+			}
+
+			a,
+			a:hover,
+			a:active,
+			a:visited,
+			a:link,
+			a:focus {
+				outline: none;
+				background: none;
+				text-decoration: none;
+				color: #000;
+			}
+
+			.show {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.6);
+				display: none;
+				z-index: 998;
+			}
+
+			.show.active {
+				display: block;
+				z-index: 998;
+			}
+
+			.bbmk {
+				width: 0;
+				height: 239px;
+				position: absolute;
+				right: 0;
+				background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/70/154/208/13564540.png") top center no-repeat;
+				transition: width 0.3s ease;
+				z-index: 999;
+			}
+
+			.bbmk.active {
+				width: 100%;
+				top: 20%;
+				z-index: 999;
+				max-width: 467px;
+			}
+
+			.bbmk input {
+				width: 100%;
+				height: 100%;
+				background: transparent;
+				font-size: 20px;
+			}
+
+			.bbmk p {
+				width: 260px;
+				height: 36px;
+			}
+
+			.bbmk .nameX,
+			.bbmk .telX {
+				margin-left: 138px;
+				margin-top: 42px;
+			}
+
+			.bbmk .telX {
+				margin-top: 25px;
+			}
+
+			.bbmk .subX {
+				margin-left: 70px;
+				margin-top: 24px;
+				width: 328px;
+			}
+
+			.privacyPolicy {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				margin-left: -407px;
+				top: 321px;
+			}
+
+			.privacyPolicy input {
+				width: 18px !important;
+				height: 18px !important
+			}
+
+			.privacyPolicy span {
+				display: inline-block;
+				font-size: 18px;
+				color: #000;
+				position: relative;
+				top: -2px;
+			}
+
+			.privacyPolicy a {
+				color: #000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main pr">
+			<div class="cn1 pr">
+				<!--Logo-->
+				<div class="logo po"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/87/154/208/13564557.png" alt="">
+				</div>
+				<!--头图车-->
+				<div class="imgT po">
+					<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/123/195/208/13575048.png" alt="">
+				</div>
+				<!--文字-->
+				<p class="title po">广汽本田专场</p>
+			</div>
+			<div class="cn2 pr">
+				<div class="bmk po">
+					<p class="name">
+						<input type="text" id="name" placeholder="您的姓名">
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" placeholder="您的电话" maxlength="11">
+					</p>
+					<p class="series">
+						<select value="" id="series">
+							<option value="0">意向车型</option>
+						</select>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit" style="cursor:pointer;">
+					</p>
+					<!--报名列表车图-->
+					<p style="width: 320px;height: 172px">
+						<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/121/195/208/13575046.jpg" alt=""
+							style="margin: 28px 0 0 10px">
+					</p>
+				</div>
+				<div class="privacyPolicy">
+					<input type="checkbox">
+					<span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+				</div>
+			</div>
+			<div class="cn3"></div>
+			<div class="cn4">
+				<div class="list">
+					<ul></ul>
+				</div>
+			</div>
+			<div class="cn5">
+				<div class="list">
+					<ul></ul>
+				</div>
+			</div>
+			<div class="cn6"></div>
+			<div class="cn7 pr">
+				<div class="logoList">
+					<ul>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SJBC.htm">
+								<p class="loImg" style="margin-left: 48px;">
+									<img src="http://img1.gtimg.com/autodongguan/pics/hv1/11/117/186/12124496.png" alt="">
+								</p>
+								<p class="loTi po" style="margin-left: -3px;">奔驰</p>
+							</a>
+						</li>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/ADSJ.htm">
+								<p class="loImg" style="margin-left: 48px;">
+									<img src="http://img1.gtimg.com/autodongguan/pics/hv1/12/117/186/12124497.png" alt="">
+								</p>
+								<p class="loTi po" style="margin-left: -3px;">奥迪</p>
+							</a>
+						</li>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SJCQ.htm">
+								<p class="loImg">
+									<img src="http://img1.gtimg.com/autodongguan/pics/hv1/253/116/186/12124483.png" alt="">
+								</p>
+								<p class="loTi po">广汽传祺</p>
+							</a>
+						</li>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SJYL0518.htm">
+								<p class="loImg">
+									<img src="http://img1.gtimg.com/autodongguan/pics/hv1/18/117/186/12124503.png" alt="">
+								</p>
+								<p class="loTi po">东风日产</p>
+							</a>
+						</li>
+
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/GQBT.htm">
+								<p class="loImg" style="margin-left: 48px;">
+									<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/189/250/208/13589139.png" alt="">
+								</p>
+								<p class="loTi po" style="margin-left: -3px;">广汽本田</p>
+							</a>
+						</li>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/GQFT.htm">
+								<p class="loImg">
+									<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/206/250/208/13589156.png" alt="">
+								</p>
+								<p class="loTi po">广汽丰田</p>
+							</a>
+						</li>
+						<li class="pr">
+							<!--logo跳转链接 替换#字符-->
+							<a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/YFSJ.htm">
+								<p class="loImg" style="margin-left: 48px;">
+									<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/206/250/208/13589156.png" alt="">
+								</p>
+								<p class="loTi po" style="margin-left: -3px;">一汽丰田</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--底部 开始-->
+			<div class="foot" id="footer" bossZone="footer">
+				<div class="footernew" role="contentinfo" style="height:124px;">
+					<a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a
+						href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a
+						href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a
+						href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/"
+						target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank"
+						rel="nofollow">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank"
+						rel="nofollow">商务洽谈</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a
+						href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a> | <a href="http://kf.qq.com/"
+						target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/" target="_blank"
+						rel="nofollow">网站导航</a>
+					| <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a
+						href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank"
+						rel="nofollow">版权所有</a><br>
+					<a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+						target="_blank" rel="nofollow">深圳公安局</a> | <a href="http://www.qq.com/dzwfggcns.htm" target="_blank"
+						rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot" href="http://www.gdis.cn/admin/newstext_netsun.asp"
+						target="_blank" rel="nofollow" style="color: #bd0a01;">阳光·绿色网络工程</a>
+					| <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a
+						href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+					<span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank"
+							rel="nofollow">粤网文[2017]6138-1456号</a> <a href="http://www.qq.com/internet_licence.htm" target="_blank"
+							rel="nofollow">新出网证（粤）字010号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank"
+							rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+							rel="nofollow">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank"
+							rel="nofollow">B2-20090028</a>
+					</span><br>
+					<a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a
+						href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+					违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank"
+						href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备
+							44030002000001号</span><img style="vertical-align: text-bottom;" }
+							src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png" width="16" height="16"></a><br>
+					<span style="font-family:Arial;">Copyright 1998 - 2017 Tencent. All Rights Reserved</span>
+				</div>
+			</div>
+			<div class="footernew footheight" style="width:1000px;" bossZone="footer">
+				<div style="width:680px;">
+					<p>
+						<span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"
+								rel="nofollow"><img width="35" height="43" border="0" alt="经营性网站备案信息"
+									src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+						<span class="fr"><a target="_blank" class="lcblack"
+								href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"
+								rel="nofollow">经营性网站<br>
+								备案信息</a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img
+									width="44" height="44" border="0" alt="中国互联网举报中心"
+									src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank"
+								rel="nofollow">中国互联网<br>
+								举报中心</a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img
+									width="44" height="42" border="0" alt="中国文明网传播文明"
+									src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank"
+								rel="nofollow">中国文明网<br>传播文明</a></span>
+					</p>
+					<p style="width:128px;height:52px;border:0;">
+						<span style="padding:0;" class="fl"><a
+								href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337" target="_blank"
+								rel="nofollow"><img border="0" alt="诚信网站"
+									src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+								target="_blank" rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg"
+									title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack"
+								href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank"
+								rel="nofollow">工商网监<br>电子标识</a></span>
+					</p>
+				</div>
+			</div>
+			<a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+				bossZone="fankui"></a>
+			<a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none"
+				bossZone="defaulthome"></a>
+			<a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+			<a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+				style="display:none" bossZone="minidown"></a>
+			<!--e6dcd797284a2fe7c374538dde98ca6b-->
+			<!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+			<!--底部 结束-->
+		</div>
+	</body>
+	<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/jquery.enplaceholder.js" type="text/javascript"></script>
+	<script>
+		// 固定报名品牌id 活动id
+		var brandID = 12, //品牌id
+			actId = 2397;  //活动id
+		//可增加车型列表数据
+		var cheData = [
+			//车型标题 优惠数组 品牌id 车型id 汽车图片"
+			{ "h5": "冠道", "p": ["首付低至6万", "置换补贴高达7000元", "少量现车", ""], "dataBrand": "12", "dataSeries": "445", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/126/195/208/13575051.png" },
+			{ "h5": "雅阁", "p": ["限时优惠1.5万", "置换补贴高达1万元", "购车赠2.8万元礼包", ""], "dataBrand": "12", "dataSeries": "84", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/169/195/208/13575094.jpg" },
+		]; ""
+		for (var i = 0; i < cheData.length; i++) {
+			var li = '<li>' +
+				'<div class="k">' +
+				'<h5>' + cheData[i].h5 + '</h5>' +
+				'<div class="lt">' +
+				'<p class="red">' + cheData[i].p[0] + '</p>' +
+				'<p>' + cheData[i].p[1] + '</p>' +
+				'<p class="red">' + cheData[i].p[2] + '</p>' +
+				'<p >' + cheData[i].p[3] + '</p>' +
+				'<button class="sub" data-brand="' + cheData[i].dataBrand + '" data-series="' + cheData[i].dataSeries + '">立即报名</button>' +
+				'</div>' +
+				'<div class="ri"><img src="' + cheData[i].img + '" alt=""></div>' +
+				'</div>' +
+				'</li>';
+			$('.cn4 .list ul').append(li);
+		}
+		//固定车型列表数据
+		var GData = [
+			{ "h5": "飞度", "p": ["限时优惠0.1万", "畅享0首付", "享2年0利率", ""], "dataBrand": "12", "dataSeries": "80", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/125/195/208/13575050.png" },
+			{ "h5": "缤智", "p": ["限时优惠0.8万", "购车赠送1万元礼包", "", ""], "dataBrand": "12", "dataSeries": "83", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/124/195/208/13575049.png" },
+			{ "h5": "锋范", "p": ["置换补贴高达0.3万元", "享一年免息", "购车送3000元礼包", ""], "dataBrand": "12", "dataSeries": "81", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/135/195/208/13575060.png" },
+			{ "h5": "凌派", "p": ["限时优惠1.5万元", "享2年0利率", "置换补贴2000元", ""], "dataBrand": "12", "dataSeries": "82", "img": "http://img1.gtimg.com/autoguangzhou/pics/hv1/163/195/208/13575088.png" },
+
+		];
+		for (var i = 0; i < GData.length; i++) {
+			var li = '<li>' +
+				'<div class="k">' +
+				'<h5>' + GData[i].h5 + '</h5>' +
+				'<div class="lt">' +
+				'<p class="red">' + GData[i].p[0] + '</p>' +
+				'<p>' + GData[i].p[1] + '</p>' +
+				'<p class="red">' + GData[i].p[2] + '</p>' +
+				'<p >' + GData[i].p[3] + '</p>' +
+				'<button class="sub" data-brand="' + GData[i].dataBrand + '" data-series="' + GData[i].dataSeries + '">立即报名</button>' +
+				'</div>' +
+				'<div class="ri"><img src="' + GData[i].img + '" alt=""></div>' +
+				'</div>' +
+				'</li>';
+			$('.cn5 .list ul').append(li);
+		}
+		//获取车型
+		$.ajax({
+			type: "get",
+			url: 'https://auto.gdtengnan.com/yetcar/getModelsTrans.php',
+			data: {
+				series_id: brandID
+			},
+			async: true,
+			dataType: "jsonp",
+			jsonpCallback: "jsonpReturn",
+			success: function (data) {
+				for (var i = 0; i < data.data.length; i++) {
+					var series = $('<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>');
+					$('#series').append(series)
+				}
+			}
+		});
+		// 固定报名
+		var flag = true;
+		$("#submit").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //姓名
+					tel = $("#tel").val(), //电话
+					brand_id = brandID, //品牌id
+					series_id = $("#series").val(),    //车型id
+					act_id = actId,
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,
+						phone: tel,
+						brand_id: brand_id,
+						series_id: series_id,
+						act_id: act_id,
+						dealers: "",
+						chexing: ""
+					};
+				//判断填写是否正确
+				if (name == '' || tel == '') {
+					alert('信息没有填写完整');
+					return false;
+				}
+				if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (series_id == '0') {
+					alert('请选择车型');
+					return false;
+				}
+				if (!($("input[type='checkbox']").prop('checked'))) {
+					alert('请同意《隐私政策》');
+					return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type: "post",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					jsonpCallback: "jsonpReturn",
+					success: function (data) {
+						if (data.status == 1) {
+							alert('恭喜你，报名成功！');
+							location.replace(location.href);
+						} else {
+							flag = true;
+							alert("很抱歉，你报名失败。");
+						}
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		});
+		//弹框报名
+		var brandX = 0, seriesX = 0;
+		$('.sub').click(function () {
+			var nH = $(document).scrollTop();
+			var bH = $('.cn1').height();
+			var pH = (nH - bH) < 0 ? '200px' : parseInt(nH - bH + 900);
+			$('.show').addClass('active');
+			$('.bbmk').animate({ marginRight: '-233px', right: '50%' }, 100).addClass('active');
+			$('.bbmk').css('top', pH);
+			seriesX = $(this).attr('data-series');
+			brandX = $(this).attr('data-brand');
+			console.log(brandX, seriesX);
+		});
+		$('#subX').click(function () {
+			var name = $("#nameX").val(),  //姓名
+				tel = $("#telX").val(), //电话
+				brand_id = brandX, //品牌id
+				series_id = seriesX,    //车型id
+				act_id = actId,
+				Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+				Data = {
+					name: name,
+					phone: tel,
+					brand_id: brand_id,
+					series_id: series_id,
+					act_id: act_id,
+				};
+			//判断填写是否正确
+			if (name == '' || tel == '') {
+				alert('信息没有填写完整');
+				return false;
+			}
+			if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+				alert('请输入正确的中文名');
+				return false;
+			}
+			if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+				alert('手机格式不正确');
+				return false;
+			}
+			//发送请求
+			$.ajax({
+				type: "post",
+				url: Url,
+				data: Data,
+				async: true,
+				dataType: "jsonp",
+				success: function (data) {
+					if (data.status == 1) {
+						alert('恭喜你，报名成功！');
+						$('.show').removeClass('active');
+						$('.bbmk').animate({ marginRight: '0', right: '0' }, 100).removeClass('active');
+						location.replace(location.href);
+					} else {
+						alert("很抱歉，你报名失败。");
+					}
+				}
+			});
+		});
+		$('.show').click(function () {
+			$(this).removeClass('active');
+			$('.bbmk').animate({ marginRight: '0', right: '0' }, 100).removeClass('active');
+		});
+		$('#name,#tel,#nameX,#telX').placeholder({ isUseSpan: false, onInput: false });
+	</script>
+
+</html>

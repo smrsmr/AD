@@ -1,0 +1,250 @@
+{
+  "frameRate": 24,
+  "name": "p5mc",
+  "version": "5.5",
+  "compatibleVersion": "5.5",
+  "armature": [
+    {
+      "type": "Sheet",
+      "frameRate": 24,
+      "name": "Sprite",
+      "aabb": {
+        "x": -320,
+        "y": -180,
+        "width": 640,
+        "height": 360
+      },
+      "bone": [
+        {
+          "name": "root"
+        }
+      ],
+      "slot": [
+        {
+          "displayIndex": 21,
+          "name": "sheetSlot",
+          "parent": "root"
+        }
+      ],
+      "skin": [
+        {
+          "slot": [
+            {
+              "name": "sheetSlot",
+              "display": [
+                {
+                  "name": "p5mc__0031_1 (47)"
+                },
+                {
+                  "name": "p5mc__0030_1 (49)"
+                },
+                {
+                  "name": "p5mc__0029_1 (51)"
+                },
+                {
+                  "name": "p5mc__0028_1 (53)"
+                },
+                {
+                  "name": "p5mc__0027_1 (55)"
+                },
+                {
+                  "name": "p5mc__0026_1 (57)"
+                },
+                {
+                  "name": "p5mc__0025_1 (59)"
+                },
+                {
+                  "name": "p5mc__0024_1 (61)"
+                },
+                {
+                  "name": "p5mc__0023_1 (63)"
+                },
+                {
+                  "name": "p5mc__0022_1 (1)"
+                },
+                {
+                  "name": "p5mc__0021_1 (3)"
+                },
+                {
+                  "name": "p5mc__0020_1 (5)"
+                },
+                {
+                  "name": "p5mc__0019_1 (7)"
+                },
+                {
+                  "name": "p5mc__0018_1 (9)"
+                },
+                {
+                  "name": "p5mc__0017_1 (11)"
+                },
+                {
+                  "name": "p5mc__0016_1 (13)"
+                },
+                {
+                  "name": "p5mc__0015_1 (15)"
+                },
+                {
+                  "name": "p5mc__0014_1 (17)"
+                },
+                {
+                  "name": "p5mc__0013_1 (19)"
+                },
+                {
+                  "name": "p5mc__0012_1 (21)"
+                },
+                {
+                  "name": "p5mc__0011_1 (23)"
+                },
+                {
+                  "name": "p5mc__0010_1 (25)"
+                },
+                {
+                  "name": "p5mc__0009_1 (27)"
+                },
+                {
+                  "name": "p5mc__0008_1 (29)"
+                },
+                {
+                  "name": "p5mc__0007_1 (31)"
+                },
+                {
+                  "name": "p5mc__0006_1 (33)"
+                },
+                {
+                  "name": "p5mc__0005_1 (35)"
+                },
+                {
+                  "name": "p5mc__0004_1 (37)"
+                },
+                {
+                  "name": "p5mc__0003_1 (39)"
+                },
+                {
+                  "name": "p5mc__0002_1 (41)"
+                },
+                {
+                  "name": "p5mc__0001_1 (43)"
+                },
+                {
+                  "name": "p5mc__0000_1 (45)"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "animation": [
+        {
+          "duration": 32,
+          "name": "Sprite",
+          "slot": [
+            {
+              "name": "sheetSlot",
+              "displayFrame": [
+                {},
+                {
+                  "value": 1
+                },
+                {
+                  "value": 2
+                },
+                {
+                  "value": 3
+                },
+                {
+                  "value": 4
+                },
+                {
+                  "value": 5
+                },
+                {
+                  "value": 6
+                },
+                {
+                  "value": 7
+                },
+                {
+                  "value": 8
+                },
+                {
+                  "value": 9
+                },
+                {
+                  "value": 10
+                },
+                {
+                  "value": 11
+                },
+                {
+                  "value": 12
+                },
+                {
+                  "value": 13
+                },
+                {
+                  "value": 14
+                },
+                {
+                  "value": 15
+                },
+                {
+                  "value": 16
+                },
+                {
+                  "value": 17
+                },
+                {
+                  "value": 18
+                },
+                {
+                  "value": 19
+                },
+                {
+                  "value": 20
+                },
+                {
+                  "value": 21
+                },
+                {
+                  "value": 22
+                },
+                {
+                  "value": 23
+                },
+                {
+                  "value": 24
+                },
+                {
+                  "value": 25
+                },
+                {
+                  "value": 26
+                },
+                {
+                  "value": 27
+                },
+                {
+                  "value": 28
+                },
+                {
+                  "value": 29
+                },
+                {
+                  "value": 30
+                },
+                {
+                  "value": 31
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultActions": [
+        {
+          "gotoAndPlay": "Sprite"
+        }
+      ]
+    }
+  ]
+}

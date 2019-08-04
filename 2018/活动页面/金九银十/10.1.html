@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>金九银十购车榜</title>
+    <meta name="viewport" content="width=1150,user-scalable=no" />
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/conmon.css"/>
+    <style type="text/css">
+        html,body { font-family: "微软雅黑";}
+        .popCon { z-index: 9999 !important;}
+        .popCon+div { z-index: 9998 !important;}
+
+        .banner { width: 100%;}
+        .banner1 img { width: 100%;}
+        .content-wrap { overflow: hidden; position: relative;}
+        .con-bg { width: 100%;}
+        .con-bg0 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_01.jpg) center top no-repeat; height: 827px;}
+        .con-bg1 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_02.jpg) center top no-repeat; height: 826px;}
+        .con-bg3 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_03.jpg) center top no-repeat; height: 827px;}
+        .con-bg4 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_04.jpg) center top no-repeat; height: 826px;}
+        .con-bg5 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_05.jpg) center top no-repeat; height: 827px;}
+        .con-bg6 { background: #bb262c url(http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_02_06.jpg) center top no-repeat; height: 826px;}
+
+        .con-body { width: 1200px; position: absolute; top: 0; left: 50%; margin-left: -600px;}
+
+        .bmk { width: 0px; height: 325px; position: fixed; right: 0; background: rgba(188,25,25,.8); transition: width 0.3s ease; z-index: 999;}
+        .bmk input { width: 295px; height: 32px; padding-left: 5px; background: transparent;}
+        .bmk select { width: 303px; height: 36px; margin-bottom: 15px; margin-left: 0px; padding-left: 5px;}
+        .sub i { display: inline-block; transform: skew(-15deg); background: #ec0e25; border: 2px solid #fff; position: relative; bottom: -40px; left: 50%; margin-left: -120px;}
+        #submit { width: 225px; height: 65px; cursor: pointer; transform: skew(15deg); color: #fff; border: none; font-size: 24px; font-family: "微软雅黑";}
+        .signUp { width: 1200px; margin: 0 auto; padding-top: 50px;}
+        .signUp p { width: 850px; margin: 0 auto; margin-bottom: 20px;}
+        .signUp p i { display: inline-block; width: 280px; height: 45px; border: 1px solid #fff; transform: skew(-15deg);}
+        .signUp p i input { transform: skew(15deg); height: 45px; line-height: 45px; color: #fff; font-size: 20px;}
+        .signUp p:nth-of-type(2) { padding-left: 320px; width: 530px; color: #fff;}
+        .signUp p:nth-of-type(2) span { display: inline-block; line-height: 32px; margin-right: 20px;}
+        .signUp p:nth-of-type(2) span i { display: inline-block; width: 35px; height: 30px; transform: skew(-15deg); background: #fff; padding: 2px; margin-right: 8px;}
+        input[type="radio"] { width: 35px; height: 30px !important; margin: 0; background: #fff; border: 2px solid rgba(155,22,25,1);-webkit-appearance: none; margin-bottom: 0; display: inline-block; line-height: 40px; vertical-align: top; transform: skew(0) !important;}
+        input[type="radio"].active { background: rgba(155,22,25,1);}
+        .signUp p label { display: inline-block; width: 320px; color: #fff; font-size: 20px;}
+
+        .bmk.active { width: 100%; max-width: 1920px; top: 335px; z-index: 999;}
+        .zz { position: fixed; top: 0; left: 0; right: 0;bottom: 0; background: rgba(0,0,0,0.6); display: none; z-index: 998;}
+        .zz.active { display: block; z-index: 998;}
+
+
+        .carsWrap { padding-top: 125px;}
+
+        .car { width: 1200px; height: 450px; margin-bottom: 80px; position: relative;}
+        .carl h3 { display: inline-block; height: 60px; padding-right: 30px; padding-bottom: 10px; position: absolute; top: 35px; left: 750px; z-index: 5;}
+        .car h3 .bg1 { height: 60px; padding-right: 30px; background: #9a0d13; color: #fff; font-size: 60px; font-weight: bold; transform: skew(-25deg); z-index: 1;}
+        .car h3 .bg2 { width: 70px; height: 60px; background: #770101; transform: skew(-25deg); position: absolute; right: 0; bottom: 0;z-index: 0;}
+        .car h3 .bg1>span { position: relative; top: -20px; left: 10px;}
+        .car h3 .bg1 i { display: inline-block; font-size: 26px; transform: skew(25deg); position: relative; top: -10px;}
+        .NO { font-size: 80px;}
+        .car .NObg { display: inline-block; position: absolute; top: -20px; left: 128px; font-size: 100px; color: #9a0d13; z-index: -1;}
+        .carl .wrapbg { width: 200px; height: 380px; background: #9c1519; transform: skew(-30deg); position: absolute; left: 80px; bottom: 0;}
+        .carl .carimg { width: 725px; height: 435px; background: #fff; position: absolute; top: 15px; left: 150px; transform: skew(-30deg); overflow: hidden; z-index: 2;}
+        .car .carimg img { transform: skew(30deg) translateX(-110px);}
+        .carl .infoWrap { width: 435px; height: 190px; background: #9c1519; transform: skew(-30deg); position: absolute; left: 775px; top: 120px; z-index: 1;}
+        .carl .infos { padding-left: 160px; padding-top: 20px; color: #fff; transform: skew(30deg);}
+        .carl .infos p { width: 210px; font-size: 20px; line-height: 30px;}
+        .carl .subBtn { width: 165px; height: 60px; background: #ec0e25; border: 2px solid #fff; transform: skew(-30deg); position: absolute; bottom: 40px; left: 750px; z-index: 6; cursor: pointer;}
+        .car .subBtn button { width: 100%; height: 100%; background: transparent; transform: skew(30deg); font-size: 26px; color: #fff; cursor: pointer;}
+
+        .carr h3 { display: inline-block; height: 60px; padding-right: 30px; padding-bottom: 10px; position: absolute; top: 35px; left: 250px; z-index: 5;}
+        .carr .wrapbg { width: 200px; height: 380px; background: #9c1519; transform: skew(-30deg); position: absolute; right: 50px; top: 0;}
+        .carr .carimg { width: 725px; height: 435px; background: #fff; position: absolute; top: 0; right: 120px; transform: skew(-30deg); overflow: hidden; z-index: 2;}
+        .carr .infoWrap { width: 435px; height: 190px; background: #9c1519; transform: skew(-30deg); position: absolute; left: 25px; top: 120px; z-index: 1;}
+        .carr .infos { padding-left: 40px; padding-top: 20px; color: #fff; transform: skew(30deg);}
+        .carr .infos p { width: 210px; font-size: 20px; line-height: 30px; text-align: right;}
+        .carr .subBtn { width: 165px; height: 60px; background: #ec0e25; border: 2px solid #fff; transform: skew(-30deg); position: absolute; bottom: 40px; left: 130px; z-index: 6; cursor: pointer;}
+
+    </style>
+</head>
+<body>
+<!--自适应头图-->
+<div class="banner">
+    <div class="banner1">
+        <!--头图-->
+        <img src="http://123.207.87.32/act/2017carExhibition/GZbngc170809/bngcGZ_01.jpg"/>
+    </div>
+    <div class="banner2"></div>
+</div>
+
+<div class="content-wrap">
+    <!--主体背景-->
+    <div class="con-bg0 con-bg"></div>
+    <div class="con-bg1 con-bg"></div>
+    <div class="con-bg3 con-bg"></div>
+    <div class="con-bg4 con-bg"></div>
+    <div class="con-bg5 con-bg"></div>
+    <div class="con-bg6 con-bg"></div>
+    <!--主体浮层-->
+    <div class="con-body">
+        <div class="carsWrap">
+            <div class="car carl">
+                <!--这里要改两个数字 和一个车型名称  1 1 博越-->
+                <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">1</span>NO. <span class="NO">1</span> <i>奔驰C级</i></span></div></h3>
+                <div class="imgWrap">
+                    <div class="wrapbg"></div>
+                    <div class="carimg">
+                        <!--车图替换-->
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/239/201/13130973.jpg"/>
+                    </div>
+                </div>
+                <div class="infoWrap">
+                    <div class="infos">
+                        <!--优惠政策-->
+                        <p>优惠6.8万元</p>
+                        <p>指定车型日付低至16.6元</p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <!--这里修改对应的车的品牌和车型id    brand:品牌id，id：车型id-->
+                <div class="subBtn" data-brand="7" data-id="62"><button>抢购报名</button></div>
+            </div>
+
+            <div class="car carr">
+                <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">2</span>NO. <span class="NO">2</span> <i>奥迪A6L</i></span></div></h3>
+                <div class="imgWrap">
+                    <div class="wrapbg"></div>
+                    <div class="carimg">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/2/239/201/13130972.jpg"/>
+                    </div>
+                </div>
+                <div class="infoWrap">
+                    <div class="infos">
+                        <p>指定车型优惠15.67万</p>
+                        <p>首付两成起</p>
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="subBtn" data-brand="8" data-id="54"><button>抢购报名</button></div>
+            </div>
+
+            <div class="car carl">
+                <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">3</span>NO. <span class="NO">3</span> <i>传祺GS4 PHEV</i></span></div></h3>
+                <div class="imgWrap">
+                    <div class="wrapbg"></div>
+                    <div class="carimg">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/239/201/13130977.jpg"/>
+                    </div>
+                </div>
+                <div class="infoWrap">
+                    <div class="infos">
+                        <p>直上广州牌</p>
+                        <p>享新能源补贴3.6万元</p>
+                        <p>指定车型享6千置换礼</p>
+                        <p>购车可享6680元豪礼（先到先得）</p>
+                    </div>
+                </div>
+                <div class="subBtn" data-brand="22" data-id="566"><button>抢购报名</button></div>
+            </div>
+
+            <div class="car carr">
+                <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">4</span>NO. <span class="NO">4</span> <i>现代领动</i></span></div></h3>
+                <div class="imgWrap">
+                    <div class="wrapbg"></div>
+                    <div class="carimg">
+                        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/9/239/201/13130979.jpg"/>
+                    </div>
+                </div>
+                <div class="infoWrap">
+                    <div class="infos">
+                        <p>优惠2.2万元</p>
+                        <p>指定车型低至7折</p>
+                        <p>尊享24期免息贷款</p>
+                        <p>享高达1万元置换补贴</p>
+                    </div>
+                </div>
+                <div class="subBtn" data-brand="19" data-id="159"><button>抢购报名</button></div>
+            </div>
+        </div>
+
+        <div class="car carl">
+            <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">5</span>NO. <span class="NO">5</span> <i>启辰T90</i></span></div></h3>
+            <div class="imgWrap">
+                <div class="wrapbg"></div>
+                <div class="carimg">
+                    <img src="http://img1.gtimg.com/autoheze/pics/hv1/34/195/201/13119784.jpg"/>
+                </div>
+            </div>
+            <div class="infoWrap">
+                <div class="infos">
+                    <p>优惠5000元</p>
+                    <p>尊享0利率购车</p>
+                    <p>置换补贴高达1.2万元</p>
+                    <p>前3名订车客户赠送大屏导航</p>
+                </div>
+            </div>
+            <div class="subBtn" data-brand="11" data-id="72"><button>抢购报名</button></div>
+        </div>
+
+        <div class="car carr">
+            <h3><div class="bg2"></div><div class="bg1"><span><span class="NObg">6</span>NO. <span class="NO">6</span> <i>一丰卡罗拉</i></span></div></h3>
+            <div class="imgWrap">
+                <div class="wrapbg"></div>
+                <div class="carimg">
+                    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/11/239/201/13130981.jpg"/>
+                </div>
+            </div>
+            <div class="infoWrap">
+                <div class="infos">
+                    <p>优惠2万元</p>
+                    <p>首付2.9万元起</p>
+                    <p>购车享一年免息</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="subBtn" data-brand="22" data-id="177"><button>抢购报名</button></div>
+        </div>
+
+    </div>
+
+    <div class="zz"></div>
+    <div class="bmk">
+        <div class="signUp">
+            <p><label for="">您的姓名</label><i><input type="text" name="name" id="name" value="" /></i></p>
+            <!--电话-->
+            <p><span><i><input type="radio" name="sex" value="男" /></i>先生</span><span><i><input type="radio" name="sex" value="女" /></i>女士</span></p>
+            <p><label for="">手机号码</label><i><input type="text" name="phone" id="tel" value="" /></i></p>
+            <!--活动id-->
+            <input type="hidden" name="act_id" value="576" />
+            <!--提交-->
+            <div class="sub">
+                <i><input type="button" id="submit" value="获取底价" /></i>
+            </div>
+        </div>
+    </div>
+    <!--报名end-->
+</div>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script type="text/javascript">
+    if(navigator.userAgent.match(/(Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini)/i)) {
+        $('.car').css('width','1300px');
+        $('.car h3 i').css({'font-size':'40px'});
+        $('.carl').css('left','-100px');
+        $('.carr').css('right','-50px');
+        $('.infoWrap').css('width','600px')
+        $('.carr .infos').css('padding-left','100px');
+        $('.carr .infoWrap').css('left','-100px');
+        $('.carl .infos').css('padding-left','150px');
+        $('.car .infos p').css({'width':'300px','text-align':'left','font-size':'33px','line-height':'40px'});
+        $('.subBtn').css({'width':'300px','height':'100px','bottom':'20px'});
+        $('.subBtn button').css({'font-size':'50px'});
+        $('.bmk').css({'height':'410px','top':'300px'});
+        $('.bmk.active').css({'top':'800px','height':'410px'});
+        $('.bmk label').css('font-size','40px')
+        $('.bmk p:nth-of-type(1) i').css({'width':'510px','height':'80px'});
+        $('.bmk p:nth-of-type(3) i').css({'width':'510px','height':'80px'});
+        $('.bmk input[type="text"]').css({'width':'510px','font-size':'40px','height':'80px','line-height':'80px'})
+        $('.bmk p').css({'font-size':'40px'});
+        $('#submit').css({'width':'400px','height':'80px','font-size':'40px'});
+        $('.popCon').css({'-webkit-transform':'scale(2)'});
+    }
+</script>
+<script type="text/javascript">
+    //高度
+    $('.content-wrap').height($('.con-body').height()+80);
+
+    //create.alert
+    var brandid,series_id,sex;
+    var InputRadio = (function(){
+        var radios = $('input[name="sex"]');
+        radios.click(function(){
+            radios.removeClass('active');
+            $(this).addClass('active');
+            sex = $(this).val();
+        })
+    })()
+
+    var Btns = (function(){
+        var btns = $('.subBtn');
+        var bmWrap = $('.bmk');
+        var zz = $('.zz');
+        btns.click(function(e){
+            brandid = $(this).data('brand');
+            series_id = $(this).data('id');
+            zz.addClass('active');
+            bmWrap.addClass('active');
+        })
+
+        zz.click(function(){
+            bmWrap.removeClass('active');
+            $(this).removeClass('active');
+        })
+    })()
+
+    //    报名
+    $(function(){
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),        //电话
+                    act_id = 576,   //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data= {
+                        name:name,
+                        phone:tel,
+                        sex:sex,
+                        series_id:series_id,
+                        brand_id:brandid,
+                        act_id:act_id
+                    }
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+//                            window.location.reload();
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' style='display:none;' id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

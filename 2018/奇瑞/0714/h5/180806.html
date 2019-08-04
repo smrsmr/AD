@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>奇瑞 青春不等待 狂欢购车季</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script src="http://guangzhou.auto.qq.com/js/video.js"></script>
+    <style>
+        .main{max-width:750px;margin:0 auto}
+        .banner{width:100%;height:auto;position:relative}
+        .swiper-container{width:100%;height:100%}
+        .banner .swiper-slide {position: relative;}
+        .swiper-pagination-bullet {width: 0.5rem;height: 0.5rem;display: inline-block;border-radius: 100%;background: #fff;opacity: 1;}
+        .swiper-pagination-bullet-active {opacity: 1;background: red;}
+        .fix{position: absolute;right: 0;bottom: 0;width: 6.07rem;z-index: 99999;}
+        .cn{position:relative}
+        .bmk{position:absolute;left:50%;top:6.5rem;width:21.5rem;height:26rem;margin-left:-10.51rem}
+        .bmk p input,.bmk p select{width:100%;height:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;font-size:1.3rem;background:transparent}
+        .bmk p{width:20rem;height:3.1rem;margin-left:3rem}
+        .bmk .tel{margin-top:1.3rem}
+        .bmk .series{margin-top:1.3rem}
+        .bmk .line p{display:inline-block;width:7rem}
+        .bmk .line .prov{margin-top:1.25rem}
+        .bmk .line .city{margin-left:3.8rem}
+        .bmk .dealers{margin-top:1.25rem}
+        .bmk .submit{margin-left:0;margin-top:2.2rem;width:22rem}
+        .privacyPolicy input{position:absolute;left:0px;top:21rem;width:18px !important;height:18px !important}
+        .privacyPolicy span{display:inline-block;position:absolute;left:2rem;top:20.75rem;font-size:17px;color:#000}
+        .privacyPolicy a{color:#000}
+        .luck,.btn{position:absolute;left:50%;top:1rem;width:24rem;height:24rem;margin-left:-12rem}
+        .btn{width:6rem;height:6rem;margin-left:-3rem;top:10rem}
+        .dor{position:absolute;left:50%;top:2.78rem;width:16.5rem;height:1.7rem;margin-left:-3.3rem}
+        .dor ul{width:100%;overflow:hidden}
+        .dor ul li{float:left;width:5.3rem;height:1.6rem;margin-right:0.2rem;cursor:pointer;background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/32/95/209/13614482.png") no-repeat;color:white;line-height: 1.6rem;background-size: 100%;text-align: center;}
+        .dor ul li:last-child{margin-right:0}
+        .dor ul li.active {background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/33/95/209/13614483.png") no-repeat;color: #009ef0;}
+        .che{position:absolute;left:50%;top:6.77rem;width:26.8rem;height:21.8rem;margin-left:-13.39rem;z-index:-1}
+        .che ul li{position:absolute;left:0;top:0;height:10.7rem}
+        .che ul li:nth-child(1){width:16.9rem}
+        .che ul li:nth-child(2){width:10.8rem;top:11.1rem}
+        .che ul li:nth-child(3){width:9.3rem;top:0;left:17.4rem}
+        .che ul li:nth-child(4){width:15.5rem;top:11.1rem;left:11.25rem}
+        .che.active{z-index:999}
+        .cn8 select{width:100%;height:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:transparent;padding-left:0.6rem;font-size:1.2rem;color:white;cursor:pointer}
+        .qhProv,.qhcity{position:absolute;left:50%;top:2.48rem;width:4.6rem;height:1.6rem;margin-left:0.6rem}
+        .qhcity{margin-left:7.8rem}
+        option{color:#000}
+        .list{position:absolute;left:50%;top:9rem;width:27.4rem;height:13rem;margin-left:-14rem;overflow:auto}
+        .list ul{overflow:hidden}
+        .list ul:nth-child(even){background:#ccecfc}
+        .list ul li{float:left;width:6rem;font-size:1rem;padding:0.5rem 0}
+        .list ul li:first-child{margin-left:3.3rem}
+        .list ul li:nth-child(2){width:9.3rem}
+        .list ul li:nth-child(3){width:8rem}
+        .video{position:absolute;left:50%;top:7.3rem;width:27.4rem;margin-left:-14rem;height:14.4rem;overflow:hidden}
+        .video span {position: absolute;top: 5.8rem;left: 12.4rem;background: url(http://img1.gtimg.com/autodongguan/pics/hv1/177/223/208/13582242.png) no-repeat top center;width: 3.3rem;height: 3.3rem;background-size: 100% 100%;}
+        .video video, .video img {width: 27.4rem;height: 14.4rem;}
+        .xw{position:absolute;left:50%;top:8.4rem;width:25.9rem;margin-left:-12.8rem;height:35rem;overflow: hidden;}
+        .xw a{
+            display: block;
+            width: 12.4rem;
+            height: 17rem;
+            margin-right: 0.55rem;
+            margin-bottom: 0.6rem;
+            float: left;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/145/128/209/13623010.png") no-repeat;
+            position: relative;
+            background-size: 100%;
+        }
+        .xw a:last-child{margin-right:0;}
+        .xw a i {position: absolute;left: 0;top: 0;width: 12.4rem;height: 8.9rem;overflow: hidden;}
+        .xw a i:last-child {top: 12rem;left: 2rem;height: 3rem;width: 8.7rem;color: #000;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="banner">
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="http://www.chery.cn/m/vehicles/arrizo5" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/178/90/209/13613353.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://www.chery.cn/m/vehicles/tiggo8" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/144/101/209/13616124.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://www.chery.cn/m/vehicles/tiggo5x" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/104/209/13616981.jpg" alt=""></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://www.chery.cn/" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/214/159/209/13630984.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="fix"><a href="http://www.chery.cn/" target="_blank"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/26/91/209/13613456.png" alt=""></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/29/93/209/13613969.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/30/93/209/13613970.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/31/93/209/13613971.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/32/93/209/13613972.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                    <option value="324">艾瑞泽5</option>
+                    <option value="831">瑞虎8</option>
+                    <option value="769">瑞虎5x</option>
+                    <option value="302">瑞虎7</option>
+                    <option value="309">瑞虎3X</option>
+                    <option value="713">瑞虎3</option>
+                </select>
+            </p>
+            <div class="line">
+                <p class="prov">
+                    <select id="prov">
+                        <option value="0">省份</option>
+                    </select>
+                </p>
+                <p class="city">
+                    <select id="city">
+                        <option value="0">城市</option>
+                    </select>
+                </p>
+            </div>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor: pointer;">
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/37/105/209/13617037.jpg" alt="">
+        <div class="luck">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/23/105/209/13617023.png" alt="" class="g-lottery-img">
+        </div>
+        <div class="btn">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/87/91/209/13613517.png" alt="">
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/152/96/209/13614857.jpg" alt="">
+        <div class="dor">
+            <ul>
+                <li class="active">艾瑞泽5</li>
+                <li>瑞虎5x</li>
+                <li>瑞虎8</li>
+            </ul>
+        </div>
+        <div class="che active">
+            <ul>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/231/92/209/13613916.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/232/92/209/13613917.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/233/92/209/13613918.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/235/92/209/13613920.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="che">
+            <ul>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/92/209/13613921.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/92/209/13613922.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/92/209/13613923.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/239/92/209/13613924.png" alt=""></li>
+            </ul>
+        </div>
+        <div class="che">
+            <ul>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/96/209/13614953.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/209/13613926.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/242/92/209/13613927.png" alt=""></li>
+                <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/243/92/209/13613928.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cn cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/35/93/209/13613975.jpg" alt="">
+        <div class="qhProv">
+            <select id="qhProv">
+                <option value="0">省份</option>
+            </select>
+        </div>
+        <div class="qhcity">
+            <select id="qhcity">
+                <option value="0">城市</option>
+            </select>
+        </div>
+        <div class="list"></div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/36/93/209/13613976.jpg" alt="">
+        <div class="video">
+            <span style="display: block;"></span>
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/144/101/209/13616124.jpg" style="display: inline;">
+            <video id="video1" class="my-video" title="" playsinline="" webkit-playsinline="" width="100%" height="100%" preload="" src="http://mat1.gtimg.com/autoguangzhou/video/0715.mov"></video>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/138/128/209/13623003.jpg" alt="">
+        <div class="xw">
+            <a href="http://guangzhou.auto.qq.com/a/20180725/038487.htm" title="艾瑞泽5致敬青春版外观：以青春的名义！" target="_blank">
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/123/128/209/13622988.jpg" alt=""></i>
+                <i>艾瑞泽5致敬青春版外观：以青春的名义！</i>
+            </a>
+            <a href="http://guangzhou.auto.qq.com/a/20180725/038671.htm" title="实力小将瑞虎5x PK当红小生长安CS55，你PICK谁？" target="_blank">
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/125/128/209/13622990.jpg" alt=""></i>
+                <i>实力小将瑞虎5x PK当红小生长安CS55，你PICK谁？</i>
+            </a>
+            <a href="http://guangzhou.auto.qq.com/a/20180725/038604.htm" title="瑞虎8作为奇瑞的旗舰型SUV到底旗舰在哪？" target="_blank">
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/126/128/209/13622991.jpg" alt=""></i>
+                <i>瑞虎8作为奇瑞的旗舰型SUV到底旗舰在哪？</i>
+            </a>
+            <a href="http://guangzhou.auto.qq.com/a/20180725/038786.htm" title="多彩缤纷 闪耀人生——奇瑞车主生日会闪耀蓉城" target="_blank">
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/127/128/209/13622992.jpg" alt=""></i>
+                <i>多彩缤纷 闪耀人生——奇瑞车主生日会闪耀蓉城</i>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/2018web/qirui/jquery.easing.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/2018web/qirui/jquery.rotate.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/popAlert.create.js"></script>
+<script>
+    var des=[
+        {"prov":"福建","city":"福州","name":"福建美捷","tel":"0591-87921111"},
+        {"prov":"福建","city":"龙岩","name":"龙岩鑫鑫","tel":"0597-2310088"},
+        {"prov":"福建","city":"宁德","name":"宁德揽晟","tel":"0593-2688886"},
+        {"prov":"福建","city":"莆田","name":"莆田步峰","tel":"0594-3025888"},
+        {"prov":"福建","city":"厦门","name":"厦门瑞德隆","tel":" 0592-2083788"},
+        {"prov":"福建","city":"厦门","name":"厦门铂维尔","tel":"0592-7776778"},
+        {"prov":"福建","city":"厦门","name":"厦门昆祺","tel":"0592-5730077"},
+        {"prov":"福建","city":"厦门","name":"厦门瑞德隆旗云","tel":"0592-7050117"},
+        {"prov":"福建","city":"漳州","name":"漳州华骏天瑞","tel":"0596-2956777"},
+        {"prov":"福建","city":"南平","name":"建阳鑫顺捷","tel":"0599-5818666"},
+        {"prov":"福建","city":"泉州","name":"泉州国润","tel":"0595-22353999"},
+        {"prov":"福建","city":"泉州","name":"泉州恒永盛","tel":"0595-28291718"},
+        {"prov":"福建","city":"泉州","name":"福建骏豪","tel":"0595-82108889"},
+        {"prov":"福建","city":"三明","name":"三明美捷","tel":"0598-8989777"},
+        {"prov":"广东","city":"广州","name":"广州众赢","tel":"020-89682265"},
+        {"prov":"广东","city":"惠州","name":"惠州辉达惠瑞","tel":"0752-5869888"},
+        {"prov":"广东","city":"揭阳","name":"揭阳宏达","tel":"0663-8734999"},
+        {"prov":"广东","city":"梅州","name":"梅州华运","tel":"0753-2367133"},
+        {"prov":"广东","city":"清远","name":"清远众合力","tel":"0763-6899366"},
+        {"prov":"广东","city":"清远","name":"清远冠荣","tel":"0763-3911999"},
+        {"prov":"广东","city":"汕头","name":"汕头汕阳","tel":"0754-86312002"},
+        {"prov":"广东","city":"汕头","name":"汕头福和","tel":"0754-86316777"},
+        {"prov":"广东","city":"佛山","name":"佛山兴协瑞","tel":"0757-83835918"},
+        {"prov":"广东","city":"佛山","name":"佛山安奇","tel":"0757-86360938"},
+        {"prov":"广东","city":"江门","name":"江门东富","tel":"0750-3222161"},
+        {"prov":"广东","city":"茂名","name":"茂名腾跃","tel":"0668-3385912"},
+        {"prov":"广东","city":"阳江","name":"阳江粤隆","tel":"0662-3433888"},
+        {"prov":"广东","city":"阳春","name":"阳春海瑞","tel":"0662-7759888"},
+        {"prov":"广东","city":"湛江","name":"湛江东富","tel":"0759-3632222"},
+        {"prov":"广东","city":"湛江","name":"湛江飞杰","tel":"0759-3358511"},
+        {"prov":"广东","city":"东莞","name":"东莞东富","tel":"0769-83529999"},
+        {"prov":"广东","city":"东莞","name":"东莞东瑞","tel":"0769-22905208"},
+        {"prov":"广东","city":"东莞","name":"东莞东富塘厦分公司","tel":"0769-82090999"},
+        {"prov":"广东","city":"深圳","name":"深圳东富","tel":"0755-26161566"},
+        {"prov":"广东","city":"深圳","name":"深圳祥麒","tel":"0755-81454401"},
+        {"prov":"广东","city":"深圳","name":"深圳锦昊","tel":"0755-29496376"},
+        {"prov":"广东","city":"珠海","name":"珠海多盈","tel":"0756-8589363"},
+        {"prov":"广东","city":"珠海","name":"珠海利盈","tel":"0756-5525523"},
+        {"prov":"广东","city":"佛山","name":"佛山瑞启","tel":"0757-22912302"},
+        {"prov":"广东","city":"佛山","name":"佛山陆华","tel":"13112709050"},
+        {"prov":"广东","city":"佛山","name":"佛山新劲之星","tel":"0757-29290400"},
+        {"prov":"广东","city":"河源","name":"惠州辉达惠瑞河源分公司","tel":"0762-2806888"},
+        {"prov":"广东","city":"惠州","name":"惠州辉达惠瑞贸易","tel":"0752-2022930"},
+        {"prov":"广东","city":"惠州","name":"惠州宝瑞华","tel":"0752-3351156"},
+        {"prov":"广东","city":"惠州","name":"惠州三泰","tel":"0752-2209616"},
+        {"prov":"广东","city":"中山","name":"中山中天","tel":"0760-28132136"},
+        {"prov":"广东","city":"中山","name":"中山利盈","tel":"0760-88558670"},
+        {"prov":"广东","city":"中山","name":"中山威晟","tel":"0760-28213778"},
+        {"prov":"广东","city":"中山","name":"中山利瑞","tel":"0760-87965508"},
+        {"prov":"广东","city":"潮州","name":"广东骏路宝","tel":"0768-3932999"},
+        {"prov":"广东","city":"广州","name":"广州保瑞","tel":"020-29077208"},
+        {"prov":"广东","city":"广州","name":"广州旺华","tel":"020-32887111"},
+        {"prov":"广东","city":"广州","name":"广州陆高","tel":"020-34816018"},
+        {"prov":"广东","city":"韶关","name":"韶关卓瑞","tel":"0751-8266288"},
+        {"prov":"广东","city":"肇庆","name":"肇庆旺华","tel":"0758-2717706 "},
+        {"prov":"广东","city":"云浮","name":"云浮云瑞","tel":"0766-8912899"},
+        {"prov":"广西","city":"桂林","name":"桂林桂路通","tel":"0773-2638098"},
+        {"prov":"广西","city":"桂林","name":"桂林大旗","tel":"0773-2565000"},
+        {"prov":"广西","city":"桂林","name":"桂林申永达","tel":"0773-3630303"},
+        {"prov":"广西","city":"贺州","name":"贺州广深","tel":"0774-5226680"},
+        {"prov":"广西","city":"柳州","name":"柳州鑫广达","tel":"0772-3217222"},
+        {"prov":"广西","city":"柳州","name":"柳州鹏越","tel":"0772-3028788"},
+        {"prov":"广西","city":"柳州","name":"柳州德龙","tel":"0772-2108588"},
+        {"prov":"广西","city":"百色","name":"百色鑫广达","tel":"0776-2153555"},
+        {"prov":"广西","city":"北海","name":"北海鑫广达","tel":"0779-2217658"},
+        {"prov":"广西","city":"贵港","name":"贵港鑫广达","tel":"0775-4384500"},
+        {"prov":"广西","city":"南宁","name":"广西鑫广达","tel":"0771-3222566"},
+        {"prov":"广西","city":"南宁","name":"南宁海胜","tel":"0771-3136008"},
+        {"prov":"广西","city":"南宁","name":"南宁瑞义川","tel":"0771-4525256"},
+        {"prov":"广西","city":"钦州","name":"钦州鑫广达","tel":"0777-3216576"},
+        {"prov":"广西","city":"玉林","name":"玉林鑫广达","tel":"0775-2102000"},
+        {"prov":"广西","city":"河池","name":"河池鑫广达","tel":"0778-2234888"},
+        {"prov":"广西","city":"梧州","name":"梧州鑫广达","tel":"0774-6026319"},
+        {"prov":"广西","city":"百色","name":"百色龙腾","tel":"0776-8889968"},
+        {"prov":"广西","city":"来宾","name":"来宾畅达","tel":"0772-4228828"},
+        {"prov":"海南","city":"海口","name":"海南仁通","tel":"0898-66819018"},
+        {"prov":"海南","city":"海口","name":"海南和奇祥","tel":"0898-32289000"},
+        {"prov":"江西","city":"赣州","name":"赣州瑞华","tel":"0797-8324800"},
+        {"prov":"江西","city":"赣州","name":"赣州盈丰","tel":"0797-8082801"},
+        {"prov":"江西","city":"九江","name":"九江东神","tel":"0792-6828555"},
+        {"prov":"江西","city":"南昌","name":"江西永瑞","tel":"0791-85262686"},
+        {"prov":"江西","city":"宜春","name":"宜春天天","tel":"0795-3666616"},
+        {"prov":"江西","city":"抚州","name":"抚州鑫锐","tel":"0794-8622527"},
+        {"prov":"江西","city":"吉安","name":"吉安美日","tel":"0796-8342333"},
+        {"prov":"江西","city":"吉安","name":"吉安搭手","tel":"0796-7066666"},
+        {"prov":"江西","city":"上饶","name":"上饶东安","tel":"0793-8459881"},
+        {"prov":"江西","city":"鹰潭","name":"鹰潭瑞丰","tel":"0701-6631888"},
+        {"prov":"江西","city":"萍乡","name":"萍乡洪豪","tel":"0799-6792068"},
+        {"prov":"江西","city":"婺源","name":"婺源东安","tel":"0793-7470881"},
+        {"prov":"江西","city":"新余","name":"江西康展","tel":"0790-6858715"},
+        {"prov":"江西","city":"景德镇","name":"景德镇安顺","tel":"0798-8390099"},
+        {"prov":"江西","city":"景德镇","name":"乐平国华","tel":"0798-6688818"},
+        {"prov":"浙江","city":"杭州","name":"浙江奇祥","tel":" 0571-88178166"},
+        {"prov":"浙江","city":"丽水","name":"丽水奥奇","tel":"0578-2831888"},
+        {"prov":"浙江","city":"台州","name":"台州福马","tel":"0576-82572577"},
+        {"prov":"浙江","city":"台州","name":"台州宏瑞","tel":"0576-88600800"},
+        {"prov":"浙江","city":"温州","name":"温州祥凯","tel":"0577-55591988"},
+        {"prov":"浙江","city":"温州","name":"温州豪龙","tel":" &#8237;0577-56553200&#8236;"},
+        {"prov":"浙江","city":"嘉兴","name":"嘉兴国信","tel":"0573-82227700"},
+        {"prov":"浙江","city":"湖州 ","name":"湖州奇祥","tel":"0572-2558588"},
+        {"prov":"浙江","city":"金华","name":"金华元瑞","tel":"0579-82081111"},
+        {"prov":"浙江","city":"金华","name":"永康奇博","tel":"0579-87407666"},
+        {"prov":"浙江","city":"金华","name":"义乌正瑞","tel":"0579-85261222"},
+        {"prov":"浙江","city":"金华","name":"东阳和通","tel":"0579-85830006"},
+        {"prov":"浙江","city":"金华","name":"义乌成瑞","tel":"0579-83152999"},
+        {"prov":"浙江","city":"绍兴","name":"诸暨丰瑞","tel":"0575-87123777"},
+        {"prov":"浙江","city":"绍兴","name":"绍兴裕盛","tel":"0575-88176231"},
+        {"prov":"浙江","city":"杭州","name":"浙江隆中","tel":"0571-86855588"},
+        {"prov":"浙江","city":"杭州","name":"杭州志勤","tel":"0571-82875222"},
+        {"prov":"浙江","city":"宁波","name":"宁波宏瑞","tel":"0574-87787777"},
+        {"prov":"浙江","city":"宁波","name":"余姚佳达","tel":"0574-62633277"},
+        {"prov":"浙江","city":"宁波","name":"宁波途瑞","tel":"0574-87783366"},
+        {"prov":"浙江","city":"宁波","name":"宁波翔瑞","tel":"0574-86817265"},
+        {"prov":"浙江","city":"宁波","name":"宁波德瑞","tel":" 0574-23453550"},
+        {"prov":"浙江","city":"衢州","name":"衢州广瑞","tel":"0570-8585600"},
+        {"prov":"浙江","city":"温州","name":"瑞安奔迈","tel":"0577-65120999"},
+        {"prov":"浙江","city":"温州","name":"苍南鹏瑞","tel":"0577-80856868"},
+        {"prov":"浙江","city":"乐清","name":"乐清瑞锦","tel":"0577-61661918"},
+        {"prov":"浙江","city":"台州","name":"台州天鹰","tel":"0576-86191211"},
+    ]
+</script>
+<script>
+    var pop = new Popup('red','1','腾讯汽车提示');
+    $('.video span').click(function() {
+        $(this).hide();
+        $('#video1')[0].pause();
+        $('.video img').hide();
+        $('#video1')[0].play();
+    });
+    function autoVideo(auto){
+        auto.onclick=function(){
+            if(auto.paused){
+                auto.play();
+                $('.video span').hide()
+            }else{
+                auto.pause();
+                $('.video span').show()
+            }
+        }
+    }
+    var auto = document.getElementById("video1");
+    autoVideo(auto);
+    auto.addEventListener("ended",function(){
+        $('.video img').show();
+        $('.video span').show();
+    })
+
+    $('.dor ul li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.che').eq($(this).index()).addClass('active').siblings().removeClass('active');
+    });
+    for (var i=0;i<des.length;i++){
+        if ($('#prov').html().indexOf(des[i].prov)==-1){
+            $('#prov').append('<option value="'+des[i].prov+'">'+des[i].prov+'</option>');
+            $('#qhProv').append('<option value="'+des[i].prov+'">'+des[i].prov+'</option>');
+        }
+        var ul = '<ul>'+
+            '<li>'+des[i].city+'</li>'+
+            '<li>'+des[i].name+'</li>'+
+            '<li>'+des[i].tel+'</li>'+
+            '</ul>';
+        $('.list').append(ul);
+    }
+    $('#prov').change(function () {
+        $("#city").find("option:not(:first)").remove();
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#prov option:checked').text()==des[i].prov){
+                if ($('#city').html().indexOf(des[i].city)==-1){
+                    $('#city').append('<option value="'+des[i].city+'">'+des[i].city+'</option>');
+                }
+            }
+        }
+    });
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].city){
+                $('#dealers').append('<option value="'+des[i].name+'">'+des[i].name+'</option>');
+            }
+        }
+    });
+    $('#qhProv').change(function () {
+        $("#qhcity").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#qhProv option:checked').text()==des[i].prov){
+                if ($('#qhcity').html().indexOf(des[i].city)==-1){
+                    $('#qhcity').append('<option value="'+des[i].city+'">'+des[i].city+'</option>');
+                }
+            }
+        }
+    });
+    $('#qhcity').change(function () {
+        $('.list').html('');
+        for (var i=0;i<des.length;i++){
+            if ($('#qhcity option:checked').text()==des[i].city){
+                var ul = '<ul>'+
+                    '<li>'+des[i].city+'</li>'+
+                    '<li>'+des[i].name+'</li>'+
+                    '<li>'+des[i].tel+'</li>'+
+                    '</ul>';
+                $('.list').append(ul);
+            }
+        }
+    });
+    //固定报名
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$('#name').val(),  //姓名
+                tel=$('#tel').val(),  //电话
+                brand= 51,  //品牌
+                series_id = $('#series').val(),  //车型id
+                car_name = $('#series option:checked').text(),
+                city_id = $('#city').val(),
+                city = $('#city').val(),
+                prov_id = $('#prov').val(),
+                prov = $('#prov').val(),
+                dealer_id = $('#dealers').val(),
+                dealer = $('#dealers').val(),
+                Url = "http://www.yetcar.com/inxdex.php?s=/Home/LotteryActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand:brand,
+                    city_id:city_id,
+                    city:city,
+                    province_id:prov_id,
+                    province:prov,
+                    models_id:series_id,
+                    models_name:car_name,
+                    dealers_id:dealer_id,
+                    dealers_name:dealer,
+                    act_id:18
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                pop.showNotice('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                pop.showNotice('手机格式不正确');
+                return false;
+            }
+            if ( series_id == 0 ) {
+                pop.showNotice('请选择车型');
+                return false;
+            }
+            if ( prov == 0 ) {
+                pop.showNotice('请选择省份');
+                return false;
+            }
+            if ( city == 0 ) {
+                pop.showNotice('请选择城市');
+                return false;
+            }
+            if ( dealers == 0 ) {
+                pop.showNotice('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                pop.showNotice('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    console.log(data)
+                    if(data.status==1){
+                        pop.showNotice('恭喜你，报名成功！');
+                    } else if(data.status==3){
+                        pop.showNotice("<p>您的手机号<span style='color: red;'>“"+tel+"”</span>已经参与过活动了<br></p><p>奖品是<span class='pink'>“"+data.prize+"”</span></p>",function () {
+                            window.location.href=location.href;
+                        });
+                    } else {
+                        pop.showNotice("<p>很抱歉,您报名失败!</p>")
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        pagination : '.swiper-pagination',
+        autoplayDisableOnInteraction : false,
+        paginationClickable :true,
+        loop: true,
+    });
+</script>
+<script>
+    $(function () {
+        var $btn = $('.g-lottery-img');
+        var isture=true;
+        var clickfunc = function (data) {
+            switch (data) {
+                case 1:
+                    rotateFunc(1, 118, '500元优惠券');    //78
+                    break;
+                case 2:
+                    rotateFunc(2, 58, '谢谢参与');       //79
+                    break;
+                case 3:
+                    rotateFunc(3, 118, '500元优惠券');   //80
+                    break;
+                case 4:
+                    rotateFunc(4, 118, '500元优惠券');   //81
+                    break;
+                case 5:
+                    rotateFunc(5, 239, '谢谢参与');     //82
+                    break;
+                case 6:
+                    rotateFunc(6, 118, '500元优惠券'); //83
+                    break;
+            }
+        };
+        $(".btn").on('click',function () {
+            var tel = $("#tel").val(),
+                luckData = {
+                    phone: tel,	//传电话
+                    act_id: 18,		//这个是抽奖活动的id 最外面那个列表的
+                },
+                luckUrl = 'http://www.yetcar.com/inxdex.php?s=/Home/LotteryActivity/getLucky';
+            $.ajax({
+                type: "get",
+                url: luckUrl,
+                data: luckData,
+                async: true,
+                dataType: "jsonp",
+                success: function(data) {
+                    console.log(data);
+                    if(data.status == 1) {
+                        var cjID = data.msg.prize_id - 77;		//奖品id减掉前面的奖品总和(看情况减数值)
+                        var cjName = data.msg.prize_name;
+                        var postData = {
+                            phone: tel,
+                            prize: cjName,
+                        };
+                        clickfunc(cjID);
+                        $.ajax({
+                            type: 'get',
+                            url: 'http://www.yetcar.com/inxdex.php?s=/Home/LotteryActivity/send_message',
+                            data: postData,
+                            async: true,
+                            dataType: "jsonp",
+                            success: function (data) {}
+                        });
+                    }
+                    else {
+                        pop.showNotice("<p>您还没有报名!</p>");
+                    }
+                }
+            });
+        });
+        var rotateFunc = function (awards, angle, text) {
+            if (isture){
+                isture=false;
+                $btn.stopRotate();
+                $btn.rotate({
+                    angle: 0, duration: 4500, animateTo: angle + 4320, callback: function () {
+                        if (text != '谢谢参与') {
+                            pop.showNotice('恭喜你获得:<span style="color: red;">'+text+'</span><p>奖品领取信息稍后通过短信方式通知，请耐心等候消息。</p>',function () {
+                                window.location.href=location.href;
+                            });
+                        } else {
+                            pop.showNotice('<span style="color:red;">'+text+'</span>',function () {
+                                window.location.href=location.href;
+                            });
+                        }
+                        isture=true;
+                    }
+                });
+            }
+        };
+    });
+</script>
+</html>

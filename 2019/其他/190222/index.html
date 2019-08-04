@@ -1,0 +1,798 @@
+<head>
+    <link rel="stylesheet" href="https://herb.yicanfan123.com/wall/themes/meepo/assets/css/3d.css">
+    <link rel="stylesheet" href="https://herb.yicanfan123.com/wall/themes/meepo/assets/css/style.css?v=32323232" media="screen" type="text/css">
+    <link rel="stylesheet" href="https://herb.yicanfan123.com/wall/themes/meepo/assets/css/normalize.css">
+    <script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+    <script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/lotter_free_base.js" type="text/javascript"></script>
+    <script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/jquery.easing.min.js" type="text/javascript"></script>
+    <style>
+        .hidden,.loginform {
+            display: none!important;
+        }
+
+        .pre{
+            width: 45px;height: 45px;float: left;margin-top: 35%;display: none;
+        }
+        .notpre{
+            width: 45px;height: 45px;float: left;margin-top: 35%;
+        }
+        .next{
+            width: 45px;height: 45px;float: right;margin-top: 35%;
+        }
+        .notnext{
+            width: 45px;height: 45px;float: right;margin-top: 35%;display: none;
+        }
+        .imgshow{
+            width: 220px;
+            height: 220px;
+            margin-top: 30px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+
+        /* .outer_box{
+            padding: 10px;
+            box-sizing: border-box;
+        } */
+
+        .outer {
+            display: block;
+            /* margin: 10px; */
+            padding: 10px;
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+        }
+				.outer_box:nth-child(2) img {
+					transform: scale(0.95) translateY(10px);
+				}
+				.outer_box:nth-child(2) img:nth-child(5){
+					transform: scale(0.95) translateY(3px)
+				}
+				.outer_box:nth-child(2) img:nth-child(6){
+					transform: scale(0.95) translateY(-3px)
+				}
+				.outer_box:nth-child(2) img:nth-child(7){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(2) img:nth-child(8){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(2) img:nth-child(9){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(2) img:nth-child(10){
+					transform: scale(0.95) translateY(-10px)
+				}
+
+				.outer_box:nth-child(3) img {
+					transform: scale(0.92) translateY(15px);
+				}
+				.outer_box:nth-child(3) img:nth-child(5){
+					transform: scale(0.92) translateY(6px)
+				}
+				.outer_box:nth-child(3) img:nth-child(6){
+					transform: scale(0.92) translateY(-6px)
+				}
+				.outer_box:nth-child(3) img:nth-child(7){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(3) img:nth-child(8){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(3) img:nth-child(9){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(3) img:nth-child(10){
+					transform: scale(0.92) translateY(-15px)
+				}
+
+				.outer_box:nth-child(4) img {
+					transform: scale(0.89) translateY(20px);
+				}
+				.outer_box:nth-child(4) img:nth-child(5){
+					transform: scale(0.89) translateY(9px)
+				}
+				.outer_box:nth-child(4) img:nth-child(6){
+					transform: scale(0.89) translateY(-9px)
+				}
+				.outer_box:nth-child(4) img:nth-child(7){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(4) img:nth-child(8){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(4) img:nth-child(9){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(4) img:nth-child(10){
+					transform: scale(0.89) translateY(-20px)
+				}
+
+				.outer_box:nth-child(5) img {
+					transform: scale(0.86) translateY(25px);
+				}
+				.outer_box:nth-child(5) img:nth-child(5){
+					transform: scale(0.86) translateY(10px)
+				}
+				.outer_box:nth-child(5) img:nth-child(6){
+					transform: scale(0.86) translateY(-10px)
+				}
+				.outer_box:nth-child(5) img:nth-child(7){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(5) img:nth-child(8){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(5) img:nth-child(9){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(5) img:nth-child(10){
+					transform: scale(0.86) translateY(-25px)
+				}
+
+				.outer_box:nth-child(6) img {
+					transform: scale(0.83) translateY(30px);
+				}
+				.outer_box:nth-child(6) img:nth-child(5){
+					transform: scale(0.83) translateY(11px)
+				}
+				.outer_box:nth-child(6) img:nth-child(6){
+					transform: scale(0.83) translateY(-11px)
+				}
+				.outer_box:nth-child(6) img:nth-child(7){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(6) img:nth-child(8){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(6) img:nth-child(9){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(6) img:nth-child(10){
+					transform: scale(0.83) translateY(-30px)
+				}
+
+				.outer_box:nth-child(7) img {
+					transform: scale(0.8) translateY(35px);
+				}
+				.outer_box:nth-child(7) img:nth-child(5){
+					transform: scale(0.8) translateY(12px)
+				}
+				.outer_box:nth-child(7) img:nth-child(6){
+					transform: scale(0.8) translateY(-12px)
+				}
+				.outer_box:nth-child(7) img:nth-child(7){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(7) img:nth-child(8){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(7) img:nth-child(9){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(7) img:nth-child(10){
+					transform: scale(0.8) translateY(-35px)
+				}
+
+				.outer_box:nth-child(8) img {
+					transform: scale(0.77) translateY(35px);
+				}
+				.outer_box:nth-child(8) img:nth-child(5){
+					transform: scale(0.77) translateY(14px)
+				}
+				.outer_box:nth-child(8) img:nth-child(6){
+					transform: scale(0.77) translateY(-14px)
+				}
+				.outer_box:nth-child(8) img:nth-child(7){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(8) img:nth-child(8){
+					transform: scale(0.77) translateY(-35px)
+				}
+				.outer_box:nth-child(8) img:nth-child(9){
+					transform: scale(0.77) translateY(-35px)
+				}
+				.outer_box:nth-child(8) img:nth-child(10){
+					transform: scale(0.77) translateY(-35px)
+				}
+
+				.outer_box:nth-child(9) img {
+					transform: scale(0.77) translateY(35px);
+				}
+				.outer_box:nth-child(9) img:nth-child(5){
+					transform: scale(0.77) translateY(14px)
+				}
+				.outer_box:nth-child(9) img:nth-child(6){
+					transform: scale(0.77) translateY(-14px)
+				}
+				.outer_box:nth-child(9) img:nth-child(7){
+					transform: scale(0.77) translateY(-35px)
+				}
+				.outer_box:nth-child(9) img:nth-child(8){
+					transform: scale(0.77) translateY(-35px)
+				}
+				.outer_box:nth-child(9) img:nth-child(9){
+					transform: scale(0.77) translateY(-35px)
+				}
+				.outer_box:nth-child(9) img:nth-child(10){
+					transform: scale(0.77) translateY(-35px)
+				}
+
+				.outer_box:nth-child(10) img {
+					transform: scale(0.8) translateY(35px);
+				}
+				.outer_box:nth-child(10) img:nth-child(5){
+					transform: scale(0.8) translateY(13px)
+				}
+				.outer_box:nth-child(10) img:nth-child(6){
+					transform: scale(0.8) translateY(-13px)
+				}
+				.outer_box:nth-child(10) img:nth-child(7){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(10) img:nth-child(8){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(10) img:nth-child(9){
+					transform: scale(0.8) translateY(-35px)
+				}
+				.outer_box:nth-child(10) img:nth-child(10){
+					transform: scale(0.8) translateY(-35px)
+				}
+
+				.outer_box:nth-child(11) img {
+					transform: scale(0.83) translateY(30px);
+				}
+				.outer_box:nth-child(11) img:nth-child(5){
+					transform: scale(0.83) translateY(11px)
+				}
+				.outer_box:nth-child(11) img:nth-child(6){
+					transform: scale(0.83) translateY(-11px)
+				}
+				.outer_box:nth-child(11) img:nth-child(7){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(11) img:nth-child(8){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(11) img:nth-child(9){
+					transform: scale(0.83) translateY(-30px)
+				}
+				.outer_box:nth-child(11) img:nth-child(10){
+					transform: scale(0.83) translateY(-30px)
+				}
+
+				.outer_box:nth-child(12) img {
+					transform: scale(0.86) translateY(25px);
+				}
+				.outer_box:nth-child(12) img:nth-child(5){
+					transform: scale(0.86) translateY(10px)
+				}
+				.outer_box:nth-child(12) img:nth-child(6){
+					transform: scale(0.86) translateY(-10px)
+				}
+				.outer_box:nth-child(12) img:nth-child(7){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(12) img:nth-child(8){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(12) img:nth-child(9){
+					transform: scale(0.86) translateY(-25px)
+				}
+				.outer_box:nth-child(12) img:nth-child(10){
+					transform: scale(0.86) translateY(-25px)
+				}
+
+				.outer_box:nth-child(13) img {
+					transform: scale(0.89) translateY(20px);
+				}
+				.outer_box:nth-child(13) img:nth-child(5){
+					transform: scale(0.89) translateY(9px)
+				}
+				.outer_box:nth-child(13) img:nth-child(6){
+					transform: scale(0.89) translateY(-9px)
+				}
+				.outer_box:nth-child(13) img:nth-child(7){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(13) img:nth-child(8){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(13) img:nth-child(9){
+					transform: scale(0.89) translateY(-20px)
+				}
+				.outer_box:nth-child(13) img:nth-child(10){
+					transform: scale(0.89) translateY(-20px)
+				}
+
+				.outer_box:nth-child(14) img {
+					transform: scale(0.92) translateY(15px);
+				}
+				.outer_box:nth-child(14) img:nth-child(5){
+					transform: scale(0.92) translateY(6px)
+				}
+				.outer_box:nth-child(14) img:nth-child(6){
+					transform: scale(0.92) translateY(-6px)
+				}
+				.outer_box:nth-child(14) img:nth-child(7){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(14) img:nth-child(8){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(14) img:nth-child(9){
+					transform: scale(0.92) translateY(-15px)
+				}
+				.outer_box:nth-child(14) img:nth-child(10){
+					transform: scale(0.92) translateY(-15px)
+				}
+
+				.outer_box:nth-child(15) img {
+					transform: scale(0.95) translateY(10px);
+				}
+				.outer_box:nth-child(15) img:nth-child(5){
+					transform: scale(0.95) translateY(3px)
+				}
+				.outer_box:nth-child(15) img:nth-child(6){
+					transform: scale(0.95) translateY(-3px)
+				}
+				.outer_box:nth-child(15) img:nth-child(7){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(15) img:nth-child(8){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(15) img:nth-child(9){
+					transform: scale(0.95) translateY(-10px)
+				}
+				.outer_box:nth-child(15) img:nth-child(10){
+					transform: scale(0.95) translateY(-10px)
+				}
+        .main_list {
+            display: flex;
+        }
+
+        #stop_Btn {
+            display: none;
+        }
+
+        .App-rotate {
+            animation: lds-hourglass 1s infinite linear;
+            -webkit-animation: lds-hourglass 1s infinite linear;
+        }
+
+        .App-rotate-t1 {
+            -webkit-animation-delay: 0.01s;
+            animation-delay: 0.01s;
+        }
+        @keyframes lds-hourglass {
+            0% {
+                transform: rotateX(0);
+            }
+
+            100% {
+                transform: rotateX(360deg);
+            }
+						
+        }
+
+        .popBox {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9;
+        }
+
+        .pop,
+        .winBox {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .winBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg {
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .winPop {
+            width: 40%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(97, 24, 24, 0.8);
+            z-index: 11;
+            text-align: center;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        .winPop_List{
+            width: 100%;
+            display: flex;
+        }
+
+        .winPop-av {
+            display: none;
+        }
+
+        .winPop_Box{
+            width: 50%;
+        }
+
+        .winImg {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+        }
+
+        .winImg img,
+        .cube-img img,
+        .close img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .winName {
+            width: 80%;
+            padding-top: 15px;
+            box-sizing: border-box;
+            color: #ffffff;
+            font-size: 20px;
+            letter-spacing: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .close {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .cubePop {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 11;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .cube-img {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .lucky-box {
+            padding: 40px 0 20px 0;
+            box-sizing: border-box;
+            font-size: 20px;
+        }
+
+        .lucky-box,
+        .lucky {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lucky:nth-child(2) {
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .cube-select,
+        .cube-input {
+            width: 180px;
+            height: 100%;
+            padding-left: 10px;
+            box-sizing: border-box;
+            display: flex;
+        }
+
+        .cube-select select,
+        .cube-input input {
+            width: 100%;
+        }
+
+        .cube-select select {
+            height: 26px;
+        }
+
+        .cube-input input {
+            height: 22px;
+        }
+
+        .btnBox_s{
+            width: 100%;
+            height: 80px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+
+        #start_kBtn{
+            margin-top: 20px;
+        }
+
+        .btn {
+            width: 150px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            background: red;
+            padding: 5px;
+            box-sizing: border-box;
+            border-radius: 6px;
+            color: #ffffff;
+            padding: 8px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body thistype="sign_wall">
+
+    <div class="container">
+        <div class="main">
+            <div class="main_list">
+                <!--<div class="outer outer1">-->
+                <!--<img src="./static/images/tx.png" alt="">-->
+                <!--<img src="./static/images/tx.png" alt="">-->
+                <!--<img src="./static/images/tx.png" alt="">-->
+                <!--<img src="./static/images/tx.png" alt="">-->
+                <!--</div>-->
+            </div>
+            <!-- <div class="btnBox" id="wait_click">
+                <div class="btn">抽奖中...</div>
+            </div> -->
+            <div class="btnBox_s">
+                <div class="btnBox" id="stop_Btn">
+                    <div class="btn">停止抽奖</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popBox">
+        <div class="pop">
+            <div class="winBox">
+                <div class="bg left"></div>
+                <div class="bg right"></div>
+
+                <div class="cubePop">
+                    <div>
+                        <div class="cube-img">
+                            <img src="https://herb.yicanfan123.com/wall/themes/meepo/assets/images/ts.png" alt="">
+                        </div>
+                        <div class="btnBox_s">
+                            <div class="btnBox" id="start_kBtn">
+                                <div class="btn">开始抽奖</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="winPop winPop-av">
+                    <div class="winPop_List">
+                        <!-- <div class="winPop_Box">
+                            <div class="winImg">
+                                <img src="https://herb.yicanfan123.com/wall/themes/meepo/assets/images/tx.png" alt="">
+                            </div>
+                            <div class="winName">张三</div>
+                        </div> -->
+                    </div>
+                    <div class="close">
+                        <img src="https://herb.yicanfan123.com/wall/themes/meepo/assets/images/close.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <canvas class="canvas" height="700"></canvas> -->
+</body>
+<!-- <script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/jquery-2.0.3.min.js"></script> -->
+<!-- <script src="themes/meepo/assets/js/3d_lottery.js?v=3123212"></script> -->
+<script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/three.min.js"></script>
+<script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/tween.min.js"></script>
+<script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/CSS3DRenderer.js"></script>
+<script src="https://herb.yicanfan123.com/wall/themes/meepo/assets/js/3d_lottery.js?v=3123212"></script>
+<script>
+    // 头像平均分
+    $(function () {
+        var len = 0;
+        var data = [];
+        var start_time
+        var stop_time
+        var num = 2
+        var newI = 1, newT = 500;
+        var clientWidth = document.body.clientWidth
+        console.log(clientWidth)
+
+        $.ajax({
+            // ajax_act_lottory.php?action=te_ready  avatar
+            // https://herb.yicanfan123.com/wall/themes/meepo/index.json
+            url: "./index.json",
+            data: {},
+            type: "get",
+            dataType: "json",
+            success: function (res) {
+                console.log(res)
+                let rowLen
+                data = res.data
+                // 分辨率为1920显示23列一列显示12个
+                // 分辨率为1366显示16列一列显示10个
+                if(clientWidth > 1366){
+                    len = 23
+                    rowLen = 12
+                }else{
+                    len = 16
+                    rowLen = 10
+                }
+                // len = res.data.length
+                // 遍历行添加节点
+                let row = res.data
+                let div = '';
+                for (let i = 0; i < len; i++) {
+                    div += "<div class='outer_box'>";
+                            // row[i].length
+                    for (let j = 0; j < rowLen; j++) {
+                        div += "<img src='" + row[i][j].url + "' class='outer outer" + i + "'>";
+                    }
+                    div += "</div>";
+                }
+                $('.main_list').append(div);
+            }
+        });
+        function setTime(i, t) {
+            setTimeout(function () {
+                $('.outer' + (len - len + i) + '').addClass('App-rotate App-rotate-t1')
+                $('.outer' + (len - (i + 1)) + '').addClass('App-rotate App-rotate-t1')
+            }, t)
+            newI++; newT += 500;
+            // console.log(newI,newT);
+            if (newT >= (len / 2 * 500)) {
+                return false;
+            }
+            setTime(newI, newT)
+        }
+        // 获取div_width
+        var div_width = $(".winBox").width() / 2
+        // 点击开始抽奖
+        $('#start_kBtn').click(function () {
+            $.ajax({
+                url: "ajax_act_lottory.php?action=ready&awardid=1&from=tdjcj",
+                data: {},
+                type: "get",
+                dataType: "json",
+                success: function (res) {
+                    console.log(res)
+                   
+                }
+            });
+
+            $('.cubePop').css('display', 'none')
+            let left_width = div_width
+
+            start_time = setInterval(function () {
+                left_width -= 100
+                $('.left').css('width', left_width)
+                $('.right').css('width', left_width)
+                if (left_width < 0) {
+                    clearInterval(start_time)
+
+                    $('.popBox').css('display', 'none')
+                    $('#stop_Btn').css('display', 'none')
+                    $('.outer' + (len - len) + '').addClass('App-rotate App-rotate-t1')
+                    $('.outer' + (len - 1) + '').addClass('App-rotate App-rotate-t1')
+                    setTime(1, 500)
+                    setTimeout(function () {
+                        $('#stop_Btn').fadeIn(600)
+                    }, 5000)
+                }
+            }, 100)
+
+
+        })
+        // 点击停止抽奖
+        $('#stop_Btn').click(function () {
+            newI = 1; newT = 500
+            $('.popBox').css('display', 'flex')
+            $('#stop_Btn').css('display', 'none')
+            $('.outer').removeClass('App-rotate App-rotate-t1')
+            let left_width = 0
+            stop_time = setInterval(function () {
+                left_width += 100
+                if (left_width > div_width) {
+                    left_width = div_width
+                }
+                $('.left').css('width', left_width)
+                $('.right').css('width', left_width)
+                if (left_width >= div_width) {
+                    clearInterval(stop_time)
+                    $('.winPop').removeClass('winPop-av')
+                }
+            }, 100)
+            getluckperson()
+        })
+
+        // 点击关闭按钮
+        $('.close').click(function () {
+            $('.winPop').addClass('winPop-av')
+            $('.cubePop').css('display', 'flex')
+            $('.winPop_List div').remove()
+            num = 2
+        })
+
+        function getluckperson(){
+            $.ajax({
+                url: "ajax_act_lottory.php?action=ok",
+                "type":"post",
+                dataType: "json",
+                data: {
+                    awardid: 1,
+                    from:"tdjcj"
+                },
+                success: function (res) {
+                    console.log(res)
+                    let temp = '<div class="winPop_Box"><div class="winImg"><img src="'+ res.data.avatar +'" alt=""></div><div class="winName">'+ res.data.nick_name +'</div></div>'
+                    $('.winPop_List').append(temp)
+                    if(num == 2){
+                        setTimeout(function(){
+                            getluckperson();
+                            num = 0
+                        },500);
+                    }
+                }
+            });
+        }
+    });
+</script>

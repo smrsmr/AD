@@ -1,0 +1,388 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="gb2312">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="Keywords" content="">
+    <title>美女试驾汇</title>
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb2/global/assets/css/crossbuilder.css">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="//mat1.gtimg.com/www/mb/cb2/global/assets/css/comment.css">
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb2/global/assets/css/tools/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/css/book_style-v2.css">
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/css/book_style_rio_olympic_pic_page_v1.1.css">
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb/publish/assets/css/cb_toolbar_v1.css">
+    <style>
+      html,body {
+        min-width: 1669px;
+      }
+      .video {
+        position: absolute;
+        left: 50%;
+        top: 10.5%;
+        width: 67.9%;
+        height: 78.2%;
+        margin-left: -46.8%;
+      }
+      .page-nav-next {
+        left: auto;
+        right: 25px;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/214/104/211/13747009.png) no-repeat center rgba(255,255,255,0.8);
+      }
+      .page-nav-prev {
+        left: 25px;
+        right: auto;
+        background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/215/104/211/13747010.png) no-repeat center rgba(255,255,255,0.8);
+      }
+      .page-nav-next, .page-nav-prev {
+        position: absolute;
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        margin-top: -25px;
+        cursor: pointer;
+      }
+    </style> 
+  </head>
+  <body>
+    <style type="text/css">
+      @media only screen and (max-width : 767px) {}
+    </style>
+    <div id='wx_pic' style='margin:0 auto;display:none;'><img src='http://inews.gtimg.com/newsapp_ls/0/676046604/0' /></div>
+    <link rel="stylesheet" type="text/css" href="//mat1.gtimg.com/www/mb/cb/publish/assets/css/cb_toolbar_v2.css">
+    <!-- Browser Resize  -->
+    <div id="browserresizing" class="browser-resizing" style="display:none;"></div>
+    <!-- /Browser Resize -->
+    <!-- JustPc : Btn-Prev && Btn-Next -->
+    <div class="menu-container" style="display:none;">
+      <div class="box-nav-next">
+        <div class="page-nav-next"></div>
+      </div>
+      <div class="box-nav-prev">
+        <div class="page-nav-prev"></div>
+      </div>
+      <div class="box-nav-home">
+        <div class="page-nav-home"></div>
+      </div>
+    </div>
+    <!-- /Btn-Prev && Btn-Next -->
+
+    <!-- Just Mobile : Btn-Home -->
+    <div class="btn-mobile-home" style="display:none;"></div>
+
+    <!-- Hover Tips -->
+    <div class="grad-line" style="display:none;">
+      <div class="container width50 bg-alpha">
+        <div class="box-prev gl-prev" style="display:none;"></div>
+      </div>
+      <div class="container width50 bg-alpha">
+        <div class="box-next gl-next" style="display:none;"></div>
+      </div>
+    </div>
+    <!-- /Hover Tips -->
+
+    <!-- Keyboard Tips -->
+    <div class="keyboard-container" style="display:none">
+      <div class="keyboard-pic"><span class="pic"></span></div>
+      <span class="text">键盘翻动页面</span>
+      <!-- <div class="arrow-block">
+        <span class="box-key key-prev"></span>
+        <span class="box-key key-next"></span>
+    </div> -->
+    </div>
+    <!-- /Keyboard Tips -->
+
+    <!-- Page Container -->
+    <div class="main-container" style="display:none;">
+      <!-- 01 内页 Dom-->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/204/104/211/13746999.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 02 内页 Dom -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/206/104/211/13747001.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 03 内页 Dom -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="2" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/207/104/211/13747002.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 04 内页 Dom  -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/208/104/211/13747003.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 05 内页 Dom  -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/209/104/211/13747004.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 06 内页 Dom  -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/210/104/211/13747005.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 07 内页 Dom -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/211/104/211/13747006.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 08 内页 Dom-->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/212/104/211/13747007.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 09 内页 Dom -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/213/104/211/13747008.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 10 内页 Dom -->
+      <div class="page flip-item" data-type="jumbotron-bg-img">
+        <div data-page-id="7" class="container width100">
+          <div class="inner">
+            <div class="page-block">
+              <!-- 封面背景图 -->
+              <div class="loaded jumbotron-img" data-src="http://img1.gtimg.com/autoguangzhou/pics/hv1/205/104/211/13747000.jpg"></div>
+              <div class="video" id="video"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 动态 ：下一页 Next Dom -->
+      <div id="flip-next" class="flip-container" style="display:none;">
+        <!-- 平躺的包含左右两侧的 Dom -->
+        <div class="flip-left-a">
+          <!-- 不处理：当前页 左侧 内容 -->
+          <div class="flip-html-here">
+            <!-- Insert : Current Page -->
+          </div>
+          <!--<div class="shadow">阴影</div>-->
+          <div class="flip-right-b">
+            <!-- 需处理：下一页 右侧 内容 -->
+            <div class="flip-html-here">
+              <!-- Insert : Next Page -->
+            </div>
+            <!--<div class="shadow"></div>-->
+          </div>
+        </div>
+
+        <!-- 3D 旋转的包含正反两面的 Dom -->
+        <div class="flip-rotating-pages-container" style="">
+          <!-- transform: matrix3d(0.4, 0, 0.8, 0, 0, 1, 0, 0, -0.8, 0, 0.4, 0, 0, 0, 0, 1); -->
+          <div class="flip-right-a flip-rotating-pages">
+            <div class="flip-rotating-pages-content">
+              <!-- 正面：当前页 右侧 内容 -->
+              <div class="flip-html-here">
+                <!-- Insert : Current Page -->
+              </div>
+              <!--<div class="shadow">阴影</div>-->
+            </div>
+          </div>
+
+          <!-- transform: matrix3d(-0.4, 0, -0.8, 0, 0, 1, 0, 0, 0.8, 0, -0.4, 0, 0, 0, 0, 1); -->
+          <div class="flip-left-b flip-rotating-pages">
+            <div class="flip-rotating-pages-content">
+              <!-- 反面：下一页 左侧 内容 -->
+              <div class="flip-html-here">
+                <!-- Insert : Next Page -->
+              </div>
+              <!--<div class="shadow">阴影</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 动态：上一页 Prev Dom -->
+      <div id="flip-prev" class="flip-container" style="display:none;">
+        <!-- 平躺的包含左右两侧的 Dom -->
+        <div class="flip-right-a">
+          <!-- 不用处理：当前页 右侧 内容 -->
+          <div class="flip-html-here">
+            <!-- Insert : Current Page -->
+          </div>
+          <!--<div class="shadow">阴影</div>-->
+          <div class="flip-left-b">
+            <!-- 需处理：上一页 左侧 内容 -->
+            <div class="flip-html-here">
+              <!-- Insert : Prev Page -->
+            </div>
+            <!--<div class="shadow">阴影</div>-->
+          </div>
+        </div>
+        <!-- 3D 旋转的包含正反两面的 Dom -->
+        <div class="flip-rotating-pages-container">
+          <div class="flip-left-a flip-rotating-pages">
+            <div class="flip-rotating-pages-content">
+              <!-- 当前页 左侧 内容 -->
+              <div class="flip-html-here">
+                <!-- Insert : Current Page -->
+              </div>
+              <!--<div class="shadow">阴影</div>-->
+            </div>
+          </div>
+          <div class="flip-right-b flip-rotating-pages">
+            <div class="flip-rotating-pages-content">
+              <!-- 上一页 右侧 内容 -->
+              <div class="flip-html-here">
+                <!-- Insert : Prev Page -->
+              </div>
+              <!--<div class="shadow">阴影</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Page Container -->
+    <!-- mainvideo -->
+    <!-- <div id="mainvideo" class="main-video">-->
+    <!--     <div class="close" id="close"><i class="ico"></i></div>-->
+    <!--     <div id="mod_player"></div>-->
+    <!-- </div>-->
+    <!-- /mainvideo -->
+    <!-- popuppanel -->
+    <div id="popuppanel" class="popup-panel">
+      <div class="close" id="ppClose"><i class="ico"></i></div>
+      <div id="textScroller" class="text-scroller">
+        <div class="box_block mod size-l">
+          <div class="scrollBar-contatiner article-block color-white" data-type="100">
+            <div class="box-article color-white">
+              <p class="textContainer">
+                <!--详情文字-->
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /popuppanel -->
+    <!-- Loading : Start -->
+    <div class="loading" id="loading" style="display:block;">
+      <div class="loading-box pa" id="loading-box" style="padding-top: 234px;">
+        <div class="loading-shadow">
+          <div class="loading-bg">
+            <span class="loading-ico" id="loadw"><i></i></span>
+          </div>
+        </div>
+        <div class="loading-txt">
+          <span class="loading-percent" id="loadingPerdent"><i>0%</i></span>LOADING
+        </div>
+        <div class="we_container">
+          <div class="we_copyright"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Loading : End -->
+    <!--<script src="../../global/assets/js/tools/jquery-1.10.2.min.js"></script>-->
+    <script src="//mat1.gtimg.com/www/mb/cb2/global/assets/js/tools/jquery-1.10.2.min.js"></script>
+    <script src="//mat1.gtimg.com/www/mb/cb/publish/assets_auto/js/api_v2.js" charset="utf-8"></script>
+    <script src="//mat1.gtimg.com/www/mb/cb2/global/assets/js/tools/cbtools.1.0.js"></script>
+    <!-- html5.js for IE less than 9 -->
+    <!--[if lt IE 9]>
+    <script src="//mat1.gtimg.com/www/mb/cb2/global/assets/js/tools/html5.js"></script>
+    <![endif]-->
+    <script src="//vm.gtimg.cn/tencentvideo/txp/js/txplayer.js"></script> <!-- 腾讯视频播放器 -->
+    <script src="//mat1.gtimg.com/www/mb/cb2/global/assets/js/tools/jquery.mCustomScrollbar.js"></script>
+    <script src="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/js/tools/mlellipsis.js"></script>
+    <script src="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/js/tools/loading.js"></script>
+    <!-- <script src="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/js/main-v1.8.6.js"></script> -->
+    <script src="//mat1.gtimg.com/www/mb/cb2/publish/book_assets/js/main-rio-pic-v1.8.8.2.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function () {
+        //腾讯视频播放id
+        var vid = { id: 'b08103xei35' }
+
+
+
+        var player = new Txplayer({
+            containerId: 'video',
+            vid: vid.id,
+            width: '100%',
+            height: '100%',
+            autoplay: false
+        });
+
+
+        var page = {
+          pageIndex: 0,      //* 设置显示的页数
+          init: function () {
+            //* get : hash-pageIndex
+            page.pageIndex = tool.getHashIndex();
+            //
+            main.init(page.pageIndex, function ($index) {
+              //* flip-complete
+              window.location.hash = "#" + $index;
+              console.log('flipDone: insert pageIndex to weixin:' + window.location.hash);
+            });
+          }
+        }
+        //* Define : 只载入第一页的背景图及第一页内的图片
+        var loadFileArr = ['//mat1.gtimg.com/www/mb/cb2/global/assets/images/blank.gif', '//mat1.gtimg.com/www/mb/cb2/global/assets/images/blank.gif'];
+        //
+        loader.init(loadFileArr, function () {
+          //* After-loadComplete : CallBack-Func
+          page.init();
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--[if !IE]>|xGv00|b5b0ee741c51955162130a6a80471fe6<![endif]-->

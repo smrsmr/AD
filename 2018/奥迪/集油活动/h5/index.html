@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>中致远奥迪世界杯购车嘉年华</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/2018web/jiyou/css/css.css?v=4">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+        .close {
+            top: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+<!--遮罩层-->
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_five"></div>
+            <div class="object" id="object_six"></div>
+            <div class="object" id="object_seven"></div>
+            <div class="object" id="object_eight"></div>
+            <div class="object" id="object_big"></div>
+        </div>
+    </div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!--page 1-->
+        <div class="swiper-slide slider1" style="display: block">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/1.jpg" />
+            <button class="a pa"></button>
+            <button class="b pa"></button>
+            <!--弹框报名-->
+            <div class="bmk">
+                <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/1-1.png" alt="">
+                <i class="pa close" style="top: 2.5rem;"></i>
+                <p class="name pa">
+                    <input type="text" id="name">
+                </p>
+                <p class="tel pa">
+                    <input type="tel" id="tel" maxlength="11">
+                </p>
+                <p class="series pa">
+                    <select id="series">
+                        <option value="0">请选择车型</option>
+                    </select>
+                </p>
+                <p class="submit pa">
+                    <input type="button" id="submit">
+                </p>
+            </div>
+            <!--活动说明-->
+            <div class="activity">
+                <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/1-2.png" alt="">
+                <i class="pa close"></i>
+            </div>
+        </div>
+        <!--page 2-->
+        <div class="swiper-slide slider2">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2.jpg" />
+            <!--油桶列表-->
+            <div class="can pa">
+                <ul class="ton">
+                    <li><img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png" alt=""></li>
+                    <!--<li><PC src="PC/2-1.png" alt=""></li>-->
+                    <!--<li><PC src="PC/2-1.png" alt=""></li>-->
+                    <!--<li><PC src="PC/2-1.png" alt=""></li>-->
+                </ul>
+                <ul class="ncList">
+                    <li>
+                        <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-01.png" alt="">
+                        <p>邀请好友助您点亮下一桶机油</p>
+                    </li>
+                    <!--<li>-->
+                        <!--<PC src="PC/2-02.png" alt="">-->
+                        <!--<p><span class="nc">xxx</span>已为你点亮油桶</p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<PC src="PC/2-03.png" alt="">-->
+                        <!--<p><span class="nc">xxx</span>已为你点亮油桶</p>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<PC src="PC/2-04.png" alt="">-->
+                        <!--<p><span class="nc">xxx</span>已为你点亮油桶</p>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+            <!--弹出油桶点亮成功提示框-->
+            <div class="Success2">
+                <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-3.png" alt="">
+                <i class="pa close" style="top: 2.6rem;"></i>
+                <button class="tzEngine pa"></button>
+            </div>
+            <!--领取集油跳转框-->
+            <div class="getEngine" >
+                <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-4.png" alt="">
+                <i class="pa close" style="top: 2.6rem;"></i>
+                <!--验证码-->
+                <div class="code pa">000000</div>
+                <!--点我有惊喜按钮-->
+                <button class="surprised pa"></button>
+            </div>
+        </div>
+        <!--page 3-->
+        <div class="swiper-slide slider3">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/3-1.jpg" />
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/3-2.jpg" />
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/3-4.jpg" />
+            <!--九宫格抽奖-->
+            <div class="lucky pa">
+                <div class="cjwrap" id="cjWrap">
+                    <ul>
+                        <li class="jp jp0"></li>
+                        <li class="jp jp1"></li>
+                        <li class="jp jp2"></li>
+                        <li class="jp jp7"></li>
+                        <li class="btn" id="btn"></li>
+                        <li class="jp jp3"></li>
+                        <li class="jp jp6"></li>
+                        <li class="jp jp5"></li>
+                        <li class="jp jp4"></li>
+                    </ul>
+                </div>
+            </div>
+            <!--地图模块-->
+            <div class="mapS pa"></div>
+            <!--弹出奖品框-->
+            <div class="jpBlock">
+                <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/3-3.png" alt="">
+                <h1 class="title pa">恭喜你抽到<span></span></h1>
+                <!--验证码-->
+                <div class="code pa" style="margin-left: -3.68rem;">000000</div>
+                <i class="pa close" style="top: 2.6rem;"></i>
+            </div>
+        </div>
+        <!--page 4-->
+        <div class="swiper-slide slider4">
+            <!--活动结束界面-->
+            <img src="http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/over.png" />
+            <i class="pa close" style="top: 2.6rem;"></i>
+        </div>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script>document.write("<script type='text/javascript' src='http://guangzhou.auto.qq.com/2018web/jiyou/js/js.js?v=" + Date.now() + "'><\/script>");</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script>
+    //分享
+    var appId     = "{$data['appId']}";       //公众号的唯一标识
+    var timestamp = "{$data['timestamp']}";   //生成签名的时间戳
+    var nonceStr  = "{$data['nonceStr']}";    //生成签名的随机串
+    var signature = "{$data['signature']}";   //签名
+    wx.config({
+        debug: false,
+        appId: appId,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline',
+            'openLocation',
+        ]
+    });
+    var share_title = '点亮油桶';
+    var share_desc = '中致远奥迪世界杯购车嘉年华买车既享终生免费保养';
+    var share_image = 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/ss.jpg';
+    var share_link = 'http://www.yetcar.com/index.php?s=/Home/LightTank/index&link_openid='+"{$data['openid']}";
+    wx.ready(function () {
+        // 在这里调用 API
+        wx.onMenuShareAppMessage({
+            title: share_title, // 分享标题
+            desc: share_desc, // 分享描述
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: share_title, // 分享标题
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+    });
+    $(function () {
+        //获取集油 输出
+        var setword = {
+            hadWrod: [                                   //初始油桶图片
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png',
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-1.png',
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-1.png',
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-1.png',
+            ],
+            lImg: [
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-02.png',
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-03.png',
+                'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-04.png'
+            ],
+            //页面开始加载时获取
+            getDataHadWrod: function () {
+                $('.ton').html('');
+                //获取该用户已经有的油桶
+                $.ajax({
+                    type: "GET",
+                    url: "http://www.yetcar.com/index.php?s=/Home/LightTank/user_info",
+                    data: {
+                        openid: "{$data['openid']}"
+                    },
+                    async: true,
+                    dataType: 'jsonp',
+                    success: function (data) {
+                        //判断状态码
+                        if (data.status == 1) {
+                            //存储油箱验证码状态
+                            localStorage.yx=data.data.code_light;
+                            //判断是否报名
+                            if (data.data.is_sign==0) {
+                                $('.slider1 .a').click(function () {
+                                    $('.slider1 .bmk').fadeIn(300);
+                                });
+                            } else {
+                                $('.slider1 .a').click(function () {
+                                    $('.slider1').fadeOut(300).nextAll('.slider2').fadeIn(300);
+                                });
+                            }
+                            if (data.data.light=='1') {
+                                setword.hadWrod.splice(1, 1, 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png');
+                            }
+                            if (data.data.light=='2') {
+                                setword.hadWrod.splice(1, 2, 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png', 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png');
+                            }
+                            if (data.data.light=='3') {
+                                $('.slider2 .Success2').fadeIn(300);
+                                setword.hadWrod.splice(1, 3, 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png', 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png', 'http://mat1.gtimg.com/autoguangzhou/2018web/jiyou/img/2-2.png');
+                            }
+                            //修改图片数组 输出到页面
+                            for (var i = 0; i < setword.hadWrod.length; i++) {
+                                var li = '<li>' +
+                                    '<img src="'+setword.hadWrod[i]+'"/>' +
+                                    '</li>';
+                                $('.ton').append(li);
+                            }
+                            for (var i=0;i<data.data.share_data.length;i++){
+                                var li = '<li>' +
+                                    '<img src="'+setword.lImg[i]+'"/>' +
+                                    '<p><span class="nc">'+data.data.share_data[i].share_name+'</span>已为你点亮油桶</p>';
+                                '</li>';
+                                $('.ncList').append(li);
+                            }
+                        } else {
+                            alert('状态错误')
+                        }
+                    }
+                });
+            },
+        };
+        //页面加载调用
+        setword.getDataHadWrod();
+        //九宫格抽奖
+        var goodLuck = function(ID,prize,callback){
+            var resetIndex = 0; //每次开始抽奖都从位置0开始转
+            var prize = prize;  //奖品位置
+            var costTime = 40;  //每次运动花的时间
+            var rounds = 4;     //转多少圈才开始减速
+            var realRounds = 0; //实际的圈数，从0开始累加
+            var timer = null;   //初始计时器
+            var randomFrequency = 8*Math.round(Math.random()*1) + prize;  //随机转动8的倍数格数加奖品格数
+            var ele = $(ID);
+            function lucky(){
+                timer = setTimeout(function(){
+                    //判断运动和重置位置
+                    switch (resetIndex){
+                        case 0:
+                            ele.find('.jp7').removeClass('active');
+                            ele.find('.jp'+resetIndex).addClass('active');
+                            resetIndex++;
+                            break;
+                        case 7:
+                            ele.find('.jp6').removeClass('active');
+                            ele.find('.jp'+resetIndex).addClass('active');
+                            //到7重置位置
+                            resetIndex=-1;
+                            resetIndex++;
+                            //转到7加一圈
+                            realRounds++;
+                            break;
+                        default:
+                            ele.find('.jp'+(resetIndex-1)).removeClass('active');
+                            ele.find('.jp'+resetIndex).addClass('active');
+                            resetIndex++;
+                            break;
+                    }
+                    //判断圈数和开始减速
+                    if(realRounds>rounds){
+                        costTime += 40;
+                        if(randomFrequency==0){
+                            clearTimeout(timer);
+                            setTimeout(function(){
+                                callback&&callback();
+                            },costTime+100);
+                            return false;
+                        }else{
+                            randomFrequency--;
+                        }
+                    }
+                    //每次计时器开始  函数自调用一次
+                    lucky(ID,prize);
+                },costTime)
+            }
+            return {
+                lucky:lucky
+            }
+        };
+        //抽奖点击按钮
+        $('#btn').one('click',function() {
+            $.ajax({
+                type:"get",
+                url:"http://www.yetcar.com/index.php?s=/Home/LightTank/luck",
+                data: {
+                    openid: "{$data['openid']}"
+                },
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    var prizeID = data.data.gift_id-55;
+                    if(data.status==1){
+                        goodLuck($('#cjWrap'), prizeID,function(){
+                            $('.slider3 .jpBlock').fadeIn(300).find('span').text(data.data.gift_name);
+                            $('#cjWrap').find('li').removeClass('active');
+                            $('.slider3 .code').text(data.data.code_lottery)
+                        }).lucky();
+                    } else if(data.status==2){
+                        goodLuck($('#cjWrap'), prizeID,function(){
+                            alert('很遗憾，您没有抽中奖品，感谢您的参与！');
+                            $('#cjWrap').find('li').removeClass('active');
+                        }).lucky();
+                    } else if(data.status==3){
+                        $('.slider4').fadeIn(300);
+                    } else if(data.status==4){
+                        if(data.data.code_lottery==null || data.data.code_lottery==''){
+                            alert('该账号已抽过奖');
+                        } else {
+                            $('.slider3 .jpBlock').fadeIn(300).find('span').text(data.data.gift_name);
+                            $('.slider3 .code').text(data.data.code_lottery);
+                        }
+                    }
+                },
+            })
+        });
+    })
+</script>
+</body>
+</html>

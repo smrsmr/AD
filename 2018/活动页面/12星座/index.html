@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="full-screen" content="true"/>
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="x5-page-mode" content="app"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/><!-- 删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/><!-- 设置苹果工具栏颜色 -->
+  <title>第二代Mazda CX-5星生活之旅</title>
+  <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+  <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+  <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+  <script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+  <style>
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {
+      display: none;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body, h1, h2, h3, h4, h5, div, span, p, ul, ol, dl, dt, dd, a, input, img, select {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border: 0;
+      font-weight: normal;
+      outline: none;
+    }
+
+    .main {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      max-width: 750px;
+      background-color: #000000;
+      overflow: hidden;
+    }
+
+    .main > div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fefefe;
+      z-index: 2;
+    }
+
+    .main img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    .main img:nth-child(2) {
+      top: 20%;
+    }
+    .main img:nth-child(3) {
+      top: 68%;
+    }
+
+    .main .video {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    @-webkit-keyframes btnswing {
+      20% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+      }
+
+      40% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+      }
+
+      60% {
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+      }
+
+      80% {
+        -webkit-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+    }
+
+    @keyframes btnswing {
+      20% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+      }
+
+      40% {
+        -webkit-transform: rotate(-3deg);
+        transform: rotate(-3deg);
+      }
+
+      60% {
+        -webkit-transform: rotate(1deg);
+        transform: rotate(1deg);
+      }
+
+      80% {
+        -webkit-transform: rotate(-1deg);
+        transform: rotate(-1deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+    }
+
+    .swing1 {
+      -webkit-transform-origin: bottom center;
+      transform-origin: bottom center;
+      -webkit-animation-name: btnswing;
+      animation-name: btnswing;
+    }
+
+    .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    .animated.infinite {
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="main">
+
+  <div id="bg">
+    <img class="btn" src="http://mat1.gtimg.com/autoguangzhou/gif/mzd.gif" alt="">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/194/109/210/13683239.png" alt="">
+    <img class="btn animated infinite swing1"
+         src="http://img1.gtimg.com/autodongguan/pics/hv1/43/109/210/13683088.png" alt="">
+
+  </div>
+
+  <video id="video1" class="video"  src="https://bbsphoto.gdtengnan.com/zhengwu/20180928_H5.mp4"></video>
+
+  <video id="video2" class="video"  src=""></video>
+
+  <video id="video3" class="video"  src=""></video>
+
+  <video id="video4" class="video"  src=""></video>
+
+  <video id="video5" class="video"  src=""></video>
+
+  <video id="video6" class="video"  src=""></video>
+
+  <video id="video7" class="video"  src=""></video>
+
+  <video id="video8" class="video"  src=""></video>
+
+</div>
+
+</body>
+
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+
+
+        var u = navigator.userAgent, app = navigator.appVersion,
+            $btn = $('.btn'),
+            $video1 = $('#video1');
+
+        if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+            $('.video').attr({
+                "x-webkit-airplay": "true",
+                "webkit-playsinline": "true",
+                "playsinline": "",
+                "x5-video-player-type": "h5",
+                "x5-video-player-fullscreen": "true",
+                "poster": "",
+                "controls":""
+            });
+        }
+        /*$('.video').attr({
+            "x-webkit-airplay": "true",
+            "webkit-playsinline": "true",
+            "playsinline": "",
+            "x5-video-player-type": "h5",
+            "x5-video-player-fullscreen": "true",
+            "poster": "",
+            "controls":""
+        });*/
+
+        $video1[0].load();
+
+        //事件绑定
+        $btn.on('click', function () {
+            $('#bg').hide();
+            $video1.show();
+            $video1[0].play();
+        });
+
+        /*$('.video').each(function (index, elem) {
+            var _index = parseInt(index + 1),
+                $elem = $(elem),
+                $nextVideo = $('#video' + (_index + 1));
+
+            $elem.on('canplaythrough', function () {
+                $nextVideo[0].src = 'https://bbsphoto.gdtengnan.com/zhengwu/cx5_' + (_index + 1) + '.mp4';
+                $nextVideo[0].load();
+            });
+
+            $elem.on('ended', function () {
+                $elem.hide();
+                $nextVideo[0].play();
+                $nextVideo.show();
+            });
+        });
+*/
+
+    })
+</script>
+
+<!--微信分享 开始-->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    //微信分享标题
+    var shareTitle = '第二代Mazda CX-5星生活之旅';
+    //微信分享简介
+    var descContent = '12星座,请开始你们的表演';
+    //朋友圈转发标题
+    var shareTimeLineTitle = '第二代Mazda CX-5星生活之旅';
+
+    //分享小图(120x120)
+    var imgUrl = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/10/109/210/13683055.jpg';
+
+    //分享地址(默认为当前地址)
+    var lineLink = window.location.href;
+    var appid = '';
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function (res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTimeLineTitle
+        }, function (res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": descContent,
+            "url": lineLink,
+        }, function (res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            shareWeibo();
+        });
+    }, false);
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <form id="formID" method="post" enctype="#" action="#">
+            <input type="text" name="name" value="213">
+            <input type="text"  name="sex" value="123">
+            <input type="text"  name="tdd" value="12">
+
+            <button id="btnSub"> 提交</button>
+    </form>
+    <script>
+        $('#btnSub').click(function () {
+            //var formData1 = new FormData($('#formID')[0]);
+            var formData=$("form").serialize().split("&");
+            var arr1=[];
+            for (var i = 0; i < formData.length; i++) {
+                var obj1={};
+                obj1[formData[i].substring(0,formData[i].indexOf("="))]=formData[i].substring(formData[i].indexOf("=")+1,formData[i].length);
+                arr1.push(obj1)
+            }
+            console.log(arr1)
+            return false
+            /*$.ajax({
+                type : "post",
+                url : URL,
+                data : formData,
+                contentType : false,// 告诉jQuery不要去设置Content-Type请求头
+                processData: false,// 告诉jQuery不要去处理发送的数据
+                success : function(data) {
+                    console.log(data.msg);
+                },
+                error : function() {
+                    alert("提交异常");
+                }
+            })*/
+        });
+
+        /*var str='哈哈::你;;那你::吗;;就个::有';
+        var sttr=str.split(';;'); //["哈哈::你", "那你::吗", "就个::有"]
+        var arr=[];
+        for(var i=0;i<sttr.length;i++){
+            var obj={};
+            obj[sttr[i].substring(0,sttr[i].indexOf("::"))]=sttr[i].substring(sttr[i].indexOf("::")+2,sttr[i].length);
+            console.log(obj)
+            arr.push(obj)
+        }
+        for(var j=0;j<arr.length;j++){
+            for(var key in arr[j]){
+                //if(arr.hasOwnProperty(key))
+                console.log(key+'='+arr[j][key]);        //键名
+            }
+        }*/
+        var str= ["大小::小;;轻重::轻", "大小::小", "大小::中;;轻重::轻"]
+        var arr=[],arrs=[];
+        for (var k=0;k<str.length;k++){
+            var sttr=str[k].split(';;');
+            arr.push(sttr)
+        }
+        for(var i=0;i<arr.length;i++){
+            for (var j=0;j<arr[i].length;j++){
+                var obj={};
+                obj[arr[i][j].substring(0,arr[i][j].indexOf("::"))]=arr[i][j].substring(arr[i][j].indexOf("::")+2,arr[i][j].length);
+                arrs.push(obj)
+            }
+        }
+        console.log(arrs)
+        var o=0,l=1;
+        /*for(var t=0;t<str.length;t++){
+            Object.assign(arrs[o++],arrs[o++],arrs[o++]);
+        }
+        for(var p=0;p<str.length;p++){
+            arrs.splice(l,2);
+            l++
+        }*/
+        //console.log(arrs)
+        //////////////////////////////////////
+        /*var arrss=[]
+        for (var t=0;t<arrs.length;t++){
+            var objKey = ['size','weight','length'];
+            var values = [];
+            var data = {};
+            for(var i in arrs[t]){
+                values.push(arrs[t][i])
+            }
+            for(var p=0;p<values.length;p++){
+                data[objKey[p]] = values[p]
+            }
+           arrss.push(data)
+        }
+        console.log(arrss)*/
+        //////////////////////////////////////////
+        var arr = ['大小::小;;轻重::轻', '大小::大;;轻重::轻', '大小::中;;轻重::轻']
+
+        function transform(arr) {
+            return arr.map(item => {
+                const arrIndex = item.split(';;')
+                return {
+                    one: arrIndex[0].split('::')[1],
+                    two: arrIndex[1].split('::')[1]
+                }
+            })
+        }
+
+        console.log(transform(arr));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+<!--2018年-12月-18号 星期二 16:53:03 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>奕泽 IZOA</title>
+		<link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+		<link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<style>
+			.main {
+				max-width: 1900px;
+				margin: 0 auto;
+			}
+			.cn {position: relative;}
+			.cn1 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/147/108/211/13747962.jpg') top center no-repeat;
+				height: 787px;
+			}
+			.cn2 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/149/108/211/13747964.jpg') top center no-repeat;
+				height: 421px;
+			}
+			.cn3 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/150/108/211/13747965.jpg') top center no-repeat;
+				height: 530px;
+			}
+			.cn4 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/151/108/211/13747966.jpg') top center no-repeat;
+				height: 679px;
+			}
+			.cn5 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/152/108/211/13747967.jpg') top center no-repeat;
+				height: 833px;
+			}
+			.cn6 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/153/108/211/13747968.jpg') top center no-repeat;
+				height: 843px;
+			}
+			.cn7 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/154/108/211/13747969.jpg') top center no-repeat;
+				height: 769px;
+			}
+			.cn8 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/155/108/211/13747970.jpg') top center no-repeat;
+				height: 388px;
+			}
+			.cn9 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/156/108/211/13747971.jpg') top center no-repeat;
+				height: 1150px;
+			}
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 69px;
+				width: 600px;
+				height: 458px;
+				margin-left: -290px;
+			}
+			.bmk p input,.bmk p select {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				width: 100%;
+				height: 100%;
+				font-size: 20px;
+				background: transparent;
+				padding-left: 66px;
+				color: #868686;
+			}
+			.bmk p {
+				width: 513px;
+    		height: 44px;
+				margin-bottom: 20px;
+			}
+			.bmk .select {
+				width: 579px;
+			}
+			.bmk .submit {
+				width: 327px;
+				height: 43px;
+				margin-left: 116px;
+				margin-top: 68px;
+			}
+			.bmk #submit {
+				cursor: pointer;
+				padding-left: 0;
+			}
+			.privacyPolicy {
+				position: absolute;
+				left: 0;
+				top: 316px;
+			}
+			.privacyPolicy input{width:18px !important;height:18px !important}
+			.privacyPolicy span{display:inline-block;font-size:18px;color:#fff;position: relative;top: -2px;}
+			.privacyPolicy a{color:#fff}
+			.video {
+				position: absolute;
+				left: 50%;
+				top: 108px;
+				width: 1200px;
+				height: 521px;
+				margin-left: -601px;
+			}
+			.video video {
+				width: 100%;
+				height: 100%;
+			}
+			.swiper {
+				position: absolute;
+				left: 50%;
+				top: 60px;
+				width: 1200px;
+				height: 650px;
+				margin-left: -600px;
+			}
+			.swiper .swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			.swiper .swiper-slide{background-size: cover;background-repeat: no-repeat;width: 100%;}
+			.swiper-pagination-bullet {
+				width: 75px;
+				height: 10px;
+				display: inline-block;
+				border-radius: 0;
+				background: #fff;
+				opacity: 1;
+			}
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+				background: #b70208;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="cn cn1"></div>
+			<div class="cn cn2"></div>
+			<div class="cn cn3">
+				<div class="bmk">
+					<p class="name">
+						<input type="text" id="name" placeholder="请输入姓名">
+					</p>
+					<p class="tel">
+						<input type="tel" id="tel" placeholder="请输入电话" maxlength="11">
+					</p>
+					<p class="prov select">
+						<select id="prov">
+							<option value="广东省">广东省</option>
+						</select>
+					</p>
+					<p class="city select">
+						<select id="city">
+							<option value="0">请选择城市</option>
+						</select>
+					</p>
+					<p class="series select">
+						<select id="series">
+							<option value="0">请选择意向车型</option>
+							<option value="45">荣放RAV4</option>
+							<option value="1203">奕泽IZOA</option>
+						</select>
+					</p>
+					<p class="submit">
+						<input type="button" id="submit">
+					</p>
+					<div class="privacyPolicy">
+						<input type="checkbox" checked>
+						<span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span> 
+					</div>
+				</div>
+			</div>
+			<div class="cn cn4">
+				<div class="video">
+					<video src="http://mat1.gtimg.com/autoguangzhou/video/rf181218.mp4" controls></video>
+				</div>
+			</div>
+			<div class="cn cn5"></div>
+			<div class="cn cn6"></div>
+			<div class="cn cn7"></div>
+			<div class="cn cn8"></div>
+			<div class="cn cn9">
+				<div class="swiper">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/54/109/211/13748124.jpg);background-repeat: no-repeat;background-size: 100%;"></div>
+							<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/55/109/211/13748125.jpg);background-repeat: no-repeat;background-size: 100%;"></div>
+							<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/56/109/211/13748126.jpg);background-repeat: no-repeat;background-size: 100%;"></div>
+							<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/57/109/211/13748127.jpg);background-repeat: no-repeat;background-size: 100%;"></div>
+							<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/58/109/211/13748128.jpg);background-repeat: no-repeat;background-size: 100%;"></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="base">
+			<!--底部 开始-->
+			<div class="foot" id="footer" bossZone="footer">
+				<div class="footernew" role="contentinfo" style="height:124px;">
+					<a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml"
+					 target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a>
+					| <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/"
+					 target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a>
+					| <a href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a href="http://hr.tencent.com/"
+					 target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a>
+					| <a href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/" target="_blank"
+					 rel="nofollow">网站导航</a>
+					| <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm"
+					 target="_blank" rel="nofollow">版权所有</a><br>
+					<a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+					 target="_blank" rel="nofollow">深圳公安局</a> | <a href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a>
+					| <a class="lchot" href="http://www.gdis.cn/admin/newstext_netsun.asp" target="_blank" rel="nofollow" style="color: #bd0a01;">阳光·绿色网络工程</a>
+					| <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a href="http://www.gdca.gov.cn/"
+					 target="_blank" rel="nofollow">广东省通管局</a><br>
+					<span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a>
+						<a href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a href="http://www.qq.com/cbst.shtml"
+						 target="_blank" rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+						 rel="nofollow">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+					</span><br>
+					<a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a href="http://www.qq.com/xwdz.shtml"
+					 target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+					违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备
+							44030002000001号</span><img style="vertical-align: text-bottom;" } src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png"
+						 width="16" height="16"></a><br>
+					<span style="font-family:Arial;">Copyright 1998 - 2017 Tencent. All Rights Reserved</span>
+				</div>
+			</div>
+			<div class="footernew footheight" style="width:1000px;" bossZone="footer">
+				<div style="width:680px;">
+					<p>
+						<span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank" rel="nofollow"><img
+								 width="35" height="43" border="0" alt="经营性网站备案信息" src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+						<span class="fr"><a target="_blank" class="lcblack" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+							 target="_blank" rel="nofollow">经营性网站<br>
+								备案信息</a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img width="44"
+								 height="44" border="0" alt="中国互联网举报中心" src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank" rel="nofollow">中国互联网<br>
+								举报中心</a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img width="44"
+								 height="42" border="0" alt="中国文明网传播文明" src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank" rel="nofollow">中国文明网<br>传播文明</a></span>
+					</p>
+					<p style="width:128px;height:52px;border:0;">
+						<span style="padding:0;" class="fl"><a href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337"
+							 target="_blank" rel="nofollow"><img border="0" alt="诚信网站" src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+					</p>
+					<p>
+						<span style="width:44px;" class="fl"><a href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+							 target="_blank" rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg" title="深圳市市场监督管理局企业主体身份公示"
+								 alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+						<span style="width:64px;" class="fr"><a class="lcblack" href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+							 target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+					</p>
+				</div>
+			</div>
+			<a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+			 bossZone="fankui"></a>
+			<a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none" bossZone="defaulthome"></a>
+			<a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+			<a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+			 style="display:none" bossZone="minidown"></a>
+			<!--e6dcd797284a2fe7c374538dde98ca6b-->
+			<!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+			<!--底部 结束-->
+		</div>
+	</body>
+	<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+	<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+	<script>
+		var des = [
+			{ "city": "广州", "code": "41821", "tel": "020-66612345/38909632", "name": "广州广保", "Qcname": "广州广保丰田汽车销售服务有限公司", "area": "天河区", "address": "广州市天河区石牌黄埔大道西483号" },
+			{ "city": "广州", "code": "41822", "tel": "020-87054114", "name": "广州沙河", "Qcname": "广州沙河丰田汽车销售服务有限公司", "area": "天河区", "address": "广东省广州市天河区广州大道北991号" },
+			{ "city": "广州", "code": "41823", "tel": "020-82494855", "name": "广州骏佳广保", "Qcname": "广州骏佳广保丰田汽车销售服务有限公司", "area": "萝岗区", "address": "广州市萝岗源祥路96号（万科东荟城西门对面）" },
+			{ "city": "广州", "code": "41824", "tel": "020-34800888", "name": "广州迎宾", "Qcname": "广州迎宾丰田汽车销售服务有限公司", "area": "番禺区", "address": "广州市番禺区市桥迎宾路朱坑段" },
+			{ "city": "广州", "code": "41825", "tel": "020-84296351", "name": "广州华通", "Qcname": "广州华通丰田汽车服务有限公司", "area": "海珠区", "address": "广州市海珠区广州大道南1601-1603号（洋湾岛内）" },
+			{ "city": "广州", "code": "41829", "tel": "020-86298288", "name": "广州顺协", "Qcname": "广州市顺协丰田汽车销售服务有限公司", "area": "白云区", "address": "广州市白云区黄石路段马务新街2号" },
+			{ "city": "广州", "code": "4182D", "tel": "020-28615888", "name": "广州南菱", "Qcname": "广州南菱丰田汽车销售服务有限公司", "area": "花都区", "address": "广州市花都区建设北路南菱汽车城旁" },
+			{ "city": "广州", "code": "4182B", "tel": "020-82169276", "name": "广州新钜", "Qcname": "广州新钜丰田汽车销售服务有限公司", "area": "天河区", "address": "广州市天河区广园东快速路黄村立交东北侧（珠吉路11A出口进入）禾镰贝路" },
+			{ "city": "广州", "code": "41827", "tel": "020-87026378", "name": "广州宗远", "Qcname": "广州宗远丰田汽车销售服务有限公司", "area": "天河区", "address": "广州市天河区广汕二路231号（龙洞柯木塱路段)" },
+			{ "city": "广州", "code": "41826", "tel": "020-86023995", "name": "广州庆丰", "Qcname": "广州庆丰丰田汽车销售服务有限公司", "area": "白云区", "address": "广州市白云区石井石丰路3号(增槎路广清高速庆丰收费站旁)" },
+			{ "city": "广州", "code": "4182F", "tel": "020-86059119", "name": "广州骏辉", "Qcname": "广州骏辉丰田汽车销售服务有限公司", "area": "白云区", "address": "广州市白云大道北1383号" },
+			{ "city": "广州", "code": "4182E", "tel": "020-82574105", "name": "广州广博", "Qcname": "广州广博丰田汽车销售服务有限公司", "area": "天河区", "address": "广州市天河区汇彩路8号" },
+			{ "city": "广州", "code": "418D1", "tel": "020-82980000", "name": "广州中升", "Qcname": "广州中升丰田汽车销售服务有限公司", "area": "增城区", "address": "广州市增城区新塘镇凤凰北路 127号" },
+			{ "city": "广州", "code": "4182G", "tel": "020-34891888", "name": "广州永佳", "Qcname": "广州永佳丰田汽车销售服务有限公司", "area": "番禺区", "address": "广州市番禺区大石迎宾路634号" },
+			{ "city": "广州", "code": "418D2", "tel": "020-32831111", "name": "广州兆方", "Qcname": "广州兆方丰田汽车销售服务有限公司", "area": "增城区", "address": "广州市增城区荔城街增城大道305号" },
+			{ "city": "广州", "code": "4182N", "tel": "020-86153888", "name": "广州芳村永佳", "Qcname": "广州芳村永佳丰田汽车销售服务有限公司", "area": "荔湾区", "address": "广州市荔湾区龙溪大道490号芳村永佳丰田" },
+			{ "city": "深圳", "code": "41812", "tel": "0755-82122933/82441880", "name": "深圳大升", "Qcname": "深圳大升汽车销售服务有限公司", "area": "龙岗区", "address": "罗湖区泥岗东路1155号（梅园仓库9号楼）" },
+			{ "city": "深圳", "code": "41813", "tel": "0755-82439998", "name": "深圳华日", "Qcname": "深圳市华日丰田汽车销售服务有限公司", "area": "罗湖区", "address": "深圳市罗湖区泥岗西路1006号华日汽车大厦" },
+			{ "city": "深圳", "code": "41814", "tel": "0755-26710818", "name": "深圳深业", "Qcname": "深圳市深业丰田汽车销售服务有限公司", "area": "南山区", "address": "深圳市南山区南头街道宝安大道北双界河以东嘉进隆前海汽车城E区02A栋" },
+			{ "city": "深圳", "code": "41818", "tel": "0755-82899855", "name": "深圳骏爵", "Qcname": "深圳骏爵丰田汽车销售服务有限公司", "area": "福田区", "address": "深圳市福田区红荔西路联合华鹏汽车交易广场B3-1B号" },
+			{ "city": "深圳", "code": "41815", "tel": "0755-28681999", "name": "深圳都通", "Qcname": "深圳市都通丰田汽车销售服务有限公司", "area": "龙岗区", "address": "深圳市龙岗区横岗荷坳长江埔路68号（龙岗大道荷坳路口转入横岗法庭方向，直行500米）" },
+			{ "city": "深圳", "code": "41819", "tel": "0755-26465666/26465999", "name": "深圳中升民康", "Qcname": "深圳中升民康丰田汽车销售服务有限公司", "area": "龙华区", "address": "深圳市龙华新区民康路1号易达一汽丰田" },
+			{ "city": "深圳", "code": "4181A", "tel": "0755-27346888/27346318", "name": "深圳中升", "Qcname": "深圳中升丰田汽车服务有限公司", "area": "宝安区", "address": "深圳市宝安区前进二路宝田工业区" },
+			{ "city": "深圳", "code": "41817", "tel": "0755-89913000", "name": "深圳红彤", "Qcname": "深圳市红彤丰田汽车销售服务有限公司", "area": "龙岗区", "address": "深圳市龙岗区龙平西路14号(回龙埔)" },
+			{ "city": "深圳", "code": "4181B", "tel": "0755-27798080", "name": "深圳宝安大兴", "Qcname": "深圳宝安大兴丰田汽车销售服务有限公司", "area": "宝安区", "address": "深圳市宝安区97区西乡大道西312号沿江高速西乡出口" },
+			{ "city": "深圳", "code": "4181E", "tel": "0755-28011918/28019988", "name": "深圳大兴观澜", "Qcname": "深圳市大兴观澜丰田汽车销售服务有限公司", "area": "龙华区", "address": "深圳市龙华区观澜街道田背路口（观澜大道与环观南路交汇处）" },
+			{ "city": "深圳", "code": "4181D", "tel": "0755-28122220/28159898", "name": "深圳深业隆华", "Qcname": "深圳市深业隆华丰田汽车销售服务有限公司", "area": "龙华区", "address": "深圳市龙华区龙华街道和平路28号" },
+			{ "city": "深圳", "code": "4181C", "tel": "0755-27279999", "name": "深圳中升迎宾", "Qcname": "深圳中升迎宾丰田汽车销售服务有限公司", "area": "宝安区", "address": "深圳市宝安区沙井中心路14号 " },
+			{ "city": "深圳", "code": "4181F", "tel": "0755-29072888", "name": "深圳兴业", "Qcname": "深圳市兴业丰田汽车销售服务有限公司", "area": "宝安区", "address": "深圳市宝安区沙井镇新桥107国道东侧" },
+			{ "city": "深圳", "code": "4181G", "tel": "0755-27127777", "name": "深圳光明丰田", "Qcname": "深圳市光明新区光明丰田汽车销售服务有限公司", "area": "光明新区", "address": "深圳市光明新区公明松白路705号松明工业区内（旧马田收费站旁）" },
+		]
+	</script>
+	<script>
+		for (var i = 0; i < des.length; i++) {
+			if ($('#city').html().indexOf(des[i].city) < 0) {
+				$('#city').append('<option value=' + des[i].city + '>' + des[i].city + '</option>')
+			}
+		}
+		var swiper = new Swiper('.swiper-container', {
+			autoplay: {
+				delay: 6000,
+				disableOnInteraction: false
+			},
+			loop: true,
+			initialSlide: 0,
+			effect: 'coverflow',
+			slidesPerView: 1.2,
+			centeredSlides: true,
+			coverflowEffect: {
+				rotate: 1,
+				stretch: 0,
+				depth: 2400,
+				modifier: 0.1,
+				slideShadows: true
+			},
+			pagination :{
+				el: '.swiper-pagination',
+				clickable :true
+			}
+		});
+		// 报名
+		var flag = true;
+		$("#submit").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //姓名
+					tel = $("#tel").val(), //电话
+					series_id = $('#series').val(),  //车型
+					city = $('#city').val(),
+					brand_id = 10, //品牌id
+					act_id = 3408,  //活动id
+					Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+					Data = {
+						name: name,
+						phone: tel,
+						series_id: series_id,
+						brand_id: brand_id,
+						act_id: act_id,
+					};
+				//判断填写是否正确
+				if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|14[57]|15[0-9]|16[0-9]|17[0-9]|18[0-9]|19[0-9])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (city === '0') {
+					alert('请选择城市');
+					return false;
+				}
+				if (series_id === '0') {
+					alert('请选择车型');
+					return false;
+				}
+				if (!($("input[type='checkbox']").prop('checked'))) {
+					alert('请同意《隐私政策》');
+					return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type: "post",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					success: function (data) {
+						if (data.status == 1) {
+							alert('恭喜你，报名成功！');
+							window.location.href = location.href;
+						} else {
+							flag = true;
+							alert("很抱歉，你报名失败。");
+						}
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		})
+	</script>
+
+</html>

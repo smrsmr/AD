@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <title></title>
+        <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    </head>
+
+    <body>
+        <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+        <script>
+            $(function () {
+                //可固定ip 也可留空
+                var ip = "";
+                $.ajax({
+                    url: "http://api.map.baidu.com/location/ip?ip=" + ip + "&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA&coor=bd09ll",
+                    type: "POST",
+                    dataType: "jsonp",
+                    success: function (data) {
+                        if (data.status == 0) {
+                            //console.log(data.content.address_detail)
+                            var IPprov = data.content.address_detail.province;
+                            var IPcity = data.content.address_detail.city;
+                            //alert(IPcity);
+                            var arr = ["广州市", "深圳市", "佛山市", "东莞市", "珠海市", "北京市", "重庆市", "无锡市", "沈阳市", "平顶山", "扬州市", "镇江市", "郑州市", "长春市", "珠海市", "太原市", "成都市", "南京市"];
+                            var maps = [
+                                //城市和对应的链接
+                                { city: "广州市", page: "http://guangzhou.auto.qq.com/zt2018/aio_jump/gz11zt.htm" },
+                                { city: "深圳市", page: "http://shenzhen.auto.qq.com/zt2018/dptjjj/index.htm" },
+                                { city: "佛山市", page: "http://foshan.auto.qq.com/zt2018/fs07PC/1105.htm" },
+                                { city: "东莞市", page: "http://dongguan.auto.qq.com/zhuanti/DG11yue1.htm" },
+                                { city: "珠海市", page: "http://zhuhai.auto.qq.com/zt2018/zhAIO/index.htm" },
+                                { city: "北京市", page: "http://beijing.auto.qq.com/zt2018/11yue/index.htm" },
+                                { city: "重庆市", page: "http://chongqing.auto.qq.com/zt2018/AIO9/index.htm" },
+                                { city: "无锡市", page: "http://wuxi.auto.qq.com/zhuanti/syytg.htm" },
+                                { city: "沈阳市", page: "http://shenyang.auto.qq.com/zt2018/syztaio111/index.htm" },
+                                { city: "平顶山", page: "http://pingdingshan.auto.qq.com/zt2018/11/index.htm" },
+                                { city: "扬州市", page: "http://yangzhou.auto.qq.com/zt2018/AIO1/index.htm" },
+                                { city: "镇江市", page: "http://zhenjiang.auto.qq.com/zt2018/AIOshiyiyue/index.htm" },
+                                { city: "郑州市", page: "http://zhengzhou.auto.qq.com/zt2018/zz1031/index.htm" },
+                                { city: "长春市", page: "http://changchun.auto.qq.com/zt2018/AIO02/index.htm" },
+                                { city: "珠海市", page: "http://zhuhai.auto.qq.com/zt2018/zhAIO/zh1101.htm" },
+                                { city: "太原市", page: "http://taiyuan.auto.qq.com/zt2018/201811aio/index.htm" },
+                                { city: "成都市", page: "http://chengdu.auto.qq.com/zt2018/yearend/KB5.htm" },
+                                { city: "南京市", page: "http://nanjing.auto.qq.com/zt2018/nj11zt/zt.htm" },
+                            ];      
+                            if (IPprov === "辽宁省") {
+                                window.location.href = "http://shenyang.auto.qq.com/zt2018/syztaio111/index.htm";
+                                return false;
+                            }
+                            else if (arr.indexOf(IPcity) >= 0) {
+                                window.location.href = maps[arr.indexOf(IPcity)].page;
+                                return false;
+                            }
+                            else if (arr.indexOf(IPcity) < 0) {
+                                window.location.href = "http://guangzhou.auto.qq.com/zt2018/aio_jump/d11aio.htm";
+                                return false;
+                            }
+                        } else {
+                            alert('error')
+                        }
+                    }
+                });
+            })
+        </script>
+    </body>
+
+</html>

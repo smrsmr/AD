@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Template</title>
+    <style>
+        table,
+        table textarea {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form autocomplete="on" method="post" id="uploadForm" enctype="multipart/form-data">
+        <table>
+            <tr><td width="120">请求地址</td><td><textarea id="url">http://192.168.2.202/choujiang/admin.php?s=/HHOA/enroll</textarea></td></tr>
+            <tr><td width="120">朋友圈点赞</td><td><input type="file" name="moments"/></td></tr>
+            <tr><td width="120">发群截图三张</td><td><input type="file" multiple="multiple" name="groupChat[]"/></td></tr>
+            <tr><td width="120">车主朋友圈点赞</td><td><input type="file" name="carOwnerMoments"/></td></tr>
+            <tr><td width="120">手机号</td><td><input type="number" name="phone" value="13345678900"/></td></tr>
+            <tr><td width="120">姓名</td><td><input type="text" name="name" value="车主姓名"/></td></tr>
+            <tr><td width="120"></td><td><button type="button" id="sub">提交</button></td></tr>
+        </table>
+    </form>
+    <div id="content"></div>
+<script>
+document.getElementById("sub").onclick = loadXMLDoc;
+function loadXMLDoc() {
+    var content = document.getElementById("content");
+    var url = document.getElementById("url").value;
+    var data = new FormData(document.getElementById("uploadForm"));
+    var xmlhttp;
+    content.innerHTML = "提交中。。。";
+    xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+            content.innerHTML = url + "<br>"+ unicode2Chr(xmlhttp.responseText);
+        }
+    }
+    xmlhttp.open("POST",url,true);
+    // xmlhttp.setRequestHeader("Content-type","multipart/form-data");
+    xmlhttp.send(data);
+    return false;
+}
+function unicode2Chr(str) {
+    return unescape(str.replace(/\\\\/g, "%"))
+}
+</script>
+</body>
+</html>

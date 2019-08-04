@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>传祺GS4</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+    <script src="http://123.207.87.32/act/chuanqigs4/js/dealer.js" type="text/javascript" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA"></script>
+    <style>
+        .main{max-width:750px;margin:0 auto}
+        .pr{position:relative}
+        .pa{position:absolute;left:50%}
+        .bmk{top:8rem;width:24rem;margin-left:-12rem;height:27rem}
+        .bmk input,.bmk select{width:100%;height:100%;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:transparent;font-size:1.2rem;padding-left:1rem}
+        .bmk p{width:23rem;height:3.3rem;margin-left:0}
+        .bmk .tel{margin-top:0.89rem}
+        .bmk .series{margin-top:0.8rem;width:24rem}
+        .bmk .line p{display:inline-block}
+        .bmk .line .prov{width:11.8rem;margin-top:0.8rem}
+        .bmk .line .city{width:11.2rem;margin-left:0.3rem}
+        .bmk .dealer{margin-top:0.8rem;width:24rem}
+        .bmk .submit{margin-top:3.2rem;width:24rem}
+        .privacyPolicy input{position:absolute;left:2rem;top:29rem;width:18px !important;height:18px !important}
+        .privacyPolicy span{display:inline-block;position:absolute;left:3.8rem;top:28.9rem;font-size:16px;color:#000}
+        .privacyPolicy a{color:#000}
+        .cn3 .dor{top:7.5rem;width:23.5rem;height:2.5rem;margin-left:-11.85rem}
+        .cn3 .dor li{float:left;line-height:2.5rem;width:7.8rem;text-align:center;font-weight:bold}
+        .cn3 .dor li.active{background:url("http://img1.gtimg.com/autoguangzhou/pics/hv1/222/70/209/13608297.png") center no-repeat;width:7.8rem;height:2.3rem;background-size:100% 100%;color:white}
+        .cn3 .che{top:10.45rem;width:23.5rem;height:15.9rem;margin-left:-11.85rem}
+        .swiper-container{width:100%;height:100%}
+        .cn4 .lbImg{top:6.45rem;width:23.5rem;height:16rem;margin-left:-11.85rem}
+        .cn4 .swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#00a0e9;opacity:1}
+        .cn4 .swiper-pagination-bullet-active{width:20px !important;border-radius:20px}
+        .cn4 .guanwang {top: 26.9rem;width: 26rem;margin-left: -13rem;height: 3rem;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/244/92/210/13678954.png" id="change_img"></div>
+    <div class="cn2 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/219/70/209/13608294.png" alt="">
+        <div class="bmk pa">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机">
+            </p>
+            <p class="series">
+                <select name="series" id="series">
+                    <option value="0">意向车型</option>
+                    <option value="177">传祺GS4</option>
+                    <option value="583">传祺GS3</option>
+                    <option value="518">传祺GS7</option>
+                    <option value="316">传祺GS8</option>
+                    <option value="806">传祺GA4</option>
+                    <option value="103">传祺GA6</option>
+                    <option value="180">传祺GA8</option>
+                    <option value="804">传祺GM8</option>
+                </select>
+            </p>
+            <div class="line">
+                <p class="prov">
+                    <select id="prov">
+                        <option value="0">省份</option>
+                    </select>
+                </p>
+                <p class="city">
+                    <select id="city">
+                        <option value="0">城市</option>
+                    </select>
+                </p>
+            </div>
+            <p class="dealer">
+                <select id="dealer">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+    </div>
+    <div class="cn3 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/220/70/209/13608295.png" alt="">
+        <ul class="dor pa">
+            <li class="active">智享越级驾驶</li>
+            <li>智享先进科技</li>
+            <li> 智享豪华配置</li>
+        </ul>
+        <div class="che pa">
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/196/70/209/13608271.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/197/70/209/13608272.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/198/70/209/13608273.png" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn4 pr"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/221/70/209/13608296.jpg" alt="">
+        <div class="lbImg pa">
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/212/70/209/13608287.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/213/70/209/13608288.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/214/70/209/13608289.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/215/70/209/13608290.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/216/70/209/13608291.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/217/70/209/13608292.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <a class="guanwang pa" href="https://trumpchi.gacmotor.com/"></a>
+    </div>
+</div>
+</body>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://123.207.87.32/act/chuanqigs4/js/marketIP.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+    var ip = returnCitySN.cip;
+    var IPprov = '';
+    var IPcity = '';
+    $.get('http://apis.map.qq.com/ws/location/v1/ip?ip='+ip+'&key=UL6BZ-PQSCQ-TW65B-GETRB-KYJHQ-XMB5T', function(res){
+        IPprov = res.result.ad_info.province;
+        IPcity = res.result.ad_info.city;
+        if(IPcity=="广州市"){
+            $('#change_img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/210/13678951.jpg');
+        }
+        if(IPcity=="东莞市"){
+            $('#change_img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/210/13678951.jpg');
+        }
+        if(IPcity=="柳州市"){
+            $('#change_img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/210/13678951.jpg');
+        }
+        if(IPcity=="梧州市"){
+            $('#change_img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/210/13678951.jpg');
+        }
+        if(IPcity=="百色市"){
+            $('#change_img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/241/92/210/13678951.jpg');
+        }
+    })
+    //dealers
+    var dealers = (function(){
+        function LoadingProvInfo() {
+            var prostr = "<option value=\"" + "-1" + "\">" + "省份" + "</option>";
+            var prostrAll = "";
+            var provName = "";
+            for (var i = 0; i < JSonData.Information.length; i++) {
+                if (prostrAll.indexOf(JSonData.Information[i].prov) < 0) {
+                    if (IPprov.indexOf(JSonData.Information[i].prov) >= 0) {//定向省份
+                        provName = "<option value=" + JSonData.Information[i].provId + ">" + JSonData.Information[i].prov + "</option>";
+
+                    } else {
+                        prostrAll += "<option value=" + JSonData.Information[i].provId + ">" + JSonData.Information[i].prov + "</option>";
+
+                    }
+                }
+            }
+            $('#prov').html(prostr + provName +prostrAll);
+        }
+        function LoadingCityInfo(prov) {
+            var ctystr = "<option value=\"" + "-1" + "\">" + "城市" + "</option>";
+            for (var i = 0; i < JSonData.Information.length; i++) {
+                if (JSonData.Information[i].prov == prov) {
+                    if (ctystr.indexOf(JSonData.Information[i].city) < 0) {
+                        ctystr += "<option value=" + JSonData.Information[i].cityId + ">" + JSonData.Information[i].city + "</option>";
+                    }
+                }
+            }
+            $('#city').html(ctystr);
+        }
+        function LoadingDealerInfo(city) {
+            var delstr = "<option value=\"" + "-1" + "\">" + "经销商" + "</option>";
+            for (var i = 0; i < JSonData.Information.length; i++) {
+                if (JSonData.Information[i].city == city) {
+                    delstr += "<option value=" + JSonData.Information[i].dealerId + ">" + JSonData.Information[i].dealer + "</option>";
+                }
+            }
+            $('#dealer').html(delstr);
+        }
+
+        //调用
+        LoadingProvInfo();
+        $('#prov').change(function () {
+            LoadingCityInfo($('#prov option:checked').text());
+        });
+        $('#city').change(function () {
+            LoadingDealerInfo($('#city option:checked').text());
+        });
+
+    })();
+
+</script>
+<script>
+    var imgArr=[
+        [
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/196/70/209/13608271.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/197/70/209/13608272.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/198/70/209/13608273.png'
+        ],
+        [
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/199/70/209/13608274.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/200/70/209/13608275.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/201/70/209/13608276.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/202/70/209/13608277.png'
+        ],
+        [
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/203/70/209/13608278.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/204/70/209/13608279.png',
+            'http://img1.gtimg.com/autoguangzhou/pics/hv1/205/70/209/13608280.png'
+        ]
+    ];
+    //预加载
+    var loading = function(){
+        function preloadimages(imgarr){
+            var newimages=[];
+            for (var i=0; i<imgarr.length; i++){
+                newimages[i]=new Image();
+                newimages[i].src=imgarr[i];
+                newimages[i].onload=function(){
+                    console.log('全部加载完成')
+                };
+                newimages[i].onerror=function(){
+                    console.log('加载出错')
+                }
+            }
+        }
+        for (var i=0;i<imgArr.length;i++){
+            preloadimages(imgArr[i]);
+        }
+    };
+    loading();
+    $('.cn3 .dor li').click(function () {
+        $('#swiper1 .swiper-wrapper').html('');
+        $(this).addClass('active').siblings().removeClass('active');
+        for(var i=0;i<imgArr[$(this).index()].length;i++){
+            var swi='<div class="swiper-slide"><img src="'+imgArr[$(this).index()][i]+'" alt=""></div>';
+            $('#swiper1 .swiper-wrapper').append(swi);
+        }
+        mySwiper.update({
+            updateTranslate:true
+        })
+    });
+
+
+    //sign up
+    var flag = true;
+    $("#submit").on('click', function() {
+        if(flag) {
+            var prov = $('#prov').val();
+            var city = $('#city').val();
+            var dealer =$('#dealer option:checked').text();
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(),       //电话
+                series_id = $("#series").val(),  //车型
+                brand_id = 22, //品牌
+                act_id = 26, //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data= {
+                    name:name,
+                    phone:tel,
+                    series_id:series_id,
+                    brand_id:brand_id,
+                    act_id:act_id,
+                    dealers:dealer
+                };
+
+            if(name=='姓名'||tel=='手机'){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(tel))){
+                alert('手机格式不正确');
+                return false;
+            }
+            if(series_id=='0'){
+                alert('请选择车型');
+                return false;
+            }
+            if (prov == "-1") {
+                alert('请选择省份');
+                return false;
+            }
+            if (city == "-1") {
+                alert('请选择城市');
+                return false;
+            }
+            if (dealer == "经销商") {
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            flag = false;
+
+            //发送请求
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert("恭喜你，报名成功了");
+                        window.location.reload();
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                        flag=true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+    var mySwiper = new Swiper('#swiper1', {
+        autoplay: 5000,//可选选项，自动滑动
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    var mySwiper2 = new Swiper('#swiper2', {
+        autoplay: 5000,//可选选项，自动滑动
+        pagination : '.swiper-pagination',
+    });
+</script>
+</html>

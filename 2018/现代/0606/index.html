@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="pathname" content="bytecom_tetris"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <style type="text/css">@charset "utf-8";
+    html {
+        color: #000;
+        overflow-y: scroll;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-family: Arial, Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+    }
+
+    html * {
+        outline: 0;
+        -webkit-text-size-adjust: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+
+    html input {
+        font-family: Arial, Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    fieldset, img {
+        border: 0
+    }
+
+    del {
+        text-decoration: line-through
+    }
+
+    address, caption, cite, code, dfn, em, th, var {
+        font-style: normal;
+        font-weight: 500
+    }
+
+    ol, ul {
+        list-style: none
+    }
+
+    caption, th {
+        text-align: left
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    ins, a {
+        text-decoration: none
+    }
+
+    html, body {
+        width: 100%
+    }
+
+    body {
+        background-color: #FFF;
+        line-height: 1.5
+    }
+
+    #content {
+        width: 100%;
+        margin: 0 auto
+    }
+
+    .piece {
+        width: 100%;
+        background-color: transparent;
+        position: relative;
+        box-sizing: border-box
+    }
+
+    .piece.fbottom, .piece.ftop {
+        position: fixed !important;
+        width: 100% !important;
+        z-index: 10 !important
+    }
+
+    .create-left-content {
+        width: 1.867rem;
+        height: auto;
+        text-align: center;
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        left: 0
+    }
+
+    .create-right-content {
+        width: 1.867rem;
+        height: auto;
+        text-align: center;
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        right: 0
+    }
+
+    .piece.fbottom {
+        top: auto !important;
+        bottom: 0 !important
+    }
+
+    .piece.ftop {
+        top: 0 !important;
+        bottom: auto !important
+    }
+
+    #content {
+        min-height: 100%;
+        position: relative;
+        overflow: hidden
+    }
+
+    #MEIQIA-PANEL-HOLDER {
+        right: 0 !important
+    }
+
+    html::-webkit-scrollbar {
+        display: none
+    }
+
+    .hide {
+        display: none !important
+    }</style>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/swiper_302abfc.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/ledfont_ccb326d.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/daymode_1ae66db.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/notice_7471b49.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="//s3.pstatp.com/bytecom/resource/vue/bricks/bricks-common_6c02f99.css"/>
+    <script id="globalvar">
+        GLOBAL_VAR = JSON.parse('{"siteId":"1602313222223885","pageIds":[1602313222223885],"pageid_map":{"651525":1602313222223885},"shareTitle":"玩赚世界杯，码上有礼-北京现代","name":"玩赚世界杯，码上有礼-北京现代","shareDesc":"玩赚世界杯，码上有礼-北京现代","shareThumb":"http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1528085098297/ecf48bb130aa06b26ffe1cb8267ead51"}');
+        componentsConfig = {
+            PanoramaList: []
+        }
+    </script>
+    <script src="//s3.pstatp.com/bytecom/resource/vue/lib/vendor_293fa4c.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="//s3.pstatp.com/bytecom/resource/vue/lib/main_5fdef5d.js"></script>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/brand_5a9c6d0.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/iconfont_03f5f23.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/brickicon_2e09b13.css"/>
+    <!-- 替换为Vue模板语法 -->
+
+    <title>玩赚世界杯，码上有礼-北京现代</title>
+
+
+    <script>
+        !function () {
+            "use strict";
+            !function (t, e) {
+                var r = t.seed = t.seed || [];
+                if (r.start = +new Date, !r.initialize && !r.invoked) {
+                    r.invoked = !0, r.methods = ["track", "page", "on", "once"], r.factory = function (t) {
+                        return function () {
+                            var e = Array.prototype.slice.call(arguments);
+                            return e.unshift(t), r.push(e), r
+                        }
+                    };
+                    for (var n = 0; n < r.methods.length; n++) {
+                        var a = r.methods[n];
+                        r[a] = r.factory(a)
+                    }
+                    r.load = function () {
+                        var t = e.createElement("script");
+                        t.type = "text/javascript", t.async = !0, t.src = "//s3.pstatp.com/bytecom/resource/tetris/insight/v0.1-beta/analytics.js";
+                        var r = e.getElementsByTagName("script")[0];
+                        r.parentNode.insertBefore(t, r)
+                    }, r.SNIPPET_VERSION = "1.1.8", r.load()
+                }
+            }(window, document)
+        }();
+    </script>
+    <style>.clearfix::after {
+        display: block;
+        content: "";
+        clear: both
+    }</style>
+    <script>
+        !function () {
+            try {
+                window.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll(".form-tel-autofillbtn").forEach(function (ele) {
+                        ele.parentElement.remove()
+                    })
+                })
+            } catch (e) {
+            }
+            ;
+        }();
+    </script>
+</head>
+
+<body id="body" style="">
+<script type="text/javascript">!function (e) {
+    function t() {
+        var e = d.getBoundingClientRect().width;
+        u = e / 10, d.style.fontSize = u + "px"
+    }
+
+    function n() {
+        o.body && (o.body.style.fontSize = 14 / (i / 10) + "rem")
+    }
+
+    var i = 375, o = e.document, d = o.documentElement, c = d.getBoundingClientRect().width,
+        u = (window.devicePixelRatio || 1, c / 10), l = null;
+    e.addEventListener("resize", function () {
+        clearTimeout(l), l = setTimeout(t, 300)
+    }, !1), n(), "complete" === o.readyState ? n() : o.addEventListener("DOMContentLoaded", function () {
+        n()
+    }, !1), t()
+}(window);</script>
+<div id="csrf"><input type='hidden' name='csrfmiddlewaretoken' value='gKBD8gDAFBrrkTdP79nrXjCSX0OMbjDn'/></div>
+<main data-server-rendered="true"><span></span>
+    <section id="frame-1" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/18/224/208/13582338.jpg"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-10" class="brick-frame brick-frame-server"
+             style="padding-top:0.267rem;padding-bottom:0.267rem;padding-left:0.4rem;padding-right:0.4rem;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div class="piece text-piece"
+                 style="border-width:0.027rem;border-color:#000;border-style:none;border-radius:0;">
+                <div class="rich-text">
+                    <div class="inner"><p><strong style="font-size: 0.48rem; color: rgb(0, 0, 0);">&#x586B;&#x5199;&#x5982;&#x4E0B;&#x8868;&#x5355;&#xFF0C;&#x9884;&#x7EA6;&#x8BD5;&#x9A7E;&#xFF01;</strong>
+                    </p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-3" class="brick-frame brick-frame-server" style="background-color:rgba(0, 0, 0, 0);">
+        <div class="brick-mask" style="background-color:rgba(0, 0, 0, 0);"></div>
+        <div class="brick-content">
+            <div class="piece form-piece">
+                <div><!---->
+                    <form id="a3" action_url="/tetris/form/submit/" form_id="1602313742666814"
+                          class="form-group-i input-style2"><input type="hidden" name="site_id"
+                                                                   value="1602313222223885">
+                        <input type="hidden" name="ad_id" value="0">
+                        <input type="hidden" name="adv_id" value="72069445261"><span class="csrf-token"><input
+                                type='hidden' name='csrfmiddlewaretoken'
+                                value='gKBD8gDAFBrrkTdP79nrXjCSX0OMbjDn'/></span>
+                        <div class="validate-wrapper hide spam-user-validate-wrapper">
+                            <div class="validate-dialog spam-user-validate-dialog">
+                                <div class="close"><i class="iconeditor-cross"></i></div>
+                                <div class="title">验证手机</div>
+                                <div class="spam-info"></div>
+                                <div class="pic-validate hide"><input type="number" pattern="[0-9]*" name="pic-captcha"
+                                                                      placeholder="图片验证码"
+                                                                      class="input-style validate-item spam-pic-captcha">
+                                    <div class="decor-line"></div>
+                                    <img origin-src class="validate-img validate-item"><span
+                                            class="nor-btn validate-item spam-refresh-pic-btn"><i
+                                            class="iconeditor-refresh"></i><span>刷新</span></span></div>
+                                <div class="spam-sms-validate"><input type="text" pattern="[0-9]*" name="captcha"
+                                                                      placeholder="短信验证码"
+                                                                      class="input-style validate-item spam-sms-captcha"><span
+                                        origin-text="发送短信验证码" class="nor-btn validate-item spam-send-sms "><span
+                                        class="text">发送短信验证码</span><span class="timer"></span></span></div>
+                                <div class="nor-btn spam-submit">提交</div>
+                            </div>
+                        </div><!---->
+                        <div class="form-element"><input type="hidden" name="label_1602313742666766" value="姓名"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="name" class="input-group-i"><span id="label"
+                                                                             class="input-group-addon-i warn-star"
+                                                                             style="color:#808080;">姓名</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="name"
+                                                                 validate="name" eleType="name"
+                                                                 uid="15280854379012616768850856170411"
+                                                                 name="1602313742666766"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1602313742666782" value="电话"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="cellphone" class="input-group-i"><span id="label"
+                                                                                  class="input-group-addon-i warn-star"
+                                                                                  style="color:#808080;">电话</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="tel"
+                                                                 validate="cellphone" eleType="telphone"
+                                                                 uid="15280854379012485198288456125223"
+                                                                 name="1602313742666782"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1602313742666798" value="确认提交，预约试驾！">
+                            <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                            <div class="input-group-i">
+                                <div id="submit-result" class="el-result"></div>
+                                <button type="submit" class="btn-i" id="submit1"
+                                        style="border-radius:0.107rem;background-color:rgb(204, 0, 0) !important;color:#FFF;height:1.12rem;line-height:1.12rem;width:100%;">
+                                    确认提交，预约试驾！
+                                </button>
+                                <input type="reset" id="reset" style="display:none;"><!----></div><!----><!----></div>
+                        <input type="hidden" name="export_url" value=""><!---->
+                        <button type="button" class="btn btn-jump hide"></button>
+                        <div data-node="recent-submit-content" class="recent-submit-content hide">
+                            <div class="recent-title">最新报名客户</div>
+                            <div class="recent-notification"><i class="icon-notification2"></i></div>
+                            <div class="swiper-container"></div>
+                        </div><!----></form>
+                    <div data-node="bottomCount" class="form-count"><span class="split-count"></span><span
+                            data-node="countTextPre" class="count-text">目前已经有</span><span data-node="countTextNum"
+                                                                                          class="count-text-num">120</span><span
+                            data-node="countTextPos" class="count-text">人参与活动</span><span class="split-count"></span>
+                    </div>
+                    <div>
+                        <style>.nor-btn {
+                            background-color: #f85959
+                        }
+
+                        .form-piece .recent-submit-content .recent-title {
+                            background-color: #f85959
+                        }</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-11" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1528085563717/799bad5a3b514f096e69bbc4a7896cd9"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-12" class="brick-frame brick-frame-server"
+             style="padding-top:0.267rem;padding-bottom:0.267rem;padding-left:0.4rem;padding-right:0.4rem;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div class="piece text-piece"
+                 style="border-width:0.027rem;border-color:#000;border-style:none;border-radius:0;">
+                <div class="rich-text">
+                    <div class="inner"><p><span style="font-size: 0.347rem;">常州惠达汽车销售服务有限公司</span>
+                    </p>
+                        <p><span style="font-size: 0.347rem;">常州市 钟楼区 棕榈路23号钟楼汽车城B区4号</span>
+                        </p>
+                        <p><span
+                                style="font-size: 0.347rem;">销售热线：0519-83756789</span>
+                        </p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-14" class="brick-frame brick-frame-server">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div class="piece">
+                <div class="floor-space" style="height:1.333rem;background-color:rgba(255, 255, 255, 0);"></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-13" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;background-color:rgba(0, 0, 0, 0);left:0;bottom:0;position:fixed;z-index:21;top:auto;">
+        <div class="brick-mask" style="background-color:rgba(0, 0, 0, 0);"></div>
+        <div class="brick-content">
+            <div class="piece telephone-button"><a id="a13" href="tel:0519-83756789" data-tel="0519-83756789"
+                                                   tt-data-eventvalue="0519-83756789" phone_number=""
+                                                   class="tel-btn style1"
+                                                   style="background-color:rgb(204, 0, 0);color:#FFF;line-height:1.173rem;border-radius:0.107rem;border-width:0.027rem;border-color:rgba(0, 0, 0, 0);border-style:none;font-size:0.48rem;width:100%;height:1.173rem;"><i
+                    class="brick-i-tel-left icon-telphone_left"></i><span class="tel-label text-ellipsis">咨询热线</span><i
+                    class="brick-i-tel-right icon-telphone_right"></i><i class="icon-telphone_circle brick-i-tel"></i><i
+                    class="icon-left_arrow"></i><input type="hidden" name="site_id" value="1602313222223885"><input
+                    type="hidden" name="ad_id" value="0"></a></div>
+        </div>
+    </section>
+</main>
+</body>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/toutiao-tetris-analytics-init_a60908f.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/track_log/src/tetris-user-action.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/daymode_c65fed4.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/base64_68e8d03.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/swiper_d5340fc.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/notice_584309a.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/Form/script.landing_51252e4.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/TelephoneButton/script.landing_8888577.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>(function () {
+    var FORM = require("tetris/parse/Form.js");
+    var _FORM = FORM.init({
+        id: "#a3",
+        showJump: "0",
+        successUrl: "javascript:void(0);",
+        failedUrl: "javascript:void(0);",
+        successmsg: "",
+        isShowCount: "true",
+        countText: "目前已经有{计数}人参与活动",
+        countNum: "120",
+        formId: "1602313742666814",
+        locateBgColor: "#f85959",
+        recentSubmitStyle: 0,
+        caculator: null
+    });
+    var Phone = require("tetris/parse/TelephoneButton.js");
+    Phone.init('#a13', '0', '', '', '');
+})();</script>
+<script>
+    // 报名
+    $("#submit1").click(function() {
+        var name=$("#name").val(),  //姓名
+            tel=$("#tel").val(), //电话
+            brand_id = 19, //品牌id
+            act_id = 2678,  //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                brand_id: brand_id,
+                act_id : act_id,
+            };
+        //判断填写是否正确
+        if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+            alert('请输入正确的中文名');
+            return false;
+        }
+        if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            alert('手机格式不正确');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type:"post",
+            url:Url,
+            data:Data,
+            async:true,
+            dataType:"jsonp",
+            success:function(data){
+                if(data.status==1){
+                    alert('恭喜你，报名成功！');
+                    window.location.href = location.href;
+                }else{
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    })
+</script>
+</html>

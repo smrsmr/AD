@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit|ie-comp">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <link href="https://mat1.gtimg.com/www/icon/favicon2.ico" type="image/x-icon" rel="shortcut icon">
+        <title>2019 保时捷新春购车季</title>
+        <script src="https://dongguan.auto.qq.com/js/publicJS/webm.rem.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="https://dongguan.auto.qq.com/js/publicJS/css-reset.min.css"/>
+        <link rel="stylesheet" href="https://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.css">
+        <!-- <link rel="stylesheet" type="text/css" href="http://act.yetcar.com/zxq_projectCode/yqmzdGD/css/jquery.mCustomScrollbar.css"/> -->
+        <style type="text/css">
+            .container { width: 10rem; text-align: center; margin: 0 auto; font-family: "微软雅黑";}
+            .container>img { width: 10rem;}
+            .rel { position: relative;}
+          /*******报名*******/
+            .sign { width: 7rem; height: 10.3333rem; position: absolute; top: 1.37rem; left: 1.75rem;}
+            .sign p { height: .8rem; vertical-align: top; margin-bottom: .82rem;}
+            .sign input, .sign select { width: 7.4rem; height: 1.15rem;color: #00213d; text-align: left; vertical-align: top; border: none; background: transparent;  font-size: .4rem; box-sizing: border-box; padding-left: 0.3rem; outline: none; font-family: "微软雅黑";}
+            .sign select { -webkit-appearance: none; appearance: none; line-height: .8rem; }
+            .sign select option { font-size: initial;}
+            .sign .dealer-box { padding-left: 0; margin-bottom: 1.3333rem;}
+            .sign .agree {margin-top: -0.2rem; height: .48rem; margin-bottom: 0; font-size: .3467rem; color: #333; font-family: "微软雅黑";}
+            .sign #agreeCheck { width: .4rem; height: .4rem; margin-right: 6px; vertical-align: middle; position: relative; top: -2px;background:#000;}
+            .agree a { color: inherit;text-decoration: none;}
+            #submit { width: 8.3rem; height:  1.15rem; margin: 0.3rem 0 0 -0.9rem;}
+        </style>
+    </head>
+    <body>
+      <div class="container">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/139/253/211/13784929.jpg" alt="" />
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/155/253/211/13784945.jpg" alt="" />
+    </div>
+    <div class="container sign-wrap rel">
+      <img src="http://img1.gtimg.com/autodongguan/pics/hv1/193/223/211/13777333.jpg" alt="" />
+      <div class="sign">
+        <p><input type="text" name="name" id="name" value="" placeholder="请输入您的姓名" /></p>
+        <p><input type="tel" name="phone" id="phone" value="" maxlength="11" placeholder="请输入您的电话" /></p>
+         <p><select name="series_id" id="series_id">
+          <option value="0">请选择意向车型</option>
+          <option value="808">Cayenne</option>
+          <option value="788">Panamera</option>
+          <option value="263">Macan</option>
+          <option value="263">911</option>
+          <option value="966">718</option>
+         
+        </select></p>
+        <p><select name="dealers" id="dealers">
+          <option value="0">请选择意向经销商</option>
+          <option value="深圳南山保时捷中心">深圳南山保时捷中心</option>
+          <option value="深圳宝安保时捷中心">深圳宝安保时捷中心</option>
+        </select></p>
+        <p class="agree"><input type="checkbox"  id="agreeCheck" name="checkbox" class="radio">我同意<a href="//www.qq.com/privacy.htm" target="_blank">《隐私政策》</a></p>
+        <p><input type="button" id="submit" value="" /></p>
+      </div>
+    </div>
+    <div class="container rel">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/253/211/13784926.jpg" alt="" />
+        <img src="http://img1.gtimg.com/autodongguan/pics/hv1/195/223/211/13777335.jpg" alt="" />
+        <img src="http://img1.gtimg.com/autodongguan/pics/hv1/196/223/211/13777336.jpg" alt="" />
+    </div>
+
+      <script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+      <!--<script src="http://dongguan.auto.qq.com/js/fute/dealers.FT.js" type="text/javascript" charset="utf-8"></script>-->
+      <script src="https://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.js" type="text/javascript" charset="utf-8"></script>
+      <!-- <script src="http://act.yetcar.com/zxq_projectCode/yqmzdGD/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <script type="text/javascript">
+      var swiper = new Swiper('.swiper-strengths', {
+       slidesPerView: 1,
+          paginationClickable: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+
+     });
+    //    报名
+   $(function(){
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#phone").val(),   //电话
+                    brand_id = 42,  //车型
+                    act_id = 3459,
+                    dealers=$('#dealers').val(),
+                    series_id=$('#series_id').val(),
+                    chexing=$('#series_id option:checked').text(),
+                    Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+                    Data= {
+                        name:name,
+                        phone:tel,
+                        series_id:series_id,
+                        brand_id:brand_id,
+                        act_id:act_id,
+                        chexing:chexing,
+                        dealers:dealers
+                    };
+                    console.log(Data)
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id=='0'){
+                    alert('请选择车型');
+                    return false;
+                }
+                 if(dealers=='0'){
+                    alert('请选择经销商');
+                    return false;
+                }
+                if($("input[type='checkbox']").is(':checked') ==false){
+                     alert('请同意《隐私政策》');                            
+                    return false;
+                }
+                flag = false;
+                //发送请求
+                $.ajax({
+                    type:"get",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    jsonpCallback:"jsonpReturn",
+                     complete: function () {
+                        setTimeout(function () {
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        }, 1000)
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    });
+
+
+    </script>
+    </body>
+
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' style='display:none;' id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+</html>

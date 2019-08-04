@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <!--<meta content="telephone=no" name="format-detection">-->
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>新车 全过程低价热卖</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        body {background-color: #f3f6f6}
+        .main {max-width: 750px;margin: 0 auto;}
+        .bmk {
+            width: 100%;
+            height: 11rem;
+            background: white;
+            position: relative;
+        }
+        .bmk .bmkD1 {
+            position: absolute;
+            width: 88%;
+            height: 2rem;
+            left: 50%;
+            top: 1rem;
+            margin-left: -44%;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+        }
+        .bmk .bmkD2 {
+            position: absolute;
+            left: 50%;
+            width: 88%;
+            top: 4rem;
+            height: 6rem;
+            margin-left: -44%;
+        }
+        .bmk .bmkD2 a {
+            display: inline-block;
+            font-size: 16px;
+            border: 1px solid red;
+            border-radius: 4px;
+            width: 5rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            margin-right: 0.65rem;
+            color: #fe0058;
+            letter-spacing: 5px;
+        }
+        .bmk .bmkD2 a.active{color:white;background: #fe0058}
+        .che {
+            width: 100%;
+            margin: 0.5rem auto;
+            height: auto;
+            background: white;
+            position: relative;
+        }
+        .che .cheP1,.serve .serveP1,.touch .touchP1 {
+			width: 88%;
+			position: absolute;
+			left: 50%;
+			margin-left: -44%;
+			top: 1.6rem;
+			border-bottom: 1px solid #ccc;
+			height: 2.2rem;
+            line-height: 2.2rem;
+			font-size: 20px;
+			font-weight: 600;
+        }
+        .che .cheP1 span,.serve .serveP1 span,.touch .touchP1 span {
+            display: inline-block;
+			height: 1.7rem;
+			/*line-height: 2rem;*/
+			margin-bottom: -0.4rem;
+			width: 0.4rem;
+			border-radius: 0.6rem;
+			background: #fe0058;
+			margin-right: 0.4rem;
+        }
+        .che .topC {
+            width: 88%;
+            height: 4rem;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+        }
+        .che .cheP2 {
+            width: 88%;
+            height: 10rem;
+            margin: 1rem auto;
+            /*border: 1px solid red;*/
+            overflow: hidden;
+        }
+        .che .cheP2 .left,.che .cheP2 .right {
+            float: left;
+            width: 49%;
+            height: 10rem;
+            /*border: 1px solid yellow;*/
+            border-radius: 6px;
+        }
+        .che .cheP2 .left img {
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+        .che .cheP2 .right {
+            float: right;
+        }
+        .che .cheP2 .right p:first-child {
+            width: 100%;
+            height: 1.4rem;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+        }
+        .che .cheP2 .right p {
+            margin: 0.15rem 0;
+        }
+        .che .cheP2 .right p span {
+            color: #fe0058;
+        }
+        .che .cheP2 .right .submit {
+            background: #fe0058;
+            color: white;
+            height: 1.8rem;
+            text-align: center;
+            line-height: 1.8rem;
+            margin-top: 0.44rem;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+		.che .botC {
+            width: 88%;
+            height: 0.5rem;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+        }
+        .serve,.touch {
+            width: 100%;
+            height: 8rem;
+            margin: 0.5rem auto;
+            background: white;
+            position: relative;
+        }
+        .touch {
+            height: 9rem;
+        }
+        .serve .serveP2,.touch .touchP2 {
+            position: absolute;
+            width: 88%;
+            left: 50%;
+            top: 5rem;
+            margin-left: -44%;
+        }
+        .touch .touchP2 .lt,.touch .touchP2 .rg {
+            float: left;
+            width: 49%;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            font-size: 16px;
+        }
+        .touch .touchP2 .lt {
+            width: 44%;
+        }
+        .touch .touchP2 .rg {
+            width: 56%;
+        }
+        .touch .touchP2 .lt img {
+            width: 2rem;
+            height: 2rem;
+        }
+        .touch .touchP2 .lt a {
+            color: #fe0058;
+            margin-left: 1rem;
+            display: inline-block;
+        }
+        .touch .touchP2 .rg {
+            text-align: right;
+        }
+        .touch .touchP2 .rg {
+            float: right;
+        }
+        @media screen and (min-width: 375px){
+            .bmk .bmkD2 span{
+                margin-right: 0.72rem;
+            }
+            .touch .touchP2 .lt,.touch .touchP2 .rg {
+                font-size: 16px;
+            }
+        }
+		@media screen and (min-width: 411px){
+            .bmk .bmkD2 span{
+                width: 5.015rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--头图-->
+    <div class="banner"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/159/23/208/13531224.jpg" alt=""></div>
+    <!--城市跳转按钮-->
+    <div class="bmk">
+        <div class="bmkD1">请选择活动城市</div>
+        <div class="bmkD2">
+            <a href="#" class="active">广东</a>
+            <a href="#">广州</a>
+            <a href="#">深圳</a>
+            <a href="#" style="margin-right: 0">东莞</a>
+            <a href="#">珠海</a>
+            <a href="#">佛山</a>
+            <a href="#">中山</a>
+        </div>
+    </div>
+    <!--车型-->
+    <div class="che">
+        <div class="cheP1">
+            <span></span>最新优惠
+        </div>
+        <div class="topC"></div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/24/208/13531573.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="32" data-series="374">宝骏510</p>
+                <p>现金直降<span>2000元</span></p>
+                <p>首付低至<span>5100元</span></p>
+                <p>18期0息日供<span>38元</span>起</p>
+                <p>团购抢<span>5折</span>特价车</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/24/208/13531573.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="32" data-series="375">宝骏510</p>
+                <p>现金直降<span>2000元</span></p>
+                <p>首付低至<span>5100元</span></p>
+                <p>18期0息日供<span>38元</span>起</p>
+                <p>团购抢<span>5折</span>特价车</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/24/208/13531573.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="32" data-series="376">宝骏510</p>
+                <p>现金直降<span>2000元</span></p>
+                <p>首付低至<span>5100元</span></p>
+                <p>18期0息日供<span>38元</span>起</p>
+                <p>团购抢<span>5折</span>特价车</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+		<div class="botC"></div>
+    </div>
+    <!--服务保障-->
+    <div class="serve">
+        <div class="serveP1">
+            <span></span>服务保障
+        </div>
+        <div class="serveP2">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/2/201/13070590.png" alt="">
+        </div>
+    </div>
+    <!--联系我们-->
+    <div class="touch">
+        <div class="touchP1">
+            <span></span>联系我们
+        </div>
+        <div class="touchP2">
+            <div class="lt"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/24/208/13531574.png" alt=""><a href="tel:4009301234">4009301234</a></div>
+            <div class="rg">周一到周五( 9:00-18:00 )</div>
+        </div>
+    </div>
+</div>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    $(function () {
+        $('.bmk .bmkD2 a').click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        });
+        $('.submit').click(function () {
+           var brand = $(this).siblings().attr('data-brand');
+           var series = $(this).siblings().attr('data-series');
+           console.log(brand,series)
+        })
+    })
+</script>
+</body>
+</html>

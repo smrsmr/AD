@@ -1,0 +1,832 @@
+<!--2019年-02月-14号 星期四 10:49:10 -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>原创栏目</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<style>
+			.main {
+				max-width: 1920px;
+				margin: 0 auto;
+				position: relative;
+			}
+			.head {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/235/216/211/13775590.jpg') center center no-repeat;
+				height: 553px;
+			}
+			.block2 {
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/236/216/211/13775591.jpg') center center no-repeat;
+				height: 722px;
+			}
+			.block3 {
+				background-color: #2d2e33;
+				height: 320px;
+			}
+			.head .center {
+				width: 1201px;
+				height: 403px;
+				margin: 0 auto;
+				padding-top: 148px;
+				overflow: hidden;
+			}
+			.head .center>.l,.head .center>.r {
+				float: left;
+				height: 400px;
+			}
+			.head .center>.l {
+				width: 831px;
+			}
+			.head .center>.r {
+				width: 369px;
+				background-color: white;
+				box-shadow: 0px 0px 3px 1px #d3e1fb;
+			}
+			.head .center .l .swiper-container {
+				width: 100%;
+				height: 100%;
+			}
+			.head .center .l .swiper-container .swiper-slide {
+				position: relative;
+			}
+			.head .center .l .swiper-container .swiper-slide .text {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 80px;
+				background-color: #2468ee;
+			}
+			.head .center .l .swiper-container .swiper-slide .text h3 {
+				font-size: 18px;
+				color: #ffffff;
+				margin: 18px 0 8px 19px;
+			}
+			.head .center .l .swiper-container .swiper-slide .text .day {
+				font-size: 12px;
+				color: #ffffff;
+				margin: 0 0 0 19px;
+			}
+			.swiper-button-next, .swiper-button-prev {
+				width: 40px;
+				height: 40px;
+				margin-top: -42px;
+				background-size: 100%;
+			}
+			.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/187/216/211/13775542.png');
+				left: 10px;
+				right: auto;
+			}
+			.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+				background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/189/216/211/13775544.png');
+				right: 10px;
+				left: auto;
+			}
+			.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+				bottom: 89px;
+				left: 365px;
+				width: 100%;
+			}
+			.swiper-pagination-bullet {
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				border-radius: 0;
+				background: #fff;
+				opacity: 1;
+			}
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+				background: #007aff;
+			}
+			.head .center .r .Rcenter {
+				margin: 18px;
+				width: 333px;
+				height: 364px;
+			}
+			.head .center .r .Rcenter ul {
+				width: 100%;
+			}
+			.head .center .r .Rcenter ul li {
+				width: 100%;
+				height: 114px;
+				border-bottom: 1px solid #e2e2e2;
+				margin-bottom: 18px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			.head .center .r .Rcenter ul li:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+			.head .center .r .Rcenter ul li .l {
+				width: 120px;
+				height: 100px;
+				float: left;
+			}
+			.head .center .r .Rcenter ul li .r {
+				float: left;
+				margin-left: 12px;
+				width: 201px;;
+				height: 100px;
+			}
+			.head .center .r .Rcenter ul li .r .title {
+				width: 60px;
+				height: 20px;
+				background-color: #2468ee;
+				line-height: 20px;
+				text-align: center;
+				font-size: 12px;
+				color: #ffffff;
+				margin-bottom: 11px;
+			}
+			.head .center .r .Rcenter ul li .r h3 {
+				font-size: 16px;
+				color: #000000;
+				margin-bottom: 7px;
+			}
+			.head .center .r .Rcenter ul li .r h3:hover {
+				color: #2468ee;
+			}
+			.head .center .r .Rcenter ul li .r .day {
+				font-size: 14px;
+				color: #999999;
+			}
+			.centerZ {
+				position: absolute;
+				left: 50%;
+				top: 553px;
+				width: 1400px;
+				height: auto;
+				background-color: white;
+				margin-left: -711px;
+				padding-bottom: 140px;
+			}
+			.centerZ .Bline {
+				width: 1200px;
+				margin-left: 111px;
+				padding-top: 30px;
+			}
+			.centerZ .Bline .line {
+				width: 100%;
+				height: 3px;
+				background-color: #2468ee;
+			}
+			.centerZ>.l {
+				width: 890px;
+				height: auto;
+				float: left;
+				margin-left: 111px;
+				padding-top: 23px;
+			}
+			.centerZ>.l .dor ul {
+				width: 100%;
+			}
+			.centerZ>.l .dor ul li {
+				position: relative;
+				float: left;
+				width: auto;
+				padding: 0 9px;
+				height: 25px;
+				line-height: 25px;
+				font-size: 18px;
+				color: #000000;
+				font-weight: bold;
+				text-align: center;
+				cursor: pointer;
+			}
+			.centerZ>.l .dor ul li::before {
+				margin-right: 20px;
+				content: '/';
+				color: #2468ee;
+			}
+			.centerZ>.l .dor ul li:first-child {
+				text-align: left;
+				padding: 0;
+				width: 60px;
+			}
+			.centerZ>.l .dor ul li:first-child::before{
+				margin-right: 0;
+				content: '';
+			}
+			.centerZ>.l .dor ul li.active {
+				color: #2468ee;
+			}
+			.centerZ>.l .dorMain {
+				width: 100%;
+				height: auto;
+				padding-top: 60px;
+				overflow: hidden;
+			}
+			.centerZ>.l .dorMain.MaxH {
+				max-height: 597px;
+			}
+			.centerZ>.l .dorMain ul li {
+				width: 100%;
+				height: 134px;
+				margin-bottom: 20px;
+			}
+			.centerZ>.l .dorMain ul li .img {
+				float: left;
+				width: 240px;
+				height: 134px;
+			}
+			.centerZ>.l .dorMain ul li .text {
+				float: left;
+				margin-left: 23px;
+				height: 134px;
+				width: 627px;
+				border-bottom: 1px dashed #cfcfcf; 
+			}
+			.centerZ>.l .dorMain ul li:last-child .text {
+				border-bottom: none;
+			}
+			.centerZ>.l .dorMain ul li .text .p1 span {
+				display: inline-block;
+			}
+			.centerZ>.l .dorMain ul li .text .p1 span:first-child {
+				min-width: 50px;
+    		padding: 0 5px;
+				height: 20px;
+				background-color: #2468ee;
+				color: white;
+				text-align: center;
+				line-height: 20px;
+				font-size: 12px;
+			}
+			.centerZ>.l .dorMain ul li .text .p1 span:last-child {
+				font-size: 12px;
+				color: #2164ec;
+				font-weight: bold;
+				margin-left: 3px;
+			}
+			.centerZ>.l .dorMain ul li .text h3 {
+				font-size: 18px;
+				line-height: 24px;
+				letter-spacing: 0px;
+				color: #333333;
+				margin-top: 8px;
+			}
+			.centerZ>.l .dorMain ul li .text h3:hover {
+				color: #2468ee;
+			}
+			.centerZ>.l .dorMain ul li .text .p2 {
+				font-size: 14px;
+				line-height: 22px;
+				letter-spacing: 0px;
+				color: #666666;
+				margin-top: 6px;
+			}
+			.centerZ>.l .dorMain ul li .text .p3 {
+				float: right;
+				font-size: 14px;
+				letter-spacing: 0px;
+				color: #999999;
+			}
+			.centerZ>.l .dorMain ul li .text .p3 img {
+				vertical-align: bottom;
+				margin-right: 3px;
+			}
+			.centerZ>.l .dorMain ul li .text .p3 span {
+				margin: 0 2px;
+			}
+			.more {
+				position: absolute;
+				left: 50%;
+				bottom: 50px;
+				background:url('http://img1.gtimg.com/autoguangzhou/pics/hv1/94/214/211/13774939.png') center center no-repeat;
+				width:80px;
+				height:40px;
+				margin-left: -40px;
+				cursor:pointer
+				}
+			.more:hover{background:url('http://img1.gtimg.com/autoguangzhou/pics/hv1/95/214/211/13774940.png') center center no-repeat}
+			.centerZ>.r {
+				width: 260px;
+				height: 486px;
+				float: left;
+				margin-left: 50px;
+				padding-top: 23px;
+			}
+			.centerZ>.r img {
+				width: 218px;
+				height: 82px;
+			}
+			.centerZ>.r .p1 {
+				width: 259px;
+				height: auto;
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: 0px;
+				color: #000000;
+				margin-top: 27px;
+			}
+			.centerZ>.r .d1 {
+				margin-top: 35px;
+			}
+			.centerZ>.r .d1 h3 {
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: 0px;
+				color: #000000;
+				font-weight: bold;
+			}
+			.centerZ>.r .code {
+				margin-top: 15px;
+			}
+			.centerZ>.r .code img {
+				width: 106px;
+				height: 106px;
+				display: inline-block;
+				margin-right: 9px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="head">
+				<div class="center">
+					<div class="l">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+							<!-- 	<div class="swiper-slide">
+									<img src="img/che.png" alt="">
+									<div class="text">
+										<h3>东风标致5008、4008抢占市场推出国六车型</h3>
+										<p class="day">2019-01-01</p>
+									</div>
+								</div> -->
+							</div>
+							<div class="swiper-button-prev"></div><!--左箭头-->
+    					<div class="swiper-button-next"></div><!--右箭头-->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="r">
+						<div class="Rcenter">
+							<ul>
+							<!-- 	<li>
+									<a href="#">
+										<div class="l">
+											<img src="img/xpng.png" alt="">
+										</div>
+										<div class="r">
+											<p class="title">新能源</p>
+											<h3>比SUV更实用 10万元级自主MPV如何选</h3>
+											<p class="day">2019-02-01</p>
+										</div>
+									</a>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="block2"></div>
+			<div class="block3"></div>
+			<div class="centerZ">
+				<div class="Bline">
+					<p class="line"></p>
+				</div>
+				<div class="l">
+					<div class="dor">
+						<ul id="dorUl">
+							<li class="active" data-b="全部" data-id="0">全部</li>
+						</ul>
+					</div>
+					<div class="dorMain MaxH">
+						<ul>
+
+						</ul>
+					</div>
+				</div>
+				<div class="r">
+					<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/186/216/211/13775541.png" alt="">
+					<p class="p1">
+						车说栏目。为某某单位创办的汽车热点讨论栏目。汇聚各种汽车先进的资讯及第一手资料。致力打造华南最具人气的汽车热点栏目。车说栏目。为某某单位创办的汽车热点讨论栏目。汇聚各种汽车先进的资讯及第一手资料。致力打造华南最具人气的汽车热点栏目。
+					</p>
+					<div class="d1">
+						<h3>责任主编：陈某某</h3>
+						<h3>出品人：陈某某</h3>
+						<h3>联系方式：chashao@qq.com</h3>
+					</div>
+					<div class="code">
+						<!-- 106*106 -->
+						<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/216/211/13775526.png" alt="二维码">
+						<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/216/211/13775526.png" alt="二维码">
+					</div>
+				</div>
+				<div class="more"></div>
+			</div>
+		</div>
+		<div class="base">
+			<div class="footernew" onClick="register0410('footer',1);">
+				<a href="http://www.tencent.com/" target="_blank">关于腾讯</a> | <a href="http://gd.qq.com/gydyym.htm"
+					target="_blank">关于腾讯·大粤</a>
+				| <a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://open.qq.com/"
+					target="_blank">开放平台</a>
+				| <a href="http://gd.qq.com/gydyym.htm#ad" target="_blank">广告服务</a> | <a
+					href="http://www.tencent.com/about/corp.shtml" target="_blank">商务洽谈</a> | <a href="http://gd.qq.com/gdzp.htm"
+					target="_blank">腾讯·大粤网招聘</a> | <a href="http://hr.tencent.com/" target="_blank">腾讯招聘</a> | <a
+					href="http://gongyi.qq.com/" target="_blank">腾讯公益</a> | <a href="http://gd.qq.com/gdmap/index.htm"
+					target="_blank">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm"
+					target="_blank">版权所有</a>
+				| <a href="http://gd.qq.com/a/20170228/026676.htm" target="_blank">转载须知</a><br />
+
+				<a href="http://www.szga.gov.cn" target="_blank">有害短信息举报</a> | <a
+					href="http://www.gdis.cn/admin/newstext_netsun.asp" class="lchot" target="_blank">阳光·绿色网络工程</a> | <a
+					href="http://www.qq.com/copyright.shtml" target="_blank">版权保护投诉指引</a>
+				| <a href="http://www.gdca.gov.cn/" target="_blank">广东省通管局</a> | <a href="http://www.qq.com/scio.htm"
+					target="_blank">新闻信息服务许可证</a>
+				| <a href="http://www.qq.com/internet_licence.htm" target="_blank">互联网出版许可证</a><br />
+
+				<span style="line-height:30px;"><a href="http://www.qq.com/xwdz.shtml" target="_blank">粤府新函[2001]87号</a> <a
+						href="http://www.qq.com/culture.shtml" target="_blank">文网文[2008]084号</a> <a
+						href="http://www.qq.com/cbst.shtml" target="_blank">网络视听许可证1904073号</a>
+					增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a> <a
+						href="http://www.qq.com/icp1.shtml" target="_blank">B2-20090028</a></span><br />
+				<span style="font-family:Arial;">Copyright &copy; 1998 -
+					<script language="javascript">document.write(new Date().getFullYear());</script> Tencent. All Rights
+					Reserved</span>
+
+			</div>
+			<div class="footernew footheight">
+				<div style="width:678px;">
+					<p>
+						<span class="fl"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img
+									src="http://img1.qq.com/www/pics/816/816587.gif" width="36" height="43" border="0"></a></span>
+						<span class="fr"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank">深圳网络警<br />
+								察报警平台</a></span>
+					</p>
+					<p>
+
+						<span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155"
+								target="_blank"><img src="http://img1.qq.com/www/pics/6743/6743671.jpg" width="36" height="42"
+									border="0"></a></span>
+						<span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155"
+								target="_blank">公共信息安<br />
+								全网络监察</a></span>
+					</p>
+
+					<p>
+						<span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+								target="_blank"><img src="//mat1.gtimg.com/www/images/ind36.gif" width="35" height="43"
+									border="0"></a></span>
+						<span class="fr"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" class="lcblack"
+								target="_blank">经营性网站<br />
+
+								备案信息</a></span>
+					</p>
+					<p>
+						<span class="fl" style="width:44px;"><a href="http://net.china.cn/chinese/index.htm" target="_blank"><img
+									src="//mat1.gtimg.com/www/images/200709/home_b.gif" width="44" height="44" border="0"></a></span>
+						<span class="fr" style="width:64px;"><a href="http://net.china.cn/chinese/index.htm" class="lcblack"
+								target="_blank">不良信息<br>
+								举报中心</a></span>
+					</p>
+
+					<p>
+						<span class="fl" style="width:44px;"><a href="http://www.wenming.cn" target="_blank"><img
+									src="//mat1.gtimg.com/www/images/allskin/wmlogo.gif" width="44" height="42" border="0"></a></span>
+						<span class="fr" style="width:64px;"><a href="http://www.wenming.cn" class="lcblack"
+								target="_blank">中国文明网<br>传播文明</a></span>
+					</p>
+				</div>
+			</div>
+			<!--底部 结束-->
+		</div>
+		<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+		<script>document.write("<script type='text/javascript' src='https://guangzhou.auto.qq.com/js/supervise.js?v=" + Date.now() + "'><\/script>")</script>
+		<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+		<script>
+			//轮播图数据
+			var setSwiperData = [
+				{
+					maxImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/191/215/211/13775291.png',
+					minImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/194/215/211/13775294.png',
+					title: '比 SUV 更实用 10 万元级自主 MPV 如何选',
+					day: '2019-02-01',
+					brand: '新能源',
+					href: 'http://auto.qq.com/a/20190214/000904.htm'
+				},
+				{
+					maxImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/191/215/211/13775291.png',
+					minImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/194/215/211/13775294.png',
+					title: '比 SUV 更实用 10 万元级自主 MPV 如何选',
+					day: '2019-02-02',
+					brand: '新能源',
+					href: 'http://auto.qq.com/a/20190214/000904.htm'
+				},
+				{
+					maxImg:'http://img1.gtimg.com/autoguangzhou/pics/hv1/191/215/211/13775291.png',
+					minImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/194/215/211/13775294.png',
+					title: '比 SUV 更实用 10 万元级自主 MPV 如何选',
+					day: '2019-02-03',
+					brand: '新能源',
+					href: 'http://auto.qq.com/a/20190214/000904.htm'
+				}
+			];
+			//车型数据
+			var setBrandData = [
+				{
+					brand: '新能源',
+					nper: '第一期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '轿车',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '轿车',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'SUV',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'SUV',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'SUV',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '轿车',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '轿车',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '轿车',
+					nper: '第二期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'SUV',
+					nper: '第三期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'MVP',
+					nper: '第四期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: 'MVP',
+					nper: '第五期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '新能源',
+					nper: '第六期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+				{
+					brand: '新能源',
+					nper: '第八期',
+					title: '东风标致 5008、4008 抢占市场推出国六车型',
+					text: '随着时代进步，人们越来越意识到环境保护的重要性。广州、深圳、海南将率先实施第六阶段国家机动车大气污染物排放标准。',
+					cheImg: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/83/214/211/13774928.png',
+					icon: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/81/214/211/13774926.png',
+					editor: '黄小编',
+					day: ' 2019-01-01',
+					href: 'http://time.qq.com/jieqi/xiaoxue/20181122.htm'
+				},
+			]
+		</script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				uniqueNavElements: false,
+				init: false,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable :true,
+				},
+				autoplay: {
+					delay: 5000,//1秒切换一次
+					disableOnInteraction: false,
+				},
+				loop: true,
+			})
+		</script>
+		<script>
+			//数据渲染
+			setSwiperData.map(function(v,i){
+				var $li = "";
+				$li += "<li>";
+				$li += "<a href="+v.href+" target='_blank'>";
+				$li += "<div class=\"l\">";
+				$li += "<img src="+v.minImg+" alt=\"\">";
+				$li += "</div>";
+				$li += "<div class=\"r\">";
+				$li += "<p class=\"title\">"+v.brand+"</p>";
+				$li += "<h3>"+v.title+"</h3>";
+				$li += "<p class=\"day\">"+v.day+"</p>";
+				$li += "</div>";
+				$li += "</a>";
+				$li += "</li>";
+				$('.head .center .r .Rcenter ul').append($li);
+				var slide = "";
+				slide += "<div class=\"swiper-slide\">";
+				slide += "<a href="+v.href+" target='_blank'>";
+				slide += "<img src="+v.maxImg+" alt=\"\">";
+				slide += "<div class=\"text\">";
+				slide += "<h3>"+v.title+"</h3>";
+				slide += "<p class=\"day\">"+v.day+"</p>";
+				slide += "</div>";
+				slide += "</a>";
+				slide += "</div>";
+				$('.head .center .l .swiper-container .swiper-wrapper').append(slide);
+			});
+			mySwiper.init();//现在才初始化
+			$('.head .center .r .Rcenter ul li').hover(function () {
+				mySwiper.autoplay.stop();
+				var Index = $(this).index()+1;
+				mySwiper.slideTo(Index, 1000, false);
+			},function(){
+				mySwiper.autoplay.start();
+			});
+			//类型选择切换方法
+			function setBrandText(v){
+				var $li = "";
+						$li += "<li>";
+						$li += "<a href="+v.href+" target='_blank'>";
+						$li += "<div class=\"img\">";
+						$li += "<img src="+v.cheImg+" alt=\"\">";
+						$li += "</div>";
+						$li += "<div class=\"text\">";
+						$li += "<p class=\"p1\">";
+						$li += "<span>"+v.brand+"</span>";
+						$li += "<span>"+v.nper+"</span>";
+						$li += "</p>";
+						$li += "<h3>"+v.title+"</h3>";
+						$li += "<p class=\"p2\">"+v.text+"</p>";
+						$li += "<p class=\"p3\">";
+						$li += "<img src="+v.icon+" alt=\"\">";
+						$li += "<span>"+v.editor+"</span>";
+						$li += "<span>"+v.day+"</span>";
+						$li += "</p>";
+						$li += "</div>";
+						$li += "</a>";
+						$li += "</li>";
+						$('.centerZ>.l .dorMain ul').append($li);
+			};
+			//边界判断
+			function Boundary(){
+				var liLength = $('.centerZ>.l .dorMain ul li').length;
+				if(liLength>=4 && !$('.centerZ>.l .dorMain').hasClass('MaxH')){
+					var _H = (liLength-4)*154+260; //block3 每次增加的高度
+					$('.block3').css({height:_H});
+					$('.centerZ').css({paddingBottom:'60px'});
+				}
+				if(liLength<4){
+					var _H = (liLength-2)*40+140; //block3 每次增加的高度
+					$('.block3').css({height:_H});
+					$('.centerZ').css({paddingBottom:'140px'});
+				}
+				if(liLength===1){
+					$('.block3').css({height:'140px'});
+					$('.centerZ').css({paddingBottom:'140px'})
+				}
+			};
+			$(document).on('click','.centerZ>.l .dor ul li',function(){
+				$('.centerZ>.l .dorMain ul').html('');
+				$('.block3').attr('style','');
+				$('.centerZ').attr('style','');
+				$(this).addClass('active').siblings().removeClass('active');
+				var t = $(this).attr('data-b');
+				setBrandData.map(function(v,i){
+					if(t===v.brand){
+						setBrandText(v)
+					}else if(t==='全部'){
+						setBrandText(v)
+					}
+				});
+				var liLength = $('.centerZ>.l .dorMain ul li').length;
+				if(liLength>4){
+					if($(this).attr('data-id')==='0'){
+						$('.centerZ>.l .dorMain').addClass('MaxH');
+						$('.more').show();
+					}else {
+						$('.centerZ>.l .dorMain').removeClass('MaxH');
+						$('.more').hide();
+					}
+				}else {
+					$('.more').hide();
+				}
+				Boundary();
+			});
+			setBrandData.map(function(v,i){
+				setBrandText(v)
+				if ($('#dorUl').html().indexOf(v.brand)==-1){
+          $('#dorUl').append('<li data-b='+v.brand+' data-id="0">'+v.brand+'</li>');
+        }
+			});
+			$('.more').click(function(){
+				$('.centerZ>.l .dorMain').removeClass('MaxH');
+				$(this).hide();
+				$('.centerZ>.l .dor ul li.active').attr('data-id','1');
+				Boundary();
+			});
+		</script>
+	</body>
+</html>

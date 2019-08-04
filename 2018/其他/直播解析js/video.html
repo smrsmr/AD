@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>video</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.css">
+        <style>
+            .video {
+                width: 400px;
+                margin: 0 auto;
+            }
+            .video video {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="video">
+            <div id="player" class="dplayer"></div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dplayer/1.25.0/DPlayer.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/hls.min.js"></script>
+    <script type="text/javascript">
+        //直播数据填充
+        var live = {
+            url:'http://al01.alcdn.hls.xiaoka.tv/live/eVwW8z9rvo0X1UCZ.m3u8'
+        }
+
+        var isiPad = navigator.userAgent.match(/iPad|iPhone|Android|Linux|iPod/i) != null;
+        if (isiPad) {
+            document.getElementById('player').innerHTML = '<video src="'+live.url+'" controls="controls" poster="loading.gif" width="100%" height="100%" x-webkit-airplay="allow"></video>';
+        } else {
+            var dplayer = new DPlayer({
+                container: document.getElementById('player'),
+                autoplay: true,
+                video: {
+                    url: live.url,
+                    type: 'hls'
+                }
+            });
+        }
+    </script>
+</html>

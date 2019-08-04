@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>英菲尼迪 预约报名</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .bg {
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .bm {
+            position: absolute;
+            left: 50%;
+            top: 10rem;
+            width: 22rem;
+            height: 17rem;
+            margin-left: -11rem;
+        }
+        .bm input,.bm select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            font-size: 1.2rem;
+        }
+        .bm p {
+            width: 15rem;
+            height: 2.9rem;
+        }
+        .name,.tel,.series {
+            margin-left: 5.3rem;
+            margin-top: 0.6rem;
+        }
+        .tel {
+            margin-top: 1rem;
+        }
+        .series {
+            margin-top: 0.9rem;
+        }
+        .bm .submit {
+            width: 12.5rem;
+            margin-left: 4.8rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/185/187/207/13508045.jpg" alt="">
+    <div class="bm">
+        <p class="name">
+            <input type="text" id="name">
+        </p>
+        <p class="tel">
+            <input type="tel" id="tel" maxlength="11">
+        </p>
+        <p class="series">
+            <select id="series">
+                <option value="0">-请选择车型-</option>
+                <option value="186">英菲尼迪Q50L</option>
+                <option value="191">QX50</option>
+                <option value="192">QX60</option>
+                <option value="464">QX30</option>
+                <option value="521">英菲尼迪Q70L</option>
+                <option value="600">英菲尼迪Q70</option>
+                <option value="720">英菲尼迪QX80</option>
+            </select>
+        </p>
+        <p class="submit">
+            <input type="button" id="submit">
+        </p>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive640px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>
+    //报名
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                series_id = $('#series').val(),    //车型id
+                brand_id = 25, //品牌
+                act_id = 1603,  //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id : act_id,
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( series_id == '0' ) {
+                alert('请选择车型');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</body>
+</html>

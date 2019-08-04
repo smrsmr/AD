@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="https://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+    <title>Q友砍价团 奔驰专场</title>
+    <style>
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: " ";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .main {
+            margin: 0 auto;
+            max-width: 750px;
+            width: 100%;
+            overflow-x: hidden;
+						background: white;
+        }
+
+        .cn {
+            position: relative;
+        }
+
+        .cn > img {
+            display: block;
+            width: 100%;
+        }
+
+        .banner-img {
+          position: absolute;
+					top: 10.47rem;
+					left: 50%;
+					margin-left: -11rem;
+					width: 22rem;
+					height: 10.38rem;
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+        }
+
+        .banner-img img {
+          position: absolute;
+					bottom: -1.85rem;
+					left: 4rem;
+					width: 1.5rem;
+        }
+
+        .banner-img p {
+            position: absolute;
+            bottom: -2rem;
+            left: 6rem;
+            font-size: 1.3rem;
+            color: white;
+            font-weight: bold;
+        }
+
+        .banner-tip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10rem;
+        }
+
+        .banner-tip p {
+            line-height: 3rem;
+            font-size: 0.9rem;
+            color: #525252;
+        }
+
+        #time {
+            position: absolute;
+            top: 4.7rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        #time span {
+            box-sizing: border-box;
+            border-radius: 4px;
+            padding: 2px 6px;
+            background-color: #e83b33;
+            color: #FFFFFF;
+            font-size: 1.2rem;
+						font-weight: bold;
+        }
+
+        #count {
+            position: absolute;
+            top: 6rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        #count span {
+            box-sizing: border-box;
+            color: #e83b33;
+            font-size: 1.2rem;
+						font-weight: bold;
+        }
+
+        .more {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 1.5rem;
+            padding: 2px 4px;
+            background-color: #0052d9;
+            color: #FFFFFF;
+            font-size: .9rem;
+        }
+
+        .more span {
+            display: inline-block;
+            transform: rotate(90deg);
+            transition: all 0.2s;
+        }
+
+        .more span.open {
+            transform: rotate(270deg);
+        }
+
+        .car-list {
+            margin: 0.5rem auto 1rem;
+            width: 22.5rem;
+            height: 2.7rem;
+            overflow: hidden;
+						background: white;
+        }
+
+        .car-list > div {
+            margin: 0.1rem 0;
+        }
+
+        .car-list .car-obj {
+            float: left;
+            border: 1px solid #e5e5e5;
+            margin-right: 1.2rem;
+            width: 6.5rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+						margin-bottom: 0.5rem;
+        }
+
+        .car-list .car-obj:nth-child(3),.car-list .car-obj:nth-child(6),.car-list .car-obj:nth-child(9),.car-list .car-obj:nth-child(12),.car-list .car-obj:nth-child(15) {
+            float: right;
+            margin-right: 0;
+        }
+
+        .car-list .car-obj.active {
+            border: 1px solid #ff9f49;
+        }
+
+        .input-contain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 16rem;
+            color: #717171;
+        }
+
+        .input-contain > div {
+            position: relative;
+            width: 100%;
+            height: 17rem;
+        }
+
+        .input-contain > div > p {
+            box-sizing: border-box;
+            position: absolute;
+            padding-left: 0.5rem;
+            width: 21rem;
+   					height: 3.1rem;
+            line-height: 2rem;
+            background: transparent;
+        }
+
+        .input-contain p.name {
+            top: 3.75rem;
+            left: 5rem;
+        }
+
+        .input-contain p.phone {
+            top: 7.9rem;
+            left: 5rem;
+        }
+
+        .input-contain > div input {
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+            color: inherit;
+            background: transparent;
+        }
+
+        .input-contain > div select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 14px;
+            background: transparent;
+            color: inherit;
+        }
+
+        .input-contain select option {
+            width: 100%;
+            height: 100%;
+        }
+
+				.privacyPolicy input{position:absolute;left:1rem;top:11.5rem;width:18px !important;height:18px !important}
+				.privacyPolicy span{display:inline-block;position:absolute;left:2.8rem;top:11.31rem;font-size:16px;color:#000}
+				.privacyPolicy a{color:#000}
+
+        .input-contain #submit {
+            position: absolute;
+						top: 13.2rem;
+						left: 50%;
+						margin-left: -12rem;
+						width: 24rem;
+						height: 3.55rem;
+						cursor: pointer;
+						background: transparent;
+        }
+
+        .sign-list {
+          margin: 0 auto;
+					padding: 1.5rem 0;
+					width: 23rem;
+					overflow: hidden;
+					display: none;
+        }
+				#list {
+					position: relative;
+					left: 0;
+					top: 0;
+					width: 23rem;
+					overflow: hidden;
+				}
+        .sign-list #list> p {
+            line-height: 2rem;
+        }
+
+        .sign-list #list> p span {
+            display: inline-block;
+        }
+
+        .sign-list #list> p span:nth-child(1) {
+            width: 15%;
+        }
+
+        .sign-list #list> p span:nth-child(2) {
+            width: 20%;
+            color: #ffae6b;
+            text-align: center;
+						overflow:hidden;
+						text-overflow:ellipsis;
+						white-space:nowrap;
+						line-height: 100%;
+        }
+
+        .sign-list #list> p span:nth-child(3) {
+            width: 45%;
+            text-align: center;
+        }
+
+        .sign-list #list> p span:nth-child(4) {
+            width: 20%;
+            text-align: right;
+        }
+
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal img {
+            display: block;
+            margin: 5rem auto 0;
+            width: 80%;
+        }
+
+        .sign-contain {
+            position: absolute;
+            top: 5rem;
+            left: 50%;
+            margin-left: -11rem;
+            width: 22rem;
+            height: 23rem;
+        }
+
+        .sign-contain > div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .sign-contain > div > p {
+            box-sizing: border-box;
+            position: absolute;
+            padding-left: 0.5rem;
+            width: 15rem;
+            height: 2.3rem;
+            line-height: 2rem;
+            background: transparent;
+        }
+
+        .sign-contain p.name {
+            top: 6rem;
+            left: 5rem;
+        }
+
+        .sign-contain p.phone {
+            top: 9.15rem;
+            left: 5rem;
+        }
+
+        .sign-contain p.series {
+            top: 12.25rem;
+            left: 5rem;
+        }
+
+        .sign-contain p.model {
+            top: 15.45rem;
+            left: 5rem;
+        }
+
+        .sign-contain > div input {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            color: inherit;
+            background: transparent;
+        }
+
+        .sign-contain > div select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 14px;
+            background: transparent;
+            color: inherit;
+        }
+
+        .sign-contain select option {
+            width: 100%;
+            height: 100%;
+        }
+
+        .sign-contain .privacyPolicy {
+            position: absolute;
+						top: 6.6rem;
+						left: 50%;
+						margin-left: -10.3rem;
+						width: 100%;
+						height: auto;
+						color: #000000;
+        }
+
+        .sign-contain .privacyPolicy a {
+            color: inherit;
+        }
+
+        .sign-contain #submitModal {
+            position: absolute;
+            top: 19.6rem;
+            left: 50%;
+            margin-left: -10rem;
+            width: 20rem;
+            height: 2.6rem;
+            cursor: pointer;
+            background: transparent;
+        }
+				.clickBtn {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 12rem;
+					height: 3.5rem;
+					background: transparent;
+					border: none;
+					outline: none;
+				}
+				#showBmk {
+					left: 15rem;
+				}
+				.fixedB {
+					position: fixed;
+					left: 50%;
+					bottom: 0;
+					width: 27rem;
+					margin-left: -13.5rem;
+					display: none;
+				}
+        #cnzz_stat_icon_1260102516,
+        #cnzz_stat_icon_1260842227,
+        #cnzz_stat_icon_1260919928,
+        #cnzz_stat_icon_1255711023,
+        #cnzz_stat_icon_1260771396,
+        #cnzz_stat_icon_1261301380,
+        #cnzz_stat_icon_1261327484 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="main">
+
+    <div class="cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/33/55/212/13799358.jpg" alt="">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/35/55/212/13799360.jpg" alt="">
+				<div class="banner-img" style="background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/227/35/212/13794452.png');">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/225/35/212/13794450.png" alt="">
+            <p>GLA:综合优惠6万</p>
+        </div>
+    </div>
+
+    <div class="cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/101/34/212/13794071.jpg" alt="">
+
+        <div class="banner-tip">
+            <p id="time">
+                报名倒计时
+                <span class="t_d">00</span>
+                天
+                <span class="t_h">00</span>
+                时
+                <span class="t_m">00</span>
+                分
+                <span class="t_s">00</span>
+                秒
+            </p>
+            <!-- <p id="count">
+                <span></span>
+                人已经报名参加活动
+            </p> -->
+        </div>
+
+        <div class="more">
+            更多车型
+            <span>></span>
+        </div>
+    </div>
+
+    <div class="cn car-list clearfix">
+
+        <div class="clearfix">
+        </div>
+
+        <div class="clearfix">
+        </div>
+
+    </div>
+
+    <div class="cn">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/55/212/13799330.jpg" alt="">
+        <div class="input-contain clearfix">
+
+            <div class="clearfix">
+                <p class="name">
+                    <input id="name" type="text" placeholder="姓名">
+                </p>
+                <p class="phone">
+                    <input id="phone" type="tel" placeholder="手机" maxlength="11">
+                </p>
+
+            </div>
+            <p class="privacyPolicy">
+                <input type="checkbox" id="fCheck">
+                <span>我同意<a href="https://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </p>
+            <button id="submit"></button>
+        </div>
+    </div>
+
+    <div class="cn sign-list">
+			<div id="list"></div>
+    </div>
+		<div class="fixedB">
+			<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/103/34/212/13794073.jpg" alt="">
+			<button id="call" class="clickBtn"></button>
+			<button id="showBmk" class="clickBtn"></button>
+	</div>
+</div>
+
+<div class="modal">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/49/34/212/13794019.png" alt="">
+    <div class="sign-contain">
+        <div class="clearfix">
+            <p class="name">
+                <input id="nameModal" type="text" placeholder="姓名">
+            </p>
+            <p class="phone">
+                <input id="phoneModal" type="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="7">奔驰</option>
+                </select>
+            </p>
+            <p class="model">
+                <select id="model">
+                    <option value="0">意向车型</option>
+                </select>
+            </p>
+        </div>
+        <div class="privacyPolicy">
+            <input type="checkbox" id="modalCheck">
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+        <button id="submitModal"></button>
+    </div>
+</div>
+
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+			var timer = "2019/3/30 23:59:59",
+			    actID = 3513;
+	/*--倒计时--*/
+    var EndTime = new Date(timer), tt;
+    function toTens(i) {
+        if (i < 10 && i >= 0) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    function GetRTime() {
+        var NowTime = new Date();
+        var t = EndTime.getTime() - NowTime.getTime();
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+        var m = Math.floor(t / 1000 / 60 % 60);
+        var s = Math.floor(t / 1000 % 60);
+        $('.t_d').text(toTens(d));
+        $('.t_h').text(toTens(h));
+        $('.t_m').text(toTens(m));
+        $('.t_s').text(toTens(s));
+        if (t < 0) {
+					clearInterval(tt);
+					$('.t_d').text("00");
+					$('.t_h').text("00");
+					$('.t_m').text("00");
+					$('.t_s').text("00");
+        }
+    }
+    tt = setInterval(GetRTime, 0);
+    /*--倒计时结束--*/
+        function changeBrand(id) {
+
+            $.ajax({
+                type: "get",
+                url: 'https://auto.gdtengnan.com/yetcar/getModelsTrans.php',
+                data: {
+                    series_id: id
+                },
+                async: true,
+                dataType: "jsonp",
+                jsonpCallback: "jsonpReturn",
+                success: function (data) {
+                    $('#model').html('<option value="0">意向车型</option>');
+                    for (var i = 0; i < data.data.length; i++) {
+                        var series = $('<option value="' + data.data[i].id + '">' + data.data[i].name + '</option>');
+                        $('#model').append(series);
+                    }
+                }
+            });
+
+
+        }
+
+        var carList = [
+					      {
+                    "SERIES_ID": "506",
+										"Brand_ID": "121",
+                    "SERIES_NAME": " 奔驰GLS",
+                    "NAME": " 奔驰GLS",
+										"tip1": "GLS:综合优惠11万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/30/36/212/13794510.png"
+                },
+                {
+                    "SERIES_ID": "61",
+										"Brand_ID": "7",
+                    "SERIES_NAME": "奔驰GLA",
+										"NAME": "奔驰GLA",
+										"tip1": "GLA:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/6/36/212/13794486.png"
+                },
+                {
+                    "SERIES_ID": "63",
+										"Brand_ID": "7",
+                    "SERIES_NAME": "奔驰GLC",
+                    "NAME": "奔驰GLC",
+										"tip1": "GLC:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/7/36/212/13794487.png"
+                },
+                {
+                    "SERIES_ID": "560",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "GLC-coupe",
+                    "NAME": "奔驰C级(进口)-GLC-coupe",
+										"tip1": "GLC-coupe:综合优惠2万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/8/36/212/13794488.png"
+                },
+                {
+                    "SERIES_ID": "144",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰GLE",
+                    "NAME": "奔驰GLE",
+										"tip1": "GLE:综合优惠9万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/9/36/212/13794489.png"
+                },
+                {
+                    "SERIES_ID": "249",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰CLA",
+                    "NAME": "奔驰CLA",
+										"tip1": "CLA:综合优惠2万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/10/36/212/13794490.png"
+                },
+                {
+                    "SERIES_ID": "525",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰CLS",
+                    "NAME": "奔驰CLS",
+										"tip1": "CLS:综合优惠3万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/11/36/212/13794491.png"
+                },
+                {
+                    "SERIES_ID": "440",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰A级",
+                    "NAME": "奔驰A级",
+										"tip1": "A级:综合优惠3万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/12/36/212/13794492.png"
+                },
+                {
+                    "SERIES_ID": "142",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰B级 ",
+                    "NAME": "奔驰B级 ",
+										"tip1": "B级:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/13/36/212/13794493.png"
+                },
+                {
+                    "SERIES_ID": "728",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "奔驰C级 ",
+                    "NAME": "奔驰C级 ",
+										"tip1": "C级:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/14/36/212/13794494.png"
+                },
+                {
+                    "SERIES_ID": "1142",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "C级旅行车",
+                    "NAME": "C级旅行车",
+										"tip1": "C级旅行车:综合优惠5万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/21/36/212/13794501.png"
+                },
+                {
+                    "SERIES_ID": "64",
+										"Brand_ID": "7",
+                    "SERIES_NAME": " 奔驰E级",
+                    "NAME": " 奔驰E级",
+										"tip1": "E级:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/28/36/212/13794508.png"
+                },
+                {
+                    "SERIES_ID": "265",
+										"Brand_ID": "121",
+                    "SERIES_NAME": " 奔驰S级",
+                    "NAME": " 奔驰S级",
+										"tip1": "S级:综合优惠6万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/29/36/212/13794509.png"
+                },
+                {
+                    "SERIES_ID": "728",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "C-coupe",
+                    "NAME": "奔驰C级(进口)-C-coupe",
+										"tip1": "C-coupe:综合优惠2万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/31/36/212/13794511.png"
+                },
+                {
+                    "SERIES_ID": "729",
+										"Brand_ID": "121",
+                    "SERIES_NAME": "E-coupe",
+										"NAME": "奔驰E级(进口)-E-coupe",
+										"tip1": "E-coupe:综合优惠2万",
+                    "imgSrc": "http://img1.gtimg.com/autoguangzhou/pics/hv1/32/36/212/13794512.png"
+                },
+               
+            ],
+            flag = true, seriesStr = '', carStr, open = false;
+
+        for (var i = 0; i < carList.length; i++) {
+
+            carStr = '<div class="car-obj" data-index="' + i + '" data-modelid = "' + carList[i].SERIES_ID + '" data-brand="'+carList[i].Brand_ID+'" data-name="'+carList[i].NAME+'">' + carList[i].SERIES_NAME + '</div>'
+            $('.car-list').children('div:first-child').append(carStr);
+            $('#model').append('<option value = "' + carList[i].SERIES_ID + '" data-brand="'+carList[i].Brand_ID+'" data-name="'+carList[i].NAME+'">' + carList[i].SERIES_NAME + '</option>');
+            
+        }
+        $.ajax({
+            type: "get",
+            url: "https://auto.gdtengnan.com/yetcar/baomingGetNewData.php",
+            data: {
+                detail_id: '['+actID+']',
+                type: 0
+            },
+            async: true,
+            dataType: "jsonp",
+            jsonpCallback: "jsonpReturn",
+            success: function (data) {
+                if (data.status == 1) {
+                    var signStr = '',
+                        len = data.data[0][actID].length,
+                        i, obj,
+                        name, phone, time, timeStr;
+                    for (i = 0; i < len; i++) {
+                        obj = data.data[0][actID][i];
+
+                        name = obj.name.slice(0, 1) + '**';
+                        phone = obj.phone.slice(0, 3) + '****' + obj.phone.slice(7, 11);
+
+                        time = new Date() - parseInt(obj.time) * 1000;
+
+                        if ((time / 1000 / 60 / 60 / 24) > 1) {
+                            timeStr = Math.floor(time / 1000 / 60 / 60 / 24) + '天前';
+                        }
+                        else if ((time / 1000 / 60 / 60) > 1) {
+                            timeStr = Math.floor(time / 1000 / 60 / 60) + '小时前';
+                        }
+                        else if ((time / 1000 / 60) > 1) {
+                            timeStr = Math.floor(time / 1000 / 60) + '分钟前';
+                        }
+                        else {
+                            timeStr = '刚刚';
+                        }
+
+                        signStr += '<p>' +
+                            '<span>' + name + '</span>' +
+                            '<span>' + obj.models_name + '</span>' +
+                            '<span>' + phone + '</span>' +
+                            '<span>' + timeStr + '</span>' +
+                            '</p>';
+                    }
+
+                    $('.sign-list #list').html(signStr);
+                    $('#count').find('span').html(len);
+                }
+                else {
+                    $('#count').find('span').html(0);
+                }
+            }
+        });
+
+        $("#submit").click(function () {
+
+            if (flag) {
+
+                var name = $('#name').val(),
+                    phone = $('#phone').val(),
+                    series_id = $('.car-list').find('.active').attr('data-modelid'),
+                    act_id = actID,//后台新建活动
+                    brandId = $('.car-list').find('.active').attr('data-brand'),
+										dealers = $('.car-list').find('.active').attr('data-name'),
+                    privacyPolicy = '';
+                var url = 'https://auto.gdtengnan.com/yetcar/baomingGeneral.php';
+
+                var data = {
+                    name: name,
+                    phone: phone,
+                    series_id: series_id,
+                    act_id: act_id,
+                    brand_id: brandId,
+                    province: '广东',
+                    city: '广州',
+                    dealers: dealers,
+                    chexing: ""
+                };
+
+
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确中文姓名');
+                    return false
+                }
+
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|14[0145689]|15[0-9]|16[2567]|17[0-8]|18[0-9]|19[189])[0-9]{8}$/).test(phone)) {
+                    alert('手机格式不对');
+                    return false
+                }
+
+                if (series_id == 0 || !series_id) {
+                    alert('请选择车型');
+                    return false
+                }
+
+                if (!($("#fCheck").prop('checked'))) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+
+                flag = false;
+
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    async: true,
+                    data: data,
+                    dataType: "jsonp",
+                    jsonpCallback: "jsonpReturn",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            window.location.reload();
+                        } else {
+                            alert("很抱歉，你报名失败。");
+
+                        }
+                    }
+                });
+
+            }
+            else {
+                alert("请勿重复提交！");
+            }
+        });
+
+        $("#submitModal").click(function () {
+
+            if (flag) {
+
+                var name = $('#nameModal').val(),    //姓名
+                    phone = $('#phoneModal').val(),  //电话
+                    series_id = $('#model').val(),  //车型
+                    brandId = $('#model option:checked').attr('data-brand'),  //品牌
+										dealers = $('#model option:checked').attr('data-name'),
+                    act_id = actID,
+                    privacyPolicy = '',
+                    url = 'https://auto.gdtengnan.com/yetcar/baomingGeneral.php';
+                var data = {
+                    name: name,
+                    phone: phone,
+                    series_id: series_id,
+                    act_id: act_id,
+                    brand_id: brandId,
+                    province: '广东',
+                    city: '广州',
+                    dealers: dealers,
+                    chexing: ""
+                };
+
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确中文姓名');
+                    return false;
+                }
+
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|14[0145689]|15[0-9]|16[2567]|17[0-8]|18[0-9]|19[189])[0-9]{8}$/).test(phone)) {
+                    alert('手机格式不对');
+                    return false;
+                }
+
+                if (series_id == 0 || !series_id) {
+                    alert('请选择车型');
+                    return false;
+                }
+
+                if (!($("#modalCheck").prop('checked'))) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+
+                flag = false;
+
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    async: true,
+                    data: data,
+                    dataType: "jsonp",
+                    jsonpCallback: "jsonpReturn",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            window.location.reload();
+                        }
+                        else {
+                            alert("很抱歉，你报名失败。");
+
+                        }
+                    }
+                });
+            }
+            else {
+                alert("请勿重复提交！");
+            }
+        });
+				 $('.car-obj').on('click', function () {
+
+            var $this = $(this),
+                $other = $('.car-list').find('.car-obj'),
+                modelIndex = $this.attr('data-index');
+
+            if (!$this.hasClass('active')) {
+                $other.removeClass('active');
+                $this.addClass('active');
+								$('.banner-img').find('p').html(carList[modelIndex].tip1);
+
+                $('.banner-img').css('background-image', 'url(' + carList[modelIndex].imgSrc + ')');
+
+            }
+        });
+        $('.more').on('click', function () {
+            var $span = $(this).find('span');
+
+            if (!open) {
+                $span.addClass('open');
+                $('.car-list').css('height', '14rem');
+            }
+            else {
+                $span.removeClass('open');
+                $('.car-list').css('height', '2.7rem');
+
+            }
+
+            open = !open;
+        });
+
+        $('#call').on('click', function () {
+            window.location.href = 'tel:4008105016,,10085';
+        });
+				$('#showBmk').on('click',function(){
+					$('.modal').show();
+				})
+        $('.modal').on('click', function (event) {
+            var target = event.target;
+            if (target.nodeName === 'DIV' && $(target).hasClass('modal')) {
+                $('.modal').hide();
+            }
+        });
+        // $('#series').on('change', function () {
+        //     var $this = $(this),
+        //         id = $this.val();
+        //     changeBrand(id);
+        // });
+        $('.car-list').find('.clearfix:first-child').find('.car-obj:first-child').trigger('click');
+				//文字滚动
+				// var listPanel = $('#list');
+				// var z = 0;//向上滚动top值
+				// function up() {//向上滚动
+				// 		listPanel.animate({
+				// 				'top': (z - 10) + 'px'
+				// 		}, 2000, 'linear', function () {
+				// 				listPanel.css({'top': '0'})
+				// 						.find("p:first").appendTo(listPanel);
+				// 				up();
+				// 		});
+				// }
+				// up();
+		/* 		var $numList = $("#list");
+				setInterval(function(){
+          var st = parseInt($numList.css("top"));
+          // console.log((parseInt($numList.css("height"))- parseInt($(".num-list").css("height"))))
+          if(st <= -(parseInt($numList.css("height"))- parseInt($(".sign-list").css("height"))) ){
+            $numList.css("top", 0+"px");
+          }else{
+            $numList.css("top", st-1+"px");
+          }
+        }, 50) */
+		// 	var imgUrl = "http://img1.gtimg.com/autodongguan/pics/hv1/88/3/212/13786153.jpg";
+    //   var lineLink = window.location.href;
+    //   var descContent = "";
+    //   var shareTitle = "Q友砍价团 奔驰专场";
+    //   var appid = '';
+    //   function shareFriend() {
+    //   WeixinJSBridge.invoke('sendAppMessage',{
+    //   "appid": appid,
+    //   "img_url": imgUrl,
+    //   "img_width": "640",
+    //   "img_height": "640",
+    //   "link": lineLink,
+    //   "desc": descContent,
+    //   "title": shareTitle
+    //   }, function(res) {
+    //   _report('send_msg', res.err_msg);
+    //   })
+    //   }
+    //   function shareTimeline() {
+    //   WeixinJSBridge.invoke('shareTimeline',{
+    //   "img_url": imgUrl,
+    //   "img_width": "640",
+    //   "img_height": "640",
+    //   "link": lineLink,
+    //   "desc": descContent,
+    //   "title": shareTitle
+    //   }, function(res) {
+    //   _report('timeline', res.err_msg);
+    //   });
+    //   }
+    //   function shareWeibo() {
+    //   WeixinJSBridge.invoke('shareWeibo',{
+    //   "content": descContent,
+    //   "url": lineLink,
+    //   }, function(res) {
+    //   _report('weibo', res.err_msg);
+    //   });
+    //   }
+    //   // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    //   document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    //   // 发送给好友
+    //   WeixinJSBridge.on('menu:share:appmessage', function(argv){
+    //   shareFriend();
+    //   });
+    //   // 分享到朋友圈
+    //   WeixinJSBridge.on('menu:share:timeline', function(argv){
+    //   shareTimeline();
+    //   });
+    //   // 分享到微博
+    //   WeixinJSBridge.on('menu:share:weibo', function(argv){
+    //   shareWeibo();
+    //   });
+    //   }, false);
+    });
+</script>
+
+</body>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</html>

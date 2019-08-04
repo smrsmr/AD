@@ -1,0 +1,115 @@
+<!--2018年-12月-10号 星期一 18:45:36 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！</title>
+    <link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+    <script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+      .main {
+        max-width: 750px;
+        margin: 0 auto;
+        background: #101010;
+      }
+      #cj {
+        position: fixed;
+        left: 50%;
+        bottom: 1rem;
+        width: 4rem;
+        margin-left: -2rem;
+        height: 1rem;
+        background: #ffed52;
+        color: #131313;
+        cursor: pointer;
+        font-size: 0.5rem;
+        line-height: 1rem;
+        text-align: center;
+        border-radius: .1rem;
+        font-weight: bold;
+      }
+    </style>
+</head>           
+<body>
+<div class="main">
+  <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/90/211/13743232.jpg" alt="">
+  <div style="width:100%;height:2.5rem;"></div>
+  <a href="https://guangzhou.auto.qq.com/zhuanti/2018zt/HYNY181210.htm" id="cj">我要参加</a>
+</div>
+</body>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+ <script>
+    //分享
+    var appId = "";       //公众号的唯一标识
+    var timestamp = "";   //生成签名的时间戳
+    var nonceStr = "";    //生成签名的随机串
+    var signature = "";   //签名
+    wx.config({
+      debug: false,
+      appId: appId,
+      timestamp: timestamp,
+      nonceStr: nonceStr,
+      signature: signature,
+      jsApiList: [
+        // 所有要调用的 API 都要加到这个列表中
+        'onMenuShareAppMessage',
+        'onMenuShareTimeline'
+      ]
+    });
+    var share_title = '双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！';
+    var share_desc = '双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/172/87/211/13742632.jpg';
+    var share_link = window.location.href;
+    /* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+    wx.ready(function () {
+      // 在这里调用 API
+      wx.onMenuShareAppMessage({
+        title: share_title, // 分享标题
+        desc: share_desc, // 分享描述
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+      wx.onMenuShareTimeline({
+        title: share_title, // 分享标题
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+    });
+    // var vConsole = new VConsole();
+  </script>
+<script>
+</script>
+</html>

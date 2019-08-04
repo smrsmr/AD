@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <title>汽车微讯_汽车行业专业数字营销引领者-【顺为信息科技】</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <style type="text/css">
+        html,body{font-family: "微软雅黑";}
+        body,div,img,p,span,i,a,em,ul,li,dl,dt,dd,input,select,h1,h2,h3,h4,h5,h6,br{margin: 0;padding: 0;border: none;list-style: none;}
+        a{text-decoration: none;color: white;}
+        html,body{min-width: 1200px;}
+        .header,.banner-title,.list,.content1,.content1-mid,.content2,.content3,.content5,.content6,.content6-text,.content7,.content8,.footer{width: 1200px;margin: 0 auto;}
+        .content{width: 100%;height: auto;background: #F8F8F8;}
+        /*------------首页----------*/
+        .headerbox{width: 100%;background: #171923;height: 100px;position: relative;z-index: 1000;}
+        .headerbox1{position: fixed;top: 0;left: 0;right: 0;background: #171923;}
+        .headerbox1.cur{box-shadow: 0 0 5px 5px #000;}
+        .header{height: 100px;color: white;overflow: hidden;}
+        .header h1{font-size: 36px;float: left;line-height: 100px;}
+        .header ul{float: right;height: 38px;font-size: 28px;margin-top: 31px;}
+        .header ul li{float: left;cursor: pointer;margin-left: 30px;padding-bottom: 5px;}
+        .header ul li.on{border-bottom: 2px solid white;}
+        /*.header ul li:hover,.header ul li.on{color: #171923;background: #FFFFFF;}*/
+        /*.header ul li.on>a{color: #171923;}*/
+
+        .banner{width: 100%;height: 700px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/238/121/202/13166143.jpg) center center no-repeat;background-size: cover;min-width: 1200px;}
+        .banner-title{height: 700px;}
+        .banner-title h2{font-size: 80px;color: rgba(0, 0, 0, 0.9);padding-top: 148px;padding-bottom: 13px;font-style: italic;margin-left: 76px;text-indent: 64px;}
+        .banner-title ul{width: 582px;height: 64px;background: #fff;margin-left: 44px;line-height: 64px;font-size: 42px;color: #06A3FD;/*font-style: italic*/;font-weight: bold;box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+            transform:skewX(-18deg);-ms-transform:skewX(-18deg);-moz-transform:skewX(-18deg); -webkit-transform:skewX(-18deg); -o-transform:skewX(-18deg); }
+        .banner-title ul li{width: 33.333%;text-align: center;color: #04bdfd;float: left;}
+
+        .list{height: 124px;}
+        .list ul li{width: 25%;line-height: 124px;color: #696969;font-size: 24px;float: left;text-align: center;cursor: pointer;}
+        .list ul li i{display: inline-block;width: 40px;height: 40px;vertical-align: middle;margin-right: 10px;}
+        .list ul li:nth-child(1) i{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/172/111/202/13163527.png) center center no-repeat;background-size: 100% auto;}
+        .list ul li:nth-child(2) i{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/173/111/202/13163528.png) center center no-repeat;background-size: 100% auto;}
+        .list ul li:nth-child(3) i{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/174/111/202/13163529.png) center center no-repeat;background-size: 100% auto;}
+        .list ul li:nth-child(4) i{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/175/111/202/13163530.png) center center no-repeat;background-size: 100% auto;}
+        .list ul li:hover{	transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);
+            transition: all 0.3s ease-in-out;-webkit-transform: all 0.3s ease-in-out;-moz-transition:All 1s ease-in-out;-o-transition:All 1s ease-in-out;-ms-transform:All 1s ease-in-out;}
+        /*边距*/
+        .content1-title,.content2-title,.content3-title,.content7-title{margin: 50px auto 30px auto;text-align: center;}
+        .content1-title,.content2 h3{font-size: 36px;color: #1c1c1c;}
+        .content1,.content2,.content3,.content4,.content5,.content6,.content7,.content8,.footer{overflow: hidden;padding-bottom: 60px;}
+        /*主营业务*/
+        /*.content1{height: 420px;overflow: hidden;}*/
+        /*#product .content1{height: 620px;}*/
+        /*.content1-title{margin: 50px auto 20px auto;text-align: center;}*/
+        .content1 h3{color: #1c1c1c;font-size: 36px;}
+        .content1 p{font-size: 24px;color: #696969;}
+        /*.content1-mid{height: 432px;}*/
+        .content1-mid li{width: 376px;float: left;cursor: pointer;}
+        .content1-mid li:hover{transform:translate(0,-10px);-webkit-transform:translate(0,-10px);-moz-transform:translate(0,-10px);-o-transform:translate(0,-10px);-ms-transform:translate(0,-10px);
+            transition: all 0.3s ease-in-out;-webkit-transform: all 0.3s ease-in-out;-moz-transition:All 1s ease-in-out;-o-transition:All 1s ease-in-out;-ms-transform:All 1s ease-in-out;}
+        .content1-mid li:nth-child(2){margin: 0 36px;}
+        .content1-mid li b{width: 376px;height: 376px;display: block;margin-bottom: 25px;}
+        .content1-mid li p{text-align: center;}
+        .content1-mid li:nth-child(1) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/81/124/202/13166751.jpg) center center no-repeat;background-size: cover;}
+        .content1-mid li:nth-child(2) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/82/124/202/13166752.jpg) center center no-repeat;background-size: cover;}
+        .content1-mid li:nth-child(3) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/84/124/202/13166754.jpg) center center no-repeat;background-size: cover;}
+        /*线上专题活动案例*/
+        /*.content2{height: 600px;overflow: hidden;}*/
+        .content2 h3{margin-bottom: 42px;}
+        .content2-mid{height: 405px;width: 100%;}
+        .content2-mid li{width: 278px;float: left;cursor: pointer;margin-right: 29.33px;}
+        .content2-mid li:last-child{margin-right: 0px;}
+        .content2-mid li b:hover{transform:scale(1.2);-webkit-transform:scale(1.2);-moz-transform:scale(1.2);-o-transform:scale(1.2);-ms-transform:scale(1.2);
+            transition: all 0.3s ease-in-out;-webkit-transform: all 0.3s ease-in-out;-moz-transition:All 1s ease-in-out;-o-transition:All 1s ease-in-out;-ms-transform:All 1s ease-in-out;}
+        .content2-mid li b{width: 278px;height: 343px;display: block;margin-bottom: 38px;}
+        .content2-mid li p{text-align: center;font-size: 24px;color: #696969;}
+        .content2-mid li:nth-child(1) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/157/111/202/13163512.png) center top no-repeat;background-size: cover;}
+        .content2-mid li:nth-child(2) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/158/111/202/13163513.png) center top no-repeat;background-size: cover;}
+        .content2-mid li:nth-child(3) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/170/111/202/13163525.png) center top no-repeat;background-size: cover;}
+        .content2-mid li:nth-child(4) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/171/111/202/13163526.png) center top no-repeat;background-size: cover;}
+        /*会员服务*/
+        /*.content4 .content1-title{margin: 36px auto 20px auto;text-align: center;}*/
+        .content4 .content1-mid li:nth-child(1) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/162/111/202/13163517.png) center center no-repeat;background-size: cover;}
+        .content4 .content1-mid li:nth-child(2) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/101/124/202/13166771.jpg) center center no-repeat;background-size: cover;}
+        .content4 .content1-mid li:nth-child(3) b{background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/171/126/202/13167351.jpg) center center no-repeat;background-size: cover;}
+        .content4 .content1-mid li{width: 270px;}
+        .content4 .content1-mid li:nth-child(2){margin: 0 195px;}
+        .content4 .content1-mid li b{width: 270px;height: 200px;display: block;margin-bottom: 25px;}
+        /*线下活动案例*/
+        /*.content3{height: 660px;overflow: hidden;}*/
+        .content3 h3{font-size: 36px;color: #1c1c1c;}
+        /*关于我们*/
+        /*.content6{height: 632px;overflow: hidden;}*/
+        .content6 h3,.content7 h3{color: #1C1C1C;font-size: 36px;}
+        .content6-text{width: 1189px;height: 463px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/217/111/202/13163572.jpg) center center no-repeat;background-size: auto;
+            overflow: hidden;border-radius: 3px;box-shadow: 0px 0px 10px #F8F8F8;}
+        .content6-text p{padding: 18px;background: rgba(255, 255, 255, 0.6);;color: rgb(24,30,31);font-size: 24px; text-indent:2em;margin-top: 266px;line-height: 35px;}
+        /*强大的业务覆盖网络*/
+        /*.content5{height: 500px;overflow: hidden;}*/
+        .content5 dl{width: 100%;height: 320px;}
+        .content5 h3{font-size: 36px;color: #1C1C1C;margin:50px auto 30px auto;text-align: center;}
+        .content5 dt{width: 320px;height: 320px;cursor: pointer;float: left;margin-right: 20px;}
+        .content5 dd{float: left;width: 860px;margin-top: 47.5px;}
+        .content5 dd p{height: 69px;}
+        .content5 dt img{width: 100%;height: auto;}
+        .bd{border: 4px solid #68A7FF;padding: 15px 12px;border-radius: 50px;font-size: 24px;color: #6F6F6F;display: inline-block;cursor: pointer;}
+        .bd:hover{color: black;}
+        .bd-s{font-size: 36px;position: absolute;top: 4px;right: 0px;z-index: 3;background: white;}
+        .bd em{font-style: normal;color: #68A7FF;}
+        .ri{text-align: right;height: 94px!important;position: relative;overflow: hidden;}
+        .qx-t{width: 160px;height: 52px;display: inline-block;border-style:none none dashed dashed;border-color: #68A7FF;border-width: 4px; border-radius: 10px;position: absolute;top: -17px;right: 492px;}
+        .qx-b{width: 160px;height: 52px;display: inline-block;border-style:dashed none none dashed;border-color: #68A7FF;border-width: 4px; border-radius: 10px;position: absolute;bottom: -17px;right: 492px;z-index: 2;}
+        /*成长历程*/
+        /*.content7{height: 640px;overflow: hidden;}*/
+        .content7-text{padding: 0px 140px;width: 920px;}
+        .content7-text1{position: relative;text-align: right;height: 190px;}
+        .bd-cz{padding: 24px 66px;position: absolute;top: 42px;right: 0;z-index: 4;background: white;}
+        .year{position: absolute;z-index: 3;color: #68A7FF;font-size: 72px;top: -17px;right: 346px;letter-spacing: 10px;}
+        .qx7{position: absolute;top: 85px;right: 500px;z-index: 3;}
+        .qx7-b{width: 260px;height:143px;display: inline-block;border-style:dashed none  none dashed;border-color: #68A7FF;border-width: 4px; border-radius: 10px;/*position: absolute;top: -17px;right: 492px;*/}
+        .qx7-y{width: 38px;height: 38px;text-align: center;line-height: 36px;color: white;background: #68A7FF;border-radius: 50%;display: inline-block;}
+        .qx7-y1{position: absolute;top: 0;top: -18px;right: -10px;font-style: normal;font-size: 30px;}
+        /*.content7-text1:after,.year:after,.qx7:after,.bd:after,.bd-cz:after{clear: both;content: '';display: block;}*/
+        .content7-text2{position: relative;text-align: left;top: -42px;height: 142px;}
+        .content7-text2 .bd-cz{left: 0!important;right:auto;}
+        .year16{left: 34px;}
+        .content7-text3{position: relative;height: 160px;top: -32px;}
+        .qx5{position: absolute;top: 0;left: 260px;z-index: 3;}
+        .qx5-b{border-style:none  none dashed dashed;border-color: #68A7FF;border-width: 4px; border-radius: 10px;}
+        .qx5-y{ transform:rotate(-90deg);right: auto;left: -18px;}
+        .year5{top: 38px;}
+        .bd5{top: 100px;}
+        /*------------首页结束----------*/
+        /*.footer{height: 200px;overflow: hidden;}*/
+        .footer p:first-child{margin-top: 50px;margin-bottom: 10px;}
+        .footer p{color: #696969;font-size: 12px;text-align: center;}
+        /*重新轮播图*/
+        .swiper-container {width: 1200px;height: 510px;}
+        .swiper-wrapper{width: 1049px;}
+        .swiper-slide{text-align: center;}
+        .swiper-slide img{width: auto;height: 443px;}
+        .swiper-slide p{font-size: 24px;color: #696969;margin-top: 25px;}
+        .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 75px;}
+        .swiper-pagination-bullet{background: #FFFFFF;width: 14px;height: 14px;}
+        /*.swiper-container{overflow:  visible;}*/
+        .swiper-button-next, .swiper-button-prev{top: 40%;}
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev{right: 0px;width: 75px;height: 84px;background-color: #E9E9E9;background-image:url(http://mat1.gtimg.com/autoguangzhou/images/back-ri.svg)}
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{left: 0px;width: 75px;height: 84px;background-color: #E9E9E9;background-image:url(http://mat1.gtimg.com/autoguangzhou/images/back-le.svg)}
+        .swiper-pagination-bullet{cursor: pointer;}
+        /*联系我们*/
+        .content8{position: relative;}
+        .content8 h3{font-size: 36px;color: #1c1c1c;}
+        .content8 dl{margin: auto;overflow: hidden;width: 479px;}
+        .content8 dt{float: left;width: 135px;height: 93px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/200/111/202/13163555.png) center center no-repeat;background-size: contain;margin-right: 50px;}
+        .content8 dd{float: left;}
+        .content8 dd p{color: #696969;font-size: 16px;text-align: left;margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+<div class="headerbox">
+    <div class="headerbox1">
+        <div class="header">
+            <h1><a href="">极有车</a></h1>
+            <ul>
+                <li class="on" data="banner"><a href="#banner">首页</a></li>
+                <li data="product"><a href="#product">产品和服务</a></li>
+                <li data="aboutUs"><a href="#aboutUs">关于我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="banner" id="banner">
+    <div class="banner-title">
+        <h2>汽车行业专业</br>数字营销引领者</h2>
+        <ul>
+            <li>合作</li>
+            <li>创新</li>
+            <li>共赢</li>
+        </ul>
+    </div>
+</div>
+
+<div class="list">
+    <ul>
+        <li><i></i>依托腾讯的高流量</li>
+        <li><i></i>强大的执行力</li>
+        <li><i></i>精准的营销能力</li>
+        <li><i></i>丰富的产品运营经验</li>
+    </ul>
+</div>
+<!--主营业务-->
+<div class="content" id="product">
+    <div class="content1">
+        <div class="content1-title">
+            <h3>主营业务</h3>
+            <p>腾讯汽车业务运营</p>
+        </div>
+        <ul class="content1-mid">
+            <li>
+                <b></b>
+                <p>经销商会员服务</p>
+            </li>
+            <li>
+                <b></b>
+                <p>经销商广告合作</p>
+            </li>
+            <li>
+                <b></b>
+                <p>经销商线下配套服务(车展团购等)</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--线上专题活动案例-->
+<div class="content2">
+    <div class="content2-title">
+        <h3>线上专题活动案例</h3>
+    </div>
+    <ul class="content2-mid">
+        <li>
+            <b></b>
+            <p>广汽传祺专题</p>
+        </li>
+        <li>
+            <b></b>
+            <p>福特专题</p>
+        </li>
+        <li>
+            <b></b>
+            <p>金九银十购车榜</p>
+        </li>
+        <li>
+            <b></b>
+            <p>启辰团购专题</p>
+        </li>
+    </ul>
+</div>
+<!--线下活动案例-->
+<div class="content">
+    <div class="content3">
+        <div class="content3-title">
+            <h3>线下活动案例</h3>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/62/124/202/13166732.jpg"/>
+                    <p>东风日产“无挑战不英雄”自驾游活动</p>
+                </div>
+                <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/64/124/202/13166734.jpg"/>
+                    <p>君迪奥迪七夕“有爱就购了”直播活动</p>
+                </div>
+                <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/63/124/202/13166733.jpg"/>
+                    <p>传祺GS3和GS7上市会</p>
+                </div>
+                <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/65/124/202/13166735.jpg"/>
+                    <p>龙星行奔驰“购车嘉年华”活动</p>
+                </div>
+            </div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+<!--会员服务-->
+<div class="content1 content4">
+    <div class="content1-title">
+        <h3>会员服务</h3>
+    </div>
+    <ul class="content1-mid">
+        <li>
+            <b></b>
+            <p>DCC电话回访中心</p>
+        </li>
+        <li>
+            <b></b>
+            <p>企点在线客服</p>
+        </li>
+        <li>
+            <b></b>
+            <p>经销商线下服务团队</p>
+        </li>
+    </ul>
+</div>
+<!--强大的业务覆盖网络-->
+<div class="content">
+    <div class="content5">
+        <h3>强大的业务覆盖网络</h3>
+        <dl>
+            <dt><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/207/111/202/13163562.jpg"/></dt>
+            <dd>
+                <p><span class="bd"><em>40%</em>经销商已成为我们的会员</span></p>
+                <p class="ri">
+                    <i class="qx-t"></i><i class="qx-b"></i>
+                    <span class="bd bd-s">广东地区整体市场占有率<em>60%</em></span>
+                </p>
+                <p><span class="bd"><em>20%</em>经销商合作线下线上活动</span></p>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--关于我们-->
+<div class="content6" id="aboutUs">
+    <div class="content3-title">
+        <h3>关于我们</h3>
+    </div>
+    <div class="content6-text">
+        <p>我们的成员拥有丰富的汽车行业经验，已在广大客户中树立了良好口碑。我们的平均年龄仅有26岁，充满了朝气和创新精神。我们来自五湖四海，因为一个共同的梦想：做一家真正优秀的广告企业，为客户提供最优质的服务。</p>
+    </div>
+</div>
+<!--成长历程-->
+<div class="content">
+    <div class="content7">
+        <div class="content7-title">
+            <h3>成长历程</h3>
+        </div>
+        <div class="content7-text">
+            <div class="content7-text1">
+                <span class="year">17</span>
+                <span class="bd bd-cz">2017年，成为腾讯汽车全国代理</span>
+                <span class="qx7"><i class="qx7-b"></i><i class="qx7-y qx7-y1">></i></span>
+            </div>
+            <div class="content7-text2">
+                <span class="year year16">16</span>
+                <span class="bd bd-cz">2016年，成为腾讯汽车广东省代理</span>
+            </div>
+            <div class="content7-text3">
+                <span class="year year5">15</span>
+                <span class="bd bd-cz bd5">2015年，成为腾讯汽车东莞站代理</span>
+                <span class="qx5"><i class="qx7-b qx5-b"></i><i class="qx7-y qx7-y1 qx5-y">></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--联系我们-->
+<div class="content8">
+    <div class="content3-title">
+        <h3>联系我们</h3>
+    </div>
+    <dl>
+        <!--<dt></dt>-->
+        <dd>
+            <p>广州办公地址：广东省广州市天河区华强路1号珠控国际中心1306室</p>
+            <p>东莞办公地址：广东省东莞市南城区第一国际三期3号楼1111室</p></dd>
+    </dl>
+    <div class="content8-img"></div>
+</div>
+<div class="content">
+    <div class="footer">
+        <p>东莞顺为广告有限公司&nbsp;&nbsp;版权所有</p>
+        <p>COPYRIGHT©2017qicheweixun.com.&nbsp;&nbsp;ALL RIGHTS RESERVED.&nbsp;&nbsp;粤ICP备15072791号</p>
+    </div>
+</div>
+</body>
+<script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+            autoplay : 2000,
+            loop: true,
+            // 如果需要前进后退按钮
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+
+            pagination: '.swiper-pagination',
+            paginationClickable :true,
+        })
+        $('.header ul li').click(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+            var a = $(this).attr('data');
+            $('html,body').animate({scrollTop:$('#'+a).offset().top-100}, 300);
+        })
+    })
+</script>
+</html>

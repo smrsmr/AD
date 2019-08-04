@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css">
+    <script src="/assets/todo-list.js"></script>
+</head>
+<body>
+<div id="todo-table">
+    <form>
+        <input type="text" id="item" name='item' placeholder="请输入文本内容" required />
+        <button type="submit" id="addItem">Add Item</button>
+        <button type="submit" id="searchItem" style="background: deepskyblue;">Search Item</button>
+    </form>
+    <ul>
+        <% todos.forEach(function(todo){%>
+            <li data-value=<%= todo.name%> data-id=<%= todo._id %>><%= todo.name %>  <%= todo.age %> <i class="delete"></i><i class="openEdit"></i></li>
+        <%})%>
+    </ul>
+</div>
+<div class="bac"></div>
+<div class="editBox">
+    <h1>修改数据</h1>
+    <p>
+        <label>name:</label>
+        <input type="text" id="name">
+    </p>
+    <a href="javascript:;" id="saveEdit">保存</a>
+</div>
+</body>
+</html>

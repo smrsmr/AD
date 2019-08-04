@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=750,user-scalable=no" />
+    <title>抢购 25台易手车</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {max-width: 750px;margin: 0 auto;position: relative;overflow: hidden}
+        .cn2 {position: relative;}
+        .cn2 .bmk {position: absolute;left: 50%;width: 600px;height: 505px;top: 115px;margin-left: -300px;}
+        .cn2 .bmk input,.cn2 .bmk select {width: 100%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;font-size: 31px;}
+        .cn2 .bmk p {width: 402px;height: 65px;}
+        .cn2 .bmk .name,.cn2 .bmk .tel,.cn2 .bmk .series,.cn2 .bmk .dealers {margin-left: 185px;margin-top: 41px;}
+        .cn2 .bmk .tel {margin-top: 27px;}
+        .cn2 .bmk .series,.cn2 .bmk .dealers {margin-top: 21px;}
+        .cn2 .bmk .submit {margin-left: 11px;margin-top: 28px;width: 576px;height: 80px;}
+        .declaration {
+            width: 100%;
+            background: #F1F4FB;
+            height: auto;
+            padding: 20px 0;
+        }
+        .declaration .text {
+            width: 655px;
+            margin: 0 auto;
+            line-height: 43px;
+        }
+        .declaration .text p {
+            font-size: 20px;
+
+        }
+        .cn5 {width: 750px;height: auto;background: #F1F4FB;}
+        .cn5 ul {width: 100%;}
+        .cn5 ul li {width: 700px;height: 298px;margin: 0 auto 60px;background: white;box-shadow:0 4px 0 #cddbf2;}
+        .cn5 ul li .left {float: left;width: 375px;height: 298px;}
+        .cn5 ul li .right {float: right;width: 300px;height: 298px;position: relative;}
+        .cn5 ul li .right h1 {font-size: 44px;font-weight: bold;}
+        .cn5 ul li .right h2 {width: 71%;height: 35px;font-size: 22px;border-bottom: 3px solid #313131;margin-top: 4px;}
+        .cn5 ul li .right .text {font-size: 27px;margin-top: 10px;}
+        .cn5 ul li .right .text span {color: #f43050;}
+        .cn5 ul li .right .zs {position: absolute;left: 50%;width: 48px;margin-left: -88px;bottom: 8px;animation:move 1s  infinite;-webkit-animation:move 1s infinite;}
+        @-webkit-keyframes move { 0% {bottom: -28px;} 100% {bottom: -9px;} }
+        @keyframes move {
+            0% {
+                bottom: -28px;
+            }
+            100% {
+                bottom: -9px;
+            }
+        }
+        .cn5 ul li .right .sub {width: 172px;height: 44px;line-height: 44px;background-color: #f43050;font-size: 30px;text-align: center;color: #ffffff;margin-top: 10px;}
+        .cn5 ul li:nth-child(even) .left {float: right;}
+        .cn5 ul li:nth-child(even) .right {float: left;margin-left: 44px;width: 281px;}
+        .show {position: fixed;right: 0;left: 0;top: 0;bottom: 0;background: rgba(0,0,0,0.6);display: none;z-index: 998;}
+        .show.active {display: block;z-index: 998;}
+        .bmkX {width: 0;height: 496px;position: absolute;right: 0;background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/68/116/208/13554848.png") no-repeat;transition: width 0.3s;z-index: 999;}
+        .bmkX.active {width: 100%;top: 20%; z-index: 999;max-width: 659px;}
+        .bmkX input {width: 100%;background: transparent;font-size: 35px;height: 100%;}
+        .bmkX p {width: 433px;height: 65px;padding-left: 10px;}
+        .bmkX .name,.bmkX .tel {margin-top: 149px;margin-left: 193px;}
+        .bmkX .tel {margin-top: 28px;}
+        .bmkX .sub {margin-top: 71px;margin-left: 27px;width: 580px;height: 82px;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/172/144/208/13562092.jpg" alt=""></div>
+    <div class="cn2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/236/115/208/13554761.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="请填写姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="请填写手机号" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">车型选择</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商选择</option>
+                    <option value="深圳南山保时捷中心">深圳南山保时捷中心</option>
+                    <option value="宝安保时捷中心">宝安保时捷中心</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+    </div>
+    <div class="declaration">
+        <div class="text">
+            <p>您上述个人信息将有可能提交至授权经销商处, 用于相关工作人员与您沟通【试乘试驾】使用,我们将严格保护您的个人信息安全, 我们亦将促使本声明所述各接收和使用方尽力保护和不予泄露您的个人信息。</p>
+        </div>
+    </div>
+    <div class="cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/237/115/208/13554762.jpg" alt=""></div>
+    <div class="cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/115/208/13554763.jpg" alt=""></div>
+    <div class="cn5">
+        <p style="height: 30px"></p>
+            <ul></ul>
+        <p style="height: 30px"></p>
+    </div>
+    <div class="cn6">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/239/115/208/13554764.jpg" alt="">
+    </div>
+    <div class="show"></div>
+    <div class="bmkX">
+        <p class="name">
+            <input type="text" id="nameX" placeholder="请填写姓名">
+        </p>
+        <p class="tel">
+            <input type="tel" id="telX" placeholder="请填写手机号" maxlength="11">
+        </p>
+        <p class="sub">
+            <input type="button" id="submitX">
+        </p>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>
+    $(function(){
+        //车型列表数据
+        var ser = [
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/127/115/208/13554652.jpg","h1":"Cayenne","h2":"原价184.07万起",
+                "p1":"一口价：<span>142万</span>","p2":"公里数：<span>27000</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'264'},
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/159/115/208/13554684.jpg","h1":"Macan","h2":"原价68.60万起",
+                "p1":"一口价：<span>54.6万</span>","p2":"公里数：<span>26000</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'263'},
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/174/115/208/13554699.jpg","h1":"Panamera","h2":"原价204.7万起",
+                "p1":"一口价：<span>159.8万</span>","p2":"公里数：<span>13076</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'494'},
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/210/115/208/13554735.jpg","h1":"911","h2":"原价163.4万起",
+                "p1":"一口价：<span>129.8万</span>","p2":"公里数：<span>2000</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'493'},
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/220/115/208/13554745.jpg","h1":"718 Boxster","h2":"原价81.89万起",
+                "p1":"一口价：<span>79.8万</span>","p2":"公里数：<span>1907</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'523'},
+            {"img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/233/115/208/13554758.jpg","h1":"718 Cayman","h2":"原价78.80万起",
+                "p1":"一口价：<span>69.8万</span>","p2":"公里数：<span>1500</span>KM","p3":"赠易手车延保服务","sub":"立即抢购 >","serId":'523'},
+
+        ];
+        for (var i=0;i<ser.length;i++) {
+            var li = '<li>'+
+                        '<div class="left">'+
+                            '<img src="'+ser[i].img+'" />'+
+                        '</div>'+
+                        '<div class="right">'+
+                            '<h1>'+ser[i].h1+'</h1>'+
+                            '<h2>'+ser[i].h2+'</h2>'+
+                            '<div class="text">'+
+                                '<p>'+ser[i].p1+'</p>'+
+                                '<p>'+ser[i].p2+'</p>'+
+                                '<p>'+ser[i].p3+'</p>'+
+                            '</div>'+
+                            '<button class="sub" data-series="'+ser[i].serId+'">'+ser[i].sub+'</button>'+
+                            '<i class="zs"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/175/116/208/13554955.png" /></i>'+
+                        '</div>'+
+                    '</li>';
+            $('.cn5 ul').append(li);
+        }
+        //点击弹框
+        var seriesX=0;
+        $('.cn5 .sub').click(function () {
+            var nH = $(document).scrollTop();
+            var bH = $('.cn1').height();
+            var pH = (nH-bH)<0?'200px':parseInt(nH-bH+900);
+            $('.show').addClass('active');
+            $('.bmkX').animate({marginRight: '-330px',right: '50%'},100).addClass('active');
+            $('.bmkX').css('top',pH);
+            seriesX=$(this).attr('data-series');
+            console.log(seriesX)
+        });
+        $(".show").click(function () {
+            $(this).removeClass('active');
+            $('.bmkX').animate({marginRight: '0',right: '0'},100).removeClass('active');
+        });
+        //弹框报名
+        $('#submitX').click(function () {
+            var name=$('#nameX').val(),
+                tel=$('#telX').val(),
+                series_id=seriesX,
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: 42,
+                    act_id : 2230,
+                    dealers:'深圳南山保时捷中心'
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            //发送请求
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        $('.show').removeClass('active');
+                        $('.bmkX').removeClass('active');
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        });
+        //获取车型
+        $.ajax({
+            type: "get",
+            url: 'http://www.yetcar.com/index.php?s=/Home/Data/getModels',
+            data: {
+                series_id:42
+            },
+            async: true,
+            dataType: "jsonp",
+            success: function(data) {
+                for(var i=0;i<data.data.length;i++){
+                    var series=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+                    $('#series').append(series)
+                }
+            }
+        });
+        // 报名
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    series_id = $("#series").val(),  //车型
+                    dealers = $('#dealers').val(),
+                    brand_id = 42, //品牌id
+                    act_id = 2230,  //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        dealers: dealers,
+                        act_id : act_id
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == '0') {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (dealers == '0') {
+                    alert('请选择经销商');
+                    return false;
+                }
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+</html>

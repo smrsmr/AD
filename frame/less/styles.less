@@ -1,0 +1,59 @@
+//变量
+@width: 200px;
+@height: @width + 10px;
+@color: white;
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+//方法调用
+#funColor() {
+  color: deepskyblue;
+  .h1 {
+    color: lawngreen;
+  }
+}
+#header {
+  width: @width;
+  height: @height;
+  background: @color;
+  //&代表当前的选择器父级
+  &:after {
+    content: '';
+    display: block;
+    font-size: 0;
+    clear: both;
+    width: 20px;
+    height: 20px;
+    background: red;
+  }
+  .d1 {
+    a {
+      color: red;
+    }
+  }
+  .d2 {
+    a {
+      color: yellow;
+    }
+    p {
+      a {
+        color: black;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    width: 600px;
+    @media  (min-resolution: 192dpi) {
+
+    }
+  }
+  @media (min-width: 1280px) {
+    width: 800px;
+  }
+  //.bordered();
+  .d3 {
+    //#funColor()
+    #funColor.h1()
+  }
+}

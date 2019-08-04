@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>奥迪</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <style>
+        .main {max-width: 750px;margin: 0 auto;background-color: #108FF8;}
+        .cn2,.cn3,.cn4,.cn5 {position: relative;}
+        .cn4 {background: #108FF8;background-size: 100% 100%;}
+        .banner .swiper-container {width: 100%;}
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/61/58/209/13605076.png');right: 10px;left: auto;}
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/60/58/209/13605075.png');left: 10px;right: auto;}
+        .swiper-button-next, .swiper-button-prev {width: 3rem;height: 3rem;-webkit-background-size: 100% 100%;background-size: 100% 100%;margin-top: -1.5rem;}
+        #wrapper {position: absolute;z-index: 1;height: 2.2rem;top: 0.8rem;left: 1.1rem;width: 96%;overflow: hidden;-ms-touch-action: none;-webkit-overflow-scrolling: touch;/*这个属性可以使滚动更流畅有左右弹动*/}
+        #scroller {position: absolute;z-index: 1;-webkit-tap-highlight-color: rgba(0,0,0,0);width: auto;height: 2.2rem;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;}
+        #scroller ul {width: 100%;}
+        #scroller li {padding: 0 1.3rem;height: 1.8rem;float: left;line-height: 1.8rem;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;background-color: #fafafa;font-size: 1.3rem;overflow: hidden;text-align: center;color: black;margin-right: 1rem;border-radius: 0.6rem;letter-spacing: 2px;}
+        #scroller li.active {background: #ffdc00;}
+        .cn3 ul {position: absolute;left: 50%;top: 4rem;width: 21.5rem;margin-left: -10.7rem;height: 2.4rem;overflow: hidden;}
+        .cn3 ul li {color: red;float: left;width: 2.89rem;height: 3rem;margin-right: 2.89rem;font-weight: bold;font-size: 1.6rem;text-align: center;line-height: 2.6rem;letter-spacing: 2px;}
+        .cn3 ul li:first-child{margin-left: 0.1rem;}
+        .cn3 ul li:nth-child(2){margin-right: 2.75rem;}
+        .cn3 ul li:nth-child(3){margin-right: 2.8rem;}
+        .cn3 ul li:last-child {margin-right: 0;}
+        .cn3 .bmk {position: absolute;left: 50%;top: 7rem;width: 22.6rem;height: 9rem;margin-left: -11.3rem;}
+        .cn3 .bmk #name,.cn3 .bmk #tel,.cn3 .bmk #submit {width: 21rem;height: 2.7rem;background: transparent;margin-left: 1rem;margin-top: 0.821rem;font-size: 1.3rem;}
+        .cn3 .bmk #submit {margin-top: 1.7rem;height: 2.5rem;}
+        .privacyPolicy {width: 13rem;margin-left: -5.5rem;position: absolute;left: 50%;height: 2rem;top: 14.1rem;color: black;}
+        .privacyPolicy input {position: absolute;left: 0;top: 0.2rem;width: 1rem;height: 1rem;}
+        .privacyPolicy span {display: inline-block;position: absolute;left: 1.3rem;top: 0;}
+        .cn3 a{color: black;text-decoration: none;}
+        .cn4 .text {width: 24.5rem;margin: 0 auto;position: relative;background: #ffdc00;border-radius: 0.6rem 0 0 0;left: -0.2rem;}
+        .cn4 .text .cText {width: 24.5rem;margin: 0 auto;position: relative;background: #fff;border-radius: 0.6rem 0.6rem 0 0;left: 0.4rem;top: -0.45rem;}
+        .cn4 .text .cText .d1 {padding: 1rem;line-height: 1.5rem;}
+        .cn5 .cheDor {position: absolute;width: 24rem;left: 50%;top: 3.3rem;margin-left: -12rem;height: 16rem;}
+        .cn5 .cheDor .dorUl li {width: 6rem;height: 4rem;margin-left: -12rem;position: absolute;left: 50%;top: 5rem;background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/26/43/209/13601216.png') no-repeat;background-size: contain;text-align: center;line-height: 3.5rem;color: white;font-size: 1rem;z-index: 99;}
+        .cn5 .cheDor .dorUl li:nth-child(2){margin-left: -7rem;top: 1rem;}
+        .cn5 .cheDor .dorUl li:nth-child(3){margin-left: 1rem;top: 0.5rem;}
+        .cn5 .cheDor .dorUl li:nth-child(4){margin-left: 6rem;top: 4rem;}
+        .cn5 .cheDor .dorUl li.active {color: #ffdc00;}
+        .cn5 .cheDor .dorImg {width: 18rem;position: absolute;left: 50%;top: 6rem;margin-left: -9rem;z-index: 98;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <div class="cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/22/43/209/13601212.jpg" alt="">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <div class="cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/59/58/209/13605074.jpg" alt="">
+        <div class="times">
+            <ul>
+                <li class="t_d">00</li>
+                <li class="t_h">00</li>
+                <li class="t_m">00</li>
+                <li class="t_s">00</li>
+            </ul>
+        </div>
+        <div class="bmk">
+            <input type="text" id="name" placeholder="姓名">
+            <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            <input type="button" id="submit">
+        </div>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+    </div>
+    <div class="cn4">
+        <div class="text">
+            <div class="cText">
+                <div class="d1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/25/43/209/13601215.jpg" alt="">
+        <div class="cheDor">
+            <div class="dorUl">
+                <ul>
+                    <li>动力强劲</li>
+                    <li>油耗经济</li>
+                    <li>外观时尚</li>
+                    <li>配置丰富</li>
+                </ul>
+            </div>
+            <div class="dorImg"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/20/43/209/13601210.png" alt=""></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/2018web/iscroll.js"></script>
+<script>
+    //车型填充数据
+    var cheData=[
+        //kv图 车型数组【车型名称 车型品牌id 车型id】 活动介绍文本 车型配置介绍数组
+        {
+            'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/219/55/209/13604469.jpg',
+            'cheArr':[{'name':'奥迪A3','braId':'8','serId':'51'},],
+            'activity':'<p>2018年07月03日 - 2018年07月04日</p><p>广东锦泰奥迪奥迪A3优惠高达5.38万元，感兴趣的朋友可以到店咨询购买，此外购车还赠送豪华大礼包</p>',
+            'textArr':['外观时尚','动力线性','换挡平顺','配置丰富',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/5/56/209/13604510.png']
+        },
+        {
+            'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/201/55/209/13604451.jpg',
+            'cheArr':[{'name':'奥迪A4L','braId':'8','serId':'53'},],
+            'activity':'<p>2018年07月01日 - 2018年07月03日</p><p>广州广物君迪奥迪奥迪A4L优惠高达8.14万元，感兴趣的朋友可以到店咨询购买</p>',
+            'textArr':['动力强劲','油耗经济','外观时尚','配置丰富',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/20/43/209/13601210.png']
+        },
+        {
+            'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/16/56/209/13604521.jpg',
+            'cheArr':[{'name':'奥迪A6L','braId':'8','serId':'54'},],
+            'activity':'<p>2018年07月01日 - 2018年07月03日</p><p>广东锦泰奥迪奥迪A6L优惠高达11.16万元，感兴趣的朋友可以到店咨询购买</p>',
+            'textArr':['动力强劲','豪华座驾','外观硬朗','配置丰富','http://img1.gtimg.com/autoguangzhou/pics/hv1/12/56/209/13604517.png']
+        },
+        {
+            'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/21/43/209/13601211.jpg',
+            'cheArr':[{'name':'奥迪Q3','braId':'8','serId':'52'},],
+            'activity':'<p>活动介绍活绍活动介绍活动介绍活动介绍活动介活动介绍活绍活动介绍活动介绍活动介绍活</p>',
+            'textArr':['动力强劲3','油耗经济3','外观时尚3','配置丰富3',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/20/43/209/13601210.png']
+        },
+        {
+            'kv':'http://img1.gtimg.com/autoguangzhou/pics/hv1/21/43/209/13601211.jpg',
+            'cheArr':[{'name':'奥迪Q5','braId':'8','serId':'55'},],
+            'activity':'<p>活动介绍活绍活动介绍活动介绍活动介绍活动介活动介绍活绍活动介绍活动介绍活动介绍活</p>',
+            'textArr':['动力强劲3','油耗经济3','外观时尚3','配置丰富3',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/20/43/209/13601210.png']
+        },
+    ];
+    // 倒计时日期时间
+    var time = "2018/7/28 10:20:59";
+</script>
+<script type="text/javascript">
+    var imglinks=[];
+    //渲染数据
+    for (var i=0;i<cheData.length;i++){
+        var li='<li data-brand="'+cheData[i].cheArr[0].braId+'" data-series="'+cheData[i].cheArr[0].serId+'">'+cheData[i].cheArr[0].name+'</li>';
+        $('#scroller ul').append(li);
+        imglinks.push(cheData[i].kv);
+    }
+    $('#scroller ul').find('li:first').addClass('active');
+    //预加载
+    var loading = function(){
+        function preloadimages(imgarr){
+            var newimages=[];
+            for (var i=0; i<imgarr.length; i++){
+                newimages[i]=new Image();
+                newimages[i].src=imgarr[i];
+                newimages[i].onload=function(){
+                    console.log('全部加载完成')
+                };
+                newimages[i].onerror=function(){
+                    console.log('加载出错')
+                }
+            }
+        }
+        preloadimages(imglinks);
+    };
+    loading();
+    for (var k=0;k<imglinks.length;k++){
+        var swi='<div class="swiper-slide"><img src="'+imglinks[k]+'" alt=""></div>'
+        $('.swiper-wrapper').append(swi);
+    }
+    function qh(i) {
+        $('.cn4 .cText .d1').html(cheData[i].activity);
+        $('.cn5 .dorUl ul li').eq(0).text(cheData[i].textArr[0]);
+        $('.cn5 .dorUl ul li').eq(1).text(cheData[i].textArr[1]);
+        $('.cn5 .dorUl ul li').eq(2).text(cheData[i].textArr[2]);
+        $('.cn5 .dorUl ul li').eq(3).text(cheData[i].textArr[3]);
+        $('.cn5 .dorImg img').attr('src',cheData[i].textArr[4]);
+    }
+    $('#scroller li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
+        var i=$(this).index();
+        qh(i);
+        mySwiper.slideTo(i, 1000, false);//切换到第一个slide，速度为1秒
+    });
+    //动态添加宽度
+    var len = $('#scroller li').length;
+    var w = $('#scroller li').width()+70;
+    $('#scroller').css({width:len*w});
+    /*--倒计时--*/
+    var EndTime = new Date(time),tt;
+    function toTens(i){if (i < 10) {i = "0" + i;} return i;}
+    function GetRTime(){
+        var NowTime = new Date();
+        var t =EndTime.getTime() - NowTime.getTime();
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        $('.t_d').text(toTens(d));
+        $('.t_h').text(toTens(h));
+        $('.t_m').text(toTens(m));
+        $('.t_s').text(toTens(s));
+        if (t < 0) {
+            clearInterval(tt);
+            $('.t_d').text("00");
+            $('.t_h').text("00");
+            $('.t_m').text("00");
+            $('.t_s').text("00");
+        }
+    }
+    tt = setInterval(GetRTime,0);
+    /*--倒计时结束--*/
+    $('#submit').click(function () {
+        var name = $('#name').val(),
+            tel = $('#tel').val(),
+            series_id = $('#scroller li.active').attr('data-series'),  //车型
+            brand_id = $('#scroller li.active').attr('data-brand'), //品牌
+            act_id = 2816, //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                series_id: series_id,
+                brand_id: brand_id,
+                act_id: act_id,
+            };
+        if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+            alert('请输入正确的中文名');
+            return false;
+        }
+        if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            alert('手机格式不正确');
+            return false;
+        }
+        if (!($("input[type='checkbox']").prop('checked'))){
+            alert('请同意《隐私政策》');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type: "post",
+            url: Url,
+            data: Data,
+            async: true,
+            dataType: "jsonp",
+            success: function (data) {
+                if (data.status == 1) {
+                    alert("恭喜你，报名成功了");
+                    location.replace(location.href);
+                } else {
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    });
+    var mySwiper = new Swiper('.swiper-container', {
+        //初始化加载
+        onInit: function(swiper){
+            console.log(swiper.activeIndex);
+            qh(swiper.activeIndex);
+            $('#scroller li').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+        },
+        //切换时记载
+        onSlideChangeStart: function(swiper){
+            console.log(swiper.activeIndex)
+            qh(swiper.activeIndex);
+            $('#scroller li').eq(swiper.activeIndex).addClass('active').siblings().removeClass('active');
+            myScroll.scrollTo(-110*swiper.activeIndex,0,1000);
+        },
+        //autoplay: 4000,//可选选项，自动滑动
+        autoplayDisableOnInteraction : false,
+        loop: false,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    $(window).load(function() {
+        myScroll = new IScroll('#wrapper', {scrollX: true, scrollY: false, preventDefault: false ,mouseWheel: true });
+    })
+</script>
+</html>

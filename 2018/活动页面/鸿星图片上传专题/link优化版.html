@@ -1,0 +1,701 @@
+<!--2018年-12月-10号 星期一 18:55:44 -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+      .main {
+        max-width: 750px;
+        margin: 0 auto;
+        background: #131313;
+        overflow: hidden;
+      }
+      .cn {position: relative;}
+      .up {
+        position: absolute; 
+        left: 0;
+        top: 0.7rem;
+        width: 100%;
+        height: 10rem;
+      }
+      .up li {
+        height: 1.54rem;
+        width: 6.5rem;
+        margin: 0.18rem 1rem 1.81rem 1.75rem;
+        overflow: hidden;
+      }
+      .up li .inputBox {
+        position: relative;
+        width: 100%;
+        height: 1.54rem;
+        line-height: 2rem;
+        overflow: hidden;
+        font-size: .213333rem;
+      }
+      .up li .inputBox input {
+        width: 100%;
+        height: 1.54rem;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+      }
+      .up li .upImg {
+        position: relative;
+        left: 0;
+        top: 0;
+        width:100%;
+        height: 1.54rem;
+        z-index: 10;
+      }
+      .up li .imgContainer {
+       
+      }
+      .up li .imgContainer img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: fill;
+      }
+      .up li .videoContainer {
+        width: 100%;
+        height: 100%;
+      }
+      .up li .videoContainer video {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      .bmk {
+        position: absolute;
+        left: 50%;
+        top: 12.15rem;
+        width: 8rem;
+        height: 5rem;
+        margin-left: -3.9rem;
+      }
+      .bmk p input,.bmk p select{
+        width:100%;
+        height:100%;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        background:transparent;
+        font-size:0.5rem;
+        padding-left:.266667rem;
+        color:#768292;
+        }
+      .bmk p{
+        width: 7.3rem;
+        height: 1.05rem;
+        margin-left: 0;
+      }
+      .bmk .tel{
+        margin-top:0.27rem
+      }
+      #submit {
+        position: absolute;
+        left: 1.1rem;
+        top: 14.65rem;
+        width: 7.63rem;
+        height: 1.05rem;
+        margin-top: 0.24rem;
+        background: transparent;
+        cursor: pointer;
+      }
+      .privacyPolicy input{
+        position: absolute;
+        left: 0rem;
+        top: 4.2rem;
+        width: 18px !important;
+        height: 18px !important;
+        }
+      .privacyPolicy span{
+        display: inline-block;
+        position: absolute;
+        left: 0.8rem;
+        top: 4.15rem;
+        font-size: 16px;
+        color: #768292;
+      }
+      .privacyPolicy a{color:#768292}
+      /* 等待动画 */
+      .loading {
+        background-color: rgba(0, 0, 0, .5);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+        margin-top: 0px;
+        top: 0px;
+        left: 0;
+      }
+      .loading #loading-center{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        }
+      .loading #loading-center-absolute {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 150px;
+        width: 150px;
+        margin-top: -75px;
+        margin-left: -75px;	
+        -ms-transform: rotate(45deg); 
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); 
+      }
+      .loading .object{
+        width: 20px;
+        height: 20px;
+        background-color: #FFF;
+        position: absolute;
+        left: 65px;
+        top: 65px;
+        -moz-border-radius: 50% 50% 50% 50%;
+        -webkit-border-radius: 50% 50% 50% 50%;
+        border-radius: 50% 50% 50% 50%;
+        }
+      .loading .object:nth-child(2n+0) {
+        margin-right: 0px;
+      }
+      .loading  #object_one {
+        -webkit-animation: object_one 2s infinite;
+        animation: object_one 2s infinite;
+        -webkit-animation-delay: 0.2s; 
+          animation-delay: 0.2s; 
+        }
+      .loading #object_two {
+        -webkit-animation: object_two 2s infinite;
+        animation: object_two 2s infinite;
+        -webkit-animation-delay: 0.3s; 
+          animation-delay: 0.3s; 
+        }
+      .loading #object_three {
+        -webkit-animation: object_three 2s infinite;
+        animation: object_three 2s infinite;
+        -webkit-animation-delay: 0.4s; 
+          animation-delay: 0.4s; 
+        }
+      .loading #object_four {
+        -webkit-animation: object_four 2s infinite;
+        animation: object_four 2s infinite;
+        -webkit-animation-delay: 0.5s; 
+          animation-delay: 0.5s; 
+      }
+      .loading #object_five {
+        -webkit-animation: object_five 2s infinite;
+        animation: object_five 2s infinite;
+        -webkit-animation-delay: 0.6s; 
+          animation-delay: 0.6s; 
+      }
+      .loading #object_six {
+        -webkit-animation: object_six 2s infinite;
+        animation: object_six 2s infinite;
+        -webkit-animation-delay: 0.7s; 
+          animation-delay: 0.7s; 
+      }
+      .loading #object_seven {
+        -webkit-animation: object_seven 2s infinite;
+        animation: object_seven 2s infinite;
+        -webkit-animation-delay: 0.8s; 
+          animation-delay: 0.8s; 
+      }
+      .loading #object_eight {
+        -webkit-animation: object_eight 2s infinite;
+        animation: object_eight 2s infinite;
+        -webkit-animation-delay: 0.9s; 
+          animation-delay: 0.9s; 
+      }
+      .loading #object_big{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50px;
+        top: 50px;
+        -webkit-animation: object_big 2s infinite;
+        animation: object_big 2s infinite;
+        -webkit-animation-delay: 0.5s; 
+          animation-delay: 0.5s; 
+      }	
+      @-webkit-keyframes object_big {
+      50% { -webkit-transform: scale(0.5); }
+      }
+      @keyframes object_big {
+      50% { 
+          transform: scale(0.5);
+          -webkit-transform: scale(0.5);
+        } 
+      }
+      @-webkit-keyframes object_one {
+      50% { -webkit-transform: translate(-65px,-65px)  ; }
+      }
+      @keyframes object_one {
+      50% { 
+          transform: translate(-65px,-65px) ;
+          -webkit-transform: translate(-65px,-65px) ;
+        } 
+      }
+      @-webkit-keyframes object_two {
+        50% { -webkit-transform: translate(0,-65px) ; }
+      }
+      @keyframes object_two {
+      50% { 
+          transform: translate(0,-65px) ; 
+          -webkit-transform: translate(0,-65px) ; 
+        } 
+      }
+      @-webkit-keyframes object_three {
+      50% { -webkit-transform: translate(65px,-65px) ; }
+      }
+      @keyframes object_three {
+      50% { 
+          transform: translate(65px,-65px);
+          -webkit-transform: translate(65px,-65px);
+        } 
+      }
+      @-webkit-keyframes object_four {
+        50% { -webkit-transform: translate(65px,0); }
+      }
+      @keyframes object_four {
+        50% { 
+          transform: translate(65px,0) ;
+          -webkit-transform: translate(65px,0);
+        }
+      }
+      @-webkit-keyframes object_five {
+        50% { -webkit-transform: translate(65px,65px); }
+      }
+      @keyframes object_five {
+        50% { 
+          transform: translate(65px,65px) ;
+          -webkit-transform: translate(65px,65px);
+        } 
+      }
+      @-webkit-keyframes object_six {
+        50% { -webkit-transform: translate(0,65px); }
+      }
+      @keyframes object_six {
+        50% { 
+          transform:  translate(0,65px) ;
+          -webkit-transform:  translate(0,65px);
+        } 
+      }
+      @-webkit-keyframes object_seven {
+        50% { -webkit-transform: translate(-65px,65px); }
+
+      }
+      @keyframes object_seven {
+        50% { 
+          transform: translate(-65px,65px) ;
+          -webkit-transform: translate(-65px,65px) ;
+        } 
+      }
+      @-webkit-keyframes object_eight {
+        50% { -webkit-transform: translate(-65px,0) ; }
+      }
+      @keyframes object_eight {
+        50% { 
+          transform: translate(-65px,0) ;
+          -webkit-transform: translate(-65px,0) ;
+        }
+      }
+       #upBox .nnmu .num {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 100%;
+        height: .8rem;
+        line-height: .8rem;
+        text-align: center;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.3rem;
+        background: #282828;
+        letter-spacing: .05rem;
+      }
+      #upBox .nnmu .num:nth-child(1){
+        top: 2.7rem;
+      }
+      #upBox .nnmu .num:nth-child(2){
+        top: 6.1rem;
+      }
+      #upBox .nnmu .num:nth-child(3){
+        top: 9.38rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/186/82/211/13741371.jpg" alt=""></div>
+      <div class="cn cn2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/106/88/211/13742821.jpg" alt="">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/209/86/211/13742414.jpg" alt="">
+        <form id="upBox">
+          <ul class="up">
+            <li>
+              <div class="inputBox">
+                <input title="请选择图片" id="f1" onchange="onChenge(event,'f1',$('.showImg1'),1)" name="moments" accept="image/*"
+                  type="file" />
+                <div class="showImg1 upImg"></div>
+              </div>
+            </li>
+            <li style="margin-bottom:1.8rem">
+              <div class="inputBox">
+                <input title="请选择图片" id="f2" onchange="onChenge(event,'f2',$('.showImg2'),2)" name="groupChat" accept="image/*"
+                  type="file" />
+                <div class="showImg2 upImg"></div>
+              </div>
+            </li>
+            <li>
+              <div class="inputBox">
+                <input title="请选择图片" id="f3" onchange="onChenge(event,'f3',$('.showImg3'),3)" name="carOwnerMoments"
+                  accept="image/*" type="file" />
+                <div class="showImg3 upImg"></div>
+              </div>
+            </li>
+          </ul>
+          <div class="nnmu">
+            <p class="num">微信点赞，仅限一次，可点击连续添加。</p>
+            <p class="num">发群截图,可点击连续添加。</p>
+            <p class="num">人车合照点赞，仅限一次，可点击连续添加。</p>
+          </div>
+          <div class="bmk">
+            <p class="name">
+              <input type="text" name="name" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+              <input type="tel" name="phone" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <div class="privacyPolicy">
+              <input type="checkbox" checked>
+              <span>我同意<a href="//www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+          </div>
+          <a href="javascript:;" id="submit"></a>
+        </form>
+      </div>
+      <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/189/82/211/13741374.jpg" alt=""></div>
+      <div id="loading">
+        <div id="loading-center">
+          <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+            <div class="object" id="object_five"></div>
+            <div class="object" id="object_six"></div>
+            <div class="object" id="object_seven"></div>
+            <div class="object" id="object_eight"></div>
+            <div class="object" id="object_big"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/vconsole.min.js"></script>
+  <script>
+    //分享
+    var appId = "";       //公众号的唯一标识
+    var timestamp = "";   //生成签名的时间戳
+    var nonceStr = "";    //生成签名的随机串
+    var signature = "";   //签名
+    wx.config({
+      debug: false,
+      appId: appId,
+      timestamp: timestamp,
+      nonceStr: nonceStr,
+      signature: signature,
+      jsApiList: [
+        // 所有要调用的 API 都要加到这个列表中
+        'onMenuShareAppMessage',
+        'onMenuShareTimeline'
+      ]
+    });
+    var share_title = '双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！';
+    var share_desc = '双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/172/87/211/13742632.jpg';
+    var share_link = window.location.href;
+    /* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+    wx.ready(function () {
+      // 在这里调用 API
+      wx.onMenuShareAppMessage({
+        title: share_title, // 分享标题
+        desc: share_desc, // 分享描述
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+      wx.onMenuShareTimeline({
+        title: share_title, // 分享标题
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+    });
+    // var vConsole = new VConsole();
+  </script>
+  <script>
+    //图片路径数组
+    var imgSrcArr = [];
+    // 微信点赞图片数组
+    var a = [];
+    // 发群截图数组
+    var b = [];
+    // 车主点赞数组
+    var c = [];
+    // 全局对象，存储图片对象数据
+    var FileObj = {};
+    var index = 0;
+    //change事件
+    function onChenge(event, id, el, n) {
+      index = n;
+      // 获取当前选中的文件
+      var file = event.target.files[0];
+      var fileList = event.target.files;
+      // 图片压缩
+      transformFileToDataUrl(file);
+      for (var i = 0; i < fileList.length; i++) {
+        var imgSrcI = getObjectURL(fileList[i]);
+        imgSrcArr.push(imgSrcI);
+      }
+      addNewContent(el, imgSrcArr);
+      imgSrcArr = [];
+    }
+    // 将file转成dataUrl
+    function transformFileToDataUrl(file) {
+      var imgCompassMaxSize = 2000 * 1024; // 超过 2MB 就压缩
+      // 存储文件相关信息
+      // 部分安卓出现获取不到type的情况
+      FileObj.type = file.type == 'image/png' ? 'image/jpeg' : file.type || 'image/jpeg';
+      FileObj.size = file.size;
+      FileObj.name = file.name;
+      FileObj.lastModifiedDate = file.lastModifiedDate;
+      // 封装好的函数
+      var reader = new FileReader();
+      // file转dataUrl是个异步函数，要将代码写在回调里
+      reader.onload = function (e) {
+        var result = e.target.result;
+        if (result.length < imgCompassMaxSize) {
+          // 图片不压缩
+          compress(result, processData, false);
+        } else {
+          // 图片压缩
+          compress(result, processData);
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+    // 使用canvas绘制图片并压缩
+    function compress(dataURL, callback, shouldCompress = true) {
+      const img = new window.Image();
+      img.src = dataURL;
+      img.onload = function () {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        /*+++**/
+        let width = img.width;
+        let height = img.height;
+        //当图片大于四百万像素的时候 缩小图片比例
+        if ((width * height / 4000000) > 1) {
+          width = Math.floor(width / 3);
+          height = Math.floor(height / 3);
+        }
+        canvas.width = width;
+        canvas.height = height;
+        /*+++**/
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        let compressedDataUrl;
+        if (shouldCompress) {
+          compressedDataUrl = canvas.toDataURL(FileObj.type, 0.92);
+        } else {
+          compressedDataUrl = canvas.toDataURL(FileObj.type, 1);
+        }
+        callback(compressedDataUrl);
+      }
+      img.onerror = function(e){
+        console.log(e);
+      }
+    }
+    //base64转二进制
+    function dataURItoBlob(dataUrl) {
+      if (dataUrl) {
+        const binaryString = window.atob(dataUrl.split(',')[1]);
+        const arrayBuffer = new ArrayBuffer(binaryString.length);
+        const intArray = new Uint8Array(arrayBuffer);
+        const imgFile = dataUrl.split(',')[0].split(':')[1].split(';')[0];;
+        for (let i = 0, j = binaryString.length; i < j; i++) {
+          intArray[i] = binaryString.charCodeAt(i);
+        }
+        const data = [intArray];
+        let blob;
+        //处理兼容UC浏览器 UC浏览器不支持new Blob()
+        try {
+          blob = new Blob(data, { type: imgFile });
+        } catch (error) {
+          window.BlobBuilder = window.BlobBuilder ||
+            window.WebKitBlobBuilder ||
+            window.MozBlobBuilder ||
+            window.MSBlobBuilder;
+          if (error.name === 'TypeError' && window.BlobBuilder) {
+            const builder = new BlobBuilder();
+            builder.append(arrayBuffer);
+            blob = builder.getBlob(imgFile);
+          } else {
+            // Toast.error("版本过低，不支持上传图片", 2000, undefined, false);
+            throw new Error('版本过低，不支持上传图片');
+          }
+        }
+        return blob
+      } else {
+        return ''
+      }
+    }
+    //压缩图片之后的回调函数
+    function processData(dataUtl) { 
+      if (index == 1) {
+        a.push(dataURItoBlob(dataUtl))
+        var h = '已添加<span>' + (a.length) + '</span>张图片,点击继续添加'
+        $('#upBox .nnmu .num').eq(0).html(h)
+      }
+      if (index == 2) {
+        b.push(dataURItoBlob(dataUtl))
+        var h = '已添加<span>' + (b.length) + '</span>张图片,点击继续添加'
+        $('#upBox .nnmu .num').eq(1).html(h)
+      }
+      if (index == 3) {
+        c.push(dataURItoBlob(dataUtl))
+        var h = '已添加<span>' + (c.length) + '</span>张图片,点击继续添加'
+        $('#upBox .nnmu .num').eq(2).html(h)
+      }
+      console.log(a);
+      // console.log(b);
+      // console.log(c);
+    }
+    //图片展示
+    function addNewContent(obj, arr) {
+      obj.html('');
+      for (var a = 0; a < arr.length; a++) {
+        var oldBox = obj.html();
+        obj.html(oldBox + '<div class="imgContainer"><img src=' + arr[a] + '></div>');
+      }
+    }
+    //图片预览路径
+    function getObjectURL(file) {
+      var url = null;
+      if (window.createObjectURL != undefined) { // basic
+        url = window.createObjectURL(file);
+      } else if (window.URL != undefined) { // mozilla(firefox)
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL != undefined) { // webkit or chrome
+        url = window.webkitURL.createObjectURL(file);
+      }
+      return url;
+    }
+    $('#submit').click(function () {
+      var name = $("#name").val(),  //姓名
+        tel = $("#tel").val();      //电话
+      if (name == '' || tel == '') {
+        alert('信息没有填写完整');
+        return false;
+      }
+      if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+        alert('请输入正确的中文名');
+        return false;
+      }
+      if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+        alert('手机格式不正确');
+        return false;
+      }
+      if (!($("input[type='checkbox']").prop('checked'))) {
+        alert('请同意《隐私政策》');
+        return false;
+      }
+      //用formDate对象上传
+      var fd = new FormData();
+
+      for (var i = 0; i < a.length; i++) {
+        fd.append('moments[]', a[i]);
+      }
+      for (var i = 0; i < b.length; i++) {
+        fd.append('groupChat[]', b[i]);
+      }
+      for (var i = 0; i < c.length; i++) {
+        fd.append('carOwnerMoments[]', c[i]);
+      }
+      fd.append('name', name);
+      fd.append('phone', tel);
+
+      $('#loading').css('z-index', '999').addClass('loading');
+      /** 正式接口 */
+      sub('http://rx.yetcar.com/admin.php?s=/HHOA/enroll', fd);
+      /** 测试接口 */
+      // sub('http://192.168.2.202/choujiang/admin.php?s=/HHOA/enroll', fd);
+    })
+    function sub(url, fd) {
+      $.ajax({
+        type: "post",
+        url: url,
+        data: fd,
+        async: true,
+        processData: false,
+        contentType: false,
+        success: function (dat) {
+          if (dat.status == 1) {
+            alert(dat.msg);
+            $('#loading').css('z-index', '-1').removeClass('loading');
+            window.location.reload()
+          } else {
+            alert(dat.msg);
+            $('#loading').css('z-index', '-1').removeClass('loading');
+          }
+        },
+        error: function (dat) {
+          alert(dat.msg);
+          $('#loading').css('z-index', '-1').removeClass('loading');
+        }
+      });
+    }
+  </script>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>解码引擎 趣味汽车栏目</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+        .main {max-width: 750px;margin: 0 auto;}
+        .pr {position: relative;}
+        .cn31 {background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/158/180/208/13571258.jpg") top center repeat-y;width: 100%;height: 17rem;}
+        .cn31 .video {position: absolute;left: 50%;top: 0rem;width: 9rem;margin-left: -4.5rem;}
+        .cn31 .video iframe {
+            height: 5.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .text {background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/30/166/208/13567560.jpg") top center repeat-y;width: 100%;height: 2rem;}
+        .ts {position: absolute;left: 50%;top: 0.1rem;width: 9rem;margin-left: -4.5rem;height: 1.5rem;}
+        .ts p {font-size: 0.4rem;}
+        .cn4 .swiper {width: 9rem;height: 6rem;position: absolute;left: 50%;top: 7.5rem;margin-left: -4.5rem;}
+        .cn4 .swiper-container {width: 100%;}
+        .cn4 .swiper-button-prev {background-image: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/140/141/208/13561295.png");width: 43px;height: 84px;left: -8px;}
+        .cn4 .swiper-button-next {background-image: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/139/141/208/13561294.png");width: 43px;height: 84px;right: -8px;}
+        .swiper-button-next, .swiper-button-prev {margin-top: -42px;}
+        .cn4 .blank {position: absolute;left: 50%;top: 0;width: 4.2rem;height: 1.2rem;margin-left: -2.1rem;}
+        .cn5 .bmk {position: absolute;left: 50%;top: 1.1rem;width: 9rem;height: 8rem;margin-left: -4.5rem;}
+        .cn5 .bmk input,.cn5 .bmk select {width: 80%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;font-size: 0.5rem;}
+        .cn5 .bmk label {font-size: 0.5rem;font-weight: bold;margin: 0 0.2rem;}
+        .cn5 .bmk p {width: 8rem;height: 1rem;border: solid 2px #000000;}
+        .cn5 .bmk .name,.cn5 .bmk .tel,.cn5 .bmk .city {margin-left: 0.5rem;margin-top: 0.3rem;}
+        .cn5 .bmk .tel,.cn5 .bmk .city {margin-top: 0.34rem;}
+        .cn5 .bmk .series {margin-left: 0.5rem;margin-top: 0.389rem;}
+        .cn5 .bmk .series select {width: 67%;}
+        .cn5 .bmk .submit {margin-left: 0.4rem;margin-top: 0.389rem;width: 8.2rem;background: #f40030;border: none;height: 1.1rem;}
+        .privacyPolicy {
+            width: 6rem;
+            margin-left: -2rem;
+            position: absolute;
+            left: 50%;
+            height: 1rem;
+            top: 8.8rem;
+        }
+        .privacyPolicy input {
+            position: absolute;
+            left: 0;
+            top: 0.06rem;
+            width: 0.4rem;
+            height: 0.4rem;
+        }
+        .privacyPolicy span {
+            display: inline-block;
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+        }
+        a,a:hover,a:active{color: #000;text-decoration: none;}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/246/239/208/13586391.jpg" alt=""></div>
+    <div class="cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/239/208/13586392.jpg" alt=""></div>
+    <div class="cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/239/208/13586393.jpg" alt=""></div>
+    <div class="cn31 pr">
+        <div class="video">
+            <iframe  frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=s0664xs3ro9&tiny=0&auto=0" allowfullscreen scrolling="no"></iframe>
+            <iframe  frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=n0679epgbcf&tiny=0&auto=0" allowfullscreen scrolling="no"></iframe>
+            <iframe  frameborder="0" width="100%" height="100%" src="https://v.qq.com/iframe/player.html?vid=v0635cj622a&tiny=0&auto=0" allowfullscreen scrolling="no"></iframe>
+        </div>
+    </div>
+    <!--视频简介-->
+    <div class="jz">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/160/180/208/13571260.jpg" alt="">
+    </div>
+    <div class="text pr">
+        <div class="ts">
+            <p>该栏目设计和创作融合了汽车测评、网络娱乐栏目特点. </p>
+        </div>
+    </div>
+    <div class="cn4 pr">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/250/239/208/13586395.jpg" alt="">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/222/239/208/13586367.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/223/239/208/13586368.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/224/239/208/13586369.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/225/239/208/13586370.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0MjU0MDEwNw==&scene=124#wechat_redirect" class="blank"></a>
+    </div>
+    <div class="cn5 pr">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/146/244/208/13587566.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <label>姓名</label>
+                <input type="text" id="name">
+            </p>
+            <p class="tel">
+                <label>电话</label>
+                <input type="tel" id="tel" maxlength="11">
+            </p>
+            <p class="city">
+                <label>城市</label>
+                <select name="" id="city">
+                    <option value="0">请选择城市</option>
+                    <option value="广州市">广州市</option>
+                    <option value="深圳市">深圳市</option>
+                    <option value="惠州市">惠州市</option>
+                    <option value="东莞市">东莞市</option>
+                    <option value="珠海市">珠海市</option>
+                    <option value="中山市">中山市</option>
+                    <option value="佛山市">佛山市</option>
+                    <option value="江门市">江门市</option>
+                    <option value="其他">其他</option>
+                </select>
+            </p>
+            <p class="series">
+                <label>意向车型</label>
+                <select name="" id="series">
+                    <option value="0">请选择车型</option>
+                    <option value="182">全新一代宝来</option>
+                    <option value="253">迈腾</option>
+                    <option value="198">速腾</option>
+                    <option value="392">一汽-大众CC</option>
+                    <option value="278">高尔夫</option>
+                    <option value="181">捷达</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;width: 100%;font-weight: bold;color: white;" value="确认报名">
+            </p>
+        </div>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+    </div>
+    <div class="cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/239/208/13586397.jpg" alt=""></div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script>
+    //分享
+    var appId = "";       //公众号的唯一标识
+    var timestamp = "";   //生成签名的时间戳
+    var nonceStr = "";    //生成签名的随机串
+    var signature = "";   //签名
+    wx.config({
+        debug: false,
+        appId: appId,
+        timestamp: timestamp,
+        nonceStr: nonceStr,
+        signature: signature,
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareAppMessage',
+            'onMenuShareTimeline'
+        ]
+    });
+    var share_title = '解码引擎 趣味汽车栏目';
+    var share_desc = '汽车不够骚？等着你来撩';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/192/141/208/13561347.jpg';
+    var share_link = window.location.href;
+    /* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+    wx.ready(function () {
+        // 在这里调用 API
+        wx.onMenuShareAppMessage({
+            title: share_title, // 分享标题
+            desc: share_desc, // 分享描述
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            type: '', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () {
+                // 用户成功分享后执行的回调函数
+
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: share_title, // 分享标题
+            link: share_link, // 分享链接
+            imgUrl: share_image, // 分享图标
+            success: function () {
+                // 用户成功分享后执行的回调函数
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+                //alert("分享取消");
+            }
+        });
+    });
+</script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: 5000,//可选选项，自动滑动
+        loop:true,
+        autoplayDisableOnInteraction : false,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                series_id = $('#series').val(),    //车型id
+                city = $('#city').val(),
+                brand_id = 23, //品牌
+                act_id = 2337,  //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id : act_id,
+                    sex: city,
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( city == '0' ) {
+                alert('请选择城市');
+                return false;
+            }
+            if( series_id == '0' ) {
+                alert('请选择车型');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+</html>

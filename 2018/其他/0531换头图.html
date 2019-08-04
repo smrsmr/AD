@@ -1,0 +1,1613 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2018 深港澳国际车展</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <meta name="viewport" content="width=1100,user-scalable=yes" />
+    <style type="text/css">
+        blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,
+        legend,li,ol,p,pre,td,textarea,th,ul { margin: 0 auto; padding: 0;}
+        body { font-family: "微软雅黑"; font-size: 14px; color: #333;}
+        li { list-style: none;}
+        img { vertical-align: bottom;}
+        input,select { outline: none; font-family: "微软雅黑"; box-sizing: border-box; border: none;}
+        input[type="text"],input[type="tel"] { padding-left: 3px;}
+        a { text-decoration: none; color: inherit;}
+
+        .banner { width: 100%;}
+        .banner .banner1 { background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/12/203/208/13576977.jpg) center top no-repeat; height: 574px;}
+        .content-wrap { position: relative;}
+        .con-bg { width: 100%;}
+        /*.con-bg0 { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/237/191/203/13249017.jpg) center top no-repeat; height: 526px;}*/
+        .con-bg1 { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/29/158/208/13565519.jpg) center top no-repeat; height:421px;}
+        .con-bg2 { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/30/158/208/13565520.jpg) center top no-repeat; height: 658px;}
+        .con-bg3 { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/31/158/208/13565521.jpg) center top no-repeat; height: 605px;}
+        .con-bg4 { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/32/158/208/13565522.jpg) center top no-repeat; height: 542px;}
+
+        .con-body { width: 1000px; position: absolute; top: 0; left: 50%; margin-left: -500px;}
+
+
+        /*特价*/
+        .sale { height: 530px;}
+        .sale h3 { height: 148px; background: url(http://img1.gtimg.com/autodongguan/pics/hv1/253/191/203/13249033.png) top left no-repeat; position: relative; left: -5px; z-index: 90;}
+        .sale ul { margin-top: -42px; height: 390px; z-index: 0;}
+        .sale ul li { width: 230px; height: 380px; float: left; margin-right: 21px; border: 2px solid #1aeaf6; border-radius: 6px; overflow: hidden; position: relative;}
+        .sale ul li:nth-of-type(4) { margin-right: 0;}
+        .sale ul li .carInfo { position: absolute; bottom: 0;left: 0; width: 220px; height: 90px; background: linear-gradient(90deg,#f74253,#4e46bd); color: #fff; font-size: 16px; padding: 10px 0 0 10px;}
+        .carName { font-weight: bold; line-height: 22px;}
+        .carPrice { color: #f5c2c8; line-height: 24px; margin-bottom: 6px;}
+        .salePrice { font-size: 22px; color: #ffe50b; font-style: italic; font-weight: bold;}
+        .carPrice span, .salePrice span { float: right; margin-right: 10px;}
+        .carPrice span { text-decoration: line-through;}
+
+
+        /*报名*/
+        .sign { height: 140px;}
+        .signCon { padding-top: 140px; padding-left:33px;}
+        .sign input, .sign select { width: 180px; height: 45px; margin-right:20px; background: transparent; -webkit-appearance: none; appearance: none; padding-left: 5px; font-size: 16px;box-sizing: border-box;}
+        #submit { vertical-align: middle; margin: -5px 0 0 15px; cursor: pointer;}
+
+
+        /*价格区间*/
+        .priceRank { padding-top: 289px; height: 633px; margin-bottom: 110px;}
+        /*.rank h3 { height: 168px; background: url(http://img1.gtimg.com/autodongguan/pics/hv1/247/191/203/13249027.png) top left no-repeat; margin-bottom: -16px; position: relative; z-index: 99;}*/
+        .sideTabs { width: 115px; height: 497px; padding-top:140px;margin-top: -10px; background: url(http://img1.gtimg.com/autodongguan/pics/hv1/42/158/208/13565532.jpg) no-repeat; float: left; position: relative;background-size: 100% 100%;}
+        .tabAct { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/79/158/208/13565569.png) center center no-repeat; /*position: absolute; top: 161px; left: 9px; z-index: 1; transition: all 0.2s ease;*/background-size: 100% 100%;}
+        .tab { height: 70px; text-align: center; font-style: italic; line-height: 70px; color: #fff; font-size: 20px; font-weight: bold; cursor: pointer; position: relative; z-index: 2; margin-bottom: 30px;width:94px;margin-left: 10px;}
+        .tabViews { width: 870px; padding-left: 10px; float: left;}
+        .tabViews ul { width: 900px; display: none;}
+        .tabViews ul.active { display: block;}
+        .view li { width: 210px; height: 180px; float: left; margin-bottom:30px; margin-right: 10px; border: 2px solid #1aeaf6; position: relative;}
+        .view li .bmWrap { width: 80%; padding: 0 10%; padding-top: 15px; height: 165px; background: rgba(255,255,255,.8); position: absolute; top: 0; left: 0; opacity: 0; transform: scale(0); transition: all 0.3s ease; z-index: 999;}
+        .bmWrap p { text-align: center;}
+        .bmWrap input { width: 120px; height: 30px; background: #141035; line-height: 25px; color: #fff; border: 2px solid #1aeaf6; margin-bottom: 5px;}
+        .bmWrap .submit { width: 182px; height: 32px; border: 2px solid #1aeaf6; color: #ffd000; font-size: 20px; font-weight: bold; background: #141035; margin-top: 15px; cursor: pointer;}
+        .view li .bmWrap.active { opacity: 1; transform: scale(1);}
+        .liCon { text-align: center; color: #444; line-height: 24px; cursor: pointer;}
+        .liCon h4 { width: 120px; height: 25px; border: 2px solid #1aeaf6; margin-top: -16px; background: #141035; color: #fff; margin-bottom: 4px;}
+        .liInfo { width: 100%; height: 45px; position: absolute; bottom: 0; left: 0; background: #fff; font-weight: bolder; color: #141035;}
+
+        /*抽奖*/
+        .lucky { width: 320px; height: 290px; margin-top: 195px; margin-left: 41px; position: relative;}
+        .pink { color: #f14754 !important; font-weight: bolder;font-size:16px;}
+        .cjwrap {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 290px;
+            /*background: rgba(0,0,0,.5);*/
+        }
+        .cjwrap ul {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .cjwrap li {
+            width: 28%;
+            height: 28%;
+            padding: 2%;
+            background: transparent;
+            float: left;
+            border-radius: 6px;
+        }
+        .cjwrap li .jp,.cjwrap li .btn {
+            width: 96%;
+            height: 96%;
+            padding: 2%;
+            border-radius: 6px;
+            border: 1px solid #00e8f7;
+        }
+        .cjwrap li:nth-of-type(5) {
+            width: 103px;
+            padding: 2% 0 2% 2px;
+        }
+        .cjwrap li .btn {
+            background: url(http://img1.gtimg.com/autodongguan/pics/hv1/243/191/203/13249023.png) center center no-repeat;
+            background-size: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        .cjwrap li .jp .pic {
+            width: 100%;
+            height: 100%;
+        }
+        .cjwrap li .jp.active {
+            background: #ffd140;
+            border: 1px solid #ffd140;
+            background-size: 100% 100%;
+        }
+
+        @media only screen and (min-width: 100px) and (max-width: 940px) {
+            .footernew { display: none;}
+        }
+        .carImg{margin-top: 20px;}
+    </style>
+</head>
+<body>
+<!--自适应头图-->
+<div class="banner">
+    <div class="banner1"></div>
+    <div class="cars"></div>
+</div>
+
+<div class="content-wrap">
+    <!--主体背景-->
+    <!-- <div class="con-bg0 con-bg"></div> -->
+    <div class="con-bg1 con-bg"></div>
+    <div class="con-bg2 con-bg"></div>
+    <div class="con-bg3 con-bg"></div>
+    <div class="con-bg4 con-bg"></div>
+    <!--主体浮层-->
+    <div class="con-body">
+        <!--特供价-->
+        <!--  <div class="sale">
+           <h3></h3>
+           <ul>
+             <li>
+               <PC src="http://img1.gtimg.com/autodongguan/pics/hv1/24/192/203/13249059.jpg"/>
+               <div class="carInfo">
+                 <p class="carName">奥迪A3</p>
+                 <p class="carPrice">官方指导价<span>19.23万</span></p>
+                 <p class="salePrice">成交价<span>1？.5万</span></p>
+               </div>
+             </li>
+             <li>
+               <PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/35/193/203/13249325.jpg"/>
+               <div class="carInfo">
+                 <p class="carName">广本冠道</p>
+                 <p class="carPrice">官方指导价<span>24.58万</span></p>
+                 <p class="salePrice">成交价<span>2？.58万</span></p>
+               </div>
+             </li>
+             <li>
+               <PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/36/193/203/13249326.jpg"/>
+               <div class="carInfo">
+                 <p class="carName">传祺GS4</p>
+                 <p class="carPrice">官方指导价<span>9.98万</span></p>
+                 <p class="salePrice">成交价<span>1？.15万</span></p>
+               </div>
+             </li>
+             <li>
+               <PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/37/193/203/13249327.jpg"/>
+               <div class="carInfo">
+                 <p class="carName">东本思域</p>
+                 <p class="carPrice">官方指导价<span>11.59万</span></p>
+                 <p class="salePrice">成交价<span>1？.50万</span></p>
+               </div>
+             </li>
+           </ul>
+         </div> -->
+
+        <!--报名-->
+        <div class="sign">
+            <div class="signCon">
+                <label></label><input type="text" name="name" id="name" placeholder="请输入姓名" value="" /><label></label><input type="tel" name="phone" id="phone" placeholder="请输入电话" value="" /><label></label><select name="brand" id="brand">
+                <option value="0">选择品牌</option>
+            </select><label></label><select name="car" id="car" style="width: 145px;margin-left: -20px;">
+                <option value="0">选择车型</option>
+            </select><input type="button" id="submit" value="" />
+            </div>
+        </div>
+
+        <!--价格区间-->
+        <div class="priceRank rank">
+            <h3></h3>
+            <div class="sideTabs">
+                <div class="tab tab1 tabAct">5-15万</div>
+                <div class="tab tab1">15-25万</div>
+                <div class="tab tab1">25-35万</div>
+                <div class="tab tab1">35万以上</div>
+                <!-- <div class="tabAct"></div> -->
+            </div>
+            <div class="tabViews">
+                <div class="view">
+                    <!--5-15万-->
+                    <ul class="active tab_ul" >
+                        <li>
+                            <div class="bmWrap">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <!--品牌  data-brand="22"  车型 data-car="177"-->
+                                <input type="button" class="submit" data-brand="8" data-car="8" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>传祺GS4</h4>
+                                <!--车图 png-->
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/142/186/203/13247647.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">1.5万元</span></p>
+                                    <p>按揭享免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="10" data-car="44" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>一丰卡罗拉</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/186/203/13247654.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2.2万元</span></p>
+                                    <p>享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="11" data-car="511" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>日产劲客</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/148/186/203/13247653.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6000元</span></p>
+                                    <p>置换赠1.1万礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="23" data-car="278" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>大众高尔夫</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/56/174/208/13569626.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2.2万元</span></p>
+                                    <p>按揭享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="32" data-car="214" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>吉利博越</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/140/186/203/13247645.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6000元</span></p>
+                                    <p>享18个月免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="12" data-car="80" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>本田飞度</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/59/174/208/13569629.png"/>
+                                <div class="liInfo">
+                                    <p>优惠<span class="pink">5000元</span></p>
+                                    <p>赠购车礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="12" data-car="81" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>本田锋范</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/143/186/203/13247648.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">7500元</span></p>
+                                    <p>劲享0首付</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="6" data-car="34" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>福特福睿斯</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/144/186/203/13247649.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2万元</span></p>
+                                    <p>赠超值礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="24" data-car="183" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>马自达昂克赛拉</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/61/174/208/13569631.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6000元</span></p>
+                                    <p>享18期免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="23" data-car="198" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>大众速腾</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/67/174/208/13569637.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2.4万元</span></p>
+                                    <p>享36期免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="11" data-car="311" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>日产轩逸</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/78/174/208/13569648.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2万元</span></p>
+                                    <p>赠超值礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="13" data-car="90" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>大众朗逸</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/91/174/208/13569661.png"/>
+                                <div class="liInfo">
+                                    <p>优惠<span class="pink">2万元</span></p>
+                                    <p>两年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--15-25万-->
+                    <ul class="tab_ul">
+                        <li>
+                            <div class="bmWrap">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="1" data-car="21" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>宝马X1</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/155/174/208/13569725.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6万元</span></p>
+                                    <p>赠豪华礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="8" data-car="51" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奥迪A3</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/125/186/203/13247630.png"/>
+                                <div class="liInfo">
+                                    <p>优惠<span class="pink">3.8万元</span></p>
+                                    <p>赠2.8万礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="22" data-car="316" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>传祺GS8</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/121/186/203/13247626.png"/>
+                                <div class="liInfo">
+                                    <p>首付<span class="pink">二成</span></p>
+                                    <p>赠购车礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="6" data-car="39" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>福特翼虎</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/168/186/203/13247673.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">3万元</span></p>
+                                    <p>赠购车礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="12" data-car="83" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>本田缤智</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/138/186/203/13247643.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">5000元</span></p>
+                                    <p>享2年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="18" data-car="155" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>广丰雷凌</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/154/186/203/13247659.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">1.5万元</span></p>
+                                    <p>补贴高达4000元</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="16" data-car="127" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>比亚迪秦</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/186/203/13247641.png"/>
+                                <div class="liInfo">
+                                    <p><span class="pink">直上深圳牌</span></p>
+                                    <p>补贴3.6万</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="10" data-car="45" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>一丰RAV4荣放</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/162/186/203/13247667.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">3.2万元</span></p>
+                                    <p>赠超值礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="61" data-car="394" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>林肯MKZ</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/121/174/208/13569691.jpg"/>
+                                <div class="liInfo">
+                                    <p>优惠<span class="pink">2万元</span></p>
+                                    <p>享2年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="12" data-car="84" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>广本雅阁</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/124/186/203/13247629.png"/>
+                                <div class="liInfo">
+                                    <p><span class="pink">16.98万起</span></p>
+                                    <p>报名优先提车</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="8" data-car="52" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奥迪Q3</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/123/174/208/13569693.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6.5万</span></p>
+                                    <p>享2年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="22" data-car="179" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>传祺GA3S PHEV</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/141/186/203/13247646.png"/>
+                                <div class="liInfo">
+                                    <p><span class="pink">直上深圳牌</span></p>
+                                    <p>优惠3.6万</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--25-35万-->
+                    <ul class="tab_ul">
+                        <li>
+                            <div class="bmWrap">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="18" data-car="153" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>广丰汉兰达</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/146/186/203/13247651.png"/>
+                                <div class="liInfo">
+                                    <p>首付<span class="pink">5万元</span></p>
+                                    <p>赠购车礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="8" data-car="53" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奥迪A4L</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/126/186/203/13247631.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">9万元</span></p>
+                                    <p>按揭享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="1" data-car="184" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>宝马3系</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/129/186/203/13247634.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">10万元</span></p>
+                                    <p>首付两成</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="7" data-car="62" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奔驰C级</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/132/186/203/13247637.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">7万元</span></p>
+                                    <p>赠奔驰保养礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="7" data-car="61" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奔驰GLA</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/134/186/203/13247639.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">5.5万元</span></p>
+                                    <p>赠奔驰保养礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="5" data-car="27" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>雷克萨斯ES</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/153/186/203/13247658.png"/>
+                                <div class="liInfo">
+                                    <p>首付<span class="pink">2成起</span></p>
+                                    <p>置换补贴1万元</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="12" data-car="445" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>广本冠道</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/145/186/203/13247650.png"/>
+                                <div class="liInfo">
+                                    <p>劲享<span class="pink">0首付</span></p>
+                                    <p>报名优先提车</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="18" data-car="154" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>广丰凯美瑞</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/135/174/208/13569705.png"/>
+                                <div class="liInfo">
+                                    <p><span class="pink">赠购车礼包</span></p>
+                                    <p>报名优先提车</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="13" data-car="468" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>大众途观L</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/246/186/203/13247751.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">1.5万元</span></p>
+                                    <p>置换补贴高达2万</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="6" data-car="41" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>福特锐界</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/163/186/203/13247668.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2万元</span></p>
+                                    <p>按揭享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="11" data-car="77" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>日产奇骏</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/160/186/203/13247665.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2.2万元</span></p>
+                                    <p>置换补贴高达1.2万</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="11" data-car="76" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>日产天籁</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/175/171/208/13568980.jpg"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2.7万元</span></p>
+                                    <p>享2年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--35万以上-->
+                    <ul class="tab_ul">
+                        <li>
+                            <div class="bmWrap">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="8" data-car="55" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奥迪Q5</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/128/186/203/13247633.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">11万元</span></p>
+                                    <p>赠豪华礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="7" data-car="64" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奔驰E级</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/133/186/203/13247638.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">2万元</span></p>
+                                    <p>赠奔驰保养礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="5" data-car="196" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>宝马5系GT</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/130/186/203/13247635.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">36.25万元</span></p>
+                                    <p>首付19.27万</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="8" data-car="54" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奥迪A6L</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/127/186/203/13247632.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">8.38万元</span></p>
+                                    <p>按揭享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="17" data-car="446" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>路虎发现5</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/158/186/203/13247663.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">15万元</span></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="61" data-car="358" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>林肯MKC</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/136/174/208/13569706.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">3万元</span></p>
+                                    <p>享2年免息</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="73" data-car="471" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>凯迪拉克XT5</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/150/186/203/13247655.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">6万元</span></p>
+                                    <p>赠豪华礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="42" data-car="264" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>保时捷卡宴</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoshenzhen/pics/hv1/146/174/208/13569716.png"/>
+                                <div class="liInfo">
+                                    <p>首付<span class="pink">20万起</span></p>
+                                    <p>赠购车礼包</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="7" data-car="63" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>奔驰GLC</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/135/186/203/13247640.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">5万元</span></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="17" data-car="132" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>揽胜极光</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/152/186/203/13247657.png"/>
+                                <div class="liInfo">
+                                    <p>首付<span class="pink">11.12万元</span></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="19" data-car="48" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>一丰皇冠</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/147/186/203/13247652.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">4.3万元</span></p>
+                                    <p>享2年0利率</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="bmWrap ">
+                                <p>
+                                    <input type="text" name="name" class="name" placeholder="请输入姓名" value="" />
+                                </p>
+                                <p>
+                                    <input type="tel" name="phone" class="phone" placeholder="请输入电话" value="" />
+                                </p>
+                                <input type="button" class="submit" data-brand="73" data-car="408" name="submit" id="" value="抢先预留名额" />
+                            </div>
+                            <div class="liCon">
+                                <h4>凯迪拉克CT6</h4>
+                                <img class="carImg" width="200" height="68" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/187/203/13247763.png"/>
+                                <div class="liInfo">
+                                    <p>特惠<span class="pink">8万元</span></p>
+                                    <p>首付10.8万</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--end-->
+                </div>
+            </div>
+        </div>
+
+
+        <!--抽奖-->
+        <div class="lucky">
+            <div class=" cjwrap" id="cjWrap">
+                <ul>
+                    <li>
+                        <div class="jp jp0 "><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/248/191/203/13249028.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp1"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/12/159/208/13565757.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp2"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/250/191/203/13249030.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp7"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/252/191/203/13249032.png"/></div>
+                    </li>
+                    <li>
+                        <div class="btn" id="btn"><div class="pic"></div></div>
+                    </li>
+                    <li>
+                        <div class="jp jp3"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/248/191/203/13249028.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp6"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/250/191/203/13249030.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp5"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/12/159/208/13565757.png"/></div>
+                    </li>
+                    <li>
+                        <div class="jp jp4"><img class="pic" src="http://img1.gtimg.com/autodongguan/pics/hv1/250/191/203/13249030.png"/></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .fl img { width: 36px; margin: 0;}
+
+    .footernew {width:910px;height:100px;color:#515151;text-align:center;font-size:12px;line-height:24px;margin:12px auto 20px auto;overflow:hidden;}
+    .footheight{height:60px;}
+    .footernew a {color:#515151;text-decoration:none;}
+    .footernew a.lchot {color:#bd0a01;}
+    .footernew a:hover {color:#bd0a01;text-decoration:underline;}
+    .footernew a:visited {color:#515151;}
+    .footernew div{width:546px; margin:0 auto;}
+    .footernew p{float:left;width:120px;height:50px;border:1px solid #d2d2d2;padding:0;line-height:20px; margin:6px;font-size:12px;}
+    .footernew .fl{float:left;padding:3px;}
+    .footernew .fr{float:right; width:72px;padding:5px 3px 0 3px;}
+
+    @media only screen and (min-width: 100px) and (max-width: 930px) {
+        .footernew { display: none;}
+    }
+</style>
+<div class="footernew" onclick="register0410('footer',1);">
+    <a href="http://www.tencent.com/" target="_blank">关于腾讯</a> | <a href="http://gd.qq.com/gydyym.htm" target="_blank">关于腾讯·大粤网</a> | <a href="http://www.qq.com/contract.shtml" target="_blank">服务条款</a> | <a href="http://open.qq.com/" target="_blank">开放平台</a> | <a href="http://gd.qq.com/gydyym.htm#ad" target="_blank">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank">商务洽谈</a> | <a href="http://gd.qq.com/gdzp.htm" target="_blank">腾讯·大粤网招聘</a> | <a href="http://hr.tencent.com/" target="_blank">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank">腾讯公益</a> | <a href="http://gd.qq.com/gdmap/index.htm" target="_blank">网站导航</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank">版权所有</a> | <a href="http://gd.qq.com/a/20170228/026676.htm" target="_blank">转载须知</a><br>
+
+    <a href="http://www.szga.gov.cn" target="_blank">有害短信息举报</a> | <a href="http://www.gdis.cn/admin/newstext_netsun.asp" class="lchot" target="_blank">阳光·绿色网络工程</a> | <a href="http://www.qq.com/copyright.shtml" target="_blank">版权保护投诉指引</a> | <a href="http://www.gdca.gov.cn/" target="_blank">广东省通管局</a> | <a href="http://www.qq.com/scio.htm" target="_blank">新闻信息服务许可证</a> | <a href="http://www.qq.com/internet_licence.htm" target="_blank">互联网出版许可证</a><br>
+
+    <span style="line-height:30px;"><a href="http://www.qq.com/xwdz.shtml" target="_blank">粤府新函[2001]87号</a> <a href="http://www.qq.com/culture.shtml" target="_blank">文网文[2008]084号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank">B2-20090028</a></span><br>
+    <span style="font-family:Arial;">Copyright &copy; 1998 - <script language="javascript">document.write(new Date().getFullYear());</script>2017 Tencent. All Rights Reserved</span>
+
+</div>
+<div class="footernew footheight">
+    <div style="width:678px;">
+        <p>
+            <span class="fl"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="http://img1.qq.com/www/pics/816/816587.gif" width="36" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank">深圳网络警<br>
+        察报警平台</a></span>
+        </p>
+        <p>
+
+            <span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank"><img src="http://img1.qq.com/www/pics/6743/6743671.jpg" width="36" height="42" border="0"></a></span>
+            <span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank">公共信息安<br>
+        全网络监察</a></span>
+        </p>
+
+        <p>
+            <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank"><img src="http://mat1.qq.com/www/images/ind36.gif" width="35" height="43" border="0"></a></span>
+            <span class="fr"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" class="lcblack" target="_blank">经营性网站<br>
+
+        备案信息</a></span>
+        </p>
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://net.china.cn/chinese/index.htm" target="_blank"><img src="http://mat1.qq.com/www/images/200709/home_b.gif" width="44" height="44" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://net.china.cn/chinese/index.htm" class="lcblack" target="_blank">不良信息<br>
+        举报中心</a></span>
+        </p>
+
+        <p>
+            <span class="fl" style="width:44px;"><a href="http://www.wenming.cn" target="_blank"><img src="http://mat1.qq.com/www/images/allskin/wmlogo.gif" width="44" height="42" border="0"></a></span>
+            <span class="fr" style="width:64px;"><a href="http://www.wenming.cn" class="lcblack" target="_blank">中国文明网<br>传播文明</a></span>
+        </p>
+    </div>
+</div>
+
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/popAlert.create.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="http://123.207.87.32/act/zxq_commonCode/js/mnAlert.js" charset="utf-8"></script> -->
+<script type="text/javascript">
+    //alert
+    var pop = new Popup('rgba(35,45,88,.8)', 1, '腾讯汽车提示');
+
+    //成交价格
+    var salePrice = function(){
+        var salePriceArr = ['25.58万','35.58万','15.58万','55.58万'];
+        var priceText = $('.salePrice span');
+        for(var i=0;i<salePriceArr.length;i++){
+            priceText.eq(i).html(salePriceArr[i]);
+        }
+    };
+
+    //切换tab
+    var Tab = (function(){
+        var tabs = $('.tab');
+        var views = $('.view ul');
+        var tabAct = $('.tabAct');
+        var Top = $('.tabAct').offset();
+        //报名弹出
+        $('.tab').click(function(){
+            $('.tab_ul').hide().eq($(this).index()).show();
+            $(this).addClass('tabAct').siblings().removeClass('tabAct');
+        })
+        var getSign = function(){
+            var lis = $('.view ul.active li');
+
+            lis.mouseover(function(){
+                lis.find('.bmWrap').removeClass('active');
+                $(this).find('.bmWrap').addClass('active');
+            })
+        }
+        //报名
+        var Signup = function(){
+            var Submit = $('.submit');
+            var flag = true;
+            Submit.click(function(){
+                if(flag){
+                    var brandid = $(this).attr('data-brand');
+                    var carid = $(this).attr('data-car');
+                    var name = $(this).parent().find('.name').val();
+                    var tel = $(this).parent().find('.phone').val();
+
+                    if(name==''||tel==''){
+                        pop.showNotice('信息没有填写完整');
+                        return false;
+                    }
+                    if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                        pop.showNotice('请输入正确的中文名');
+                        return false;
+                    };
+                    if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]| 17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                        pop.showNotice('手机格式不正确');
+                        return false;
+                    }
+
+                    flag = false;
+                    $.ajax({
+                        type:"post",
+                        url:"http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                        data:{
+                            name:name,
+                            phone:tel,
+                            series_id:carid,
+                            brand_id:brandid,
+                            act_id:2427
+                        },
+                        dataType:'jsonp',
+                        async:true,
+                        success:function(data){
+
+                            if(data.status==1){
+                                pop.showNotice('恭喜你，报名成功！');
+                                //luck.login的状态和电话
+                                luck.login = true;
+                                luck.phone = tel;
+                                salePrice();
+                            }else{
+                                pop.showNotice("很抱歉，你报名失败。");
+                                flag = false;
+                            }
+                        }
+                    })
+                }else{
+                    pop.showNotice('请勿重复报名');
+                }
+            })
+        }
+        getSign();
+        Signup();
+
+        tabs.click(function(){
+            var index = $(this).index();
+            views.removeClass('active').siblings().eq(index).addClass('active');
+            tabAct.css('top',$(this).offset().top-Top);
+
+            getSign();
+        })
+
+
+    })();
+    //九宫格抽奖
+    var luck = function(ID,prize,callback){
+        var resetIndex = 0; //每次开始抽奖都从位置0开始转
+        var prize = prize;  //奖品位置
+        var costTime = 40;  //每次运动花的时间
+        var rounds = 4;     //转多少圈才开始减速
+        var realRounds = 0; //实际的圈数，从0开始累加
+        var timer = null;   //初始计时器
+        var randomFrequency = 8*Math.round(Math.random()*1) + prize;  //随机转动8的倍数格数加奖品格数
+        var ele = $(ID);
+        var login=false;
+        var phone=null;
+
+        function lucky(){
+            timer = setTimeout(function(){
+                //判断运动和重置位置
+                switch (resetIndex){
+                    case 0:
+                        ele.find('.jp7').removeClass('active');
+                        ele.find('.jp'+resetIndex).addClass('active');
+                        resetIndex++;
+                        break;
+                    case 7:
+                        ele.find('.jp6').removeClass('active');
+                        ele.find('.jp'+resetIndex).addClass('active');
+                        //到7重置位置
+                        resetIndex=-1;
+                        resetIndex++;
+                        //转到7加一圈
+                        realRounds++;
+                        break;
+                    default:
+                        ele.find('.jp'+(resetIndex-1)).removeClass('active');
+                        ele.find('.jp'+resetIndex).addClass('active');
+                        resetIndex++;
+                        break;
+                }
+                // console.log(realRounds)
+                //判断圈数和开始减速
+                if(realRounds>rounds){
+                    costTime += 40;
+                    // console.log('剩余'+randomFrequency)
+                    if(randomFrequency==0){
+                        clearTimeout(timer);
+                        setTimeout(function(){
+                            callback&&callback();
+                        },costTime+100)
+                        return false;
+                    }else{
+                        randomFrequency--;
+                    }
+                }
+
+                //每次计时器开始  函数自调用一次
+                lucky(ID,prize);
+            },costTime)
+        }
+
+        return {
+            lucky:lucky
+        }
+    };
+    var click = false;
+    $('#btn').on('click',function() {
+        if(click){
+            return false;
+        }else{
+            if(luck.login){
+                $.ajax({
+                    type:"get",
+                    url:"http://www.yetcar.com/inxdex.php?s=/Home/LotteryActivity/getLucky",
+                    data:{
+                        phone: luck.phone,
+                        act_id:10
+                    },
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        console.log(data)
+                        if(data.status==1){
+                            lottery_id= data.lottery_id;
+                            var prizeID = data.msg.prize_id-43;
+                            console.log(prizeID)
+
+                            luck($('#cjWrap'), prizeID,function(){
+                                pop.showNotice('尊贵的客户， <span class="pink"> 恭喜你获得：'+data.msg.prize_name+'</span>，成功报名后可现场兑奖。');
+
+                            }).lucky();
+                        }
+                        click = true;
+                    },
+                })
+            }else{
+                pop.showNotice('请先报名，再抽奖',function(){
+                    $('html,body').animate({'scrollTop':300+'px'},300)
+                })
+            }
+        }
+    })
+    //品牌车型
+    var GetBrand = function(brandid,resel){
+        var URL='http://www.yetcar.com/index.php?s=/Home/Data/getModels';
+        var Data= {
+            series_id:brandid
+        };
+        resel.html('<option value="0">选择车型</option>');
+        $.ajax({
+            type:"get",
+            url:URL,
+            data:Data,
+            async:true,
+            dataType:"jsonp",
+            success:function(data){
+                var dataArr=data.data;
+                for(var i=0;i<dataArr.length;i++){
+                    resel.append('<option value="'+dataArr[i].id+'">'+dataArr[i].name+'</option>')
+                }
+            }
+        })
+    };
+    var getBrandAndCar = (function(){
+        var brand = $('#brand');
+        var car = $('#car');
+
+        $.ajax({
+            type:"get",
+            url:"http://www.yetcar.com/index.php?s=/Home/Data/GetSeries",
+            data:{},
+            dataType:'jsonp',
+            async:true,
+            success:function(res){
+                if(res.status==1){
+                    var resHtml = '<option value="0">选择品牌</option>';
+                    for(var i=0;i<res.data.length;i++){
+                        var html = '<option value="'+res.data[i].id+'">'+res.data[i].name+'</option>';
+                        resHtml += html;
+                    }
+                    $('#brand').html(resHtml);
+                }
+            }
+        });
+
+        brand.change(function(){
+            var brandId = $(this).val();
+            GetBrand(brandId,car);
+        })
+
+    })();
+
+    //报名
+    var Sign = (function(){
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#phone").val(),  //电话
+
+                    series_id = $('#car').val(),  //车型id
+                    car_name = $('#car option:checked').text(),
+
+                    city_id = 'GZ200',
+                    city = '深圳',
+                    prov_id = 'DG',
+                    prov = '广东',
+                    dealer_id = 'DGCZ',
+                    dealer = '深港澳国际车展',
+
+                    Url = "http://www.yetcar.com/inxdex.php?s=/Home/LotteryActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        city_id:city_id,
+                        city:city,
+                        province_id:prov_id,
+                        province:prov,
+                        models_id:series_id,
+                        models_name:car_name,
+                        dealers_id:dealer_id,
+                        dealers_name:dealer,
+                        act_id:10,
+                    }
+
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    pop.showNotice('<p>报名信息没有填写完整</p>');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    pop.showNotice('<p>请输入正确的中文名</p>');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    pop.showNotice('<p>手机格式不正确</p>');
+                    return false;
+                }
+                if(series_id==0){
+                    pop.showNotice('<p>请选择车型</p>');
+                    return false;
+                }
+
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"get",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        console.log(data)
+                        if(data.status==1){
+                            pop.showNotice('<p>恭喜您，报名成功！</p><p>您可以在下方参加抽奖活动</p><p>(注：每个手机号只有一次抽奖机会)！</p>');
+                            //luck.login的状态和电话
+                            luck.login = true;
+                            luck.phone = tel;
+                            salePrice();
+                        }else if(data.status==3){
+                            pop.showNotice("<p>您的手机号<span class='pink'>“"+tel+"”</span>已经参与过活动了</p><p>您抽到的奖品是<span class='pink'>“"+data.prize+"”</span></p>");
+
+                            luck.login = true;
+                        }else{
+                            pop.showNotice("<p>很抱歉，报名失败了。</p>");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                pop.showNotice("<p>请勿重复提交！</p>")
+            }
+        })
+
+    })();
+</script>
+
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' style='display:none;' id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

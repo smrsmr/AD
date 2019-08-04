@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>空投来袭 Q友限拼购</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+        body {background: #faf6ed;}
+        .main {width: 10rem;margin: 0 auto;position: relative;height: 100%;}
+        .pg {position: absolute;left: 0;top: 0;width: 10rem;height: auto;display: none;background: #faf6ed;}
+        .page1 .home {position: relative;}
+        .page1 .home a {display: block;width: 5rem;height: 1rem;position: absolute;left:50%;bottom: 3.8rem;margin-left: -2.5rem;}
+        .page1 .home a:last-child {bottom: 1.4rem}
+        .page1 .popup {position: fixed;left: 0;top: 0;bottom: 0;right: 0;display: none;}
+        .page2 .bmk {width: 8rem;height: 9.3rem;background: #f8ebd5;margin: 0.7rem auto;}
+        .page2 .bmk input,.bmk select {width: 100%;height: 100%;font-size: 0.5rem;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: #faf6ed;padding-left: 0.2rem;color: #e3c796;}
+        .page2 input::-webkit-input-placeholder{color: #e3c796;opacity:1;}
+        .page2 input:focus::-webkit-input-placeholder{  opacity: 0;  }
+        .page2 .bmk p {width: 7rem;height: 1rem;margin: 0.3rem auto;overflow: hidden;}
+        .page2 .bmk .brand,.bmk .series,.bmk .code {position: relative;}
+        .page2 .bmk .brand i,.bmk .series i {position: absolute;left:50%;top: 0rem;width: 1rem;height: 1rem;margin-left: 2.5rem}
+        .page2 .bmk .code #getCode {position: absolute;width: 2.3rem;height: 0.7rem;line-height: 0.7rem;left:50%;margin-left: 0.9rem;top: 0.15rem;background: white;border-radius: 0.5rem;}
+        .page2 .bmk .submit {font-size: 0.7rem;height: 1.2rem;margin-top: 0.7rem;}
+        .page3 h1 {position: absolute;left:50%;top: 0.5rem;margin-left: -3.5rem;width: 7rem;height: 1.46rem;background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/17/79/208/13545362.png") center no-repeat;color: #69471a;font-size: 0.6rem;text-align: center;line-height: 1.46rem;background-size: 100%;font-weight: bold;}
+        .page3 .jzL {position: absolute;left:50%;margin-left: -3rem;width: 6.6rem;top: 2.4rem;overflow: hidden;}
+        .page3 .jzL li {width: 1.13rem;float: left;margin-right: 0.49rem;}
+        .page3 .jzL li:last-child {margin-right: 0;}
+        .page3 .ts {display: none;position: absolute;left: 50%;width: 100%;height: 0.5rem;transform: translateX(-50%);top: 12.28rem;line-height: 0.66rem;text-align: center;font-size: 0.38rem;}
+        .page3 .ts i {display: inline-block;width: 0.4rem;}
+        .page3 .ts span {display: inline-block;margin-left: 0.1rem;}
+        .page3 .textList {position: absolute;width: 7rem;height: 2.4rem;left:50%;margin-left: -3.5rem;top: 13.7rem;color: #fcdd75;overflow: auto;}
+        .page3 .textList ul{width: 6rem;margin: 0 auto;height: auto;}
+        .page3 .mCSB_inside > .mCSB_container {margin-right: 0px;}
+        .page3 .mCSB_scrollTools .mCSB_draggerContainer {right: -0.2rem;}
+        .page3 .mCSB_scrollTools .mCSB_draggerRail {background-color: #d8b156 !important;}
+        .page3 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {background-color: #56360e !important;}
+        .page3 .shareImg {position: absolute;width: 100%;height: 100%;left: 0;;top: 0;background-color: rgba(0,0,0,0.6);display: none;}
+        .page3 a {background: #F3B12A;position: absolute;width: 4rem;height: 0.8rem;line-height: 0.8rem;font-size: 0.5rem;left: 50%;margin-left: -2rem;top: 15.8rem;color: #57300a;text-align: center;font-weight: bold;border-radius: 1rem;}
+        .page3 a:active{text-decoration: none}
+        .page3 a:hover{text-decoration: none}
+        .page4 #getMoy {position: absolute;width: 4rem;height: 1rem;left:50%;margin-left: -2rem;top: 11.2rem;background: transparent;}
+        .page5 p {position: absolute;width: 6rem;height: 2rem;left:50%;margin-left: -2.8rem;top: 10rem;color: white;text-align: center;line-height: 1rem;}
+        .page5 p span {display: inline-block;letter-spacing: 0.1rem;font-size: 0.5rem;}
+        .page5 p span:first-child {font-size: 1.5rem;}
+        @media only screen and (width: 375px) and (height: 812px){
+            .pg {
+                height: 812px;
+                background: #F0C962;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <!--首页-->
+    <div class="page1 pg" style="display: block">
+        <div class="home">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/74/208/13544206.jpg" alt="">
+            <a id="page1Bmk"></a>
+            <a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/330.htm" style="bottom: 2.55rem"></a>
+            <a id="tk"></a>
+        </div>
+        <div class="popup">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/137/74/208/13544207.png" alt="">
+        </div>
+    </div>
+    <!--报名页-->
+    <div class="page2 pg">
+        <div class="banner">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/204/75/208/13544529.jpg" alt="">
+        </div>
+        <div class="bmk">
+            <p style="height: 0.1rem"></p>
+            <p class="name">
+                <input type="text" id="name" placeholder="您的姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="您的电话" maxlength="11">
+            </p>
+            <p class="brand">
+                <select id="brand">
+                    <option value="0">意向品牌</option>
+                </select>
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/143/76/208/13544723.png" alt=""></i>
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                </select>
+                <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/143/76/208/13544723.png" alt=""></i>
+            </p>
+            <p class="code">
+                <input type="tel" id="code" placeholder="验证码">
+                <input type="button" id="getCode" value="获取">
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" value="确认报名" style="background-color: #e3c796;color: #8f6b2c;padding-left: 0">
+            </p>
+        </div>
+    </div>
+    <!--集字页-->
+    <div class="page3 pg">
+        <!--背景图-->
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/78/208/13545090.jpg" alt="" style="position: relative;">
+        <!--分享好友帮忙集字-->
+        <h1>分享好友帮忙集字</h1>
+        <div class="jzL">
+            <ul>
+                <!--腾讯汽车 四张小卡片-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/4/78/208/13545094.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/8/78/208/13545098.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/78/208/13545097.png" alt=""></li>-->
+                <!--<li><PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/78/208/13545096.png" alt=""></li>-->
+            </ul>
+        </div>
+        <div class="ts">
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/243/95/208/13549668.png" alt=""></i><span class="friend">XXX</span>已帮您助力，恭喜你获得【车】字
+        </div>
+        <div class="textList">
+            <ul>
+                <li>1.活动时间：即日起至2018年5月31日</li>
+                <li>2.转发一次朋友圈或者微信群可获得三次抽取字的机会，也可通过邀请朋友参加来获得集字的机会</li>
+                <li>3.请填写正确的手机号码，方便短信的接收，红包的领取 腾讯汽车在法律允许范围内享有本活动解释权</li>
+                <li style="height: 0.5rem"></li>
+            </ul>
+        </div>
+        <!--分享好友按钮-->
+        <a id="share" href="javascript:void(0)">分享给好友</a>
+        <a id="prize" href="javascript:void(0)" style="display: none">去领奖</a>
+        <div class="shareImg">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/30/136/207/13494885.png" alt="">
+        </div>
+    </div>
+    <!--收集完成提示领取红包页面-->
+    <div class="page4 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/151/81/208/13546006.jpg" alt="" style="position: relative;">
+        <button id="getMoy"></button>
+    </div>
+    <div class="page5 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/158/81/208/13546013.jpg" alt="" style="position: relative;">
+        <p>
+            <!--红包金额-->
+            <span id="setNum">0.00</span><span>元</span>
+        </p>
+    </div>
+    <!--活动结束页面-->
+    <div class="page6 pg">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/46/94/208/13549216.png" width="100%" height="100%" alt="">
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<!--<script src="http://guangzhou.auto.qq.com/js/jquery.cookie.js"></script>-->
+<script>
+    $(function () {
+        //接口前缀
+        var Url = 'https://www.easy-mock.com/mock/5ab34c784054bc1afa9e708a/textData';
+        //获取集字 输出
+        var setword = {
+            hadWrod:[                                   //初始文字图片
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/4/78/208/13545094.png',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/8/78/208/13545098.png',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/7/78/208/13545097.png',
+                'http://img1.gtimg.com/autoguangzhou/pics/hv1/6/78/208/13545096.png',
+            ],
+            //页面开始加载时获取
+            getDataHadWrod:function(){
+                $('.jzL ul').html('');
+                var b=[1,2];
+                var c=[1,3];
+                var d=[1,2,3];
+                var e=[1,2,3,4];
+                var res=[];
+                //获取该用户已经有的字
+                $.ajax({
+                    type:"GET",
+                    url:Url+"/getUserStatus",
+                    data:{},
+                    async:true,
+                    dataType:'json',
+                    success:function(data){
+                        console.log(data);
+                        //存储领取红包的判断
+                        localStorage.is_draw=data.data.is_draw;
+                        //判断状态码
+                        if (data.status == 0) {
+                            //判断活动是否结束
+                            if (data.data.is_over==1){
+                                $('#page1Bmk').click(function () {
+                                    $('.page6').show();
+                                });
+                                return;
+                            }
+                            //判断是否报名
+                            if (data.data.is_sign==0) {
+                                $('#page1Bmk').click(function () {
+                                    $(this).parent('.pg').fadeOut(300);
+                                    $('.page2').fadeIn(300);
+                                });
+                            } else if (data.data.is_sign==1){
+                                $('#page1Bmk').click(function () {
+                                    $(this).parent('.pg').fadeOut(300);
+                                    $('.page3').fadeIn(300);
+                                });
+                            }
+                            //是否集完字
+                            res = data.myword;
+                            if (data.data.is_finish==0) {
+                                //未集完字
+                                if (res.sort().toString() == b.sort().toString()) {
+                                    setword.hadWrod.splice(1,1,'http://img1.gtimg.com/autoguangzhou/pics/hv1/243/79/208/13545588.png');
+                                }
+                                if (res.sort().toString() == c.sort().toString()) {
+                                    setword.hadWrod.splice(2,1,'http://img1.gtimg.com/autoguangzhou/pics/hv1/252/79/208/13545597.png');
+                                }
+                                if (res.sort().toString() == d.sort().toString()) {
+                                    setword.hadWrod.splice(1,2,'http://img1.gtimg.com/autoguangzhou/pics/hv1/243/79/208/13545588.png','http://img1.gtimg.com/autoguangzhou/pics/hv1/252/79/208/13545597.png');
+                                }
+                                if (res.sort().toString() == e.sort().toString()) {
+                                    setword.hadWrod.splice(1,3,'http://img1.gtimg.com/autoguangzhou/pics/hv1/243/79/208/13545588.png','http://img1.gtimg.com/autoguangzhou/pics/hv1/252/79/208/13545597.png','http://img1.gtimg.com/autoguangzhou/pics/hv1/0/80/208/13545600.png');
+                                }
+                            } else if (data.data.is_finish==1) {
+                                //已集完字
+                                setword.hadWrod.splice(1,3,'http://img1.gtimg.com/autoguangzhou/pics/hv1/243/79/208/13545588.png','http://img1.gtimg.com/autoguangzhou/pics/hv1/252/79/208/13545597.png','http://img1.gtimg.com/autoguangzhou/pics/hv1/0/80/208/13545600.png');
+                                $('.page3 h1').text('已收集');
+                                $('.page3 #share').hide();
+                                $('.page3 #prize').show();
+                                // $('.page3 .ts').show();
+                            }
+                            //修改图片数组 输出到页面
+                            for (var i=0;i<setword.hadWrod.length;i++){
+                                var li = '<li>'+
+                                    '<img src="'+setword.hadWrod[i]+'"/>'+
+                                    '</li>';
+                                $('.jzL ul').append(li);
+                            }
+                        } else {
+                            alert(data.msg)
+                        }
+                    }
+                });
+            },
+            //微信转发调用
+            getShareLog:function () {
+                var res=0;
+                //
+                $.ajax({
+                    type:"GET",
+                    url:Url+"/getShareLog",
+                    data:{},
+                    async:true,
+                    dataType:'json',
+                    success:function(data){
+                        if (data.status==0){
+                            console.log(data);
+                            res = data.word;
+                            if (res==2) {
+                                $('.jzL ul li').eq(1).find('img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/243/79/208/13545588.png')
+                            }
+                            if (res==3) {
+                                $('.jzL ul li').eq(2).find('img').attr('src','http://img1.gtimg.com/autoguangzhou/pics/hv1/252/79/208/13545597.png')
+                            }
+                        }else {
+
+                        }
+                    }
+                });
+            }
+        };
+        //页面开始时自动调用
+        setword.getDataHadWrod();
+        //分享
+        var appId = "";       //公众号的唯一标识
+        var timestamp = "";   //生成签名的时间戳
+        var nonceStr = "";    //生成签名的随机串
+        var signature = "";   //签名
+        wx.config({
+            debug: false,
+            appId: appId,
+            timestamp: timestamp,
+            nonceStr: nonceStr,
+            signature: signature,
+            jsApiList: [
+                // 所有要调用的 API 都要加到这个列表中
+                'onMenuShareAppMessage',
+                'onMenuShareTimeline'
+            ]
+        });
+        var share_title = '一起玩集字游戏，抢好礼';
+        var share_desc = '只需集齐“腾讯汽车”四个字，即可领取好礼，先到先得';
+        var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/145/99/208/13550590.jpg';
+        var share_link = window.location.href;
+        /* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+        wx.ready(function () {
+            // 在这里调用 API
+            wx.onMenuShareAppMessage({
+                title: share_title, // 分享标题
+                desc: share_desc, // 分享描述
+                link: share_link, // 分享链接
+                imgUrl: share_image, // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户成功分享后执行的回调函数
+                    setword.getShareLog()
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    //alert("分享取消");
+                }
+            });
+            wx.onMenuShareTimeline({
+                title: share_title, // 分享标题
+                link: share_link, // 分享链接
+                imgUrl: share_image, // 分享图标
+                success: function () {
+                    // 用户成功分享后执行的回调函数
+                    setword.getShareLog()
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                    //alert("分享取消");
+                }
+            });
+        });
+        /*发送手机验证码*/
+        $('#getCode').click(function () {
+            var mobile = $('#tel').val();
+            $('#getCode').attr('disabled', 'disabled');
+            var c=10;
+            //在此调用获取短信验证码接口
+            $.ajax({
+                type:"POST",
+                url:Url+"/getMsgCode",
+                data:{
+                    mobile:mobile
+                },
+                async:true,
+                dataType:'json',
+                success:function(data){
+                    console.log(data);
+                    if (data.status==0){
+                        alert('短信发送成功,请注意查收');
+                        var jump = setInterval(function(){
+                            c--;
+                            $('#getCode').val(c+'s');
+                            if(c<=0){
+                                clearInterval(jump);
+                                $('#getCode').val('获取');
+                                $('#getCode').removeAttr('disabled', 'disabled');
+                            }
+                        },1000);
+                    } else {
+                        alert('发送异常,请重试')
+                    }
+                }
+            });
+        });
+        //报名
+        $('#submit').click(function () {
+            var name = $('#name').val(),
+                mobile = $('#tel').val(),
+                models_id = $('#brand').val(),
+                models = $('#brand option:checked').text(),
+                series = $('#series option:checked').text(),
+                series_id = $('#series').val(),
+                sms = $('#code').val(),
+                Data = {
+                    name: name,
+                    mobile: mobile,
+                    series: series,
+                    models: models,
+                };
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(mobile)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (models_id == '0') {
+                alert('请选择意向品牌');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择意向车型');
+                return false;
+            }
+            if (sms == '') {
+                alert('请输入短信验证码');
+                return false;
+            }
+            //发送请求
+            $.ajax({
+                type: "POST",
+                url: Url+'/postUserInfo',
+                data: Data,
+                async: true,
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 0) {
+                        alert("恭喜你，报名成功了");
+                        $(this).parent('.pg').fadeOut(300);
+                        $('.page3').fadeIn(300);
+                    } else {
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        });
+        //请求红包
+        $('.page4 #getMoy').click(function () {
+            $(this).parent().fadeOut(300);
+            $('.page5').fadeIn(300);
+            if (localStorage.is_draw==0) {
+                $.ajax({
+                    type: "get",
+                    url: Url+"/getPrize",
+                    data: {},
+                    async: true,
+                    dataType: 'json',
+                    success: function (data) {
+                        console.log(data);
+                        if (data.status == 0) {
+                            //存储红包
+                            localStorage.m=data.money;
+                            $('.page5 #setNum').text(data.money);
+                        }
+                        setTimeout(function () {
+                            alert('恭喜您领到红包！');
+                        },1500)
+                    }
+                });
+            }
+            if (localStorage.is_draw==1) {
+                $('.page5 #setNum').text(localStorage.m);
+                setTimeout(function () {
+                    alert('您已领过红包！');
+                },1000);
+            }
+        });
+        //弹出活动规则框
+        $('.page1 #tk').click(function () {
+            $('.page1 .popup').fadeIn(200);
+        });
+        $('.page1 .popup').click(function () {
+            $(this).fadeOut(200);
+        });
+        //获取车型品牌函数
+        var getBrand = (function () {
+            /*获取所有品牌*/
+            $.ajax({
+                type:"get",
+                url:"http://www.yetcar.com/index.php?s=/Home/Data/GetSeries",
+                data:{},
+                async:true,
+                dataType:'jsonp',
+                success:function(data){
+                    if(data.status==1){
+                        for(var i=0;i<data.data.length;i++){
+                            var brand=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+                            $('#brand').append(brand);
+                        }
+                    }
+                }
+            });
+            $('#brand').change(function(){
+                $('#series').find("option:not(:first)").remove();
+                var brand_id=$("#brand option:checked").val();
+                $.ajax({
+                    type: "get",
+                    url: 'http://www.yetcar.com/index.php?s=/Home/Data/getModels',
+                    data: {
+                        series_id:brand_id
+                    },
+                    async: true,
+                    dataType: "jsonp",
+                    success: function(data) {
+                        for(var i=0;i<data.data.length;i++){
+                            var series=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+                            $('#series').append(series)
+                        }
+                    }
+                });
+            });
+        })();
+        $('#share').click(function () {
+            $('.page3 .shareImg').show();
+        });
+        //领取红包按钮
+        $('#prize').click(function () {
+            $('#prize').parent().fadeOut(300);
+            $('.page4').fadeIn(300);
+        });
+        $('.page3 .shareImg').click(function () {
+            $(this).hide();
+        });
+        //关闭 活动提示界面
+        $('.page6').click(function () {
+            $(this).hide();
+        });
+        $(window).load(function() {
+            $(".page3 .textList").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        });
+    });
+</script>
+</html>

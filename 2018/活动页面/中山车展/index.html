@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=1150,user-scalable=no" />
+    <title>中山春季车展</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {  max-width: 1920px;  margin: 0 auto;  }
+        .con1 {  background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/222/175/207/13505022.jpg") top center no-repeat;  height: 531px;  position: relative;  }
+        .con2 {  background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/223/175/207/13505023.jpg") top center no-repeat;  height: 601px;  }
+        .con3 {  background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/224/175/207/13505024.jpg") top center no-repeat;  height: 685px;  position: relative; }
+        .con4 {  background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/225/175/207/13505025.jpg") top center no-repeat;  height: 602px; position: relative; }
+        .text {  position: absolute;  width: 283px;  height: 471px;  left: 50%;  margin-left: -602px;  top: 25px;}
+        .textScroll {  width: 100%;  margin: 60px auto 0;  height: 359px;  overflow: hidden;  }
+        .textScroll ul {  width: 100%;  position: relative;  }
+        .textScroll ul li {  height: 35px;  line-height: 35px; text-align: center }
+        .bm {  position: absolute;  width: 455px;  height: 471px;  left: 50%;  margin-left: -294px;  top: 25px;  }
+        .bm input,.bm select {  width: 100%;  height: 100%;  -webkit-appearance: none;  -moz-appearance: none;  appearance: none;  background: transparent;  font-size: 20px;  }
+        select::-ms-expand {opacity: 0}
+        input:focus::-webkit-input-placeholder{opacity: 0}
+        .bm p {  width: 375px;  height: 48px;  }
+        .name,.tel {  margin-left: 23px;  margin-top: 98px;  }
+        .tel {  margin-top: 22px;  }
+        .select p {  display: inline-block;  width: 163px;  }
+        .brand,.series {  margin-left: 23px;  margin-top: 53px;  }
+        .series {  margin-left: 43px;  }
+        .bm .submit {  margin-left: 22px;  margin-top: 48px;  }
+        .logo {  position: absolute;  left: 50%;  top: 83px;  width: 1183px;  height: 550px;  margin-left: -595px;  overflow: auto;  }
+        .libox {  width: 1120px;  margin: 25px 0;  margin-left: 41px;  }
+        .logoImg {  width: 120px;  height: 120px;  background: #fff;  float: left;  margin-right: 20px;  margin-bottom: 20px;  border-radius: 6px;  }
+        .logoImg img {  width: 60px !important;  height: 60px !important;  margin-left: 30px;  margin-top: 20px;  }
+        .logoImg p {  text-align: center;  padding-top: 8px;  }
+        @media screen and (max-width: 1150px) {  .base {  display: none  }  }
+        #Map {  position: absolute;  left: 50%;  top: 104px;  width: 578px;  height: 400px;  margin-left: -578px;  overflow: hidden;  }
+    </style>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <!--------------------------------------------------腾讯地图------------------------------------------------------>
+    <script>
+        var init = function() {
+            var center = new qq.maps.LatLng(22.502744,113.414569);
+            var map = new qq.maps.Map(document.getElementById('Map'),{
+                center: center,
+                zoom: 16
+            });
+            //创建marker
+            var infoWin = new qq.maps.InfoWindow({
+                map: map
+            });
+            var latlngs = [
+                new qq.maps.LatLng(22.502940,113.414390),
+                new qq.maps.LatLng(22.501932,113.413088),
+                new qq.maps.LatLng(22.500920,113.414640)
+            ];
+            for(var i = 0;i < latlngs.length; i++) {
+                (function(n) {
+                    var marker = new qq.maps.Marker({
+                        position: latlngs[n],
+                        map: map
+                    });
+//                    var anchor = new qq.maps.Point(0, 50),
+//                    size = new qq.maps.Size(42, 68),
+//                    origin = new qq.maps.Point(0, 0),
+//                    markerIcon = new qq.maps.MarkerImage(
+//                        "http://open.map.qq.com/apifiles/2/4/85/theme/default/imgs/marker.png",
+//                        size,
+//                        origin,
+//                        anchor
+//                    );
+//                    marker.setIcon(markerIcon);
+                })(i);
+            }
+        }
+    </script>
+</head>
+<body onload="init()">
+<div class="main">
+    <!--头图-->
+    <div class="banner">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/221/175/207/13505021.jpg" alt="">
+    </div>
+    <div class="con1">
+        <div class="text">
+            <div class="textScroll">
+                <ul></ul>
+            </div>
+        </div>
+        <div class="bm">
+            <p class="name">
+                <input type="text" id="name" placeholder="领票人姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="领票人电话" maxlength="11">
+            </p>
+            <div class="select">
+                <p class="brand">
+                    <select name="" id="brand">
+                        <option value="0">请选择品牌</option>
+                    </select>
+                </p>
+                <p class="series">
+                    <select name="" id="series">
+                        <option value="0">请选择车型</option>
+                    </select>
+                </p>
+            </div>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+        </div>
+    </div>
+    <div class="con2"></div>
+    <div class="con3">
+        <div class="logo">
+            <div class="libox">
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/250/116/186/12124480.png" style="width: 100%; height: 100%;">
+                    <p>中华</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/251/116/186/12124481.png">
+                    <p>一汽丰田</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/252/116/186/12124482.png">
+                    <p>众泰</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/253/116/186/12124483.png">
+                    <p>广汽传祺</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/254/116/186/12124484.png">
+                    <p>凯迪拉克</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/2/117/186/12124487.png">
+                    <p>吉利</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/4/117/186/12124489.png">
+                    <p>名爵</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/5/117/186/12124490.png">
+                    <p>启辰</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/8/117/186/12124493.png">
+                    <p>上汽大众</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/9/117/186/12124494.png">
+                    <p>上汽大通</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/10/117/186/12124495.png">
+                    <p>奔腾</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/11/117/186/12124496.png">
+                    <p>奔驰</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/12/117/186/12124497.png">
+                    <p>奥迪</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/13/117/186/12124498.png">
+                    <p>宝沃</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/15/117/186/12124500.png">
+                    <p>宝马</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/16/117/186/12124501.gif">
+                    <p>广汽三菱</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/17/117/186/12124502.png">
+                    <p>斯巴鲁</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/18/117/186/12124503.png">
+                    <p>东风日产</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/19/117/186/12124504.png">
+                    <p>广汽本田</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/20/117/186/12124505.png">
+                    <p>林肯</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/21/117/186/12124506.png">
+                    <p>东风标致</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/22/117/186/12124507.png">
+                    <p>一汽森雅</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/23/117/186/12124508.png">
+                    <p>比亚迪</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/24/117/186/12124509.png">
+                    <p>汉腾</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/25/117/186/12124510.png"/>
+                    <p>海马</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/26/117/186/12124511.png"/>
+                    <p>北京现代</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/27/117/186/12124512.png"/>
+                    <p>长安福特</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/28/117/186/12124513.png"/>
+                    <p>纳智捷</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/29/117/186/12124514.png"/>
+                    <p>北汽绅宝</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/31/117/186/12124516.png"/>
+                    <p>英菲尼迪</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/32/117/186/12124517.png"/>
+                    <p>荣威</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/33/117/186/12124518.png"/>
+                    <p>讴歌</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/34/117/186/12124519.png"/>
+                    <p>东风悦达起亚</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/35/117/186/12124520.png"/>
+                    <p>哈弗</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/36/117/186/12124521.png"/>
+                    <p>长安</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/38/117/186/12124523.png"/>
+                    <p>陆风</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/39/117/186/12124524.png"/>
+                    <p>雪佛兰</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/41/117/186/12124526.png"/>
+                    <p>东风雪铁龙</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/42/117/186/12124527.png"/>
+                    <p>雷诺</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/43/117/186/12124528.png"/>
+                    <p>东风风神</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/44/117/186/12124529.png"/>
+                    <p>东风风行</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/45/117/186/12124530.png"/>
+                    <p>一汽马自达</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/161/118/186/12124901.png"/>
+                    <p>广汽丰田</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/163/118/186/12124903.png"/>
+                    <p>一汽大众</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/164/118/186/12124904.png"/>
+                    <p>郑州日产</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/163/118/186/12124903.png"/>
+                    <p>进口大众</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/168/118/186/12124908.png"/>
+                    <p>长安马自达</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/167/118/186/12124907.png"/>
+                    <p>东风本田</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/197/118/186/12124937.jpg"/>
+                    <p>江淮</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/198/118/186/12124938.jpg"/>
+                    <p>斯威</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/199/118/186/12124939.jpg"/>
+                    <p>众泰大迈</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/200/118/186/12124940.jpg"/>
+                    <p>凯翼</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/201/118/186/12124941.jpg"/>
+                    <p>北汽威旺</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/202/118/186/12124942.jpg"/>
+                    <p>奇瑞</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/203/118/186/12124943.jpg"/>
+                    <p>广汽菲克</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/204/118/186/12124944.jpg"/>
+                    <p>捷豹</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/205/118/186/12124945.jpg"/>
+                    <p>福迪</p>
+                </div>
+                <div class="logoImg">
+                    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/206/118/186/12124946.jpg"/>
+                    <p>路虎</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="con4">
+        <div id="Map"></div>
+    </div>
+</div>
+<div class="base">
+    <!--底部 开始-->
+    <div class="foot" id="footer" bossZone="footer">
+        <div class="footernew" role="contentinfo" style="height:124px;">
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a
+                href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a
+                href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a
+                href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a
+                href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a
+                href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a
+                href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a
+                href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">腾讯公益</a> | <a
+                href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/"
+                                                                                      target="_blank" rel="nofollow">网站导航</a>
+            | <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a
+                href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank"
+                rel="nofollow">版权所有</a><br>
+            <a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">深圳公安局</a> | <a
+                href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot"
+                                                                                                         href="http://www.gdis.cn/admin/newstext_netsun.asp"
+                                                                                                         target="_blank"
+                                                                                                         rel="nofollow"
+                                                                                                         style="color: #bd0a01;">阳光·绿色网络工程</a>
+            | <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a
+                href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+            <span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a> <a
+                    href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a
+                    href="http://www.qq.com/cbst.shtml" target="_blank"
+                    rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+                                                                      rel="nofollow">粤B2-20090059</a> <a
+                    href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+		 </span><br>
+            <a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a
+                href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+            违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备 44030002000001号</span><img
+                style="vertical-align: text-bottom;" } src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png"
+                width="16" height="16"></a><br>
+            <span style="font-family:Arial;">Copyright  1998 - 2017 Tencent. All Rights Reserved</span>
+        </div>
+    </div>
+    <div class="footernew footheight" style="width:1000px;" bossZone="footer">
+        <div style="width:680px;">
+            <p>
+                <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow"><img width="35" height="43" border="0"
+                                                                        alt="经营性网站备案信息"
+                                                                        src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+                <span class="fr"><a target="_blank" class="lcblack"
+                                    href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow">经营性网站<br>
+				备案信息</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img
+                        width="44" height="44" border="0" alt="中国互联网举报中心"
+                        src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank"
+                                                        rel="nofollow">中国互联网<br>
+				举报中心</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img
+                        width="44" height="42" border="0" alt="中国文明网传播文明"
+                        src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank"
+                                                        rel="nofollow">中国文明网<br>传播文明</a></span>
+            </p>
+            <p style="width:128px;height:52px;border:0;">
+                <span style="padding:0;" class="fl"><a
+                        href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337"
+                        target="_blank" rel="nofollow"><img border="0" alt="诚信网站"
+                                                            src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a
+                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank"
+                        rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg"
+                                            title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack"
+                                                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+                                                        target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+            </p>
+        </div>
+    </div>
+    <a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+       bossZone="fankui"></a>
+    <a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none"
+       bossZone="defaulthome"></a>
+    <a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+    <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+       style="display:none" bossZone="minidown"></a>
+    <!--e6dcd797284a2fe7c374538dde98ca6b--><!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+    <!--底部 结束-->
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    $(function () {
+        //静态数据
+        var bmText = [
+            {'name':'1分种前王*报名关注','series':'奥迪A3'},
+            {'name':'1分种前王*报名关注','series':'宝马 M1'},
+            {'name':'1分种前李*报名关注','series':'保时捷718'},
+            {'name':'1分种前吴*报名关注','series':'保时捷918'},
+            {'name':'1分种前林*报名关注','series':'本田XR-V'},
+            {'name':'1分种前林*报名关注','series':'雅阁混动'},
+            {'name':'1分种前王*报名关注','series':'林肯MKX'},
+            {'name':'1分种前沈*报名关注','series':'林肯MKC'},
+            {'name':'1分种前周*报名关注','series':'奥迪A4'},
+            {'name':'1分种前王*报名关注','series':'奥迪RS7'},
+            {'name':'1分种前陈*报名关注','series':'奥迪A3'},
+            {'name':'1分种前王*报名关注','series':'金牛座'},
+            {'name':'1分种前朱*报名关注','series':'征服者'},
+            {'name':'1分种前郑*报名关注','series':'汉兰达'},
+            {'name':'1分种前李*报名关注','series':'雷凌双擎'},
+            {'name':'1分种前范*报名关注','series':'Sienna'},
+            {'name':'1分种前周*报名关注','series':'科迈罗'},
+            {'name':'1分种前张*报名关注','series':'捷达'},
+            {'name':'1分种前王*报名关注','series':'野马T80'},
+        ];
+        for ( var i=0;i<bmText.length;i++ ) {
+            var li = '<li>'+bmText[i].name+'<span style="color: red;font-size: 17px">'+bmText[i].series+'</span>'+'</li>'
+            $('.textScroll ul').append(li);
+        }
+        //文字滚动
+        function textScroll() {
+            var listPanel = $('.textScroll ul');
+            var z = 0;//向上滚动top值
+            function up() {//向上滚动
+                listPanel.animate({
+                    'top': (z - 35) + 'px'
+                }, 1500, 'linear', function () {
+                    listPanel.css({'top': '0px'})
+                        .find("li:first").appendTo(listPanel);
+                    up();
+                });
+            }
+            up();
+        }
+        textScroll()
+        /*获取所有品牌*/
+        $.ajax({
+            type:"get",
+            url:"http://www.yetcar.com/index.php?s=/Home/Data/GetSeries",
+            data:{},
+            async:true,
+            dataType:'jsonp',
+            success:function(data){
+                if(data.status==1){
+                    for(var i=0;i<data.data.length;i++){
+                        var brand=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+                        $('#brand').append(brand)
+                    }
+                }
+            }
+        });
+        /*获取对应品牌的车型*/
+        $('#brand').change(function(){
+            $('#series').find("option:not(:first)").remove();
+            var brand_id=$("#brand option:checked").val();
+            $.ajax({
+                type: "get",
+                url: 'http://www.yetcar.com/index.php?s=/Home/Data/getModels',
+                data: {
+                    series_id:brand_id
+                },
+                async: true,
+                dataType: "jsonp",
+                success: function(data) {
+                    for(var i=0;i<data.data.length;i++){
+                        var series=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+                        $('#series').append(series)
+                    }
+                }
+            });
+        })
+        //报名
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    series_id = $('#series').val(),    //车型id
+                    brand_id = $('#brand').val(), //品牌
+                    act_id = 1565,  //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        brand_id: brand_id,
+                        series_id: series_id,
+                        act_id : act_id
+                    };
+                //判断填写是否正确
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if( brand_id == '0' ) {
+                    alert('请选择品牌');
+                    return false;
+                }
+                if( series_id == '0' ) {
+                    alert('请选择车型');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        }else{
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+        $(window).load(function() {
+            $(".logo").mCustomScrollbar({
+                scrollInertia: 550,
+                autoHideScrollbar: false
+            });
+        })
+    });
+</script>
+</html>

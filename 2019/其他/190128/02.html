@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>第二代CX-5云控升级?置换补贴最高10000元</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://act.yetcar.com/zxq_commonCode/css/normalize.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+            width: 100%
+        }
+
+        body {
+            font-family: '微软雅黑';
+            background-color: #eee;
+            /*line-height: 150%;*/
+            color: #333;
+            width: 100%
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        #cnzz_stat_icon_1260055531 a, #cnzz_stat_icon_1260102516 {
+            color: #ffffff;
+            height: 50px;
+            display: none;
+        }
+
+        #cnzz_stat_icon_1260102516,
+        #cnzz_stat_icon_1260842227,
+        #cnzz_stat_icon_1260919928,
+        #cnzz_stat_icon_1255711023,
+        #cnzz_stat_icon_1260771396,
+        #cnzz_stat_icon_1261301380,
+        #cnzz_stat_icon_1261327484 {
+            display: none;
+        }
+
+        .footer {
+            background: #fff;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .footer img {
+            display: block;
+            width: 158px;
+            height: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 15px;
+            max-width: 100%;
+        }
+
+        .header_pic, .activity_pic {
+            width: 100%;
+        }
+
+        .activity_info_z1 .activity_intro p {
+            font-size: 14px;
+            line-height: 1.6em;
+            text-align: left;
+            padding: 0 0 8px 0;
+            margin: 0 10px;
+        }
+
+        .activity_info_z1 .activity_intro h3.h3_title {
+            color: #000;
+            font-size: 16px;
+            text-align: center;
+            font-weight: normal;
+            text-align: left;
+            line-height: 28px;
+            padding: 10px 10px 5px;
+        }
+
+        .M_section1 {
+            background: #f7f7f7;
+            border: 0;
+            box-shadow: -2px 0 15px #E6E6E6;
+        }
+
+        .activity_info_z .activity_join {
+            padding: 10px;
+            margin: 11px 0;
+            background: #F7F7F7;
+        }
+
+        .activity_info_z1 .activity_intro {
+            background: #fff;
+            padding-bottom: 0;
+        }
+
+        .M_section1 h1 {
+            height: 34px;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            margin: 0;
+        }
+
+        .M_section1 h1 span {
+            padding: 0 10px;
+            font-size: 15px;
+            color: #919191;
+            position: relative;
+            z-index: 2;
+            background: #f7f7f7;
+        }
+
+        .M_section1 h1:after {
+            content: "";
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            border-bottom: 1px solid #ddd
+        }
+
+        /*倒计时*/
+        .activity_status {
+            margin: 0 auto;
+        }
+
+        .activity_info_z .activity_status {
+            height: 50px;
+            padding: 10px;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .time {
+            display: block;
+            width: 100%;
+            line-height: 50px;
+            height: 50px;
+        }
+
+        #t_d, #t_h, #t_m, #t_s {
+            background-color: #000;
+            color: #fff;
+            border-radius: 6px;
+            padding: 9px 5px 9px 5px;
+            box-shadow: 1px 1px 5px #AFAFAF;
+        }
+
+        #ttitle {
+            font-weight: bold;
+            font-family: '微软雅黑';
+        }
+
+        /*报名*/
+        #name, #tel, #Select1 {
+            width: 100%;
+            height: 100%;
+            padding: 0 6%;
+            border: none;
+            background: rgba(0, 0, 0, 0);
+            border-radius: inherit;
+            outline: 0;
+            border-bottom: 1px solid #ddd;
+            -webkit-appearance: none;
+        }
+
+        #form_regist {
+            width: 94%;
+            margin: 10px;
+            border: 5px;
+        }
+
+        #form_regist div {
+            border-bottom: 1px solid red;
+            height: 3rem;
+            padding: 0 6%;
+            border: none;
+            background: #fff;
+            border-radius: inherit;
+            outline: 0;
+        }
+
+        #form_regist p {
+            width: 100%;
+            line-height: 45px;
+            background: #F85758;
+            border-radius: 2px;
+            display: block;
+            background: #e43b3e;
+            text-align: center;
+            color: #fff;
+            outline: none;
+            border: none;
+            margin-top: 1rem;
+        }
+
+        #submit {
+            font-size: 1.2rem;
+            height: 45px;
+            width: 100%;
+            line-height: 45px;
+            background: #F85758;
+            border-radius: 2px;
+            display: block;
+            background: rgba(0, 0, 0, 0);
+            text-align: center;
+            color: #fff;
+            outline: none;
+            border: none;
+            -webkit-appearance: none;
+        }
+
+        .activity_info_z {
+            padding-bottom: 10px;
+        }
+
+        /*经销商*/
+        .table {
+            width: 100%;
+            border: 0;
+            line-height: 35px;
+            background: #fff;
+        }
+
+        tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .table tr th {
+            background: #F7F7F7;
+            font: normal 14px/22px "\5B8B\4F53";
+            height: 50px;
+
+        }
+
+        .table tr th:nth-child(1) {
+            width: 6rem;
+        }
+
+        th:nth-child(2) {
+            text-align: center;
+            width: 10rem;
+        }
+
+        th:nth-child(3) {
+            text-align: center;
+            width: 5rem;
+        }
+
+        th:first-child {
+            padding-left: 5px;
+        }
+
+        @media screen and (max-width: 320px) {
+            .table tr th {
+                font: normal 12px/22px "\5B8B\4F53" !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="activity_info_z activity_info_z1">
+    <div id="activityLoad" class="">
+        <div class="activity_intro">
+            <!-- 定义头图 -->
+
+<img class="header_pic" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/49/203/211/13772089.jpg" alt="马自达">
+
+            <h3 class="h3_title">第二代CX-5云控升级?置换补贴最高10000元</h3>
+            <!-- <p style="color: red;font-weight: bold;">限量15台</p> -->
+            <!--<p>特供版享特供非常规价</p>-->
+            <p>活动报名截止至2019年01月31日</p>
+        </div>
+        <div class="activity_status" id="activityStatus">
+            <div class="time">
+                <span id="ttitle">报名倒计时：</span>
+                <span id="t_d"></span><span>天</span>
+                <span id="t_h"></span><span>时</span>
+                <span id="t_m"></span><span>分</span>
+                <span id="t_s"></span><span>秒</span>
+            </div>
+        </div>
+        <div class="M_section M_section1 activity_join" id="sign_div">
+            <h1><span>我要报名</span></h1>
+            <form id="form_regist" accept-charset="utf-8" method="post"
+                  action="/index.php?s=/Home/Activity/baoming.html" target="id_iframe">
+                <div>
+                    <input name="form_70_1" id="name" placeholder="您的姓名" type="text">
+                </div>
+                <div>
+                    <input name="form_1103_1" id="tel" placeholder="您的电话" type="tel" maxlength="11">
+                </div>
+                <div>
+                    <select id="Select1">
+                        <option value="0">选择车型</option>
+                        <option value="183">马自达3 昂克赛拉</option>
+                        <option value="202">马自达CX-5</option>
+                        <option value="24">马自达CX-8</option>
+                    </select>
+                </div>
+                <p>
+                    <input id="submit" value="立即报名" type="button">
+                </p>
+            </form>
+        </div>
+        <div class="M_section M_section1">
+            <h1><span>经销商信息</span></h1>
+            <table class="table">
+                <tbody id="yhform">
+                <tr>
+                    <th scope="col">经销商</th>
+                    <th scope="col">地址</th>
+                    <th scope="col">销售热线</th>
+                </tr>
+
+                <tr class="jxs_text">
+                    <th scope="col">上海绿地浦成汽车销售服务有限公司</th>
+                    <th scope="col">上海浦东川桥路350号</th>
+                    <th scope="col">021- 50322111</th>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- 倒计时结束时间 -->
+<script>
+    var time = "2019/01/31 23:59:59"
+    var EndTime = new Date(time);
+    function toTens(a) {
+        if (a <= 0) {
+            a = "00";
+        } else if (a > 0 && a < 10) {
+            a = "0" + a;
+        }
+        return a;
+    }
+    function GetRTime() {
+        var NowTime = new Date();
+        var t = EndTime.getTime() - NowTime.getTime();
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+        var m = Math.floor(t / 1000 / 60 % 60);
+        var s = Math.floor(t / 1000 % 60);
+
+        document.getElementById("t_d").innerHTML = toTens(d);
+        document.getElementById("t_h").innerHTML = toTens(h);
+        document.getElementById("t_m").innerHTML = toTens(m);
+        document.getElementById("t_s").innerHTML = toTens(s);
+    }
+    setInterval(GetRTime, 0);
+    function hh(c) {
+        c.innerHTML = c.innerHTML.replace(/；|;/g, "<br>");
+    }
+</script>
+<span id="cnzz_stat_icon_1260102516"><a href="http://www.cnzz.com/stat/website.php?web_id=1260102516" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260102516&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1260102516&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/responsive640px.js"></script>
+<script type="text/javascript">
+    // 验证
+    $(function () {
+        var flag = true;
+        $("#submit").click(function () {
+            if (flag) {
+                var name = $("#name").val(),  //姓名
+                    tel = $("#tel").val(),           //电话
+                    series_id = $('#Select1').val(),  //车型
+                    car_name = $('#Select1 option:checked').text(),
+                    brand_id = 24, //品牌
+                    act_id = 1057,   //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        brand_id: brand_id,
+                        series_id: series_id,
+                        car_name: car_name,
+                        act_id: act_id
+                    };
+                //判断填写是否正确
+                if (name == '' || tel == '') {
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == 0) {
+                    alert('请选择车型');
+                    return false;
+                }
+
+                //发送请求
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+                        } else {
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    });
+</script>
+<div class="footer">
+    <div class="footer">
+        <img src="http://img1.gtimg.com/autodongguan/pics/hv1/59/139/184/12000104.png">
+    </div>
+</div>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260102516"></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260102516&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1260102516&amp;show=pic&amp;t=z" charset="utf-8"
+        type="text/javascript"></script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<span id="cnzz_stat_icon_1260842227"><a href="http://www.cnzz.com/stat/website.php?web_id=1260842227" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s4.cnzz.com/z_stat.php?id=1260842227&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1260842227&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1260919928"><a href="http://www.cnzz.com/stat/website.php?web_id=1260919928" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260919928&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1260919928&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1255711023"><a href="http://www.cnzz.com/stat/website.php?web_id=1255711023" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s11.cnzz.com/z_stat.php?id=1255711023&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1255711023&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1260771396"><a href="http://www.cnzz.com/stat/website.php?web_id=1260771396" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1260771396&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1260771396&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1261301380"><a href="http://www.cnzz.com/stat/website.php?web_id=1261301380" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s11.cnzz.com/z_stat.php?id=1261301380&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1261301380&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_1261327484"><a href="http://www.cnzz.com/stat/website.php?web_id=1261327484" target="_blank" title="站长统计"><img src="http://icon.cnzz.com/img/pic.gif" vspace="0" hspace="0" border="0"></a></span>
+<script src=" http://s95.cnzz.com/z_stat.php?id=1261327484&amp;show=pic" type="text/javascript"></script>
+<script src="http://c.cnzz.com/core.php?web_id=1261327484&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

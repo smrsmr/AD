@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>智领安全 驭越巅峰</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #23212e;
+        }
+        .cn {
+            position: relative;
+        }
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 5.1rem;
+            width: 24rem;
+            height: 24rem;
+            margin-left: -12rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            padding-left: 1rem;
+            font-size: 1.2rem;
+            background: transparent;
+        }
+        .bmk p {
+            width: 22.6rem;
+            height: 3.3rem;
+            margin-bottom: 0.9rem;
+        }
+        .bmk .series,.bmk .dealers {
+            width: 23.6rem;
+            height: 3.1rem;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 0;
+            top: 16.6rem;
+            width: 100%;
+        }
+        .privacyPolicy input{width:20px !important;height:20px !important}
+        .privacyPolicy span{display:inline-block;font-size:18px;color:#fff;position: relative;top: -4px;}
+        .privacyPolicy a{color:#fff}
+        .bmk .submit {
+            margin-top: 3.5rem;
+            width: 24rem;
+        }
+        .swiper {
+            position: absolute;
+            left: 50%;
+            top: 4rem;
+            width: 24rem;
+            height: 15rem;
+            margin-left: -12rem;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .cs {
+            position: absolute;
+            left: 50%;
+            top: 4.1rem;
+            width: 6rem;
+            height: 2rem;
+            margin-left: -3rem;
+            color: #fff;
+            text-align: center;
+            line-height: 2rem;
+            font-size: 1.3rem;
+        }
+        .list {
+            position: absolute;
+            left: 50%;
+            top: 7rem;
+            width: 23rem;
+            height: 23rem;
+            margin-left: -11.1rem;
+            overflow: auto;
+        }
+        .list ul {
+            width: 21rem;
+            margin-left: 0.5rem;
+            color: #fff;
+        }
+        .list ul li {
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .list ul li span {
+            display: inline-block;
+            width: 14rem;
+        }
+        .list ul li span:last-child {
+            width: 7rem;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail {
+            width: 8px;
+            height: 100%;
+            margin: 0 auto;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+        }
+        .mCSB_inside > .mCSB_container {
+             margin-right: 0px;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            position: relative;
+            width: 8px;
+            height: 100%;
+            margin: 0 auto;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            text-align: center;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background-color: #edb00c !important;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/253/190/210/13703953.png);
+            left: 10px;
+            right: auto;
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/254/190/210/13703954.png);
+            right: 10px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/0/191/210/13703955.jpg" alt=""></div>
+    <div class="cn cn2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/1/191/210/13703956.jpg" alt=""></div>
+    <div class="cn cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/2/191/210/13703957.jpg" alt=""></div>
+    <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/3/191/210/13703958.jpg" alt=""></div>
+    <div class="cn cn5">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                    <option value="117">睿骋</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                    <option value="成都万友高新">成都万友高新</option>
+                    <option value="成都万友翔宇锦城">成都万友翔宇锦城</option>
+                    <option value="四川众诚">四川众诚</option>
+                    <option value="武侯众诚">武侯众诚</option>
+                    <option value="四川通海">四川通海</option>
+                    <option value="四川金瑞顺">四川金瑞顺</option>
+                    <option value="成都欣华欣">成都欣华欣</option>
+                    <option value="双流众诚">双流众诚</option>
+                    <option value="新都万友">新都万友</option>
+                    <option value="郫都众诚">郫都众诚</option>
+                    <option value="成都再新">成都再新</option>
+                    <option value="金堂众诚">金堂众诚</option>
+                    <option value="都江堰宣池">都江堰宣池</option>
+                    <option value="成都润锦">成都润锦</option>
+                    <option value="四川鑫虹">四川鑫虹</option>
+                </select>
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox">
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/4/191/210/13703959.jpg" alt="">
+    </div>
+    <div class="cn cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/191/210/13703960.jpg" alt=""></div>
+    <div class="cn cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/191/210/13703961.jpg" alt="">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/190/210/13703948.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/249/190/210/13703949.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/250/190/210/13703950.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/251/190/210/13703951.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/190/210/13703952.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div><!--左箭头-->
+                <div class="swiper-button-next"></div><!--右箭头-->
+            </div>
+        </div>
+    </div>
+    <div class="cn cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/191/210/13703962.jpg" alt="">
+        <div class="cs">成都</div>
+        <div class="list">
+            <ul>
+                <li><span>成都万友高新</span><span>028-85111991</span></li>
+                <li><span>成都万友翔宇锦城</span><span>02888468800</span></li>
+                <li><span>四川众诚</span><span>028-84215038</span></li>
+                <li><span>武侯众诚</span><span>028-85373949</span></li>
+                <li><span>四川通海</span><span>028-87465656</span></li>
+                <li><span>四川金瑞顺</span><span>028-87775889</span></li>
+                <li><span>成都欣华欣</span><span>028-85887111</span></li>
+                <li><span>双流众诚</span><span>02885857144</span></li>
+                <li><span>新都万友</span><span>028-83039639</span></li>
+                <li><span>郫都众诚</span><span>028-87915730</span></li>
+                <li><span>成都再新</span><span>028-82637555</span></li>
+                <li><span>金堂众诚</span><span>028-84093058</span></li>
+                <li><span>都江堰宣池</span><span>028-61947297</span></li>
+                <li><span>成都润锦</span><span>028-88778282</span></li>
+                <li><span>四川鑫虹</span><span>028-82438888</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay: true,//可选选项，自动滑动
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop:true,
+    })
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                brand_id = 15, //品牌id
+                series_id = $("#series").val(),    //车型id
+                dealers = $('#dealers').val(), // 经销商
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    dealers: dealers,
+                    act_id : 3284,
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( series_id == '0' ) {
+                alert('请选择车型');
+                return false;
+            }
+            if (dealers=='0'){
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+    $(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+</script>
+</html>

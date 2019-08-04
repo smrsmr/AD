@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2018全新BMW 525Li瞩目登场</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <style type="text/css">
+        blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,
+        legend,li,ol,p,pre,td,textarea,th,ul { margin: 0 auto; padding: 0;}
+        body { font-family: "微软雅黑"; font-size: 14px; color: #333;}
+        li { list-style: none;}
+        img { vertical-align: bottom;}
+        input,select { outline: none; font-family: "微软雅黑";}
+        a { text-decoration: none;}
+
+        .banner { width: 100%;}
+        .banner .banner1 img { width: 100%;}
+        /*.banner .banner1 { background: url(http://123.207.87.32/act/foshan/FSbaoma822/baomaFS822_011.jpg) center top no-repeat; height: 808px;}*/
+        .content-wrap { position: relative;}
+        .con-bg { width: 100%;}
+        .con-bg0 { background: url(http://123.207.87.32/act/foshan/FSbaoma822/baomaFS822_02.jpg) center top no-repeat; height: 318px;}
+        .con-bg1 { background: url(http://123.207.87.32/act/foshan/FSbaoma822/baomaFS822_03.jpg) center top no-repeat; height: 296px;}
+        .con-bg2 { background: url(http://123.207.87.32/act/foshan/FSbaoma822/baomaFS822_04.jpg) center top no-repeat; height: 350px;}
+        .con-bg3 { background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/38/128/208/13557878.jpg) center top no-repeat; height: 582px;}
+        .con-bg4 { background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/39/128/208/13557879.jpg) center top no-repeat; height: 482px;}
+        .con-bg5 { background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/40/128/208/13557880.jpg) center top no-repeat; height: 510px;}
+        .con-bg6 { background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/41/128/208/13557881.jpg) center top no-repeat; height: 754px;}
+
+        .con-body { width: 1200px; position: absolute; top: 0; left: 50%; margin-left: -600px;}
+
+        .bmk { height: 400px; margin-left: 300px; margin-top: 150px; margin-bottom: 755px; overflow: hidden; position: relative;}
+        .bmk label { color: #fff; width: 56px; display: inline-block; margin-right: 0;}
+        .bmk input { width: 210px; height: 36px; margin-bottom: 14px; padding-left: 5px; background: #f1f1f1; border: 1px solid #2764cf; border-radius: 6px;}
+        .bmk select { width: 215px; height: 36px; margin-right: 5px; margin-bottom: 17px; margin-left: 0px; padding-left: 5px;background: transparent; border: none;}
+
+        #submit { width: 140px; height: 75px; cursor: pointer; background: transparent; color: #fff; border: none; font-size: 20px; position: absolute; right: 108px; top: 5px;}
+
+        .btns a {
+            display: inline-block;
+            width: 102px;
+            height: 38px;
+            text-align: center;
+            line-height: 38px;
+            margin-bottom: 10px;
+            margin-right: 12px;
+            background-color: #8cb1f3;
+            border-radius: 6px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btns a.active {
+            background-color: #2764cf;
+        }
+        .h {
+            display: block;
+            height: 1880px;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+<!--自适应头图-->
+<div class="banner">
+    <div class="banner1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/37/128/208/13557877.jpg"/></div>
+    <div class="banner2"></div>
+</div>
+
+<div class="content-wrap">
+    <!--主体背景-->
+    <div class="con-bg0 con-bg"></div>
+    <div class="con-bg1 con-bg"></div>
+    <div class="con-bg2 con-bg"></div>
+    <div class="con-bg3 con-bg"></div>
+    <div class="con-bg4 con-bg"></div>
+    <div class="con-bg5 con-bg"></div>
+    <div class="con-bg6 con-bg"></div>
+    <!--主体浮层-->
+    <div class="con-body" id="bm">
+        <div class="bmk">
+            <div class="btns" style="width: 625px; height: 40px; padding-left: 60px; margin-bottom: 16px; margin-left: -4px; float: left;">
+                <a class="active" data-id="22">BMW X3</a>
+                <a data-id="239">全新BMW 1系</a>
+                <a data-id="57">新BMW 2系</a>
+                <a data-id="59">BMW 3系</a>
+                <a data-id="21">BMW X1</a>
+            </div>
+            <p style="width: 950px; float: left;">
+                <label for=""></label><input style="margin-right: 80px;" type="text" name="name" id="name" value="" placeholder="姓名" />
+                <label for=""></label><input type="text" name="phone" id="tel" value="" placeholder="电话" />
+            </p>
+
+            <!--提交-->
+            <input type="button" id="submit" value="" />
+        </div>
+        <!--报名end-->
+
+        <!--其他-->
+        <a class="h" href="#bm"></a>
+
+    </div>
+</div>
+
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script type="text/javascript">
+    var series_id = $('.btns').find('a.active').data('id');
+    //获取id
+    $('.btns').find('a').click(function(){
+        $('.btns').find('a').removeClass('active');
+        $(this).addClass('active');
+        series_id = $('.btns').find('a.active').data('id');
+    })
+    //    报名
+    $(function(){
+        var flag = true;
+        $("#submit").click(function(){
+            if(flag) {
+
+                series_id = series_id;  //车型id
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),        //电话
+                    brand_id = 1, //品牌
+                    act_id = 2276,
+
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        act_id:act_id
+                    }
+
+                console.log(Data)
+
+
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+
+
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+
+        })
+
+    })
+</script>
+</body>
+</html>

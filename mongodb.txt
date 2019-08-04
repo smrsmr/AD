@@ -1,0 +1,46 @@
+//操作mongodb
+//链接本地数据库
+mongod --dbpath E:\web\mongodb
+cmd mongo
+//查看数据库
+show dbs
+//创建数据库
+use user
+//创建表 插入数据
+db.admin.insert({"name":"smr":"age":22})
+//查找数据
+db.admin.find()           //查找全部数据
+db.admin.find({"age":22})   //查找age=22
+db.admin.find({"age":{$gt:22}})   //查找age>22
+db.admin.find({"age":{$lt:22}})   //查找age<22
+db.admin.find({"age":{$gte:22}})   //查找age>=22
+db.admin.find({"age":22}).limit(5)   //查询前五条数据
+db.admin.find({"age":22}).skip(15)   //查询15条后面的数据
+db.admin.find({"age":{$gte:22}).count()   //统计age大于等于22的数据共有多少条
+db.admin.find({$or:{"age":22,{"age":15}}})  //查询age=22 和 age=15的数据
+//修改数据
+db.admin.update({"age":32},{$set:{"age":25}})  //查找age=32的，修改为25
+//删除数据
+db.admin.remove(age:22)
+//查看当前数据库创建多少个表
+use user
+show collections
+//for循环添加数据
+for(var i=0;i<1000;i++){
+    db.user.insert({"name":"title"+i})
+}
+//查询数据库某个值的时间
+db.admin.find().explain( "executionStats" )
+//创建索引
+ db.user.ensureIndex({"name":1})
+//删除索引
+ db.user.dropIndex({"name":1})
+//导出数据库为json  mongoexport -d 数据库名称 -c 表名 -o 导出地址
+mongoexport -d mongodb -c baomings -o E:\项目\bm.json
+//导出数据为csv
+mongoexport -d mongodb -c baomings --type=csv -f "name,phone,brand_id,series_id,dealers,prov,city" -o E:\项目\bm.csv
+
+mongoimport --db mongodb --collection dealers --file E:\json.json
+
+//管理员运行
+mongod --dbpath=E:\web\mongodb --logpath=E:\web\mongodb\log\MongoDB.log --install --serviceName="MongoDB"

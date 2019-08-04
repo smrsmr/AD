@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" id="viewportid" content="target-densitydpi,width=750,user-scalable=no,maximum-scale=1.2">
+    <title>越领科技 驭享非凡</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            border: none;
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 750px;
+        }
+        .ban2 {
+            position: relative;
+        }
+        .form {
+            position: absolute;
+            top: 149px;
+            left: 182px;
+            width: 488px;
+            height: 316px;
+        }
+        .form input, .form select, .form button {
+            width: 430px;
+            height: 42px;
+            margin-left: 54px;
+            font-size: 25px;
+            border: none;
+            outline: none;
+            color: white;
+            background: transparent;
+        }
+        .form select option {
+            color: black;
+        }
+        #tel {
+            margin-top: 16px;
+        }
+        #city_id,#dealer,#series_id {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 145px;
+            height: 45px;
+            line-height: 52px;
+            margin-top: 10px;
+        }
+        #dealer {
+            margin-left: 6px;
+            width: 274px;
+        }
+        #series_id {
+            position: relative;
+            margin-top: 7px;
+            width: 430px;
+            z-index: 3;
+        }
+        #img1 {
+            position: absolute;
+            top: 180px;
+            right: 11px;
+            width: 26px;
+            height: 16px;
+            z-index: 2;
+        }
+        #submit {
+            margin-top: 24px;
+            margin-left: 2px;
+            width: 394px;
+            height: 57px;
+            cursor: pointer;
+            position: relative;
+        }
+        @media screen and (max-width: 750px){
+            body {
+                background-color: #02000B;
+            }
+        }
+        @media  (min-width: 800px) and (max-width: 1366px){
+            body {
+                background-color: #02000B;
+            }
+            .form {
+                top: 148px;
+                left: 184px;
+                width: 487px;
+                height: 292px;
+            }
+            .form input, .form select, .form button {
+                width: 434px;
+                height: 42px;
+                margin-left: 52px;
+                font-size: 25px;
+
+            }
+            #city_id,#dealer,#series_id {
+                width: 146px;
+                height: 42px;
+                line-height: 52px;
+                margin-top: 12px;
+            }
+            #dealer {
+                margin-left: 6px;
+                width: 200px;
+            }
+            #img1 {
+                top: 180px;
+            }
+            #series_id {
+                width: 434px;
+            }
+            #submit {
+                margin-top: 27px;
+                width: 393px;
+            }
+        }
+        #cnzz_stat_icon_1260102516,
+
+        #cnzz_stat_icon_1260842227,
+
+        #cnzz_stat_icon_1260919928,
+
+        #cnzz_stat_icon_1255711023,
+
+        #cnzz_stat_icon_1260771396,
+
+        #cnzz_stat_icon_1261301380,
+
+        #cnzz_stat_icon_1261327484
+        {
+            display: none;
+        }
+    </style>
+    <script src="http://gd.qq.com/2015zt/auto/dfrc9y/9y/jquery.min.js"></script>
+</head>
+<body>
+<div class="main">
+    <div class="ban1">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/127/201/13102658.jpg" alt="">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/249/127/201/13102659.jpg" alt="">
+    </div>
+    <div class="ban2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/250/127/201/13102660.jpg" alt="">
+        <div class="form">
+            <input type="text" id="name">
+            <input type="text" id="tel">
+            <select id="city_id">
+                <option value="0">请选择</option>
+                <option value="1">江苏</option>
+                <option value="2">上海</option>
+            </select>
+            <select id="dealer"></select>
+            <select id="series_id">
+                <option value="0">请选择</option>
+                <option value="97">全新阿特兹</option>
+                <option value="100">CX-4</option>
+            </select>
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/127/201/13102657.png" alt="" id="img1">
+            <button id="submit"></button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    //获取经销商
+    var cityId = $("#city_id");  //获取城市
+    var dealer = $("#dealer");   //获取经销商
+    var data1 = [
+        {name:'江苏乾丰汽车销售有限公司'},
+        {name:'南京通孚源汽车销售服务有限公司'}
+    ];
+    var data2 = [
+        {name:'上海交运隆嘉汽车销售服务有限公司'},
+        {name:'上海景和金沙汽车销售有限公司'},
+        {name:'上海绿地东汽车销售有限公司'},
+        {name:'上海绿地杨浦汽车销售服务有限公司'},
+        {name:'上海路帅汽车销售有限公司'},
+        {name:'上海通锐汽车销售服务有限公司'}
+    ];
+    cityId.change(function () {
+        GetDealer($(this),dealer)
+    });
+    var GetDealer = function (poSel,reSel) {
+        reSel.html('');
+        if ($("option:selected",poSel).val() == '1') {
+            for(var i=0;i<data1.length;i++){
+                reSel.append('<option value="'+data1[i].name+'">'+data1[i].name+'</option>');
+            }
+        }
+        if ($("option:selected",poSel).val() == '2') {
+            for(var i=0;i<data2.length;i++){
+                reSel.append('<option value="'+data2[i].name+'">'+data2[i].name+'</option>');
+            }
+        }
+    }
+
+    //报名
+    var flag = true;
+    $("#submit").on('click', function() {
+        if (flag) {
+            var name = $("#name").val(),  //姓名
+                tel = $("#tel").val(),       //电话
+                series_id = $("#series_id").val(),  //车型
+                city_id = $("#city_id").val(),  //城市
+                dealer = $("#dealer").val(),  //经销商
+                brand_id = 14, //品牌
+                act_id = 541, //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+                    act_id: act_id,
+                    dealers: dealer
+                }
+
+            if (name == '姓名' || tel == '手机') {
+                alert('信息没有填写完整');
+                return false;
+            }
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            ;
+            if (!(/^1[3|4|5|8][0-9]\d{4,8}$/.test(tel))) {
+                alert('手机格式不正确');
+                return false;
+            }
+            ;
+
+            if (city_id == "0") {
+                alert('请选择经销商');
+                return false;
+            }
+            if (dealer == "0") {
+                alert('请选择经销商');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+
+            flag = false;
+
+            //发送请求
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert("恭喜你，报名成功了");
+                        window.location.reload();
+                    } else {
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</html>

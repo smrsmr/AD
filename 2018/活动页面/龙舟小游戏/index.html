@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no" />
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <title>一汽大众龙舟赛</title>
+    <link rel="stylesheet" href="css/idangerous.swiper.css"/>
+    <link rel="stylesheet" href="css/main.css" />
+    <script>
+        var WWW = 640;
+        var HHH = 1136;
+        var maxHHH = 1136;
+        var minHHH = 960;
+
+        var sc = WWW / maxHHH;
+        var maxsc = WWW / minHHH;
+        var sca = 1.0;
+
+        var mydiv_resize = function()
+        {
+            var mydiv = document.getElementById("p_p");
+
+            var wbh = window.innerWidth / window.innerHeight;
+
+            if(wbh > maxsc)
+            {
+                HHH = minHHH;
+                sca = window.innerHeight / HHH;
+            }
+            else if(wbh < sc)
+            {
+                HHH = maxHHH;
+                sca = window.innerWidth / WWW;
+            }
+            else
+            {
+                HHH = WWW / wbh;
+                sca = window.innerWidth / WWW;
+            }
+
+            mydiv.style.transform = "scaleX(" + sca + ") scaleY(" + sca + ")";
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/game9g.css">
+    <style>
+        .btns {
+            bottom: 16%;
+        }
+        .imgI {
+            position: fixed;
+            left: 50%;
+            top: 0;
+            width: 660px;
+            z-index: 999;
+            margin-left: -330px;
+        }
+        .imgI .bbtn {
+            position: absolute;
+            left: 50%;
+            bottom: 281px;
+            width: 305px;
+            height: 62px;
+            margin-left: -155px;
+            background: transparent;
+        }
+        .show {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0,.5);
+            width: 100%;
+            height: 100%;
+            z-index: 998;
+        }
+    </style>
+    <script src="js/game9g.js"></script>
+</head>
+
+<body>
+<div id="p_p">
+    <div class="wrapper">
+        <div class="logo"><img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/logo.png"></div>
+        <div class="intro">
+            <div class="start_btn"></div>
+            <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/t1.png" class="t1">
+            <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/t2.png" class="t2">
+            <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/t3.png" class="t3">
+        </div>
+        <div class="left_btn_p">
+            <div class="left_btn"></div>
+            <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/left_btn.png" class="left_btn_i"/>
+        </div>
+        <div class="right_btn_p">
+            <div class="right_btn"></div>
+            <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/right_btn.png" class="right_btn_i"/>
+        </div>
+        <div class="gameMain">
+            <canvas id="gameMain" width="640" height="1011" style="background-color:none"></canvas>
+            <div class="score">
+                <div class="label1">得分</div>
+                <div class="label2">0</div>
+                <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/score_bg.png" class="bg" />
+            </div>
+            <div class="yibiao">
+                <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/speed_bg.png" class="bg" />
+                <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/line.png" class="line" />
+            </div>
+        </div>
+        <div class="countDown">
+            <div class="cont">
+                <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/3.png" class="time" />
+                <img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/score_bg.png" class="bg" />
+            </div>
+        </div>
+        <div class="result">
+            <div class="txt1"><img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/txt1.png" /></div>
+            <div class="txt2"><img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/txt2.png" /></div>
+            <div class="sc">0</div>
+            <div class="pm"></div>
+            <div class="icon"><img src="http://mat1.gtimg.com/autoguangzhou/lonz/images/level1.png" id="icons" /></div>
+            <div class="btns">
+                <div class="btn" id="again_btn"><img src="http://mat1.gtimg.com/autoguangzhou/lonz/picture/again_btn.png" /></div>
+            </div>
+        </div>
+        <div class="share_cont"></div>
+    </div>
+</div>
+<div class="show"></div>
+<div class="imgI">
+    <img src="http://mat1.gtimg.com/autoguangzhou/lonz/images/ttk1.png" alt="" width="100%" height="100%">
+    <button class="bbtn"></button>
+</div>
+<audio id="controls" loop="loop">
+    <source src="http://mat1.gtimg.com/autoguangzhou/lonz/01.mp3" type="audio/mpeg" />
+</audio>
+<script charset="UTF-8" type="text/javascript" async="async">
+    var game9g = new Game9G("zls");
+    game9g.shareData.title = "一汽-大众龙舟赛";
+    game9g.shareData.content = "动动手指头，参加赛龙舟，还能赢取猴年生肖公仔！更多奖品，就在“一汽-大众寻龙记”！";
+    game9g.shareData.link = window.location.href;
+    game9g.shareData.imgurl = "http://img1.gtimg.com/autodongguan/pics/hv1/163/118/186/12124903.png";
+
+    function goHome(){
+        window.location=game9g.homeurl;
+    }
+    function clickMore(){
+        window.location=game9g.moreurl;
+    }
+    function dp_share(){
+        game9g.share();
+    }
+    function dp_Ranking(){
+        window.location=game9g.homeurl;
+    }
+
+    function showAd(){
+    }
+    function hideAd(){
+    }
+    function dp_submitScore(score){
+        if(score>0){
+            game9g.score =parseInt(score);
+            game9g.scoreName = "得了"+score+"分";
+            game9g.shareData.title ="我在赛龙舟中得了" + score+ "分，快来试试你是不是划船能手!";
+            game9g.utils.shareConfirm("你在赛龙舟中得了"+score+"关!通知一下小伙伴吧!",dp_share);
+        }
+    }
+
+</script>
+<script src="js/zepto.min.js"></script>
+<script>
+    $('.bbtn').on('touchend',function (e) {
+        e.preventDefault();
+        $('.imgI').fadeOut(300)
+        $('.show').fadeOut(300)
+    })
+</script>
+<div style="display: none;">
+    <script type="text/javascript">
+        game9g.utils.tongji();
+    </script>
+</div>
+</body>
+<script src="js/stat.js"></script>
+<script src="js/s7_min.js" + Math.random() async="async" type="text/javascript" charset="UTF-8"></script>

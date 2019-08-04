@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<!--[if lte IE 6 ]> <html class="ie ie6 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie ie7 lte_ie7 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie ie8 lte_ie8 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie ie9 lte_ie9" lang="zh-CN"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="zh-CN"> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <meta content="text/html; charset=gb2312" http-equiv="Content-Type">
+    <meta name="author" content="Tencent-Video">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>订制专属于你的小哥哥壁纸</title>
+    <style type="text/css">
+        /* reset */
+        html,body{height:100%;}
+        body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td{margin:0;padding:0;}
+        h1,h2,h3,h4,h5,h6{font-size:100%;}
+        ul,dl,ol{list-style:none;}
+        img,fieldset,input[type="submit"]{border:0 none;}
+        img{display:inline-block;overflow:hidden;vertical-align:top;}
+        em{font-style:normal;}
+        strong{font-weight:normal;}
+        table{border-collapse:collapse;border-spacing:0;}
+        button,input[type="button"]{cursor:pointer;border:0 none;}
+        textarea{word-wrap:break-word;resize:none;}  /* word-wrap for opera, resize for webkit */
+        menu{margin:0;padding:0;}
+        body{-webkit-user-select:none;-webkit-text-size-adjust:none!important;font-family:Helvetica;}
+        input[type="number"]{-webkit-user-select:text;}
+        a,button,input,img{-webkit-touch-callout:none;}/* 1.ios 长按时不触发系统的菜单 2.禁止长按时下载图片 */
+        input,select,textarea{outline:none;}
+        .layout{width:100%;height:100%;overflow:hidden;}
+        .loading{width:100%;height:100%;background:#ff5239 url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/loading1.2.jpg) no-repeat center center;background-size:100%;position:fixed;z-index:10000;top:0;left:0;}
+        .loading2{width:100%;height:100%;position:fixed;z-index:9999;top:0;left:0;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/01.jpg) no-repeat center bottom;background-size:100%;}
+        .loadingAni{animation:loading 5s 1 normal forwards;}
+        .loading2 img{width:100%;position:absolute;bottom:0;left:0;}
+        .loading .loadingImg{width:100%;height:100%;position:absolute;top:0;left:0;}
+        .loading .loadingImg .inner{width:0;height:100%;float:left;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/loading2.3.png) no-repeat center left;background-size:375px 724px;}
+        .loading h1{width:100%;position:absolute;top:50%;left:0;text-align:center;font-size:24px;color:#fff;margin-top:38px;}
+        .loading .logo{width:124px;height:33px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/logo2.png) no-repeat;background-size:100%;position:absolute;left:50%;bottom:30px;margin-left:-62px;}
+        .cover{width:100%;height:100%;background:url(http://mat1.gtimg.com/v/goldenchen/images/liveTest/cover2.jpg) no-repeat;background-size:cover;display:none;position:absolute;z-index:2;}
+        .cover .start{position:absolute;bottom:20px;left:50%;width:129px;height:41px;margin-left:-65px;background:url(http://mat1.gtimg.com/v/goldenchen/images/liveTest/coverStart2.png) no-repeat;background-size:cover;}
+        .page{width:100%;height:100%;overflow:hidden;display:none;}
+        #page1{display:block;position:absolute;z-index:1;background-position:bottom center;background-repeat:repeat-y;background-size:100% auto;}
+        #bagLayout{width:100%;height:100%;overflow:hidden;background-size:100% auto;background-position:center bottom;background-repeat:no-repeat;}
+        #bagLayout #starBg{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-2;overflow:hidden;}
+        .bag01 #starBg img{width:100%;}
+        #bagLayout #star{width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1;}
+        #bagLayout #star img{width:100%;position:absolute;bottom:165px;bottom:0;left:0;}
+        #bagLayout #txt{width:100%;height:100%;position:absolute;top:0px;left:0;z-index:1;text-align:center;}
+        #bagLayout #txt img{width:100%;position:absolute;top:50%;left:0;margin-top:-370px;}
+        #bagLayout #txt img.iphonex{top:0;margin-top:0;}
+        #bag{width:100%;height:100%;overflow:hidden;}
+        .menu{width:100%;height:165px;padding-top:31px;background:url(https://puui.qpic.cn/vupload/0/20180726_menuBg.png/0) no-repeat top center;background-size:100%;position:fixed;bottom:0;left:0;z-index:9999;}
+        .menuListLayout{width:100%;margin-top:10px;overflow:auto;}
+        .menuListLayout #starIconList{width:100%;height:165px;}
+        .menuListLayout .menuItem{float:left;width:43px;height:43px;margin:4px 5px;background:#ece2e3;border:4px solid #d8d7d3;border-radius:5px;display:flex;justify-content:center;align-items:center;}
+        .menuListLayout #faceIconList .menuItem{margin:4px;}
+        .menuListLayout .menuItem .menuItemIcon{background-size:cover;background-position:center center;width:100%;height:100%;}
+        .menuListLayout .menuItem .menuStarBgIcon{background-size:cover;width:100%;height:100%;}
+        .menuListLayout .menuItem .menuStarIcon{background-size:cover;width:100%;height:100%;}
+        .menuListLayout .menuItem .menuTxtIcon{background-repeat:no-repeat;background-size:100%;width:100%;height:100%;}
+        .menuListLayout #starIconList .current{border:4px solid #d9d7d3;}
+        .menuListLayout #starIconList .menuItem:nth-child(1),.menuListLayout #starIconList .menuItem:nth-child(7){margin-left:10px;}
+        .menuTypeLayout{width:100%;height:30px;line-height:30px;display:flex;justify-content:space-around;align-items:center;}
+        .menuTypeLayout .menuType{background-repeat:no-repeat;background-position:center center;background-size:100%;-webkit-tab-highlight-color:rgba(0,0,0,0);}
+        .menuTypeLayout #menuTypeStar{width:36px;height:30px;background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeStar.png/0);}
+        .menuTypeLayout #menuTypeStarBg{width:30px;height:30px;background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeStarBg.png/0);}
+        .menuTypeLayout #menuTypeDecoration{width:31px;height:31px;background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeDecoration.png/0);}
+        .menuTypeLayout #menuTypeFace{width:31px;height:31px;background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeFace.png/0);}
+        .menuTypeLayout #menuTypeTxt{width:31px;height:31px;background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeTxt.png/0);}
+        .menuTypeLayout #menuTypeStar.menuTypeCurrent{background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeStarCurrent.png/0);}
+        .menuTypeLayout #menuTypeStarBg.menuTypeCurrent{background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeStarBgCurrent.png/0);}
+        .menuTypeLayout #menuTypeDecoration.menuTypeCurrent{background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeDecorationCurrent.png/0);}
+        .menuTypeLayout #menuTypeFace.menuTypeCurrent{background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeFaceCurrent.png/0);}
+        .menuTypeLayout #menuTypeTxt.menuTypeCurrent{background-image:url(https://puui.qpic.cn/vupload/0/20180726_menuTypeTxtCurrent.png/0);}
+        .menuListLayout #txtIconList .menuItem{border:0;background:none;}
+        .menuListLayout #txtIconList .menuItem:nth-child(1){width:105px;height:13px;margin:20px 0 0 20px;}
+        .menuListLayout #txtIconList .menuItem:nth-child(2){width:106px;height:13px;margin:20px 28px 0;}
+        .menuListLayout #txtIconList .menuItem:nth-child(3){width:72px;height:13px;margin:20px 0 0;}
+        .menuListLayout #txtIconList .menuItem:nth-child(4){width:151px;height:13px;margin:20px 0 0 20px;}
+        .menuListLayout #txtIconList .menuItem:nth-child(5){width:90px;height:13px;margin:20px 0 0 70px;}
+        .itemsLayout{position:absolute;top:25%;left:25%;display:none;padding:1px;transform-origin:50% 50%;}
+        .itemsLayout .x{display:none;position:absolute;top:-23px;right:-23px;width:23px;height:23px;background:url(https://puui.qpic.cn/vupload/0/20180725_x.png/0) no-repeat;background-size:cover;}
+        .itemsLayout .scale{display:none;position:absolute;top:-23px;left:-23px;width:23px;height:23px;background:url(https://puui.qpic.cn/vupload/0/20180725_scale.png/0) no-repeat;background-size:cover;}
+        .itemsLayout .xx{display:none;position:absolute;top:0;right:0;width:100%;height:100%;}
+        .itemsLayout .xx img{width:100%;height:100%;}
+        .itemsLayout .items{width:100%;height:100%;background-size:cover;}
+        .itemsLayout .items img{width:100%;height:100%;}
+        #decorationIconList{width:420px;}
+        #decorationIconList .menuItem{margin:4px;}
+        #faceIconList{width:550px;}
+        .itemsLayoutActive{border:1px dotted #fff;padding:0;}
+        .itemsLayoutActive .x{display:block;}
+        .itemsLayoutActive .xx{display:block;}
+        .itemsLayoutActive .scale{display:block;}
+        #submit{width:74px;height:52px;background:url(https://puui.qpic.cn/vupload/0/20180726_submitBtn.png/0) no-repeat center center;background-size:cover;z-index:99999;position:absolute;bottom:220px;right:0;}
+        #audioBtn{width:22px;height:22px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/audio.png) no-repeat;background-size:cover;position:absolute;top:20px;right:16px;z-index:99999;}
+        #audioBtn.audioPlay{animation:audioPlay 2s linear infinite;}
+        #resultTxt{display:none;width:100%;height:110px;position:fixed;bottom:0;left:0;z-index:9999;background-color:rgba(0, 0, 0, 0.8);}
+        #resultTxt .starIcon{width:20px;height:19px;position:absolute;left:17px;top:8px;}
+        #resultTxt .logo{position:absolute;top:77px;left:22px;width:87px;height:24px;}
+        #resultTxt .txt{position:absolute;width:250px;font-family:resultP;}
+        #resultTxt .erweima{width:74px;height:74px;padding:5px 4px;position:absolute;top:5px;left:-4px;background:#fff;}
+        #page1 .guideLayout{width:100%;height:100%;position:fixed;top:0;left:0;z-index:9999;}
+        #page1 .guideLayout .guide{width:284px;height:328px;position:absolute;top:50%;left:50%;margin:-164px 0 0 -142px;background:url(http://mat1.gtimg.com/v/goldenchen/images/liveTest/zhiyin.png) no-repeat;background-size:cover;}
+        #page1 .guideLayout .guide .shut{width:26px;height:22px;position:absolute;top:0;right:0;}
+        #result{width:100%;height:100%;position:fixed;top:0;left:0;z-index:99999;background-color:rgba(0, 0, 0, 0.7);display:none;}
+        #result .resultBg{width:270px;height:161px;position:absolute;top:50%;left:50%;margin:-81px 0 0 -135px;background:url(http://mat1.gtimg.com/v/goldenchen/images/liveTest/resultBg.png) no-repeat;background-size:cover;animation:result 0.3s ease-in 1 normal forwards;}
+        #result .resultBg h2{width:100%;height:44px;line-height:44px;margin-top:24px;font-size:32px;text-align:center;color:#fff000;font-family:resultH2;}
+        #result .resultBg p{width:100%;font-size:12px;text-align:center;color:#fff;line-height:18px;margin-top:6px;font-family:resultP;text-decoration:underline;}
+        #result .resultX{width:45px;height:42px;background:url(http://mat1.gtimg.com/v/goldenchen/images/liveTest/resultX.png) no-repeat;background-size:cover;position:absolute;top:-20px;right:25px;}
+        /* .finalResult{width:100%;height:100%;position:absolute;top:-9999px;left:-9999px;z-index:10000;overflow:hidden;display:flex;justify-content:center;align-items:center;} */
+        .finalResult{width:100%;height:100%;position:absolute;top:-9999px;left:-9999px;z-index:-1;overflow:hidden;}
+        .finalResult #starBg{width:100%;height:100%;}
+        .finalResult #starBg img{height:100%;position:absolute;top:0;left:50%;}
+        .finalResult .submit{display:none;}
+        .finalResult .audioBg{display:none;}
+        .finalResult .menu{display:none;}
+        .finalResult #bagLayout #star img{bottom:0;}
+        .finalResult #bag{position:absolute;bottom:0;}
+        .finalCanvas{width:100%;height:100%;position:fixed;top:-9999px;left:-9999px;}
+        .finalCanvas div canvas{margin:0;padding:0;}
+        .finalFloat{display:none;width:100%;height:100%;position:absolute;top:0;left:0;z-index:99999;background:rgba(255, 83, 59, 0.9);}
+        .finalFloat .finalFloatInner{width:270px;position:absolute;top:28px;left:50%;margin:0 0 0 -135px;}
+        .finalFloat .finalFloatInner img{width:100%;}
+        .finalFloat .finalFloatInner .changanTips1{display:none;position:absolute;bottom:-25px;left:50%;margin-left:-52px;width:104px;height:16px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/changanTips1.png) no-repeat;background-size:100%;}
+        .finalFloat .finalFloatInner .shareTips2{display:none;position:absolute;bottom:-25px;left:50%;margin-left:-52px;width:104px;height:16px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/changanTips2.png) no-repeat;background-size:100%;}
+        .finalFloat .finalFloatInner .playTime{width:229px;height:44px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/playTime2.png) no-repeat;background-size:100%;position:absolute;left:50%;bottom:-80px;margin-left:-112px;}
+        .finalFloat .finalFloatInner .x2{width:29px;height:29px;background:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/x2.png) no-repeat;background-size:cover;position:absolute;top:10px;right:10px;}
+        .finalImg{width:100%;height:100%;position:absolute;top:-9999px;left:-9999px;z-index:999999;opacity:0;}
+        .finalImg img{width:100%;height:100%;}
+        .dis{display:block;}
+        .undis{display:none;}
+        @keyframes loading{
+            0%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/01.jpg);}
+            3%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/02.jpg);}
+            6%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/03.jpg);}
+            9%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/04.jpg);}
+            12%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/05.jpg);}
+            15%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/06.jpg);}
+            18%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/07.jpg);}
+            21%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/08.jpg);}
+            24%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/09.jpg);}
+            27%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/10.jpg);}
+            39%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/11.jpg);}
+            42%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/12.jpg);}
+            45%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/13.jpg);}
+            48%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/14.jpg);}
+            51%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/15.jpg);}
+            54%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/16.jpg);}
+            57%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/17_2.jpg);}
+            60%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/18_2.jpg);}
+            63%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/19.jpg);}
+            66%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/20.jpg);}
+            69%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/21.jpg);}
+            72%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/22.jpg);}
+            75%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/23.jpg);}
+            78%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/24.jpg);}
+            81%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/25.jpg);}
+            84%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/26.jpg);}
+            87%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/27.jpg);}
+            90%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/28.jpg);}
+            93%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/29.jpg);}
+            94%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/30.jpg);}
+            97%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/31.jpg);}
+            100%{background-image:url(http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/32.jpg);}
+        }
+        @keyframes audioPlay{
+            0%{transform:rotate(0deg);}
+            100%{transform:rotate(360deg);}
+        }
+        @media only screen and (device-width: 375px) and (device-height: 812px) and
+        (-webkit-device-pixel-ratio: 3) {
+
+        }
+    </style>
+    <link rel="shortcut icon" href="//v.qq.com/favicon.ico" />
+    <!--pgv 20160801 by 39815--><script charset="gbk" src="http://pingjs.qq.com/ping.js"></script>
+
+    <script>!function(t,e){"use strict";function a(){var t,e,a=(""+p.catalog_full).replace(/-/g,".").replace(/_/g,"-");p.topic&&p.topic.name&&p.topic.name.length>0?(t="L.",e="Z."+a+"."+p.topic.name):(t="L."+a,e="Z.");var n="W."+p.type,o="M."+p.tpl.type+p.tpl.stype,i="P."+(""+p.site).replace(/_/g,"-"),c="F."+f,l=t+"_"+e+"_"+n+"_"+o+"_"+i+"_"+c;l&&r({pgUserType:l})}function n(t){o(e,"click",function(e){var a=e.target;"img"===a.tagName&&(a=a.parentNode);var n=a.tagName.toLowerCase(),o=a.getAttribute("href");if(!o||o.indexOf("qqcom_pgv_from=")>-1)return!1;if("a"===n&&a.hostname&&a.hostname.indexOf("qq.com")>-1){var r=o+(a.search?"&":"?")+"qqcom_pgv_from="+t;a.setAttribute("href",r)}})}function o(a,n,o){var r=function(a){return a=a||t.event,a.target||(a.target=a.srcElement||e),3===a.target.nodeType&&(a.target=a.target.parentNode),a};return a.addEventListener?a.addEventListener(n,function(t){o.call(t.currentTarget,r(t))},!1):a.attachEvent("on"+n,function(t){o.call(a,r(t))}),!0}if(!t||!t.location||"function"!=typeof t.pgvMain)return!1;var r=function(){var e=arguments;setTimeout(function(){t.pgvMain.apply(this,e)},0)},i=location.search.replace(/adtag=client\.qq\.\d+_\.0/i,"from=tips"),c=["aio","tips"],f="def";location.search.indexOf("qqcom_pgv_from=")>-1&&(f=location.host+location.pathname+location.search);var p=t.ARTICLE_INFO||null,l=p&&p.catalog_full;if(l)for(var g=0;g<c.length;g+=1)if(i.indexOf(c[g])>-1){n(c[g]);break}l&&a(),l||("undefined"!=typeof whatCatalog&&(t.pvCSTM=t.whatCatalog),r({pgUserType:"F."+f}))}(window,document);</script><!--/pgv 20160801-->
+    <!-- 视频来源ptag --><script src="//mat1.gtimg.com/v/ptag/ptag_1.2.js" async="true"></script>
+    <!--[if !IE]>|xGv00|a1d505b81f0731c97405c05986e06bb8<![endif]-->
+    <!--[if !IE]>|xGv00|e495268dae03726664c77551e8df25e2<![endif]-->
+    <script type="text/javascript">
+        //boss统计上报
+        function boss(sop){
+            var g_btrace_BOSS = new Image(1,1);
+            var localUrl = location.href;
+            g_btrace_BOSS.src = "http://btrace.qq.com/kvcollect?BossId=5425&Pwd=1306977057&sop=" + sop + "&slocalurl=" + localUrl + "&" + Math.random();
+        }
+        boss("mrzzPersonal");
+    </script>
+</head>
+<body>
+<audio preload loop id="audioBg" src="http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/bg.mp3"></audio>
+<div class="layout" id="layout">
+    <div class="audioBg audioPlay" id="audioBtn"></div>
+    <div class="loading">
+        <div class="loadingImg">
+            <div class="inner"></div>
+        </div>
+        <h1>0%</h1>
+        <div class="logo"></div>
+    </div>
+    <div class="loading2" id="loading2"></div>
+    <!-- <div class="cover">
+        <div class="start"></div>
+    </div> -->
+    <div class="page" id="page1">
+        <div id="bagLayout" class="bag01">
+            <div id="starBg" class="starBg">
+                <img src="" />
+            </div>
+            <div id="star" class="star">
+                <img src="" />
+            </div>
+            <div id="txt" class="txt">
+                <img data="999" src="" />
+            </div>
+            <div id="bag" class="bag"></div>
+            <div id="submit" class="submit"></div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="menuTypeLayout">
+                <div class="menuType menuTypeCurrent" id="menuTypeStar"></div>
+                <div class="menuType" id="menuTypeStarBg"></div>
+                <div class="menuType" id="menuTypeTxt"></div>
+                <div class="menuType" id="menuTypeDecoration"></div>
+                <div class="menuType" id="menuTypeFace"></div>
+            </div>
+            <div class="menuListLayout">
+                <div class="menuList" id="starIconList"></div>
+                <div class="menuList undis" id="starBgIconList"></div>
+                <div class="menuList undis" id="txtIconList"></div>
+                <div class="menuList undis" id="decorationIconList"></div>
+                <div class="menuList undis" id="faceIconList"></div>
+            </div>
+        </div>
+    </div>
+    <div class="finalResult" id="finalResult"></div>
+    <div class="finalCanvas" id="finalCanvas"></div>
+    <div class="finalFloat" id="finalFloat">
+        <div class="finalFloatInner" id="finalFloatInner">
+            <img src="" />
+            <div class="changanTips1"></div>
+            <div class="shareTips2"></div>
+            <div class="playTime"></div>
+            <div class="x2"></div>
+        </div>
+    </div>
+    <div class="finalImg" id="finalImg"></div>
+</div>
+<script type="text/javascript" src="http://mat1.gtimg.com/v/goldenchen/js/zepto.min.js"></script>
+<script type="text/javascript" src="http://mat1.gtimg.com/v/goldenchen/js/loader.min.js"></script>
+<script type="text/javascript" src="https://mat1.gtimg.com/v/goldenchen/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+    resize();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        document.getElementById("audioBg").play();
+    }, false);
+    document.getElementById("audioBg").play();
+
+    var ua = navigator.userAgent;
+    var isWeixin = ua.indexOf("MicroMessenger") > -1;	//当前环境是否为微信
+    var isQQLiveBrowser = ua.indexOf("QQLiveBrowser") > -1;    //当前环境是否为腾讯视频app
+    var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1;    //当前环境是否为Android
+    var isIOS = !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);    //当前环境是否为Ios
+    var shareTitle = '私人订制！喜欢他就把他设成桌面'; //分享标题
+    var shareDesc = '订制专属于你的明日之子壁纸'; //分享副标题
+    var shareImg = 'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/share.jpg'; //分享图标
+    var shareLink = location.href; //分享链接
+
+    var silence = false;    //是否静音
+    var spritePic = "";
+    var draging = false; //是否正在拖动道具
+    var itemsCurrent;    //当前选中的道具
+    var menuTypeCurrent = $(".menuType")[0];    //当前选中的分类图标文字
+    var menuListCurrent = $(".menuList")[0];    //当前显示的分类图标列表
+    var canDrag = true;  //物品是否可以拖动
+    var borderThrough = true;  //物品拖动是否可以穿越边界
+    var canRotate = true;  //物品是否可以旋转
+    var zIndex = 1;	//道具层级
+    var windowWidth = $(window).width();    //屏幕宽度
+    var windowHeight = $(window).height();    //屏幕高度
+    var menuWidth = $("#menu").width();    //菜单栏宽度
+    var menuHeight = $("#menu").height();    //菜单栏高度
+    $("#bag").height(windowHeight - menuHeight + 31);    //动态调整背包高度
+    $("#page1 #star").height(windowHeight - menuHeight + 31);
+    var bagWidth = $("#bag").width(); //背包宽度
+    var bagHeight = $("#bag").height();    //背包高度
+    var itemNumber = 1; //当前添加的是第几个道具
+    var itemsLayout = []; //所有道具容器
+    var items = []; //所有道具
+    var icons = {}; //按钮和道具对应关系
+    var finalItemArr = [];  //背包中的道具
+
+    var starBgObj = {  //所有背景的属性
+        starBg01: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg01.jpg/0'
+        },
+        starBg02: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg02.jpg/0'
+        },
+        starBg03: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg03.jpg/0'
+        },
+        starBg04: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg04.jpg/0'
+        },
+        starBg05: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg05.jpg/0'
+        },
+        starBg06: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg06.jpg/0'
+        },
+        starBg07: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg07.jpg/0'
+        },
+        starBg08: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg08.jpg/0'
+        },
+        starBg09: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg09.jpg/0'
+        },
+        starBg10: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg10.jpg/0'
+        },
+        starBg11: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_starBg11.jpg/0'
+        }
+    };
+
+    var starObj = {  //所有明星的属性
+        star01: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star01.png/0'
+        },
+        star02: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star02.png/0'
+        },
+        star03: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star03.png/0'
+        },
+        star04: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star04.png/0'
+        },
+        star05: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star05.png/0'
+        },
+        star06: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star06.png/0'
+        },
+        star07: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star07.png/0'
+        },
+        star08: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star08.png/0'
+        },
+        star09: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star09.png/0'
+        },
+        star10: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star10.png/0'
+        },
+        star11: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star11.png/0'
+        },
+        star12: {
+            src: 'https://puui.qpic.cn/vupload/0/20180730_star12.png/0'
+        },
+    };
+
+    var txtObj = {  //所有文字的属性
+        txt01: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_txt04-4.png/0'
+        },
+        txt02: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_txt02-4.png/0'
+        },
+        txt03: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_txt05-4.png/0'
+        },
+        txt04: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_txt01-4.png/0'
+        },
+        txt05: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_txt04-5.png/0'
+        }
+    };
+
+    var decorationObj = {  //所有贴纸的属性
+        decoration01: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration01.png/0',
+            width: 119,
+            height: 103
+        },
+        decoration02: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration02.png/0',
+            width: 291,
+            height: 142
+        },
+        decoration03: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration03.png/0',
+            width: 310,
+            height: 284
+        },
+        decoration04: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration04.png/0',
+            width: 129,
+            height: 73
+        },
+        decoration05: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration17.png/0',
+            width: 137,
+            height: 121
+        },
+        decoration06: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration06.png/0',
+            width: 285,
+            height: 252
+        },
+        decoration07: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration07.png/0',
+            width: 131,
+            height: 55
+        },
+        decoration08: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration08.png/0',
+            width: 158,
+            height: 29
+        },
+        decoration09: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration09.png/0',
+            width: 78,
+            height: 125
+        },
+        decoration10: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration10.png/0',
+            width: 315,
+            height: 308
+        },
+        decoration11: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration16.png/0',
+            width: 223,
+            height: 199
+        },
+        decoration12: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration12.png/0',
+            width: 82,
+            height: 22
+        },
+        decoration13: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration13.png/0',
+            width: 294,
+            height: 246
+        },
+        decoration14: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_decoration14.png/0',
+            width: 130,
+            height: 63
+        }
+    }
+
+    var faceObj = {  //所有表情的属性
+        face01: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_face01.png/0',
+            width: 127,
+            height: 110
+        },
+        face02: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_face02.png/0',
+            width: 127,
+            height: 110
+        },
+        face03: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_face03.png/0',
+            width: 320,
+            height: 89
+        },
+        face04: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_face04.png/0',
+            width: 122,
+            height: 95
+        },
+        face05: {
+            src: 'https://puui.qpic.cn/vupload/0/20180801_face05.png/0',
+            width: 113,
+            height: 98
+        },
+        face06: {
+            src: 'https://puui.qpic.cn/vupload/0/20180725_face06.png/0',
+            width: 160,
+            height: 160
+        },
+        face07: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face07.png/0',
+            width: 83,
+            height: 26
+        },
+        face08: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face08.png/0',
+            width: 146,
+            height: 93
+        },
+        face09: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face09.png/0',
+            width: 143,
+            height: 70
+        },
+        face10: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face10.png/0',
+            width: 255,
+            height: 158
+        },
+        face11: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face11.png/0',
+            width: 83,
+            height: 52
+        },
+        face12: {
+            src: 'https://puui.qpic.cn/vupload/0/20180731_face12.png/0',
+            width: 151,
+            height: 117
+        },
+        face13: {
+            src: 'https://puui.qpic.cn/vupload/0/20180802_face13.png/0',
+            width: 112,
+            height: 98
+        },
+        face14: {
+            src: 'https://puui.qpic.cn/vupload/0/20180802_face14.png/0',
+            width: 126,
+            height: 81
+        },
+        face15: {
+            src: 'https://puui.qpic.cn/vupload/0/20180802_face15.png/0',
+            width: 126,
+            height: 81
+        },
+        face16: {
+            src: 'https://puui.qpic.cn/vupload/0/20180802_face16.png/0',
+            width: 127,
+            height: 203
+        },
+        face17: {
+            src: 'https://puui.qpic.cn/vupload/0/20180802_face17.png/0',
+            width: 127,
+            height: 203
+        }
+    };
+
+    var itemsObj = {  //所有道具的属性
+    };
+
+    Object.assign(itemsObj, decorationObj, faceObj);
+    console.log(itemsObj);
+
+    // var resultItem = ["food01Layout", "food07Layout", "food08Layout", "drug06Layout"];   //分数参考道具单个
+    // var resultItems1 = ["portable07Layout", "portable08Layout", "portable09Layout"];   //分数参考道具多个（身份证/现金）
+    // var resultItems2 = ["portable01Layout", "portable03Layout"];   //分数参考道具多个（手机/充电器）
+    // var resultItems3 = ["portable04Layout", "portable06Layout"];   //分数参考道具多个（袖珍收音机/无线对讲机）
+    // var resultItems4 = ["tool14Layout", "tool15Layout"];   //分数参考道具多个（睡袋/帐篷）
+    // var resultItems5 = ["tool02Layout", "tool05Layout"];   //分数参考道具多个（口哨/应急手电筒）
+    // var resultItems6 = ["tool06Layout", "tool09Layout"];   //分数参考道具多个（多功能铲子/多用刀具）
+
+    function resize(){
+        $("#layout").css("zoom", $(window).width()/375);
+        $("#bag").height($("#page1").height() - menuHeight + 31);    //动态调整背包高度
+        $("#page1 #star").height($("#page1").height() - menuHeight + 31);
+        bagWidth = $("#bag").width(); //背包宽度
+        bagHeight = $("#bag").height();    //背包高度
+        if($(window).height()/$(window).width() > 1.9){
+            $("#txt img").attr("class", "iphonex");
+            // $("#finalResult").width(334);
+            $("#finalResult").height(813);
+        }else{
+            // $("#finalResult").width(339);
+            $("#finalResult").height(667);
+        }
+    }
+
+    function connectTenvideoJSBridge(callback) {
+        if (window.TenvideoJSBridge) {
+            callback(TenvideoJSBridge)
+        } else {
+            document.addEventListener('onTenvideoJSBridgeReady', function() {
+                callback(TenvideoJSBridge)
+            }, false)
+        }
+    }
+
+    function removeByValue(arr, val){  //删除数组中指定元素
+        for(var i=0; i<arr.length; i++) {
+            if(arr[i] == val) {
+                arr.splice(i, 1);
+                break;
+            }
+        }
+    }
+
+    function showBind(a, b){    //点击图标显示对应道具方法
+        $("#" + a).bind("click", function(){
+            if($("#" + b).css("display") == "none"){
+                zIndex ++;
+                var left = 0;
+                var top = 0;
+
+                top = bagHeight/3;
+                left = bagWidth/3;
+
+                $("#" + b).css({
+                    left: left + "px",
+                    top: top + "px",
+                    zIndex: zIndex,
+                    transform: 'scale(1)'
+                });
+
+                itemNumber ++;
+                finalItemArr.push(b);
+            }
+            itemsCurrent.className = "itemsLayout";
+            $("#" + b).css("display", "block");
+            $("#" + b).attr("class", "itemsLayout itemsLayoutActive");
+            itemsCurrent = $("#" + b)[0];
+        });
+    }
+
+    function touchXbind(a){  //点击道具显示X的方法
+        $("#" + a).bind("touchstart", function(){
+            zIndex ++;
+            itemsCurrent.className = "itemsLayout";
+            $("#" + itemsCurrent.id).unbind("touchmove");
+            $("#" + a).attr("class", "itemsLayout itemsLayoutActive"); //为当前选中的道具增加样式
+            $("#" + a).css("z-index", zIndex); //为当前选中的道具增加层级
+            itemsCurrent = $("#" + a)[0];
+        });
+    }
+
+    function touchBind(a){  //按住道具拖动的方法
+        var dom = document.getElementById(a);
+        var hammerDrag = new Hammer(dom);
+        var panX = 0;
+        var panY = 0;
+        hammerDrag.on("panstart", function (e) {
+            panX = parseInt(dom.style.left);
+            panY = parseInt(dom.style.top);
+        });
+        hammerDrag.on("panmove", function (e) {
+            if(!borderThrough){
+                var thisWidth = $(dom).width();   //自身宽度
+                var thisHeight = $(dom).height();  //自身高度
+                if(parseInt(panX) + parseInt(e.deltaX) < 0){
+                    dom.style.left = "0px";
+                }else if((parseInt(panX) + parseInt(e.deltaX)) > (bagWidth - thisWidth)){
+                    dom.style.left = (bagWidth - thisWidth) + "px";
+                }else{
+                    dom.style.left = parseInt(panX) + parseInt(e.deltaX) + "px";
+                }
+                if(parseInt(panY) + parseInt(e.deltaY) < 0){
+                    dom.style.top = "0px";
+                }else if((parseInt(panY) + parseInt(e.deltaY)) > (bagHeight - thisHeight)){
+                    dom.style.top = (bagHeight - thisHeight) + "px";
+                }else{
+                    dom.style.top = parseInt(panY) + parseInt(e.deltaY) + "px";
+                }
+            }else{
+                dom.style.left = parseInt(panX) + parseInt(e.deltaX) + "px";
+                dom.style.top = parseInt(panY) + parseInt(e.deltaY) + "px";
+            }
+        });
+
+        var hammerScale = new Hammer(dom);
+        var scale = 1;
+        var lastScale = 1;
+        var scaleMax = 10;
+        hammerScale.get('pinch').set({ enable: true });
+        hammerScale.add(new Hammer.Pinch());
+        hammerScale.on("pinchstart", e => {
+            lastScale = scale || 1;
+        });
+        hammerScale.on("pinch", e => {
+            scale = Math.max(0, Math.min(lastScale * e.scale, scaleMax));
+            // scale = lastScale*e.scale;
+            // dom.style.transform = "scale(" + (lastScale*e.scale) + ")";
+            dom.style.transform = "scale(" + scale + ")";
+        });
+        hammerScale.on("pinchend", e => {
+            scale = lastScale*e.scale;
+        });
+
+        // var hammerRotate = new Hammer(dom);
+        // var rotate = 0;
+        // var lastRotate = 0;
+        // hammerRotate.get('rotate').set({ enable: true });
+        // hammerRotate.add(new Hammer.Rotate());
+        // hammerRotate.on("rotate", function (e) {
+        //     console.log(e.rotation);
+        //     // rotate = lastRotate * e.rotation;
+        //     dom.style.transform = "rotate(" + e.rotation + "deg)";
+        // });
+    }
+
+    function rotateBind(a){ //旋转道具方法
+        var angle = 0;
+        touch.on("#" + a, 'touchstart', function(ev) {
+            // ev.startRotate();
+            ev.preventDefault();
+        });
+        touch.on("#" + a, 'rotate', function(ev) {
+            var totalAngle = angle + ev.rotation;
+            if (ev.fingerStatus === 'end') {
+                angle = angle + ev.rotation;
+            }
+            this.style.webkitTransform = 'rotate(' + totalAngle + 'deg)';
+        });
+    }
+
+    //【domId】需要生成图片的domId；【canvasId】生成的canvas放置的domId；【scale】高清图片的倍数；【imageLayoutId】生成的图片放置的domId
+    function html2image(domId, canvasId, scale, imageLayoutId){
+        var width = $("#" + domId).width(); //获取dom 宽度
+        var height = $("#" + domId).height(); //获取dom 高度
+        var canvas = document.createElement("canvas"); //创建一个canvas节点
+        canvas.width = width * scale; //定义canvas 宽度 * 缩放
+        canvas.height = height * scale; //定义canvas高度 *缩放
+        canvas.getContext("2d").scale(scale, scale); //获取context,设置scale
+        var opts = {
+            scale: scale, // 添加的scale 参数
+            canvas: canvas, //自定义 canvas
+            // logging: true, //日志开关，便于查看html2canvas的内部执行流程
+            width: width, //dom 原始宽度
+            height: height, //dom 原始高度
+            useCORS: true   //允许跨域图片
+        };
+        html2canvas(document.querySelector("#" + domId), opts).then(canvas => {
+            var context = canvas.getContext('2d');
+            // 【重要】关闭抗锯齿
+            context.mozImageSmoothingEnabled = false;
+            context.webkitImageSmoothingEnabled = false;
+            context.msImageSmoothingEnabled = false;
+            context.imageSmoothingEnabled = false;
+
+            document.querySelector("#" + canvasId).appendChild(canvas);
+            var finalCanvasWidth = canvas.width;
+            var finalCanvasHeight = canvas.height;
+            var finalImg = Canvas2Image.convertToImage(canvas, finalCanvasWidth, finalCanvasHeight, 'png');
+            document.querySelector("#" + imageLayoutId).appendChild(finalImg);
+
+            $("#finalFloatInner img").attr("src", $("#finalImg img").attr("src"));
+            $("#finalFloat").fadeIn();
+            $("#finalImg").css({
+                top: '67px',
+                left: 0,
+                height: $("#finalImg").height() - 67
+            });
+
+            if(isQQLiveBrowser){	//腾讯视频app环境
+                connectTenvideoJSBridge(function(bridge) {
+                    $("#" + imageLayoutId + " img").bind("longTap", function(event){
+                        // alert('longTap');
+                        var dataUrl = event.target.src;
+                        TenvideoJSBridge.invoke('shareLocalImage', {
+                            title: shareTitle,
+                            subTitle: shareDesc,
+                            imgbase64String: dataUrl.replace('data:image/png;base64,','')
+                        });
+                    });
+                });
+            }
+        });
+    }
+
+    function openPage(url) {
+        // if (type == "video") {
+        // 	packageUrl = "tenvideo2://?action=5&video_id=" + packageUrl + "&demandVersion=2.6.0";
+        // } else if (type == "h5") {
+        // 	packageUrl = "tenvideo2://?action=10&openurl=" + encodeURIComponent(packageUrl) + "&newtenvideo2=1";
+        // } else if (type == "topic") {
+        // 	dokiUrl = "TopicDetailActivity?dataKey=topicId%3D" + dokiUrl;
+        // } else if (type == "star") {
+        // 	dokiUrl = "FanCircleActivity?starid=" + dokiUrl;
+        // } else if (type == "tab") {
+        //  dokiUrl = "txvideo://v.qq.com/RecommendSinglePagerActivity?channelId=110654&channelTitle=魔道祖师";
+        // }
+        var ua = navigator.userAgent;
+        var isQQvideo = ua.indexOf("QQLiveBrowser") > -1;
+        var connectTenvideoJSBridge = function (callback) {
+            if (window.TenvideoJSBridge) {
+                callback(TenvideoJSBridge)
+            } else {
+                document.addEventListener('onTenvideoJSBridgeReady', function () {
+                    callback(TenvideoJSBridge)
+                }, false)
+            }
+        }
+        if (isQQvideo) {
+            connectTenvideoJSBridge(function (bridge) {
+                bridge.invoke('openView', {
+                    'url': url,
+                    'close': 0
+                })
+            })
+        } else {
+            var txvBanner = window.appBanner({});
+            txvBanner.openFixer(function () {
+                return url
+            })
+            txvBanner.action()
+        }
+    }
+
+    //load第一页资源
+    var sourceArr1 = [	//第1页资源
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/loading1.2.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/loading2.3.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/logo2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/audio.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/01.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/02.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/03.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/04.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/05.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/06.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/07.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/08.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/09.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/10.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/11.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/12.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/13.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/14.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/15.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/16.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/17_2.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/18_2.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/19.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/20.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/21.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/22.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/23.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/24.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/25.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/26.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/27.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/28.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/29.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/30.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/31.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/32.jpg',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeStar.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeStarBg.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeDecoration.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeFace.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeTxt.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeStarCurrent.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeStarBgCurrent.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeDecorationCurrent.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeFaceCurrent.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_menuTypeTxtCurrent.png/0',
+        'https://puui.qpic.cn/vupload/0/20180726_submitBtn.png/0',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon01.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon02.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon03.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon04.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon05.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon06.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon07.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon08.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon09.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon10.jpg',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starBgIcon11.jpg',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg01.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg02.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg03.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg04.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg05.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg06.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg07.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg08.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg09.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg10.jpg/0',
+        'https://puui.qpic.cn/vupload/0/20180730_starBg11.jpg/0',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon01.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon02.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon03.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon04.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon05.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon06.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon07.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon08.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon09.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon10.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon11.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/starIcon12.png',
+        'https://puui.qpic.cn/vupload/0/20180730_star01.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star02.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star03.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star04.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star05.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star06.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star07.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star08.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star09.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star10.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star11.png/0',
+        'https://puui.qpic.cn/vupload/0/20180730_star12.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration01.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration02.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration03.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration04.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration05.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration06.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration07.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration08.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration09.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration10.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration11.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration12.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration13.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration14.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration15.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration16.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_decoration17.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face01.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face02.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face03.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face04.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face05.png/0',
+        'https://puui.qpic.cn/vupload/0/20180725_face06.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face07.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face08.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face09.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face10.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face11.png/0',
+        'https://puui.qpic.cn/vupload/0/20180731_face12.png/0',
+        'https://puui.qpic.cn/vupload/0/20180802_face13.png/0',
+        'https://puui.qpic.cn/vupload/0/20180802_face14.png/0',
+        'https://puui.qpic.cn/vupload/0/20180802_face15.png/0',
+        'https://puui.qpic.cn/vupload/0/20180802_face16.png/0',
+        'https://puui.qpic.cn/vupload/0/20180802_face17.png/0',
+        'https://puui.qpic.cn/vupload/0/20180801_txt01-4.png/0',
+        'https://puui.qpic.cn/vupload/0/20180801_txt02-4.png/0',
+        'https://puui.qpic.cn/vupload/0/20180801_txt03-4.png/0',
+        'https://puui.qpic.cn/vupload/0/20180801_txt04-4.png/0',
+        'https://puui.qpic.cn/vupload/0/20180801_txt05-4.png/0',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/txtIcon01-2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/txtIcon02-2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/txtIcon03-2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/txtIcon04-2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/txtIcon05-2.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon01.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon02.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon03.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon04.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon05.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon06.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon07.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon08.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon09.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon10.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon11.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon12.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon13.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon14.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon15.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon16.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/decorationIcon17.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon01.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon02.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon03.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon04.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon05.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon06.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon07.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon08.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon09.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon10.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon11.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon12.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon13.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon14.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon15.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon16.png',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/faceIcon17.png',
+        'https://puui.qpic.cn/vupload/0/20180725_x.png/0',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/x2.png',
+        'https://puui.qpic.cn/vupload/0/20180725_scale.png/0',
+        'http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/playTime2.png',
+        // 'http://mat1.gtimg.com/v/goldenchen/js/film.min.js',    //Film组件库
+        'http://mat1.gtimg.com/v/goldenchen/js/xqq.min.3.5.js',   //分享组件库
+        // 'http://mat1.gtimg.com/v/goldenchen/js/appbanner.min.js',   //openPage组件
+        'http://mat1.gtimg.com/v/goldenchen/js/hammer.min.js'  //hammer手势组件
+    ];
+    new mo.Loader(sourceArr1,{
+        loadType : 0,	//0为并行加载 1为串行加载
+        minTime : 300,	//加载单个资源需要耗费的最少时间(毫秒)
+        onLoading : function(count,total){	//单个资源加载完成后的回调
+            console.log('onloading:第1页单个资源加载完成:',arguments)
+            $(".loadingImg .inner").animate({width: count/total*100 + "%"});
+            $(".loading h1").html(Math.floor(count/total*100) + '%');
+        },
+        onComplete : function(time){	//所有资源加载完成后的回调
+            console.log('oncomplete:第1页所有资源加载完成 - 总共耗时:' + time + 'ms',arguments)
+
+            resize();
+            $(window).bind("resize", function(){
+                console.log('resize');
+                resize();
+            });
+
+            setTimeout(function(){
+                $(".loading").css("display","none");    //隐藏loading页
+                $("#loading2").addClass("loadingAni");
+            }, 3000);
+            // $(".loading").css("display","none");    //隐藏loading页
+            // $(".loading2").css("display","block");
+            $("#loading2").one("webkitAnimationEnd", function(){
+                setTimeout(function(){
+                    $("#loading2").fadeOut();
+                    $("#page1").fadeIn();
+                }, 500);
+            });
+            // var path = "http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/";
+            // var resource = [];
+            // for (var i = 1; i < 33; i++) {
+            //     if(i < 10){
+            //         resource.push(path + "0" + i + '.jpg');
+            //     }else{
+            //         resource.push(path + i + '.jpg');
+            //     }
+            // };
+            // spritePic = new mo.Film(document.querySelector('#loading2'),{
+            //     resource : resource,
+            //     totalFrame : 32
+            // });
+            // spritePic.playByIndex(31, {
+            //     playTime : 3100,
+            //     direction : 'forward',
+            //     aniComplete : function(){
+            //         $("#loading2").fadeOut();
+            //         $("#page1").fadeIn();
+            //     }
+            // });
+
+            // $("#page1").css("display", "block");    //显示主页面
+
+            //动态添加背景图标dom结构
+            var starBgIconArr = '';
+            var starBgLength = Object.getOwnPropertyNames(starBgObj).length + 1;
+            for(var i=1; i<starBgLength; i++){
+                starBgIconArr += '<div class="menuItem">';
+                if(i<10){
+                    starBgIconArr += '<div class="menuStarBgIcon" id="starBgIcon0' + i + '"></div>';
+                }else{
+                    starBgIconArr += '<div class="menuStarBgIcon" id="starBgIcon' + i + '"></div>';
+                }
+                starBgIconArr += '</div>';
+            }
+            $("#starBgIconList").html(starBgIconArr);
+
+            //动态添加明星图标dom结构
+            var starIconArr = '';
+            var starLength = Object.getOwnPropertyNames(starObj).length + 1;
+            for(var i=1; i<starLength; i++){
+                starIconArr += '<div class="menuItem">';
+                if(i<10){
+                    starIconArr += '<div class="menuStarIcon" id="starIcon0' + i + '"></div>';
+                }else{
+                    starIconArr += '<div class="menuStarIcon" id="starIcon' + i + '"></div>';
+                }
+                starIconArr += '</div>';
+            }
+            $("#starIconList").html(starIconArr);
+
+            //动态添加文字图标dom结构
+            var txtIconArr = '';
+            var txtLength = Object.getOwnPropertyNames(txtObj).length + 1;
+            for(var i=1; i<txtLength; i++){
+                txtIconArr += '<div class="menuItem">';
+                if(i<10){
+                    txtIconArr += '<div class="menuTxtIcon" id="txtIcon0' + i + '"></div>';
+                }else{
+                    txtIconArr += '<div class="menuTxtIcon" id="txtIcon' + i + '"></div>';
+                }
+                txtIconArr += '</div>';
+            }
+            $("#txtIconList").html(txtIconArr);
+
+            //动态添加装饰图标dom结构
+            var decorationIconArr = '';
+            var decorationLength = Object.getOwnPropertyNames(decorationObj).length + 1;
+            for(var i=1; i<decorationLength; i++){
+                decorationIconArr += '<div class="menuItem">';
+                if(i<10){
+                    decorationIconArr += '<div class="menuItemIcon" id="decorationIcon0' + i + '"></div>';
+                }else{
+                    decorationIconArr += '<div class="menuItemIcon" id="decorationIcon' + i + '"></div>';
+                }
+                decorationIconArr += '</div>';
+            }
+            $("#decorationIconList").html(decorationIconArr);
+
+            //动态添加表情图标dom结构
+            var faceIconArr = '';
+            var faceLength = Object.getOwnPropertyNames(faceObj).length + 1;
+            for(var i=1; i<faceLength; i++){
+                faceIconArr += '<div class="menuItem">';
+                if(i<10){
+                    faceIconArr += '<div class="menuItemIcon" id="faceIcon0' + i + '"></div>';
+                }else{
+                    faceIconArr += '<div class="menuItemIcon" id="faceIcon' + i + '"></div>';
+                }
+                faceIconArr += '</div>';
+            }
+            $("#faceIconList").html(faceIconArr);
+
+            //为背景图标添加图片背景
+            $(".menuStarBgIcon").each(function(index, item){
+                var bg = "http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/" + $(this).attr("id") + ".jpg";
+                // var bg = "images/" + $(this).attr("id") + ".png";
+                $(this).css("background-image", "url(" + bg + ")");
+            });
+
+            //为明星图标添加图片背景
+            $(".menuStarIcon").each(function(index, item){
+                var bg = "http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/" + $(this).attr("id") + ".png";
+                // var bg = "images/" + $(this).attr("id") + ".jpg";
+                $(this).css("background-image", "url(" + bg + ")");
+            });
+
+            //为文字图标添加图片背景
+            $(".menuTxtIcon").each(function(index, item){
+                var bg = "http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/" + $(this).attr("id") + "-2.png";
+                // var bg = "images/" + $(this).attr("id") + ".png";
+                $(this).css("background-image", "url(" + bg + ")");
+            });
+
+            //为所有图标添加图片背景，动态添加所有道具dom进背包
+            var bagItemArr = "";
+            $(".menuItemIcon").each(function(index, item){
+                items.push($(this).attr("id").replace(/Icon/, ""));
+                itemsLayout.push($(this).attr("id").replace(/Icon/, "") + "Layout");
+                var name = $(this).attr("id");
+                var value = $(this).attr("id").replace(/Icon/, "") + "Layout";
+                icons[name] = value;
+                var bg = "http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/" + $(this).attr("id") + ".png";
+                // var bg = "images/" + $(this).attr("id") + ".png";
+                $(this).css("background-image", "url(" + bg + ")");
+                // $(this)[0].style.cssText = "background-image:url(" + bg + ")";
+                bagItemArr += '<div class="itemsLayout" id="' + $(this).attr("id").replace(/Icon/, "") + "Layout" + '">';
+                bagItemArr += '<div class="items" id="' + $(this).attr("id").replace(/Icon/, "") + '"><img src="" /></div>';
+                bagItemArr += '<div class="xx"><img src="http://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/xx.png" /></div>';
+                bagItemArr += '<div class="scale"></div>';
+                bagItemArr += '<div class="x"></div>';
+                bagItemArr += '</div>';
+            });
+            $("#bag").html(bagItemArr);
+
+            //点击背景图标更换背景
+            $(".menuStarBgIcon").each(function(index, item){
+                $(this).bind("click", function(){
+                    $("#starBg img").attr("src", starBgObj[$(this).attr("id").replace(/Icon/, "")].src);
+                });
+            });
+
+            //点击明星图标更换明星
+            $(".menuStarIcon").each(function(index, item){
+                $(this).bind("click", function(){
+                    $("#starIconList .menuItem").removeClass("current");
+                    $(this).parent().addClass("current");
+                    $("#star img").attr("src", starObj[$(this).attr("id").replace(/Icon/, "")].src);
+                });
+            });
+
+            //点击文字图标更换文字
+            $(".menuTxtIcon").each(function(index, item){
+                $(this).bind("click", function(){
+                    if($("#txt img").attr("data") == index){
+                        $("#txt img").attr("data", 999);
+                        $("#txt img").css("display", "none");
+                    }else{
+                        $("#txt img").attr("data", index);
+                        $("#txt img").attr("src", txtObj[$(this).attr("id").replace(/Icon/, "")].src);
+                        $("#txt img").css("display", "block");
+                    }
+                });
+            });
+
+            //默认背景和明星
+            $("#starBg img").attr("src", starBgObj.starBg01.src);
+            // $("#star PC").attr("src", starObj.star01.src);
+            var starInit = Math.floor(Math.random()*12) + 1;
+            if(starInit < 10){
+                starInit = "0" + starInit;
+            }
+            var starInitName = "star" + starInit;
+            $("#star img").attr("src", starObj[starInitName].src);
+            $("#starIcon" + starInit).parent().addClass("current");
+
+            for(var name in icons){ //为图标绑定点击图标显示对应道具的方法
+                showBind(name, icons[name]);
+            }
+
+            // for(var name in itemsObj){  //动态设置所有道具的宽高和背景
+            //     $("#" + name).css({
+            //         width: itemsObj[name].width,
+            //         height: itemsObj[name].height
+            //         // backgroundImage: 'url(' + itemsObj[name].src + ')'
+            //     });
+            //     $("#" + name + " PC").attr("src", itemsObj[name].src);
+            // }
+
+            for(var name in itemsObj){  //动态设置所有道具的宽高和背景
+                $("#" + name).parent().css({
+                    // width: itemsObj[name].width,
+                    // height: itemsObj[name].height
+                    width: 100
+                });
+                $("#" + name + " img").attr("src", itemsObj[name].src);
+            }
+
+            $("#page1").bind('contextmenu', function(e){	//阻止默认长按事件
+                e.preventDefault();
+            });
+            $("#bag").bind("touchmove",function(e){ //禁止页面下拉
+                e.preventDefault();
+            });
+            // $("#page1").bind('touchmove', function(e){	//禁止页面下拉
+            // 	e.preventDefault();
+            // });
+            $("#loading").bind('touchmove', function(e){	//禁止页面下拉
+                e.preventDefault();
+            });
+            $("#loading2").bind('touchmove', function(e){	//禁止页面下拉
+                e.preventDefault();
+            });
+            $("#finalImg").bind('touchmove', function(e){	//禁止页面下拉
+                e.preventDefault();
+            });
+
+            //为游戏主体绑定事件
+            for(var i=0; i<items.length; i++){
+                itemsCurrent = $(".itemsLayout")[0];
+                touchXbind(itemsLayout[i]);    //为道具绑定点击显示X的方法
+                // if(canDrag){
+                //     touchBind(itemsLayout[i]);    //为道具绑定拖动方法
+                // }
+                // if(canRotate){
+                //     rotateBind(items[i]);    //为道具绑定旋转方法
+                // }
+                touchBind(itemsLayout[i]);
+            }
+
+            $(".x").each(function(index, item){
+                $(this).bind("touchstart", function(){   //点击X删除道具
+                    $(this).parent().css("display", "none");
+                    removeByValue(finalItemArr, $(this).parent().attr("id"));
+                });
+            });
+
+            // $(".menuList").each(function(index, item){  //调整图标按钮的容器宽度
+            // 	$(this).width($(this).children().length*71);
+            // });
+
+            $(".menuType").each(function(index, item){  //点击分类文字显示对应的分类图标列表
+                $(this).bind("click", function(){
+                    menuTypeCurrent.className = "menuType";
+                    $(this)[0].className = "menuType menuTypeCurrent";
+                    menuTypeCurrent = $(this)[0];
+                    menuListCurrent.className = "menuList undis";
+                    $(".menuList")[index].className = "menuList dis";
+                    menuListCurrent = $(".menuList")[index];
+                    $(".menuListLayout")[0].scrollLeft = 0
+                });
+            });
+
+            $(".x2").bind("click", function(){
+                $("#audioBtn").css("display", "block");
+                if(!silence){
+                    $("#audioBg")[0].muted = false;
+                    $("#audioBg")[0].volume = 1;
+                }
+                $("#finalFloat").fadeOut();
+                $("#finalImg").css({
+                    top: '-9999px',
+                    left: '-9999px'
+                });
+                $("#finalResult").html("");
+                $("#finalCanvas").html("");
+                $("#finalImg").html("");
+            });
+
+            $("#audioBtn").bind("click", function(){
+                if($(this).hasClass("audioPlay")){
+                    $(this).removeClass("audioPlay");
+                    $("#audioBg")[0].muted = true;
+                    $("#audioBg")[0].volume = 0;
+                    silence = true;
+                }else{
+                    $(this).addClass("audioPlay");
+                    $("#audioBg")[0].muted = false;
+                    $("#audioBg")[0].volume = 1;
+                    silence = false;
+                }
+            });
+
+            //load第二页资源
+            var sourceArr2 = [	//第2页资源
+                // 'http://mat1.gtimg.com/v/goldenchen/js/html2canvas.min.js', //html2canvas组件
+                'http://mat1.gtimg.com/v/goldenchen/js/html2canvas1.0.0-alpha.12.min.js', //html2canvas组件
+                'http://mat1.gtimg.com/v/goldenchen/js/canvas2image.min.js' //canvas2image组件
+            ];
+            new mo.Loader(sourceArr2,{
+                loadType : 0,	//0为并行加载 1为串行加载
+                minTime : 300,	//加载单个资源需要耗费的最少时间(毫秒)
+                onLoading : function(count,total){	//单个资源加载完成后的回调
+                    console.log('onloading:第2页单个资源加载完成:',arguments)
+                },
+                onComplete : function(time){	//所有资源加载完成后的回调
+                    $("#submit").bind("click", function(){  //提交打包
+                        $("#audioBtn").css("display", "block");
+                        $("#audioBg")[0].muted = true;
+                        $("#audioBg")[0].volume = 0;
+
+                        itemsCurrent.className = "itemsLayout";
+                        if(isQQLiveBrowser){
+                            $(".shareTips2").css("display", "block");
+                        }else{
+                            $(".changanTips1").css("display", "block");
+                        }
+
+                        // $(".itemsLayout").each(function(index, item){
+                        //     var scale = parseFloat($(this).css("transform").substring(6));
+                        //     if($(this).css("display") == "block"){
+                        //         if(scale < 1){
+                        //             var top = parseFloat($(this).css("top")) + 100*(1-scale)/2;
+                        //             var left = parseFloat($(this).css("left")) + 100*(1-scale)/2;
+                        //             $(this).css({
+                        //                 width: 100*scale,
+                        //                 top: top + "px",
+                        //                 left: left + "px",
+                        //                 transform: "scale(1)"
+                        //             });
+                        //         }else if(scale > 1){
+
+                        //         }
+                        //     }
+                        // });
+
+                        $("#finalResult").html($("#page1").html());
+                        $("#finalResult #starBg img").css("margin-left", -$("#finalResult #starBg img").width()/2);
+                        $("#finalResult #star").css("height", "100%");
+                        html2image("finalResult", "finalCanvas", 2, "finalImg");
+                        $("#finalImg").css("display", "block");
+                    });
+
+                    $(".restart").bind("click", function(){ //重玩一次
+                        $("#page1").css("display", "block");
+                        $("#page3").css("display", "none");
+                        $("#resultTxt").css("display", "none");
+                        $("#menu").css("display", "block");
+                        for(var i=0; i<itemsLayout.length; i++){
+                            $("#" + itemsLayout[i]).css("display", "none");
+                        }
+                    });
+                }
+            });
+
+            XQQ.debug = true;			//打开关闭debug
+            XQQ.loadInfoNow = false;    //不立刻获取信息 （如果你只用到了分享功能，一定要设为false，否则请设为true）
+            XQQ.setShare({
+                title: shareTitle,
+                desc: shareDesc,
+                link: location.href,
+                imgUrl: shareImg,
+                success: function() {
+                    console("分享成功了！");
+                },
+                cancel: function() {
+                    console("分享失败了！");
+                }
+            });
+        }
+    })
+</script>
+</body>
+</html><!--[if !IE]>|xGv00|5602de97b8be383e78ec18349a9cc6c6<![endif]-->

@@ -1,0 +1,31 @@
+//mongodb用户属性权限操作
+use admin   /*use 数据库*/
+/*
+1.数据库用户角色：read、readWrite;
+2.数据库管理角色：dbAdmin、dbOwner、userAdmin；
+3.集群管理角色：clusterAdmin、clusterManager、clusterMonitor、hostManager；
+4.备份恢复角色：backup、restore；
+5.所有数据库角色：readAnyDatabase、readWriteAnyDatabase、userAdminAnyDatabase、dbAdminAnyDatabase
+6.超级用户角色：root
+
+
+Read：允许用户读取指定数据库
+readWrite：允许用户读写指定数据库
+dbAdmin：允许用户在指定数据库中执行管理函数，如索引创建、删除，查看统计或访问system.profile
+userAdmin：允许用户向system.users集合写入，可以找指定数据库里创建、删除和管理用户
+clusterAdmin：只在admin数据库中可用，赋予用户所有分片和复制集相关函数的管理权限。
+readAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读权限
+readWriteAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的读写权限
+userAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的userAdmin权限 
+dbAdminAnyDatabase：只在admin数据库中可用，赋予用户所有数据库的dbAdmin权限。
+root：只在admin数据库中可用。超级账号，超级权限
+*/
+db.createUser({user:'mongodb', pwd:'123456', roles:[{role:'readWrite',db:'mongodb'}]})
+/*
+1、show users; #查看当前库下的用户
+2、db.dropUser("admin") #删除用户
+3、db.updateUser( "admin",{pwd:"password"}); #修改用户密码
+4、db.auth("admin","password"); #密码认证
+*/
+//连接数据库
+mongo 数据库名称 -u 用户名 -p 密码

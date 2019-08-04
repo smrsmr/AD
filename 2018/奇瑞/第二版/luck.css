@@ -1,0 +1,62 @@
+@charset "utf-8";
+/*基本框架CSS*/
+
+
+/*****抽奖页面****/
+.ml-main {
+    width: 100%;
+    height: 612px;
+    max-width: 640px;
+    background: white;
+    position: fixed;
+    overflow: hidden;
+    left: 50%;
+    margin-left: -320px;
+    top: 20px;
+    *zoom: 1;
+    z-index: 1;
+}
+.ml-main.active {
+    display: block;
+    z-index: 994;
+}
+.ml-main .kePublic {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+/* 大转盘样式 */
+.banner {
+    display: block;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner .turnplate {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.banner .turnplate canvas.item {
+    width: 100%;
+}
+
+.banner .turnplate #tupBtn {
+    position: absolute;
+    width: 120px;
+    height: 174px;
+    left: 182px;
+    top: 130px;
+    border: 0;
+    background: none;
+}
+
+.banner .turnplate img {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>定位+坐标转换</title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body, button, input, select, textarea {
+            font: 12px/16px Verdana, Helvetica, Arial, sans-serif;
+        }
+        #container{
+            min-width:600px;
+            min-height:767px;
+        }
+    </style>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&libraries=convertor&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script>
+        function getLocation(){
+            //判断是否支持 获取本地位置
+            if (navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+            else{alert("浏览器不支持定位.")}
+        }
+        function showPosition(position) {
+            var lat=position.coords.latitude;
+            var lng=position.coords.longitude;
+            //调用地图命名空间中的转换接口   type的可选值为 1:GPS经纬度，2:搜狗经纬度，3:百度经纬度，4:mapbar经纬度，5:google经纬度，6:搜狗墨卡托
+            qq.maps.convertor.translate(new qq.maps.LatLng(lat,lng), 1, function(res){
+                latLng = res[0];
+                geocoder.getAddress(latLng);
+            });
+        }
+        geocoder = new qq.maps.Geocoder({
+            complete : function(result){
+                var address = result.detail.address;
+                var pro = address.substr(2,3);
+                var city = address.substr(5,3);
+                if (pro == '广东省') {
+                    switch (city){
+                        case '广州市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/GZ4.16.htm';
+                            break;
+                        case '深圳市':
+                            location.href = 'http://shenzhen.auto.qq.com/zt2018/0416gcb/index.htm';
+                            break;
+                        case '东莞市':
+                            location.href = 'http://dongguan.auto.qq.com/zhuanti/APP20180416-1.htm';
+                            break;
+                        case '珠海市':
+                            location.href = 'http://zhuhai.auto.qq.com/zt2018/four/zh0416.htm';
+                            break;
+                        case '佛山市':
+                            location.href = 'http://foshan.auto.qq.com/zt2018/foshan4yue/0416.htm';
+                            break;
+                        case '中山市':
+                            location.href = 'http://zhongshan.auto.qq.com/zt2018/zs0416/index.htm';
+                            break;
+                        default:
+                            location.href = 'http://guangzhou.auto.qq.com/zt2018/gd04/gd0416.htm';
+                    }
+                } else {
+                }
+            }
+        });
+    </script>
+
+</head>
+<body onLoad="getLocation()">
+<p>用html5定位后，使用腾讯地图坐标转换接口纠偏，请允许获取位置。</p>
+<div id="container"></div>
+
+</body>
+</html>

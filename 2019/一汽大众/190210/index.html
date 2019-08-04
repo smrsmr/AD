@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>歌行大运 岳享精彩</title>
+    <script type="text/javascript">
+        (function(win) {
+            var timeout,
+                doc = win.document,
+                html = doc.documentElement;
+            function setFontSize() {
+                var htmlWidth = html.getBoundingClientRect().width;
+                var ratio = htmlWidth / 750;
+                if(htmlWidth < 1025) {
+                    win.rem = ratio * 1.75
+                }else {
+                    win.rem = 3.227;
+                }
+                win.responseRatio = ratio;
+                html.style.fontSize = win.rem + "rem"
+            }
+            win.addEventListener("resize", function() {
+                clearTimeout(timeout), timeout = setTimeout(setFontSize, 300)
+            }, false);
+
+            setFontSize()
+        })(window);
+    </script>
+    <link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" type="text/css" href="https://guangzhou.auto.qq.com/css/swiper-4.1.6.min.css"/>
+    <link href="https://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+</head>
+<style type="text/css">
+    html,body{font-family: "微软雅黑";background-color: #fcfcfc;}
+    body,h1,h2,h3,h4,h5,div,span,p,ul,ol,dl,dt,dd,a,input,img,select{margin: 0;padding: 0;list-style: none;border: 0;font-weight: normal1;outline: none;}
+    .content{width: 100%;margin: auto;max-width: 1366px; overflow: hidden;}
+    .content>div>img{width: 100%;height: auto;vertical-align:top;}
+    .content>div{width: 100%;}
+    /*正式样式*/
+    .bg,.bg img{position: relative;}
+    .baoming{position: absolute;z-index: 2;top: 0;}
+.act-hide { height: 6rem; transition:all 0.3s;}
+    /*带label报名框开始*/
+    .baoming-label{position: absolute;z-index: 2;top: 0px;height: auto;width: 100%;margin-top: 8.8rem;}
+    .baoming-label p{display: flex; display: -webkit-flex;margin: auto;height: 3.3rem;width: 92%;border: 0.02rem solid transparent;background-color: transparent;margin-bottom: 0.85rem;}
+    .baoming-label label,.baoming-label input,.baoming-label select{height: 100%;font-size:1.2rem;background: transparent;vertical-align: top;}
+    .baoming-label label{display: inline-block; width: 0;}
+    .baoming-label input,.baoming-label select{flex: 1; box-sizing: border-box; padding-left: 2%; font-family: "微软雅黑";}
+    .baoming-label2{margin-top: 1.6rem!important;}
+    .baoming-label select{appearance:none;-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;-moz-appearance: none;}
+    /*:-moz-placeholder {color: #fff; }
+    ::-moz-placeholder {color: #fff;}
+    :-ms-input-placeholder{color: #fff;}
+    ::-webkit-input-placeholder{color: #fff;}*/
+    #submit{width: 100%;height: 100%;text-align: center;}
+    .mCSB_inside > .mCSB_container{margin-right: 1rem;}
+    /*条款*/
+    .ifAgree{width: auto;height: auto;font-size: 1rem;margin-left: 4%;margin-bottom: 0;margin-top: 1.4rem; color: #000;}
+    .ifAgree #checkbox{width: 4rem;height: 1rem;    vertical-align: sub;}
+    /*带label报名框开始结束*/
+    .abs{position: absolute;top: 1.3rem;left: 0;right: 0;color: black;}
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {display: none;}
+    .video,.pic {width: 100%;height: 33rem;border:1px solid transparent;margin: 6rem auto 0;position: relative;}
+    .pic{height: 19.5rem;margin-top: 8.5rem;}
+    .jxs{width: 85%;margin-left: 8%;height: 16rem;border:1px solid transparent;margin-top: 6.1rem;}
+    
+
+    /*滚动条*/
+    #scroll{width: 100%;height: 100%;overflow-y: scroll;}
+    #scroll h3{font-size:0.875rem;line-height: 2.4rem;margin-top: 0.5rem; margin-bottom: 0.1rem;font-weight: normal; border-bottom: 1px dashed #999;}
+    #scroll p{ font-size: 1rem;text-align: left;line-height: 1.3rem; margin-bottom: 0.1rem;}
+    #scroll h3 span { float: right;}
+    /*插件修改*/
+    /*长滑条*/
+    .mCSB_scrollTools .mCSB_draggerRail{
+        background-color: #666666;
+    }
+    /*短滑块*/
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+        background-color: #3a3a3a;
+    }
+    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+        background-color: #3a3a3a;
+    }
+    .list{
+			width: 88%;
+    height: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 4rem;
+		}
+    .list li{ width: 32%; height: 100%;background: transparent;color: #333;float: left;line-height: 2rem;text-align: center;}
+    .list li select{background: transparent;color: #333;}
+    .list li select option{color: black;}
+    #provinceList, #cityList { width: 9.3rem; appearance: none; -webkit-appearance: none;}
+    .scr{width: 100%;margin-left: 0%;height: 15rem;border: 1px solid redd;overflow: hidden; color: #000;}
+    .canshu{width: 92%;height: 16.6rem;border: 1px solid red;margin:7.65rem auto 9.5rem;    overflow-y: scroll;}
+    .canshu img{width: 100%;height: auto;}
+    .carType{height: 2.812rem;width: 90%;margin: auto;margin-bottom: 2.05rem; color: #fff;}
+    .carType li{width: 20%;float: left;height: 1.25rem;margin-bottom: 0.312rem;font-size: 0.8rem;color: black;}
+    .carType li input{margin-right: 0.312rem;}
+    .lupic{width: 100%;height:22rem;margin:5rem auto;border: 1px solid transparent;}
+	.lupic2{width: 100%;height: 15rem;border: 1px solid transparent;margin: 6rem auto;}
+	.carBtn,.carBtn1,.carBtn2{width: 100%;height: 3.2rem; margin-left: 1.2rem; margin-bottom: 2rem;}
+	.carBtn>span,.carBtn1>span,.carBtn2>span{width: 16.5%;height: 100%; float: left; margin-right: 2%; display: inline-block;}
+	.carBtn2 { position: absolute; top: 8rem; left: 0;}
+	.carBtn2>span { width: 21.5%;}
+	.carBtn input { background: transparent; border: none;}
+	.bg .zcImg { position: absolute; top: 17.5rem; left: 0; vertical-align: top;}
+	#normal1,#normal2,#normal3{width: 100%;float: left;}
+	#normal1{height: 86%;}
+	#normal2{height: 13rem;}
+	#normal3{height: 13rem;}
+	#normal2,#normal3{margin-bottom: 1.071rem; overflow: hidden;width: 26.7rem;height: 16.5rem; position: relative;}
+    #normal1 .swiper-slide,#normal2 .swiper-slide,#normal3 .swiper-slide{background-size: cover;background-position: center;background-repeat: no-repeat;width: 100%;}
+    .swiper-slide { height: 15rem; background-size: 89% !important; background-position-x: center;}
+  .swiper-pagination-bullet { width: 24px; border-radius: 0; background: #fff; opacity: 1;}
+  .swiper-pagination-bullet-active {width: 48px;}
+  #normal2 .swiper-pagination-bullet { background-color: #fff;}
+	/*车型连点*/
+	.carBtn1>span{text-align: center;}
+	.ty,.tg{width: 100%;height: 2.5rem;background-color: red;}
+	.tyBlue{border: 0.071rem solid #fff;background-color: #FFFFFF;color: #9e0521;}
+	.tyYellow{border: 0.071rem solid #666;background-color: transparent;color: #666;}
+	.b_w{border-width: 0.1rem;font-weight: bold;transition-duration: 0.5s;}
+	.b_w {-webkit-appearance:none;border-radius:4px;/*清除ios默认圆角*/}
+	.btLd{width: 90%;height: 2.142rem;overflow: hidden;margin-left: 5%;}
+	.btLd li{width: 20%;height: 1.785rem;line-height: 1.785rem;float: left;text-align: center;}
+	.btLd li>span{display: inline-block;padding: 0 0.714rem;}
+	.curBlue{background: #1656ac; border:none;color: white;}
+	.curYellow{background: #c82b25; border:none;color: white;}
+  .swiper-button-next, .swiper-button-prev { width: 22px;}
+	.swiper-button-prev, .swiper-container-rtl .swiper-button-next{ left: 0;background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/98/211/211/13774178.png) !important;background-color: rgba(255,255,255, .6);}
+	.swiper-button-next, .swiper-container-rtl .swiper-button-prev{ right: 0;background-image: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/99/211/211/13774179.png) !important;background-color: rgba(255,255,255, .6);}
+	#normal3 .swiper-button-prev, .swiper-container-rtl .swiper-button-next{left: 0;}
+	#normal3 .swiper-button-next, .swiper-container-rtl .swiper-button-prev{right: 0;}
+  #normal3 .swiper-slide p { position: absolute; bottom: 0; width: 100%; padding-left: 1rem; height: 2rem; line-height: 2rem; color: #fff; background: rgba(0,0,0,.6); font-size: 1rem;}
+	#normal1 .swiper-container{position: static!important;}
+	.car1,.car2{display: inline-block;background: transparent;height: 2.571rem;width: 10rem;position: absolute;top: 3rem; opacity: 1 !important;}
+	#normal1 .swiper-button-prev, .swiper-container-rtl .swiper-button-next { /*background: url(http://img1.gtimg.com/autodongguan/pics/hv1/100/211/210/13709155.jpg) top center no-repeat;*/ background-size: 50% 50%; transition: all 0.3s;}
+	#normal1 .swiper-button-next, .swiper-container-rtl .swiper-button-prev { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/101/211/210/13709156.jpg) top center no-repeat; background-size: contain; transition: all 0.3s;}
+	#normal1 .swiper-button-next.active, .swiper-button-prev.active { transform: scale(1.34);}
+	.car1{left: 2.571rem;}
+	.car2{right: 2rem;}
+</style>
+<body>
+<div class="content">
+    <div><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/92/211/211/13774172.jpg" /></div>
+    <div class="bg"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/93/211/211/13774173.jpg" />
+        <div class="baoming-label">
+        	<ul class="carType">
+	    		<li><input type="checkbox" checked="checked" name="" id="" value="29"  data-name="探歌" />探歌</li>
+	    		<li><input type="checkbox" name="" id="" value="17" data-name="探岳" />探岳</li>
+	    		<li><input type="checkbox" name="" id="" value="13" data-name="捷达" />捷达</li>
+	    		<li><input type="checkbox" name="" id="" value="10" data-name="宝来" />宝来</li>
+	    		<li><input type="checkbox" name="" id="" value="20" data-name="速腾" />速腾</li>
+	    		<li style="width:15%;"><input type="checkbox" name="" id="" value="8" data-name="迈腾" />迈腾</li>
+	    		<li style="width:25%;"><input type="checkbox" name="" id="" value="15" data-name="全新一代CC" />全新一代CC</li>
+	    		<li style="width:20%;"><input type="checkbox" name="" id="" value="16" data-name="新高尔夫" />新高尔夫</li>
+	    		<li style="width:16%;"><input type="checkbox" name="" id="" value="27" data-name="蔚领" />蔚领</li>
+	    		<li style="width:24%;"><input type="checkbox" name="" id="" value="23" data-name="高尔夫嘉旅" />高尔夫嘉旅</li>
+	    	</ul>
+            <p class="baoming-label1"><label for=""></label><input type="text" name="name" id="name" value=""  placeholder="请输入您的姓名"/></p>
+            <p class="baoming-label1" style="margin-bottom: 0.97rem;"><label for=""></label><input type="text" name="phone" id="phone" value="" placeholder="请输入您的电话" maxlength="11"/></p>
+            <p style="margin-bottom: 1rem;">
+            	<label for=""></label>
+                <select name="" id="pro">
+                    <!--<option value="0" >请选择省份</option>-->
+                </select>
+            </p>
+            <p class="baoming-label1" style="margin-bottom: 1rem;">
+                <label for=""></label>
+                <select name="" id="city">
+                    <option value="0" >请选择城市</option>
+                </select>
+            </p>
+            <p class="baoming-label1" ><label for=""></label>
+                <select name="" id="dealers">
+                    <option value="0" >请选择经销商</option>
+                </select>
+            </p>
+            <div class="ifAgree">
+                <input id="checkbox" type="checkbox" style="width: 1rem;">
+                <span>我同意<a style="color: inherit;text-decoration: none;" target="_blank" href="//www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+            <p class="baoming-label2"><input type="button" id="submit" value="" /></p>
+            
+        </div>
+    </div>
+    <div class="bg"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/94/211/211/13774174.jpg" />
+    <div class="abs">
+            <div class="jxs">
+                <ul class="list">
+                    <li>
+                        <!-- <label for="">省份&nbsp;&nbsp;</label> -->
+                        <select name="" id="provinceList">
+                        </select>
+                    </li>
+                    <li style="margin-left: 4.5rem;">
+                        <!-- <label for="">城市&nbsp;&nbsp;</label> -->
+                        <select name="" id="cityList">
+                        	<option value="">请选择</option>		
+                        </select>
+                    </li>
+                </ul>
+                <div class="scr">
+                    <div id="scroll">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+    <!-- <div class="bg" style=" padding-bottom: 10.5rem; background-color: #a20a21;">
+    	<img src="http://img1.gtimg.com/autodongguan/pics/hv1/110/153/211/13759400.jpg" />
+    			<p class="carBtn2 carZc">
+            <span><input type="button" name="" id="" class="tg b_w tyYellow curBlue" value="捷达" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="宝来" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="宝来MQB" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="蔚领" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="新高尔夫" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="高尔夫嘉旅" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="速腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="迈腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="全新一代CC" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探歌" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探岳" /></span>
+            <span><input type="button" style="font-size: 0.7rem;" name="" id="" class="tg b_w tyYellow" value="全系优惠详情>>" /></span>
+          </p>
+    	<img class="zcImg" src="http://img1.gtimg.com/autodongguan/pics/hv1/111/153/211/13759401.jpg"/>
+    </div> -->
+		<div class="bg">
+      <img class="" src="http://img1.gtimg.com/autoguangzhou/pics/hv1/95/211/211/13774175.jpg" alt="">
+    </div>
+    <div class="bg"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/96/211/211/13774176.jpg" />
+    	<div class="abs" style="top:2rem;">
+    		<div class="lupic">
+    			<p class="carBtn1 carLd">
+            <span><input type="button" name="" id="" class="tg b_w tyYellow curBlue" value="捷达" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="宝来" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="蔚领" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="新高尔夫" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="高尔夫嘉旅" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="速腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="迈腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="全新一代CC" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探歌" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探岳" /></span>
+          </p>
+          <div class="swiper-container " id="normal2">
+                <div class="swiper-wrapper">
+                    <!--<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/139/210/210/13708939.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/140/210/210/13708940.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/141/210/210/13708941.png)"></div>-->
+                </div>
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+            </div>
+                <!-- <ul class="btLd">
+                	<li class=""><span class="tyBlue curBlue">外观</span></li>
+                	<li><span class="tyBlue">空间</span></li>
+                	<li><span class="tyBlue">动力</span></li>
+                	<li><span class="tyBlue">安全</span></li>
+                	<li><span class="tyBlue">科技</span></li>
+                </ul> -->
+    		</div>
+    	</div>
+    </div>
+
+    <div class="bg"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/97/211/211/13774177.jpg" />
+    	<div class="abs">
+    		<div class="lupic2">
+    			<p class="carBtn1 carCt">
+            <span><input type="button" name="" id="" class="tg b_w tyYellow curBlue" value="捷达" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="宝来" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="蔚领" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="新高尔夫" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="高尔夫嘉旅" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="速腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="迈腾" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="全新一代CC" style="font-size:0.8rem;" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探歌" /></span>
+            <span><input type="button" name="" id="" class="tg b_w tyYellow" value="探岳" /></span>
+            	</p>
+            	<div class="swiper-container " id="normal3">
+                    <div class="swiper-wrapper">
+                        <!--<div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/139/210/210/13708939.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/140/210/210/13708940.png)"></div>
+                        <div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autoguangzhou/pics/hv1/141/210/210/13708941.png)"></div>-->
+                    </div>
+                    <!-- 如果需要导航按钮 -->
+                <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+    				<div class="swiper-button-next swiper-button-white"></div>
+                </div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=FvsuGKvp4SxCWmfgffzqOr5tvhsxh2wj" charset="UTF-8"></script>
+<script type="text/javascript">
+    var mes = [
+// {"nameid":"10","namecode":"S753019","name":"云南一汽工贸汽车销售服务有限公司","cityid":"185","provid":"28","address":"云南省昆明市西山区南过境干道石咀宏业路213号","tel":"0871-8172539","sname":"云南一汽工贸","pro":"广东","city":"昆明市"},
+{"nameid":"10","namecode":"S753019","name":"云南一汽工贸汽车销售服务有限公司","cityid":"185","provid":"28","address":"云南省昆明市西山区南过境干道石咀宏业路213号","tel":"0871-8172539","sname":"云南一汽工贸","pro":"云南","city":"昆明市"},
+{"nameid":"1001","namecode":"S251007","name":"四川虹润汽车贸易有限公司","cityid":"127","provid":"22","address":"四川省新津县花桥镇龚巷村5组","tel":"028-82590888","sname":"四川虹润","pro":"四川","city":"成都市"},
+{"nameid":"1004","namecode":"S751049","name":"广安联众恒信汽车销售服务有限公司","cityid":"422","provid":"22","address":"广安市前锋区护安镇汽博城","tel":"0826-2250788","sname":"广安联众恒信","pro":"四川","city":"广安"},
+{"nameid":"1007","namecode":"S753013M1","name":"保山联通汽车销售维修有限责任公司腾冲分公司","cityid":"188","provid":"28","address":"云南省腾冲县腾越镇南诏路腾越镇观音塘新社区旁","tel":"0875-5191766","sname":"保山联通腾冲分公司","pro":"云南","city":"保山市"},
+{"nameid":"1008","namecode":"S753015M1","name":"云南曲靖云鑫工贸有限公司陆良分公司","cityid":"186","provid":"28","address":"云南省曲靖市陆良县中枢镇西桥小周子","tel":"0874-6956688","sname":"曲靖云鑫陆良分公司","pro":"云南","city":"曲靖市"},
+{"nameid":"1009","namecode":"S751051M1","name":"乐山天牛华茂车业有限公司峨眉山市分公司","cityid":"128","provid":"22","address":"峨眉山市胜利镇红星中路南街99号","tel":"0833-2216999","sname":"乐山天牛华茂峨眉山市分公司","pro":"四川","city":"乐山市"},
+{"nameid":"1010","namecode":"S751052","name":"邛崃恒信汽车销售有限公司","cityid":"127","provid":"22","address":"成都市邛崃市临邛镇双石街1号","tel":"028-69758596","sname":"邛崃恒信","pro":"四川","city":"成都市"},
+{"nameid":"1014","namecode":"S251006","name":"彭州瑞龙汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市彭州市天彭大道666号（致和加油站对面）","tel":"028-84562888","sname":"彭州瑞龙","pro":"四川","city":"成都市"},
+{"nameid":"1016","namecode":"S751053","name":"巴中瑞龙汽车销售服务有限公司","cityid":"424","provid":"22","address":"巴中市巴州区后河桥浅水湾上行600米","tel":"0827-7762000","sname":"巴中瑞龙","pro":"四川","city":"巴中"},
+{"nameid":"1019","namecode":"S762019","name":"庆阳恒众汽车销售服务有限公司","cityid":"354","provid":"2","address":"甘肃省庆阳市西环路北段延伸段陇东汽车城","tel":"0934-8357888","sname":"庆阳恒众","pro":"甘肃","city":"庆阳"},
+{"nameid":"1024","namecode":"S765018","name":"新疆天汇华博汽车销售服务有限公司","cityid":"373","provid":"19","address":"新疆伊犁州伊宁市南环路二号","tel":"0999-8051212","sname":"新疆天汇华博","pro":"新疆","city":"伊犁"},
+{"nameid":"1034","namecode":"S263002","name":"青海祥瑞通汽车贸易有限公司","cityid":"359","provid":"18","address":"青海省海东市平安区平安镇大路村","tel":"0972-8665577","sname":"青海祥瑞通","pro":"青海","city":"海东"},
+{"nameid":"1036","namecode":"S752011","name":"遵义鑫华众汽车销售服务有限公司","cityid":"43","provid":"6","address":"遵义市新蒲新区新龙大道汽车市场","tel":"0851-27557666","sname":"遵义鑫华众","pro":"贵州","city":"遵义市"},
+{"nameid":"1039","namecode":"S751054","name":"达州市天汇汽车销售服务有限公司","cityid":"268","provid":"22","address":"四川省达州市达川区南外二号干道天马汽车城","tel":"0818-3139999","sname":"达州天汇","pro":"四川","city":"达州市"},
+{"nameid":"1045","namecode":"S755014","name":"重庆长久博鑫汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市巴南区巴南大道66号（九公里轻轨站旁）","tel":"62859669","sname":"长久博鑫","pro":"重庆","city":"重庆市"},
+{"nameid":"1056","namecode":"S751055","name":"雅安市和佳汽车销售服务有限公司","cityid":"423","provid":"22","address":"四川省雅安市雨城区多营镇茶马大道78号","tel":"0835-2618666","sname":"雅安和佳","pro":"四川","city":"雅安"},
+{"nameid":"1057","namecode":"S753035","name":"云南宇泰汽车销售服务有限公司","cityid":"185","provid":"28","address":"云南省昆明市五华区西北三环海源寺向北1公里处","tel":"0871-63639960转2","sname":"云南宇泰","pro":"云南","city":"昆明市"},
+{"nameid":"1065","namecode":"S751058","name":"广元锦润弘达汽车销售服务有限公司","cityid":"271","provid":"22","address":"广元市利州区下西坝王家营工业园滨江路一汽-大众店","tel":"0839-3271996","sname":"广元锦润弘达","pro":"四川","city":"广元市"},
+{"nameid":"1069","namecode":"S751057","name":"绵阳路易汽车销售服务有限公司","cityid":"130","provid":"22","address":"绵阳科创园区创业大道中段242号","tel":"08166339888","sname":"绵阳路易","pro":"四川","city":"绵阳市"},
+{"nameid":"107","namecode":"S951001","name":"四川一汽贸易有限责任公司","cityid":"127","provid":"22","address":"成都市金牛区蜀汉西路159号","tel":"028-87509919","sname":"四川一汽贸","pro":"四川","city":"成都市"},
+{"nameid":"108","namecode":"S951005","name":"成都曙光汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市双流县航空港开发区大荆路1号","tel":"028-85867333","sname":"成都曙光","pro":"四川","city":"成都市"},
+{"nameid":"1080","namecode":"S761026","name":"陕西新丰泰骏美汽车销售服务有限公司","cityid":"123","provid":"20","address":"西安市灞桥区东三环与南三环交汇处灞桥东城高端汽车主题公园","tel":"13909239997","sname":"陕西新丰泰骏美","pro":"陕西","city":"西安市"},
+{"nameid":"1083","namecode":"S753036","name":"云南大凯汽车销售服务有限公司","cityid":"185","provid":"28","address":"云南省昆明市官渡区东郊贵昆公路三岔口","tel":"15500025993","sname":"云南大凯","pro":"云南","city":"昆明市"},
+{"nameid":"1084","namecode":"S755018","name":"重庆长新运众汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市永川区新南路永南物流园1-1-23","tel":"13983481490","sname":"重庆长新运众","pro":"重庆","city":"重庆市"},
+{"nameid":"1085","namecode":"S751056","name":"绵阳新艾潇汽车有限公司","cityid":"130","provid":"22","address":"绵阳市高新区双碑东街43号","tel":"13983481490","sname":"绵阳新艾潇","pro":"四川","city":"绵阳市"},
+{"nameid":"1086","namecode":"S761027","name":"延安亚之泰汽贸有限责任公司","cityid":"124","provid":"20","address":"陕西省延安市宝塔区李渠镇杨兴庄村、新庄沟村","tel":"13809116322","sname":"延安亚之泰","pro":"陕西","city":"延安市"},
+{"nameid":"1087","namecode":"S761028","name":"宝鸡威凯一众汽车销售服务有限公司","cityid":"261","provid":"20","address":"宝鸡市陈仓区会展中心东南（奥迪4S店北侧）","tel":"13891700890","sname":"宝鸡威凯一众","pro":"陕西","city":"宝鸡市"},
+{"nameid":"11","namecode":"S761018","name":"渭南佳燕汽车贸易有限公司","cityid":"311","provid":"20","address":"渭南市乐天大街西段与新盛路十字向西300米路南","tel":"0913-8189966","sname":"渭南佳燕","pro":"陕西","city":"渭南市"},
+{"nameid":"110","namecode":"S951012","name":"攀枝花市力行工贸有限责任公司","cityid":"132","provid":"22","address":"四川攀枝花市仁和区渡仁西线南山工业园","tel":"0812-2321388","sname":"攀枝花力行工贸","pro":"四川","city":"攀枝花市"},
+{"nameid":"111","namecode":"S751006","name":"四川长征汽车贸易有限公司","cityid":"127","provid":"22","address":"成都市东三环路航天立交桥辅道惠王陵西路89号","tel":"028-66879919","sname":"四川长征","pro":"四川","city":"成都市"},
+{"nameid":"1110","namecode":"S751061","name":"广元市万仕兴汽车销售服务有限公司","cityid":"271","provid":"22","address":"四川省广元市昭化区工业发展集中园区","tel":"400-815-0011","sname":"广元市万仕兴","pro":"四川","city":"广元市"},
+{"nameid":"1113","namecode":"S752015","name":"贵州四扬众德汽车销售服务有限公司","cityid":"42","provid":"6","address":"贵阳市小河西南环线150号","tel":"0851-83849555","sname":"四扬众德","pro":"贵州","city":"贵阳市"},
+{"nameid":"1124","namecode":"S755021","name":"重庆金菱隆众汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市南岸区白鹤路工业园区1号（金菱汽车大世界）","tel":"023-62632255","sname":"重庆金菱隆众汽车销售服务有限公司","pro":"重庆","city":"重庆市"},
+{"nameid":"1127","namecode":"S753037","name":"玉溪精瑞汽车销售服务有限公司","cityid":"249","provid":"28","address":"云南省玉溪市红塔区太极路177号","tel":"0877-6616888","sname":"玉溪精瑞","pro":"云南","city":"玉溪"},
+{"nameid":"1129","namecode":"S753038","name":"云南翔通汽车销售有限公司","cityid":"185","provid":"28","address":"昆明市西山区二环南路凯旋利1号","tel":"400-126-3305","sname":"云南翔通","pro":"云南","city":"昆明市"},
+{"nameid":"113","namecode":"S751010","name":"成都市强生实业有限责任公司","cityid":"127","provid":"22","address":"四川省成都市金牛区交大路223号","tel":"028-87617000","sname":"成都强生","pro":"四川","city":"成都市"},
+{"nameid":"1133","namecode":"S752014","name":"贵州宏浩天马汽车销售服务有限公司","cityid":"347","provid":"6","address":"贵州省黔东南州苗族侗族自治州凯里经济开发区经纬汽车城3号地块内  注销中... ... 2018/8/20 17:36:29","tel":"00000000","sname":"贵州宏浩天马","pro":"贵州","city":"黔东南苗族侗族自治州"},
+{"nameid":"1135","namecode":"S751059","name":"泸州众航汽车销售服务有限公司","cityid":"133","provid":"22","address":"龙马潭区建国汽车产业园","tel":"0830-6662503","sname":"泸州众航","pro":"四川","city":"泸州市"},
+{"nameid":"114","namecode":"S751021","name":"成都启新汽车服务有限责任公司","cityid":"127","provid":"22","address":"成都高新区科园南一路2号","tel":"028-85188880","sname":"成都启新","pro":"四川","city":"成都市"},
+{"nameid":"1140","namecode":"S753039","name":"红河捷晟汽车销售有限公司","cityid":"343","provid":"28","address":"红河哈尼族彝族自治州开远市建设东路北侧","tel":"0873-7166699","sname":"红河捷晟","pro":"云南","city":"红河"},
+{"nameid":"1146","namecode":"S751064","name":"成都长壹汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市三环路航天立交桥外侧89号信箱","tel":"028-66879988","sname":"成都长壹-","pro":"四川","city":"成都市"},
+{"nameid":"1151","namecode":"S752013","name":"毕节市荣贵腾达汽车有限公司","cityid":"399","provid":"6","address":"毕节市七星关区鸭池镇营脚村碧阳二道边","tel":"8831888","sname":"毕节荣贵腾达","pro":"贵州","city":"毕节"},
+{"nameid":"116","namecode":"S751016","name":"四川华星大众汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市东三环路二段成致路36号（龙潭水乡旁）","tel":"028-84493333","sname":"四川华星","pro":"四川","city":"成都市"},
+{"nameid":"117","namecode":"S751017","name":"四川德阳川西汽车销售服务有限公司","cityid":"131","provid":"22","address":"德阳市八角工业园区川西汽车城","tel":"0838-2600945","sname":"四川德阳川西","pro":"四川","city":"德阳市"},
+{"nameid":"119","namecode":"S751019","name":"泸州松明汽贸有限公司","cityid":"133","provid":"22","address":"泸州市江阳区蓝田蓝安路川南国际汽车公园","tel":"0830-2597999","sname":"泸州松明","pro":"四川","city":"泸州市"},
+{"nameid":"120","namecode":"S952002","name":"贵州利和汽车贸易有限公司","cityid":"42","provid":"6","address":"贵州省贵阳市花溪区孟关国际汽贸城","tel":"0851-83651666","sname":"贵州利和","pro":"贵州","city":"贵阳市"},
+{"nameid":"121","namecode":"S952007","name":"贵州四扬汽车销售服务有限公司","cityid":"42","provid":"6","address":"贵州省贵阳市小河区西南环线150号","tel":"0851-83846555","sname":"贵州四扬","pro":"贵州","city":"贵阳市"},
+{"nameid":"122","namecode":"S753022","name":"云南云汽汽车销售服务有限公司","cityid":"185","provid":"28","address":"云南省昆明市经济技术开发区6号路与10号路交叉口东南角","tel":"0871-8339111","sname":"云南云汽","pro":"云南","city":"昆明市"},
+{"nameid":"123","namecode":"S753011","name":"大理阿鹏有限责任公司","cityid":"340","provid":"28","address":"云南省大理市经济开发区宾川路202号","tel":"0872-2311810","sname":"大理阿鹏","pro":"云南","city":"大理州白族自治州"},
+{"nameid":"124","namecode":"S753013","name":"保山联通汽车销售维修有限责任公司","cityid":"188","provid":"28","address":"云南省保山市隆阳区北六环路与永昌路交汇口向东300米处","tel":"0875-2206599","sname":"保山联通","pro":"云南","city":"保山市"},
+{"nameid":"125","namecode":"S755002","name":"重庆商社汽车贸易有限公司","cityid":"118","provid":"17","address":"重庆市九龙坡区谢陈路1号(汽车研究所旁)","tel":"023-68650888","sname":"重庆商社","pro":"重庆","city":"重庆市"},
+{"nameid":"126","namecode":"S755012","name":"重庆龙华实业集团众友汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市渝中区长江一路77号1F","tel":"023-63677777","sname":"重庆龙华众友","pro":"重庆","city":"重庆市"},
+{"nameid":"130","namecode":"S765016","name":"乌鲁木齐庞大腾众汽车销售有限公司","cityid":"120","provid":"19","address":"新疆乌鲁木齐市天山区大湾北路东十一巷29号","tel":"0991-2657555-2","sname":"乌鲁木齐庞大腾众","pro":"新疆","city":"乌鲁木齐市"},
+{"nameid":"131","namecode":"S261004","name":"府谷县恒捷汽贸有限公司","cityid":"125","provid":"20","address":"府谷县府谷镇沙后河村","tel":"0912-8752120","sname":"府谷恒捷","pro":"陕西","city":"榆林市"},
+{"nameid":"151","namecode":"S761005","name":"榆林市恒丰汽贸有限公司","cityid":"125","provid":"20","address":"榆林市开发区圣景名苑北门斜对面一汽-大众恒丰汽贸4S店","tel":"0912-3898599","sname":"榆林恒丰","pro":"陕西","city":"榆林市"},
+{"nameid":"152","namecode":"S761013","name":"陕西东明汽车商行有限公司","cityid":"123","provid":"20","address":"西安市高新区新区锦业二路63号","tel":"029- 88889698","sname":"陕西东明","pro":"陕西","city":"西安市"},
+{"nameid":"153","namecode":"S761009","name":"陕西鹰之杰汽车贸易有限公司","cityid":"123","provid":"20","address":"陕西省西安市西宝疏导路中段33号","tel":"029-84533100","sname":"陕西鹰之杰","pro":"陕西","city":"西安市"},
+{"nameid":"154","namecode":"S761010","name":"延安市宝塔区黄泰有限责任公司","cityid":"124","provid":"20","address":"延安市枣园路中段","tel":"0911-8264000","sname":"延安宝塔黄泰","pro":"陕西","city":"延安市"},
+{"nameid":"155","namecode":"S762002","name":"兰州金岛汽车销售有限公司","cityid":"13","provid":"2","address":"兰州市城关区北滨河东路88号（甘肃国际会展中心对面）","tel":"0931-8342888","sname":"兰州金岛","pro":"甘肃","city":"兰州市"},
+{"nameid":"156","namecode":"S762006","name":"甘肃友好汽车服务有限责任公司","cityid":"14","provid":"2","address":"嘉峪关市体育大道东2458号","tel":"0937-6391689","sname":"甘肃友好","pro":"甘肃","city":"嘉峪关市"},
+{"nameid":"157","namecode":"S763001","name":"青海海通汽车贸易有限公司","cityid":"119","provid":"18","address":"青海省西宁市城北区生物科技产业园海湖大道28号","tel":"0971-4123339","sname":"青海海通","pro":"青海","city":"西宁市"},
+{"nameid":"158","namecode":"S764001","name":"宁夏润众汽车销售服务有限公司","cityid":"195","provid":"30","address":"银川市德胜工业园区109国道西侧18号","tel":"0951-8988849","sname":"宁夏润众","pro":"宁夏","city":"银川市"},
+{"nameid":"159","namecode":"S765008","name":"新疆天汇华宇汽车销售服务有限责任公司","cityid":"120","provid":"19","address":"新疆乌鲁木齐市米东区永顺街天汇汽车城一汽大众4S店内","tel":"0991-3329766","sname":"新疆天汇华宇","pro":"新疆","city":"乌鲁木齐市"},
+{"nameid":"160","namecode":"S765007","name":"新疆汇捷汽车销售服务有限责任公司","cityid":"120","provid":"19","address":"乌鲁木齐市北京北路248号","tel":"0991-6617009","sname":"新疆汇捷","pro":"新疆","city":"乌鲁木齐市"},
+{"nameid":"162","namecode":"S765005","name":"阿克苏振宇汽车销售有限责任公司","cityid":"335","provid":"19","address":"新疆阿克苏市英阿瓦提路29号","tel":"0997-2583222","sname":"阿克苏振宇","pro":"新疆","city":"阿克苏地区"},
+{"nameid":"193","namecode":"S212004","name":"安宁谊众汽车销售有限公司","cityid":"185","provid":"28","address":"云南省安宁市职教基地文丰路文景路交汇处","tel":"0871-68701199","sname":"安宁谊众","pro":"云南","city":"昆明市"},
+{"nameid":"256","namecode":"S751022","name":"四川精典吉众汽车销售服务有限公司","cityid":"127","provid":"22","address":"四川省成都市三环路南三段121号","tel":"028-58950192","sname":"四川精典吉众","pro":"四川","city":"成都市"},
+{"nameid":"257","namecode":"S952003","name":"贵州汽车修理公司","cityid":"42","provid":"6","address":"贵阳市云岩区白云大道224号","tel":"0851-86507175","sname":"贵州汽修","pro":"贵州","city":"贵阳市"},
+{"nameid":"258","namecode":"S753021","name":"云南金鼎汽车贸易有限公司","cityid":"185","provid":"28","address":"昆明市高新区海源中路1028号（海源中路与科医路交叉口和城国际旁）","tel":"0871-63545588","sname":"云南金鼎","pro":"云南","city":"昆明市"},
+{"nameid":"269","namecode":"S761007","name":"西安秦川唐都机电汽车配件销售有限公司","cityid":"123","provid":"20","address":"西安市东郊幸福中路123号","tel":"029-83218487","sname":"西安秦川唐都机电","pro":"陕西","city":"西安市"},
+{"nameid":"285","namecode":"S753015","name":"云南曲靖云鑫工贸有限公司","cityid":"186","provid":"28","address":"云南省曲靖市环城东路北段科技佳园旁","tel":"0874-3510588","sname":"云南曲靖云鑫工贸","pro":"云南","city":"曲靖市"},
+{"nameid":"286","namecode":"S753016","name":"昆明谊众汽车销售有限公司","cityid":"185","provid":"28","address":"昆明市白龙路508号","tel":"0871-68113777","sname":"昆明谊众","pro":"云南","city":"昆明市"},
+{"nameid":"31","namecode":"S752004","name":"凯里恒信众联汽车销售服务有限公司","cityid":"347","provid":"6","address":"凯里市舟溪镇果园场村原职院驾校训练场（鸭塘舟溪路口）","tel":"0855-8690668","sname":"凯里恒信众联","pro":"贵州","city":"黔东南苗族侗族自治州"},
+{"nameid":"390","namecode":"S261002","name":"铜川新区黄泰汽车销售服务有限责任公司","cityid":"324","provid":"20","address":"铜川新区长丰南路（便民服务大厅东侧50米）","tel":"0919-3183404","sname":"铜川新区黄泰","pro":"陕西","city":"铜川市"},
+{"nameid":"406","namecode":"S761003","name":"陕西百佳汽车贸易有限公司","cityid":"123","provid":"20","address":"陕西省西安市航天基地神舟八路225号","tel":"029-89693505","sname":"陕西百佳","pro":"陕西","city":"西安市"},
+{"nameid":"423","namecode":"S762008","name":"兰州庞大一众汽车销售服务有限公司","cityid":"13","provid":"2","address":"甘肃省兰州市七里河区南滨河西路天缘建材市场向西200米","tel":"0931-2510199","sname":"兰州庞大一众","pro":"甘肃","city":"兰州市"},
+{"nameid":"424","namecode":"S765009","name":"新疆庞大一众汽车销售服务有限公司","cityid":"120","provid":"19","address":"乌鲁木齐市南湖北路友好汽车城南湖北路830号（百万庄附近）","tel":"0991-4624905","sname":"新疆庞大一众","pro":"新疆","city":"乌鲁木齐市"},
+{"nameid":"445","namecode":"S762009","name":"白银庞大一众汽车销售服务有限公司","cityid":"264","provid":"2","address":"甘肃省白银市白银区王岘西路37号","tel":"0943-8303219","sname":"白银庞大一众","pro":"甘肃","city":"白银"},
+{"nameid":"458","namecode":"S761014","name":"陕西天一汽车销售服务有限责任公司","cityid":"123","provid":"20","address":"陕西省西安市文景北路22号","tel":"029-86698899","sname":"陕西天一","pro":"陕西","city":"西安市"},
+{"nameid":"459","namecode":"S751025","name":"东创建国汽车集团成都天弘车业有限公司","cityid":"127","provid":"22","address":"成都市火车南站西路1949号","tel":"028-85177332","sname":"成都天弘","pro":"四川","city":"成都市"},
+{"nameid":"475","namecode":"S751051","name":"乐山天牛华茂车业有限公司","cityid":"128","provid":"22","address":"乐山市市中区通江镇王河村三组","tel":"0833-2600888","sname":"乐山天牛华茂","pro":"四川","city":"乐山市"},
+{"nameid":"483","namecode":"S765012","name":"哈密庞大一众汽车销售服务有限公司","cityid":"217","provid":"19","address":"中国新疆哈密北出口向北600米（恒安物流园东门）","tel":"0902-2588978","sname":"哈密庞大一众","pro":"新疆","city":"哈密市"},
+{"nameid":"484","namecode":"S765011","name":"喀什庞大一众汽车销售服务有限公司","cityid":"218","provid":"19","address":"新疆喀什市世纪大道21号","tel":"0998-6869168","sname":"喀什庞大一众","pro":"新疆","city":"喀什市"},
+{"nameid":"487","namecode":"S765010","name":"库尔勒庞大一众汽车销售服务有限公司","cityid":"336","provid":"19","address":"库尔勒市石化大道74号神州汽车城","tel":"0996-2156222","sname":"库尔勒庞大一众","pro":"新疆","city":"巴音郭楞蒙古自治州"},
+{"nameid":"488","namecode":"S751024","name":"四川省眉山市建国汽车有限公司","cityid":"221","provid":"22","address":"四川省眉山市东坡区三苏大道128号","tel":"028-38266888","sname":"四川眉山建国","pro":"四川","city":"眉山市"},
+{"nameid":"511","namecode":"S761015","name":"榆林市恒源汽贸有限公司","cityid":"125","provid":"20","address":"榆林市草海则一汽-大众恒源4S店","tel":"0912-6088222","sname":"榆林恒源","pro":"陕西","city":"榆林市"},
+{"nameid":"519","namecode":"s751026","name":"四川申蓉和浩汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市武侯区武侯大道南延线武兴路110号","tel":"028-85367755","sname":"四川申蓉和浩","pro":"四川","city":"成都市"},
+{"nameid":"521","namecode":"S755009","name":"重庆百事达华博汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市万州区沙龙路三段三峡国际车界内","tel":"023-85729000","sname":"重庆百事达华博","pro":"重庆","city":"重庆市"},
+{"nameid":"572","namecode":"S761017","name":"安康市庞大一众汽车销售有限公司","cityid":"245","provid":"20","address":"安康市江北工业园区钻石西路6号","tel":"0915-3325151","sname":"安康庞大一众","pro":"陕西","city":"安康"},
+{"nameid":"574","namecode":"S751028","name":"德阳万路众悦汽车销售服务有限公司","cityid":"131","provid":"22","address":"四川省德阳市岷江西路2段79号","tel":"0838-2227171","sname":"德阳万路众悦","pro":"四川","city":"德阳市"},
+{"nameid":"575","namecode":"S954001","name":"拉萨康达汽贸有限责任公司","cityid":"167","provid":"26","address":"拉萨市拉贡路3号","tel":"0891-6865910","sname":"拉萨康达","pro":"西藏","city":"拉萨市"},
+{"nameid":"583","namecode":"S753023","name":"玉溪驰瑞汽车销售服务有限公司","cityid":"249","provid":"28","address":"玉溪市高新区腾霄路3号","tel":"0877-2159999","sname":"玉溪驰瑞","pro":"云南","city":"玉溪"},
+{"nameid":"592","namecode":"S761016","name":"宝鸡市宝众汽车销售服务有限公司","cityid":"261","provid":"20","address":"宝鸡市渭滨区高新12路","tel":"0917-3554005","sname":"宝鸡宝众","pro":"陕西","city":"宝鸡市"},
+{"nameid":"595","namecode":"S751027","name":"自贡市和众汽车销售服务有限公司","cityid":"260","provid":"22","address":"自贡市贡井区南环路11号","tel":"0813-8260000","sname":"自贡和众","pro":"四川","city":"自贡市"},
+{"nameid":"612","namecode":"S751029","name":"达州市新世纪汽车销售服务有限公司","cityid":"268","provid":"22","address":"达州市天然气能源化工产业园区长田隧道出口右侧","tel":"0818-2518888 0818-2350136 0818-2350131","sname":"达州新世纪","pro":"四川","city":"达州市"},
+{"nameid":"613","namecode":"S765014","name":"昌吉市庞大一众汽车销售服务有限公司","cityid":"339","provid":"19","address":"昌吉市乌伊西路九家沟机动车交易市场庞大汽车城","tel":"0994-2209611","sname":"昌吉庞大一众","pro":"新疆","city":"昌吉回族自治州"},
+{"nameid":"614","namecode":"S765015","name":"克拉玛依庞大一众汽车销售服务有限公司","cityid":"122","provid":"19","address":"克拉玛依市西环路12号（九公里汽车城）","tel":"0990-6369555","sname":"克拉玛依庞大一众","pro":"新疆","city":"克拉玛依市"},
+{"nameid":"625","namecode":"S755011","name":"重庆龙华实业集团众华汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市渝中区经纬大道777号（高九路虎头岩）","tel":"023-63253666 023-63253377","sname":"重庆龙华众华","pro":"重庆","city":"重庆市"},
+{"nameid":"634","namecode":"S763002","name":"青海通瑞汽车贸易有限公司","cityid":"119","provid":"18","address":"青海省西宁市城东区八一东路15号","tel":"0971-4124888","sname":"青海通瑞","pro":"青海","city":"西宁市"},
+{"nameid":"650","namecode":"S751034","name":"成都启阳远航汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市新都区大丰街道高家社区6组","tel":"028-83983988","sname":"成都启阳远航","pro":"四川","city":"成都市"},
+{"nameid":"667","namecode":"S761019","name":"汉中博通汽车销售服务有限公司","cityid":"288","provid":"20","address":"陕西省汉中市汉台区108国道新民寺段","tel":"0916-2605678","sname":"汉中博通","pro":"陕西","city":"汉中市"},
+{"nameid":"671","namecode":"S761020","name":"西安新白云汽车销售服务有限公司","cityid":"123","provid":"20","address":"陕西省西安市浐灞生态区汽车主题公园25号地","tel":"029-83338811","sname":"西安新白云","pro":"陕西","city":"西安市"},
+{"nameid":"678","namecode":"S752003","name":"兴义市恒信众联汽车销售服务有限公司","cityid":"291","provid":"6","address":"兴义市木贾办事处（木贾物流园区）","tel":"0859-3775250","sname":"兴义恒信众联","pro":"贵州","city":"兴义市"},
+{"nameid":"686","namecode":"S751036","name":"成都宏羽众信汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市青羊区文家大道1号青羊工业园区益友园区（一汽大众4S店）","tel":"028-61358777","sname":"成都宏羽众信","pro":"四川","city":"成都市"},
+{"nameid":"692","namecode":"S753024","name":"红河州鸿云汽车经贸有限公司","cityid":"343","provid":"28","address":"红河州开远市建设东路北侧","tel":"0873-8868444","sname":"红河州鸿云","pro":"云南","city":"红河"},
+{"nameid":"707","namecode":"S764003","name":"宁夏润之星汽车销售服务有限公司","cityid":"195","provid":"30","address":"银川市兴庆区109国道西侧兴水路北侧","tel":"0951-8962333","sname":"宁夏润之星","pro":"宁夏","city":"银川市"},
+{"nameid":"708","namecode":"S764002","name":"宁夏润之杰汽车销售服务有限责任公司","cityid":"195","provid":"30","address":"银川市贺兰县109国道以西、通山路以北","tel":"0951-8873111","sname":"宁夏润之杰","pro":"宁夏","city":"银川市"},
+{"nameid":"709","namecode":"S762012","name":"兰州新纪元汽车销售服务有限公司","cityid":"13","provid":"2","address":"兰州市安宁区北滨河西路88号（安宁）国际汽车城","tel":"0931-7718888","sname":"兰州新纪元","pro":"甘肃","city":"兰州市"},
+{"nameid":"714","namecode":"S755010","name":"重庆龙华实业集团协众汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市渝北区黄龙路168号","tel":"023-67115777","sname":"重庆龙华协众","pro":"重庆","city":"重庆市"},
+{"nameid":"721","namecode":"S753027","name":"曲靖宝捷汽车销售有限公司","cityid":"186","provid":"28","address":"曲靖开发区西城工业园区人民工社二社一层","tel":"0874-3103112","sname":"曲靖宝捷","pro":"云南","city":"曲靖市"},
+{"nameid":"727","namecode":"S752002","name":"遵义市千汇汽车销售服务有限公司","cityid":"43","provid":"6","address":"贵州省遵义市汇川区汇川大道中段一汽-大众千汇旗舰店","tel":"0851-23160001","sname":"遵义千汇","pro":"贵州","city":"遵义市"},
+{"nameid":"728","namecode":"S751039","name":"南充明云惠民车业有限公司","cityid":"129","provid":"22","address":"四川南充市高坪区机场大道东顺路68号","tel":"0817-2601902","sname":"南充明云惠民","pro":"四川","city":"南充市"},
+{"nameid":"735","namecode":"S761022","name":"神木县恒捷汽贸有限公司","cityid":"125","provid":"20","address":"榆林市神木县第二新村汽车城","tel":"0912-2373881","sname":"神木恒捷","pro":"陕西","city":"榆林市"},
+{"nameid":"738","namecode":"S751033","name":"成都运通博恩汽车销售有限公司","cityid":"127","provid":"22","address":"成都市武侯区星狮路600号","tel":"028-85023333","sname":"成都运通博恩","pro":"四川","city":"成都市"},
+{"nameid":"745","namecode":"S762013","name":"兰州金盛强汽车销售有限公司","cityid":"13","provid":"2","address":"兰州市 城关区大沙坪北龙口向北2.5公里处","tel":"0931-5824555","sname":"兰州金盛强","pro":"甘肃","city":"兰州市"},
+{"nameid":"752","namecode":"S761021","name":"咸阳恒丰汽贸有限公司","cityid":"299","provid":"20","address":"陕西省咸阳市北上召汽车产业园一汽大众恒丰4S店","tel":"029-33120222","sname":"咸阳恒丰","pro":"陕西","city":"咸阳市"},
+{"nameid":"753","namecode":"S753026","name":"西双版纳捷成通达汽车销售有限公司","cityid":"300","provid":"28","address":"西双版纳景洪工业园区（嘎栋片区）南溪大道6号","tel":"0691-2716222","sname":"西双版纳捷成通达","pro":"云南","city":"西双版纳"},
+{"nameid":"756","namecode":"S764004","name":"石嘴山市朗宁汽车销售服务有限责任公司","cityid":"303","provid":"30","address":"大武口区大汝路西，自强路南","tel":"0952-2816555","sname":"石嘴山朗宁","pro":"宁夏","city":"石嘴山市"},
+{"nameid":"758","namecode":"S753025","name":"昭通市恒升汽车服务有限公司","cityid":"305","provid":"28","address":"昭通市昭阳区太平街道办事处石渣河社区","tel":"0870-3157777","sname":"昭通恒升","pro":"云南","city":"昭通市"},
+{"nameid":"759","namecode":"S751035","name":"遂宁市瑞胜汽车销售有限公司","cityid":"306","provid":"22","address":"四川省遂宁市船山区中国西部现代物流港","tel":"0825-2327333","sname":"遂宁瑞胜","pro":"四川","city":"遂宁市"},
+{"nameid":"769","namecode":"S261001","name":"韩城市众瑞汽车销售有限责任公司","cityid":"307","provid":"20","address":"韩城市新城区黄河大街北段（韩城职中隔壁）","tel":"0913-5333389","sname":"韩城众瑞","pro":"陕西","city":"韩城市"},
+{"nameid":"779","namecode":"S212002","name":"德宏龙泰通达汽车销售有限公司","cityid":"341","provid":"28","address":"云南省德宏州芒市芒市大街4号","tel":"0692-2131558","sname":"德宏龙泰通达","pro":"云南","city":"德宏市"},
+{"nameid":"781","namecode":"S751037","name":"崇州瑞龙汽车销售服务有限公司","cityid":"127","provid":"22","address":"四川省崇州市滨河路南二段（金鸡看守所旁）","tel":"028-82226555","sname":"崇州瑞龙","pro":"四川","city":"成都市"},
+{"nameid":"787","namecode":"S264001","name":"吴忠市润众汽车销售服务有限公司","cityid":"312","provid":"30","address":"吴忠市利通区利华街以东、世纪大道以北(新车管所对面)","tel":"0953-3950333","sname":"吴忠润众","pro":"宁夏","city":"吴忠市"},
+{"nameid":"802","namecode":"S251001","name":"四川仁寿恒信汽车销售有限公司","cityid":"221","provid":"22","address":"四川眉山市仁寿县仁寿大道","tel":"028-37706666","sname":"四川仁寿恒信","pro":"四川","city":"眉山市"},
+{"nameid":"803","namecode":"S752005","name":"安顺恒信众联汽车销售服务有限公司","cityid":"316","provid":"6","address":"贵州省安顺市西秀区工业园两六公路1.5公里处","tel":"0853-3517888","sname":"安顺恒信众联","pro":"贵州","city":"安顺市"},
+{"nameid":"807","namecode":"S261003","name":"靖边县恒博汽贸有限公司","cityid":"125","provid":"20","address":"靖边县寨山村307国道边（五中向北100米处）","tel":"0912-4628766","sname":"靖边恒博","pro":"陕西","city":"榆林市"},
+{"nameid":"808","namecode":"S212003","name":"昆明捷通达汽车销售有限公司","cityid":"185","provid":"28","address":"昆明市嵩明县环城西路一汽大众4S店","tel":"0871-66039028","sname":"昆明捷通达","pro":"云南","city":"昆明市"},
+{"nameid":"809","namecode":"S263001","name":"格尔木宝瑞通汽车贸易有限公司","cityid":"319","provid":"18","address":"青海省海西蒙古族藏族自治州格尔木市昆仑经济技术开发区金川路","tel":"0979-8488828","sname":"格尔木宝瑞通","pro":"青海","city":"格尔木市"},
+{"nameid":"814","namecode":"S753029","name":"楚雄易通汽车销售服务有限公司","cityid":"320","provid":"28","address":"云南省楚雄市滇中大商汇二期110号","tel":"0878-3249366","sname":"楚雄易通","pro":"云南","city":"楚雄市"},
+{"nameid":"815","namecode":"S251004","name":"成都广汇申蓉汇通汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市金堂县赵镇迎宾大道二段13号","tel":"028-69390000","sname":"成都广汇申蓉汇通","pro":"四川","city":"成都市"},
+{"nameid":"816","namecode":"S251003","name":"成都汇腾汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市蒲江县鹤山镇工业集中发展区工业南路8号","tel":"028-69929666","sname":"成都汇腾","pro":"四川","city":"成都市"},
+{"nameid":"82","namecode":"S751040","name":"成都汇和汽车销售有限公司","cityid":"127","provid":"22","address":"四川省成都市双流商都路618号","tel":"028-85626555","sname":"成都汇和","pro":"四川","city":"成都市"},
+{"nameid":"828","namecode":"S751043","name":"都江堰阔龙汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市四川都江堰经济开发区上阳街496号","tel":"028-87228868","sname":"都江堰阔龙","pro":"四川","city":"成都市"},
+{"nameid":"829","namecode":"S751038","name":"内江瑞龙汽车销售服务有限公司","cityid":"326","provid":"22","address":"内江市市中区汉渝大道南侧259号","tel":"0832-8736666","sname":"内江瑞龙","pro":"四川","city":"内江市"},
+{"nameid":"836","namecode":"S262001","name":"金昌赛亚汇通汽车销售服务有限公司","cityid":"328","provid":"2","address":"金昌市经济技术开发区泰安路南侧","tel":"0935-8336733","sname":"金昌赛亚汇通","pro":"甘肃","city":"金昌市"},
+{"nameid":"838","namecode":"S755013","name":"重庆盛驰汽车有限公司","cityid":"118","provid":"17","address":"重庆市北部新区经开园金渝大道99号附23-1（汽博中心英菲尼迪4s店旁）","tel":"023-67039911","sname":"重庆盛驰","pro":"重庆","city":"重庆市"},
+{"nameid":"839","namecode":"S212001","name":"丽江恒盛通达汽车销售有限公司","cityid":"329","provid":"28","address":"云南省丽江市玉龙县南口路民族中学旁","tel":"0888-5340688","sname":"丽江恒盛通达","pro":"云南","city":"丽江市"},
+{"nameid":"846","namecode":"S751042","name":"四川申蓉雅泰汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市新都区斑竹园镇701号申蓉汽车园","tel":"028-68965588","sname":"四川申蓉雅泰","pro":"四川","city":"成都市"},
+{"nameid":"847","namecode":"S762015","name":"酒泉金岛汽车销售服务有限公司","cityid":"333","provid":"2","address":"酒泉市高新技术工业园区（西园）","tel":"0937-2609988","sname":"酒泉金岛","pro":"甘肃","city":"酒泉市"},
+{"nameid":"860","namecode":"S251002","name":"四川广汉恒达汽车销售有限公司","cityid":"131","provid":"22","address":"广汉市北外乡云盘村3社","tel":"0838-5288988","sname":"四川广汉恒达","pro":"四川","city":"德阳市"},
+{"nameid":"868","namecode":"S752006","name":"六盘水和通汽车销售服务有限公司","cityid":"346","provid":"6","address":"贵州省六盘水市红桥新区凉都大道变电站旁","tel":"","sname":"六盘水和通","pro":"贵州","city":"六盘水市"},
+{"nameid":"874","namecode":"S212005","name":"宣威市添福源汽车贸易有限公司","cityid":"186","provid":"28","address":"宣威市虹桥街道振兴南路延长线","tel":"0874-7255066","sname":"宣威添福源","pro":"云南","city":"曲靖市"},
+{"nameid":"885","namecode":"S752008","name":"铜仁恒信众联汽车销售服务有限公司","cityid":"349","provid":"6","address":"贵州省铜仁市万山区谢桥办事处塘家寨村火焰塘村民组63号","tel":"0856-3465333","sname":"铜仁恒信众联","pro":"贵州","city":"铜仁市"},
+{"nameid":"895","namecode":"S255001","name":"重庆百事达华驰汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市涪陵区桥南大道电信局旁","tel":"","sname":"重庆百事达华驰","pro":"重庆","city":"重庆市"},
+{"nameid":"9","namecode":"S752001","name":"遵义华来金汽车贸易有限公司","cityid":"43","provid":"6","address":"贵州省遵义市遵义县遵南大道龙坑镇黔北国际汽博中心","tel":"0851-27349888","sname":"遵义华来金","pro":"贵州","city":"遵义市"},
+{"nameid":"908","namecode":"S751041","name":"成都浩龙汽车销售服务有限公司","cityid":"127","provid":"22","address":"成都市龙泉驿区龙都北路768号","tel":"028-63165588","sname":"成都浩龙","pro":"四川","city":"成都市"},
+{"nameid":"909","namecode":"S752007","name":"都匀恒信众联汽车销售服务有限公司","cityid":"461","provid":"6","address":"贵州省都匀市甘塘产业园区文明村佘家村","tel":"0854-8311456","sname":"都匀恒信众联","pro":"贵州","city":"都匀市"},
+{"nameid":"91","namecode":"S753030","name":"文山捷惠汽车销售服务有限公司","cityid":"318","provid":"28","address":"文山市新中医院南3公里处国际汽车城内","tel":"0876-2835566","sname":"文山捷惠","pro":"云南","city":"文山市"},
+{"nameid":"910","namecode":"S762016","name":"平凉润之杰汽车销售服务有限公司","cityid":"388","provid":"2","address":"甘肃省平凉市崆峒区八里桥以西国道312线南侧","tel":"0933-8572666","sname":"平凉润之杰","pro":"甘肃","city":"平凉"},
+{"nameid":"914","namecode":"S255002","name":"重庆商社众志渝涵汽车销售有限公司","cityid":"118","provid":"17","address":"重庆市合川区高阳路北部汽车工业园9号楼","tel":"023-42717616","sname":"重庆商社众志渝涵","pro":"重庆","city":"重庆市"},
+{"nameid":"925","namecode":"S751045","name":"南充明云运行车业有限公司","cityid":"129","provid":"22","address":"南充市顺庆区潆溪镇川东北汽贸中心(何家观收费站前100米）","tel":"0817-8699366","sname":"南充明云运行","pro":"四川","city":"南充市"},
+{"nameid":"926","namecode":"S753031","name":"红河州捷鸿汽车经贸有限公司","cityid":"343","provid":"28","address":"红河州红河工业园区生物资源加工区（蒙自市红河大道团山加油站旁）","tel":"0873-8866266","sname":"红河州捷鸿","pro":"云南","city":"红河"},
+{"nameid":"934","namecode":"S751046","name":"资阳清巍茂源汽车销售服务有限公司","cityid":"425","provid":"22","address":"四川省资阳市雁江区城东新区迎宾大道中段2号","tel":"028-26370888","sname":"资阳清巍茂源","pro":"四川","city":"资阳"},
+{"nameid":"935","namecode":"S265001","name":"石河子市大得汽车销售服务有限公司","cityid":"376","provid":"19","address":"新疆石河子市36小区军垦机电园186-1号","tel":"0993-2816099","sname":"石河子大得","pro":"新疆","city":"石河子"},
+{"nameid":"957","namecode":"S751044","name":"成都市泰鸿宇汽车贸易有限责任公司","cityid":"127","provid":"22","address":"成都市龙泉驿区星光中路97号","tel":"028-84863152","sname":"成都泰鸿宇","pro":"四川","city":"成都市"},
+{"nameid":"958","namecode":"S761024","name":"陕西尊荣致诚汽车贸易有限公司","cityid":"123","provid":"20","address":"陕西西安未央区六村堡工业园9号","tel":"029-89106915","sname":"陕西尊荣","pro":"陕西","city":"西安市"},
+{"nameid":"959","namecode":"S762018","name":"武威赛亚汇众汽车销售服务有限公司","cityid":"386","provid":"2","address":"甘肃省武威市凉州区武威工业园区","tel":"0935-2352288","sname":"武威赛亚汇众","pro":"甘肃","city":"武威"},
+{"nameid":"975","namecode":"S753028","name":"普洱捷顺通达汽车销售服务有限公司","cityid":"435","provid":"28","address":"云南省普洱市思茅区振兴大道北段普洱人家对面","tel":"0879-2892666","sname":"普洱捷顺通达","pro":"云南","city":"普洱"},
+{"nameid":"978","namecode":"S753032","name":"昆明涌鑫之众贸易有限公司","cityid":"185","provid":"28","address":"云南省昆明市呈贡区聚贤街与彩云南路交叉口","tel":"0871-65915777","sname":"昆明涌鑫","pro":"云南","city":"昆明市"},
+{"nameid":"982","namecode":"S753033","name":"临沧市添福源汽车贸易有限公司","cityid":"436","provid":"28","address":"临沧市临翔区缅宁大道214过境线交叉口南亚汽车主题园01号","tel":"0883-2610888","sname":"临沧添福源","pro":"云南","city":"临沧"},
+{"nameid":"983","namecode":"S262002","name":"临夏州源通汽车销售有限公司","cityid":"357","provid":"2","address":"甘肃省临夏州临夏市南龙镇穆斯林物流园区","tel":"0930-6220100","sname":"临夏源通","pro":"甘肃","city":"临夏"},
+{"nameid":"990","namecode":"S751047","name":"四川金信华远汽车销售有限公司","cityid":"127","provid":"22","address":"成都市郫县红光镇高店路西段358号","tel":"028-68937272","sname":"四川金信","pro":"四川","city":"成都市"},
+{"nameid":"992","namecode":"S761023","name":"西安恒丰四站汽车销售有限公司","cityid":"123","provid":"20","address":"西安市莲湖区丰登南路四号","tel":"029-84580808","sname":"西安恒丰四站","pro":"陕西","city":"西安市"},
+{"nameid":"993","namecode":"S761025","name":"咸阳恒源汽贸有限公司","cityid":"299","provid":"20","address":"陕西省咸阳市秦都区玉泉路以北西段","tel":"029-33558222","sname":"咸阳恒源","pro":"陕西","city":"咸阳市"},
+{"nameid":"996","namecode":"S755016","name":"重庆万家凯迪汽车销售服务有限公司","cityid":"118","provid":"17","address":"重庆市大渡口区金桥路9号","tel":"023-61691555-1","sname":"重庆万家凯迪","pro":"重庆","city":"重庆市"},
+{"nameid":"997","namecode":"S751048","name":"宜宾申蓉致鑫汽车销售服务有限公司","cityid":"421","provid":"22","address":"宜宾市临港经济开发区飞云路北段72号","tel":"0831-2201555","sname":"宜宾申蓉致鑫","pro":"四川","city":"宜宾"},
+];
+    console.log(mes.length)
+    
+	var carLd = [
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/62/61/211/13735892.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/63/61/211/13735893.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/64/61/211/13735894.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/65/61/211/13735895.jpg'],
+
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/66/61/211/13735896.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/67/61/211/13735897.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/69/61/211/13735899.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/70/61/211/13735900.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/71/61/211/13735901.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/68/61/211/13735898.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/88/61/211/13735918.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/89/61/211/13735919.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/91/61/211/13735921.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/90/61/211/13735920.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/92/61/211/13735922.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/93/61/211/13735923.jpg',
+            'http://img1.gtimg.com/autodongguan/pics/hv1/95/61/211/13735925.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/94/61/211/13735924.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/140/61/211/13735970.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/141/61/211/13735971.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/142/61/211/13735972.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/96/61/211/13735926.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/97/61/211/13735927.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/98/61/211/13735928.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/99/61/211/13735929.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/100/61/211/13735930.jpg',
+            'http://img1.gtimg.com/autodongguan/pics/hv1/102/61/211/13735932.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/101/61/211/13735931.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/103/61/211/13735933.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/104/61/211/13735934.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/106/61/211/13735936.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/107/61/211/13735937.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/108/61/211/13735938.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/105/61/211/13735935.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/109/61/211/13735939.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/110/61/211/13735940.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/112/61/211/13735942.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/113/61/211/13735943.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/114/61/211/13735944.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/111/61/211/13735941.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/119/61/211/13735949.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/120/61/211/13735950.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/125/61/211/13735955.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/128/61/211/13735958.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/129/61/211/13735959.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/121/61/211/13735951.jpg'],
+          ];
+
+          var carCT = [
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/193/61/211/13736023.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/194/61/211/13736024.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/195/61/211/13736025.jpg'],
+
+        		[
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/196/61/211/13736026.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/197/61/211/13736027.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/198/61/211/13736028.jpg',],
+            
+        		[
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/199/61/211/13736029.jpg',
+            'http://img1.gtimg.com/autodongguan/pics/hv1/200/61/211/13736030.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/201/61/211/13736031.jpg',],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/202/61/211/13736032.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/203/61/211/13736033.jpg',
+            'http://img1.gtimg.com/autodongguan/pics/hv1/204/61/211/13736034.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/205/61/211/13736035.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/206/61/211/13736036.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/207/61/211/13736037.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/208/61/211/13736038.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/209/61/211/13736039.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/210/61/211/13736040.jpg'],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/211/61/211/13736041.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/212/61/211/13736042.jpg',
+            'http://img1.gtimg.com/autodongguan/pics/hv1/213/61/211/13736043.jpg'],
+            
+        		[
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/214/61/211/13736044.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/215/61/211/13736045.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/216/61/211/13736046.jpg',],
+            
+        		[
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/217/61/211/13736047.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/218/61/211/13736048.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/219/61/211/13736049.jpg',],
+            
+        		['http://img1.gtimg.com/autodongguan/pics/hv1/220/61/211/13736050.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/221/61/211/13736051.jpg',
+        		'http://img1.gtimg.com/autodongguan/pics/hv1/222/61/211/13736052.jpg',],
+          ];
+</script>
+<script src="https://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.6.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+    //  $(".act").click(function(){
+    //    $(this).toggleClass("act-hide");
+    //  })
+
+
+    $(window).load(function() {
+        $("#scroll").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+    function putValue(arr){
+        var $dom = '';
+        for(var i = 0 ,l = arr.length; i < l ; i++){
+            $dom += '<option value="'+arr[i]+'">'+arr[i]+'</option>';
+        }
+        console.log($dom)
+        return $dom;
+    }
+    function cleanRepeat(a) {
+        var wArr = [],l = a.length;
+        for(var i = 0 ; i < l ; i++ ){
+            if(wArr.indexOf(a[i]) < 0){
+                wArr.push(a[i])
+            }
+        }
+        return putValue(wArr);
+    }
+    function getArr(m,v,c){
+        var allArr = [],l = 167;
+        allArr.push("请选择");
+        for(var i = 0 ; i < l ; i++ ){
+            if(mes[i][m] == v){
+                allArr.push(mes[i][c]);
+            }
+            if(m == 'pro' && v == undefined){
+                allArr.push(mes[i][m]);
+            }
+        }
+        console.log(allArr)
+        return cleanRepeat(allArr);
+    }
+    function inCity(dom,postW,val,getW){//获取城市
+        $(dom).empty();
+        var cityId = getArr(postW,val,getW);
+        $(dom).append(cityId);
+    }
+    function c_list(vals){
+        $('#scroll ul').empty();
+        function getArrs(m,v){
+            var $li = '';
+            var l = 167;
+//          console.log(v)
+        	if(v=="成都"){
+        		for(var i = 0 ; i < l ; i++ ){
+        			if(mes[i].city=="成都"){
+                    $li +='<li>'+
+                        '<h3>'+mes[i].name+'<span>'+mes[i].tel+'</span></h3>'+
+                        // '<p>'+mes[i].address+'</p>'+
+                        '</li>';
+                       }
+	            }
+//      		console.log($li)
+        	}else{
+        		for(var i = 0 ; i < l ; i++ ){
+	                if(mes[i][m] == v){
+	                    $li +='<li>'+
+                        '<h3>'+mes[i].name+'<span>'+mes[i].tel+'</span></h3>'+
+	                        // '<p>'+mes[i].address+'</p>'+
+	                        // '<p>'+mes[i].tel+'</p>'+
+	                        '</li>';
+	                }
+	            }
+        	}
+            return $li;
+        }
+        $('#scroll ul').append(getArrs('city',vals))
+    }
+    //事件
+   
+    var proId = getArr('pro');
+//   console.log(proId)
+    $('#provinceList').append(proId);//省份
+//  $('#pro').append(proId);//报名的省份
+    
+    $(".car1").click(function(){
+    	$(this).addClass("active");
+    	$(".car2").removeClass("active");
+    })
+    $(".car2").click(function(){
+    	$(this).addClass("active");
+    	$(".car1").removeClass("active");
+    })
+    //楼上报名列表
+    var geolocation = new BMap.Geolocation();  
+    var myGeo = new BMap.Geocoder();      
+    var province;
+    geolocation.getCurrentPosition(function(r){  
+    if(this.getStatus() == BMAP_STATUS_SUCCESS){  
+      var pt = r.point;   
+      myGeo.getLocation(pt, function(result){      
+        if (result){      
+          var addComp = result.addressComponents;  
+          province=addComp.province; 
+          province=province.substr(0, 2);
+          // console.log(province)
+
+          /////////////////////////////////////////////////////修改的话  下面那行加  province="重庆" 就行
+          //province="重庆"
+
+          // alert(province)
+          loadsign();
+          $("#provinceList").find("option:contains('"+province+"')").attr("selected", true);
+          inCity('#cityList','pro', province,'city');
+          $('#cityList').find("option:first").remove();
+          c_list($('#cityList').val())
+            $('#provinceList').on('change',function(){
+                inCity('#cityList','pro',this.value,'city');
+                $('#cityList').find("option:first").remove();
+                c_list($('#cityList').val())
+            })
+            $('#cityList').on('change',function(){
+                c_list(this.value)
+            })
+        }
+      })
+    }
+    })
+
+    var loadsign = function(){ 
+    	var $prov = $("#pro");
+    	var $city = $("#city");
+    	var $dealer = $("#dealers");
+    	var provhtml = "<option value=\"0\">选择省份</option>";
+    	var cityhtml = "<option value=\"0\">选择城市</option>";
+    	var dealerhtml = "<option value=\"0\">选择经销商</option>";
+    	for(var i=0;i<mes.length;i++){
+    		if(  provhtml.indexOf(mes[i].pro)<0 ){
+    			provhtml += "<option value=\""+mes[i].provid+"\">"+mes[i].pro+"</option>";
+    		}
+        if( mes[i].pro == province && cityhtml.indexOf(mes[i].city)<0){
+          cityhtml += "<option value=\""+mes[i].cityid+"\">"+mes[i].city+"</option>";
+        }
+    	}
+    	$prov.html(provhtml);
+      $prov.find("option:contains('"+province+"')").attr("selected", true);
+    	$city.html(cityhtml);
+    	
+    	$prov.change(function(){
+    		var provid = $(this).val();
+    		cityhtml = "<option value=\"0\">选择城市</option>";
+    		for(var i=0;i<mes.length;i++){
+	    		if( mes[i].provid == provid && cityhtml.indexOf(mes[i].city)<0){
+	    			cityhtml += "<option value=\""+mes[i].cityid+"\">"+mes[i].city+"</option>";
+	    		}
+	    	}
+    		$city.html(cityhtml);
+    	})
+    	
+    	$city.change(function(){
+    		var cityid = $(this).val();
+    		console.log(cityid)
+    		dealerhtml = "<option value=\"0\">选择经销商</option>";
+    		for(var i=0;i<mes.length;i++){
+	    		if( mes[i].cityid == cityid ){
+	    			dealerhtml += "<option value=\""+mes[i].nameid+"\">"+mes[i].sname+"</option>";
+	    		}
+	    	}
+    		$dealer.html(dealerhtml);
+    	})
+    }
+    
+//  $('#pro').on('change',function(){
+//      if(this.value == 0){
+//          $('#city').empty().append('<option value="0">请选择城市</option>')
+//          $('#dealers').empty().append('<option value="0">请选择经销商</option>')
+//      }else{
+//          inCity('#city','pro',this.value,'city');
+//          inCity('#dealers','city',$('#city').val(),'name')
+//      }
+//  })
+
+//  $('#city').on('change',function(){//获取经销商
+//      inCity('#dealers','city',this.value,'name')
+//  })
+    //楼下经销商列表
+//  c_list("成都");
+
+    //初始化
+//  var geolocation = new BMap.Geolocation();
+//  var getProvince,getCity;
+//  geolocation.getCurrentPosition(function(e){
+//      getProvince = e.address.province.replace('省','') || '四川',
+//          getCity = e.address.city || '成都市';
+//      $('#provinceList,#pro').val(getProvince);
+//      inCity('#cityList','pro',$('#provinceList').val(),'city');
+//      $('#cityList').val(getCity)
+//      c_list($('#cityList').val())
+//      //报名的
+//      inCity('#city','pro',$('#pro').val(),'city');
+//      $('#city').val(getCity);
+//      inCity('#dealers','city',$('#city').val(),'name')
+//  })
+
+  
+</script>
+<script type="text/javascript">
+	$(function(){
+		/*金融政策*/
+//         var swiper1 = new Swiper('#normal1', {
+//             direction : 'horizontal',
+// //          loop : true,
+// //          autoplay: true,
+//              navigation: {
+// 		      nextEl: '.swiper-button-next',
+// 		      prevEl: '.swiper-button-prev',
+// 		    },
+// //          pagination: {
+// //              el: '.swiper-pagination',
+// //          },
+//         on: {
+//                 slideChangeTransitionStart: function(){
+//                   console.log(this.activeIndex)
+//                   if(this.activeIndex==0){
+//                     $(".car1").addClass("active");
+//     	              $(".car2").removeClass("active");
+//                   }else{
+//                     $(".car2").addClass("active");
+//     	              $(".car1").removeClass("active");
+//                   }
+// //			      alert(this.activeIndex);//切换结束时，告诉我现在是第几个slide
+//                 },
+//             },
+//         });
+        //亮点
+        carCt(3,$('#normal2 .swiper-wrapper'),carLd[0])
+        carCt(3,$('#normal3 .swiper-wrapper'),carCT[0])
+        
+        $(".carZc span").click(function(){
+        	var imgArr = [
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/111/153/211/13759401.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/112/153/211/13759402.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/113/153/211/13759403.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/114/153/211/13759404.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/115/153/211/13759405.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/116/153/211/13759406.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/117/153/211/13759407.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/118/153/211/13759408.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/119/153/211/13759409.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/120/153/211/13759410.jpg",
+        		"http://img1.gtimg.com/autodongguan/pics/hv1/121/153/211/13759411.jpg"
+        	];
+        	var index = $(this).index();
+        	var $zcimg = $(".zcImg");
+        	
+        	$(".carZc span input").removeClass("curBlue").parent().siblings("span").eq(index).children().addClass("curBlue");
+        	if(index==11){
+        		location.href = "http://vw.faw-vw.com/";
+        		return false;
+        	}
+        	$zcimg.attr("src", imgArr[index]);
+        });
+        
+        $('.carLd span input').on('click',function(){
+        	$('.btLd li:first span').addClass('curBlue').parent().siblings().children().removeClass('curBlue');
+        	var i_ct = $(this).parent().index();
+          	var len = carLd[i_ct].length;
+        	tab(i_ct,$(this));
+        	carCt(3,$('#normal2 .swiper-wrapper'),carLd[i_ct]);
+        	swiper1.slideTo(0);
+        })
+        
+        $('.carCt span input').on('click',function(){
+        	var i_ct = $(this).parent().index();
+          var len = carLd[i_ct].length;
+        	tab(i_ct,$(this));
+        	carCt(3,$('#normal3 .swiper-wrapper'),carCT[i_ct]);
+        	swiper2.slideTo(0);
+        })
+        // $('.btLd li span').on('click',function(){
+        // 	var i_ct = $(this).parent().index();
+        // 	$(this).addClass('curBlue').parent().siblings().children().removeClass('curBlue');
+        // 	if($('.carLd>span:first input').hasClass('curBlue')){
+        // 		carCt(3,$('#normal2 .swiper-wrapper'),carLd[i_ct])
+        // 	}else{
+        // 		carCt(3,$('#normal2 .swiper-wrapper'),carLd[i_ct])
+        // 	}
+        	
+        // })
+         //车图
+        // carCt(5,$('#normal3 .swiper-wrapper'),imgCarPic[0]);
+//         var swiper2 = new Swiper('#normal3', {
+//             direction : 'horizontal',
+//             // loop : true,
+// //          autoplay: true,
+//             navigation: {
+// 		      nextEl: '.swiper-button-next',
+// 		      prevEl: '.swiper-button-prev',
+// 		    },
+//             on: {
+//                 slideChangeTransitionStart: function(){
+//                 },
+//             },
+//         });
+        // $('.carCt span input').on('click',function(){
+        // 	var i_ct = $(this).parent().index();
+        // 	tab(i_ct,$(this))
+        // 	// carCt(5,$('#normal3 .swiper-wrapper'),imgCarPic[i_ct])
+        // })
+        var swiper1 = new Swiper('#normal2', {
+              pagination: {
+                el: '.swiper-pagination',
+                clickable :true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+        var swiper2 = new Swiper('#normal3', {
+              pagination: {
+                el: '.swiper-pagination',
+                clickable :true,
+              },
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
+            });
+            // swiper.slideTo(1)
+        function carCt(n,dom,arr){
+         	var $carPic = '';
+	         for(var i =0 ;i < n;i++){
+	         	$carPic += '<div class="swiper-slide" style="background-image:url('+arr[i]+')"></div>'
+	         }
+	         dom.empty().append($carPic)
+        }
+        function tab(ing,dom){
+        		dom.addClass('curBlue')
+        		.parent().siblings().children().removeClass('curBlue')
+        }
+	})
+</script>
+<script type="text/javascript">
+    $(function() {
+//  	$('#normal1 .swiper-container').css('position','static!important')
+    	var cxVal = 29;
+    	var carname = "探歌";
+        //车型单选
+        $('.carType input').click(function(){
+        	cxVal = $(this).val();
+        	carname = $(this).data("name");
+        	$(this).prop('checked','checked').parent().siblings().children().removeProp('checked');
+        })
+        /*---报名---*/
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),//姓名           
+                  tel=$("#phone").val(), //电话
+
+                  series_id = cxVal,    //车型id
+                  car_name  = carname,
+
+                  dealers_code = $('#dealers').val(),//经销商
+                  dealers = $('#dealers option:checked').text(),
+
+                  province_id = $("#pro").val(),    //省份
+                  province= $("#pro option:checked").text(),
+
+                  city_id =  $("#city").val(),    //城市
+                  city= $("#city option:checked").text(),
+
+                  brand_id = 23, //品牌
+                  Url = "https://auto.gdtengnan.com/yetcar/baomingDazhong.php",
+                  checked = $('#checkbox').is(':checked'),
+                  Data = {
+                      name: name,
+                      phone: tel,
+
+                      city_id: city_id,
+                      city:city,
+
+                      dealers: dealers,  
+                      dealers_code: dealers_code,
+
+                      brand_id: brand_id,
+
+                      province_id:province_id,
+                      province:province,
+
+                      type:1,
+
+                      detail_id:279,
+
+                      series_id:series_id,
+                      car_name:car_name,
+                      
+//                    lead_type:'9f223648-7985-4da2-ac37-50309d91b9cb',
+//                    smart_code:4257,
+//                    user_key:'66720e2a-02c0-4c80-9'
+                      
+                      lead_type: "61ccbfe4-b061-40c4-9bc8-a5587586210c",
+                      smart_code: 4478,
+                      user_key: "66720e2a-02c0-4c80-9"
+
+
+
+                      
+                  }
+
+              //判断填写是否正确
+              if(name==''||tel==''){
+                  alert('信息没有填写完整');      
+                  //    ("", "请输入姓名");                   
+                  return false;
+              }
+              if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                  alert('请输入正确的中文名');                         
+                  return false;
+              };
+              if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|19[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                  alert('手机格式不正确');                           
+                  return false;
+              }
+              // if(series_id==0){
+              //     alert('请选择车型');                         
+              //     return false;
+              // }
+              if(dealers_code==0){
+                  alert('请选择经销商');                         
+                  return false;
+              }
+              if(!checked){
+                 alert('请勾选隐私政策');                         
+                  return false;
+              }
+              
+              //发送请求  
+              $.ajax({
+                  type:"get",
+                  url:Url,
+                  data:Data,
+                  async:true,
+                  dataType:"jsonp",
+jsonpCallback:"jsonpReturn",
+                  success:function(data){
+                      if(data.status==1){
+                          alert('恭喜你，报名成功！');
+                          flag = false;
+                        //   debugger
+                      setInterval(function(){
+                         window.location.reload();
+                      },1000)
+                         
+                      }else{
+                          alert("很抱歉，你报名失败。");
+                      }
+                  }
+              });
+          } else {
+              alert("请勿重复提交！")
+          }
+
+        })
+        /*---报名结束---*/
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

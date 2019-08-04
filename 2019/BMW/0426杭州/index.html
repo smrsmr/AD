@@ -1,0 +1,170 @@
+<!--2019年-04月-26号 星期五 09:39:18 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>THE X7 创新BMWX7</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<style>
+			.main {
+				margin: 0 auto;
+				max-width: 750px;
+			}
+			.cn {
+				position: relative;
+			}
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 1.17rem;
+				width: 7.2rem;
+				height: 8rem;
+				margin-left: -3.6rem;
+			}
+			.bmk p input,.bmk p select {
+				width: 100%;
+				height: 100%;
+				-webkit-appearance: none;
+				appearance: none;
+				padding-left: 0.5rem;
+				font-size: 0.5rem;
+				box-sizing: border-box;
+				background: transparent;
+			}
+			 input::-webkit-input-placeholder{
+            color: #c9c9c9;opacity:1;
+        }
+			.bmk p {
+				width: 100%;
+				height: 1.03rem;
+				margin-bottom: 0.98rem;
+				margin-top: 0.6rem;
+			}
+			.bmk .series {
+				margin-bottom: 0.745rem;
+			}
+			.bmk .submit {
+				margin-top: 0.1rem;
+			}
+			.bmk #submit {
+				cursor: pointer;
+			}
+			.privacyPolicy input{position:absolute;left:0rem;top:5.8rem;width:0.5rem !important;height:0.5rem !important}
+			.privacyPolicy span{display:inline-block;position:absolute;left:0.6rem;top:5.76rem;font-size:0.4rem;color:#000}
+			.privacyPolicy a{color:#000}
+		</style>
+</head>
+<body>
+	<div class="main">
+		<div class="cn"><img src="img/BMW_01.jpg" alt=""></div>
+		<div class="cn"><img src="img/BMW_02.jpg" alt=""></div>
+		<div class="cn">
+			<img src="img/BMW_03.jpg" alt="">
+			<div class="bmk">
+				<p class="name"><input type="text" id="name" placeholder="请填写您的姓名"></p>
+				<p class="tel"><input type="tel" id="tel" placeholder="请填写您的手机号码" maxlength="11"></p>
+				<p class="series">
+					<select name="" id="series">
+						<option value="0" disabled selected hidden>车型</option>
+						<option value="1265" data-b="117">宝马 X7</option>
+						<option value="24" data-b="1">宝马 X6</option>
+						<option value="21" data-b="155">宝马 X1</option>
+						<option value="1205" data-b="1">宝马 X2</option>
+						<option value="22" data-b="1">宝马 X3</option>
+						<option value="26" data-b="1">宝马 X4</option>
+						<option value="23" data-b="1">宝马 X5</option>
+					</select>
+					</p>
+				<p class="submit"><input type="button" value="" id="submit"></p>
+				<div class="privacyPolicy">
+            <input type="checkbox" >
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+			</div>
+			</div>
+		<div class="cn"><img src="img/BMW_04.jpg" alt=""></div> 
+		<div class="cn"><img src="img/BMW_05.jpg" alt=""></div>
+		<div class="cn"><img src="img/BMW_06.jpg" alt=""></div>
+		<div class="cn"><img src="img/BMW_07.jpg" alt=""></div>
+		<div class="cn"><img src="img/BMW_08.jpg" alt=""></div>
+	</div>
+</body>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script>
+	//报名
+		var flag = true;
+		$("#submit").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //姓名
+					tel = $("#tel").val(), //电话
+					series_id = $('#series').val(),    //车型id
+					brand_id = $('#series option:checked').attr('data-b'), //品牌
+					dealers = '杭州宝信汽车销售服务有限公司', //经销商
+					act_id = 3590,  //活动id
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,
+						phone: tel,
+						brand_id: brand_id,
+						series_id: series_id,
+						act_id: act_id,
+						dealers: dealers,
+						chexing: ""
+					};
+				//判断填写是否正确
+				if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|16[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (series_id == null) {
+					alert('请选择车型');
+					return false;
+				}
+				if (!($("input[type='checkbox']").prop('checked'))) {
+					alert('请同意《隐私政策》');
+					return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type: "post",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					jsonpCallback: "jsonpReturn",
+					success: function (data) {
+						if (data.status == 1) {
+							alert('恭喜你，报名成功！');
+							window.location.href = location.href;
+						} else {
+							flag = true;
+							alert("很抱歉，你报名失败。");
+						}
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		})
+</script>
+</html>

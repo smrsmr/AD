@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=750,user-scalable=no" />
+    <title>Nissan 到店有礼</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #f5f1d1;
+        }
+        .cn2 {
+            position: relative;
+        }
+        .cn2 .bmk {
+            position: absolute;
+            left: 50%;
+            width: 511px;
+            height: 336px;
+            top: 386px;
+            margin-left: -251px;
+        }
+        .cn2 .bmk input,.cn2 .bmk select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: transparent;
+            font-size: 30px;
+        }
+        .cn2 .bmk p {
+            width: 449px;
+            height: 50px;
+        }
+        .cn2 .bmk .name,.cn2 .bmk .tel,.cn2 .bmk .series {
+            margin-left: 6px;
+            margin-top: 10px;
+        }
+        .cn2 .bmk .tel,.cn2 .bmk .series {
+            margin-top: 34px;
+        }
+        .cn2 .bmk .submit {
+            margin-left: 0;
+            margin-top: 36px;
+            width: 496px;
+            height: 64px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/5/137/208/13560140.jpg" alt=""></div>
+    <div class="cn2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/6/137/208/13560141.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="您的姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="您的电话" maxlength="11">
+            </p>
+            <p class="series">
+                <select name="" id="series">
+                    <option value="0">意向车型</option>
+                    <option value="74">LANNIA 蓝鸟</option>
+                    <option value="73">骐达</option>
+                    <option value="72">轩逸</option>
+                    <option value="76">天籁</option>
+                    <option value="75">逍客</option>
+                    <option value="77">奇骏</option>
+                    <option value="79">楼兰</option>
+                    <option value="551">劲客</option>
+                    <option value="78">西玛</option>
+                    <option value="819">途达</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+    </div>
+    <div class="cn3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/7/137/208/13560142.jpg" alt=""></div>
+    <div class="cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/8/137/208/13560143.jpg" alt=""></div>
+    <div class="cn5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/9/137/208/13560144.jpg" alt=""></div>
+    <div class="cn6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/10/137/208/13560145.jpg" alt=""></div>
+    <div class="cn7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/11/137/208/13560146.jpg" alt=""></div>
+    <div class="cn8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/12/137/208/13560147.jpg" alt=""></div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>
+    $(function () {
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    brand_id = 11, //品牌id
+                    series_id = $("#series").val(),    //车型id
+                    act_id = 2317,  //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        brand_id: brand_id,
+                        series_id: series_id,
+                        act_id : act_id,
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if( series_id == '0' ) {
+                    alert('请选择车型');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        });
+    })
+</script>
+</html>

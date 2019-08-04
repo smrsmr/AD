@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="https://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="https://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+
+    <title>想过太多，还是没想到</title>
+    <style>
+
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: " ";
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 750px;
+            background-color: #ffffff;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-container img {
+            display: block;
+            width: 100%;
+        }
+
+        .swiper-container video {
+            display: block;
+            width: 100%;
+        }
+        .swiper-slide {
+overflow: hidden;
+}
+        #openModal {
+            margin: 1rem auto 5rem;
+            width: 10rem;
+            height: 2rem;
+            line-height: 2rem;
+            background-color: #8a1529;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .input-contain {
+            position: absolute;
+            top: 10rem;
+            left: 50%;
+            margin-left: -10rem;
+            width: 20rem;
+            height: 16rem;
+            color: #717171;
+        }
+
+        .input-contain > div {
+            position: relative;
+            width: 100%;
+            height: 16rem;
+        }
+
+        .input-contain > div > p {
+            box-sizing: border-box;
+            position: absolute;
+            padding-left: 0.5rem;
+            width: 12rem;
+            height: 2rem;
+            line-height: 2rem;
+            background: transparent;
+        }
+
+        .input-contain p.name {
+            top: 5.3rem;
+            left: 5rem;
+        }
+
+        .input-contain p.phone {
+            top: 9.1rem;
+            left: 5rem;
+        }
+
+        .input-contain p.series {
+            top: 12.8rem;
+            left: 7rem;
+        }
+
+        .input-contain > div input {
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            color: inherit;
+            background: transparent;
+        }
+
+        .input-contain > div select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 14px;
+            background: transparent;
+            color: inherit;
+        }
+
+        .input-contain select option {
+            width: 100%;
+            height: 100%;
+        }
+
+        .privacyPolicy {
+            position: absolute;
+            top: 15.5rem;
+            left: 50%;
+            margin-left: -5.5rem;
+            width: 10.5rem;
+            color: #ffffff;
+        }
+
+        .privacyPolicy a {
+            color: inherit;
+        }
+
+        .input-contain #submit {
+            position: absolute;
+            top: 17.5rem;
+            left: 50%;
+            margin-left: -10rem;
+            width: 20rem;
+            height: 3rem;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, .8);
+            z-index: 1;
+        }
+
+        .modal img {
+            display: block;
+            margin: 10rem auto 0;
+            width: 80%;
+        }
+
+        #close {
+            position: absolute;
+            top: -2rem;
+            right: 1rem;
+            width: 2rem;
+        }
+
+        #cnzz_stat_icon_1260102516,
+        #cnzz_stat_icon_1260842227,
+        #cnzz_stat_icon_1260919928,
+        #cnzz_stat_icon_1255711023,
+        #cnzz_stat_icon_1260771396,
+        #cnzz_stat_icon_1261301380,
+        #cnzz_stat_icon_1261327484 {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<div class="swiper-container " id="swiper1">
+
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            <div>
+
+                <video id="first" src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/1.mp4" playsinline="" webkit-playsinline=""
+                       type="video/mp4"></video>
+                <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/1.jpg" alt="">
+
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div>
+                <video src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/2.mp4"  playsinline="" webkit-playsinline=""
+                       type="video/mp4"></video>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/3-1.jpg" alt="">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/3-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <video src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/4.mp4" playsinline="" webkit-playsinline=""
+                   type="video/mp4"></video>
+        </div>
+        <div class="swiper-slide">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/5-1.jpg" alt="">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/5-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <video src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/6.mp4"playsinline="" webkit-playsinline=""
+                   type="video/mp4"></video>
+        </div>
+        <div class="swiper-slide">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/7-1.jpg" alt="">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/7-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <video src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/8.mp4" playsinline="" webkit-playsinline=""
+                   type="video/mp4"></video>
+        </div>
+        <div class="swiper-slide">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/9-1.jpg" alt="">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/9-2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+            <video src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/10.mp4" playsinline="" webkit-playsinline=""
+                   type="video/mp4"></video>
+        </div>
+        <div class="swiper-slide">
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/11.jpg" alt="">
+            <div id="openModal">预约试驾</div>
+            <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/11-1.jpg" alt="">
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="modal">
+
+    <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/tip.png" alt="">
+
+    <div class="input-contain clearfix">
+        <div class="clearfix">
+            <p class="name">
+                <input id="name" type="text" placeholder="姓名">
+            </p>
+            <p class="phone">
+                <input id="phone" type="text" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                    <option value="409">凯迪拉克ATS-L</option>
+                    <option value="406">凯迪拉克XTS</option>
+                    <option value="1211">凯迪拉克XT4</option>
+                    <option value="1202">凯迪拉克XT5</option>
+                    <option value="408">凯迪拉克CT6</option>
+                </select>
+            </p>
+        </div>
+        <p class="privacyPolicy">
+            <input type="checkbox">
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </p>
+        <button id="submit"></button>
+    </div>
+
+    <img src="http://mat1.gtimg.com/autoguangzhou/2019web/0312/xx.png" alt="" id="close">
+
+</div>
+
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+
+<script type="text/javascript">
+
+window.onload = function(){
+
+$('video').each(function(index,elem){
+	$(elem)[0].play();
+	$(elem)[0].pause();
+});
+}
+
+    $(document).ready(function () {
+
+        var swiper = new Swiper('#swiper1', {
+                direction: 'vertical',
+                autoplay: false,
+                autoplayDisableOnInteraction: false,
+                loop: false,
+                onSlideChangeEnd: function (swiper) {
+                    
+                    $('.swiper-slide-prev').find('video')[0] && $('.swiper-slide-prev').find('video')[0].pause();
+
+                    $('.swiper-slide-next').find('video')[0] && $('.swiper-slide-next').find('video')[0].pause();
+
+										alert($('.swiper-slide-active').find('video')[0]);
+
+                    $('.swiper-slide-active').find('video')[0] && $('.swiper-slide-active').find('video')[0].play();
+
+                }
+            }),
+            flag = true;
+
+        
+        $("#submit").click(function () {
+
+            if (flag) {
+
+                var name = $('#name').val(),
+                    phone = $('#phone').val(),
+                    series_id = $('#series').val(),
+                    act_id = 3499,//后台新建活动
+                    brandId = 73,
+                    privacyPolicy = '';
+
+
+                var url = 'https://auto.gdtengnan.com/yetcar/baomingGeneral.php';
+
+                var data = {
+                    name: name,
+                    phone: phone,
+                    series_id: series_id,
+                    act_id: act_id,
+                    brand_id: brandId,
+                    province: '广东',
+                    city: '广州',
+                    dealers: "",
+                    chexing: ""
+                };
+
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确中文姓名');
+                    return false
+                }
+
+                if (!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(phone)) || phone.length < 11) {
+                    alert('手机格式不对');
+                    return false
+                }
+
+                if (series_id == 0) {
+                    alert('请选择车型');
+                    return false
+                }
+
+                if (!($("input[type='checkbox']").prop('checked'))) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+
+                flag = false;
+
+                $.ajax({
+                    type: "post",
+                    url: url,
+                    async: true,
+                    data: data,
+                    dataType: "jsonp",
+                    jsonpCallback: "jsonpReturn",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            window.location.reload();
+                        } else {
+                            alert("很抱歉，你报名失败。");
+
+                        }
+                    }
+                });
+
+            }
+            else {
+                alert("请勿重复提交！");
+            }
+        });
+
+        $('#openModal').on('click', function () {
+            $('.modal').show();
+        });
+
+        $('#close').on('click', function () {
+            $('.modal').hide();
+            $('#name').val('');
+            $('#phone').val('');
+            $('#series').val(0);
+        });
+$('video').on('click', function () {
+    var _this = $(this)[0];
+		alert(_this.paused);
+    if (_this.paused) {
+        _this.play();
+    }
+    else {
+        _this.pause();
+    }
+
+});
+
+    });
+</script>
+
+<!--微信分享 开始-->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    //微信分享标题
+    var shareTitle = '想过太多，还是没想到';
+    //微信分享简介
+    var descContent = '科技，突破想象';
+    //朋友圈转发标题
+    var shareTimeLineTitle = '想过太多，还是没想到';
+    //分享小图(120x120)
+    var imgUrl = '';
+    //分享地址(默认为当前地址)
+    var lineLink = window.location.href;
+    var appid = '';
+
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage', {
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function (res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline', {
+            "img_url": imgUrl,
+            "img_width": "120",
+            "img_height": "120",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTimeLineTitle
+        }, function (res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo', {
+            "content": descContent,
+            "url": lineLink,
+        }, function (res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+             document.getElementById('first').play();
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            shareWeibo();
+        });
+    }, false);
+</script>
+
+</body>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("httpss:" == document.location.protocol) ? " httpss://" : " https://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</html>

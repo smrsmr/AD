@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit|ie-comp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="http://mat1.gtimg.com/www/icon/favicon2.ico" type="image/x-icon" rel="shortcut icon">
+    <title>双不限 两钜省-广汽新能源</title>
+    <script src="http://dongguan.auto.qq.com/js/publicJS/webm.rem.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/css-reset.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.css">
+    <link rel="stylesheet" type="text/css" href="http://dongguan.auto.qq.com/js/publicJS/popAlert.m.css">
+    <link rel="stylesheet" type="text/css" href="http://act.yetcar.com/zxq_projectCode/yqmzdGD/css/jquery.mCustomScrollbar.css"/>
+    <style type="text/css">
+        .container { width: 10rem; text-align: center; margin: 0 auto; font-family: "微软雅黑";}
+        .container>img { width: 10rem;}
+        .rel { position: relative;}
+
+        /*******报名*******/
+        .sign { width: 7.8933rem; height: 10.1333rem; position: absolute; top: 1.5733rem; left: 1.0667rem;}
+        .sign p { height: 1.1067rem; margin-bottom: .52rem;}
+        .sign p:nth-of-type(5) { margin-bottom: .29rem;}
+        .sign input, .sign select { width: 7.8933rem; height: 1.1067rem;/* color: #00213d; */text-align: left; vertical-align: top; border: none; background: transparent;  font-size: 0.4533rem; box-sizing: border-box; padding-left: 1.1467rem; outline: none; font-family: "微软雅黑";}
+        .sign select { -webkit-appearance: none; appearance: none; line-height:1.1067rem; }
+        .sign select option { font-size: initial;}
+        .sign p:nth-of-type(4) select { width: 3.6667rem;}
+        .sign p:nth-of-type(4) select:nth-of-type(1) { margin-right: .52rem;}
+        /* #series_id a {display: inline-block; width: 4.0667rem; height: 1.2267rem; padding-left: .2667rem; text-align: left; font-size: 0.4533rem; line-height: 1.2267rem; color: #333; text-decoration: unset; vertical-align: top;background: url(http://img1.gtimg.com/autodongguan/pics/hv1/210/62/210/13671270.jpg) top center no-repeat; background-size: contain;} */
+        /* #series_id a.tap { background: url(http://img1.gtimg.com/autodongguan/pics/hv1/211/62/210/13671271.jpg) top center no-repeat; background-size: contain;} */
+        #dealer { width: 6.0333rem;}
+        .sign .dealer-box { padding-left: 0;}
+        .sign p:nth-of-type(5) {margin-bottom: 1.1067rem;}
+        .sign .agree { position: absolute; left: 0; top: 8rem; height: .48rem; margin-bottom: 0; font-size: .34rem; color: #fff; font-family: "微软雅黑";}
+        #agreeCheck { width: .4267rem; height: .4267rem; margin-right: .1333rem; vertical-align: middle; position: relative; top: -2px;}
+        .agree a { color: inherit;}
+        #submit { width: 7.8933rem; height: 1.1067rem;}
+
+        /*******车图*******/
+        .swiper-car-GS4, .swiper-car-GE3 { width: 10rem; height: 6rem; position: absolute; top: 2.7067rem; left: 0; overflow: hidden;}
+        .swiper-car-GE3 { top: 1.1067rem;}
+        .swiper-container .swiper-slide img { width: 10rem; height: 6rem;}
+        .swiper-pagination-bullet { width: 14px; height: 14px; background: #fff;}
+        .swiper-pagination-bullet-active { background: #ffbf2d;}
+        .swiper-button-next, .swiper-button-prev { width: 54px; height: 88px; top: 46%;}
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next { background-image: url(http://img1.gtimg.com/autodongguan/pics/hv1/114/87/210/13677549.png); background-size: contain;}
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev { background-image: url(http://img1.gtimg.com/autodongguan/pics/hv1/116/87/210/13677551.png); background-size: contain;}
+        /*******经销商*******/
+        #dealerList { width: 9.7333rem; height: 7.2667rem; position: absolute; top: 2.3467rem; left: .1333rem; font-size: .2667rem; color: #fff; }
+        #dealerList li { text-align: left; margin-bottom: 0.4rem;}
+        #dealerList li p { display: inline-block; vertical-align: top;}
+        #dealerList .name { width: 3.0667rem; margin-right: .3333rem; }
+        #dealerList .address { width: 3.8rem; margin-right: .3333rem;}
+        #dealerList .tel { width: 1.7333rem;}
+        .banner img{height: auto!important;}
+
+        /*.dealers { width: 8.8rem; height: 13.3333rem; margin-left: .5333rem; position: absolute; top: 1.6333rem; font-family: "微软雅黑";}
+        .dealer-top { width: 8.8rem; height: 0.9233rem; margin-bottom: 0.1833rem; padding-left: .2667rem; text-align: left; font-size: .2667rem;}
+        .dealer-top .swrap { display: inline-block; width: 1.6rem; height: 0.88rem;}
+        .dealer-top select { width: 1.6rem; height: 0.88rem; outline: none; background: transparent; text-align: center; border: none; color: #fff; line-height: 0.88rem; vertical-align: top; font-size: 0.4533rem; font-weight: bold; -webkit-appearance: none; appearance: none;}
+      .dealer-top select option { color: #333;}
+          .dealer-wrap { height: 12rem;}
+          .delaer-ul {  height: 12rem;}
+        .dealers li { margin-bottom: 0.2rem; padding-bottom: 0.133rem; border-bottom: 0.0133rem solid #575a61;}
+        .dealers p { text-align: left; color: #fff; padding-left: 0.2666rem;}
+        .dealers p.dealer-title { font-size: 0.4rem; line-height: 0.6666rem; font-weight: bold;}
+        .dealers p.dealer-address { font-size: 0.32rem; line-height: 0.5333rem;}
+        .dealers p.dealer-tel { font-size: 0.32rem; line-height: 0.5333rem;}*/
+
+        .mCSB_scrollTools { width: 0.18rem !important; background: #fff;}
+        .mCSB_dragger { background: #0a0f15;}
+        .mCSB_draggerRail,.mCSB_dragger_bar { background: transparent !important;}
+        .container img {
+            margin-top: -1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="swiper-container banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/130/94/210/13679350.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/131/94/210/13679351.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/215/94/210/13679435.jpg" alt="" />
+            </div>
+
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<div class="container">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/57/87/210/13677492.jpg" alt="" />
+</div>
+<div class="container sign-wrap rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/135/98/210/13680375.jpg" alt="" />
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/59/87/210/13677494.jpg"/>
+    <div class="sign">
+        <p><input type="text" name="name" id="name" value="" placeholder="输入姓名" /></p>
+        <p><input type="tel" name="phone" id="phone" value="" placeholder="输入电话" maxlength="11" /></p>
+        <!-- <p><select name="series_id" id="series_id">
+          <option value="151">奥迪A8L</option>
+        </select></p> -->
+        <p><select name="series_id" id="series_id">
+            <option value="0">-车型-</option>
+            <option value="566">传祺GS4 PHEV</option>
+            <option value="582 ">传祺GE3</option>
+        </select></p>
+        <p><select name="prov" id="prov">
+            <option value="0">-省份-</option>
+        </select><select name="city" id="city">
+            <option value="0">-城市-</option>
+        </select></p>
+        <p><select name="dealers" id="dealers">
+            <option value="0">-选择经销商-</option>
+        </select></p>
+        <p class="agree"><input type="checkbox" checked="" id="agreeCheck" name="checkbox" class="radio">我同意<a href="http://www.qq.com/privacy.htm" target="_blank">《隐私政策》</a></p>
+        <p><input type="button" id="submit" value="" /></p>
+    </div>
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/69/87/210/13677504.jpg" alt="" />
+    <div class="swiper-container swiper-car-GS4">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/76/87/210/13677511.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/77/87/210/13677512.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/78/87/210/13677513.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/79/87/210/13677514.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/80/87/210/13677515.jpg"/>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/70/87/210/13677505.jpg" alt="" />
+    <div class="swiper-container swiper-car-GE3">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/95/87/210/13677530.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/181/87/210/13677616.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/97/87/210/13677532.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/98/87/210/13677533.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/99/87/210/13677534.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/100/87/210/13677535.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/101/87/210/13677536.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/102/87/210/13677537.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/103/87/210/13677538.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/104/87/210/13677539.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/106/87/210/13677541.jpg"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/105/87/210/13677540.jpg"/>
+            </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+<div class="container rel">
+    <img src="http://img1.gtimg.com/autodongguan/pics/hv1/62/87/210/13677497.jpg" alt="" />
+    <div id="dealerList">
+        <ul id="dealersList">
+        </ul>
+    </div>
+
+</div>
+
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/popAlert.create.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/swiper3.4.2.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://act.yetcar.com/zxq_projectCode/yqmzdGD/js/jquery.mCustomScrollbar.concat.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-car-GS4', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+    var swiper = new Swiper('.swiper-car-GE3', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 1,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+    var swiper = new Swiper('.banner', {
+        pagination: '.swiper-pagination',
+        loop:true,
+        slidesPerView: 1,
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+    var pop=new Popup('rgba(33,127,191,1)',1,'广汽传祺');
+
+    var data = [
+        {"prov":"广东","city":"深圳","area":"龙华区","name":"广汽新能源深圳威博体验中心","address":"深圳市龙华新区龙华镇清龙1号（龙华汽车站斜对面）","tel":"0755-28055666"},
+        {"prov":"广东","city":"深圳","area":"福田区","name":"广汽新能源深圳城投体验中心","address":"深圳市福田梅林东路5号广仁大楼首层","tel":"0755-33228829"},
+        {"prov":"广东","city":"深圳","area":"宝安区","name":"广汽新能源深圳威博宝安展示中心","address":"深圳市宝安区西乡西成工业区万菱new寓101-102商铺","tel":"0755-36887228"},
+        {"prov":"广东","city":"深圳","area":"宝安区","name":"广汽新能源深圳威博沙井展示中心","address":"宝安区新桥社区新桥街道广深路辅路旁沙井段242号101（新桥汽配城3期）","tel":"0755-85292026"},
+        {"prov":"广东","city":"深圳","area":"龙岗区","name":"广汽新能源深圳新邦体验中心","address":"深圳市坪山同富裕工业区6栋","tel":"0755-28957666 "},
+        {"prov":"广东","city":"深圳","area":"宝安区","name":"广汽新能源深圳恒誉体验中心","address":"深圳市宝安区大宝路10号","tel":"0755-27889919"},
+        {"prov":"广东","city":"深圳","area":"光明新区","name":"广汽新能源深圳奕嘉体验中心","address":"深圳市光明新区公明办事处薯田埔社区松白路705号松明工业区内","tel":"0755-29756688 / 27120599"},
+        {"prov":"广东","city":"深圳","area":"龙岗区","name":"广汽新能源深圳松兴店","address":"深圳市龙岗区横岗信义汽车城16C","tel":"0755-28625882"},
+        {"prov":"广东","city":"深圳","area":"罗湖区","name":"广汽新能源宝安松兴店","address":"深圳市宝安区西乡固戍一路107国道 东方建富润东晟工业园12栋一楼","tel":"0755-28156668"},
+        {"prov":"广东","city":"深圳","area":"福田区","name":"广汽新能源深圳汇天源","address":"深圳市福田区红荔西路联合华鹏汽车城B2-2C ","tel":"0755-23987632"},
+        {"prov":"广东","city":"深圳","area":"罗湖区","name":"广汽新能源深圳深港店","address":"深圳市罗湖区延芳路东益汽车交易广场一期B1号","tel":"0755-33337777"},
+    ];
+    var loadData = function (arr) {
+        var $prov = $("#prov");
+        var $city = $("#city");
+        var $dealers = $("#dealers");
+        var $dealerList = $("#dealersList");
+        var p = "<option value=\"0\">-选择省份-</option>";
+        var c = "<option value=\"0\">-选择城市-</option>";
+        var d = "<option value=\"0\">-选择经销商-</option>";
+        var dealersList = "";
+        $.each(arr, function (index, item) {
+            dealersList += "<li>"+
+                "<p class=\"name\">"+item.name+"</p><p class=\"address\">"+item.address+"</p><p class=\"tel\">"+item.tel+"</p>"+
+                "</li>"
+            if(p.indexOf(item.prov)<0){
+                p += "<option value=\""+item.prov+"\">"+item.prov+"</option>";
+            }
+        })
+        $prov.html(p);
+        $dealerList.html(dealersList);
+        $("#dealerList").mCustomScrollbar({
+            theme:"inset-3",
+            autoDraggerLength:true,
+            scrollInertia:600,
+            scrollButtons:{
+                enable:true,
+            }
+        });
+        $prov.change(function () {
+            var prov = $(this).val();
+            c = "<option value=\"0\">-选择城市-</option>";
+
+            $.each(arr, function (index, item) {
+                if(item.prov==prov){
+                    if(c.indexOf(item.city)<0){
+                        c += "<option value=\""+item.city+"\">"+item.city+"</option>";
+                    }
+                }
+            })
+            $city.html(c);
+        })
+        $city.change(function () {
+            var city = $(this).val();
+            d = "<option value=\"0\">-选择经销商-</option>";
+            $.each(arr, function (index, item) {
+                if(item.city==city){
+                    d += "<option value=\""+item.name+"\">"+item.name+"</option>";
+                }
+            })
+            $dealers.html(d);
+        })
+    }
+    loadData(data);
+
+
+    //    报名
+    $(function(){
+        var flag = true;
+        // var chexing = "威驰三厢";
+        // $("#series_id a").click(function () {
+        //   $("#series_id a").removeClass("tap").siblings().eq($(this).index()).addClass("tap")
+        //   series_id = $(this).text();
+        // })
+        $("#submit").click(function() {
+            if(flag) {
+                var series_id = $("#series_id").val();  //车型id
+                var name=$("#name").val(),  //姓名
+                    tel=$("#phone").val(),        //电话
+                    brand_id = 22, //品牌
+                    act_id = 3222,
+                    prov = $("#prov").val(),
+                    city = $("#city").val(),
+                    dealers = $('#dealers').val(),
+                    agree = $("#agreeCheck").is(':checked'),
+
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        act_id:act_id,
+                        act_province: prov,
+                        act_city: city,
+                        city: city,
+                        dealers:dealers,
+                        // car_name: chexing
+                    }
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    pop.showNotice('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    pop.showNotice('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    pop.showNotice('手机格式不正确');
+                    return false;
+                }
+                if(prov==0){
+                    pop.showNotice('请选择省份');
+                    return false;
+                }
+                if(city==0){
+                    pop.showNotice('请选择城市');
+                    return false;
+                }
+                // if(chexing==0){
+                //   pop.showNotice('请选择车型');
+                //   return false;
+                // }
+                if(dealers==0){
+                    pop.showNotice('请选择经销商');
+                    return false;
+                }
+                if(!agree){
+                    pop.showNotice('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"get",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            pop.showNotice('恭喜你，报名成功！', function () {
+                                window.location.reload();
+                            });
+                        }else{
+                            pop.showNotice("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                pop.showNotice("请勿重复提交！")
+            }
+
+        })
+
+    })
+
+
+    var imgUrl = "http://img1.gtimg.com/autodongguan/pics/hv1/56/87/210/13677491.jpg";
+    var lineLink = window.location.href;
+    var descContent = "享3万豪礼，最高立省12万";
+    var shareTitle = '双不限 两钜省-广汽新能源';
+    var appid = '';
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid": appid,
+            "img_url": imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url": imgUrl,
+            "img_width": "640",
+            "img_height": "640",
+            "link": lineLink,
+            "desc": descContent,
+            "title": shareTitle
+        }, function(res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+            "content": descContent,
+            "url": lineLink,
+        }, function(res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+        });
+    }, false);
+
+
+</script>
+</body>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' style='display:none;' id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

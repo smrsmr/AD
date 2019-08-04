@@ -1,0 +1,236 @@
+<!--2018年-11月-14号 -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta content="telephone=no" name="format-detection">
+        <meta name="applicable-device" content="mobile">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no,email=no">
+        <title>智“惠”感享季 灵智驱动 奇骏闪耀</title>
+        <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+        <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+        <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+        <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+        <style>
+            .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {position: relative;}
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 8rem;
+            width: 24rem;
+            height: 23rem;
+            margin-left: -11.7rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
+            background: transparent;
+            padding-left: 1rem;
+        }
+        .bmk p {
+            width: 23rem;
+            height: 3.3rem;
+            margin-top: 0;
+            margin-left: 0;
+        }
+        .bmk .tel {
+            margin-top: 0.85rem;
+        }
+        .bmk .series {
+            margin-top: 0.85rem;
+            width: 23.4rem;
+        }
+        .bmk .dealers {
+            margin-top: 0.8rem;
+            width: 23.4rem;
+        }
+        .bmk .submit {
+            width: 23.4rem;
+            margin-top: 3.15rem;
+            margin-left: 0;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 0;
+            top: 16.7rem;
+            width: 100%;
+        }
+        .privacyPolicy input{width:18px !important;height:18px !important}
+        .privacyPolicy span{display:inline-block;font-size:16px;color:#000;position: relative;top: -4px;}
+        .privacyPolicy a{color:#000}
+    </style>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/165/247/210/13718400.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/166/247/210/13718401.jpg" alt="">
+                <div class="bmk">
+                    <p class="name">
+                        <input type="text" id="name" placeholder="姓名">
+                    </p>
+                    <p class="tel">
+                        <input type="tel" id="tel" placeholder="手机" maxlength="11">
+                    </p>
+                    <p class="series">
+                        <select id="series">
+                            <option value="0">意向车型</option>
+                        </select>
+                    </p>
+                    <p class="dealers">
+                        <select id="dealers">
+                            <option value="0">经销商</option>
+                        </select>
+                    </p>
+                    <p class="submit">
+                        <input type="button" id="submit" style="cursor:pointer;">
+                    </p>
+                    <div class="privacyPolicy">
+                        <input type="checkbox" checked>
+                        <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/247/210/13718402.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/168/247/210/13718403.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/247/210/13718404.jpg" alt=""></div>
+            <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/247/210/13718406.jpg" alt=""></div>
+        </div>
+    </body>
+    <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+    <script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+    <script>
+        var des = [
+            { "name": "合肥伟业", "nameCode": "E2101", "city": "合肥市", "cityCode": "213", "prov": "安徽省", "provCode": "18", "Ftel": "0551-63522888", "Xtel": "0551-63522222，0551-63525555", "address": "合肥市长江西路名车广场1068号(奥迪正后方)。合肥市合作化南路1号（老建工学院斜对面）" },
+            { "name": "合肥伟盛行", "nameCode": "E2105", "city": "合肥市", "cityCode": "213", "prov": "安徽省", "provCode": "18", "Ftel": "0551-3875599", "Xtel": "0551-63875111", "address": "安徽省合肥市包河区纬二路12号" },
+            { "name": "合肥恒信东顺合肥北", "nameCode": "E2107", "city": "合肥市", "cityCode": "213", "prov": "安徽省", "provCode": "18", "Ftel": "", "Xtel": "0551-62631777", "address": "合肥市庐阳区蒙城北路与电厂路交口南150米路西" },
+            { "name": "合肥风之星", "nameCode": "E2111", "city": "合肥市", "cityCode": "213", "prov": "安徽省", "provCode": "18", "Ftel": "0551-64253080", "Xtel": "0551-64257000", "address": "合肥市瑶海区安徽国际汽车城6号 东风日产合肥风之星专营店（北二环与东二环交口西南）" },
+        ];
+        var ser = [
+            { "SERIES_ID": "17", "SERIES_NAME": "玛驰", "SERIES_NAME_EN": "march" },
+            { "SERIES_ID": "190", "SERIES_NAME": "天籁公爵", "SERIES_NAME_EN": "teana-vip" },
+            { "SERIES_ID": "194", "SERIES_NAME": "蓝鸟", "SERIES_NAME_EN": "蓝鸟" },
+            { "SERIES_ID": "197", "SERIES_NAME": "新楼兰", "SERIES_NAME_EN": "new-murano" },
+            { "SERIES_ID": "199", "SERIES_NAME": "全新逍客", "SERIES_NAME_EN": "全新逍客" },
+            { "SERIES_ID": "20", "SERIES_NAME": "骊威", "SERIES_NAME_EN": "livina" },
+            { "SERIES_ID": "200", "SERIES_NAME": "西玛", "SERIES_NAME_EN": "Maxima" },
+            { "SERIES_ID": "203", "SERIES_NAME": "全新天籁", },
+            { "SERIES_ID": "204", "SERIES_NAME": "全新天籁公爵", },
+            { "SERIES_ID": "205", "SERIES_NAME": "新奇骏", "SERIES_NAME_EN": "P32R" },
+            { "SERIES_ID": "208", "SERIES_NAME": "劲客", "SERIES_NAME_EN": "P02F" },
+            { "SERIES_ID": "210", "SERIES_NAME": "全新途达", "SERIES_NAME_EN": "TERRA" },
+            { "SERIES_ID": "29", "SERIES_NAME": "新骐达", "SERIES_NAME_EN": "tiida3" },
+            { "SERIES_ID": "31", "SERIES_NAME": "楼兰", "SERIES_NAME_EN": "murano" },
+            { "SERIES_ID": "34", "SERIES_NAME": "全新轩逸", "SERIES_NAME_EN": "sylphy2" },
+            { "SERIES_ID": "211", "SERIES_NAME": "轩逸·纯电", "SERIES_NAME_EN": "轩逸·纯电" },
+        ]
+    </script>
+    <script>
+        //渲染数据
+        for (var i = 0; i < des.length; i++) {
+            $('#dealers').append('<option value="' + des[i].nameCode + '">' + des[i].name + '</option>')
+        }
+        for (var j = 0; j < ser.length; j++) {
+            $('#series').append('<option value="' + ser[j].SERIES_ID + '">' + ser[j].SERIES_NAME + '</option>')
+        }
+        //报名
+        var flag = true;
+        $("#submit").click(function () {
+            if (flag) {
+                var name = $("#name").val(),  //姓名
+                    tel = $("#tel").val(),        //电话
+                    city_id = 213,  //城市id
+                    city = '合肥市',    //城市名字
+                    province = 18,  //省份
+                    detail_id = 264,  //detail_id
+                    brand_id = 11, //品牌
+                    series_id = $('#series').val(),  //车型id
+                    car_name = $('#series option:checked').text(),  //车型名字
+                    dealers_code = $('#dealers').val(),   //经销商id
+                    dealers = $('#dealers option:checked').text(),   //经销商名字
+                    Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+
+                        city_id: city_id,
+                        city: city,
+                        dealers: dealers,
+                        province: province,
+                        car_name: car_name,
+                        dealers_code: dealers_code,
+
+                        detail_id: detail_id,
+                        // type: 0,
+                        // smartcode: 'A0000-000-000-00-00000'
+                        type: 1,
+                        smartcode: 'A2018-1676-6302-3041-146781'
+                    };
+                //判断填写是否正确
+                if (name == '' || tel == '') {
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == '0') {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (dealers_code == '0') {
+                    alert('请选择经销商');
+                    return false;
+                }
+                if (!($("input[type='checkbox']").prop('checked'))) {
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function (data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        } else {
+                            alert("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        });
+    </script>
+
+</html>

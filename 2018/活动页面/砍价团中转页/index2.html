@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">-->
+    <meta name="viewport" content="width=750,user-scalable=no" />
+    <!--<meta name="applicable-device" content="mobile">-->
+    <!--<meta name="apple-mobile-web-app-capable" content="yes">-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+    <!--<meta name="format-detection" content="telephone=no,email=no">-->
+    <title>Q友砍价团 新车全城低价热卖</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA"></script>
+    <style>
+        body {background-color: #f3f6f6}
+        .main {max-width: 750px;margin: 0 auto;overflow: hidden;height: auto;position: relative;}
+        .bmk {
+            width: 100%;
+            height: 280px;
+            background: white;
+            position: relative;
+        }
+        .bmk .bmkD1 {
+            position: absolute;
+            width: 88%;
+            height: 67px;
+            left: 50%;
+            top: 25px;
+            margin-left: -44%;
+            border-bottom: 1px solid #ccc;
+            font-size: 39px;
+            font-weight: 600;
+            text-align: left;
+        }
+        .bmk .bmkD2 {
+            position: absolute;
+            left: 50%;
+            width: 88%;
+            top: 124px;
+            margin-left: -44%;
+        }
+        .bmk .bmkD2 a {
+            display: inline-block;
+            font-size: 28px;
+            border: 1px solid red;
+            border-radius: 6px;
+            width: 150px;
+            height: 48px;
+            line-height: 49px;
+            text-align: center;
+            margin-bottom: 27px;
+            margin-right: 11px;
+            color: #fe0058;
+            letter-spacing: 5px;
+        }
+        .bmk .bmkD2 a.active{color:white;background: #fe0058;text-decoration:none;}
+        .che {
+            width: 100%;
+            margin: 0.5rem auto;
+            height: auto;
+            background: white;
+            position: relative;
+        }
+        .che .cheP1,.serve .serveP1,.touch .touchP1 {
+            width: 88%;
+            position: absolute;
+            left: 50%;
+            margin-left: -44%;
+            top: 20px;
+            border-bottom: 1px solid #ccc;
+            height: 61px;
+            line-height: 47px;
+            font-size: 44px;
+            font-weight: 600;
+        }
+        .che .cheP1 span,.serve .serveP1 span,.touch .touchP1 span {
+            display: inline-block;
+            height: 40px;
+            /* line-height: 2rem; */
+            margin-bottom: -6px;
+            width: 10px;
+            border-radius: 0.6rem;
+            background: #fe0058;
+            margin-right: 10px;
+        }
+        .che .topC {
+            width: 88%;
+            height: 107px;
+            margin: 22px auto;
+            border: 1px solid transparent;
+        }
+        .che .cheP2 {
+            width: 88%;
+            height: 305px;
+            margin: 22px auto;
+            /*border: 1px solid red;*/
+            /*overflow: hidden;*/
+        }
+        .che .cheP2 .left,.che .cheP2 .right {
+            float: left;
+            width: 49%;
+            height: 305px;
+            /*border: 1px solid yellow;*/
+            border-radius: 6px;
+            font-size: 34px;
+        }
+        .che .cheP2 .left img {
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+        }
+        .che .cheP2 .right {
+            float: right;
+        }
+        .che .cheP2 .right p:first-child {
+            width: 100%;
+            height: 51px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            font-size: 34px;
+        }
+        .che .cheP2 .right p {
+            margin: 1px 0;
+        }
+        .che .cheP2 .right p span {
+            color: #fe0058;
+        }
+        .che .cheP2 .right .submit {
+            background: #fe0058;
+            color: white;
+            height: 68px;
+            text-align: center;
+            line-height: 68px;
+            /*margin-top: 20px;*/
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .che .botC {
+            width: 88%;
+            height: 0.5rem;
+            margin: 1rem auto;
+            border: 1px solid transparent;
+        }
+        .serve,.touch {
+            width: 100%;
+            height: 179px;
+            margin: 15px auto;
+            background: white;
+            position: relative;
+        }
+        .touch {
+            height: 186px;
+        }
+        .serve .serveP2,.touch .touchP2 {
+            position: absolute;
+            width: 88%;
+            left: 50%;
+            top: 106px;
+            margin-left: -44%;
+        }
+        .touch .touchP2 .lt,.touch .touchP2 .rg {
+            float: left;
+            width: 49%;
+            height: 35px;
+            line-height: 35px;
+            font-size: 30px;
+        }
+        .touch .touchP2 .lt {
+            width: 44%;
+        }
+        .touch .touchP2 .rg {
+            width: 56%;
+        }
+        .touch .touchP2 .lt a {
+            color: #fe0058;
+            margin-left: 27px;
+            display: inline-block;
+        }
+        .touch .touchP2 .rg {
+            text-align: right;
+        }
+        .touch .touchP2 .rg {
+            float: right;
+        }
+        a:visited{text-decoration:none;}
+        a:hover{text-decoration:none;}
+        .show {position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.6);display: none;z-index: 998;}
+        .show.active {display: block;z-index: 998;}
+        .box {width: 0;height: 410px;position: absolute;right: 0;background: #112e42;transition: width 0.3s;z-index: 999;}
+        .box.active {width: 100%;top: 140px; z-index: 999;max-width: 750px;}
+        .box .signUp {width: 515px;height: 410px;margin: 0 auto;}
+        .box .signUp input {width: 98%;height: 100%;font-size: 40px;padding-left: 10px;border-radius: 6px;background: #e0ebec}
+        .box .signUp .inp-wrap {
+            width: 100%;
+            height: 90px;
+            margin-left: 0;
+            margin-top: 32px;
+            border-radius: 6px;
+        }
+        .box .signUp .inp-wrap #submit {
+            background: #fe0058;
+            color: white;
+            font-size: 44px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 6px;
+        }
+        @media only screen and (max-width: 320px), only screen and (max-device-width:320px) {
+            .che .cheP2 .left, .che .cheP2 .right {
+                font-size: 29px;
+            }
+        }
+        @media only screen and (max-width: 375px), only screen and (max-device-width:375px) {
+            .che .cheP2 .left, .che .cheP2 .right {
+                font-size: 31px;
+            }
+        }
+    </style>
+    <script>
+        var geolocation = new BMap.Geolocation();
+        geolocation.getCurrentPosition(function(r){
+            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+                if(r.accuracy==null){
+                    // alert('accuracy null:'+r.accuracy);
+                    //用户决绝地理位置授权
+                    return;
+                }
+                //用户允许地理位置授权
+                var province = r.address.province;
+                var city = r.address.city;
+                // alert(province+city);
+                if (r.address.province == '广东省') {
+                    switch (city){
+                        case '广州市':
+                            location.href = 'http://guangzhou.auto.qq.com/zhuanti/2018zt/GZ4.16.htm';
+                            break;
+                        case '深圳市':
+                            location.href = 'http://shenzhen.auto.qq.com/zt2018/0416gcb/index.htm';
+                            break;
+                        case '东莞市':
+                            location.href = 'http://dongguan.auto.qq.com/zhuanti/APP20180416-1.htm';
+                            break;
+                        case '珠海市':
+                            location.href = 'http://zhuhai.auto.qq.com/zt2018/four/zh0416.htm';
+                            break;
+                        case '佛山市':
+                            location.href = 'http://foshan.auto.qq.com/zt2018/foshan4yue/0416.htm';
+                            break;
+                        case '中山市':
+                            location.href = 'http://zhongshan.auto.qq.com/zt2018/zs0416/index.htm';
+                            break;
+                        default:
+                            location.href = 'http://guangzhou.auto.qq.com/zt2018/gd04/gd0416.htm';
+                    }
+                } else {
+                }
+            }
+            else {
+                alert('failed'+this.getStatus());
+                return false;
+            }
+        },{enableHighAccuracy: true})
+    </script>
+</head>
+<body>
+<div class="main">
+    <!--头图-->
+    <div class="banner"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/159/23/208/13531224.jpg" alt=""></div>
+    <!--城市跳转按钮-->
+    <div class="bmk">
+        <div class="bmkD1">请选择活动城市</div>
+        <div class="bmkD2">
+            <a href="http://guangzhou.auto.qq.com/zt2018/gd04/gd0416.htm">广东</a>
+            <a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/GZ4.16.htm">广州</a>
+            <a href="http://shenzhen.auto.qq.com/zt2018/0416gcb/index.htm">深圳</a>
+            <a href="http://dongguan.auto.qq.com/zhuanti/APP20180416-1.htm" style="margin-right: 0">东莞</a>
+            <a href="http://zhuhai.auto.qq.com/zt2018/four/zh0416.htm">珠海</a>
+            <a href="http://foshan.auto.qq.com/zt2018/foshan4yue/0416.htm">佛山</a>
+            <a href="http://zhongshan.auto.qq.com/zt2018/zs0416/index.htm">中山</a>
+        </div>
+    </div>
+    <!--车型-->
+    <div class="che">
+        <div class="cheP1">
+            <span></span>最新优惠
+        </div>
+        <div class="topC"></div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/232/30/208/13533082.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="18" data-series="154">全新凯美瑞</p>
+                <p>首付低至<span>5万元</span></p>
+                <p>尊享<span>36期</span>低息贷款</p>
+                <p><span>VIP</span>快速提车通道</p>
+                <p>置换享<span>高额现金</span>补贴</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/235/30/208/13533085.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="11" data-series="77">日产奇骏</p>
+                <p>店内直降<span>2.6万</span></p>
+                <p>享至高<span>3年0利率</span></p>
+                <p>置换享<span>万元</span>补贴</p>
+                <p>购车即享豪华礼包</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+        <div class="cheP2">
+            <div class="left">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/238/30/208/13533088.jpg" alt="">
+            </div>
+            <div class="right">
+                <p data-brand="38" data-series="226">别克英朗</p>
+                <p>限时优惠<span>3.3万</span></p>
+                <p>享24期<span>0</span>利息</p>
+                <p>送<span>4年</span>无忧保养</p>
+                <p>购车即送精品大礼</p>
+                <p class="submit">抢购报名</p>
+            </div>
+        </div>
+        <div class="botC"></div>
+    </div>
+    <!--服务保障-->
+    <div class="serve">
+        <div class="serveP1">
+            <span></span>服务保障
+        </div>
+        <div class="serveP2">
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/2/201/13070590.png" alt="">
+        </div>
+    </div>
+    <!--联系我们-->
+    <div class="touch">
+        <div class="touchP1">
+            <span></span>联系我们
+        </div>
+        <div class="touchP2">
+            <div class="lt"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/24/208/13531574.png" alt=""><a href="tel:4008105016,,10196" style="text-decoration:underline">4008105016</a></div>
+            <div class="rg">周一到周五( 9:00-18:00 )</div>
+        </div>
+    </div>
+    <!--背景阴影-->
+    <div class="show"></div>
+    <!--弹出报名框-->
+    <div class="box">
+        <div class="signUp">
+            <div class="inp-wrap">
+                <input type="text" id="name" placeholder="--请输入姓名--">
+            </div>
+            <div class="inp-wrap">
+                <input type="tel" id="tel" placeholder="--请输入电话--" maxlength="11">
+            </div>
+            <div class="inp-wrap">
+                <p id="submit">免费报名</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<!--<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>-->
+<script>
+    var inps = $('input');
+    inps.focus(function() {
+        var This = $(this);
+        setTimeout(function(){
+            This.scrollIntoViewIfNeeded(true);
+        },0)
+    });
+</script>
+<script>
+    $(function () {
+        var brand=0,series=0;
+        $('.bmk .bmkD2 a').click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        });
+        $('.submit').click(function () {
+            var nH = $(document).scrollTop();
+            var bH = $('.banner').height();
+            var pH = (nH-bH)<0?'140':parseInt(nH-bH+451);
+            brand = $(this).siblings().attr('data-brand');
+            series = $(this).siblings().attr('data-series');
+            $('.show').addClass('active');
+            $('.box').addClass('active');
+            $('.box').css('top',pH);
+            console.log(brand,series);
+            console.log(pH)
+        });
+        $(".show").click(function () {
+            $(this).removeClass('active');
+            $('.box').removeClass('active');
+        });
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    brand_id = brand, //品牌id
+                    series_id = series,    //车型id
+                    act_id =1945,  //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        act_id : act_id,
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+
+                // flag = false;
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            $('.show').removeClass('active');
+                            $('.box').removeClass('active');
+                            // window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                            // flag = true;
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    })
+</script>
+</body>
+</html>

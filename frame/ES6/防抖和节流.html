@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="input">
+	<script>
+	//防抖 高频函数在n秒内执行一次 如果高频函数再次触发 则重新计算时间
+		function debounce(fn) {
+			let timer = null;  //标记一个变量来存储定时器的返回值
+			return function () {
+				clearTimeout(timer); //每次触发之前 先清除定时器
+				timer = setTimeout(() => {
+					fn.apply(this, arguments);
+				},500);
+			};
+		}
+		function sayHi() {                    
+			console.log('防抖成功');
+		}
+
+		const inp = document.getElementById('input');
+		inp.addEventListener('input',debounce(sayHi));
+
+		//节流 高频函数在n秒内只执行一次 有助于稀释函数执行频率
+		function throttle(fn){
+			let isFlage = true; //设置初始化条件
+			return function () {
+				if(!isFlage) return;
+				isFlage = false;  //如果不触发定时器 则直接return
+				setTimeout(()=>{
+					fn.apply(this,arguments);
+					isFlage = true;   //更改判断值 表示可以执行下一次判断
+				},500)
+			}
+		}
+		function say(e) {
+     console.log(e.target.innerWidth, e.target.innerHeight);
+		 console.log('节流成功');
+   }
+   	window.addEventListener('resize', throttle(say));
+
+
+		window.addEventListener('click',e=>{
+			if(e.target.closest('input')){
+				let val = document.querySelector('input').value;
+				console.log(val);
+			}
+		})
+	</script>
+</body>
+</html>

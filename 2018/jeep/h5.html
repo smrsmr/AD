@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=640,user-scalable=no" />
+    <title>卫冕球王 只要Jeep</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/jquery.mCustomScrollbar.css" rel="stylesheet">
+    <style>
+        #cnzz_stat_icon_1260102516, #cnzz_stat_icon_1260842227, #cnzz_stat_icon_1260919928, #cnzz_stat_icon_1255711023, #cnzz_stat_icon_1260771396, #cnzz_stat_icon_1261301380, #cnzz_stat_icon_1261327484 {  display: none;  }
+        img {
+            border: none;
+            vertical-align: middle;
+            max-width: 100%;
+            display: block;
+            margin-top: -1px;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 640px;
+        }
+        .con3 {
+            position: relative;
+        }
+        .form input,.form select {
+            width: 346px;
+            height: 49px;
+            font-size: 30px;
+            background: transparent;
+            color: white;
+        }
+        .form select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .form select option {
+            color: #000;
+        }
+        #name,#tel,#city,#series_id,#dealers {
+            position: absolute;
+            left: 196px;
+            top: 99px;
+        }
+        #tel {
+            top: 166px;
+        }
+        #city {
+            top: 233px;
+        }
+        #series_id {
+            top: 302px;
+        }
+        #dealers {
+            top: 370px;
+        }
+        #submit {
+            position: absolute;
+            left: 112px;
+            top: 443px;
+            border: none;
+            outline: none;
+            width: 432px;
+            height: 55px;
+            background: transparent;
+        }
+        .con8 {
+            position: relative;
+        }
+        .list,.dorCity {
+            position: absolute;
+            left: 49px;
+            top: 167px;
+            width: 545px;
+            height: 492px;
+            overflow: auto;
+        }
+        .dorCity {
+            top: 100px;
+            height: 60px;
+        }
+        .dorCity span {
+            display: inline-block;
+            width: 120px;
+            height: 57px;
+            margin-right: 83px;
+            color: white;
+            font-size: 33px;
+            line-height: 57px;
+            text-align: center;
+        }
+        .dorCity span.active {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/46/101/207/13485976.png") no-repeat;
+            width: 120px;
+            height: 57px;
+            line-height: 48px;
+        }
+        .list p {
+            color:#cacaca;
+            text-align: center;
+            font-size: 25px;
+            line-height: 40px;
+        }
+        .list .p1 {
+            font-size: 30px;
+            color: #a3843d;
+            font-weight: bold;
+        }
+        .list .p3 {
+            margin-bottom: 30px;
+        }
+        .wx {
+            position: fixed;
+            right: 0px;
+            top: 25%;
+            width: 200px;
+            height: auto;
+            z-index: 999;
+        }
+        .wx p {
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        table {  margin: 0 auto;  }
+        table tr {  height: 106px;  }
+        table td {
+            font-size: 25px;
+            color: #a3843d;
+            font-weight: bold;}
+    </style>
+</head>
+<body>
+<div class="con1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/245/16/207/13464500.jpg"></div>
+<div class="con2"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/246/16/207/13464501.jpg"></div>
+<div class="con3">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/16/207/13464502.jpg">
+    <div class="form">
+        <input type="text" name="" id="name">
+        <input type="tel" name="" id="tel" maxlength="11">
+        <select id="city">
+            <option value="0">-请选择-</option>
+            <option value="成都">成都</option>
+            <option value="德阳">德阳</option>
+            <option value="广元">广元</option>
+            <option value="乐山">乐山</option>
+            <option value="泸州">泸州</option>
+            <option value="眉山">眉山</option>
+            <option value="绵阳">绵阳</option>
+            <option value="南充">南充</option>
+            <option value="拉萨">拉萨</option>
+            <option value="宜宾">宜宾</option>
+            <option value="重庆">重庆</option>
+            <option value="自贡">自贡</option>
+        </select>
+        <select id="series_id">
+            <option value="0">-请选择-</option>
+            <option value="317">全新Jeep自由光</option>
+            <option value="322">全新Jeep自由侠</option>
+            <option value="327">进口Jeep牧马人</option>
+            <option value="328">进口全新Jeep大切诺基</option>
+            <option value="340">全新Jeep指南者</option>
+            <option value="766">自由客</option>
+        </select>
+        <select id="dealers">
+            <option value="0">-请选择-</option>
+        </select>
+        <button id="submit"></button>
+    </div>
+</div>
+<div class="wx">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/245/102/207/13486430.png" alt="" width="200" height="200">
+    <p>扫一扫有惊喜等着你</p>
+</div>
+<div class="con4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/16/207/13464503.jpg"></div>
+<div class="con5"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/249/16/207/13464504.jpg"></div>
+<div class="con6"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/250/16/207/13464505.jpg"></div>
+<div class="con7"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/251/16/207/13464506.jpg"></div>
+<div class="con8">
+    <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/16/207/13464507.jpg">
+    <div class="dorCity">
+        <span class="active">四川</span>
+        <span>西藏</span>
+        <span style="margin-right: 0">重庆</span>
+    </div>
+    <div class="list">
+        <table cellspacing="0" cellpadding="0"></table>
+    </div>
+</div>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript">
+    var HH = [
+        {"pro":"四川","city":"成都","name":"四川辰安汽车销售服务有限公司","dealers":"成都辰宇","tel":"028-67356888","address":"四川省成都市新都区三河街道五龙山路169号"},
+        {"pro":"四川","city":"成都","name":"成都金堂驭马车业有限公司","dealers":"成都东浩","tel":"028-85097663","address":"成都市金堂县西二配气站西侧、赵杨路南侧（消防队旁）"},
+        {"pro":"四川","city":"成都","name":"成都华星华驰汽车销售服务有限公司","dealers":"成都华驰","tel":"028-87506060","address":"成都市金牛区蜀西路163号JEEP4S店"},
+        {"pro":"四川","city":"成都","name":"成都金中冠汽车销售服务有限公司","dealers":"成都金菱","tel":"028-82806666","address":"成都市成华区成致路1号（晨明汽车龙潭总部港）"},
+        {"pro":"四川","city":"德阳","name":"德阳意菲汽车销售服务有限公司","dealers":"德阳意菲","tel":"0838-2536888","address":"四川省德阳市庐山南路三段29号"},
+        {"pro":"四川","city":"广元","name":"广元市金吉顺汽车商贸有限公司","dealers":"广元金吉顺","tel":"0839-3308185","address":"广元经济技术开发区下西物流园区金顺汽车园"},
+        {"pro":"四川","city":"乐山","name":"乐山天牛华骋汽车销售服务有限公司","dealers":"乐山天牛华骋","tel":"0833-5300008","address":"乐山市市中区龙游路518号（天牛汽车城）"},
+        {"pro":"四川","city":"泸州","name":"泸州鑫通汽车销售服务有限公司","dealers":"泸州建国","tel":"0830-6022255","address":"泸州市龙马潭区振兴大道西侧泸州园区内"},
+        {"pro":"四川","city":"泸州","name":"泸州捷龙协力众联汽车销售服务有限公司","dealers":"泸州众联","tel":"0830-4273030","address":"泸州市纳溪区蓝安大道浙江汽车园"},
+        {"pro":"四川","city":"眉山","name":"眉山华信恒源汽车服务有限公司","dealers":"眉山恒富","tel":"028-38668555","address":"眉山市东坡区二环东路28号"},
+        {"pro":"四川","city":"绵阳","name":"绵阳丰孚汽车销售服务有限公司","dealers":"绵阳丰孚","tel":"0816-6397111","address":"四川省绵阳市经开区绵州大道中段6号"},
+        {"pro":"四川","city":"绵阳","name":"绵阳意菲汽车销售服务有限公司","dealers":"绵阳意菲","tel":"0816-2555777","address":"绵阳市高新区绵兴东路38号"},
+        {"pro":"四川","city":"南充","name":"南充建国汽车销售服务有限公司","dealers":"南充建国","tel":"0817-3357626","address":"航空大道国际汽车城"},
+        {"pro":"四川","city":"成都","name":"四川省城市车辆置业有限责任公司","dealers":"四川城市车辆","tel":"028-85149111","address":"成都市高新区火车南站西路865号"},
+        {"pro":"四川","city":"成都","name":"四川华星华驰汽车销售服务有限公司","dealers":"四川华驰","tel":"028-84719966","address":"成都市锦江区南三环路二段辅道（锦江汽车工业园内）"},
+        {"pro":"西藏","city":"拉萨","name":"西藏自治区地矿物资供销公司","dealers":"西藏地矿","tel":"0891-6836520","address":"拉萨市城关区金珠西路181号"},
+        {"pro":"四川","city":"宜宾","name":"西藏自治区地矿物资供销公司","dealers":"宜宾吉泰","tel":"0831-8880090","address":"宜宾市临港经济开发区飞云路北段安吉汽车城"},
+        {"pro":"重庆","city":"重庆","name":"重庆泛华汽车销售服务有限公司","dealers":"重庆泛华","tel":"023-86167777","address":"重庆市九龙坡区石小路158号1栋1层"},
+        {"pro":"重庆","city":"重庆","name":"重庆中汽西南凯旋汽车有限公司","dealers":"重庆广汇","tel":"023-89112525","address":"重庆市北部新区金渝大道99号附10号"},
+        {"pro":"重庆","city":"重庆","name":"重庆金菱汽车(集团)有限公司","dealers":"重庆金菱","tel":"023-62415678","address":"重庆市南岸区七公里二龙桥"},
+        {"pro":"重庆","city":"重庆","name":"重庆万菱汽车销售有限公司","dealers":"重庆万菱","tel":"023-87506999","address":"重庆市万州区沙龙路二段1300号"},
+        {"pro":"重庆","city":"重庆","name":"重庆物产元通汽车销售有限公司","dealers":"重庆元通","tel":"023-67891999","address":"龙山三路1号"},
+        {"pro":"四川","city":"自贡","name":"自贡兴通汽车销售服务有限公司","dealers":"自贡建国","tel":"0813-5199999","address":"自贡市贡井区长土镇大坡村1.2.3组"},
+        {"pro":"四川","city":"巴中","name":"巴中领驾汽车销售服务有限公司","dealers":"巴中领驾 ","tel":"0827-5018222","address":"巴中市黄家沟先锋汽车产业园"},
+    ]
+</script>
+<script type="text/javascript">
+    $('#city').change(function(){
+        $('#dealers').empty()
+        for ( var i = 0; i < HH.length; i++ ) {
+            if ($('#city option:checked').text() == HH[i].city ) {
+                $('#dealers').append("<option value="+HH[i].dealers+">"+HH[i].dealers+"</option>")
+            }
+        }
+        console.log($('#city option:checked').text())
+    });
+    for ( var i = 0; i < HH.length; i++ ) {
+        var text = '四川';
+        if ( text == HH[i].pro ) {
+            $('table').append("<tr><td width='200'>"+HH[i].dealers+"</td><td width='260'>"+HH[i].tel+"</td><td width='350'>"+HH[i].address+"</td></tr>")
+        }
+    }
+    $('.dorCity span').click(function () {
+        $('table').html('');
+        var text = $(this).text();
+        $(this).addClass('active').siblings().removeClass('active');
+        for ( var i = 0; i < HH.length; i++ ) {
+            if ( text == HH[i].pro ) {
+                $('table').append("<tr><td width='200'>"+HH[i].dealers+"</td><td width='260'>"+HH[i].tel+"</td><td width='350'>"+HH[i].address+"</td></tr>")
+            }
+        }
+        $('.list').mCustomScrollbar("update");
+    });
+    $(function() {
+        //滚动条
+        $(window).load(function() {
+            $(".list").mCustomScrollbar({
+                scrollInertia: 550,
+            });
+        })
+    })
+    //报名
+    var flag = true;
+    $("#submit").on('click', function() {
+        if (flag) {
+            var name = $("#name").val(),  //姓名
+                tel = $("#tel").val(),       //电话
+                series_id = $("#series_id").val(),  //车型
+                dealers = $('#dealers option:checked').text(),
+                city = $('#city').val(),
+                brand_id = 54, //品牌
+                act_id = 1239, //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+                    act_id: act_id,
+                    dealers: dealers
+                }
+
+            if (name == '姓名' || tel == '手机') {
+                alert('信息没有填写完整');
+                return false;
+            }
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (city == '0') {
+                alert('请选择城市');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+            if (dealers == '0') {
+                alert('请选择经销商');
+                return false;
+            }
+
+            flag = false;
+            //发送请求
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert("恭喜你，报名成功了");
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

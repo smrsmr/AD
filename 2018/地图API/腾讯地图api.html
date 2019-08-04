@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>腾讯地图导航</title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body, button, input, select, textarea {
+            font: 12px/16px Verdana, Helvetica, Arial, sans-serif;
+        }
+        #info {
+            margin-top: 10px;
+        }
+        #container{
+            min-width:600px;
+            min-height:767px;
+        }
+    </style>
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script>
+        var init = function() {
+            var center = new qq.maps.LatLng(22.502744,113.414569);
+            var map = new qq.maps.Map(document.getElementById('container'),{
+                center: center,
+                zoom: 16
+            });
+            //创建marker
+            var marker = new qq.maps.Marker({
+                position: center,
+                map: map
+            });
+            var infoWin = new qq.maps.InfoWindow({
+                map: map
+            });
+            infoWin.open();
+            //tips  自定义内容
+            infoWin.setContent('<div style="width:200px;height: auto;padding: 10px 0;font-size: 16px;text-align: center">'+
+                '参观地址</div>');
+            infoWin.setPosition(center);
+        }
+    </script>
+</head>
+<body onload="init()">
+<div id="container"></div>
+<div id="info">
+    <p></p>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script>
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for(var i = 0; i < strs.length; i ++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var Request = new Object();
+    Request = GetRequest();
+    var brand = Request['brand'];
+    var series = Request['series'];
+    console.log(brand)
+    console.log(series)
+</script>
+</html>

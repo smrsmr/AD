@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>弹幕</title>
+		<link rel="stylesheet" href="css/wall.css" />
+	</head>
+
+	<body>
+		<div id="container" class="container">
+			
+		</div>
+		<div class="input-box">
+			<input type="text" maxlength="15" placeholder="说点什么吧~">
+			<button id="btn" class="btn">发送</button>
+		</div>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="js/barrageWall.js"></script>
+		<script>
+			//弹幕提醒
+			var firstBarrage = function (num=null) {
+				var elem = $('<div></div>')//创建元素
+            .addClass('list valueClass')//添加样式
+            .css("top",38+"px")//定位
+            .html(num+"条弹幕来袭，请做好战斗准备")//添加内容
+            .appendTo('#container');//追加在父元素后面
+        setTimeout(function(){//200ms防止元素动画不执行
+            elem.addClass("animate");
+        },200);
+			}
+			//获取时间方法
+			var time = function () {
+					var date = new Date();
+					var seperator1 = "-";
+					var year = date.getFullYear();
+					var month = date.getMonth() + 1;
+					var strDate = date.getDate();
+					var Hours = date.getHours();
+					var Minutes = date.getMinutes();
+					var Seconds = date.getSeconds();
+					if (month >= 1 && month <= 9) {
+							month = "0" + month;
+					}
+					if (strDate >= 0 && strDate <= 9) {
+							strDate = "0" + strDate;
+					}
+					var currentdate = year + seperator1 + month + seperator1 + strDate+" "+Hours + ":" + Minutes + ":" + Seconds;
+					return currentdate;
+			}
+			$("#btn").click(function () {
+				$(this).addClass('disabled');
+				////////////////////////////////////////////////////////////////////////////////////////////
+				////////////////////////////////////////// 注意：///////////////////////////////////////////
+				// 1，一定要限制用户输入的文字长度，尽量避免用户输入的内容长度超过屏幕的宽度/////////////////////////
+				// 2，如果不需要用户的头像和id，可以在js中去掉 elem 的img标签和用户名//
+				// 3，实际使用时，最少应该加上 特殊字符替换 和 发送成功后清除input的内容，/////////
+				/////////////////////////////////////////////////////////////////////////////////////////
+				var vla = $(this).prev("input").val().replace(/(^\s*)|(\s*$)/g, "");
+				if (vla) {
+					setTimeout(function() {
+              $('#btn').removeClass('disabled');
+          }, 4000);
+					//barrageWall.upWall(头像img,name,输入框value,用户输入自定义样式)
+					barrageWall.upWall("http://img1.gtimg.com/autoguangzhou/pics/hv1/89/173/211/13764479.jpg", "Bad Boy", vla, "valueClass");//初始化弹幕墙
+					$.ajax({
+						type: "post",
+						url: 'http://127.0.0.1:3001/postBarrage',
+						data: {
+							img: 'http://img1.gtimg.com/autoguangzhou/pics/hv1/89/173/211/13764479.jpg',
+							name: 'Bad Boy',
+							value: vla,
+							time: time
+						},
+						async: true,
+						dataType: "json",
+						success: function (data) {
+							console.log(data);
+						},
+						error: function (err) {
+							console.log(err);
+						}
+					})
+				}else {
+					alert('请输入内容');
+					return false;
+				}
+				//输入之后 清空输入框内容
+				$(this).prev("input").val("").focus();
+			})
+			$(function () {
+				var App = {};
+				//////////////////////////////////////////////////////////////////////
+				////////////////// 注意：请尽量少的使用js去处理css样式！//////////////////
+				///////////////// 尤其是当用户量大时，页面的性能的尤为重要 ////////////////
+				///////////////// 所以，请将你需要的各种动效交个css去实现 ////////////////
+				////////////////////// 注意页面重绘带来的性能影响 //////////////////////
+				////////////////////////////////////////////////////////////////////
+				const getBarrang = function () {
+					return new Promise((resolve,reject)=>{
+						$.ajax({
+							type: "get",
+							url: 'http://127.0.0.1:3001/getBarrage',
+							async: true,
+							dataType: "json",
+							success: function (data) {
+								resolve(data)
+							},
+							error: function (err) {
+								reject(JSON.stringify(err))
+							}
+						})
+					})
+				};
+				getBarrang().then((result) => {
+					console.log(result);
+					firstBarrage(result.data.length);
+					setTimeout(function(){
+						App.Barrage(result.data)
+					},3000)
+				}).catch((err) => {
+					console.log(err);
+				});
+				App.Barrage = function (text = null) {
+					App.walltext = text;
+					var option = {
+						container: "#container",//弹幕墙的id
+						barrageLen: 3//弹幕的行数
+					}
+					barrageWall.init(option);//初始化弹幕墙
+					//////////////////////////////////////////////////////////////////////
+					/////// 实际调用时必须设置你的 弹幕墙id 和 弹幕的行数 并 初始化弹幕墙，///////
+					// 然后调用 barrageWall.upWall("用户头像url","用户昵称","用户输入的内容")//
+					/////////////////////////////////////////////////////////////////////
+					barrageWall.upWall(App.walltext[0].img, App.walltext[0].name, App.walltext[0].value);//初始化弹幕墙
+					var num = 0, timer = setInterval(function () {
+						num++;
+						if (num >= App.walltext.length) {
+							// clearInterval(timer)
+							getBarrang().then((result) => {
+								console.log(result);
+								App.walltext = result.data;
+							}).catch((err) => {
+								console.log(err);
+							});
+							num = 0;
+						}
+						barrageWall.upWall(App.walltext[num].img, App.walltext[num].name, App.walltext[num].value);
+					}, 2000);
+				}
+			})
+		</script>
+	</body>
+
+</html>

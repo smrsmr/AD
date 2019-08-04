@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=750,user-scalable=no" />
+    <title>一汽马自达 品质生活提升计划</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+            background: white;
+        }
+        .cn {
+            position: relative;
+            margin-top: -1px;
+        }
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 43px;
+            width: 477px;
+            height: 171px;
+            margin-left: -233px;
+        }
+        .bmk p select,.bmk p input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 16px;
+            color: white;
+        }
+        option {
+            color: #000;
+        }
+        .bmk p {
+            display: inline-block;
+            width: 133px;
+            height: 20px;
+        }
+        .bmk .name {
+            margin-left: 95px;
+            margin-top: 52px;
+        }
+        .bmk .city {
+            margin-left: 99px;
+            width: 112px;
+        }
+        .bmk .tel {
+            margin-top: 4px;
+            margin-left: 94px;
+        }
+        .bmk .dealers {
+            margin-left: 29px;
+            width: 185px;
+        }
+        .bmk .series {
+            margin-top: 4px;
+            margin-left: 132px;
+            width: 310px;
+        }
+        #submit {
+            position: absolute;
+            left: 122px;
+            bottom: 9px;
+            width: 246px;
+            height: 28px;
+            background: transparent;
+            cursor: pointer;
+        }
+        .cn10 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/0/163/209/13631790.jpg") center center no-repeat;
+            max-width: 100%;
+            height: 480px;
+            background-size: 100% 100%;
+        }
+        .head {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            width: 613px;
+            height: 60px;
+            margin-left: -303px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 36px;
+        }
+        .list {
+            position: absolute;
+            left: 50%;
+            top: 88px;
+            width: 658px;
+            height: 363px;
+            margin-left: -303px;
+            overflow: auto;
+        }
+        .list ul {
+            width: 100%;
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+        .list ul li {
+            line-height: 44px;
+        }
+        .list ul li:first-child {
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/245/162/209/13631780.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/83/94/210/13679303.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/162/209/13631782.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name">
+            </p>
+            <p class="city">
+                <select id="city">
+                    <option value="0">请选择省份</option>
+                    <option value="江苏">江苏</option>
+                    <option value="上海">上海</option>
+                </select>
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel">
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">请选择经销商</option>
+                </select>
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">请选择车型</option>
+                    <option value="97">阿特兹</option>
+                    <option value="100">马自达CX-4</option>
+                </select>
+            </p>
+            <button id="submit"></button>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/162/209/13631783.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/249/162/209/13631784.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/251/162/209/13631786.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/252/162/209/13631787.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/253/162/209/13631788.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/254/162/209/13631789.jpg" alt=""></div>
+    <div class="cn cn10">
+        <div class="head">经销商</div>
+        <div class="list">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>
+    var data=[
+        {"name":"淮安市宏宇翔舜汽车销售服务有限公司","address":"淮安经济开发区翔宇大道33号（武警支队南侧） ","tel":"0517-83736999","prov":"江苏"},
+        {"name":"森风集团盐城义德汽车有限公司","address":"盐城市经济开发区希望大道南路9号","tel":"0515-88557388","prov":"江苏"},
+        {"name":"江苏远方汽车工贸实业有限责任公司","address":"徐州市鼓楼区三环东路46号（鼓楼法院南隔壁）","tel":"0516-87870888","prov":"江苏"},
+        {"name":"泰州明雅汽车销售服务有限公司","address":"汽车南站（向南3公里）国际汽车城内","tel":"0523-80766666","prov":"江苏"},
+        {"name":"连云港上达汽车销售服务有限公司","address":"连云港市海州区解放东路318号","tel":"0518 85159888","prov":"江苏"},
+        {"name":"扬州华美达汽车销售服务有限公司","address":"扬州市江都区长江东路999号","tel":"0514-86662888","prov":"江苏"},
+        {"name":"常州神马汽车销售服务有限公司","address":"常州市新北区通江中路607号","tel":"0519-85153666","prov":"江苏"},
+        {"name":"常州外汽金程汽车销售服务有限公司","address":"常州市武进区湖塘镇武进汽车城C区1号","tel":"0519-88066868","prov":"江苏"},
+        {"name":" 镇江维力达汽车销售有限公司","address":"镇江市经十二路656号","tel":"0511-85577777","prov":"江苏"},
+        {"name":"江苏乾丰汽车销售有限公司","address":"南京市江宁区上高路190号（东山汽车4S园内）","tel":"025-52661666","prov":"江苏"},
+        {"name":"南京通孚源汽车销售服务有限公司","address":"南京市栖霞区幕府东路228-2号","tel":"025-52238666  025-52238333","prov":"江苏"},
+        {"name":"江阴市盛达佳颖汽车销售有限公司","address":"江阴市东外环路11号","tel":"0510-86407888","prov":"江苏"},
+        {"name":"无锡联众汽车销售服务有限公司","address":"无锡市凤翔北路26号","tel":"0510-83136666  0510-83131510","prov":"江苏"},
+        {"name":"无锡荣事达汽车贸易服务有限公司","address":"无锡市金城东路与新阳路口","tel":"0510-85561666","prov":"江苏"},
+        {"name":"无锡市众达汽车销售服务有限公司","address":"无锡市贡湖大道388号","tel":"0510-85403666","prov":"江苏"},
+        {"name":"宜兴市荣诚汽车销售服务有限公司","address":"宜兴市经济开发区融达汽车城（加油站向南100米）","tel":"0510-81719888","prov":"江苏"},
+        {"name":"常熟市华通汽车销售服务有限公司","address":"江苏省常熟市青墩塘路228号","tel":"0512-52308181","prov":"江苏"},
+        {"name":"昆山千江一马汽车销售服务有限公司","address":"昆山市昆嘉路99号","tel":"0512-57906666","prov":"江苏"},
+        {"name":"苏州国亚达汽车服务有限公司","address":"苏州市相城经济开发区华元路99号","tel":"0512-65786111","prov":"江苏"},
+        {"name":"苏州浚和汽车销售服务有限公司","address":"苏州市高新区马运路168号（马运路与滨河路交叉口往北100米）","tel":"0512-66615111","prov":"江苏"},
+        {"name":"苏州苏天汽车销售服务有限公司","address":"苏州市工业园区群星三路18号（通园路与群星三路交汇处）","tel":"0512-67165666","prov":"江苏"},
+        {"name":"吴江东顺汽车销售服务有限公司","address":"苏州市吴江区八坼227省道边（云龙大桥向南1000米）","tel":"0512-63682222","prov":"江苏"},
+        {"name":"太仓博泰汽车销售服务有限公司","address":"太仓市经济开发区北京西路15号","tel":"0512-53686688","prov":"江苏"},
+        {"name":"张家港通城汽车销售服务有限公司","address":"张家港市张杨公路沙钢立交桥南侧","tel":"0512-58797888","prov":"江苏"},
+        {"name":"南通银达汽车销售服务有限公司","address":"南通市经济技术开发区星湖大道1085号","tel":"0513-85989111","prov":"江苏"},
+        {"name":"南通弘业汽车销售有限公司","address":"南通市港闸区永和路388号（二号桥北800米）","tel":"0513-55889666","prov":"江苏"},
+        {"name":"如皋市金泽汽车销售服务有限公司","address":"如皋市解放西路69号","tel":"0513-87559999","prov":"江苏"},
+        {"name":"上海交运隆嘉汽车销售服务有限公司","address":"上海市静安区中山北路558号","tel":"021-66285888","prov":"上海"},
+        {"name":"上海景和金沙汽车销售有限公司","address":"上海市普陀区祁连山南路588弄1号（近金沙江路）","tel":"021-52693666","prov":"上海"},
+        {"name":"上海绿地东汽车销售有限公司","address":"上海市闸北区康宁路930号","tel":"021-50868666","prov":"上海"},
+        {"name":"上海路帅汽车销售有限公司","address":"上海市浦东新区成山路1011号","tel":"021-20225699","prov":"上海"},
+        {"name":"上海通锐汽车销售服务有限公司","address":"上海市闵行区中春路6800号","tel":"021-54880333","prov":"上海"},
+    ]
+</script>
+<script>
+    for(var i=0;i<data.length;i++){
+        var ul='<ul>'+
+                '<li>'+data[i].name+'</li>'+
+                '<li>地址:'+data[i].address+'</li>'+
+                '<li>电话:'+data[i].tel+'</li>'+
+                '</ul>';
+        $('.list').append(ul)
+    }
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for(var i=0;i<data.length;i++){
+            if($('#city option:checked').text()==data[i].prov){
+                $('#dealers').append('<option value="'+data[i].name+'">'+data[i].name+'</option>')
+            }
+        }
+    })
+    //报名
+    var flag = true;
+    $("#submit").click(function () {
+        if (flag) {
+            var name = $("#name").val(),  //名字
+                tel = $("#tel").val(),   //电话
+                brand_id = 14, //品牌id
+                series_id = $('#series').val(), //车型id
+                prov = $('#city').val(), //车型id
+                dealers = $('#dealers').val(),//经销商
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    act_id: 3040,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                };
+            //判断填写是否正确
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (prov=='0'){
+                alert('请选择省份');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (dealers == '0') {
+                alert('请选择经销商');
+                return false;
+            }
+            if (series_id == '0') {
+                alert('请选择车型');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert('恭喜你，报名成功！');
+                        location.reload();
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+</script>
+</html>

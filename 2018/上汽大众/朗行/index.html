@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=1000,user-scalable=no" />
+    <title>朗行1.2T 换芯而来</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        body {  min-width: 1000px;  }
+       .main {  max-width: 1280px;  margin: 0 auto;  }
+       .con2, .con4 {  position: relative;  }
+       .con2-text {  position: absolute;  top: 20px;  left: 166px;  }
+       .con2-text p {  color: white;  font-size: 18px;  margin-bottom: 10px;  }
+       .con2-text p:nth-child(1) {  font-size: 25px;  font-weight: 600;  margin-bottom: 16px;  }
+       .con2-text p:nth-child(4) {  font-size: 20px;  font-weight: 600;  margin-top: 56px;  }
+       .form {  position: absolute;  top: 27%;  left: 50%;  width: 74.2%;  height: 68%;  margin-left: -37.1%;  }
+        .form p {  width: 32%;  height: 17%;  }
+        .form p input, .form p select {width: 100%; height: 100%;font-size: 18px;background: transparent;cursor: pointer;}
+        .form p select {  -webkit-appearance: none;  -moz-appearance: none;  appearance: none;  }
+        .form p select::-ms-expand {display: none}
+        .p1,.p3 {  margin-left: 16%;  margin-top: 1%;  }
+        .p2,.p4 {  margin-left: 12%;  margin-top: 1%;  }
+        .p1,.p2,.p3,.p4 { display: inline-block}
+        .p3 {  margin-top: 6%;  }
+        .form .p5 {  margin-left: 23.5%;  margin-top: 4%;  width: 52.5%;  height: 18%;  }
+        @media screen and (min-width: 1000px) and (max-width: 1280px){
+            .con2-text p:nth-child(4) {
+                margin-top: 24px;
+            }
+        }
+        @media screen and (max-width: 1024px){
+            body {background-color: black}
+        }
+        @media screen and (max-width: 1000px){
+            .con2-text p:nth-child(4) {
+                margin-top: 24px;
+            }
+        }
+        #cnzz_stat_icon_1260102516,
+
+        #cnzz_stat_icon_1260842227,
+
+        #cnzz_stat_icon_1260919928,
+
+        #cnzz_stat_icon_1255711023,
+
+        #cnzz_stat_icon_1260771396,
+
+        #cnzz_stat_icon_1261301380,
+
+        #cnzz_stat_icon_1261327484
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="con1">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/182/52/202/13148492.jpg" alt="">
+    </div>
+    <div class="con2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/183/52/202/13148493.jpg" alt="">
+        <div class="con2-text">
+            <p>低油耗助力新生活</p>
+            <p>1: 即日起，购买朗行1.2T车型，首付30%即可享2年0利率：其余车型首付40%起即可享2年0利率</p>
+            <p>2: 置换贴息: 北京：6000元/台；其他限牌城市及东北部，东莞，佛山，广州：4000元/台</p>
+            <p>车之道，为大众</p>
+        </div>
+    </div>
+    <div class="con3">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/184/52/202/13148494.jpg" alt="">
+    </div>
+    <div class="con4">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/98/56/202/13149428.jpg" alt="">
+        <div class="form">
+            <p class="p1">
+                <input type="text" id="name">
+            </p>
+            <p class="p2">
+                <input type="text" id="tel">
+            </p>
+            <p class="p3">
+                <select id="series_id">
+                    <option value="0">请选择车型</option>
+                </select>
+            </p>
+            <p class="p4">
+                <input type="text" id="dealers" value="广州市众耀汽车销售服务有限公司">
+            </p>
+            <p class="p5">
+                <input type="button" id="submit">
+            </p>
+        </div>
+    </div>
+    <div class="con5">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/186/52/202/13148496.jpg" alt="">
+    </div>
+    <div class="con6">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/41/53/202/13148606.jpg" alt="">
+    </div>
+    <div class="con7">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/188/52/202/13148498.jpg" alt="">
+    </div>
+</div>
+</body>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script>
+    //输出上汽大众全部车型
+        GetBrand($('#series_id'));
+        function GetBrand(resel){
+            var URL='http://www.yetcar.com/index.php?s=/Home/Data/getModels';
+            var Data= {
+                series_id:13
+            };
+            $.ajax({
+                type:"get",
+                url:URL,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    var dataArr=data.data;
+                    console.log(data);
+                    for(var i=0;i<dataArr.length;i++){
+                        resel.append('<option value="'+dataArr[i].id+'">'+dataArr[i].name+'</option>')
+                    }
+                }
+            });
+        }
+
+
+        // 报名
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    series_id = $('#series_id').val(),    //车型id
+                    dealers = $('#dealers').val(),    //经销商
+                    brand_id = 13, //品牌
+                    act_id = 623,   //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+                        dealers: dealers,
+                        act_id : act_id,
+                    }
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+                if(dealers==0){
+                    alert('请选择经销商');
+                    return false;
+                }
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        });
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

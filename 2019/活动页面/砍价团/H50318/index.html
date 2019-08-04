@@ -1,0 +1,372 @@
+<!--2019年-03月-18号 星期一 11:49:32 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<!-- <meta name="viewport" content="initial-scale=1.0,user-scalable=yes,maximum-scale=1,width=device-width"> -->
+		<!-- <meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no"> -->
+		<title>Q友砍价团 低价热卖</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<style>
+			.main {
+				max-width: 750px;
+				margin: 0 auto;
+			}
+			.cn {position: relative;}
+			.cn>img {margin-top: -1px;}
+			.timeContent {
+				width: 10rem;
+				height: 2rem;
+				background: white;
+				overflow: hidden;
+			}
+			.timeContent .f {
+				float: left;
+				height: 2rem;
+				font-weight: bold;
+			}
+			.timeContent .tl {
+				width: 4rem;
+				color: #13529f;
+				font-size: 0.5rem;
+				line-height: 2rem;
+				text-align: right;
+				letter-spacing: 0.07rem;
+			}
+			.timeContent .tr {
+				width: 6rem;
+			}
+			.timeContent .tr .timer {
+				width: 100%;
+				padding-left: 0.2rem;
+			}
+			.timeContent .tr .timer>p {
+				position: relative;
+				display: inline-block;
+				width: 0.8rem;
+				height: 0.7rem;
+				background: #4275b2;
+				margin: 0.66rem 0.2rem;
+				border-radius: 0.1rem;
+				color: white;
+				font-weight: bold;
+			}
+			.timeContent .tr .timer>p::after {
+				position: absolute;
+				content: " : ";
+				clear: both;
+				left: 0.97rem;
+				top: 0rem;
+				color: #13529f;
+				font-size: 0.5rem;
+			}
+			.timeContent .tr .timer>p:last-child::after {
+				content: "";
+			}
+			.timeContent .tr .timer>p>span {
+				display: block;
+				width: 0.8rem;
+				line-height: 0.7rem;
+				text-align: center;
+				font-size: 0.5rem;
+			}
+			.aLink {
+			  position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 4.92rem;
+				height: 1.35rem;
+				background: transparent;
+				cursor: pointer;
+			}
+			.activeBm {
+				left: 5.06rem;
+			}
+			.backdrop {
+				position: fixed;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, .5);
+				display: none;
+				z-index: 100;
+      }
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 1rem;
+				background: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/174/25/212/13791849.png') center center no-repeat;
+				width: 8.666667rem;
+				height: 13.44rem;
+				background-size: 100%;
+				z-index: 101;
+				display: none;
+			}
+			.dele {
+				position: absolute;
+				right: 0.4rem;
+				top: 0;
+				width: 1rem;
+				height: 1rem;
+				cursor: pointer;
+			}
+			.bmk p input,.bmk p select {
+				width: 100%;
+				height: 100%;
+				-webkit-appearance: none;
+				appearance: none;
+				font-size: 0.5rem;
+				padding-left: 0.1rem;
+				box-sizing: content-box;
+				background: transparent;
+				color: #000;
+			}
+			input:-ms-input-placeholder{
+					color: #d3d3d3;opacity:1;
+			}
+			input::-webkit-input-placeholder{
+					color: #d3d3d3;opacity:1;
+			}
+			.bmk p {
+				width: 6.2rem;
+				height: 0.9rem;
+				margin-left: 1.7rem;
+			}
+			.bmk .name {
+				margin-top: 3.47rem;
+			}
+			.bmk .tel,.bmk .series,.bmk .brand {
+				margin-top: 0.36rem;
+			}
+			.bmk .submit {
+				margin-top: 0.94rem;
+				margin-left: 0.6rem;
+				width: 7.3rem;
+			}
+			.bmk #submit {
+				cursor: pointer;
+			}
+			.dele {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 1rem;
+				height: 1rem;
+				cursor: pointer;
+				background: transparent;
+			}
+			.privacyPolicy {
+				position: absolute;
+				left: 0.5rem;
+				top: 8.4rem;
+			}
+			.privacyPolicy input{width:18px !important;height:18px !important}
+			.privacyPolicy span{display:inline-block;font-size:16px;color:#000;position: relative;top: -4px;}
+			.privacyPolicy a{color:#000}
+		</style>
+</head>
+<body>
+<div class="main">
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/164/25/212/13791839.jpg" alt="Q友砍价团"></div>
+	<div class="cn">
+		<div class="timeContent">
+			<div class="tl f">优惠倒计时:</div>
+			<div class="tr f">
+				<div class="timer">
+					<p><span class="t_d">00</span></p>
+					<p><span class="t_h">00</span></p>
+					<p><span class="t_m">00</span></p>
+					<p><span class="t_s">00</span></p>
+        </div>
+			</div>
+		</div>
+	</div>
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/166/25/212/13791841.jpg" alt="Q友砍价团"></div>
+	<div class="cn targetCart" data-brand="8" data-series="1212"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/167/25/212/13791842.jpg" alt="Q友砍价团"></div>
+	<div class="cn targetCart" data-brand="8" data-series="52"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/169/25/212/13791844.jpg" alt="Q友砍价团"></div>
+	<div class="cn targetCart" data-brand="8" data-series="55"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/170/25/212/13791845.jpg" alt="Q友砍价团"></div>
+	<div class="cn targetCart" data-brand="8" data-series="53"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/171/25/212/13791846.jpg" alt="Q友砍价团"></div>
+	<div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/172/25/212/13791847.jpg" alt="Q友砍价团"></div>
+	<div class="cn">
+		<img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/173/25/212/13791848.jpg" alt="Q友砍价团">
+		<a href="tel:4008105016,,10085" class="activeTel aLink"></a>
+		<a href="javascript:;" class="activeBm aLink"></a>
+	</div>
+	<div class="backdrop"></div>
+	<div class="bmk">
+		<button class="dele"></button>
+		<p class="name">
+			<input type="text" id="name" placeholder="姓名">
+		</p>
+		<p class="tel">
+			<input type="tel" id="tel" placeholder="电话" maxlength="11">
+		</p>
+		<p class="brand">
+			<select id="brand">
+				<option value="8">奥迪</option>
+			</select>
+		</p>
+		<p class="series">
+			<select id="series">
+				<option value="0">意向车型</option>
+				<option value="51">奥迪A3</option>
+				<option value="52">奥迪Q3</option>
+				<option value="53">奥迪A4L</option>
+				<option value="54">奥迪A6L</option>
+				<option value="55">奥迪Q5</option>
+				<option value="151">奥迪A8L</option>
+				<option value="529">奥迪A4 Allroad</option>
+				<option value="851">奥迪A6L新能源</option>
+				<option value="852">奥迪Q5L</option>
+				<option value="1212">奥迪Q2L</option>
+			</select>
+		</p>
+		<p class="submit">
+			<input type="button"id="submit">
+		</p>
+		<div class="privacyPolicy">
+			<input type="checkbox">
+			<span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+		</div>
+	</div>
+</div>
+</body>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script>
+	var timer = '2019/3/23 12:00:00'; //倒计时
+	/*--倒计时--*/
+    var EndTime = new Date(timer), tt;
+
+    function toTens(i) {
+        if (i < 10 && i >= 0) {
+            i = "0" + i;
+        }
+        return i;
+    }
+    function GetRTime() {
+        var NowTime = new Date();
+        var t = EndTime.getTime() - NowTime.getTime();
+        var d = Math.floor(t / 1000 / 60 / 60 / 24);
+        var h = Math.floor(t / 1000 / 60 / 60 % 24);
+        var m = Math.floor(t / 1000 / 60 % 60);
+        var s = Math.floor(t / 1000 % 60);
+        $('.t_d').text(toTens(d));
+        $('.t_h').text(toTens(h));
+        $('.t_m').text(toTens(m));
+        $('.t_s').text(toTens(s));
+        if (t < 0) {
+					clearInterval(tt);
+					$('.t_d').text("00");
+					$('.t_h').text("00");
+					$('.t_m').text("00");
+					$('.t_s').text("00");
+        }
+    }
+    tt = setInterval(GetRTime, 0);
+    /*--倒计时结束--*/
+</script>
+<script>
+	var oLogin = $('.bmk');
+	oLogin.css('left', ($(window).width() - oLogin.outerWidth()) / 2);
+	oLogin.css('top', ($(window).height() - oLogin.outerHeight()) / 2.3);
+	$(window).on('resize scroll', function () {
+		oLogin.css('left', ($(window).width() - oLogin.outerWidth()) / 2);
+		oLogin.css('top', ($(window).height() - oLogin.outerHeight()) / 2.3 + $(window).scrollTop());
+	});
+	var brandid = 0,seriesid = 0;
+	$('.targetCart').on('click',function(){
+		brandid = $(this).attr('data-brand');
+		seriesid = $(this).attr('data-series');
+		$('.backdrop').fadeIn(300);
+		$('.bmk').fadeIn(300);
+		$("#series").find("option[value="+seriesid+"]").prop("selected",true);
+	})
+	$(document).on('click','.dele',function(){
+		$("#series option").removeAttr("selected");
+		$('.backdrop').fadeOut(300);
+		$('.bmk').fadeOut(300);
+	})
+	$('.activeBm').on('click',function(){
+		$('.backdrop').fadeIn(300);
+		$('.bmk').fadeIn(300);
+	})
+	var flag = true;
+		$("#submit").click(function () {
+			if (flag) {
+				var name = $("#name").val(),  //名字
+					tel = $("#tel").val(),   //电话
+					dealers = '', //经销商
+					brand_id = $('#brand').val(), //品牌id
+					series_id = $('#series').val(), //车型id
+					Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+					Data = {
+						name: name,
+						phone: tel,
+						act_id: 3505,
+						brand_id: brand_id,
+						series_id: series_id,
+						dealers: dealers,
+						chexing: ""
+					};
+				//判断填写是否正确
+				if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+					alert('请输入正确的中文名');
+					return false;
+				}
+				if (!RegExp(/^(0|86|17951)?(13[0-9]|14[0145689]|15[0-9]|16[2567]|17[0-8]|18[0-9]|19[189])[0-9]{8}$/).test(tel)) {
+					alert('手机格式不正确');
+					return false;
+				}
+				if (brand_id == '0') {
+						alert('请选择品牌');
+						return false;
+				}
+				if (series_id == '0') {
+						alert('请选择车型');
+						return false;
+				}
+				if (!($("input[type='checkbox']").prop('checked'))) {
+						alert('请同意《隐私政策》');
+						return false;
+				}
+				//发送请求
+				flag = false;
+				$.ajax({
+					type: "get",
+					url: Url,
+					data: Data,
+					async: true,
+					dataType: "jsonp",
+					jsonpCallback: "jsonpReturn",
+					success: function (data) {
+					  if (data.status == 1) {
+							alert("报名成功!");
+							window.location.href = location.href;
+					  } else {
+					    flag = true;
+					    alert("很抱歉，你报名失败。");
+					  }
+					}
+				});
+			} else {
+				alert("请勿重复提交！")
+			}
+		});
+</script>
+</html>

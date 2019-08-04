@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+<!--禁止缩放-->
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<!--全屏显示-->
+<meta content="telephone=no" name="format-detection" />
+<!--告诉设备忽略将页面中的数字识别为电话号码-->
+<meta content="black" name="apple-mobile-web-app-status-bar-style" /> 
+<!-- 隐藏状态栏--> 
+<meta name="MobileOptimized" content="320"/>
+<meta charset="utf-8">
+<title>中原首届全民换车节开始了</title>
+<meta name="description" content="中原首届全民换车节开始了" />
+<style>
+*,.body{margin:0; padding:0;}
+body{background:#ffffff; }
+img,a{border:none;}
+a{cursor:pointer;}
+img{width:100%; display:block; margin:0 auto; padding:0; border:none;}
+.bm{
+	width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.bm h2 {
+	text-align: center;
+	color: #eb2b4d;
+}
+</style>
+</head>
+
+<body> 
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+    <img src="http://img1.gtimg.com/autozhengzhou/pics/hv1/168/245/210/13717893.jpg" />
+</div>
+<div style="width:100%; height:auto;margin:0;">
+    <img src="http://img1.gtimg.com/autozhengzhou/pics/hv1/149/245/210/13717874.jpg" />
+</div>
+<div class="bm">
+<h2>报名换购</h2>
+	<!--一个可用的报名表单包括『CSS样式表』、『HTML代码』，『JS代码』三部分-->
+<!-- 以下为默认『CSS样式表』，如需自定义样式，可取消对该文件的引用，自行替换 -->
+<link rel="Stylesheet" type="text/css" href="http://mat1.gtimg.com/tech/css/huiyan/huiyan_style_v1.1.css">
+<link rel="Stylesheet" type="text/css" href="http://mat1.gtimg.com/tech/css/huiyan/artDialog.css">
+<!-- 以下为表单主体『HTML代码』，请勿修改标签中的id和name属性-->
+<!-- 表单主体开始 -->
+<iframe id="id_iframe" name="id_iframe" style="display:none;"></iframe>
+<form name="form1" id="form1" method="post" action="http://huiyan.qq.com/userApply/apply" target="id_iframe" class="huiyan-form" accept-charset="UTF-8">
+        <input type="hidden" name="activity_id" value="26269">
+	<input type="hidden" name="attr_list" value="70,311">
+	<input type="hidden" name="site" value="autozhengzhou">
+        <div class="control-group" style="height:50px;">
+		<label class="control-label" style="float:left; display:inline-block; width:20%; color:#eb2b4d; font-size:20px; font-family:'微软雅黑'; font-weight:bold; line-height:40px; padding:0;">姓名:</label>
+		<div class="controls" style="float:left; display:inline-block;width:80%;">
+			<input type="text" class="input-xxlarge" id="name"  name="form_70_1" myRequired="1" myHidden="0" style="height:30px; border:#eb2b4d 2px solid; border-radius:4px; line-height:40px;"><span class='required-icon'>*</span>
+		</div>
+	</div>
+    <div class="control-group" style="height:50px;">
+		<label class="control-label" style="float:left; display:inline-block; width:20%; color:#eb2b4d; font-size:20px; font-family:'微软雅黑'; font-weight:bold; line-height:40px; padding:0;">手机:</label>
+		<div class="controls" style="float:left; display:inline-block;width:80%;">
+			<input type="text" class="input-xxlarge" id="tel"  maxlength="11" name="form_311_1" myRequired="1" myHidden="0" style="height:30px; border:#eb2b4d 2px solid; border-radius:4px; line-height:40px;"><span class='required-icon'>*</span>
+		</div>
+	</div>
+    <div class="control-group">
+	  <button class="btn" id="submitBtn" style="width:100%; background:#eb2b4d; color:#fff; font-size:20px; font-family:'微软雅黑'; line-height:32px;">报名</button>
+	</div>
+</form>
+<!-- 表单主体结束 -->
+
+
+<!-- 以下为『JS代码』，包括“jQ依赖库”和“个性化脚本”两部分 -->
+<!-- jQuery依赖库，版本号v1.8.3，如页面中已包含jQuery库文件，请取消对该文件的引用-->
+<script type="text/javascript" src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+
+<!-- 个性化脚本，请勿修改，并确保引入页面-->
+<script>
+	
+</script>
+	
+</div>
+<div style="width:100%; height:auto;margin:0;">
+    <img src="http://img1.gtimg.com/autozhengzhou/pics/hv1/150/245/210/13717875.jpg" />
+    <img src="http://img1.gtimg.com/autozhengzhou/pics/hv1/151/245/210/13717876.jpg" />
+    <img src="http://img1.gtimg.com/autozhengzhou/pics/hv1/152/245/210/13717877.jpg" />
+
+</div>
+<script>
+     //获取车型数据
+    //  $.ajax({
+    //         type: "get",
+    //         url: 'http://www.yetcar.com/index.php?s=/Home/Data/getModels',
+    //         data: {series_id:60},
+    //         async: true,
+    //         dataType: "jsonp",
+    //         success: function(data) {
+    //             for(var i=0;i<data.data.length;i++){
+    //                 var series=$('<option value="'+data.data[i].id+'">'+data.data[i].name+'</option>');
+    //                 $('#form_3604_2').append(series)
+    //             }
+    //         }
+    //     });
+        //报名
+        var flag = true;
+        $("#submitBtn").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(), //电话
+                    brand_id = $("#form_3604_1").val(), //品牌id
+                    series_id = $("#form_3604_2").val(),    //车系id
+                    act_id = 3345,  //活动id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        brand_id: brand_id,
+                        series_id: series_id,
+                        act_id : act_id,
+                    };
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|16[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                // if( brand_id == '0' ) {
+                //     alert('请选择品牌');
+                //     return false;
+                // }
+                // if( series_id == '0' ) {
+                //     alert('请选择车型');
+                //     return false;
+                // }
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href;
+                        }else{
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+</script>
+<script>
+    document.addEventListener('WeixinJSBridgeReady', function () {
+        var shareObj = {
+            title: '中原首届全民换车节开始了',
+            desc: '11月18日，中原首届全民换车节开始了，现场红包送不停，还有好礼拿，赶快报名参加吧',
+            image: 'http://img1.gtimg.com/autozhengzhou/pics/hv1/168/245/210/13717893.jpg',
+            url: 'http://zhengzhou.auto.qq.com/zt2018/yudian/index.htm'
+        }
+        // 分享到朋友圈;
+        WeixinJSBridge.on('menu:share:timeline', function (argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": shareObj.image,
+                "img_width": "150",
+                "img_height": "150",
+                "link": shareObj.url + '?f=wx',
+                "desc": shareObj.desc,
+                "title": shareObj.title
+            }, function () {
+            });
+        });
+        WeixinJSBridge.on('menu:share:appmessage', function (argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "img_url": shareObj.image,
+                "link": shareObj.url + '?f=wx',
+                "desc": shareObj.desc,
+                "title": shareObj.title
+            }, function () {
+            });
+        });
+        WeixinJSBridge.on('menu:share:weibo', function (argv) {
+            WeixinJSBridge.invoke('shareWeibo', {
+                "desc": shareObj.desc,
+                "url": shareObj.url + '?f=wx'
+            }, function (res) {
+            });
+        });
+    }, false);
+</script>
+</body>
+</html>

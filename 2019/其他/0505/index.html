@@ -1,0 +1,259 @@
+<!--2019年-05月-05号 星期天 17:47:14 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<title>庆祝卡罗拉全球销量突破4700万台</title>
+		<link rel="icon" type="image/x-icon" href="https://mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="https://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="https://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<style>
+			.main {
+				max-width: 750px;
+				margin: 0 auto;
+			}
+			.cn {position: relative;}
+			.bmk {
+				position: absolute;
+				left: 50%;
+				top: 0.9rem;
+				background-color: #dbd0c3;
+				width: 10rem;
+				height: 2.1rem;
+				margin-left: -5rem;
+			}
+			.bmk p {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				width: 8rem;
+				height: 0.45rem;
+				margin: 0.12rem auto;
+				background-color: white;
+			}
+			.bmk p input,.bmk p select {
+				-webkit-box-flex: 1;
+		    -webkit-flex: 1;
+		    -ms-flex: 1;
+		    flex: 1;
+				height: 100%;
+				-webkit-appearance: none;
+				appearance: none;
+				background: transparent;
+				font-size: 0.3rem;
+				box-sizing: content-box;
+			}
+			.bmk p>span {
+				display: inline-block;
+				line-height: 0.45rem;
+				font-size: 0.3rem;
+				padding-left: 0.1rem;
+			}
+			.bmk .name {
+				margin-top: 0;
+			}
+			.bmk .select {
+				width: 8rem;
+				margin: -0.125rem auto;
+				overflow: hidden;
+			}
+			.bmk .dealers,.bmk .city {
+				float: left;
+				width: 3.91rem;
+			}
+			.bmk .dealers {
+				float: right;
+				margin-left: 0.05rem;
+			}
+			#submit {
+				position: absolute;
+				left: 50%;
+				top: 2.2rem;
+				width: 4rem;
+				height: 0.7rem;
+				margin-left: -2rem;
+				cursor: pointer;
+				background-color: transparent;
+			}
+		</style>
+</head>
+<body>
+<div class="main">
+	<div class="cn"><img src="img/m_01.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_02.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn">
+		<img src="img/m_03.jpg" alt="一汽丰田 卡罗拉">
+		<div class="bmk">
+			<p class="name">
+				<span>姓名：</span>
+				<input type="text" id="name">
+			</p>
+			<p class="tel">
+				<span>联系电话：</span>
+				<input type="tel" id="tel" maxlength="11">
+			</p>
+			<div class="select">
+				<p class="city">
+					<span>市：</span>
+					<select id="city">
+						<option value="0">请选择</option>
+					</select>
+				</p>
+				<p class="dealers">
+					<span>经销商：</span>
+					<select id="dealers">
+						<option value="0">请选择</option>
+					</select>
+				</p>
+			</div>
+			<p class="series">
+				<span>感兴趣的车型：</span>
+				<select id="series">
+					<option value="44">卡罗拉</option>
+					<option value="479">卡罗拉双擎</option>
+				</select>
+			</p>
+			<button id="submit"></button>
+		</div>
+		</div>
+	<div class="cn"><img src="img/m_04.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_05.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_06.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_07.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_08.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_09.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_10.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_11.jpg" alt="一汽丰田 卡罗拉"></div>
+	<div class="cn"><img src="img/m_12.jpg" alt="一汽丰田 卡罗拉"></div>
+</div>
+</body>
+<script src="https://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="https://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script>
+	var des = [
+		{"city":"东莞","code":"41891","name":"东莞永佳","address":"东莞市厚街镇溪头村康乐南路段永佳丰田","tel":"0769-81691888"},
+		{"city":"东莞","code":"41892","name":"东莞南城","address":"东莞市南城区白马科技大道（新南城汽车站对面）","tel":"0769-22980388"},
+		{"city":"东莞","code":"41893","name":"东莞东部","address":"东莞市寮步国际汽车城A0201号","tel":"0769-83267666"},
+		{"city":"东莞","code":"41894","name":"东莞龙华","address":"东莞市万江区万江大道新谷涌路段","tel":"0769-22773388"},
+		{"city":"东莞","code":"41895","name":"东莞大昌行","address":"东莞市虎门镇白沙莞太路252号","tel":"0769-85132299"},
+		{"city":"东莞","code":"41896","name":"东莞天下行","address":"东莞市常平镇苏坑村常朗路段","tel":"0769-83550666"},
+		{"city":"东莞","code":"41897","name":"东莞东美","address":"东莞市塘厦镇东深二路北2号","tel":"0769-82087777"},
+		{"city":"东莞","code":"41898","name":"东莞百力恒","address":"东莞市长安镇振安路边锦厦一龙路河南区东侧","tel":"0769-81601266/1366"},
+		{"city":"东莞","code":"41899","name":"东莞东城","address":"东莞市东城区莞龙路下桥水果批发市场对面","tel":"0769-88751555"},
+		{"city":"东莞","code":"4189A","name":"东莞安信","address":"东莞市大岭山镇连平畔山村（畔山公交站牌旁）","tel":"0769-81870333"},
+		{"city":"佛山","code":"41851","name":"南海桂城","address":"佛山市南海区桂城桂平路与佛山一环交汇处（佛山一环23出口）","tel":"0757-86250289"},
+		{"city":"佛山","code":"41831","name":"顺德合诚","address":"佛山市顺德大良广珠公路新松路段27号地","tel":"0757-22383999"},
+		{"city":"佛山","code":"418A1","name":"佛山强劲","address":"佛山市禅城区佛山大道番村牌坊旁","tel":"0757-83963332"},
+		{"city":"佛山","code":"41832","name":"佛山龙江","address":"佛山市顺德区龙江镇豪俊家具材料城内","tel":"0757-23872688"},
+		{"city":"佛山","code":"418A2","name":"佛山三水","address":"佛山市三水区西南南丰大道捷和广场对面","tel":"0757-87771118"},
+		{"city":"佛山","code":"41852","name":"佛山骏安","address":"佛山市南海区桂城海八路华南汽车城标志塔侧","tel":"0757- 89961888"},
+		{"city":"佛山","code":"41853","name":"佛山南海合诚","address":"佛山市南海区桂城桂澜路石（石肯）路段","tel":"0757-81858008"},
+		{"city":"佛山","code":"418A3","name":"佛山高明南菱","address":"佛山市高明区荷城高明大道与常安街交汇处","tel":"0757-88613098"},
+		{"city":"中山","code":"418B1","name":"中山中裕","address":"中山市火炬开发区大岭江陵西路16号之一","tel":"0760-85339999"},
+		{"city":"中山","code":"418B3","name":"中山三联","address":"中山市南区城南一路10号","tel":"0760-23331213"},
+		{"city":"中山","code":"418B2","name":"中山创世纪","address":"中山市西区彩虹大道91号","tel":"0760-88552808"},
+		{"city":"中山","code":"418B4","name":"中山小榄庆丰","address":"中山市小榄镇菊城大道西永南汽配城对面","tel":"0760-22838088"},
+		{"city":"中山","code":"418B7","name":"中山黄圃中裕","address":"中山市黄圃镇兴圃大道中171号之三","tel":"0760-88772133"},
+		{"city":"江门","code":"41842","name":"江门强劲","address":"江门市新会区会城冈州大道东28号（江门厨具市场正对面）","tel":"0750-6660888"},
+		{"city":"江门","code":"41841","name":"江门华通","address":"江门市蓬江区建设三路156号","tel":"0750-3286886"},
+		{"city":"江门","code":"41843","name":"江门永佳","address":"江门市江海区五邑路麻二中心里九巷8号","tel":"0750-3898888"},
+		{"city":"江门","code":"41844","name":"江门致泰","address":"台山市台城陈宜禧路北190号-2","tel":"0750-5517999"}
+	];
+	des.map(function(v,i){
+		if($('#city').html().indexOf(v.city)=== -1){
+			$('#city').append('<option value="'+v.city+'">'+v.city+'</option>')
+		}
+	});
+	$('#city').change(function(){
+		$("#dealers").find("option:not(:first)").remove();
+		des.map(function(v,i){
+			if($('#city option:checked').text() === v.city){
+				$('#dealers').append('<option value="'+v.name+'">'+v.name+'</option>')
+			}
+		});
+		
+	})
+	//报名
+	var flag = true;
+	$("#submit").click(function () {
+			if (flag) {
+					var name = $("#name").val(),  //姓名
+							tel = $("#tel").val(), //电话
+							series_id = $('#series').val(),    //车型id
+							dealers = $('#dealers').val(),    //经销商
+							city = $('#city').val(),
+							brand_id = 10, //品牌
+							act_id = 3601,   //活动id
+							Url = "https://auto.gdtengnan.com/yetcar/baomingGeneral.php",
+							Data = {
+								name: name,
+								phone: tel,
+								series_id: series_id,
+								brand_id: brand_id,
+								dealers: dealers,
+								act_id: act_id,
+								chexing: ""
+							}
+					//判断填写是否正确
+					if (name == '' || tel == '') {
+							alert('信息没有填写完整');
+							return false;
+					}
+					if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+							alert('请输入正确的中文名');
+							return false;
+					};
+					if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+							alert('手机格式不正确');
+							return false;
+					}
+					if (city == '0') {
+							alert('请选择城市');
+							return false;
+					}
+					if (dealers == '0') {
+							alert('请选择经销商');
+							return false;
+					}
+					if (series_id == 0) {
+						alert('请选择车型');
+						return false;
+					}
+					//发送请求
+					$.ajax({
+							type: "post",
+							url: Url,
+							data: Data,
+							async: true,
+							dataType: "jsonp",
+							jsonpCallback: "jsonpReturn",
+							success: function (data) {
+									if (data.status == 1) {
+											alert('恭喜你，报名成功！');
+											flag = false;
+											window.location.reload();
+
+									} else {
+											alert("很抱歉，你报名失败。");
+									}
+							}
+					});
+			} else {
+					alert("请勿重复提交！")
+			}
+	});
+</script>
+</html>

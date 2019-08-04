@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=750,user-scalable=no" />
+    <title>全新奥迪A8L 驾驭明天的智慧</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {margin-top: -1px}
+        .pr{position: relative;}
+        .po{position: absolute;left: 50%;}
+        .cn2 .bmk {
+            width: 668px;
+            height: 912px;
+            top: 141px;
+            margin-left: -335px;
+        }
+        .cn2 .bmk input,.cn2 .bmk select {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            font-size: 33px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .cn2 .bmk p {
+            width: 551px;
+            height: 107px;
+        }
+        .cn2 .bmk .name,.cn2 .bmk .tel,.cn2 .bmk .series,.cn2 .bmk .pro,.cn2 .bmk .city {
+            margin-left: 111px;
+            margin-top: 20px;
+        }
+        .cn2 .bmk .tel,.cn2 .bmk .series,.cn2 .bmk .pro {
+            margin-top: 24px;
+        }
+        .cn2 .bmk .dealers {
+            margin-left: 135px;
+            margin-top: 19px;
+            width: 528px;
+        }
+        .cn2 .bmk .submit {
+            margin-left: 2px;
+            margin-top: 30px;
+            width: 663px;
+        }
+        .cn6 .title {
+            width: 658px;
+            height: 60px;
+            margin-left: -332px;
+            top: 118px;
+        }
+        .cn6 .title select {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            color: white;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 33px;
+        }
+        .cn6 .title select option {
+            color: white;
+        }
+        .cn6 .title p {
+            width: 112px;
+            height: 62px;
+            display: inline-block;
+        }
+        .cn6 .title .provX {
+            margin-left: 78px;
+            margin-top: 0px;
+        }
+        .cn6 .title .cityX {
+            margin-left: 220px;
+        }
+        .cn6 .list {
+            top: 195px;
+            width: 620px;
+            height: 593px;
+            margin-left: -310px;
+            overflow: auto;
+        }
+        .cn6 .list ul {width: 100%;border-bottom: 2px solid #4e6d8c;margin-bottom: 25px;}
+        .cn6 .list ul li {
+            color: white;
+            font-size: 27px;
+            line-height: 48px;
+        }
+        .cn6 .list ul li:first-child {
+            font-weight: bold;
+            font-size: 32px;
+        }
+        .cn6 .list ul li:last-child {
+            padding-bottom: 20px;
+        }
+        .mCSB_scrollTools .mCSB_draggerRail {
+            width: 18px;
+            background: #000;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            background-color: #435063 !important;
+            filter: "alpha(opacity=75)";
+            -ms-filter: "alpha(opacity=75)";
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            width: 9px;
+        }
+        .ss {
+            height: 160px;
+            width: 665px;
+            font-size: 14px;
+            bottom: -83px;
+            margin-left: -339px;
+            color: white;
+        }
+        .ss span {
+            display: inline-block;
+            bottom: 95px;
+            margin-left: -274px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn1 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/171/208/13568860.jpg" alt=""></div>
+    <div class="cn2 cn pr">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/216/170/208/13568766.jpg" alt="">
+        <div class="bmk po">
+            <p class="name">
+                <input type="text" id="name">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" maxlength="11">
+            </p>
+            <p class="series">
+                <select value="" id="series">
+                    <option value="0">请选择车型</option>
+                    <option value="151">奥迪A8L</option>
+                </select>
+            </p>
+            <p class="pro">
+                <select value="" id="pro">
+                    <option value="河南省">河南省</option>
+                </select>
+            </p>
+            <p class="city">
+                <select value="" id="city">
+                    <option value="郑州市">郑州市</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select value="" id="dealers">
+                    <option value="0">请选择经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+        <div class="ss po">
+            <p>
+                <input type="checkbox" style="width: 70px;height: 31px;margin-top: 20px;">
+                <span class="po">我同意(您的个人资料有可能会提交至奥迪厂商的授权经销商或腾讯汽车客服，与您进一步沟通试驾、购车等事宜)</span>
+            </p>
+        </div>
+    </div>
+    <div class="cn3 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/217/170/208/13568767.jpg" alt=""></div>
+    <div class="cn4 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/218/170/208/13568768.jpg" alt=""></div>
+    <div class="cn5 cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/219/170/208/13568769.jpg" alt=""></div>
+    <div class="cn6 cn pr">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/220/170/208/13568770.jpg" alt="">
+        <div class="title po">
+            <p class="provX">
+                <select value="">
+                    <option value="河南省">河南省</option>
+                </select>
+            </p>
+            <p class="cityX">
+                <select value="">
+                    <option value="郑州市">郑州市</option>
+                </select>
+            </p>
+        </div>
+        <div class="list po">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des = [
+        {"pro":"河南","city":"郑州","name":"河南丰之元汽车销售服务有限公司","nameCode":"SA41004","address":"郑州市经开区航海东路与经开第一大街交叉口向南1000米","tel":"0371-85967777"},
+        {"pro":"河南","city":"郑州","name":"河南豫海汽车销售有限公司","nameCode":"SA41002","address":"郑州市金水区中州大道与民航路交汇处南100米路西","tel":"0371—65949618"},
+        {"pro":"河南","city":"郑州","name":"郑州中升汇迪汽车销售服务有限公司","nameCode":"SA41023","address":"郑州市花园路与开元路向西300米","tel":"0371-66655555"},
+        {"pro":"河南","city":"郑州","name":"郑州奥泽汽车销售服务有限公司","nameCode":"SA41021","address":"郑州市中原区郑上路与杭州路交叉口向西300米","tel":"0371-55951666"},
+    ]
+</script>
+<script>
+    for (var i=0;i<des.length;i++){
+        $('#dealers').append('<option value="'+des[i].name+'">'+des[i].name+'</option>');
+        var li = '<ul>'+
+                '<li>'+des[i].name+'</li>'+
+                '<li>'+des[i].address+'</li>'+
+                '<li>'+des[i].tel+'</li>'+
+                '</ul>';
+        $('.list').append(li);
+    }
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(), //电话
+                series_id = $('#series').val(),    //车型id
+                city = $('#city').val(),
+                dealers = $('#dealers').val(),
+                brand_id = 8, //品牌
+                act_id = 2433,  //活动id
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id : act_id,
+                    dealers:dealers
+                };
+            //判断填写是否正确
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if( city == '0' ) {
+                alert('请选择城市');
+                return false;
+            }
+            if( series_id == '0' ) {
+                alert('请选择车型');
+                return false;
+            }
+            if( dealers == '0' ) {
+                alert('请选择经销商');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    }else{
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+    $(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+</script>
+</html>

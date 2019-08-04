@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Title</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .b {
+            display: none;
+        }
+        .line {
+            position: relative;
+            width: 400px;
+            height: 2px;
+            background: red;
+        }
+        .line:after {
+            content: '';
+            clear: both;
+            position: absolute;
+            right: 11px;
+            bottom: 0;
+            width: 2px;
+            height: 30px;
+            background: red;
+            -webkit-transform: skew(40deg);
+            -moz-transform: skew(40deg);
+            -ms-transform: skew(40deg);
+            -o-transform: skew(40deg);
+            transform: skew(40deg);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <label>是</label>
+        <input type="radio" name="a" data-vid="yes">
+        <label>否</label>
+        <input type="radio" name="a" data-vid="no">
+    </form>
+    <form>
+        <label>是</label>
+        <input type="radio" name="a" data-vid="yes">
+        <label>否</label>
+        <input type="radio" name="a" data-vid="no">
+    </form>
+</div>
+<div class="wt">
+    <div class="b"><h1>问题一</h1></div>
+    <div class="b"><h1>问题二</h1></div>
+</div>
+<p class="line"></p>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script>
+    $('input[type=radio]').on('input',function () {
+        var i = $(this).parent('form').index();
+        $('.wt .b').eq(i).show();
+    })
+</script>
+</html>

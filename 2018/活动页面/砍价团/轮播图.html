@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link href="http://dongguan.auto.qq.com/zhuanti/mobile/1607car/index.css" rel="stylesheet">
+    <title>Title</title>
+    <style>
+        .banner { position: relative }
+        .banner-list { height: 465px; position: relative;}
+        .banner-list li { position: absolute; top: 0; left: 0; height: 465px; width: 100%; display: none;}
+        .banner-list li.active { display: block;}
+        .banner-dor { width: 102px; padding: 2px 10px 0 10px; position: absolute; bottom: 10px; left: 50%; margin-left: -50px; z-index: 998;}
+        .banner-dor span { display: inline-block; width: 14px; height: 14px; background: white; margin-right: 8px; margin-left: 8px; border-radius: 50%; cursor: pointer;}
+        .banner-dor span.active { background: red;width: 18px;border-radius: 6px}
+    </style>
+    	<script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+    <!--<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>-->
+    <!--<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>-->
+</head>
+<body>
+<div class="banner">
+    <ul class="banner-list">
+        <li class="active"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/172/100/199/12965647.jpg"/></li>
+        <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/173/100/199/12965648.jpg"/></li>
+        <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/174/100/199/12965649.jpg"/></li>
+        <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/175/100/199/12965650.jpg"/></li>
+    </ul>
+    <div class="banner-dor">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</body>
+<script>
+    $(function () {
+        var BannerShow = function(){
+            var lis = $('.banner-list li');//单个图片
+            var dors = $('.banner-dor span');//单个圈块
+            var banw = $('.banner-list');//图片
+            var t = null;//
+            banw.hover(function(){
+                clearInterval(t);//图片悬停清空倒计时
+            },function(){
+                AutoPlay();//移开删除
+            })
+            dors.mouseover(function(){
+                clearInterval(t);//清空自动
+                var index = $(this).index();//点击的索引
+                lis.removeClass('active');//图片移除索引
+                lis.eq(index).addClass('active');//相同的图片加上索引
+                dors.removeClass('active');
+                $(this).addClass('active');
+            });
+            var Index = $('.baner-dor span.active').index();//活动块的索引
+            var AutoPlay = function(){
+                t=setInterval(function(){//定时执行
+                    Index++;//1秒+1
+                    lis.removeClass('active');//移除
+                    lis.eq(Index).addClass('active');//、、添加
+                    dors.removeClass('active');
+                    dors.eq(Index).addClass('active');
+                    Index>=4 ? Index=-1 : Index;//索引大于等于2时，所以等于-1.否则等于索引
+                },1000);
+            }
+            AutoPlay();
+        };
+        BannerShow()
+    })
+</script>
+</html>

@@ -1,0 +1,951 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="pathname" content="bytecom_tetris"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"/>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <style type="text/css">@charset "utf-8";
+    html {
+        color: #000;
+        overflow-y: scroll;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        font-family: Arial, Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+    }
+
+    html * {
+        outline: 0;
+        -webkit-text-size-adjust: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0
+    }
+
+    html input {
+        font-family: Arial, Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    fieldset, img {
+        border: 0
+    }
+
+    del {
+        text-decoration: line-through
+    }
+
+    address, caption, cite, code, dfn, em, th, var {
+        font-style: normal;
+        font-weight: 500
+    }
+
+    ol, ul {
+        list-style: none
+    }
+
+    caption, th {
+        text-align: left
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    ins, a {
+        text-decoration: none
+    }
+
+    html, body {
+        width: 100%
+    }
+
+    body {
+        background-color: #FFF;
+        line-height: 1.5
+    }
+
+    #content {
+        width: 100%;
+        margin: 0 auto
+    }
+
+    .piece {
+        width: 100%;
+        background-color: transparent;
+        position: relative;
+        box-sizing: border-box
+    }
+
+    .piece.fbottom, .piece.ftop {
+        position: fixed !important;
+        width: 100% !important;
+        z-index: 10 !important
+    }
+
+    .create-left-content {
+        width: 1.867rem;
+        height: auto;
+        text-align: center;
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        left: 0
+    }
+
+    .create-right-content {
+        width: 1.867rem;
+        height: auto;
+        text-align: center;
+        z-index: 9999;
+        position: fixed;
+        bottom: 0;
+        right: 0
+    }
+
+    .piece.fbottom {
+        top: auto !important;
+        bottom: 0 !important
+    }
+
+    .piece.ftop {
+        top: 0 !important;
+        bottom: auto !important
+    }
+
+    #content {
+        min-height: 100%;
+        position: relative;
+        overflow: hidden
+    }
+
+    #MEIQIA-PANEL-HOLDER {
+        right: 0 !important
+    }
+
+    html::-webkit-scrollbar {
+        display: none
+    }
+
+    .hide {
+        display: none !important
+    }</style>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/swiper_302abfc.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/ledfont_ccb326d.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/daymode_1ae66db.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/notice_7471b49.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="//s3.pstatp.com/bytecom/resource/vue/bricks/bricks-common_ac935f8.css"/>
+    <script id="globalvar">
+        GLOBAL_VAR = JSON.parse('{"siteId":"1601872096284676","pageIds":[1601872096284676],"pageid_map":{"276426":1601872096284676},"shareTitle":"关税调整25万抢林肯，报名送国际车展门票！","name":"关税调整25万抢林肯，报名送国际车展门票！","shareDesc":"","shareThumb":""}');
+        componentsConfig = {
+            PanoramaList: []
+        }
+    </script>
+    <script src="//s3.pstatp.com/bytecom/resource/vue/lib/vendor_293fa4c.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="//s3.pstatp.com/bytecom/resource/vue/lib/main_5fdef5d.js"></script>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/brand_5a9c6d0.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/iconfont_03f5f23.css"/>
+    <link rel="stylesheet" type="text/css" href="//s3.pstatp.com/bytecom/resource/vue/lib/brickicon_2e09b13.css"/>
+    <!-- 替换为Vue模板语法 -->
+
+    <title>关税调整25万抢林肯，报名送国际车展门票！</title>
+
+
+    <script>
+        !function () {
+            "use strict";
+            !function (t, e) {
+                var r = t.seed = t.seed || [];
+                if (r.start = +new Date, !r.initialize && !r.invoked) {
+                    r.invoked = !0, r.methods = ["track", "page", "on", "once"], r.factory = function (t) {
+                        return function () {
+                            var e = Array.prototype.slice.call(arguments);
+                            return e.unshift(t), r.push(e), r
+                        }
+                    };
+                    for (var n = 0; n < r.methods.length; n++) {
+                        var a = r.methods[n];
+                        r[a] = r.factory(a)
+                    }
+                    r.load = function () {
+                        var t = e.createElement("script");
+                        t.type = "text/javascript", t.async = !0, t.src = "//s3.pstatp.com/bytecom/resource/tetris/insight/v0.1-beta/analytics.js";
+                        var r = e.getElementsByTagName("script")[0];
+                        r.parentNode.insertBefore(t, r)
+                    }, r.SNIPPET_VERSION = "1.1.8", r.load()
+                }
+            }(window, document)
+        }();
+    </script>
+    <style>.clearfix::after {
+        display: block;
+        content: "";
+        clear: both
+    }</style>
+    <script>
+        !function () {
+            try {
+                window.addEventListener("DOMContentLoaded", function () {
+                    document.querySelectorAll(".form-tel-autofillbtn").forEach(function (ele) {
+                        ele.parentElement.remove()
+                    })
+                })
+            } catch (e) {
+            }
+            ;
+        }();
+    </script>
+</head>
+
+<body id="body" style="">
+<script type="text/javascript">!function (e) {
+    function t() {
+        var e = d.getBoundingClientRect().width;
+        u = e / 10, d.style.fontSize = u + "px"
+    }
+
+    function n() {
+        o.body && (o.body.style.fontSize = 14 / (i / 10) + "rem")
+    }
+
+    var i = 375, o = e.document, d = o.documentElement, c = d.getBoundingClientRect().width,
+        u = (window.devicePixelRatio || 1, c / 10), l = null;
+    e.addEventListener("resize", function () {
+        clearTimeout(l), l = setTimeout(t, 300)
+    }, !1), n(), "complete" === o.readyState ? n() : o.addEventListener("DOMContentLoaded", function () {
+        n()
+    }, !1), t()
+}(window);</script>
+<div id="csrf"><input type='hidden' name='csrfmiddlewaretoken' value='gKBD8gDAFBrrkTdP79nrXjCSX0OMbjDn'/></div>
+<main data-server-rendered="true"><span></span>
+    <section id="frame-35" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527739447628/8b4bd8edd2dde712f08f454af7ee6ad8"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-33" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527667290601/769312a7b2a5d9e73580c1084f06086c"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-27" class="brick-frame brick-frame-server" style="background-color:rgba(0, 0, 0, 0);">
+        <div class="brick-mask" style="background-color:rgba(0, 0, 0, 0);"></div>
+        <div class="brick-content">
+            <div class="piece form-piece">
+                <div><!---->
+                    <form id="a27" action_url="/tetris/form/submit/" form_id="1601875919046663"
+                          class="form-group-i input-style2"><input type="hidden" name="site_id"
+                                                                   value="1601872096284676">
+                        <input type="hidden" name="ad_id" value="0">
+                        <input type="hidden" name="adv_id" value="6337077838"><span class="csrf-token"><input
+                                type='hidden' name='csrfmiddlewaretoken'
+                                value='gKBD8gDAFBrrkTdP79nrXjCSX0OMbjDn'/></span>
+                        <div class="validate-wrapper hide spam-user-validate-wrapper">
+                            <div class="validate-dialog spam-user-validate-dialog">
+                                <div class="close"><i class="iconeditor-cross"></i></div>
+                                <div class="title">验证手机</div>
+                                <div class="spam-info"></div>
+                                <div class="pic-validate hide"><input type="number" pattern="[0-9]*" name="pic-captcha"
+                                                                      placeholder="图片验证码"
+                                                                      class="input-style validate-item spam-pic-captcha">
+                                    <div class="decor-line"></div>
+                                    <img origin-src class="validate-img validate-item"><span
+                                            class="nor-btn validate-item spam-refresh-pic-btn"><i
+                                            class="iconeditor-refresh"></i><span>刷新</span></span></div>
+                                <div class="spam-sms-validate"><input type="text" pattern="[0-9]*" name="captcha"
+                                                                      placeholder="短信验证码"
+                                                                      class="input-style validate-item spam-sms-captcha"><span
+                                        origin-text="发送短信验证码" class="nor-btn validate-item spam-send-sms "><span
+                                        class="text">发送短信验证码</span><span class="timer"></span></span></div>
+                                <div class="nor-btn spam-submit">提交</div>
+                            </div>
+                        </div><!---->
+                        <div class="form-element"><input type="hidden" name="label_1601875919045639" value="姓名"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="name" class="input-group-i"><span id="label"
+                                                                             class="input-group-addon-i warn-star"
+                                                                             style="color:#808080;">姓名</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="name1"
+                                                                 validate="name" eleType="name"
+                                                                 uid="15276678110167733520443059236214"
+                                                                 name="1601875919045639"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045655" value="电话"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="cellphone" class="input-group-i"><span id="label"
+                                                                                  class="input-group-addon-i warn-star"
+                                                                                  style="color:#808080;">电话</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="tel1"
+                                                                 validate="cellphone" eleType="telphone"
+                                                                 uid="15276678110165063493332167797480"
+                                                                 name="1601875919045655"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045671" value="意向车型">
+                            <!----><!----><!----><!----><!----><!----><!---->
+                            <div data-select="{&quot;tree&quot;:{&quot;text&quot;:&quot;&quot;,&quot;children&quot;:[{&quot;text&quot;:&quot;林肯MKZ&quot;},{&quot;text&quot;:&quot;林肯MKC&quot;},{&quot;text&quot;:&quot;林肯MKX&quot;},{&quot;text&quot;:&quot;新林肯领航员&quot;},{&quot;text&quot;:&quot;林肯大陆&quot;}]},&quot;deep&quot;:1,&quot;arrObj&quot;:{&quot;0&quot;:{&quot;text&quot;:&quot;&quot;,&quot;pid&quot;:0,&quot;id&quot;:0,&quot;sid&quot;:[&quot;0-1&quot;,&quot;0-2&quot;,&quot;0-3&quot;,&quot;0-4&quot;,&quot;0-5&quot;]},&quot;0-1&quot;:{&quot;text&quot;:&quot;林肯MKZ&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-1&quot;,&quot;sid&quot;:[]},&quot;0-2&quot;:{&quot;text&quot;:&quot;林肯MKC&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-2&quot;,&quot;sid&quot;:[]},&quot;0-3&quot;:{&quot;text&quot;:&quot;林肯MKX&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-3&quot;,&quot;sid&quot;:[]},&quot;0-4&quot;:{&quot;text&quot;:&quot;新林肯领航员&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-4&quot;,&quot;sid&quot;:[]},&quot;0-5&quot;:{&quot;text&quot;:&quot;林肯大陆&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-5&quot;,&quot;sid&quot;:[]}}}"
+                                 class="selectMulti-group"><span id="label" class="select-addon" style="color:#808080;">意向车型</span><input
+                                    value name="1601875919045671" data-value="{&quot;1&quot;:&quot;null&quot;}"
+                                    class="multi-select">
+                                <div class="selectMulti-wrapper">
+                                    <div class="select-wrapper select-list1"><select class="input-style" id="series1">
+                                        <option data-id="0" value="0">--请选择--</option>
+                                        <option data-id="0-1" value="394">林肯MKZ</option>
+                                        <option data-id="0-2" value="358">林肯MKC</option>
+                                        <option data-id="0-3" value="395">林肯MKX</option>
+                                        <option data-id="0-4" value="639">新林肯领航员</option>
+                                        <option data-id="0-5" value="638">林肯大陆</option>
+                                    </select></div>
+                                </div><!----></div><!----><!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045687" value="立享优惠">
+                            <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                            <div class="input-group-i">
+                                <div id="submit-result" class="el-result"></div>
+                                <button type="submit" class="btn-i" id="submit1"
+                                        style="border-radius:0.107rem;background-color:#f85959 !important;color:#FFF;height:1.12rem;line-height:1.12rem;width:100%;">
+                                    立享优惠
+                                </button>
+                                <input type="reset" id="reset" style="display:none;"><!----></div><!----><!----></div>
+                        <input type="hidden" name="export_url" value=""><!---->
+                        <button type="button" class="btn btn-jump hide"></button>
+                        <div data-node="recent-submit-content" class="recent-submit-content hide">
+                            <div class="recent-title">最新报名客户</div>
+                            <div class="recent-notification"><i class="icon-notification2"></i></div>
+                            <div class="swiper-container"></div>
+                        </div><!----></form><!---->
+                    <div>
+                        <style>.nor-btn {
+                            background-color: #f85959
+                        }
+
+                        .form-piece .recent-submit-content .recent-title {
+                            background-color: #f85959
+                        }</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-15" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665265315/f3464db08aa549ba2bcb71f6366aca9e"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-14" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665265161/a3a8543d9b09116ac9bc36a379112961"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-13" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665330479/40c6023c2f126b48c8f0be106a9a54d7"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-12" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665337109/f7504452a29353119b9b9a222029ff05"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-11" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527666350434/14abc63c1f5aa2a2b2601abe209e69c6"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-10" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665356086/3e7dedc9eb0ac50fbac69b93dc70c1f4"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-18" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tt-data-manualslide="" tt-data-pct="" class="piece slide-box">
+                <div id="a18" class="slide-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665367227/79f2eea55babfbe3aa6f6058de2beac9"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665375551/c4d6302d6bec2ae40da08b61ca22da21"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665383312/be1f97beed1fba5af6e6811720c1f34e"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665391431/b3a7a25ee328e74051ccb976a9635158"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-4" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665398885/e1e5ec52651c39f9f8875841f89fb082"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-19" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tt-data-manualslide="" tt-data-pct="" class="piece slide-box">
+                <div id="a19" class="slide-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665494484/f2971e8f872d2db6ff9c8bea0b14d9b0"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665495097/72c8701c0210cdef0d7cda2a5f3ecac3"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665495936/ee08d046148fa62a98a28a208830fd2f"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665495946/4841b06e6487b4baad688574a8cecd0a"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-3" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665517719/bc5b6a09dd47c98c7e81bc18f5e72526"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-20" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tt-data-manualslide="" tt-data-pct="" class="piece slide-box">
+                <div id="a20" class="slide-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665547049/5707471fe06efe7541a6d951113db296"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665547047/ac77d175adc240d5948ed695b7aea627"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665547051/a2409aef40d001eac139759633c23e33"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665547225/afd8aa8d30d1b573fca83937e57db997"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-21" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665576883/8f83d260d04fc7a644fafff5786fcc25"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-22" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tt-data-manualslide="" tt-data-pct="" class="piece slide-box">
+                <div id="a22" class="slide-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665591352/8b1b0ce73624f6b37a859910ed61c099"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665591348/a13254dee17434bac96f5d369999cfba"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665591304/30007bd9da1fce163d4f667790568dea"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665591417/d88d0e410ebc936689c37798d3df8b14"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-23" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665622332/d35a7651367fd0c71555e5ac2e415736"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-24" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tt-data-manualslide="" tt-data-pct="" class="piece slide-box">
+                <div id="a24" class="slide-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665759367/81f2a12582e349c914e737fdae971c8d"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665759409/1d3fa053748070a5ee87ac4f26f12d40"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665760564/7bcaac799d3928cf06b7e33b41a54a6a"></a>
+                            </div>
+                            <div class="swiper-slide"><a target="_self" href="javascript:void(0);"><span
+                                    class="img-label"></span><img
+                                    src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665760613/b2bb07135c1e3a60f07af7d9f0eb087e"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-26" class="brick-frame brick-frame-server" style="background-color:rgba(0, 0, 0, 0);">
+        <div class="brick-mask" style="background-color:rgba(0, 0, 0, 0);"></div>
+        <div class="brick-content">
+            <div class="piece form-piece">
+                <div><!---->
+                    <form id="a26" action_url="/tetris/form/submit/" form_id="1601875919046663"
+                          class="form-group-i input-style2"><input type="hidden" name="site_id"
+                                                                   value="1601872096284676">
+                        <input type="hidden" name="ad_id" value="0">
+                        <input type="hidden" name="adv_id" value="6337077838"><span class="csrf-token"><input
+                                type='hidden' name='csrfmiddlewaretoken'
+                                value='gKBD8gDAFBrrkTdP79nrXjCSX0OMbjDn'/></span>
+                        <div class="validate-wrapper hide spam-user-validate-wrapper">
+                            <div class="validate-dialog spam-user-validate-dialog">
+                                <div class="close"><i class="iconeditor-cross"></i></div>
+                                <div class="title">验证手机</div>
+                                <div class="spam-info"></div>
+                                <div class="pic-validate hide"><input type="number" pattern="[0-9]*" name="pic-captcha"
+                                                                      placeholder="图片验证码"
+                                                                      class="input-style validate-item spam-pic-captcha">
+                                    <div class="decor-line"></div>
+                                    <img origin-src class="validate-img validate-item"><span
+                                            class="nor-btn validate-item spam-refresh-pic-btn"><i
+                                            class="iconeditor-refresh"></i><span>刷新</span></span></div>
+                                <div class="spam-sms-validate"><input type="text" pattern="[0-9]*" name="captcha"
+                                                                      placeholder="短信验证码"
+                                                                      class="input-style validate-item spam-sms-captcha"><span
+                                        origin-text="发送短信验证码" class="nor-btn validate-item spam-send-sms "><span
+                                        class="text">发送短信验证码</span><span class="timer"></span></span></div>
+                                <div class="nor-btn spam-submit">提交</div>
+                            </div>
+                        </div><!---->
+                        <div class="form-element"><input type="hidden" name="label_1601875919045639" value="姓名"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="name" class="input-group-i"><span id="label"
+                                                                             class="input-group-addon-i warn-star"
+                                                                             style="color:#808080;">姓名</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="name2"
+                                                                 validate="name" eleType="name"
+                                                                 uid="15276678110167733520443059236214"
+                                                                 name="1601875919045639"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045655" value="电话"><!---->
+                            <!----><!----><!----><!---->
+                            <div validate="cellphone" class="input-group-i"><span id="label"
+                                                                                  class="input-group-addon-i warn-star"
+                                                                                  style="color:#808080;">电话</span>
+                                <div class="m-input-text"><input required="required" type="text" placeholder="" id="tel2"
+                                                                 validate="cellphone" eleType="telphone"
+                                                                 uid="15276678110165063493332167797480"
+                                                                 name="1601875919045655"
+                                                                 class="input-style form-input-i"><span
+                                        class="el-input-clear"></span></div><!----><!----></div><!----><!----><!---->
+                            <!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045671" value="意向车型">
+                            <!----><!----><!----><!----><!----><!----><!---->
+                            <div data-select="{&quot;tree&quot;:{&quot;text&quot;:&quot;&quot;,&quot;children&quot;:[{&quot;text&quot;:&quot;林肯MKZ&quot;},{&quot;text&quot;:&quot;林肯MKC&quot;},{&quot;text&quot;:&quot;林肯MKX&quot;},{&quot;text&quot;:&quot;新林肯领航员&quot;},{&quot;text&quot;:&quot;林肯大陆&quot;}]},&quot;deep&quot;:1,&quot;arrObj&quot;:{&quot;0&quot;:{&quot;text&quot;:&quot;&quot;,&quot;pid&quot;:0,&quot;id&quot;:0,&quot;sid&quot;:[&quot;0-1&quot;,&quot;0-2&quot;,&quot;0-3&quot;,&quot;0-4&quot;,&quot;0-5&quot;]},&quot;0-1&quot;:{&quot;text&quot;:&quot;林肯MKZ&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-1&quot;,&quot;sid&quot;:[]},&quot;0-2&quot;:{&quot;text&quot;:&quot;林肯MKC&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-2&quot;,&quot;sid&quot;:[]},&quot;0-3&quot;:{&quot;text&quot;:&quot;林肯MKX&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-3&quot;,&quot;sid&quot;:[]},&quot;0-4&quot;:{&quot;text&quot;:&quot;新林肯领航员&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-4&quot;,&quot;sid&quot;:[]},&quot;0-5&quot;:{&quot;text&quot;:&quot;林肯大陆&quot;,&quot;pid&quot;:0,&quot;id&quot;:&quot;0-5&quot;,&quot;sid&quot;:[]}}}"
+                                 class="selectMulti-group"><span id="label" class="select-addon" style="color:#808080;">意向车型</span><input
+                                    value name="1601875919045671" data-value="{&quot;1&quot;:&quot;null&quot;}"
+                                    class="multi-select">
+                                <div class="selectMulti-wrapper">
+                                    <div class="select-wrapper select-list1"><select class="input-style" id="series2">
+                                        <option data-id="0" value="0">--请选择--</option>
+                                        <option data-id="0-1" value="394">林肯MKZ</option>
+                                        <option data-id="0-2" value="358">林肯MKC</option>
+                                        <option data-id="0-3" value="395">林肯MKX</option>
+                                        <option data-id="0-4" value="639">新林肯领航员</option>
+                                        <option data-id="0-5" value="638">林肯大陆</option>
+                                    </select></div>
+                                </div><!----></div><!----><!----><!----><!----></div>
+                        <div class="form-element"><input type="hidden" name="label_1601875919045687" value="立享优惠">
+                            <!----><!----><!----><!----><!----><!----><!----><!----><!---->
+                            <div class="input-group-i">
+                                <div id="submit-result" class="el-result"></div>
+                                <button type="submit" class="btn-i" id="submit2"
+                                        style="border-radius:0.107rem;background-color:#f85959 !important;color:#FFF;height:1.12rem;line-height:1.12rem;width:100%;">
+                                    立享优惠
+                                </button>
+                                <input type="reset" id="reset" style="display:none;"><!----></div><!----><!----></div>
+                        <input type="hidden" name="export_url" value=""><!---->
+                        <button type="button" class="btn btn-jump hide"></button>
+                        <div data-node="recent-submit-content" class="recent-submit-content hide">
+                            <div class="recent-title">最新报名客户</div>
+                            <div class="recent-notification"><i class="icon-notification2"></i></div>
+                            <div class="swiper-container"></div>
+                        </div><!----></form><!---->
+                    <div>
+                        <style>.nor-btn {
+                            background-color: #f85959
+                        }
+
+                        .form-piece .recent-submit-content .recent-title {
+                            background-color: #f85959
+                        }</style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-25" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div tetris-data-click="" tetris-data-component-type="image" tetris-data-action-type="click"
+                 class="piece image-con">
+                <div class="image-box" style="-webkit-clip-path:none;"><a target="_blank" href="javascript:void(0);"
+                                                                          class="image-link">
+                    <div class="image-mask" style="background-color:none;"></div>
+                    <img src="http://sf1-ttcdn-tos.pstatp.com/obj/ad-tetris-site/file/1527665771774/4624b2a16b49a4f77b0d563650334a8a"
+                         class="image-item"></a><span class="image-text"></span></div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-34" class="brick-frame brick-frame-server">
+        <div class="brick-mask"></div>
+        <div class="brick-content">
+            <div>
+                <div class="piece clearfix brick-map map-style4">
+                    <div class="map-con"><!---->
+                        <div id="a34" class="bd-map" style="height:3.2rem;"></div>
+                        <a href="//api.map.baidu.com/marker?location=22.554181,113.9125&amp;title=深圳市南山区南头街道关口二路嘉进隆汽车城A区&amp;content=深圳市南山区南头街道关口二路嘉进隆汽车城A区&amp;output=html&amp;src=baidu"
+                           target="_blank" tt-data-click="click" tt-data-eventtype="map" class="overlay"></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="frame-28" class="brick-frame brick-frame-server"
+             style="padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;background-color:rgba(0, 0, 0, 0);left:0;bottom:0;position:fixed;z-index:21;top:auto;">
+        <div class="brick-mask" style="background-color:rgba(0, 0, 0, 0);"></div>
+        <div class="brick-content">
+            <div class="piece telephone-button"><a id="a28" href="tel:075529062222" data-tel="075529062222"
+                                                   tt-data-eventvalue="075529062222" phone_number=""
+                                                   class="tel-btn style1"
+                                                   style="background-color:#f85959;color:#FFF;line-height:1.173rem;border-radius:0.107rem;border-width:0.027rem;border-color:rgba(0, 0, 0, 0);border-style:none;font-size:0.48rem;width:100%;height:1.173rem;"><i
+                    class="brick-i-tel-left icon-telphone_left"></i><span class="tel-label text-ellipsis">销售热线</span><i
+                    class="brick-i-tel-right icon-telphone_right"></i><i class="icon-telphone_circle brick-i-tel"></i><i
+                    class="icon-left_arrow"></i><input type="hidden" name="site_id" value="1601872096284676"><input
+                    type="hidden" name="ad_id" value="0"></a></div>
+        </div>
+    </section>
+</main>
+</body>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/toutiao-tetris-analytics-init_a60908f.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/track_log/src/tetris-user-action.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/daymode_c65fed4.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/base64_68e8d03.js"></script>
+<script src="//api.map.baidu.com/api?ak=p4FTFpD8nfUUqK3yRUgvIGOs&v=2.0&s=1"></script>
+<script src="//s3.pstatp.com/bytecom/resource/site_web/static/js/tt_player_https_dist_dcb8601.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/swiper_d5340fc.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/lib/notice_584309a.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/Form/script.landing_e18a67e.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/Slider/script.landing_0f3a390.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/Map/script.landing_48406e5.js"></script>
+<script src="//s3.pstatp.com/bytecom/resource/vue/bricks/TelephoneButton/script.landing_4fa4684.js"></script>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script>(function () {
+    var FORM = require("tetris/parse/Form.js");
+    var _FORM = FORM.init({
+        id: "#a27",
+        showJump: "0",
+        successUrl: "http://www.szlincoln.com/",
+        failedUrl: "http://www.szlincoln.com/",
+        successmsg: "",
+        isShowCount: "false",
+        countText: "目前已经有{计数}人参与活动",
+        countNum: "100",
+        formId: "1601875919046663",
+        locateBgColor: "#f85959",
+        recentSubmitStyle: 0,
+        caculator: null
+    });
+    var Slider = require("tetris/parse/Slider.js");
+    Slider.init("#a18", "true", "0", "", "auto");
+    var Slider = require("tetris/parse/Slider.js");
+    Slider.init("#a19", "false", "0", "", "auto");
+    var Slider = require("tetris/parse/Slider.js");
+    Slider.init("#a20", "true", "0", "", "auto");
+    var Slider = require("tetris/parse/Slider.js");
+    Slider.init("#a22", "true", "0", "", "auto");
+    var Slider = require("tetris/parse/Slider.js");
+    Slider.init("#a24", "false", "0", "", "auto");
+    var FORM = require("tetris/parse/Form.js");
+    var _FORM = FORM.init({
+        id: "#a26",
+        showJump: "0",
+        successUrl: "http://www.szlincoln.com/",
+        failedUrl: "http://www.szlincoln.com/",
+        successmsg: "提交成功",
+        isShowCount: "false",
+        countText: "目前已经有{计数}人参与活动",
+        countNum: "100",
+        formId: "1601875919046663",
+        locateBgColor: "#f85959",
+        recentSubmitStyle: 0,
+        caculator: null
+    });
+    var BDMap = require("tetris/parse/Map.js");
+    BDMap.init("a34", "深圳市南山区南头街道关口二路嘉进隆汽车城A区", "113.9125,22.554181");
+    var Phone = require("tetris/parse/TelephoneButton.js");
+    Phone.init('#a28', '0', '', '', '');
+})();</script>
+<script>
+    // 报名
+    $("#submit1").click(function() {
+        var name=$("#name1").val(),  //姓名
+            tel=$("#tel1").val(), //电话
+            series_id = $('#series1').val(),  //车型
+            brand_id = 61, //品牌id
+            act_id = 2676,  //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                series_id: series_id,
+                brand_id: brand_id,
+                act_id : act_id,
+            };
+        //判断填写是否正确
+        if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+            alert('请输入正确的中文名');
+            return false;
+        }
+        if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            alert('手机格式不正确');
+            return false;
+        }
+        if ( series_id == '0') {
+            alert('请选择车型');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type:"post",
+            url:Url,
+            data:Data,
+            async:true,
+            dataType:"jsonp",
+            success:function(data){
+                if(data.status==1){
+                    alert('恭喜你，报名成功！');
+                    window.location.href = location.href;
+                }else{
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    })
+    $("#submit2").click(function() {
+        var name=$("#name2").val(),  //姓名
+            tel=$("#tel2").val(), //电话
+            series_id = $('#series2').val(),  //车型
+            brand_id = 61, //品牌id
+            act_id = 2676,  //活动id
+            Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+            Data = {
+                name: name,
+                phone: tel,
+                series_id: series_id,
+                brand_id: brand_id,
+                act_id : act_id,
+            };
+        //判断填写是否正确
+        if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+            alert('请输入正确的中文名');
+            return false;
+        }
+        if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+            alert('手机格式不正确');
+            return false;
+        }
+        if ( series_id == '0') {
+            alert('请选择车型');
+            return false;
+        }
+        //发送请求
+        $.ajax({
+            type:"post",
+            url:Url,
+            data:Data,
+            async:true,
+            dataType:"jsonp",
+            success:function(data){
+                if(data.status==1){
+                    alert('恭喜你，报名成功！');
+                    window.location.href = location.href;
+                }else{
+                    alert("很抱歉，你报名失败。");
+                }
+            }
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>请选择您的城市</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=TDXBZ-IFSHP-772DC-VWMBR-K32GE-FWBGQ"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA"></script>
+    <style>
+        html,body{background-color: #f5f5f5;}
+        main {max-width: 750px;margin: 0 auto;}
+        nav {
+            background: white;
+            width: 100%;
+            height: 3.5rem;
+            margin: 1rem auto;
+        }
+        nav p {
+            line-height: 3.5rem;
+            font-size: 1.3rem;
+            margin-left: 1rem;
+        }
+        nav p span {
+            margin-left: 1rem;
+        }
+        section {
+            width: 100%;
+            height: 20rem;
+            background: white;
+        }
+        section h6 {
+            font-weight: initial;
+            margin-left: 1rem;
+            height: 3rem;
+            line-height: 3rem;
+            font-size: 1.3rem;
+        }
+        section .cityList {
+            width: 100%;
+            height: 10rem;
+        }
+        section .cityList ul {
+            margin-left: 1rem;
+        }
+        section .cityList ul li {
+            float: left;
+            width: 7.4rem;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            border: 1px solid #ddd;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+        a,a:hover,a:active{color: #000;text-decoration: none;}
+    </style>
+</head>
+<body>
+<main>
+    <nav>
+        <p>当前定位城市:<span class="mapCity"></span></p>
+    </nav>
+    <section>
+        <h6>选择活动城市</h6>
+        <div class="cityList">
+            <ul>
+                <li><a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SPHH5H.htm?city=gz">广州</a></li>
+                <li><a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SPHH5H.htm?city=sz">深圳</a></li>
+                <li><a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SPHH5H.htm?city=dg">东莞</a></li>
+                <li><a href="http://guangzhou.auto.qq.com/zhuanti/2018zt/SPHH5H.htm?city=fs">佛山</a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script>
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            if(r.accuracy==null){
+                // alert('accuracy null:'+r.accuracy);
+                //用户决绝地理位置授权
+                return;
+            }
+            //用户允许地理位置授权
+            var province = r.address.province;
+           $('nav p span').text(r.address.city);
+        }
+        else {
+            alert('failed'+this.getStatus());
+            return false;
+        }
+    },{enableHighAccuracy: true})
+</script>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>吉利SUV大家庭活动 welcome！</title>
+    <link href="http://www.yetcar.com/Public/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" charset="UTF-8" href="http://dongguan.auto.qq.com/js/publicJS/conmon.css">
+    <style type="text/css">
+        html,body { color: #333;}
+        /*.blod { font-weight: bold;}*/
+        .pink { color: #f43350;}
+        .red { color: #f44833;}
+        .blue { color: #2267cc;}
+        .line1 { font-size: 24px !important; line-height: 32px !important;}
+        .line3 { font-size: 20px !important; line-height: 26px !important;}
+
+        .banner { width: 100%;}
+        .banner .banner1 img { width: 100%;}
+        .content-wrap { position: relative; overflow: hidden; background: #CAD2E8;}
+        .con-bg { width: 100%;}
+        .con-bg1 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+        .con-bg2 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_02.jpg) center top no-repeat; height: 359px;}
+        .con-bg3 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_03.jpg) center top no-repeat; height: 360px;}
+        .con-bg4 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+        .con-bg5 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_02.jpg) center top no-repeat; height: 359px;}
+        .con-bg6 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_03.jpg) center top no-repeat; height: 360px;}
+        .con-bg7 { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_01.jpg) center top no-repeat; height: 319px;}
+
+
+        .con-body { width: 1000px; position: absolute; top: 650px; left: 50%; margin-left: -500px;}
+
+        .bm-wrap { width: 100%; background: #FFFFFF; padding-bottom: 20px;}
+        .bmk { width: 1000px; margin: 0 auto; padding-top: 40px; height: auto; min-height: 300px; overflow: hidden; position: relative;}
+        .bmk h3, .process h3, .car-swrap h3, .brand-info h3 { font-size: 40px; font-weight: bold; color: #2267cc; text-align: center;}
+        .bmk h5, .process h5, .car-swrap h5, .brand-info h5 { color: #888; font-size: 13px; text-align: center; line-height: 50px;}
+        .bmk .bm-center { width: 936px; height: auto; min-height: 130px; border: 2px solid #2267cc; padding: 20px 30px;}
+        .bmk .bm-center .bmtit { width: 141px; float: left; margin-right: 20px; margin-top: -3px;}
+        .bmk .bm-center .car { width: 650px; overflow: hidden;}
+        .bmk .bm-center .car h4 { width: 115px; line-height: 35px; color: #2267cc; font-size: 20px;font-weight: bold; float: left;}
+        .bmk .btns { width: 535px; font-size: 16px; float: left;}
+        .bmk label { width: 115px; display: inline-block; margin-right: 0; color: #2267cc; font-size: 20px; line-height: 40px;vertical-align: middle; font-weight: bold;}
+        .bmk input { width: 190px; height: 32px; margin-bottom: 14px; padding-left: 5px; background: #f1f1f1; border: 1px solid #2764cf; border-radius: 6px;}
+        .bmk select { width: 195px; height: 32px; margin-right: 5px; margin-bottom: 17px; margin-left: 0px; padding-left: 5px;background: transparent; border: none;}
+        input:nth-of-type(1) { margin-right: 20px; }
+        #submit { width: 140px; height: 100px; cursor: pointer; background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bmbtn.jpg) top center no-repeat;  color: #fff; border: none; font-size: 20px; position: absolute; right: 10px; top: 170px;}
+
+        .btns a { display: inline-block;height: 32px;width: 157px;text-align: center;line-height: 32px;margin-bottom: 10px;margin-right: 12px;background-color: #8cb1f3;border-radius: 6px;font-weight: bold;color: #fff;cursor: pointer; }
+        .btns a.active { background-color: #2764cf; }
+
+        .process { width: 100%; padding-bottom: 30px; background: #FFFFFF;}
+        .process-bg { background: url(http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bodybg_00.jpg) top center no-repeat; height: 156px;}
+
+        .car-swrap ul { margin-left: -50px; padding: 30px 0;}
+        .car-swrap li { width: 1100px; background: #fde09e; overflow: hidden; zoom: 1; margin-bottom: 30px;}
+        .car-swrap .fl { width: 695px; height: 325px; overflow: hidden; float: left;}
+        .car-swrap .fr { width: 340px; height: 265px; padding:30px; color: #333; float: right; position: relative;}
+        .car-swrap .fr h2 { font-size: 32px; font-weight: bold; margin-bottom: 6px;}
+        .car-swrap .fr .price { display: inline-block; line-height: 26px; font-size: 20px; border-bottom: 2px solid #999; margin-bottom: 12px;}
+        .car-swrap .fr>p.sale:nth-of-type(2) { font-size: 26px; line-height: 36px;}
+        .car-swrap .fr>p.sale:nth-of-type(3) { font-size: 24px; line-height: 32px;}
+        .car-swrap .fr>p.sale:nth-of-type(4) { font-size: 24px; line-height: 32px;}
+        .car-swrap .fr .gobm-btn { width: 150px; height: 40px; font-size: 20px; color: #fff; background: #f43350; position: absolute; bottom: 30px; cursor: pointer;}
+        .car-swrap li.activeIn button { transition: all 0.3s ease-in-out; border-radius: 20px;}
+        .car-swrap li.activeOut button { transition: all 0.5s ease-in-out; border-radius: 0px;}
+
+        .brand-wrap { width: 100%; padding-bottom: 80px; padding-top: 40px; background: #fff; position: absolute; bottom: 0;}
+        .brand-info { width: 1000px; margin: 0 auto;}
+        .brand-info img { float: left; max-width: 180px; margin-right: 20px;}
+        .brand-info .info-text { padding-top: 6px; color: #666; overflow: hidden; zoom: 1;}
+        .brand-info .info-text h4 { font-size: 20px; font-weight: bold; line-height: 30px; margin-bottom: 6px;}
+        .brand-info .info-text p { float: left; width: 800px; line-height: 24px;}
+    </style>
+</head>
+<body>
+<!--自适应头图-->
+<div class="banner">
+    <div class="banner1"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/38/37/202/13144523.jpg"></div>
+</div>
+
+<div class="content-wrap" style="height: 2277px;">
+    <!-- <div style="width: 1000px; height: 500px; overflow-y: scroll; overflow-x: hidden; margin: 0 auto;"><iframe height="1200" width="1000" scrolling="no" src="https://wj.qq.com/s/1509923/cc44" frameborder="0" allowfullscreen></iframe></div>-->
+    <!--报名-->
+    <div class="bm-wrap">
+        <div class="bmk">
+            <h3><span class="pink">立即</span>报名</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;SIGN UP IMMEDIATELY&nbsp;&nbsp;&nbsp;――――</h5>
+            <div class="bm-center">
+                <div class="bmtit"><img src="http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/bmimg.jpg"></div>
+                <div class="car" style="padding-top: 20px;">
+                    <h4>意向车型：</h4>
+                    <div class="btns"></div>
+                </div>
+                <p>
+                    <label for="name">您的姓名：</label><input name="name" id="name" value="" placeholder="姓名" type="text">
+                    <label for="phone">联系电话：</label><input name="phone" id="phone" value="" maxlength="11" placeholder="电话" type="tel">
+                </p>
+
+                <!--提交-->
+                <input name="brand_id" id="brand_id" value="" type="hidden">
+                <input name="act_id" id="act_id" value="" type="hidden">
+                <input id="submit" value="" type="button">
+            </div>
+
+        </div>
+    </div>
+    <!--报名end-->
+
+    <div class="process">
+        <h3><span class="pink">购车</span>流程</h3>
+        <h5>――――&nbsp;&nbsp;&nbsp;CAR PROCESS&nbsp;&nbsp;&nbsp;――――</h5>
+        <div class="process-bg"></div>
+    </div>
+
+    <!--主体背景-->
+    <div class="con-bg0 con-bg"></div>
+    <div class="con-bg1 con-bg"></div>
+    <div class="con-bg2 con-bg"></div>
+    <div class="con-bg3 con-bg"></div>
+    <div class="con-bg4 con-bg"></div>
+    <div class="con-bg5 con-bg"></div>
+    <div class="con-bg6 con-bg" style="height: 0px;"></div>
+    <div class="con-bg7 con-bg" style="height: 0px;"></div>
+    <div class="con-bg8 con-bg"></div>
+    <div class="con-bg9 con-bg"></div>
+    <div class="con-bg10 con-bg"></div>
+    <div class="con-bg11 con-bg"></div>
+    <div class="con-bg12 con-bg"></div>
+    <div class="con-bg13 con-bg"></div>
+    <div class="con-bg14 con-bg"></div>
+    <div class="con-bg15 con-bg"></div>
+
+    <!--品牌介绍-->
+    <div class="brand-wrap">
+        <div class="brand-info">
+            <h3><span class="pink">品牌</span>故事</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;BRAND STORY&nbsp;&nbsp;&nbsp;――――</h5>
+            <div class="brand-con">
+                <img src="http://img1.gtimg.com/autodongguan/pics/hv1/94/36/202/13144324.jpg">
+                <div class="info-text">
+                    <h4><span class="name">吉利汽车</span>品牌介绍</h4>
+                    <p>浙江吉利控股集团始建于1986年，从生产电冰箱零件起步，发展到生产电冰箱、电冰柜、建筑装潢材料和摩托车，1997年进入汽车行业，一直专注实业，专注技术创新和人才培养，不断打基础练内功，坚定不移地推动企业健康可持续发展。现资产总值超过2000亿元，员工总数超过7万多人，连续六年进入世界500强。 浙江吉利控股集团总部设在杭州，旗下拥有沃尔沃汽车、吉利汽车、领克汽车、Polestar、宝腾汽车、路特斯汽车、伦敦电动汽车、远程新能源商用车等汽车品牌，规划到2020年实现年产销300万辆，进入世界汽车企业前十强。<a class="blue" target="_blanck" href="http://www.geely.com/introduce/intro/index.html">【查看详情】</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--品牌end-->
+
+    <!--主体浮层-->
+    <div class="con-body" style="top: 666px;">
+        <div class="car-swrap">
+            <h3><span class="pink">热销</span>车型</h3>
+            <h5>――――&nbsp;&nbsp;&nbsp;HOT MODELS&nbsp;&nbsp;&nbsp;――――</h5>
+            <ul>
+                <li><div class="fl"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/82/36/202/13144312.jpg"></div><div class="fr"><h2>帝豪GS</h2><p class="price">指导价<span class="blod">7.78万</span>起</p><p class="sale line1">首付低至<span class="red">1</span><span class="red">.</span><span class="red">6</span><span class="red">万</span></p><p class="sale line1">手动挡悦享<span class="red">2</span>年<span class="red">0</span>利息</p><p class="sale line3"></p><p class="sale line3"></p><button onclick="goBM()" class="gobm-btn">立即抢购&nbsp;&nbsp;&gt;</button></div></li><li class=""><div class="fl" style="float: right;"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/81/36/202/13144311.jpg"></div><div class="fr"><h2>远景X1</h2><p class="price">指导价<span class="blod">3.99万</span>起</p><p class="sale line1">尊享两年<span class="red">0</span><span class="red">利率</span></p><p class="sale line1">日供低至<span class="red">32</span><span class="red">元</span></p><p class="sale line3"></p><p class="sale line3"></p><button onclick="goBM()" class="gobm-btn">立即抢购&nbsp;&nbsp;&gt;</button></div></li><li class="activeIn"><div class="fl"><img src="http://img1.gtimg.com/autodongguan/pics/hv1/80/36/202/13144310.jpg"></div><div class="fr"><h2>远景SUV</h2><p class="price">指导价<span class="blod">7.49万</span>起</p><p class="sale line1">首付低至<span class="red">1</span><span class="red">.</span><span class="red">5</span><span class="red">万</span></p><p class="sale line1">享<span class="red">18</span><span class="red">期</span><span class="red">0</span>利息</p><p class="sale line3"></p><p class="sale line3"></p><button onclick="goBM()" class="gobm-btn">立即抢购&nbsp;&nbsp;&gt;</button></div></li></ul>
+        </div>
+        <!--主体end-->
+
+    </div>
+</div>
+
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    //////////////////////////////////////
+    //填充内容开始
+    ///////////////////////////////
+    var carsInfo = [
+        {
+            carName:'帝豪GS',
+            carImg:'http://img1.gtimg.com/autodongguan/pics/hv1/82/36/202/13144312.jpg',
+            carId:'238',
+            minPrice:'7.78',
+            sale:[{Line:1,Text:'首付低至1.6万'},{Line:2,Text:'手动挡悦享2年0利息'},{Line:3,Text:''},{Line:3,Text:''}]
+        },
+        {
+            carName:'远景X1',
+            carImg:'http://img1.gtimg.com/autodongguan/pics/hv1/81/36/202/13144311.jpg',
+            carId:'550',
+            minPrice:'3.99',
+            sale:[{Line:1,Text:'尊享两年0利率'},{Line:2,Text:'日供低至32元'},{Line:3,Text:''},{Line:3,Text:''}]
+        },
+        {
+            carName:'远景SUV',
+            carImg:'http://img1.gtimg.com/autodongguan/pics/hv1/80/36/202/13144310.jpg',
+            carId:'325',
+            minPrice:'7.49',
+            sale:[{Line:1,Text:'首付低至1.5万'},{Line:2,Text:'享18期0利息'},{Line:3,Text:''},{Line:3,Text:''}]
+        },
+    ]
+    var brandInfo = {
+        Name:'吉利汽车',
+        Img:'http://img1.gtimg.com/autodongguan/pics/hv1/94/36/202/13144324.jpg',
+        Text:'浙江吉利控股集团始建于1986年，从生产电冰箱零件起步，发展到生产电冰箱、电冰柜、建筑装潢材料和摩托车，1997年进入汽车行业，一直专注实业，专注技术创新和人才培养，不断打基础练内功，坚定不移地推动企业健康可持续发展。现资产总值超过2000亿元，员工总数超过7万多人，连续六年进入世界500强。 浙江吉利控股集团总部设在杭州，旗下拥有沃尔沃汽车、吉利汽车、领克汽车、Polestar、宝腾汽车、路特斯汽车、伦敦电动汽车、远程新能源商用车等汽车品牌，规划到2020年实现年产销300万辆，进入世界汽车企业前十强。',
+        Url:'http://www.geely.com/introduce/intro/index.html',
+    };
+    var banner = {
+        Url:'http://img1.gtimg.com/autodongguan/pics/hv1/38/37/202/13144523.jpg',
+        Height:600,
+    }
+    //品牌id
+    var Brand_id = 34;
+    //活动id
+    var Act_id = 614;
+    //页面标题
+    var Title = '吉利SUV大家庭活动 welcome！';
+
+    //////////////////////////////////////
+    //填充内容结束
+    ///////////////////////////////
+</script>
+<script src="http://123.207.87.32/act/2017carExhibition/imgbngc726/imgMUBAN/InsideModel.DGbanner.min.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="InsideModel.DGbanner.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+
+</body>
+</html>

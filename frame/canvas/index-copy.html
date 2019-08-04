@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />-->
+    <meta name="viewport" content="width=750, user-scalable=no">
+    <title>canvas</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style></style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script>
+    var c=document.getElementById("canvas");
+    var ctx=c.getContext("2d");
+    var canvasImg=[];
+    var isFlag=true;
+    var indexI = 1;
+    var time = 100,timer=null;
+    c.width = window.innerWidth;
+    c.height = window.innerHeight;
+    var obj={}
+    setTimeout(function () {
+        var imgArr = ['images/index1.jpg', 'images/index2.jpg', 'images/index3.jpg', 'images/index4.jpg', 'images/index5.jpg', 'images/index6.jpg', 'images/index7.jpg', 'images/index8.jpg', 'images/index9.jpg', 'images/index10.jpg', 'images/index11.jpg', 'images/index12.jpg', 'images/index13.jpg', 'images/index14.jpg', 'images/index15.jpg', 'images/index16.jpg', 'images/index17.jpg'];
+        for(var i=0;i<imgArr.length;i++){
+            var img = new Image()
+            img.src = imgArr[i]
+            obj[imgArr[i]]= img
+        }
+        canvasImg=obj
+        //console.log(obj)
+        star()
+    }, 0);
+    function star() {
+        timer = setInterval(canvasDrawImg,time)
+    }
+    function canvasDrawImg() {
+        ctx.clearRect(0,0,c.width,c.height)
+        var img = canvasImg['images/index' + indexI + '.jpg']
+        console.log(img)
+        ctx.drawImage(img,0,0,img.width,img.height)
+        if(indexI>=17){
+            isFlag=false
+        } else if (indexI<=1) {
+            isFlag = true
+        }
+        if (isFlag){
+            indexI++
+        }else {
+            indexI--
+        }
+    }
+</script>
+</html>

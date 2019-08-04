@@ -1,0 +1,662 @@
+<!--2018年-12月-10号 星期一 18:55:44 -->
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>双十二超级福利轻松赢“Stelvio豪华SUV一年免费使用权”！</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+    <script src="http://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <style>
+      .main {
+        max-width: 750px;
+        margin: 0 auto;
+        background: #131313;
+      }
+      .cn {position: relative;}
+      .up {
+          position: absolute;
+          left: 0;
+          top: 0.7rem;
+          width: 100%;
+          height: 10rem;
+      }
+      .up li {
+          height: 1.54rem;
+          width: 6.5rem;
+          margin: 0.18rem 1rem 1.81rem 1.75rem;
+          overflow: hidden;
+      }
+      .up li .inputBox {
+        position: relative;
+        width: 100%;
+        height: 1.54rem;
+        line-height: 2rem;
+        overflow: hidden;
+        font-size: .213333rem;
+      }
+      .up li .inputBox input {
+        width: 100%;
+        height: 1.54rem;
+        opacity: 0;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+      }
+      .up li .upImg {
+        position: relative;
+        left: 0;
+        top: 0;
+        width:100%;
+        height: 1.54rem;
+        /* z-index: 10; */
+      }
+      .up li .imgContainer {
+        position: relative;
+        z-index: 12;
+      }
+      .up li .imgContainer img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: fill;
+      }
+      .bmk {
+        position: absolute;
+        left: 50%;
+        top: 12.1rem;
+        width: 8rem;
+        height: 7rem;
+        margin-left: -3.9rem;
+      }
+      .bmk p input,.bmk p select{
+        width:100%;
+        height:100%;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        appearance:none;
+        background:transparent;
+        font-size:0.5rem;
+        padding-left:.266667rem;
+        color:#768292;
+        }
+      .bmk p{
+        width: 7.3rem;
+        height: 1.1rem;
+        margin-left: 0;
+      }
+      .bmk .tel{margin-top:0.25rem}
+      .bmk .series {
+        margin-top: 0.2rem;
+        width: 7.55rem;
+      }
+      .bmk .prov,.bmk .city {
+        display: inline-block;
+        width: 3.7rem;
+        margin-top: 0.255rem;
+      }
+      .bmk .city {
+        margin-left: 0.1rem;
+      }
+      #submit {
+        position: absolute;
+        left: 1.1rem;
+        top: 16rem;
+        width: 7.58rem;
+        height: 1.05rem;
+        margin-top: 0.24rem;
+        background: transparent;
+        cursor: pointer;
+      }
+      .privacyPolicy input{
+        position: absolute;
+        left: 0rem;
+        top: 5.5rem;
+        width: 18px !important;
+        height: 18px !important;
+        }
+      .privacyPolicy span{
+        display: inline-block;
+        position: absolute;
+        left: 0.8rem;
+        top: 5.45rem;
+        font-size: 16px;
+        color: #768292;
+      }
+      .privacyPolicy a{color:#768292}
+      /* 等待动画 */
+      #loading{
+        background-color: rgba(0, 0, 0, .5);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+        margin-top: 0px;
+        top: 0px;
+      }
+      #loading-center{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        }
+      #loading-center-absolute {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 150px;
+        width: 150px;
+        margin-top: -75px;
+        margin-left: -75px;	
+        -ms-transform: rotate(45deg); 
+          -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); 
+      }
+      .object{
+        width: 20px;
+        height: 20px;
+        background-color: #FFF;
+        position: absolute;
+        left: 65px;
+        top: 65px;
+        -moz-border-radius: 50% 50% 50% 50%;
+        -webkit-border-radius: 50% 50% 50% 50%;
+        border-radius: 50% 50% 50% 50%;
+        }
+      .object:nth-child(2n+0) {
+        margin-right: 0px;
+      }
+      #object_one {
+        -webkit-animation: object_one 2s infinite;
+        animation: object_one 2s infinite;
+        -webkit-animation-delay: 0.2s; 
+          animation-delay: 0.2s; 
+        }
+      #object_two {
+        -webkit-animation: object_two 2s infinite;
+        animation: object_two 2s infinite;
+        -webkit-animation-delay: 0.3s; 
+          animation-delay: 0.3s; 
+        }
+      #object_three {
+        -webkit-animation: object_three 2s infinite;
+        animation: object_three 2s infinite;
+        -webkit-animation-delay: 0.4s; 
+          animation-delay: 0.4s; 
+        }
+      #object_four {
+        -webkit-animation: object_four 2s infinite;
+        animation: object_four 2s infinite;
+        -webkit-animation-delay: 0.5s; 
+          animation-delay: 0.5s; 
+      }
+      #object_five {
+        -webkit-animation: object_five 2s infinite;
+        animation: object_five 2s infinite;
+        -webkit-animation-delay: 0.6s; 
+          animation-delay: 0.6s; 
+      }
+      #object_six {
+        -webkit-animation: object_six 2s infinite;
+        animation: object_six 2s infinite;
+        -webkit-animation-delay: 0.7s; 
+          animation-delay: 0.7s; 
+      }
+      #object_seven {
+        -webkit-animation: object_seven 2s infinite;
+        animation: object_seven 2s infinite;
+        -webkit-animation-delay: 0.8s; 
+          animation-delay: 0.8s; 
+      }
+      #object_eight {
+        -webkit-animation: object_eight 2s infinite;
+        animation: object_eight 2s infinite;
+        -webkit-animation-delay: 0.9s; 
+          animation-delay: 0.9s; 
+      }
+      #object_big{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50px;
+        top: 50px;
+        -webkit-animation: object_big 2s infinite;
+        animation: object_big 2s infinite;
+        -webkit-animation-delay: 0.5s; 
+          animation-delay: 0.5s; 
+      }	
+      @-webkit-keyframes object_big {
+      50% { -webkit-transform: scale(0.5); }
+      }
+      @keyframes object_big {
+      50% { 
+          transform: scale(0.5);
+          -webkit-transform: scale(0.5);
+        } 
+      }
+      @-webkit-keyframes object_one {
+      50% { -webkit-transform: translate(-65px,-65px)  ; }
+      }
+      @keyframes object_one {
+      50% { 
+          transform: translate(-65px,-65px) ;
+          -webkit-transform: translate(-65px,-65px) ;
+        } 
+      }
+      @-webkit-keyframes object_two {
+        50% { -webkit-transform: translate(0,-65px) ; }
+      }
+      @keyframes object_two {
+      50% { 
+          transform: translate(0,-65px) ; 
+          -webkit-transform: translate(0,-65px) ; 
+        } 
+      }
+      @-webkit-keyframes object_three {
+      50% { -webkit-transform: translate(65px,-65px) ; }
+      }
+      @keyframes object_three {
+      50% { 
+          transform: translate(65px,-65px) ;
+          -webkit-transform: translate(65px,-65px) ;
+        } 
+      }
+      @-webkit-keyframes object_four {
+        50% { -webkit-transform: translate(65px,0) ; }
+      }
+      @keyframes object_four {
+        50% { 
+          transform: translate(65px,0) ;
+          -webkit-transform: translate(65px,0) ;
+        }
+      }
+      @-webkit-keyframes object_five {
+        50% { -webkit-transform: translate(65px,65px) ; }
+      }
+      @keyframes object_five {
+        50% { 
+          transform: translate(65px,65px) ;
+          -webkit-transform: translate(65px,65px) ;
+        } 
+      }
+      @-webkit-keyframes object_six {
+        50% { -webkit-transform: translate(0,65px) ; }
+      }
+      @keyframes object_six {
+        50% { 
+          transform:  translate(0,65px) ;
+          -webkit-transform:  translate(0,65px) ;
+        } 
+      }
+      @-webkit-keyframes object_seven {
+        50% { -webkit-transform: translate(-65px,65px) ; }
+
+      }
+      @keyframes object_seven {
+        50% { 
+          transform: translate(-65px,65px) ;
+          -webkit-transform: translate(-65px,65px) ;
+        } 
+      }
+      @-webkit-keyframes object_eight {
+        50% { -webkit-transform: translate(-65px,0) ; }
+      }
+      @keyframes object_eight {
+        50% { 
+          transform: translate(-65px,0) ;
+          -webkit-transform: translate(-65px,0) ;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="cn cn1"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/186/82/211/13741371.jpg" alt=""></div>
+      <div class="cn cn2">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/187/82/211/13741372.jpg" alt="">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/90/83/211/13741530.jpg" alt="">
+        <form id="upBox">
+          <ul class="up">
+            <li>
+              <div class="inputBox">
+                <input title="请选择图片" id="f1" onchange="onChenge(event,'f1',1)" name="moments" accept="image/*"
+                  type="file" />
+                <div class="showImg1 upImg"></div>
+              </div>
+            </li>
+            <li style="margin-bottom:1.8rem">
+              <div class="inputBox">
+                <input title="请选择图片" id="f2" onchange="onChenge(event,'f2',2)" name="groupChat" accept="image/*"
+                  type="file" />
+                <div class="showImg2 upImg"></div>
+              </div>
+            </li>
+            <li>
+              <div class="inputBox">
+                <input title="请选择图片" id="f3" onchange="onChenge(event,'f3',3)" name="carOwnerMoments"
+                  accept="image/*" type="file" />
+                <div class="showImg3 upImg"></div>
+              </div>
+            </li>
+          </ul>
+          <div class="bmk">
+            <p class="name">
+              <input type="text" name="name" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+              <input type="tel" name="phone" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="prov">
+              <select id="prov" name="prov">
+                <option value="广东">广东</option>
+              </select>
+            </p>
+            <p class="city">
+              <select id="city" name="city">
+                <option value="广州市">广州市</option>
+                <option value="深圳市">深圳市</option>
+                <option value="珠海市">珠海市</option>
+                <option value="佛山市">佛山市</option>
+                <option value="汕头市">汕头市</option>
+                <option value="东莞市">东莞市</option>
+                <option value="潮州市">潮州市</option>
+                <option value="韶关市">韶关市</option>
+                <option value="湛江市">湛江市</option>
+                <option value="肇庆市">肇庆市</option>
+                <option value="江门市">江门市</option>
+                <option value="茂名市">茂名市</option>
+                <option value="惠州市">惠州市</option>
+                <option value="梅州市">梅州市</option>
+                <option value="汕尾市">汕尾市</option>
+                <option value="河源市">河源市</option>
+                <option value="阳江市">阳江市</option>
+                <option value="清远市">清远市</option>
+                <option value="中山市">中山市</option>
+                <option value="揭阳市">揭阳市</option>
+                <option value="云浮市">云浮市</option>
+              </select>
+            </p>
+            <div class="privacyPolicy">
+              <input type="checkbox" checked>
+              <span>我同意<a href="//www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+          </div>
+          <a href="javascript:;" id="submit"></a>
+        </form>
+      </div>
+      <div class="cn cn4"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/189/82/211/13741374.jpg" alt=""></div>
+      <div id="loading">
+      <div id="loading-center">
+      <div id="loading-center-absolute">
+      <div class="object" id="object_one"></div>
+      <div class="object" id="object_two"></div>
+      <div class="object" id="object_three"></div>
+      <div class="object" id="object_four"></div>
+      <div class="object" id="object_five"></div>
+      <div class="object" id="object_six"></div>
+      <div class="object" id="object_seven"></div>
+      <div class="object" id="object_eight"></div>
+      <div class="object" id="object_big"></div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </body>
+  <script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+  <script src="http://guangzhou.auto.qq.com/js/vconsole.min.js"></script>
+  <script>
+    //分享
+    var appId = "";       //公众号的唯一标识
+    var timestamp = "";   //生成签名的时间戳
+    var nonceStr = "";    //生成签名的随机串
+    var signature = "";   //签名
+    wx.config({
+      debug: false,
+      appId: appId,
+      timestamp: timestamp,
+      nonceStr: nonceStr,
+      signature: signature,
+      jsApiList: [
+        // 所有要调用的 API 都要加到这个列表中
+        'onMenuShareAppMessage',
+        'onMenuShareTimeline'
+      ]
+    });
+    var share_title = '大客户价68折 0利息 享额外五千元补贴';
+    var share_desc = '大客户价68折 0利息 享额外五千元补贴';
+    var share_image = 'http://img1.gtimg.com/autoguangzhou/pics/hv1/186/82/211/13741371.jpg';
+    var share_link = window.location.href;
+    /* var share_link = "http://www.yetcar.com/index.php?s=/Home/Luckbus/busindex";*/
+    wx.ready(function () {
+      // 在这里调用 API
+      wx.onMenuShareAppMessage({
+        title: share_title, // 分享标题
+        desc: share_desc, // 分享描述
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+      wx.onMenuShareTimeline({
+        title: share_title, // 分享标题
+        link: share_link, // 分享链接
+        imgUrl: share_image, // 分享图标
+        success: function () {
+          // 用户成功分享后执行的回调函数
+          setword.getShareLog()
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          //alert("分享取消");
+        }
+      });
+    });
+    // var vConsole = new VConsole();
+  </script>
+  <script>
+    var imgSrcArr = [];  //图片路径数组
+    var imgFile = []; //文件流
+    // 全局对象，不同function使用传递数据
+    var FileObj = {};
+    var imgIndex = 1;
+    //change事件
+    function onChenge(event, id, num) {
+      imgIndex = num;
+      // 获取当前选中的文件
+      var file = event.target.files[0];
+      // 文件大小限制
+      var imgMasSize = 1024 * 1024 * 2; // 2MB
+      // 图片压缩
+      transformFileToDataUrl(file);
+      var fileList = event.target.files;
+      // for (var i = 0; i < fileList.length; i++) {
+      //   console.log(fileList[i]);
+      //   var imgSrcI = getObjectURL(fileList[i]);
+      //   imgSrcArr.push(imgSrcI);
+      // }
+      // addNewContent(el, imgSrcArr);
+      // imgSrcArr = [];
+    }
+    // 将file转成dataUrl
+    function transformFileToDataUrl(file) {
+      var imgCompassMaxSize = 2000 * 1024 ; // 超过 2MB 就压缩
+      // 存储文件相关信息
+      FileObj.type = file.type || 'image/jpeg'; // 部分安卓出现获取不到type的情况
+      FileObj.size = file.size;
+      FileObj.name = file.name;
+      FileObj.lastModifiedDate = file.lastModifiedDate;
+      // 封装好的函数
+      var reader = new FileReader();
+      // file转dataUrl是个异步函数，要将代码写在回调里
+      reader.onload = function (e) {
+        var result = e.target.result;
+        if (result.length < imgCompassMaxSize) {
+          compress(result, processData, false);    // 图片不压缩
+        } else {
+          compress(result, processData);            // 图片压缩
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+    // 使用canvas绘制图片并压缩
+    function compress(dataURL, callback, shouldCompress = true) {
+      const img = new window.Image();
+      img.src = dataURL;
+      img.onload = function () {
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        let compressedDataUrl;
+        if (shouldCompress) {
+          compressedDataUrl = canvas.toDataURL('image/jpeg', 0.92);
+        } else {
+          compressedDataUrl = canvas.toDataURL('image/jpeg', 1);
+        }
+        callback(compressedDataUrl);
+      }
+    }
+    //图片展示
+    function addNewContent(obj, arr) {
+      obj.html('');
+      for (var a = 0; a < arr.length; a++) {
+        var oldBox = obj.html();
+        obj.html(oldBox + '<div class="imgContainer"><img title=' + arr[a] + ' alt=' + arr[a] + ' src=' + arr[a] + '></div>');
+      }
+    }
+    function addImg(url,i) {
+      var obj = $('.showImg'+i);
+      obj.html('');
+      obj.html('<div class="imgContainer"><img title="图片" alt="" src=' + url + '></div>');
+    }
+    //
+    function processData(dataUtl) {
+      imgFile.push(dataUtl);
+      addImg(dataUtl,imgIndex);
+      console.log(imgFile);
+    }
+    //base64转二进制
+    function dataURItoBlob(dataURI) {
+      var byteString = atob(dataURI.split(',')[1]);
+      var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+      var ab = new ArrayBuffer(byteString.length);
+      var ia = new Uint8Array(ab);
+      for (var i = 0; i < byteString.length; i++) {
+          ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], {type: mimeString});
+    }
+    //图片预览路径转换
+    function getObjectURL(file) {
+      var url = null;
+      if (window.createObjectURL != undefined) { // basic
+        url = window.createObjectURL(file);
+      } else if (window.URL != undefined) { // mozilla(firefox)
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL != undefined) { // webkit or chrome
+        url = window.webkitURL.createObjectURL(file);
+      }
+      return url;
+    }
+    $('#submit').click(function () {
+      var name = $("#name").val(),  //姓名
+        tel = $("#tel").val(),        //电话
+        city = $('#city').val(),  //城市id
+        province = $('#prov').val();  //省份
+      //判断填写是否正确
+      if (imgFile.length < 3) {
+        alert('请先上传截图');
+        return false;
+      }
+      if (name == '' || tel == '') {
+        alert('信息没有填写完整');
+        return false;
+      }
+      if (!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)) {
+        alert('请输入正确的中文名');
+        return false;
+      };
+      if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+        alert('手机格式不正确');
+        return false;
+      }
+      if (province == '0') {
+        alert('请选择省份');
+        return false;
+      }
+      if (city == '0') {
+        alert('请选择城市');
+        return false;
+      }
+      if (!($("input[type='checkbox']").prop('checked'))) {
+        alert('请同意《隐私政策》');
+        return false;
+      }
+      //用formDate对象上传
+      var fd = new FormData();
+
+      fd.append('moments',dataURItoBlob(imgFile[0]));
+      fd.append('groupChat',dataURItoBlob(imgFile[1]));
+      fd.append('carOwnerMoments',dataURItoBlob(imgFile[2]));
+      fd.append('name',name);
+      fd.append('phone',tel);
+      fd.append('city',city);
+      fd.append('province',province);
+
+      $('#loading').css('z-index','999');
+      sub('http://rx.yetcar.com/admin.php?s=/HHOA/enroll',fd);
+    })
+    function sub(url,fd){
+      // for(var i of fd){
+      //   console.log(i);
+      // }
+      $.ajax({
+        type: "post",
+        url: url,
+        data: fd,
+        async: true,
+        processData: false,
+        contentType: false,
+        success: function (dat) {
+          if(dat.status == 1) {
+             alert(dat.msg);
+             $('#loading').css('z-index','-1');
+             window.location.reload();
+          }else {
+            alert('error');
+          }
+        },
+        error: function (dat) {
+          alert(dat.msg);
+          $('#loading').css('z-index','-1');
+        }
+      });
+    }
+  </script>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>NISSAN 智“惠”购精彩</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {
+            position: relative;
+        }
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 4.3rem;
+            width: 24rem;
+            height: 29rem;
+            margin-left: -11.9rem;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            font-size: 1.2rem;
+            background: transparent;
+            padding-left: 1rem;
+        }
+        .bmk p {
+            width: 22.5rem;
+            height: 3.32rem;
+            margin-top: 0;
+            margin-left: 0;
+        }
+        .bmk .tel {
+            margin-top: 0.8rem;
+        }
+        .bmk .series {
+            margin-top: 0.88rem;
+            width: 23.5rem;
+        }
+        .bmk .city {
+            margin-top: 0.8rem;
+            width: 23.5rem;
+        }
+        .bmk .dealers {
+            margin-top: 0.82rem;
+            width: 23.5rem;
+        }
+        .bmk .submit {
+            width: 23.5rem;
+            margin-top: 1.4rem;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 0;
+            top: 26rem;
+            width: 100%;
+        }
+        .privacyPolicy input{width:20px !important;height:20px !important}
+        .privacyPolicy span{display:inline-block;font-size:18px;color:#000;position: relative;top: -4px;}
+        .privacyPolicy a{color:#000}
+        .swi {
+            position: absolute;
+            left: 50%;
+            top: 7rem;
+            width: 100%;
+            height: 12rem;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+        .ac-1000 {width: 100%;margin: 0 auto;position: relative;}
+        #featured-area {height:11rem; width: 100%; margin:0 auto 0; border:none; position:absolute;top:2px;}
+        #featured-area img{border:none;}
+        .roundabout-holder {list-style:none;height:11rem; width:19.5rem;  margin:0 auto;}
+        .roundabout-moveable-item {font-size:12px!important; height:11rem; width:19.5rem; cursor:pointer;}
+        .roundabout-moveable-item img {height:100%; width:100%; background-color:#FFFFFF; margin:0;}
+        .roundabout-in-focus {cursor:auto;}
+        .roundabout-in-focus:hover {-webkit-box-shadow:0px 0px 20px #787878; -moz-box-shadow:0px 0px 20px #787878; background:#f9f9f9;}
+        .roundabout-holder span	 {display:none; font-size:11px;}
+        .roundabout-in-focus:hover span	{display:inline; position:absolute; bottom:5px; right:5px; padding:0px 0px; background:#f9f9f9; color:#8A428B; z-index:999; -webkit-border-top-left-radius: 5px; -moz-border-radius-topLeft: 5px; font-size : 11px; border-left:1px solid #aaaaaa; border-top:1px solid #aaaaaa;}
+        .roundabout a:active, .roundabout a:focus, .roundabout a:visited {outline:none; text-decoration:none;}
+        .roundabout li {margin:0}
+        .head {
+            position: absolute;
+            left: 50%;
+            top: 0.7rem;
+            width: 5rem;
+            height: 2.5rem;
+            background: #c90028;
+            margin-left: 7.6rem;
+        }
+        .head select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            font-size: 0.8rem;
+            padding-left: 0.8rem;
+            color: #ffff;
+            background: transparent;
+            position: relative;
+            z-index: 23;
+        }
+        .head i {
+            position: absolute;
+            right: 0.5rem;
+            top: 0.5rem;
+            z-index: 22;
+            width: 1rem;
+        }
+        .list {
+            position: absolute;
+            left: 50%;
+            top: 5rem;
+            width: 25.6rem;
+            height: 17rem;
+            margin-left: -13rem;
+            overflow: auto;
+        }
+        .list ul {
+            width: 90%;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed #dddddd;
+            overflow: hidden;
+            padding-bottom: 0.5rem;
+        }
+        .list ul li {
+            float: left;
+            font-size: 0.8rem;
+            width: 4rem;
+        }
+        .list ul li:nth-child(1) {
+            margin-right: 1rem;
+        }
+        .list ul li:nth-child(2){
+            width: 12rem;
+            margin-right: 1rem;
+        }
+        .list ul li:nth-child(3){
+            width: 5rem;
+            text-align: right;
+        }
+        .mCSB_inside > .mCSB_container{margin-right:0px}
+        .mCSB_scrollTools .mCSB_draggerRail{width:8px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}
+        .mCSB_scrollTools .mCSB_draggerRail{background-color:#ccc !important}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:8px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#c90329 !important}
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/23/210/13661264.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/202/25/210/13661827.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/151/23/210/13661266.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/152/23/210/13661267.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/153/23/210/13661268.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/154/23/210/13661269.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                </select>
+            </p>
+            <p class="city">
+                <select id="city">
+                    <!--<option value="0">城市</option>-->
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/155/23/210/13661270.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/156/23/210/13661271.jpg" alt="">
+        <div class="swi">
+            <div class="p5">
+                <div class="ac-1000">
+                    <div id="featured-area" class="ppt">
+                        <ul class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
+                            <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/191/22/210/13661051.png" ></li>
+                            <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/192/22/210/13661052.jpg" ></li>
+                            <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/193/22/210/13661053.jpg" ></li>
+                            <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/194/22/210/13661054.jpg" ></li>
+                            <li class="roundabout-moveable-item"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/195/22/210/13661055.jpg" ></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/157/23/210/13661272.jpg" alt="">
+        <div class="head">
+            <i><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/70/23/210/13661185.png" alt=""></i>
+            <select id="cs"></select>
+        </div>
+        <div class="list">
+
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.roundabout.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var des=[
+        {"name":"东莞东风南方莞太","Qcname":"东莞东风南方汽车销售服务有限公司","nameCode":"H2918","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-22985906","Xtel":"0769-22985901","address":"东莞市南城区莞太路周溪段172号（广彩城斜对面）"},
+        {"name":"东莞东风南方大兴","Qcname":"东莞东风南方大新汽车销售服务有限公司","nameCode":"H2926","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-22672662","Xtel":"0769-22672318","address":"东莞市东城区莞长路牛山管理区上山门村"},
+        {"name":"东莞东风南方莞樟","Qcname":"东莞东风南方汽车销售服务有限公司寮步分公司","nameCode":"H2936","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-83523025","Xtel":"0769-83523035","address":"东莞市寮步镇莞樟路富竹山路段"},
+        {"name":"东莞东风南方东益","Qcname":"东莞东风南方东益汽车销售服务有限公司","nameCode":"H2939","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-85199988","Xtel":"0769-85199966","address":"东莞市虎门镇白沙村317号"},
+        {"name":"东莞东风南方东深","Qcname":"东莞东风南方汽车销售服务有限公司樟木头分公司","nameCode":"H2940","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"400-887-0769","Xtel":"0769-87700811","address":"东莞市樟木头镇东深大道景福路交警大队旁"},
+        {"name":"东莞东风南方莞龙","Qcname":"东莞东风南方汽车销售服务有限公司石龙分公司","nameCode":"H2953","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-81389981","Xtel":"0769-81389981","address":"东莞市石龙镇西湖东路155号"},
+        {"name":"东莞东风南方东兴","Qcname":"东莞东风南方东升汽车销售服务有限公司","nameCode":"H2955","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-85038606","Xtel":"0769-85038200","address":"东莞市莞太路厚街镇三屯路口(国际家具正对面)"},
+        {"name":"东莞东风南方金美","Qcname":"东莞东风南方东合汽车销售服务有限公司","nameCode":"H2959","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-89926622","Xtel":"0769-89926666","address":"东莞常平镇金美村环城路与常朗大道交界处"},
+        {"name":"东莞东风南方龙平","Qcname":"东莞东风南方汽车销售服务有限公司凤岗分公司","nameCode":"H2966","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-81286222","Xtel":"0769-82097333","address":"东莞市凤岗镇龙平西路218号(宏盈工业区对面)"},
+        {"name":"东莞东风南方振安","Qcname":"东莞东风南方汽车销售服务有限公司长安分公司","nameCode":"H2981","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-89391966","Xtel":"0769-89391999","address":"广东省东莞市长安镇乌纱蔡屋振荣路2号A"},
+        {"name":"东莞东风南方塘厦","Qcname":"东莞东风南方汽车销售服务有限公司塘厦分公司","nameCode":"H2990","city":"东莞市","cityCode":"299","prov":"广东省","provCode":"24","Ftel":"0769-82955300","Xtel":"0769-82955111","address":"广东省东莞市塘厦镇林村新阳三路1号"},
+    ]
+    var ser=[
+        {"SERIES_ID":"17","SERIES_NAME":"玛驰","SERIES_NAME_EN":"march"},
+        {"SERIES_ID":"190","SERIES_NAME":"天籁公爵","SERIES_NAME_EN":"teana-vip"},
+        {"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟"},
+        {"SERIES_ID":"197","SERIES_NAME":"新楼兰","SERIES_NAME_EN":"new-murano"},
+        {"SERIES_ID":"199","SERIES_NAME":"全新逍客","SERIES_NAME_EN":"全新逍客"},
+        {"SERIES_ID":"20","SERIES_NAME":"骊威","SERIES_NAME_EN":"livina"},
+        {"SERIES_ID":"200","SERIES_NAME":"西玛","SERIES_NAME_EN":"Maxima"},
+        {"SERIES_ID":"203","SERIES_NAME":"全新天籁",},
+        {"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵",},
+        {"SERIES_ID":"205","SERIES_NAME":"新奇骏","SERIES_NAME_EN":"P32R"},
+        {"SERIES_ID":"208","SERIES_NAME":"劲客","SERIES_NAME_EN":"P02F"},
+        {"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA"},
+        {"SERIES_ID":"29","SERIES_NAME":"新骐达","SERIES_NAME_EN":"tiida3"},
+        {"SERIES_ID":"31","SERIES_NAME":"楼兰","SERIES_NAME_EN":"murano"},
+        {"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2"},
+        {"SERIES_ID":"211","SERIES_NAME":"轩逸·纯电","SERIES_NAME_EN":"轩逸·纯电"},
+    ]
+</script>
+<script>
+    //渲染数据
+    for(var i=0;i<des.length;i++){
+        var ul = '<ul>'+
+            '<li>'+des[i].name+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '<li>'+des[i].Xtel+'</li>'+
+            '</ul>';
+        $('.list').append(ul)
+        if ($('#city').html().indexOf(des[i].city)<0){
+            $('#city').append('<option value="'+des[i].cityCode+'">'+des[i].city+'</option>')
+            $('#cs').append('<option value="'+des[i].cityCode+'">'+des[i].city+'</option>')
+        }
+        $('#dealers').append('<option value="'+des[i].nameCode+'">'+des[i].name+'</option>')
+    }
+    for (var j=0;j<ser.length;j++){
+        $('#series').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+    }
+    //报名
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(),        //电话
+                city_id = $('#city').val(),  //城市id
+                city = $('#city option:checked').text(),    //城市名字
+                province = 24,  //省份
+                detail_id = 219,  //detail_id
+                brand_id = 11, //品牌
+                series_id = $('#series').val(),  //车型id
+                car_name = $('#series option:checked').text(),  //车型名字
+                dealers_code = $('#dealers').val(),   //经销商id
+                dealers = $('#dealers option:checked').text(),   //经销商名字
+                Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+
+                    city_id: city_id,
+                    city:city,
+                    dealers: dealers,
+                    province: province,
+                    car_name: car_name,
+                    dealers_code: dealers_code,
+
+                    detail_id:detail_id,
+                    // type: 0,
+                    // smartcode: 'A0000-000-000-00-00000'
+                    type: 1,
+                    smartcode: 'A2018-1426-5692-2451-137866'
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if(series_id=='0'){
+                alert('请选择车型');
+                return false;
+            }
+            if(dealers_code=='0'){
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    $(document).ready(function () {
+        $('.swi ul').roundabout({
+            duration: 750,
+            btnPrev: ".ban_r_btn", // 右按钮
+            btnNext: ".ban_l_btn", // 左按钮
+            enableDrag:true,           // 在移动端可以拖拽播放
+            minOpacity: 0.1,         //最小的透明度
+            maxOpacity: 1,         //最大的透明度
+            autoplay: true,          //是否开启自动播放
+            autoplayDuration: 4000,   //自动播放时间
+            autoplayPauseOnHover: true, // 鼠标移入元素内是否自动播放，为true不播放，false还自动播放
+        });
+    });
+    $(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    })
+</script>
+</html>

@@ -1,0 +1,564 @@
+<!--2018年-12月-20号 星期四 17:26:41 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="applicable-device" content="mobile">
+		<meta name="full-screen" content="yes">
+		<meta name="browsermode" content="application">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>横屏滚动</title>
+		<link rel="icon" type="image/x-icon" href="//mat1.gtimg.com/www/icon/favicon2.ico">
+		<link rel="stylesheet" href="//guangzhou.auto.qq.com/css/conmon.css">
+		<link href="//guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+		<link href="//guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+		<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+		<style>
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			.landscape {
+				position: fixed;
+				z-index: 1111;
+				top: 0;
+				left: 0;
+				display: none;
+				width: 100%;
+				height: 100%;
+				background-color: #000;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/lanscape.gif);
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% auto;
+			}
+
+			.wrapper {
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+			}
+
+			.wrapper .content {
+				overflow: hidden;
+				width: 100rem;
+				height: 100%;
+			}
+
+			.wrapper .content .part1 {
+				width: 14rem;
+				background-image: url("http://bosideng18gh.energytrust.com.cn/images/img1.jpg");
+			}
+
+			.wrapper .content .part2 {
+				width: 14rem;
+				background-image: url("http://bosideng18gh.energytrust.com.cn/images/img2.jpg");
+			}
+
+			.wrapper .content .part3 {
+				width: 14rem;
+				background-image: url("http://bosideng18gh.energytrust.com.cn/images/img3.jpg");
+			}
+
+			.wrapper .content .main {
+				position: relative;
+				overflow: hidden;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100% 100%;
+			}
+
+			.wrapper .content li {
+				position: relative;
+				float: left;
+				height: 100%;
+			}
+
+			.loadingbg {
+				position: fixed;
+				z-index: 999;
+				right: 0;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #555;
+			}
+
+			.loadingbg .loading {
+				position: absolute;
+				top: 45%;
+				left: 50%;
+				width: 9.16rem;
+				height: 2.5rem;
+				margin-top: -1.25rem;
+				margin-left: -4.58rem;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/loadingbg.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: 21.07rem 2.5rem;
+			}
+
+			.loadingbg .loading .load {
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 0;
+				height: 100%;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/loadingbg.png);
+				background-repeat: no-repeat;
+				background-position: -9.16rem 0;
+				background-size: 21.07rem 2.5rem;
+			}
+
+			.loadingbg .loading .hurt {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				right: 0;
+				left: -7%;
+				width: 2.75rem;
+				height: 2.5rem;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/loadingbg.png);
+				background-repeat: no-repeat;
+				background-position: -18.32rem 0;
+				background-size: 21.07rem 2.5rem;
+			}
+
+			.loadingbg .plan {
+				font-size: 16px;
+				line-height: 2;
+				position: absolute;
+				top: 54%;
+				width: 100%;
+				text-align: center;
+				color: #fff;
+			}
+
+			.loadingbg .plan {
+				font-size: 16px;
+				line-height: 2;
+				position: absolute;
+				top: 54%;
+				width: 100%;
+				text-align: center;
+				color: #fff;
+			}
+
+			.wrapper .content .part1 .tickets {
+				position: absolute;
+				top: 0.35rem;
+				left: 9.4rem;
+				width: 2.186667rem;
+				height: 5rem;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/animate1.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+				background-size: 8.826667rem 5rem;
+			}
+
+			.wrapper .content .part1 .tickets.anim {
+				-webkit-animation: tickets .5s steps(2) forwards 0s;
+				-o-animation: tickets .5s steps(2) forwards 0s;
+				animation: tickets .5s steps(2) forwards 0s;
+			}
+
+			@keyframes tickets {
+				0% {
+					background-position: -2.186667rem 0;
+				}
+
+				100% {
+					background-position: -6.56rem 0;
+				}
+			}
+
+			.wrapper .content .part2 .text2 {
+				position: absolute;
+				left: 0;
+				top: 0.5rem;
+				width: 2rem;
+				opacity: 0;
+			}
+
+			.wrapper .content .part2 .text3 {
+				position: absolute;
+				left: 5rem;
+				top: 1rem;
+				width: 1.5rem;
+				opacity: 0;
+			}
+
+			.wrapper .content .part2 .text2.anim,
+			.wrapper .content .part2 .text3.anim {
+				-webkit-animation: fadeIn .5s linear forwards;
+				-o-animation: fadeIn .5s linear forwards;
+				animation: fadeIn .5s linear forwards;
+			}
+
+			.music-icon {
+				position: fixed;
+				z-index: 112;
+				top: .1rem;
+				right: .1rem;
+				display: block;
+				width: .4rem;
+				height: .4rem;
+				background-image: url(http://bosideng18gh.energytrust.com.cn/images/music.png);
+				background-repeat: no-repeat;
+				background-size: .4rem .4rem;
+			}
+
+			.music-icon.active {
+				-webkit-animation: rond 1.5s infinite linear;
+				-o-animation: rond 1.5s infinite linear;
+				animation: rond 1.5s infinite linear;
+			}
+
+			@keyframes rond {
+				0% {
+					-webkit-transform: rotate(0);
+					-o-transform: rotate(0);
+					transform: rotate(0);
+				}
+
+				100% {
+					-webkit-transform: rotate(360deg);
+					-o-transform: rotate(360deg);
+					transform: rotate(360deg);
+				}
+			}
+			.wrapper .content .part3 #goHome,.wrapper .content .part3 #bmk {
+				position: absolute;
+				left: 8.7rem;
+				bottom: 1rem;
+				width: 1.6rem;
+				height: .533333rem;
+				border-radius: .08rem;
+				background: #92C3F8;
+			}
+			.wrapper .content .part3 #bmk {
+				bottom: 1.8rem;
+			}
+			.SignBox {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 5rem;
+				height: 3rem;
+				margin-left: -2.5rem;
+				margin-top: -1.5rem;
+				background: white;
+				-webkit-transition: rotate(-90deg);
+				transform: rotate(-90deg);
+				z-index: 22222;
+				display: none;
+			}
+			.SignBox h3 {
+				width: 100%;
+				text-align: center;
+				font-size: .3rem;
+				font-weight: bold;
+				line-height: 0.5rem;
+			}
+			.SignBox input {
+				width: 80%;
+				height: 100%;
+				background: #ccc;
+				font-size: .266667rem;
+				padding-left: 0.1rem;
+			}
+			.SignBox p {
+				width: 4.5rem;
+				height: .5rem;
+				margin: 0.15rem auto;
+				font-size: .3rem;
+			}
+			.SignBox #submit {
+				margin-left: 2.2rem;
+				margin-top: 0.2rem;
+				width: 2rem;
+				height: 0.5rem;
+				border-radius: .08rem;
+				cursor: pointer;
+			}
+			@media screen and (orientation: portrait) {
+				/* 竖屏 */
+				/* .SignBox {
+					width: 9rem;
+					height: 8rem;
+					margin-left: -4.5rem;
+					margin-top: -5rem;
+					-webkit-transition: rotate(0);
+					transform: rotate(0);
+				}
+				.SignBox h3 {
+					font-size: 0.7rem;
+					line-height: 1.5rem;
+				}
+				.SignBox input {
+					font-size: .5rem;
+				}
+				.SignBox p {
+					width: 7rem;
+					height: 0.9rem;
+					margin: 0.5rem auto;
+					font-size: .5rem;
+				}
+				.SignBox #submit {
+					margin-left: 3rem;
+					margin-top: 0.2rem;
+					width: 3rem;
+					height: 1rem;
+					border-radius: .1rem;
+					font-size: 0.5rem;
+				} */
+			}
+			@media screen and (orientation: landscape) {
+				/* 横屏 */
+				/* .SignBox {
+					width: 6rem;
+					height: 3rem;
+					margin-left: -3rem;
+					margin-top: -1.5rem;
+					-webkit-transition: rotate(-90deg);
+					transform: rotate(-90deg);
+				} */
+			}
+			.hide {
+				display: none;
+			}
+			.show {
+				display: block;
+
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="landscape" id="landscape"></div>
+		<div class="wrapper">
+			<ul class="content">
+				<li class="part1 main">
+					<div class="tickets"></div>
+				</li>
+				<li class="part2 main">
+					<div class="text2"><img src="http://bosideng18gh.energytrust.com.cn/images/text2.png" alt=""></div>
+					<div class="text3"><img src="http://bosideng18gh.energytrust.com.cn/images/text3.png" alt=""></div>
+				</li>
+				<li class="part3 main">
+					<button id="bmk" class="hide">我要报名</button>
+					<button id="goHome" class="hide">再看一次</button>
+				</li>
+			</ul>
+		</div>
+		<div class="loadingbg">
+			<div class="loading">
+				<div class="load"></div>
+				<div class="hurt"></div>
+			</div>
+			<div class="plan">回家倒计时……<span></span></div>
+		</div>
+		<a class="music-icon active"></a>
+		<div class="SignBox">
+			<h3>预约报名</h3>
+			<p class="name">
+				<label>姓名:</label>
+				<input type="text" id="name">
+			</p>
+			<p class="tel">
+				<label>电话:</label>
+				<input type="tel" id="tel" maxlength="11">
+			</p>
+			<button id="submit">提交</button>
+		</div>
+	</body>
+	<script src="//dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/supervise.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+	<script src="//guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+	<script src="https://guangzhou.auto.qq.com/js/bscroll1.13.2.min.js"></script>
+	<script>
+		//设置宽度
+		var setWidth = function () {
+			var len = $('.wrapper .content li').length;
+			var w = $('.wrapper .content li').width();
+			var contentW = len * w;
+			$('.wrapper .content').width(contentW);
+			//重新刷新滚动条宽度
+			//scroll.refresh();
+		};
+		//图片数组
+		var arr = [
+			"http://bosideng18gh.energytrust.com.cn/images/img1.jpg",
+			"http://bosideng18gh.energytrust.com.cn/images/img2.jpg",
+			"http://bosideng18gh.energytrust.com.cn/images/img3.jpg"
+		];
+		// 图片预加载
+		var LoadingAnim = function (loaded, loadMax) {
+			var i = parseInt((loaded / loadMax) * 100) + '%';
+			var left = parseInt((loaded / loadMax) * 100 - 20) + '%';
+			$('.load').width(i);
+			$('.hurt').css('left', left);
+			$('.plan span').html(i);
+		};
+		var Loading = function (index, callIn, callback) {
+			var loaded = 0,
+				loadMax = arr.length,
+				animImgs = [];
+			for (var i = 0; i < loadMax; i++) {
+				var oImg = new Image();
+				oImg.onload = function () {
+					loaded++;
+					callIn && callIn(loaded, loadMax);
+					if (loaded == loadMax) callback && callback(animImgs);
+				};
+				oImg.src = arr[i];
+				if (i > index) animImgs.push(oImg);
+			}
+		};
+		var begin = function () {
+			Loading(0, function (loaded, loadMax) {
+				LoadingAnim(loaded, loadMax);
+			}, function (imgJson) {
+				init(imgJson);
+			});
+		};
+		var flags = false;
+		if (window.orientation == 180 || window.orientation == 0) {
+			document.getElementById('landscape').style.display = 'block';
+		} else {
+			document.getElementById('landscape').style.display = 'none';
+			begin();
+		}
+		window.addEventListener('orientationchange', function () {
+			if (window.orientation == 90 || window.orientation == -90) {
+				/**横屏*/
+				document.getElementById('landscape').style.display = 'none';
+				if (flags == false) {
+					begin();
+				}
+				$('.SignBox').attr('style','');
+				$('.SignBox h3').attr('style','');
+				$('.SignBox input').attr('style','');
+				$('.SignBox p').attr('style','');
+				$('.SignBox #submit').attr('style','');
+			} else {
+				/**竖屏*/
+				document.getElementById('landscape').style.display = 'block';
+				$('.SignBox').css({
+					'width': '9rem',
+					'height': '8rem',
+					'margin-left': '-4.5rem',
+					'margin-top': '-5rem',
+					'-webkit-transition': 'rotate(0)',
+					'transform': 'rotate(0)'
+				});
+				$('.SignBox h3').css({
+					'font-size': '0.7rem',
+					'line-height': '1.5rem'
+				});
+				$('.SignBox input').css({
+					'font-size': '.5rem'
+				});
+				$('.SignBox p').css({
+					'width': '7rem',
+					'height': '0.9rem',
+					'margin': '0.5rem auto',
+					'font-size': '.5rem'
+				});
+				$('.SignBox #submit').css({
+					'margin-left': '3rem',
+					'margin-top': '0.2rem',
+					'width': '3rem',
+					'height': '1rem',
+					'border-radius': '.1rem',
+					'font-size': '0.5rem'
+				})
+			}
+		});
+		var init = function (imgJson) {
+			flags = true;
+			document.addEventListener('touchmove', function (event) {
+				event.preventDefault();
+			}, false);
+			$('.loadingbg').fadeOut();
+			setTimeout(function(){
+				setWidth();
+			},800);
+			//初始化滚动条
+			var scroll = new BScroll($('.wrapper')[0], {
+				scrollX: true,
+				bounce: false,
+				momentum: false,
+				probeType: 3
+			});
+			//再看一次
+			$('.wrapper .content .part3 #goHome').click(function () {
+				scroll.scrollTo(0, 0, 500);
+			})
+			//滚动判断
+			scroll.on('scroll', function (pos) {
+				var x = parseInt(-pos.x);
+				// console.log(x);
+				if (x > 50 && x < 548) {
+					$('.tickets').addClass('anim');
+				} else {
+					$('.tickets').removeClass('anim');
+				}
+				if (x > 370 && x < 1017) {
+					$('.text2').addClass('anim');
+				} else {
+					$('.text2').removeClass('anim');
+				}
+				if (x > 710 && x < 1393) {
+					$('.text3').addClass('anim');
+				} else {
+					$('.text3').removeClass('anim');
+				}
+				if (x >= 2135) {
+					$('#bmk').fadeIn(300);
+					$('#goHome').fadeIn(300);
+				} else if (x < 1737) {
+					$('#bmk').addClass('hide').fadeOut(300);
+					$('#goHome').addClass('hide').fadeOut(300);
+				}
+			})
+		}
+	</script>
+	<script>
+		//弹出报名框
+		$('#bmk').click(function () {
+			$('.SignBox').addClass('show');
+		})
+	</script>
+	<script>
+		/*判断手机横屏竖屏*/
+		var OrientationChange = function () {
+			switch (window.orientation) {
+				case 180:
+				case 0:
+					$(".landscape").show();
+					break;
+				case 90:
+				case -90:
+					$(".landscape").hide();
+					break;
+			}
+		};
+		var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+		window.addEventListener(evt, OrientationChange, false);
+		OrientationChange();
+	</script>
+
+</html>

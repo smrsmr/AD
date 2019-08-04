@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 不允许用户点击屏幕放大浏览 -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>520 特价车限量购 特别的爱给特别的你</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+</head>
+<style type="text/css">
+    html,body{font-family: "微软雅黑";}
+    body,h1,h2,h3,h4,h5,div,span,p,ul,ol,dl,dt,dd,a,input,img,select{margin: 0;padding: 0;list-style: none;border: 0;font-weight: normal;outline: none;}
+    input,select{ appearance:none;-moz-appearance:none; -webkit-appearance:none;}
+    .content{width: 100%;margin: auto;max-width: 1920px;}
+    .content>div{width: 100%;}
+    .content>div>img{width: 100%;vertical-align: top;}
+    .bg{padding-bottom: 0.13rem;background:url("http://img1.gtimg.com/autoguangzhou/pics/hv1/56/148/208/13562996.jpg") no-repeat;background-size: 100% 100%;}
+    #list{width: 96%;margin-left: 2%;}
+    #list li{width: auto;height: 2.74rem;margin:0 auto 0.4rem;padding: 0.18rem 0.34rem;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/67/76/208/13544647.png) no-repeat center center;background-size: 108%;}
+    #list li>div{height: 100% ;}
+    .le{float: left;}
+    .ri{float: right;}
+    .pic{width: 5.8rem;height: 100%;overflow: hidden;background-position: bottom;background-repeat: no-repeat;background-size: 100%;}
+    .msg{width: 3.01rem;position: relative;}
+    .msg>span{font-size: 0.40rem;color: black;}
+    .msg p{color: #666666;font-size: 0.26rem;margin-bottom: 0.05rem;}
+    .submitList{width: 2.45rem;height: 0.61rem;font-size:0.34rem;background: #ea5b69;color: white;position: absolute;bottom: 0;    line-height: 0.65rem;}
+    .msg-le{padding-right: 0.1rem;text-align: right;}
+    .msg-le .submitList{right:0.1rem ;}
+
+    .msg-ri{padding-left: 0.1rem;text-align: left;}
+    .msg-ri .submitList{left:0.1rem ;}
+    /*报名框*/
+    .pop-all{display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0,0,0,0.5);z-index: 10;}
+    .pop{display: none;position: absolute;top: 0rem;width: 88%!important;left: 6%;background: white;border-radius: 0.55rem;z-index: 11;
+    }
+    .title{height: 1.81rem;color: pink;font-size: 0.64rem;font-weight: bold;text-align: center;line-height: 1.81rem;letter-spacing: 0.04rem;}
+    .tex{width: 7.06rem;height: 1.41rem;background: #f2f2f2;color: black;font-size: 0.48rem;margin: auto;margin-bottom: 0.4rem;}
+    .tex label{width: 1.63rem;height: 100%;text-align: right;display: inline-block;}
+    .tex input{width: 5.2rem;height: 100%;background: transparent;padding-left: 0.2rem;}
+    #submit{width: 100%;height: 100%;background: pink;color: white;font-size: 0.5rem;letter-spacing: 0.04rem;}
+    /*正式样式*/
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {display: none;}
+    @media only screen and (max-device-width: 320px){
+        .msg p{margin-bottom: 0;}
+        .msg>span{font-size: 0.44rem;font-weight: bold;}
+        .pic{width: 5.3rem;}
+        .msg{width: 3.51rem}
+    }
+    .cur{display: block;}
+    .red{color: red;}
+    .text_bottom,.text_bottom_t{
+        /*width: 100%!important;*/
+        width: 7.06rem;
+        background: #fff;
+        border-radius: 0.55rem;
+        padding-bottom: 0.2rem;
+        margin: auto;
+    }
+    .text_bottom_t{
+        margin-top: -0.3rem;
+        /*margin:-0.3rem auto auto auto;*/
+    }
+    .text_bottom_t span{
+        display: inline-block;
+        width: 7.2rem;
+        /*height: 1.41rem;*/
+        /*margin-left: 0.8rem;*/
+        font-size: 0.47rem;
+        /*padding:0.2rem;*/
+        margin-bottom: 0.2rem;
+
+    }
+    .close_btn{
+        width: 0.9rem!important;
+        height: 0.8rem!important;
+        /*margin:0.2rem 0 0 85%;*/
+        right: 3%;
+        top: 0.2rem;
+        position: absolute;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+<div class="content">
+    <!--kv图-->
+    <div><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/54/148/208/13562994.jpg"></div>
+    <!--步骤和title图-->
+    <div><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/55/148/208/13562995.jpg"></div>
+    <!--请勿在这里修改内容，填充内容在后面修改-->
+    <div class="bg">
+        <ul id="list">
+        </ul>
+    </div>
+    <div class="bg3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/57/148/208/13562997.jpg" /></div>
+    <div class="pop-all"></div>
+    <div class="pop">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/63/148/208/13563003.png" class="close_btn">
+        <h3 class="title">·预约报名·</h3>
+        <p class="tex"><label for="">姓名</label><input type="text" name="name" id="name" value="" placeholder="请输入您的姓名"/></p>
+        <p class="tex"><label for="">手机</label><input type="tel" name="phone" id="phone" value="" maxlength="11"placeholder="请输入您的电话"/></p>
+        <p class="tex"><input type="button" name="" id="submit" value="确定报名" /></p>
+        <div class="text_bottom">
+            <h3 class="title" style="margin-top: -0.5rem;">·活动详情·</h3>
+            <div class="text_bottom_t">
+                <!--  <span></span>
+                 <span></span>
+                 <span></span>
+                 <span></span> -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var msg=[
+            /*这里开始修改填充内容*/
+            {
+                "name":"沃尔沃XC90",
+                "p1":"优惠18万",
+                "p2":"限量特惠",
+                "p3":"正规4S店车源",
+                "brand":"49",
+                "series":"284",
+                "img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/33/144/208/13561953.png",
+                "span1":"参团购车赠豪华礼包",
+                "span2":"",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"雷克萨斯ES",
+                "p1":"首付5.96万起",
+                "p2":"日供18元起",
+                "p3":"置换享5000元现金补贴",
+                "brand":"5",
+                "series":"27",
+                "img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/37/143/208/13561702.png",
+                "span1":"全系优惠5000元起",
+                "span2":"购车赠送豪华礼包",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"奥迪A4L",
+                "p1":"优惠7.45万",
+                "p2":"享至高1.5万置换补贴",
+                "p3":"购车赠万元礼包",
+                "brand":"8",
+                "series":"53",
+                "img":"http://img1.gtimg.com/autoshenzhen/pics/hv1/243/140/208/13561143.png",
+                "span1":"按揭享18期免息",
+                "span2":"首付低至2成",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"宝马X5",
+                "p1":"优惠高达19.9万",
+                "p2":"日供115元起",
+                "p3":"购车赠豪华礼包",
+                "brand":"1",
+                "series":"23",
+                "img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/126/143/208/13561791.png",
+                "span1":"旧车置换享补贴",
+                "span2":"利率低至0.88%",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"奔驰GLA",
+                "p1":"参团优惠9.88万元",
+                "p2":"首付仅需5.4万",
+                "p3":"置换补贴高达5000元",
+                "brand":"7",
+                "series":"61",
+                "img":"http://img1.gtimg.com/autoshenzhen/pics/hv1/41/141/208/13561196.png",
+                "span1":"试驾领取至高999元代金券",
+                "span2":"日付22.88元",
+                "span3":"参团购车赠豪华礼包",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"凯迪拉克ATS-L",
+                "p1":"限时钜惠8万元",
+                "p2":"首付仅需6万元",
+                "p3":"日供低至18元",
+                "brand":"73",
+                "series":"409",
+                "img":"http://img1.gtimg.com/autoshenzhen/pics/hv1/51/141/208/13561206.png",
+                "span1":"旧车置换享补贴",
+                "span2":"参团购车赠豪华礼包",
+                "span3":"现车热卖",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"奔驰GLE",
+                "p1":"限时优惠19万",
+                "p2":"月付低至2468元",
+                "p3":"置换补贴高达5000元",
+                "brand":"7",
+                "series":"144",
+                "img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/179/143/208/13561844.png",
+                "span1":"试驾领取至高999元代金券",
+                "span2":"参团购车赠豪华礼包",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+            {
+                "name":"奥迪Q5",
+                "p1":"参团优惠10.4万元",
+                "p2":"享至高1.5万置换补贴",
+                "p3":"购车赠万元礼包",
+                "brand":"8",
+                "series":"55",
+                "img":"http://img1.gtimg.com/autoguangzhou/pics/hv1/23/144/208/13561943.png",
+                "span1":"首付低至2成",
+                "span2":"享3年低利率",
+                "span3":"",
+                "span4":"",
+                "span5":"",
+                "span6":""
+            },
+        ];
+        for(var i=0,l=msg.length,$li='';i<l;i++){
+            $li+='<li>'+
+                '<div class="msg">'+
+                '<span>'+msg[i].name+'</span>'+
+                '<p>'+msg[i].p1+'</p>'+
+                '<p>'+msg[i].p2+'</p>'+
+                '<p>'+msg[i].p3+'</p>'+
+                '<input type="button" series="'+msg[i].series+'" brand="'+msg[i].brand+'" class="submitList submit" value="立即报名" span1="'+msg[i].span1+'" span2="'+msg[i].span2+'" span3="'+msg[i].span3+'" span4="'+msg[i].span4+'" span5="'+msg[i].span5+'" span6="'+msg[i].span6+'"/>'+
+                '</div>'+
+                '<div class="pic submit" series="'+msg[i].series+'" brand="'+msg[i].brand+'"  style="background-image: url('+msg[i].img+');" span1="'+msg[i].span1+'" span2="'+msg[i].span2+'" span3="'+msg[i].span3+'" span4="'+msg[i].span4+'" span5="'+msg[i].span5+'" span6="'+msg[i].span6+'"></div>'+
+                '</li>';
+        }
+
+        $('#list').append($li);
+        $('#list li:nth-child(2n)').children('.msg').addClass('ri msg-ri');
+        $('#list li:nth-child(2n)').children('.pic').addClass('le');
+        $('#list li:nth-child(2n+1)').children('.msg').addClass('le msg-le');
+        $('#list li:nth-child(2n)').children('.pic').addClass('ri');
+        var series,brand,h=0;
+        $(window).scroll(function(event){
+            h=$(document).scrollTop();
+
+        });
+
+        $('.submit').click(function(){
+            $('.pop').animate({top:20+h+'px'},300)
+            series = $(this).attr('series');
+            brand = $(this).attr('brand');
+            $('.pop-all,.pop').toggleClass('cur')
+            var $span1=$(this).attr('span1')
+            var $span2=$(this).attr('span2')
+            var $span3=$(this).attr('span3')
+            var $span4=$(this).attr('span4')
+            var $span5=$(this).attr('span5')
+            var $span6=$(this).attr('span6')
+            $('.text_bottom_t').html('')
+            $('.text_bottom_t').append('<span>'+$span1+'</span><span>'+$span2+'</span><span>'+$span3+'</span><span>'+$span4+'</span><span>'+$span5+'</span><span>'+$span6+'</span>')
+        })
+        function click_close(el) {
+            el.click(function(){
+                $('.pop').animate({top:'5.05rem'},300)
+                $('.pop-all,.pop').toggleClass('cur')
+            })
+        }
+        click_close($('.close_btn'))
+        click_close($('.pop-all'))
+        /*光标错乱*/
+
+
+        //数字变红
+        var changeNum = function(str){
+            var reg = /([0-9]\.\d+|[0-9]+)/g;
+            return str.replace(reg,'<span class=\'red\'>$1</span>');
+        };
+        var a=$('#list').children('li').length;
+        for(var i=0;i<$('.msg p').length;i++){
+            $('.msg p').eq(i).html(changeNum( $('.msg p').eq(i).text()))
+        }
+        /*---报名---*/
+        var flag = true;
+//    alert(location.href+new Date().getTime())
+        $("#submit").click(function() {
+            if(flag) {
+                var name = $('#name').val();
+                var phone = $('#phone').val();
+                var series_id =series;
+                var brand_id=brand;//品牌id
+                var act_id=2366;//后台新建活动
+                var url ='http://www.yetcar.com' + '/index.php?s=/Home/GeneralActivity/baoming.html';
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确中文姓名');
+                    return false
+                };
+                if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(phone)) || phone.length<11 ) {
+                    alert('手机格式不对');
+                    return false
+                };
+                var data={
+                    name: name,
+                    phone: phone,
+                    brand_id: brand_id,
+                    series_id: series_id,
+                    act_id: act_id
+                }
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:url,
+                    async:true,
+                    data:data,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            $('.pop-all,.pop').toggleClass('cur')
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            flag = true;
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+        /*---报名结束---*/
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>

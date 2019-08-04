@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>swiper</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .swiper-container {
+            width: 1076px;
+            height: 520px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .swiper-container .swiper-slide {
+            display: none;
+            position: relative;
+        }
+        .swiper-container .swiper-slide p {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+            background: rgba(0,0,0,.5);
+            z-index: 11;
+            line-height: 40px;
+            color: white;
+        }
+        .swiper-container .swiper-slide p span {
+            margin-left: 20px;
+        }
+        .swiper-container .swiper-slide:first-child {
+            display: block;
+        }
+        .swiper-container .swiper-pagination {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 40px;
+            width: auto;
+            z-index: 12;
+        }
+        .swiper-container .swiper-pagination span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .swiper-container .swiper-pagination span.active {
+            background: deepskyblue;
+            border: 1px solid deepskyblue;
+            transition: background-color 0.5s linear;
+        }
+        .swiper-container .swiper-pagination span:hover {
+            background: deepskyblue;
+            border: 1px solid deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/29/60/210/13670579.jpg" alt=""><p style="height: 40px;"><span>哈哈哈哈哈1</span></p></div>
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/30/60/210/13670580.jpg" alt=""><p><span>哈哈哈哈哈2</span></p></div>
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/31/60/210/13670581.jpg" alt=""><p><span>哈哈哈哈哈3</span></p></div>
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/33/60/210/13670583.jpg" alt=""><p><span>哈哈哈哈哈4</span></p></div>
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/35/60/210/13670585.jpg" alt=""><p><span>哈哈哈哈哈5</span></p></div>
+        <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/36/60/210/13670586.jpg" alt=""><p><span>哈哈哈哈哈6</span></p></div>
+    </div>
+    <div class="swiper-pagination">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script>
+   $(function () {
+       var i=0,timer=null;
+       //swiper-pagination
+       $('.swiper-pagination span').click(function () {
+           var index = $(this).index();
+           i=index;
+           nextSwiper(index)
+       });
+       $('.swiper-container').hover(function () {
+           clearInterval(timer)
+       },function () {
+           timer = setInterval(AutoSwiper,3000)
+       });
+       //nextSwiper
+       function nextSwiper(i) {
+           $('.swiper-pagination span').eq(i).addClass('active').siblings().removeClass('active');
+           $('.swiper-wrapper .swiper-slide').eq(i).fadeIn(400).siblings().hide();
+           $('.swiper-wrapper .swiper-slide').eq(i).find('p').animate({height:'40px'},800).parents('.swiper-slide').siblings().find('p').css({height:'0'});
+       }
+       //AutoSwiper
+       function AutoSwiper() {
+           i++;
+           if(i>5) i=0;
+           nextSwiper(i)
+       }
+       timer = setInterval(AutoSwiper,3000)
+   })
+</script>
+</html>

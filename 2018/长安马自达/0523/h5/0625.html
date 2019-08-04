@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>心向往 趣感路</title>
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="http://guangzhou.auto.qq.com/css/video-js.min.css" rel="stylesheet">
+    <script src="http://guangzhou.auto.qq.com/js/video.js"></script>
+    <style>
+        html,body {height:100%;margin: 0 auto;max-width:752px;background:#000;}
+        .swiper-container{height: 100%;  }
+        .resize {position:absolute;bottom: 20px;left:50%;margin-left:-25px;z-index:9999;}
+        .resize img {width:50px;}
+        input:focus::-webkit-input-placeholder{opacity:0;}
+        .swiper-slide-active {overflow: hidden}
+        .slider2,.slider3,.slider4 {  position: relative;  }
+        .pa {position: absolute;left: 50%;}
+        .slider2 .video {width: 25.3rem;height: 10.69rem;margin-left: -12.7rem;top: 7.7rem;overflow: hidden;}
+        .video {width: 1190px;margin-left: -596px;top: 5px;height: 640px;}
+        .video .vjs-poster {background-size: cover;}
+        .video .vj {width: 100%;height: 100%;}
+        .video-js .vjs-big-play-button {background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/231/139/208/13560876.png") no-repeat;width: 59px;height: 58px;border: none;}
+        .vjs-paused .vjs-big-play-button,.vjs-paused.vjs-has-started .vjs-big-play-button {display: block;}
+        .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .video-js .vjs-play-control .vjs-icon-placeholder:before, .vjs-icon-play:before {content: "";}
+        .vjs-big-play-centered .vjs-big-play-button {margin-top: -1em;margin-left: -1em;}
+        .slider2 .img2 {top: 24.5rem;width: 25.5rem;height: 17.5rem;margin-left: -12.9rem;overflow: hidden;}
+        .slider2 .img2 ul {width: 100%;}
+        .slider2 .img2 ul li {float: left;width: 12.2rem;height: 8rem;}
+        .slider2 .img2 ul li:nth-child(even){margin-left: 1.1rem;}
+        .slider2 .img2 ul li:nth-child(1) ,.slider2 .img2 ul li:nth-child(2){margin-bottom: 1rem;}
+        .slider2 .img2 ul li:last-child{width: 12rem;}
+        .w {width: 15rem;height: 2rem;}
+        .slider3 .a {margin-left: -12.5rem;top: 7rem;}
+        .slider3 .b {margin-left: -3rem;top: 14.5rem;}
+        .slider3 .c {margin-left: -12rem;top: 25rem;}
+        .slider3 .d {margin-left: -4rem;top: 30rem;}
+        .slider4 .e {margin-left: -3.5rem;top: 5.9rem;}
+        .slider4 .f {margin-left: -12.4rem;top: 17rem;}
+        .slider4 .g {margin-left: -3rem;top: 25rem;}
+        .slider4 .i {margin-left: -11rem;top: 31.5rem;}
+        .slider5 .bmk {width: 21rem;height: 26rem;top: 8rem;margin-left: -10.5rem;}
+        .slider5 .bmk input,
+        .slider5 .bmk select {width: 100%;height: 100%;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;color: white;font-size: 1.2rem;}
+        .slider5 .bmk p {width: 19rem;height: 3rem;}
+        .slider5 .bmk .name,.slider5 .bmk .tel,
+        .slider5 .bmk .series,.slider5 .bmk .dealers {margin-left: 1rem;margin-top: 0.3rem;}
+        .slider5 .bmk .tel {margin-top: 0.85rem;}
+        .slider5 .bmk .line p {display: inline-block;width: 9rem;}
+        .slider5 .bmk .prov {margin-top: 0.8rem;margin-left: 1rem;}
+        .slider5 .bmk .city {margin-left: 1.3rem;}
+        .slider5 .bmk .series,
+        .slider5 .bmk .dealers {margin-top: 0.85rem;}
+        .slider5 .bmk .submit {margin-left: 0.5rem;margin-top: 1.3rem;width: 20rem;}
+        .slider5 #TZdes {bottom: 2.1rem;width: 20.4rem;height: 3rem;margin-left: -10.2rem;background: transparent;}
+        .slider5 .d1, .slider5 .d2 {position: absolute;left: 0;top: 0;display: none;}
+        .slider5 .d2 .close {top: 1.2rem;width: 2rem;height: 2rem;margin-left: 10.3rem;}
+        .slider5 .d2 .title {top: 6.3rem;width: 16rem;height: 4rem;margin-left: -7rem;}
+        .slider5 .d2 .title #qHprov,
+        .slider5 .d2 .title #qHcity {width: 5rem;height: 4rem;font-size: 1.3rem;cursor: pointer;-webkit-appearance: none;-moz-appearance: none;appearance: none;background: transparent;color: white;margin-left: 0.6rem;outline: none;}
+        .slider5 .d2 .title #qHcity {margin-left: 1.3rem;}
+        .slider5 .d2 .list {top: 11rem;width: 23.5rem;height: 30rem;margin-left: -11.5rem;overflow: auto;}
+        .slider5 .d2 .list ul {width: 100%;margin-bottom: 1.5rem;}
+        .slider5 .d2 .list ul li {font-size: 1rem;color: white;line-height: 1.4rem;}
+        .show {position: fixed;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0,0,0,0.6);display: none;z-index: 998;}
+        .show.active {z-index: 998;}
+        .show .closeX {width: 1.8rem;position: absolute;right: 2.5rem;top: 3rem;}
+        .Large {position: fixed;left: 50%;width: 22rem;height: auto;top: 7rem;margin-left: -11.5rem;display: none;z-index: 999;}
+        .Large .LargeImg {width: 100%;height: 15rem;}
+        .Large .LargeTxt {width: 100%;height: auto;}
+        .Large .LargeTxt p {text-align: left;font-size: 1.2rem;color: white;letter-spacing: 0.1rem;}
+        .Large .LargeTxt p:first-child {text-align: center;margin-bottom: 1rem;font-weight: bold;font-size: 1.4rem;margin-top: 0.5rem;}
+        .Large.active {z-index: 999;}
+        input::-webkit-input-placeholder{color: #fff;opacity:1;}
+        .mCSB_scrollTools .mCSB_draggerRail {width: 0.5rem;height: 100%;margin: 0 auto;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;background: #5a5b5b;}
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {position: relative;width: 0.5rem;height: 100%;margin: 0 auto;-webkit-border-radius: 0px;-moz-border-radius: 0px;border-radius: 0px;text-align: center;background: #a0051e !important;}
+        .mCSB_inside > .mCSB_container {margin-right: 1rem;}
+        option {color: #000;}
+        .zw {
+            width: 6rem;
+            bottom: 3.5rem;
+            margin-left: -3rem;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+        .zw .zwImg {
+            width: 3rem;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body style="background: rgb(0, 0, 0);">
+<div class="swiper-container" id="swiper1">
+    <div class="swiper-wrapper">
+        <!--page 1-->
+        <div class="swiper-slide slider1">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp " swiper-animate-duration="1.3s" swiper-animate-delay="0.5s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/149/210/200/13058699.png"></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/150/33/209/13598790.jpg" />
+            </div>
+        </div>
+        <!--page 5-->
+        <div class="swiper-slide slider5">
+            <div class="d1" style="display: block">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/247/175/208/13570072.jpg" />
+                <div class="bmk pa">
+                    <p class="name">
+                        <input type="text" id="name" placeholder="姓名">
+                    </p>
+                    <p class="tel">
+                        <input type="tel" id="tel" placeholder="电话" maxlength="11">
+                    </p>
+                    <div class="line">
+                        <p class="prov">
+                            <select value="" id="prov">
+                                <option value="0">选择省份</option>
+                            </select>
+                        </p>
+                        <p class="city">
+                            <select value="" id="city">
+                                <option value="0">选择城市</option>
+                            </select>
+                        </p>
+                    </div>
+                    <p class="series">
+                        <select value="" id="series">
+                            <option value="0">请选择车型</option>
+                            <option value="183" data-brand="24"> 新Mazda3 AXELA昂克赛拉 两厢</option>
+                            <option value="183" data-brand="24"> 新Mazda3 AXELA昂克赛拉 三厢</option>
+                            <option value="202" data-brand="24"> 第二代Mazda CX-5</option>
+                            <option value="799" data-brand="58"> 全新进口Mazda CX-3</option>
+                        </select>
+                    </p>
+                    <p class="dealers">
+                        <select value="" id="dealers">
+                            <option value="0">请选择经销商</option>
+                        </select>
+                    </p>
+                    <p class="submit">
+                        <input type="button" id="submit" style="cursor:pointer;">
+                    </p>
+                </div>
+                <button id="TZdes" class="pa"></button>
+            </div>
+            <div class="d2">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/248/175/208/13570073.jpg" alt="" style="position: relative;">
+                <i class="close pa"></i>
+                <p class="title pa">
+                    <select value="" id="qHprov">
+                        <option value="0">省份</option>
+                    </select>
+                    <select value="" id="qHcity">
+                        <option value="0">城市</option>
+                    </select>
+                </p>
+                <div class="list pa"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="show">
+    <i class="closeX"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/124/175/208/13569949.png" alt=""></i>
+</div>
+<div class="Large">
+    <div class="LargeImg"><img src="" alt=""></div>
+    <div class="LargeTxt">
+        <p></p>
+        <p></p>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.mCustomScrollbar.min.js"></script>
+<script>
+    var mySwiper1 = new Swiper ('#swiper1', {
+        direction: 'vertical',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    var des=[
+        {"prov":"广东省","city":"广州市","name":"广州市福犸汽车有限公司","Jcname":"广州福犸","tel":"020-81008999 ","address":"广州市白云区江夏空港大道尚德广场长安马自达 "},
+        {"prov":"广东省","city":"潮州市","name":"潮州市德隆汽车贸易有限公司","Jcname":"潮州德隆","tel":"0768-5226333","address":"潮州市潮安县浮洋镇乌洋村干渠东侧"},
+        {"prov":"广西省","city":"百色市","name":"百色万马汽车销售服务有限公司","Jcname":"百色万马","tel":"0776-2222237","address":"广西百色市右江区大旺路中段12号大旺汽车广场长安马自达百色万马4S店"},
+        {"prov":"湖南省","city":"常德市","name":"常德万通汽车销售服务有限公司","Jcname":"常德万通","tel":"0736-7760811","address":"常德市武陵区常德大道和柳叶大道交汇处"},
+        {"prov":"湖南省","city":"郴州市","name":"郴州万马汽车销售服务有限公司","Jcname":"郴州万马","tel":"0735-2235711","address":"湖南省郴州市北湖区郴州大道城前岭立交桥西长安马自达4S店"},
+        {"prov":"广东省","city":"东莞市","name":"东莞市莞泰通益汽车销售服务有限公司","Jcname":"东莞莞泰","tel":"0769-81718868","address":"东莞市厚街镇莞太路溪头天桥旁马自达4S店"},
+        {"prov":"广东省","city":"东莞市","name":"东莞市通益汽车销售服务有限公司","Jcname":"东莞通益","tel":"0769-81191313","address":"东莞市寮步镇药勒村蟠龙路"},
+        {"prov":"广东省","city":"佛山市","name":"佛山海迪汽车有限公司","Jcname":"佛山海迪","tel":"0757-82782363","address":"佛山市禅城区佛山大道381号佛山（国际）车城南区四座一号"},
+        {"prov":"广东省","city":"佛山市","name":"佛山骏迪汽车有限公司","Jcname":"佛山骏迪","tel":"0757-81853377","address":"佛山市南海区桂城海八路华南汽车城G13号"},
+        {"prov":"广东省","city":"佛山市","name":"佛山市耀田汽车有限公司","Jcname":"佛山耀田","tel":"0757-22816066,0757-22816065","address":"佛山市顺德区伦教镇105国道边【即伦教周大福旁】"},
+        {"prov":"广东省","city":"佛山市","name":"佛山智迪汽车有限公司","Jcname":"佛山智迪","tel":"0757-817778182","address":"佛山市三水区南丰大道26号长建车城内（荷花世界入口处往芦苞方向1.5公里右侧）"},
+        {"prov":"福建省","city":"福州市","name":"福建源和汽车销售服务有限公司","Jcname":"福建源和","tel":"0591-28352688","address":"福建省福州市仓山区盖山投资区高南路2号源和马自达二楼市场部"},
+        {"prov":"福建省","city":"福州市","name":"福州龙益汽车销售服务有限公司","Jcname":"福州龙益","tel":"0591-88909988","address":"福建省福州市晋安区新店镇李园路89号"},
+        {"prov":"江西省","city":"赣州市","name":"赣州腾马汽车服务有限公司","Jcname":"赣州腾马","tel":"0797-8198599","address":"赣州开发区蟠龙镇田心村金岭路144号"},
+        {"prov":"广西省","city":"南宁市","name":"广西弘骏汽车销售服务有限公司","Jcname":"广西弘骏","tel":"0771-3225588","address":"南宁市秀厢大道199号金源汽车城"},
+        {"prov":"广西省","city":"南宁市","name":"广西鑫广达长久汽车销售服务有限公司","Jcname":"广西鑫广达","tel":"0771-4866551","address":"广西壮族自治区南宁市白沙大道54号"},
+        {"prov":"广东省","city":"广州市","name":"广州市东富汽车销售服务有限公司","Jcname":"广州东富","tel":"020-61196368","address":"广州市荔湾区龙溪大道488号长安马自达"},
+        {"prov":"广东省","city":"广州市","name":"广州市华刊汽车销售有限公司","Jcname":"广州华刊","tel":"020-66231646","address":"广州市番禺区番禺大道北668号南村镇里仁洞村102场地"},
+        {"prov":"广东省","city":"广州市","name":"广州市华灵汽车销售有限公司","Jcname":"广州华灵","tel":"020-22223639","address":"广州黄埔大道西668号 广州赛马场汽车城南区A栋1号"},
+        {"prov":"广西省","city":"桂林市","name":"桂林鑫广达博骏汽车销售服务有限公司","Jcname":"桂林鑫广达","tel":"0773-5580992","address":"桂林市临桂机场路北侧（真龙国际物流园）"},
+        {"prov":"海南省","city":"海口市","name":"海口优之杰汽车服务有限公司","Jcname":"海口优之杰","tel":"0898-68640033","address":"海南省海口市南海大道223号"},
+        {"prov":"广东省","city":"河源市","name":"河源市宝恒汽车销售有限公司","Jcname":"河源宝恒","tel":"0762-7581299","address":"广东省河源市东江新区超然汽车城内马自达4S店"},
+        {"prov":"湖南省","city":"衡阳市","name":"衡阳津湘万华汽车销售服务有限公司","Jcname":"衡阳津湘万华","tel":"0734-3377111","address":"湖南省衡阳市蒸湘区西外环路杨柳汽贸城长安马自达"},
+        {"prov":"湖南省","city":"长沙市","name":"湖南万达汽车销售服务有限公司","Jcname":"湖南万达","tel":"0731-82977988","address":"长沙市星沙中南汽车世界A区06号"},
+        {"prov":"湖南省","city":"长沙市","name":"湖南万华汽车销售服务有限公司","Jcname":"湖南万华","tel":"0731-88222822","address":"长沙市天心区桂花坪街道雀园路长安马自达湖南万华4S店"},
+        {"prov":"湖南省","city":"怀化市","name":"怀化市恒旺汽车销售服务有限公司","Jcname":"怀化恒旺","tel":"0745-2789666","address":"怀化市鹤城区南环路国际汽车城长安马自达4S店"},
+        {"prov":"广东省","city":"惠州市","name":"惠州市通力达汽车销售服务有限公司","Jcname":"惠州通力达","tel":"0752-5831111","address":"惠州市惠博沿江路金山汽车城12号展场"},
+        {"prov":"广东省","city":"惠州市","name":"惠州市通利华汽车贸易有限公司","Jcname":"惠州通利华","tel":"0752-2818898","address":"惠州市惠城区三栋数码工业园惠南汽车城二期D2栋"},
+        {"prov":"广东省","city":"江门市","name":"江门市振宇汽车销售服务有限公司","Jcname":"江门振宇","tel":"0750-3088599","address":"广东省江门市蓬江区建设三路113号"},
+        {"prov":"江西省","city":"南昌市","name":"江西江铃海外马自达汽车销售服务有限公司","Jcname":"江西江铃海外","tel":"0791-85216600","address":"江西省南昌市青云谱区迎宾大道755号"},
+        {"prov":"江西省","city":"南昌市","name":"江西江铃海外福马汽车销售服务有限公司","Jcname":"江西江铃海外福马","tel":"0791-85201133","address":"江西省南昌市青云谱区迎宾大道755号"},
+        {"prov":"江西省","city":"吉安市","name":"江西金乐玛汽车销售服务有限公司","Jcname":"江西金乐玛","tel":"0796-8911188","address":"江西省吉安市吉州区城南华通物流园3栋1层（华美立家售楼部对面）"},
+        {"prov":"广东省","city":"揭阳市","name":"揭阳恒诚汽车贸易有限公司","Jcname":"揭阳恒诚","tel":"0663-8297777,0663-8260008","address":"揭阳市东山区环市北路与晓翠路交汇处（即黄岐山正对面）"},
+        {"prov":"广东省","city":"深圳市","name":"劲达汽车销售服务(深圳)有限公司","Jcname":"劲达（深圳）","tel":"0755-86227337","address":"深圳市南山区关口二路前海嘉进隆汽车城E02B"},
+        {"prov":"广西省","city":"柳州市","name":"柳州鑫广达博骏汽车销售服务有限公司","Jcname":"柳州鑫广达","tel":"0772-8803390","address":"广西柳州市广汽路2号汽车贸易园长安马自达4s店"},
+        {"prov":"福建省","city":"龙岩市","name":"龙岩富骏汽车有限公司","Jcname":"龙岩富骏","tel":"0597-2368555","address":"龙岩市新罗区东城东兴路210-1号"},
+        {"prov":"广东省","city":"茂名市","name":"茂名市京粤名达汽车有限公司","Jcname":"茂名京粤名达","tel":"0668-2928828","address":"广东省茂名市高水公路南香路段厚禄陂村京粤汽车城"},
+        {"prov":"广东省","city":"梅州市","name":"梅州市通利华汽车服务有限公司","Jcname":"梅州通利华","tel":"0753-2319808","address":"梅州市环市西路（平远路口往锭子桥方向500米）"},
+        {"prov":"广东省","city":"清远市","name":"清远市骏昇汽车销售服务有限公司","Jcname":"清远骏昇","tel":"0763-3388856","address":"清远市新城B28号区骏飞汽车城"},
+        {"prov":"福建省","city":"泉州市","name":"泉州盛成汽车销售服务有限公司","Jcname":"泉州盛成","tel":"0595-22669969","address":"福建省泉州市鲤城区南环路站前大道路口（宏源商务酒店旁）"},
+        {"prov":"福建省","city":"泉州市","name":"泉州益成汽车贸易发展有限公司","Jcname":"泉州益成","tel":"0595-22689777","address":"福建省泉州市丰泽区华大南埔"},
+        {"prov":"海南省","city":"三亚市","name":"三亚优之杰汽车销售服务有限公司","Jcname":"三亚优之杰","tel":"0898-88719846","address":"海南省三亚市吉阳区迎宾大道449号"},
+        {"prov":"福建省","city":"厦门市","name":"厦门市盛成汽车服务有限公司","Jcname":"厦门盛成","tel":"0592-6206666","address":"厦门市海沧区马青路1285号"},
+        {"prov":"广东省","city":"汕头市","name":"汕头市通利华汽车服务有限公司","Jcname":"汕头通利华","tel":"0754-82552888,0754-82552999","address":"汕头市高新区科技西路3号"},
+        {"prov":"江西省","city":"上饶市","name":"上饶市福铃达汽车有限公司","Jcname":"上饶福铃达","tel":"0793-6178689","address":"江西省上饶市经济开发区三清山西大道1号1栋（国际家俱城旁）"},
+        {"prov":"广东省","city":"韶关市","name":"韶关市荣和通达汽车贸易有限公司","Jcname":"韶关荣和","tel":"0751-8605666","address":"广东省韶关市浈江区韶南大道八公里"},
+        {"prov":"湖南省","city":"邵阳市","name":"邵阳津湘万华汽车销售服务有限公司","Jcname":"邵阳津湘万华","tel":"0739-5195668","address":"邵阳市邵阳大道与大兴路交叉口往北200米长安马自达4S店"},
+        {"prov":"广东省","city":"深圳市","name":"深圳通利华宝安汽车销售服务有限公司","Jcname":"深圳通利华宝安","tel":"0755-29695828","address":"深圳宝安沙井新和大道与宝安大道交汇处通利华马自达市场部"},
+        {"prov":"广东省","city":"深圳市","name":"深圳通利华福滨汽车服务有限公司","Jcname":"深圳通利华福滨","tel":"0755-26609998","address":"深圳市龙岗区坂田街道布龙路339号鸿生源大厦A栋首层"},
+        {"prov":"广东省","city":"深圳市","name":"深圳通利华龙城汽车销售服务有限公司","Jcname":"深圳通利华龙城","tel":"0755-28678818","address":"深圳市龙岗区横岗街道荷坳社区长江埔路49号京铁科技工业园A栋 "},
+        {"prov":"广东省","city":"阳江市","name":"阳江市通利华汽车服务有限公司","Jcname":"阳江通利华","tel":"0662-2881999","address":"阳江市江城区南排预留地康泰路7号"},
+        {"prov":"江西省","city":"宜春市","name":"宜春津湘万华汽车销售服务有限公司","Jcname":"宜春津湘万华","tel":"0795-3289899","address":"宜春市袁州区经济技术开发区经发大道36号【香槟国际正对面】"},
+        {"prov":"湖南省","city":"益阳市","name":"益阳福顺福达汽车销售服务有限公司","Jcname":"益阳福顺","tel":"0737-3555888","address":"益阳市赫山区汽车东站东方维也纳上S308省道往湘阴方向1000米"},
+        {"prov":"湖南省","city":"永州市","name":"永州津湘万达汽车销售服务有限公司","Jcname":"永州津湘万达","tel":"0746-6677555","address":"湖南省永州市零陵区潇湘汽车城往永连公路方向500米"},
+        {"prov":"广东省","city":"湛江市","name":"湛江合田汽车销售服务有限公司","Jcname":"湛江合田","tel":"0759-3208877","address":"广东省湛江市赤坎区椹川大道北50号（瀚龙汽车生活广场内）"},
+        {"prov":"福建省","city":"漳州市","name":"漳州富骏汽车有限公司","Jcname":"漳州富骏","tel":"0596-2028899","address":"福建省漳州市龙文区迎宾大道吉马汽车城B6区  漳州富骏汽车有限公司长安马自达4s店"},
+        {"prov":"广东省","city":"肇庆市","name":"肇庆美轮庆达汽车有限公司","Jcname":"肇庆美轮庆达","tel":"0758-2777666","address":"肇庆市迎宾大道北侧美轮车城长安马自达4S店"},
+        {"prov":"广东省","city":"中山市","name":"中山市万事得汽车销售服务有限公司","Jcname":"中山万事得","tel":"0760-88588888","address":"中山市东区中山六路检验检疫局对面"},
+        {"prov":"广东省","city":"中山市","name":"中山中洋汽车销售服务有限公司","Jcname":"中山中洋","tel":"0760-89828828","address":"中山市小榄镇菊城大道176号金宁汽车城内A1栋"},
+        {"prov":"广东省","city":"珠海市","name":"珠海市新通达汽车销售服务有限公司","Jcname":"珠海新通达","tel":"0756-8588188","address":"珠海市香洲区前山工业区华威路126号"},
+        {"prov":"广东省","city":"广州市","name":"广州市悦马汽车有限公司","Jcname":"广州悦马","tel":"020-36808686","address":"广州市花都区镜湖大道自编21号A栋长安马自达4S店"},
+        {"prov":"广东省","city":"云浮市","name":"云浮美轮庆达汽车有限公司","Jcname":"云浮美轮庆达","tel":"0766-8328622","address":"云浮市云城区环市东路28号美轮车城内长安马自达4S店"},
+    ]
+</script>
+<script>
+    for (var i=0;i<des.length;i++){
+        if ($('#prov').html().indexOf(des[i].prov)<0){
+            $('#prov').append('<option value="'+des[i].prov+'">'+des[i].prov+'</option>');
+            $('#qHprov').append('<option value="'+des[i].prov+'">'+des[i].prov+'</option>')
+        }
+        var ul = '<ul>'+
+            '<li>'+des[i].name+'   '+des[i].tel+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '</ul>';
+        $('.list').append(ul)
+    }
+    $('#prov').change(function () {
+        $("#city").find("option:not(:first)").remove();
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#prov option:checked').text()==des[i].prov){
+                if ($('#city').html().indexOf(des[i].city)<0){
+                    $('#city').append('<option value="'+des[i].city+'">'+des[i].city+'</option>')
+                }
+            }
+        }
+    });
+    $('#qHprov').change(function () {
+        $("#qHcity").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#qHprov option:checked').text()==des[i].prov){
+                if ($('#qHcity').html().indexOf(des[i].city)<0){
+                    $('#qHcity').append('<option value="'+des[i].city+'">'+des[i].city+'</option>')
+                }
+            }
+        }
+    });
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].city){
+                $('#dealers').append('<option value="'+des[i].name+'">'+des[i].name+'</option>')
+            }
+        }
+    });
+    $('#qHcity').change(function () {
+        $('.list .mCSB_container').html('');
+        $(".list").mCustomScrollbar("destroy");
+        for (var i=0;i<des.length;i++){
+            if ($('#qHcity option:checked').text()==des[i].city){
+                var ul = '<ul>'+
+                    '<li>'+des[i].name+'   '+des[i].tel+'</li>'+
+                    '<li>'+des[i].address+'</li>'+
+                    '</ul>';
+                $('.list').append(ul)
+            }
+        }
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false,
+        });
+    });
+    //报名
+    var flag = true;
+    $("#submit").click(function () {
+        if (flag) {
+            var name = $("#name").val(),  //名字
+                tel = $("#tel").val(),   //电话
+                series_id = $('#series').val(), //车型
+                seriesTxt = $('#series option:checked').text(), //车型
+                dealers = $('#dealers').val(), //经销商
+                prov = $('#prov').val(),
+                city = $('#city').val(),
+                brand_id = $('#series option:checked').attr('data-brand'), //品牌
+                Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                Data = {
+                    name: name,  //名字
+                    phone: tel,   //电话
+                    series_id: series_id,
+                    dealers: dealers+"/"+seriesTxt, //经销商
+                    act_id: 2448,   //专题id
+                    brand_id: brand_id,      //品牌id
+                };
+            //判断填写是否正确
+            if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确的中文名');
+                return false;
+            }
+            if (!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if (prov=='0'){
+                alert('请选择省份');
+                return false;
+            }
+            if (city=='0'){
+                alert('请选择城市');
+                return false;
+            }
+            if (series_id == 0) {
+                alert('请选择车型');
+                return false;
+            }
+            if (dealers == 0) {
+                alert('请选择经销商');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type: "post",
+                url: Url,
+                data: Data,
+                async: true,
+                dataType: "jsonp",
+                success: function (data) {
+                    if (data.status == 1) {
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href+'?time='+((new Date()).getTime());
+                    } else {
+                        flag = true;
+                        alert("很抱歉，你报名失败。");
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+    //车型图片切换
+    var s2 = [
+        {"p1":"马自达智能安全辅助系统","p2":"MRCC自适应巡航系统，SBS中高速刹车辅助系统"},
+        {"p1":"加速度矢量控制系统","p2":"全面提升转向响应性和行驶稳定性，一切直道、弯道、征服蜿蜒不足为道"},
+        {"p1":"创驰蓝天车辆动态控制技术","p2":"统合控制驰创蓝天各项核心部件，革新性提升车辆动态领域表现"},
+        {"p1":"BSM盲点监测系统","p2":"马自达智能安全辅助系统"},
+    ];
+    var s3 = [
+        {"p1":"创驰蓝天车身（钢材最高强度1800MPa）","p2":""},
+        {"p1":"2.0高压缩比发动机十六速手自一体变速箱","p2":""},
+        {"p1":"精湛的内饰工艺","p2":""},
+        {"p1":"马自达智能安全辅助系统","p2":""},
+    ];
+    var s4 = [
+        {"p1":"加速度矢量控制技术","p2":"当驾驶者转动方向盘时，此技术随即微调演算出最适合的发动机扭力，提升车辆转向反应性及稳定性。"},
+        {"p1":"用环保先进的“匠涂”涂装工艺","p2":"透过反射光线呈现的不同角度色泽变化，高亮区域与深邃区域的迷人对比，尽展多层次繁丽美感。"},
+        {"p1":"马自达悦联系统","p2":"集导航、应用程序、娱乐、通讯等各种实用信息为一体，尊享互联新驾趣。"},
+        {"p1":"自适应巡航系统","p2":"通过毫米波识别与前方车辆的速度差和行车距离，自动控制行驶速度。在设定车速内自动调整，保持行车距离，从而减轻长距离驾驶的负担。"},
+    ];
+    var ff=function(i,arr){
+        $('.show').fadeIn(300).addClass('active');
+        $('.Large').fadeIn(300).addClass('active');
+        var src = $(this).find('img').attr('src');
+        var index = $(this).index()-i;
+        $('.LargeImg img').attr('src',src);
+        $('.LargeTxt p:first-child').text(arr[index].p1);
+        $('.LargeTxt p:last-child').text(arr[index].p2);
+    };
+    $('.slider2 .img2 ul li').click(function () {
+       ff.call($(this),0,s2)
+    });
+    $('.slider3 .w').click(function () {
+        ff.call($(this),1,s3)
+    });
+    $('.slider4 .w').click(function () {
+        ff.call($(this),1,s4)
+    });
+    $('.show .closeX').click(function () {
+        $('.show').fadeOut(300).removeClass('active');
+        $('.Large').fadeOut(300).removeClass('active');
+    });
+    //切换经销商页面
+    $('.slider5 #TZdes').click(function () {
+        $('.d1').fadeOut(300);
+        $('.d2').fadeIn(300);
+    });
+    $('.slider5 .d2 .close').click(function () {
+        $('.d1').fadeIn(300);
+        $('.d2').fadeOut(300);
+    });
+    $(window).load(function() {
+        $(".list").mCustomScrollbar({
+            scrollInertia: 550,
+            autoHideScrollbar: false
+        });
+    });
+</script>
+</body>
+</html>

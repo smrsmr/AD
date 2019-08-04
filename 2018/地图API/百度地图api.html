@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA"></script> -->
+    <style>
+        html{height:100%}
+        body{height:100%;margin:0px;padding:0px}
+        #allmap{height:100%}
+    </style>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script>
+    $(function(){
+        //可固定ip 也可留空
+        var ip = "";
+        $.ajax({
+            url:"http://api.map.baidu.com/location/ip?ip="+ip+"&ak=i3LhAi8lycGAF32vPg1AiqGmTGeLZ9eA&coor=bd09ll",
+            type:"POST",
+            dataType:"jsonp",
+            success:function(data){
+                if (data.status==0){
+                    console.log(data.content.address_detail)
+                }else {
+                    console.log('error')
+                }
+            }
+        });
+    })
+</script>
+</html>

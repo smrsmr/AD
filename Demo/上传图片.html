@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file">
+<img src="" alt="图片" width="200" height="112"><span id="size"></span>
+</body>
+<script src="http://gd.qq.com/2015zt/auto/dfrc9y/9y/jquery.min.js"></script>
+<script>
+    $(function () {
+        var file = {
+            up:function(e) {
+                var file = e.target.files[0];
+                var reader = new FileReader();
+                var type = file.type.split('/')[0];
+                if (type != 'image') {
+                    alert('请上传图片');
+                    return;
+                }
+//                console.log(file);
+//                console.log(reader);
+                reader.readAsDataURL(file);
+                reader.onloadstart = function () {
+                    console.log('start')
+                };
+                reader.onerror = function () {
+                    console.log('error')
+                }
+                reader.onloadend = function () {
+                    var dataUrl = reader.result;
+                    $('img').attr('src',dataUrl);
+                    $('#size').text(Math.floor((file.size/1024))+'KB')
+                };
+            }
+        };
+        $('input').change(function (e) {
+            file.up(e)
+        })
+    })
+</script>
+</html>

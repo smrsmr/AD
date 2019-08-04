@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="applicable-device" content="mobile">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>蓝鸟嘻哈购 为青年BATTLE</title>
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        img {
+            border: none;
+            vertical-align: bottom;
+            max-width: 100%;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 640px;
+            background-color: #eaeaee;
+        }
+        .swiper-container{
+            height: 100%;
+        }
+        .swiper-slide{
+            text-align: center;
+            font-size: 18px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            position: relative;
+        }
+        .resize {
+            position: absolute;
+            bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .resize img {
+            width: 50px;
+        }
+        input:focus::-webkit-input-placeholder{
+            opacity: 0;
+        }
+        .sli3 {
+            position: relative;
+        }
+        .form input, .form select {
+            width: 9.1rem;
+            height: 2.4rem;
+            background: transparent;
+            font-size: 18px;
+        }
+        .form select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        #name,#tel,#Select1,#dealersSelect {
+            position: absolute;
+            left: 11rem;
+            top: 5.5rem;
+        }
+        #tel {
+            top: 9rem;
+        }
+        #Select1 {
+            top: 12rem;
+        }
+        #dealersSelect {
+            top: 15.5rem;
+        }
+        #submit {
+            position: absolute;
+            right: 1rem;
+            top: 17.6rem;
+            width: 5.5rem;
+            height: 2.8rem;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .Slider {
+            position: absolute;
+            left: 1.8rem;
+            top: 26rem;
+            width: 24rem;
+        }
+        .Slider-list { height: 11rem; position: relative;  width: 20rem; margin: 0 auto;}
+        .Slider-list li { position: absolute; top: 0; left: 0; height: 11rem; width: 100%; display: none;}
+        .Slider-list li>img { overflow: hidden  }
+        .Slider-list li.active { display: block;}
+        #prev {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/112/91/204/13288417.png") no-repeat center top;
+            height: 5rem;
+            width: 2rem;
+            position: absolute;
+            left: 0;
+            bottom: 3rem;
+            cursor: pointer;
+        }
+        #next {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/111/91/204/13288416.png") no-repeat center top;
+            height: 5rem;
+            width: 2rem;
+            position: absolute;
+            right: 0;
+            bottom: 3rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background: rgb(0, 0, 0);">
+<div class="swiper-container"  id="swiper1">
+    <div class="swiper-wrapper">
+        <!--page 1-->
+        <div class="swiper-slide slider1">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp " swiper-animate-duration="1.3s" swiper-animate-delay="0.5s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/113/91/204/13288418.png"></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/107/91/204/13288412.jpg" />
+            </div>
+        </div>
+        <!--page 2-->
+        <div class="swiper-slide slider2">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.3s" swiper-animate-delay="0.3s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/113/91/204/13288418.png" ></div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/108/91/204/13288413.jpg" />
+            </div>
+            <!--<div class="ani con" swiper-animate-effect="zoomIn" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">-->
+                <!--<PC src="http://img1.gtimg.com/autoguangzhou/pics/hv1/71/239/200/13066016.png" alt="" width="250px" height="250px">-->
+            <!--</div>-->
+        </div>
+       <!--  page 3 -->
+        <div class="swiper-slide slider3">
+            <div class="resize ani animated infinite" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.3s" swiper-animate-delay="0.3s">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/113/91/204/13288418.png">
+            </div>
+            <div>
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/109/91/204/13288414.jpg" />
+                <div class="form">
+                    <input type="text" id="name">
+                    <input type="tel" id="tel" maxlength="11">
+                    <select id="Select1">
+                        <option value="0">请选择</option>
+                        <option value="194">蓝鸟</option>
+                    </select>
+                    <select id="dealersSelect">
+                        <option value="0">请选择</option>
+                        <option value="H2906">广大店</option>
+                        <option value="H2921">黄埔店</option>
+                        <option value="H2972">广辰店</option>
+                        <option value="H2904">喜龙店</option>
+                        <option value="H2905">金冠店</option>
+                        <option value="H2910">广裕店</option>
+                        <option value="H2989">金冠明珠店</option>
+                        <option value="H2901">风日店</option>
+                        <option value="H2903">华溢石槎店</option>
+                        <option value="H2908">广物京安店</option>
+                        <option value="H2912">广利店</option>
+                        <option value="H2920">龙日店</option>
+                        <option value="H2948">南沙大昌行喜龙店</option>
+                        <option value="H2913">耀骏店</option>
+                    </select>
+                    <button id="submit"></button>
+                </div>
+                <div class="Slider">
+                    <ul class="Slider-list">
+                        <li class="active"><img src="https://www.dongfeng-nissan.com.cn/minisite/default/vehicles/lannia/pre-sale-new/pc/images/p7/imgs/2.png" alt="" id="img3"></li>
+                        <li><img src="https://www.dongfeng-nissan.com.cn/minisite/default/vehicles/lannia/pre-sale-new/pc/images/p7/imgs/3.png" alt=""></li>
+                        <li><img src="https://www.dongfeng-nissan.com.cn/minisite/default/vehicles/lannia/pre-sale-new/pc/images/p7/imgs/4.png" alt=""></li>
+                        <li><img src="https://www.dongfeng-nissan.com.cn/minisite/default/vehicles/lannia/pre-sale-new/pc/images/p7/imgs/5.png" alt=""></li>
+                    </ul>
+                    <button id="prev"></button>
+                    <button id="next"></button>
+                </div>
+            </div>
+        </div>
+        <!--page 4-->
+        <div class="swiper-slide slider3">
+            <div class="sli3">
+                <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/110/91/204/13288415.jpg" />
+            </div>
+        </div>
+    </div>
+</div>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive640px.js"></script>
+<script>
+    var swiper1 = new Swiper ('#swiper1', {
+        direction: 'vertical',
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+    //        轮播图
+    var BannerShow = function(){
+        var lis = $('.Slider-list li');
+        var banw = $('.Slider');
+        var t = null;
+        banw.hover(function(){
+            clearInterval(t);
+        },function(){
+            AutoPlay();
+        });
+
+        var Index = $('.Slider-list li.active').index();
+        var AutoPlay = function(){
+            t=setInterval(function(){
+                Index++;
+                lis.removeClass('active');
+                lis.eq(Index).addClass('active');
+                Index>=3 ? Index=-1 : Index;
+            },3000);
+        };
+        $('#next').click(function () {
+            Index++;
+            lis.removeClass('active');
+            lis.eq(Index).addClass('active');
+            Index>=3 ? Index=-1 : Index;
+        });
+        $('#prev').click(function () {
+            Index--;
+            lis.removeClass('active');
+            lis.eq(Index).addClass('active');
+            Index<=-1 ? Index=3 : Index;
+        });
+        AutoPlay();
+    };
+    BannerShow();
+    //报名
+    $(function () {
+        var flag = true;
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),        //电话
+                    city_id = 297,  //城市
+                    city = '广州市',
+                    province = 24,  //省份
+                    series_id = $('#Select1').val(),  //车型id
+                    car_name = $('#Select1 option:checked').text(),
+                    brand_id = 11, //品牌
+                    dealers_code = $('#dealersSelect').val(),
+                    dealers = $('#dealersSelect option:checked').text(),
+                    Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                    Data = {
+                        name: name,
+                        phone: tel,
+                        series_id: series_id,
+                        brand_id: brand_id,
+
+                        city_id: city_id,
+                        city:city,
+                        dealers: dealers,
+                        province: province,
+                        car_name: car_name,
+                        dealers_code: dealers_code,
+
+                        detail_id:54,
+                        type: 1,
+                        smartcode: "A2017-1188-4488-2415-111010"
+                    };
+
+                //判断填写是否正确
+                if(name==''||tel==''){
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+                if(dealers_code==0){
+                    alert('请选择经销商');
+                    return false;
+                }
+
+                //发送请求
+                flag = false;
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            window.location.href = location.href+'?time='+((new Date()).getTime());
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                            flag = true;
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+
+        })
+    })
+</script>
+</body>
+</html>

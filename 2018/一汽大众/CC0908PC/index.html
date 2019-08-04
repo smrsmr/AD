@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=1200,user-scalable=no" />
+    <title>全新一代CC 风华问世 官方指导价26.98万起</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper-4.1.0.min.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <style>
+        .main {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .cn1 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/150/28/210/13662540.jpg") top center no-repeat;
+            height: 707px;
+        }
+        .cn2 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/127/28/210/13662517.jpg") top center no-repeat;
+            height: 542px;
+        }
+        .cn3 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/128/28/210/13662518.jpg") top center no-repeat;
+            height: 512px;
+        }
+        .cn4 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/239/29/210/13662884.jpg") top center no-repeat;
+            height: 634px;
+        }
+        .cn5 {
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/130/28/210/13662520.jpg") top center no-repeat;
+            height: 1205px;
+        }
+        .cn {
+            position: relative;
+            margin-top: -1px;
+        }
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 116px;
+            width: 347px;
+            height: 320px;
+            margin-left: -509px;
+        }
+        .bmk p input,.bmk p select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            background: transparent;
+            padding-left: 40px;
+        }
+        .bmk p {
+            width: 261px;
+            height: 42px;
+            margin-left: 0;
+            margin-top: 0;
+        }
+        .bmk .tel {
+            margin-top: 20px;
+        }
+        .bmk .line p {
+            display: inline-block;
+            width: 141px;
+            height: 42px;
+            margin-top: 20px;
+            margin-right: 14px;
+        }
+        .bmk .line .city {
+            margin-right: 0;
+        }
+        .bmk .dealers,.bmk .submit {
+            margin-top: 20px;
+            width: 301px;
+        }
+        .bmk .submit {
+            margin-top: 34px;
+        }
+        .privacyPolicy {
+            position: absolute;
+            left: 0px;
+            top: 235px;
+        }
+        .privacyPolicy input{width:20px !important;height:20px !important}
+        .privacyPolicy span{display:inline-block;font-size:18px;color:#fff;position: relative;top: -4px;}
+        .privacyPolicy a{color:#fff}
+        .video {
+            position: absolute;
+            left: 50%;
+            top: 74px;
+            width: 707px;
+            height: 398px;
+            margin-left: -108px;
+            overflow: hidden;
+        }
+        .video .play {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 77px;
+            height: 77px;
+            margin-left: -38px;
+            margin-top: -38px;
+            background: url("http://img1.gtimg.com/autoguangzhou/pics/hv1/131/28/210/13662521.png") no-repeat;
+            background-size: 100%;
+            cursor: pointer;
+        }
+        .che {
+            position: absolute;
+            left: 50%;
+            top: 123px;
+            width: 1200px;
+            height: 598px;
+            margin-left: -601px;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+            background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/132/28/210/13662522.png');
+            left: 10px;
+            right: auto;
+        }
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+            background-image: url('http://img1.gtimg.com/autoguangzhou/pics/hv1/133/28/210/13662523.png');
+            right: 10px;
+            left: auto;
+        }
+        .swiper-button-next, .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            width: 26px;
+            height: 56px;
+            margin-top: -28px;
+            z-index: 10;
+            cursor: pointer;
+            background-size: 100%;
+        }
+        .swi {
+            position: absolute;
+            left: 50%;
+            top: 119px;
+            width: 1200px;
+            height: 415px;
+            margin-left: -600px;
+        }
+        .swiper-pagination-bullet {
+            width: 28px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            opacity: 1;
+            background: rgba(0,0,0,0.2);
+            border-radius: 0;
+            -webkit-transform: skew(-10deg);
+            -moz-transform: skew(-10deg);
+            -ms-transform: skew(-10deg);
+            -o-transform: skew(-10deg);
+            transform:  skew(-10deg);
+            margin: 0 6px;
+        }
+        .swiper-pagination-bullet-active {
+            color:#e6b435;
+            position: relative;
+        }
+        .swiper-pagination-bullet-active:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 34px;
+            width: 100%;
+            height: 3px;
+            background: #e6b435;
+        }
+        .swi .swpa {
+            left: 50%;
+            bottom: -60px;
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn cn1"></div>
+    <div class="cn cn2">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机" maxlength="11">
+            </p>
+            <div class="line">
+                <p class="prov">
+                    <select id="prov">
+                        <option value="0">省份</option>
+                    </select>
+                </p>
+                <p class="city">
+                    <select id="city">
+                        <option value="0">城市</option>
+                    </select>
+                </p>
+            </div>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit" style="cursor:pointer;">
+            </p>
+            <div class="privacyPolicy">
+                <input type="checkbox" checked>
+                <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+            </div>
+        </div>
+        <div class="video">
+            <span class="play" style="display: block;"></span>
+            <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/135/28/210/13662525.png" alt="" class="vImg" style="display: inline;">
+            <div id="vid"></div>
+        </div>
+    </div>
+    <div class="cn cn3"></div>
+    <div class="cn cn4">
+        <div class="swi">
+            <div class="swiper-container" id="swider2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/201/29/210/13662846.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/202/29/210/13662847.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/203/29/210/13662848.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/204/29/210/13662849.png" alt=""></div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swpa"></div>
+        </div>
+    </div>
+    <div class="cn cn5">
+        <div class="che">
+            <div class="swiper-container" id="swider1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/28/210/13662526.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/137/28/210/13662527.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/138/28/210/13662528.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/139/28/210/13662529.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/140/28/210/13662530.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/141/28/210/13662531.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev"></div><!--左箭头-->
+                <div class="swiper-button-next"></div><!--右箭头-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="base">
+    <!--底部 开始-->
+    <div class="foot" id="footer" bossZone="footer">
+        <div class="footernew" role="contentinfo" style="height:124px;">
+            <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a
+                href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a
+                href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a
+                href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a
+                href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a
+                href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a
+                href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a
+                href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">腾讯公益</a> | <a
+                href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/"
+                                                                                      target="_blank" rel="nofollow">网站导航</a>
+            | <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a
+                href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank"
+                rel="nofollow">版权所有</a><br>
+            <a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn"
+                                                                                           target="_blank"
+                                                                                           rel="nofollow">深圳公安局</a> | <a
+                href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot"
+                                                                                                         href="http://www.gdis.cn/admin/newstext_netsun.asp"
+                                                                                                         target="_blank"
+                                                                                                         rel="nofollow"
+                                                                                                         style="color: #bd0a01;">阳光·绿色网络工程</a>
+            | <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a
+                href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+            <span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a> <a
+                    href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a
+                    href="http://www.qq.com/cbst.shtml" target="_blank"
+                    rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank"
+                                                                      rel="nofollow">粤B2-20090059</a> <a
+                    href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+		 </span><br>
+            <a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a
+                href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+            违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank"
+                                           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备 44030002000001号</span><img
+                style="vertical-align: text-bottom;" } src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png"
+                width="16" height="16"></a><br>
+            <span style="font-family:Arial;">Copyright  1998 - 2017 Tencent. All Rights Reserved</span>
+        </div>
+    </div>
+    <div class="footernew footheight" style="width:1000px;" bossZone="footer">
+        <div style="width:680px;">
+            <p>
+                <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow"><img width="35" height="43" border="0"
+                                                                        alt="经营性网站备案信息"
+                                                                        src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+                <span class="fr"><a target="_blank" class="lcblack"
+                                    href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002"
+                                    target="_blank" rel="nofollow">经营性网站<br>
+				备案信息</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img
+                        width="44" height="44" border="0" alt="中国互联网举报中心"
+                        src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank"
+                                                        rel="nofollow">中国互联网<br>
+				举报中心</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img
+                        width="44" height="42" border="0" alt="中国文明网传播文明"
+                        src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank"
+                                                        rel="nofollow">中国文明网<br>传播文明</a></span>
+            </p>
+            <p style="width:128px;height:52px;border:0;">
+                <span style="padding:0;" class="fl"><a
+                        href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337"
+                        target="_blank" rel="nofollow"><img border="0" alt="诚信网站"
+                                                            src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a
+                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank"
+                        rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg"
+                                            title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack"
+                                                        href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed"
+                                                        target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+            </p>
+        </div>
+    </div>
+    <a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none"
+       bossZone="fankui"></a>
+    <a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none"
+       bossZone="defaulthome"></a>
+    <a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+    <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载"
+       style="display:none" bossZone="minidown"></a>
+    <!--e6dcd797284a2fe7c374538dde98ca6b--><!--[if !IE]>|xGv00|88455b38e201cb23641ef2be39739409<![endif]-->
+    <!--底部 结束-->
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.enplaceholder.js" type="text/javascript"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper-4.1.0.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate1.0.2.min.js"></script>
+<script src="http://imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2.js" charset="utf-8"></script>
+<script>
+    var des=[
+        {"DEALER_CODE":"S244002","DEALER_NAME":"广州庞大兴众汽车销售有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市荔城区增城大道三联路段（金马香颂居旁）","SERVICE_PHONE":"020-26232888","STATUS":"1","DEALER_NAME_SIM":"广州庞大兴众","DEALER_NAME_EN":"S244002","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S735036","DEALER_NAME":"厦门市海沧盈众汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市海沧区马青路1001号","SERVICE_PHONE":"13696902736","STATUS":"1","DEALER_NAME_SIM":"厦门海沧盈众","DEALER_NAME_EN":"S735036","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744081","DEALER_NAME":"深圳市安进誉隆汽车销售服务有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙华新区东环一路1号安进誉隆一汽大众","SERVICE_PHONE":"13670000508","STATUS":"1","DEALER_NAME_SIM":"深圳安进誉隆","DEALER_NAME_EN":"S744081","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S745026","DEALER_NAME":"南宁恒信众联汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西省南宁市高新区罗文大道与大学西路交汇处恒信汽车城内","SERVICE_PHONE":"13986647711","STATUS":"1","DEALER_NAME_SIM":"南宁恒信众联","DEALER_NAME_EN":"S745026","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S744069","DEALER_NAME":"东莞庞大一众汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市长安镇沙头南区振安中路683号","SERVICE_PHONE":"0769-81875958","SALES_PHONE":"0769-81879888","AFTER_SALES_PHONE":"0769-81875958","STATUS":"1","ZIP_CODE":"523861","FAX":"0769-81876049","DEALER_NAME_SIM":"东莞庞大一众","DEALER_NAME_EN":"S744069","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S743035","DEALER_NAME":"湖南兰天众远汽车销售有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南兰天众远汽车销售有限公司","SERVICE_PHONE":"00000000","STATUS":"1","DEALER_NAME_SIM":"湖南兰天众远","DEALER_NAME_EN":"S743035","distributeNum":"1","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744082","DEALER_NAME":"东莞市永慧汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市塘厦镇林村大陂头12号","SERVICE_PHONE":"0769-87908000","STATUS":"1","DEALER_NAME_SIM":"东莞永慧","DEALER_NAME_EN":"S744082","distributeNum":"0","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S944002","DEALER_NAME":"广东君乐汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市白云区机场路888号广物汽贸内","SERVICE_PHONE":"020-86328882－801/802","SALES_PHONE":"86328882","AFTER_SALES_PHONE":"020-86328680","STATUS":"1","ZIP_CODE":"510410","FAX":"020-86329249","IsUpdated":"True","DEALER_NAME_SIM":"广东君乐","DEALER_NAME_EN":"S944002","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S944012","DEALER_NAME":"深圳市香蜜湖奇建大众","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市福田区红荔西路香蜜湖联合华鹏专业市场内","SERVICE_PHONE":"0755-83052273 0755-28696900","SALES_PHONE":"0755-83052246","AFTER_SALES_PHONE":"0755-83052320","STATUS":"1","ZIP_CODE":"518048","IsUpdated":"True","DEALER_NAME_SIM":"深圳奇建","DEALER_NAME_EN":"S944012","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744011","DEALER_NAME":"东莞市捷达通贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市南城区莞太路新基路段(往虎门方向）","SERVICE_PHONE":"0769-22906933","SALES_PHONE":"0769-22909788","AFTER_SALES_PHONE":"0769-22906933","STATUS":"1","ZIP_CODE":"523076","FAX":"0769-22983261","IsUpdated":"True","DEALER_NAME_SIM":"东莞捷达","DEALER_NAME_EN":"S744011","distributeNum":"258","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744019","DEALER_NAME":"广州市锦众汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市天河区奥体路53号（地铁4号线黄村站D出口奥体中心东门对面）","SERVICE_PHONE":"020-82169028","SALES_PHONE":"020-8216 8618","AFTER_SALES_PHONE":"020-82169028","STATUS":"1","ZIP_CODE":"530630","FAX":"020-82168654","IsUpdated":"True","DEALER_NAME_SIM":"广州锦众","DEALER_NAME_EN":"S744019","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744021","DEALER_NAME":"深圳市安进汽车贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市罗湖区新秀路东益汽车广场B15号","SERVICE_PHONE":"0755-25117222","SALES_PHONE":"0755-25123322","AFTER_SALES_PHONE":"0755-25117222","STATUS":"1","ZIP_CODE":"518002","FAX":"0755-25126023","IsUpdated":"True","DEALER_NAME_SIM":"深圳安进","DEALER_NAME_EN":"S744021","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744031","DEALER_NAME":"佛山市合诚汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区桂澜路石啃路段","SERVICE_PHONE":"0757-86367111","SALES_PHONE":"0757-86367111","AFTER_SALES_PHONE":"0757-86264111","STATUS":"1","ZIP_CODE":"528200","FAX":"0757-86256039","DEALER_NAME_SIM":"佛山合诚","DEALER_NAME_EN":"S744031","distributeNum":"126","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744050","DEALER_NAME":"佛山市顺德区世锦汽车贸易有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市顺德区大良105国道广珠公路新松路段顺德世锦一汽大众4S店（桂畔海旁）","SERVICE_PHONE":"0757-22380030","SALES_PHONE":"0757-22380030","AFTER_SALES_PHONE":"0757-22380033","STATUS":"1","ZIP_CODE":"528300","FAX":"0757-22381036","DEALER_NAME_SIM":"佛山顺德世锦","DEALER_NAME_EN":"S744050","distributeNum":"29","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744035","DEALER_NAME":"东莞市昌发汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市莞太路虎门白沙路段","SERVICE_PHONE":"0769-89271000","SALES_PHONE":"0769-89271000","AFTER_SALES_PHONE":"0769-89271008","STATUS":"1","ZIP_CODE":"523912","FAX":"0769-85131811","IsUpdated":"True","DEALER_NAME_SIM":"东莞昌发","DEALER_NAME_EN":"S744035","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S945001","DEALER_NAME":"广西弘捷汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西南宁市江南区南站大道北侧","SERVICE_PHONE":"0771-4920468","SALES_PHONE":"0771-4920456","AFTER_SALES_PHONE":"0771-4920468","STATUS":"1","ZIP_CODE":"530031","FAX":"0771-4866886","IsUpdated":"True","DEALER_NAME_SIM":"广西弘捷","DEALER_NAME_EN":"S945001","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S936005","DEALER_NAME":"江西协众汽车发展有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"江西省南昌市省政府大院北二路102号","SERVICE_PHONE":"0791-86234977","SALES_PHONE":"0791-86231169","AFTER_SALES_PHONE":"0791-86234977","STATUS":"1","ZIP_CODE":"330046","IsUpdated":"True","DEALER_NAME_SIM":"江西协众","DEALER_NAME_EN":"S936005","distributeNum":"229","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S736005","DEALER_NAME":"南昌欧亚汽车销售有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"江西省南昌市洪都中大道135号","SERVICE_PHONE":"0791-88222333","SALES_PHONE":"0791-88216666","AFTER_SALES_PHONE":"0791-88222333","STATUS":"1","ZIP_CODE":"330002","FAX":"0791-8208682","IsUpdated":"True","DEALER_NAME_SIM":"南昌欧亚","DEALER_NAME_EN":"S736005","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S943001","DEALER_NAME":"湖南汽车城永通有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市星沙中南汽车世界H08栋","SERVICE_PHONE":"0731-82870939","SALES_PHONE":"0731-82870978","AFTER_SALES_PHONE":"0731-82870939","STATUS":"1","ZIP_CODE":"410100","FAX":"0731-2870921","IsUpdated":"True","DEALER_NAME_SIM":"湖南汽车城永通","DEALER_NAME_EN":"S943001","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S743009","DEALER_NAME":"湖南华洋汽车贸易有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市雨花区黄谷路308号","SERVICE_PHONE":"0731-85065555","SALES_PHONE":"0731-85048888","AFTER_SALES_PHONE":"0731-85065555","STATUS":"1","ZIP_CODE":"410014","FAX":"0731-85065599","IsUpdated":"True","DEALER_NAME_SIM":"湖南华洋","DEALER_NAME_EN":"S743009","distributeNum":"874","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S935001","DEALER_NAME":"福建省福京汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市仓山区黄山高速连接口华夏汽车城","SERVICE_PHONE":"0591-83433311","SALES_PHONE":"4008966222","AFTER_SALES_PHONE":"0591-83495981","STATUS":"1","ZIP_CODE":"350019","FAX":"0591-83402994","IsUpdated":"True","DEALER_NAME_SIM":"福建福京","DEALER_NAME_EN":"S935001","distributeNum":"84","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735011","DEALER_NAME":"福州永力通汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市五四北利嘉路（山姆小镇对面）","SERVICE_PHONE":"0591-87956577","SALES_PHONE":"0591-87956577","AFTER_SALES_PHONE":"0591-87957799","STATUS":"1","ZIP_CODE":"350013","FAX":"0591-87921777","DEALER_NAME_SIM":"福州永力通","DEALER_NAME_EN":"S735011","distributeNum":"47","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S744015","DEALER_NAME":"广州市梅花园汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市广州大道北梅花园汽车修理厂内一汽-大众","SERVICE_PHONE":"020-37290572","SALES_PHONE":"020-37290396、37290934","AFTER_SALES_PHONE":"020-37290572","STATUS":"1","ZIP_CODE":"510510","FAX":"020-37290466","IsUpdated":"True","DEALER_NAME_SIM":"广州梅花园","DEALER_NAME_EN":"S744015","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744023","DEALER_NAME":"深圳市昊天林实业有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市宝安区107国道西乡段洲石立交西北侧（世纪车城旁）","SERVICE_PHONE":"0755-27497000","SALES_PHONE":"0755-27497000","AFTER_SALES_PHONE":"0755-27497000","STATUS":"1","ZIP_CODE":"518032/518102","FAX":"0755-83708403","DEALER_NAME_SIM":"深圳昊天林","DEALER_NAME_EN":"S744023","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744012","DEALER_NAME":"东莞市新大地汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市寮步镇莞樟路塘唇段55号","SERVICE_PHONE":"0769-83266988/ 0769-22600001","SALES_PHONE":"0769-83266988","AFTER_SALES_PHONE":"0769-22266238","STATUS":"1","ZIP_CODE":"523407","FAX":"0769-83266987","DEALER_NAME_SIM":"东莞新大地","DEALER_NAME_EN":"S744012","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744039","DEALER_NAME":"佛山市南海区拓华汽车贸易有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区桂城文华北路5号","SERVICE_PHONE":"0757-86368988","SALES_PHONE":"0757-86368988","AFTER_SALES_PHONE":"0757-86368981","STATUS":"1","ZIP_CODE":"528200","FAX":"0757-86368998","IsUpdated":"True","DEALER_NAME_SIM":"佛山南海拓华","DEALER_NAME_EN":"S744039","distributeNum":"59","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S745015","DEALER_NAME":"广西鑫广达长久汽车商贸有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"广西南宁市西乡塘区科园大 道55号鑫广达汽车城内","SERVICE_PHONE":"0771-3220666","SALES_PHONE":"0771-3220555","AFTER_SALES_PHONE":"0771-3220666","STATUS":"1","ZIP_CODE":"530003","FAX":"0771-3213555","IsUpdated":"True","DEALER_NAME_SIM":"广西鑫广达长久","DEALER_NAME_EN":"S745015","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S735007","DEALER_NAME":"厦门市盈众汽车销售有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市湖里区嘉禾路799号(高殿加油站旁)","SERVICE_PHONE":"0592-6028088","SALES_PHONE":"0592-6025588","AFTER_SALES_PHONE":"0592-6028088","STATUS":"1","ZIP_CODE":"361006","FAX":"0592-6032188","DEALER_NAME_SIM":"厦门盈众","DEALER_NAME_EN":"S735007","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744046","DEALER_NAME":"广东物通凯骏汽车有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市迎宾路183号物通汽车城广地花园南侧","SERVICE_PHONE":"020-34820699 020-84566281","SALES_PHONE":"020-84566281","AFTER_SALES_PHONE":"020-84566289","STATUS":"1","ZIP_CODE":"511430","FAX":"020-84566223","DEALER_NAME_SIM":"广东物通凯骏","DEALER_NAME_EN":"S744046","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S735023","DEALER_NAME":"福州盈众汽车有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"（盈众汽车城）福州大学城国宾大道源通东路","SERVICE_PHONE":"0591-88001999","SALES_PHONE":"0591-88001998/888","AFTER_SALES_PHONE":"0591-88001999","STATUS":"1","FAX":"0591-88001995","IsUpdated":"True","DEALER_NAME_SIM":"福州盈众","DEALER_NAME_EN":"S735023","distributeNum":"47","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735022","DEALER_NAME":"厦门致远汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"福建省厦门市湖里区金尚路1968号（车管所路口卢厝加油站旁）","SERVICE_PHONE":"0592-5733088","SALES_PHONE":"0592-2195588","AFTER_SALES_PHONE":"0592-5733088","STATUS":"1","ZIP_CODE":"361000","FAX":"0592-5730988","IsUpdated":"True","DEALER_NAME_SIM":"厦门致远","DEALER_NAME_EN":"S735022","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S744048","DEALER_NAME":"广州市健稳汽车贸易有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市番禺区桥南街蚬涌村市南公路西侧（番禺大道北市桥二桥旁）","SERVICE_PHONE":"020-34615200","SALES_PHONE":"020-34615201","AFTER_SALES_PHONE":"020-34615200","STATUS":"1","ZIP_CODE":"511483","FAX":"020-84697493","IsUpdated":"True","DEALER_NAME_SIM":"广州健稳","DEALER_NAME_EN":"S744048","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744049","DEALER_NAME":"广州市大吉汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市白云区白云大道北1395号（白云堡立交往从化方向第3个红绿灯调头直行500米南菱汽车城内）","SERVICE_PHONE":"020-28806988","SALES_PHONE":"020-2880 6918","AFTER_SALES_PHONE":"020-28806988","STATUS":"1","ZIP_CODE":"510440","FAX":"020-28806955","IsUpdated":"True","DEALER_NAME_SIM":"广州大吉","DEALER_NAME_EN":"S744049","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744051","DEALER_NAME":"深圳市南方腾龙汽车销售服务有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市南山区南头关口二路嘉进隆前海汽车城A区2层02号","SERVICE_PHONE":"0755-26462895","SALES_PHONE":"0755-86035166","AFTER_SALES_PHONE":"0755-26462895","STATUS":"1","ZIP_CODE":"518052","FAX":"0755-26462639","DEALER_NAME_SIM":"深圳南方腾龙","DEALER_NAME_EN":"S744051","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S743016","DEALER_NAME":"湖南中拓瑞众汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南省长沙市芙蓉南路二段123号","SERVICE_PHONE":"0731-85226798","SALES_PHONE":"0731-85226768","AFTER_SALES_PHONE":"0731-85226798","STATUS":"1","ZIP_CODE":"410000","FAX":"0731-84721808","IsUpdated":"True","DEALER_NAME_SIM":"湖南中拓瑞众","DEALER_NAME_EN":"S743016","distributeNum":"874","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S735027","DEALER_NAME":"福州致远汽车销售服务有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福建省福清市龙江街道倪埔村口","SERVICE_PHONE":"0591-85970222","SALES_PHONE":"0591-85970333","AFTER_SALES_PHONE":"0591-85970222","STATUS":"1","ZIP_CODE":"350300","FAX":"0591-85970883","DEALER_NAME_SIM":"福州致远","DEALER_NAME_EN":"S735027","distributeNum":"46","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S735026","DEALER_NAME":"厦门君达汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"福建省厦门市同安区圳南二路89号（同安高速路口旁）","SERVICE_PHONE":"0592-7191788","SALES_PHONE":"0592-7153888","AFTER_SALES_PHONE":"0592-7191788","STATUS":"1","ZIP_CODE":"361100","FAX":"0592-7191789","IsUpdated":"True","DEALER_NAME_SIM":"厦门君达","DEALER_NAME_EN":"S735026","distributeNum":"53","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S736017","DEALER_NAME":"江西华宏名众汽车有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"南昌市洪都南大道28号","SERVICE_PHONE":"0791-88457777","SALES_PHONE":"0791-88461111","AFTER_SALES_PHONE":"0791-88457777","STATUS":"1","ZIP_CODE":"330001","FAX":"0791-8461119","IsUpdated":"True","DEALER_NAME_SIM":"江西华宏名众","DEALER_NAME_EN":"S736017","distributeNum":"228","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S744057","DEALER_NAME":"东莞市鸿众汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市常平镇环常西路桥梓路段桥南路1号","SERVICE_PHONE":"0769-81915999","SALES_PHONE":"0769-81915888","AFTER_SALES_PHONE":"0769-81915999","STATUS":"1","ZIP_CODE":"523560","FAX":"0769-82523866","DEALER_NAME_SIM":"东莞鸿众","DEALER_NAME_EN":"S744057","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744060","DEALER_NAME":"东莞市锦众汽车贸易有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"东莞市厚街镇三屯村S256省道旁","SERVICE_PHONE":"0769-85990101","SALES_PHONE":"0769-85992323","AFTER_SALES_PHONE":"15820861818","STATUS":"1","ZIP_CODE":"523960","FAX":"0769-85992012","DEALER_NAME_SIM":"东莞锦众","DEALER_NAME_EN":"S744060","distributeNum":"150","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"S744058","DEALER_NAME":"佛山市英丰汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市禅城区五峰四路与东鄱南路交汇处","SERVICE_PHONE":"0757-66630868 0757-66630880","SALES_PHONE":"0757-66630888","AFTER_SALES_PHONE":"0757-66630866","STATUS":"1","ZIP_CODE":"528000","FAX":"0757-82306392","DEALER_NAME_SIM":"佛山英丰","DEALER_NAME_EN":"S744058","distributeNum":"126","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744056","DEALER_NAME":"广州市南菱万众汽车维修服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市花都区新华街镜湖大道10号自编之二","SERVICE_PHONE":"020-28615555","SALES_PHONE":"020-28615500","AFTER_SALES_PHONE":"020-28615555","STATUS":"1","ZIP_CODE":"510800","FAX":"020-28615508","DEALER_NAME_SIM":"广州南菱万众","DEALER_NAME_EN":"S744056","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S735029","DEALER_NAME":"福建永通达汽车贸易有限公司","FK_CITY_ID":"15","FK_PROVINCE_ID":"3","ADDRESS":"福州市闽侯县祥谦镇枕峰村斜对面","SERVICE_PHONE":"0591-22260069","SALES_PHONE":"0591-22260038","AFTER_SALES_PHONE":"0591-22260069","STATUS":"1","ZIP_CODE":"350000","FAX":"0591-22260033","DEALER_NAME_SIM":"福建永通达","DEALER_NAME_EN":"S735029","distributeNum":"46","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"福州市"},
+        {"DEALER_CODE":"S744063","DEALER_NAME":"深圳市北奇建贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙岗区南通道爱南路99号","SERVICE_PHONE":"0755-28696969","SALES_PHONE":"0755-28696900","AFTER_SALES_PHONE":"0755-28696900","STATUS":"1","ZIP_CODE":"518000","FAX":"0755-28696901","DEALER_NAME_SIM":"深圳北奇建","DEALER_NAME_EN":"S744063","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744067","DEALER_NAME":"佛山市瀚众汽车贸易服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市禅城区南庄镇紫洞路（佛山一环季华西出口）","SERVICE_PHONE":"0757-88036853","SALES_PHONE":"0757-88020888","AFTER_SALES_PHONE":"0757-83632999","STATUS":"1","ZIP_CODE":"528061","FAX":"0757-88038900","IsUpdated":"True","DEALER_NAME_SIM":"佛山瀚众","DEALER_NAME_EN":"S744067","distributeNum":"125","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S735032","DEALER_NAME":"厦门明至汽车有限公司","FK_CITY_ID":"20","FK_PROVINCE_ID":"3","ADDRESS":"厦门市集美区岩昌路129号","SERVICE_PHONE":"0592-2678999","SALES_PHONE":"0592-5799188","AFTER_SALES_PHONE":"0592-2678999","STATUS":"1","ZIP_CODE":"361000","FAX":"0592-5772377","IsUpdated":"True","DEALER_NAME_SIM":"厦门明至","DEALER_NAME_EN":"S735032","distributeNum":"52","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"福建","CITY_NAME":"厦门市"},
+        {"DEALER_CODE":"S743021","DEALER_NAME":"湖南永通汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市望城区金星北路大湖林场旁","SERVICE_PHONE":"0731-8838 9777","SALES_PHONE":"0731-8838 9000","AFTER_SALES_PHONE":"0731-88053900","STATUS":"1","ZIP_CODE":"410219","FAX":"0731-88053911","DEALER_NAME_SIM":"湖南永通","DEALER_NAME_EN":"S743021","distributeNum":"102","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744066","DEALER_NAME":"东莞市东深奇建汽车销售服务有限公司","FK_CITY_ID":"27","FK_PROVINCE_ID":"5","ADDRESS":"广东省东莞市樟木头镇莞樟西路樟深路交汇处","SERVICE_PHONE":"0769-39019006","SALES_PHONE":"0769-39019008","AFTER_SALES_PHONE":"0769-39019006","STATUS":"1","ZIP_CODE":"523618","DEALER_NAME_SIM":"东莞东深奇建","DEALER_NAME_EN":"S744066","distributeNum":"149","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"东莞市"},
+        {"DEALER_CODE":"s743022","DEALER_NAME":"湖南华洋众广汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市高新区东方红路与枫林三路交汇处麓谷汽车世界B9区","SERVICE_PHONE":"0731-88398111","SALES_PHONE":"0731-88441111","AFTER_SALES_PHONE":"0731-88398111","STATUS":"1","ZIP_CODE":"410205","IsUpdated":"True","DEALER_NAME_SIM":"湖南华洋众广","DEALER_NAME_EN":"s743022","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744068","DEALER_NAME":"广州庞大一众汽车销售服务有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市番禺区石壁街105国道以东","SERVICE_PHONE":"020-31003699","SALES_PHONE":"020-31003688","AFTER_SALES_PHONE":"020-31003699","STATUS":"1","ZIP_CODE":"511400","FAX":"020-31003611","DEALER_NAME_SIM":"广州庞大一众","DEALER_NAME_EN":"S744068","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S743026","DEALER_NAME":"浏阳永通汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"浏阳市关口工业小区","SERVICE_PHONE":"0731-83011999","SALES_PHONE":"0731-83836888","AFTER_SALES_PHONE":"0731-83011999","STATUS":"1","ZIP_CODE":"410300","FAX":"0731-83288858","DEALER_NAME_SIM":"浏阳永通","DEALER_NAME_EN":"S743026","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S745021","DEALER_NAME":"广西鑫广达博冠汽车销售服务有限公司","FK_CITY_ID":"24","FK_PROVINCE_ID":"4","ADDRESS":"南宁市昆仑大道116号大盆坡","SERVICE_PHONE":"0771-2869088","SALES_PHONE":"0771-2869688","AFTER_SALES_PHONE":"0771-2869088","STATUS":"1","ZIP_CODE":"530007","FAX":"0771-2448997","DEALER_NAME_SIM":"广西鑫广达博冠","DEALER_NAME_EN":"S745021","distributeNum":"68","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广西","CITY_NAME":"南宁市"},
+        {"DEALER_CODE":"S744064","DEALER_NAME":"深圳市清水河奇建贸易有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市罗湖区清水河三路18号深业车城博兴大厦BX-101号","SERVICE_PHONE":"0755-29002222","SALES_PHONE":"0755-29001111","AFTER_SALES_PHONE":"0755-82126611","STATUS":"1","ZIP_CODE":"518000","FAX":"0755-29001111","DEALER_NAME_SIM":"深圳清水河奇建","DEALER_NAME_EN":"S744064","distributeNum":"148","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S744075","DEALER_NAME":"深圳市昊天林安琪汽车有限公司","FK_CITY_ID":"38","FK_PROVINCE_ID":"5","ADDRESS":"深圳市龙华新区观澜环观南路72号（环观南路与观平路交界）","SERVICE_PHONE":"0755-81708777","SALES_PHONE":"0755-81701888","AFTER_SALES_PHONE":"0755-81708777","STATUS":"1","FAX":"0755-81701888","DEALER_NAME_SIM":"深圳昊天林安琪","DEALER_NAME_EN":"S744075","distributeNum":"147","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"深圳市"},
+        {"DEALER_CODE":"S743028","DEALER_NAME":"湖南长久博腾汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"湖南省长沙市岳麓区岳麓街道五星村99号","SERVICE_PHONE":"0731-85919888","SALES_PHONE":"0731-85919888","AFTER_SALES_PHONE":"0731-89789688","STATUS":"1","DEALER_NAME_SIM":"湖南长久博腾","DEALER_NAME_EN":"S743028","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S736024","DEALER_NAME":"南昌恒信一路汽车销售服务有限公司","FK_CITY_ID":"109","FK_PROVINCE_ID":"14","ADDRESS":"南昌市新南大道与昌南大道交界处昌东国际汽车城","SERVICE_PHONE":"0791-88192776","SALES_PHONE":"0791-88192778","AFTER_SALES_PHONE":"0791-88192779","STATUS":"1","DEALER_NAME_SIM":"南昌恒信一路","DEALER_NAME_EN":"S736024","distributeNum":"228","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"江西","CITY_NAME":"南昌市"},
+        {"DEALER_CODE":"S743030","DEALER_NAME":"长沙大汉汽车贸易有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市芙蓉区远大路与红旗路交汇处西南角（汇一城）斜对角","SERVICE_PHONE":"073189870089","SALES_PHONE":"4000731118","STATUS":"1","FAX":"0731-89870080","DEALER_NAME_SIM":"长沙大汉汽贸","DEALER_NAME_EN":"S743030","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+        {"DEALER_CODE":"S744077","DEALER_NAME":"广州市安捷鑫众汽车有限公司","FK_CITY_ID":"39","FK_PROVINCE_ID":"5","ADDRESS":"广州市萝岗区科丰路31号G10栋101","SERVICE_PHONE":"020-62315388","SALES_PHONE":"020-62315088","STATUS":"1","FAX":"020-62315020","DEALER_NAME_SIM":"广州安捷鑫众","DEALER_NAME_EN":"S744077","distributeNum":"85","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"广州市"},
+        {"DEALER_CODE":"S744074","DEALER_NAME":"佛山市广物君乐汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区里水镇佛山一环东侧水口路出口广佛汽车城内","SERVICE_PHONE":"0757-85660036","SALES_PHONE":"0757-85660030","AFTER_SALES_PHONE":"0757-85660036","STATUS":"1","FAX":"0757-85660173","DEALER_NAME_SIM":"佛山广物君乐","DEALER_NAME_EN":"S744074","distributeNum":"59","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S744073","DEALER_NAME":"佛山时利和众联汽车销售服务有限公司","FK_CITY_ID":"40","FK_PROVINCE_ID":"5","ADDRESS":"佛山市南海区狮山镇狮岭村马二经济社上凼地段之一","SERVICE_PHONE":"0757-6682088","SALES_PHONE":"0757-66820888","AFTER_SALES_PHONE":"0757-6682088","STATUS":"1","FAX":"0757-6682088","DEALER_NAME_SIM":"佛山时利和众联","DEALER_NAME_EN":"S744073","distributeNum":"58","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"广东","CITY_NAME":"佛山市"},
+        {"DEALER_CODE":"S743027","DEALER_NAME":"湖南中拓瑞鑫汽车销售服务有限公司","FK_CITY_ID":"73","FK_PROVINCE_ID":"10","ADDRESS":"长沙市宁乡县白马南路与瑞良路交汇处（百灵鸟小学斜对面）","SERVICE_PHONE":"0731-87362966","SALES_PHONE":"0731-87362568","AFTER_SALES_PHONE":"0731-87362966","STATUS":"1","FAX":"0731-87362598","DEALER_NAME_SIM":"湖南中拓瑞鑫","DEALER_NAME_EN":"S743027","distributeNum":"101","LARGER_REGION_NAME":"华南区","LARGER_REGION_CODE":"RSD5","PROVINCE_NAME":"湖南","CITY_NAME":"长沙市"},
+    ]
+</script>
+<script>
+    var mySwiper1 = new Swiper('#swider1', {
+        autoplay: {
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        loop:true,
+        uniqueNavElements: true,
+    })
+    var mySwiper2 = new Swiper('#swider2', {
+        // autoplay: {
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+        loop:true,
+    })
+</script>
+<script>
+    //城市 经销商
+    for (var i=0;i<des.length;i++){
+        if ($('#prov').html().indexOf(des[i].PROVINCE_NAME)<0){
+            $('#prov').append('<option value="'+des[i].FK_PROVINCE_ID+'">'+des[i].PROVINCE_NAME+'</option>')
+        }
+    }
+    $('#prov').change(function () {
+        $("#city").find("option:not(:first)").remove();
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#prov option:checked').text()==des[i].PROVINCE_NAME && $('#city').html().indexOf(des[i].CITY_NAME)<0){
+                $('#city').append('<option value="'+des[i].FK_CITY_ID+'">'+des[i].CITY_NAME+'</option>')
+            }
+        }
+    })
+    $('#city').change(function () {
+        $("#dealers").find("option:not(:first)").remove();
+        for (var i=0;i<des.length;i++){
+            if ($('#city option:checked').text()==des[i].CITY_NAME){
+                $('#dealers').append('<option value="'+des[i].DEALER_NAME_SIM+'">'+des[i].DEALER_NAME_SIM+'</option>')
+            }
+        }
+    })
+    //视频
+    var video = new tvp.VideoInfo();
+    var player =new tvp.Player();
+    video.setVid('g0782kq36p7');
+    $('.video span').click(function() {
+        $(this).hide();
+        $('.video img').hide();
+        player.create({
+            width:707,
+            height:398,
+            video:video,
+            modId:"vid",
+            autoplay:true,
+            vodFlashSkin:'http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf',//精简皮肤
+            isHtml5ShowPlayBtnOnPause: true,
+            vodFlashExtVars:{
+                showend:0,
+                favorite:0,
+                searchbar:0
+            },
+            onallended:function () {
+                //播放完成自动切换下一段视频
+                $('.video span').show();
+                $('.video img').show();
+                $('.video #vid').html('');
+            },
+        });
+    });
+    /*---报名---*/
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name = $('#name').val();
+            var phone = $('#tel').val();
+            var series_id=392;
+            var brand_id=23;//品牌id
+            var prov = $('#prov').val();
+            var city = $('#city').val();
+            var act_id=	3179;//后台新建活动
+            var dealers=$('#dealers').val();
+            var url ='http://www.yetcar.com' + '/index.php?s=/Home/GeneralActivity/baoming.html';
+            if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                alert('请输入正确中文姓名');
+                return false
+            }
+            if(!(/^1[3|4|5|7|8][0-9]\d{4,8}$/.test(phone)) || phone.length<11 ) {
+                alert('手机格式不对');
+                return false
+            }
+            if(prov == 0){
+                alert('请选择省份');
+                return false
+            }
+            if(city == 0){
+                alert('请选择城市');
+                return false
+            }
+            if(dealers == 0){
+                alert('请选择经销商');
+                return false
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            flag = false;
+            var data={
+                name: name,
+                phone: phone,
+                brand_id: brand_id,
+                series_id: series_id,
+                act_id: act_id,
+                dealers:dealers
+            };
+            $.ajax({
+                type:"post",
+                url:url,
+                async:true,
+                data:data,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.reload()
+                    }else{
+                        alert("很抱歉，你报名失败。");
+
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    })
+    /*---报名结束---*/
+    $('#name,#tel').placeholder({isUseSpan:false,onInput:false});
+</script>
+</html>

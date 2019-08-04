@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width,viewport-fit=cover">
+    <title>劲客智联版 全新上市</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <style>
+        .main {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        .cn {position: relative;}
+        .bmk {
+            position: absolute;
+            left: 50%;
+            top: 5.4rem;
+            width: 24rem;
+            height: 25rem;
+            margin-left: -12.3rem;
+        }
+        .bmk p input,.bmk p select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            font-size: 1.2rem;
+            background: transparent;
+            padding-left: 0.5rem;
+        }
+        .bmk p {
+            width: 23rem;
+            height: 3.4rem;
+        }
+        .bmk .tel {
+            margin-top: 1.55rem;
+        }
+        .bmk .series,.bmk .dealers {
+            margin-top: 1.5rem;
+            width: 23.5rem;
+        }
+        .bmk .submit {
+            margin-top: 2.7rem;
+            width: 23.5rem;
+        }
+        .privacyPolicy input{position:absolute;left:1rem;top:24.3rem;width:18px !important;height:18px !important}
+        .privacyPolicy span{display:inline-block;position:absolute;left:3rem;top:24.15rem;font-size:16px;color:#000}
+        .privacyPolicy a{color:#000}
+        #wrapper {position: absolute;
+            z-index: 1;
+            height: 13.2rem;
+            top: 2rem;
+            left: 1rem;
+            width: 25rem;
+            overflow: hidden;-ms-touch-action: none;-webkit-overflow-scrolling: touch;/*这个属性可以使滚动更流畅有左右弹动*/}
+        #scroller {position: absolute;z-index: 1;-webkit-tap-highlight-color: rgba(0,0,0,0);width: 115rem;height: 13.2rem;-webkit-transform: translateZ(0);-moz-transform: translateZ(0);-ms-transform: translateZ(0);-o-transform: translateZ(0);transform: translateZ(0);-webkit-touch-callout: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;-webkit-text-size-adjust: none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;-o-text-size-adjust: none;text-size-adjust: none;}
+        #scroller ul {width: 100%;}
+        #scroller li {
+            float: left;
+            height: 11.5rem;
+            width: 22rem;
+            overflow: hidden;
+        }
+        .list {
+            position: absolute;
+            top: 5rem;
+            left: 50%;
+            width: 26.9rem;
+            height: 20rem;
+            margin-left: -13.5rem;
+            overflow: auto;
+        }
+        .list ul {
+            overflow: hidden;
+            border-bottom: 1px dashed #ddd;
+            margin: 0 auto 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .list ul li {
+            float: left;
+            width: 6rem;
+        }
+        .list ul li:first-child {
+            margin-left: 1rem;
+            margin-right: 0.5rem;
+        }
+        .list ul li:nth-child(2){
+            width: 12rem;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/22/96/209/13614727.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/23/96/209/13614728.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/24/96/209/13614729.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/25/96/209/13614730.jpg" alt=""></div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/26/96/209/13614731.jpg" alt="">
+        <div class="bmk">
+            <p class="name">
+                <input type="text" id="name" placeholder="姓名 |">
+            </p>
+            <p class="tel">
+                <input type="tel" id="tel" placeholder="手机 |" maxlength="11">
+            </p>
+            <p class="series">
+                <select id="series">
+                    <option value="0">意向车型</option>
+                </select>
+            </p>
+            <p class="dealers">
+                <select id="dealers">
+                    <option value="0">经销商</option>
+                </select>
+            </p>
+            <p class="submit">
+                <input type="button" id="submit">
+            </p>
+        </div>
+        <div class="privacyPolicy">
+            <input type="checkbox" checked>
+            <span>我同意<a href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/27/96/209/13614732.jpg" alt="">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul>
+                    <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/217/79/209/13610587.jpg" ></li>
+                    <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/218/79/209/13610588.jpg" ></li>
+                    <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/219/79/209/13610589.jpg" ></li>
+                    <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/220/79/209/13610590.jpg" ></li>
+                    <li><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/221/79/209/13610591.jpg" ></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cn"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/28/96/209/13614733.jpg" alt="">
+        <div class="list"></div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/responsive750px.js"></script>
+<script src="http://guangzhou.auto.qq.com/2018web/iscroll.js"></script>
+<script>
+    var des=[
+        {"name":"广州风日","nameQC":"广州市风日汽车贸易有限公司","nameCode":"H2901","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-86871333","Xtel":"020-86871222","address":"广州市花都区新华镇西城开发区风神大道10号"},
+        {"name":"广州东风南方中大","nameQC":"广州东风南方汽车销售服务有限公司","nameCode":"H2902","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-85553008","Xtel":"020-85553008","address":"广州市天河区中山大道北侧棠东895号（骏景花园对面）"},
+        {"name":"广州华溢石槎","nameQC":"广州市华溢汽车有限公司","nameCode":"H2903","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-86406638","Xtel":"020-86406628","address":"白云区石槎路自编15号"},
+        {"name":"广州喜龙","nameQC":"广东日产汽车贸易有限公司","nameCode":"H2904","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-81519393","Xtel":"020-81510399","address":"广州市荔湾区花地大道中268号"},
+        {"name":"广州金冠","nameQC":"广州市番禺金冠汽车有限公司","nameCode":"H2905","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-84566222","Xtel":"020-84567838","address":"广州市番禺区钟村街钟一村钟屏岔道2号之二"},
+        {"name":"广州东风南方广大","nameQC":"广州东风南方汽车销售服务有限公司海珠分公司","nameCode":"H2906","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-84293975,020-84293976","Xtel":"020-84293975,020-84293976","address":"广州市海珠区广州大道南1 88号(洛溪桥脚公交站）"},
+        {"name":"广州京安","nameQC":"广东广物京安汽车销售服务有限公司","nameCode":"H2908","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-82882339","Xtel":"020-82882338","address":"广东省广州市增城区新塘镇荔新公路上邵村路段"},
+        {"name":"广州广裕","nameQC":"广州市佳奔汽车贸易有限公司","nameCode":"H2910","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-39995018","Xtel":"020-39995038","address":"广东省广州市番禺区市桥街东环路126号（交警大队斜对面）"},
+        {"name":"广州广利","nameQC":"广东广利汽车销售服务有限公司","nameCode":"H2912","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-86366809","Xtel":"020-86388988","address":"广州市白云区下塘西路614号（雕塑公园正对面）"},
+        {"name":"广州耀骏","nameQC":"广州市耀骏汽车销售服务有限公司","nameCode":"H2913","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"400-668-2113","Xtel":"020-22668888","address":"广州市增城荔城三联村钟岗社磨谷地"},
+        {"name":"广州龙日","nameQC":"广州市龙日汽车服务有限公司","nameCode":"H2920","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-37211118","Xtel":"020-87033666","address":"广东省广州市天河区广汕一路500号中控楼（6）栋之一、二层"},
+        {"name":"广州东风南方黄埔","nameQC":"广州东风南方汽车销售服务有限公司黄埔分公司","nameCode":"H2921","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-66312346","Xtel":"020-66312345","address":"广州市黄埔区中山大道东280-1号(地铁5号线-鱼珠站C出口即到)"},
+        {"name":"广州南沙大昌行喜龙","nameQC":"广东大昌行日产汽车贸易有限公司","nameCode":"H2948","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-34970666 , 020-34970333","Xtel":"020-34970666","address":"广州市南沙区黄阁镇市南大道129号(地铁4号线黄阁站往东300米）"},
+        {"name":"广州华溢街口","nameQC":"广州市华谦汽车有限公司","nameCode":"H2949","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-87983122","Xtel":"020-87989288","address":"广州市从化河东北路口（105国道凤院村路口旁）"},
+        {"name":"广州南菱","nameQC":"广州市南菱君达汽车有限公司","nameCode":"H2960","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-28272322","Xtel":"020-28272300","address":"广州市白云区白云大道北1401号（白云堡立交北500米）"},
+        {"name":"广州东风南方广辰","nameQC":"广州东风南方广辰汽车销售服务有限公司","nameCode":"H2972","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-66600227","Xtel":"020-66600226","address":"广州市番禺区大龙街市莲路傍江西村段10号"},
+        {"name":"广州金冠明珠","nameQC":"广州市番禺金冠汽车有限公司第一分公司","nameCode":"H2989","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-31178338","Xtel":"020-31178228","address":"广东省广州市番禺区迎宾路111之1厦滘工业园"},
+        {"name":"广州绿日","nameQC":"广州绿日汽车销售服务有限公司","nameCode":"H2992","city":"广州市","cityCode":"297","prov":"广东省","provCode":"24","Ftel":"020-36878000","Xtel":"020-36878111","address":"广州市花都区平步大道60号（南菱丰田斜对面）"},
+    ];
+    var ser=[
+        {"SERIES_ID":"31","SERIES_NAME":"楼兰","SERIES_NAME_EN":"murano"},
+        {"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA"},
+        {"SERIES_ID":"32","SERIES_NAME":"奇骏","SERIES_NAME_EN":"x-trail"},
+        {"SERIES_ID":"21","SERIES_NAME":"逍客","SERIES_NAME_EN":"qashqai"},
+        {"SERIES_ID":"208","SERIES_NAME":"劲客","SERIES_NAME_EN":"P02F"},
+        {"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2"},
+        {"SERIES_ID":"14","SERIES_NAME":"NISSAN GT-R","SERIES_NAME_EN":"gtr"},
+        {"SERIES_ID":"141","SERIES_NAME":"全新 GT-R","SERIES_NAME_EN":"newgtr"},
+        {"SERIES_ID":"150","SERIES_NAME":"370Z","SERIES_NAME_EN":"370z"},
+        {"SERIES_ID":"17","SERIES_NAME":"玛驰","SERIES_NAME_EN":"march"},
+        {"SERIES_ID":"170","SERIES_NAME":"R50X","SERIES_NAME_EN":"R50X"},
+        {"SERIES_ID":"190","SERIES_NAME":"天籁公爵","SERIES_NAME_EN":"teana-vip"},
+        {"SERIES_ID":"191","SERIES_NAME":"途乐","SERIES_NAME_EN":"patrol"},
+        {"SERIES_ID":"192","SERIES_NAME":"R30","SERIES_NAME_EN":"R30"},
+        {"SERIES_ID":"193","SERIES_NAME":"T70","SERIES_NAME_EN":"T70"},
+        {"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟"},
+        {"SERIES_ID":"195","SERIES_NAME":"370Z NISMO","SERIES_NAME_EN":"370Z NISMO"},
+        {"SERIES_ID":"196","SERIES_NAME":"GT-R NISMO","SERIES_NAME_EN":"GT-R NISMO"},
+        {"SERIES_ID":"197","SERIES_NAME":"新楼兰","SERIES_NAME_EN":"new-murano"},
+        {"SERIES_ID":"198","SERIES_NAME":"T70X","SERIES_NAME_EN":"T70X"},
+        {"SERIES_ID":"199","SERIES_NAME":"全新逍客","SERIES_NAME_EN":"全新逍客"},
+        {"SERIES_ID":"20","SERIES_NAME":"骊威","SERIES_NAME_EN":"livina"},
+        {"SERIES_ID":"200","SERIES_NAME":"西玛","SERIES_NAME_EN":"Maxima"},
+        {"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA","SERIES_NAME_EN":"new-tiida"},
+        {"SERIES_ID":"202","SERIES_NAME":"启辰T90 ",},
+        {"SERIES_ID":"203","SERIES_NAME":"全新天籁",},
+        {"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵",},
+        {"SERIES_ID":"205","SERIES_NAME":"新奇骏","SERIES_NAME_EN":"P32R"},
+        {"SERIES_ID":"206","SERIES_NAME":"启辰M50V",},
+        {"SERIES_ID":"207","SERIES_NAME":"启辰D60",},
+        {"SERIES_ID":"209","SERIES_NAME":"全新T70","SERIES_NAME_EN":"全新T70"},
+        {"SERIES_ID":"24","SERIES_NAME":"新世代天籁","SERIES_NAME_EN":"teana"},
+        {"SERIES_ID":"26","SERIES_NAME":"轩逸经典","SERIES_NAME_EN":"sylphy"},
+        {"SERIES_ID":"28","SERIES_NAME":"阳光","SERIES_NAME_EN":"sunny"},
+        {"SERIES_ID":"29","SERIES_NAME":"新骐达","SERIES_NAME_EN":"tiida3"},
+        {"SERIES_ID":"30","SERIES_NAME":"新一代轩逸","SERIES_NAME_EN":"sylphy1"},
+        {"SERIES_ID":"33","SERIES_NAME":"贵士","SERIES_NAME_EN":"guest"},
+        {"SERIES_ID":"70","SERIES_NAME":"启辰D50","SERIES_NAME_EN":"D50"},
+        {"SERIES_ID":"71","SERIES_NAME":"启辰R50","SERIES_NAME_EN":"R50"},
+        {"SERIES_ID":"72","SERIES_NAME":"骐达GTS","SERIES_NAME_EN":"gts"},
+        {"SERIES_ID":"73","SERIES_NAME":"E30","SERIES_NAME_EN":"E30"},
+    ]
+</script>
+<script>
+    for (var i=0;i<des.length;i++){
+        $('#dealers').append('<option value="'+des[i].nameCode+'">'+des[i].name+'</option>')
+        var ul = '<ul>'+
+            '<li>'+des[i].name+'</li>'+
+            '<li>'+des[i].address+'</li>'+
+            '<li>'+des[i].Xtel+'</li>'+
+            '</ul>';
+        $('.list').append(ul)
+    }
+    for (var j=0;j<ser.length;j++){
+        $('#series').append('<option value="'+ser[j].SERIES_ID+'">'+ser[j].SERIES_NAME+'</option>')
+    }
+    //报名
+    var flag = true;
+    $("#submit").click(function() {
+        if(flag) {
+            var name=$("#name").val(),  //姓名
+                tel=$("#tel").val(),        //电话
+                city_id = 297,  //城市id
+                city = '广州市',    //城市名字
+                province = 24,  //省份
+                detail_id = 171,  //detail_id
+                series_id = $('#series').val(),  //车型id
+                car_name = $('#series option:checked').text(),  //车型名字
+                brand_id = 11, //品牌
+                dealers_code = $('#dealers').val(),   //经销商id
+                dealers = $('#dealers option:checked').text(),   //经销商名字
+                Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new",
+                Data = {
+                    name: name,
+                    phone: tel,
+                    series_id: series_id,
+                    brand_id: brand_id,
+
+                    city_id: city_id,
+                    city:city,
+                    dealers: dealers,
+                    province: province,
+                    car_name: car_name,
+                    dealers_code: dealers_code,
+
+                    detail_id:detail_id,
+                    type: 1,
+                    //smartcode: 'A0000-000-000-00-00000'
+                    smartcode: 'A2018-1426-5692-2415-128029'
+                };
+            //判断填写是否正确
+            if(name==''||tel==''){
+                alert('信息没有填写完整');
+                return false;
+            }
+            if(!name.match(/^[\u4e00-\u9fa5]{1,4}$/i)){
+                alert('请输入正确的中文名');
+                return false;
+            };
+            if(!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                alert('手机格式不正确');
+                return false;
+            }
+            if(series_id=='0'){
+                alert('请选择车型');
+                return false;
+            }
+            if(dealers_code=='0'){
+                alert('请选择经销商');
+                return false;
+            }
+            if (!($("input[type='checkbox']").prop('checked'))){
+                alert('请同意《隐私政策》');
+                return false;
+            }
+            //发送请求
+            flag = false;
+            $.ajax({
+                type:"post",
+                url:Url,
+                data:Data,
+                async:true,
+                dataType:"jsonp",
+                success:function(data){
+                    if(data.status==1){
+                        alert('恭喜你，报名成功！');
+                        window.location.href = location.href;
+                    }else{
+                        alert("很抱歉，你报名失败。");
+                        flag = true;
+                    }
+                }
+            });
+        } else {
+            alert("请勿重复提交！")
+        }
+    });
+    $(window).load(function() {
+        myScroll = new IScroll('#wrapper', {scrollX: true, scrollY: false, preventDefault: false ,mouseWheel: true});
+    });
+</script>
+</html>

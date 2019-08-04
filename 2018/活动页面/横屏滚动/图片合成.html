@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>carvas</title>
+	<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible.js"></script>
+	<script src="https://guangzhou.auto.qq.com/2018web/flexible/flexible_css.js"></script>
+	<style>
+		html,body {
+			width: 100%;
+			height: 100%;
+		}
+		.main {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+		}
+		.pg {position: relative;}
+		.page1 {
+			width: 100%;
+			height: 100%;
+		}
+		.page1 .syntheticImg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 3rem;
+			height: 1rem;
+			transform: translate(-50%,-50%);
+		}
+		.page1 .getWeixinImg {
+			position: absolute;
+			left: 50%;
+			top: 5rem;
+			width: 3rem;
+			height: 1rem;
+			transform: translateX(-50%);
+		}
+		.page1 #weixinImg {
+			display: block;
+			width: 2rem;
+			height: 2rem;
+			border: 1px solid #ddd;
+			margin: 1rem auto .5rem;
+			border-radius: 50%;
+		}
+		.page1 .weixinName {
+			width: 8rem;
+			text-align: center;
+			margin: 0 auto;
+			font-size: .5rem;
+			font-weight: bold;
+		}
+		.page1 .hide {
+			display: none;
+		}
+		.page1 .img {
+			max-width: 100%;
+			vertical-align: middle;
+		}
+		.page2 {
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.5);
+			z-index: 999;
+			display: none;
+		}
+		.page2 #saveImg {
+			position: relative;
+			width: 90%;
+			height:90%;
+			margin: 1rem auto;
+			overflow: auto;
+			z-index: 1100;
+		}
+		.page2 .close {
+			position: absolute;
+			top: 1.2rem;
+			right: 0.75rem;
+			width: 0.5rem;
+			height: 0.5rem;
+			border-radius: 50%;
+			border: 1px solid white;
+			color: white;
+			text-align: center;
+			line-height: 0.5rem;
+			font-size: .4rem;
+			z-index: 1111;
+			cursor: pointer;
+		}
+		.page2 #saveImg img {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="page1 pg">
+			<img src="" alt="" id="weixinImg">
+			<p class="weixinName" id="weixinName"></p>
+			<button class="getWeixinImg">获取头像昵称</button>
+			<button class="syntheticImg">合成图片</button>
+			<img src="1.jpg" alt="" class="hide img" id="bg">
+		</div>
+		<div class="page2 pg">
+			<a href="javascript:;" class="close">X</a>
+			<div id="saveImg">
+				<img src="" alt="">
+			</div>
+		</div>
+	</div>
+	<script src="//dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+	<script>
+		//点击获取微信头像和name 
+		$('.getWeixinImg').click(function(){
+			$('#weixinImg').attr('src','');
+			$('.weixinName').text('');
+			$('#weixinImg').attr('src','132.jpg');
+			$('.weixinName').text('Bad Boy');
+		});
+		// 关闭合成成功图片弹框
+		$('.page2 .close').click(function () {
+			$(this).parents('.page2').fadeOut(300);
+		});
+		//图片合成
+		$('.syntheticImg').click(function(){
+		  const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+			const bgImg = document.getElementById('bg');
+			const wxImg = document.getElementById('weixinImg');
+			let fontSize = document.body.clientWidth/(1242/60)+'px';
+			//背景图片
+			canvas.width = bgImg.width;
+			canvas.height = bgImg.height;
+			//微信图片
+			let cl = 345;
+			let ct = 100; 
+			let cw = wxImg.width;
+			let ch = wxImg.height; 
+			//铺底色
+			ctx.fillStyle = "#fff";
+			ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+			ctx.drawImage(wxImg, cl, ct, cw, ch);
+			ctx.font="bold "+fontSize+" 微软雅黑";
+			ctx.fillStyle = 'black';
+			ctx.textBaseline = 'top';
+			ctx.fillText(document.getElementById('weixinName').innerHTML, 345, 180);
+			let src = canvas.toDataURL('image/jpeg',0.8);
+			$('.page2 #saveImg img').attr('src',src).parents('.page2').fadeIn(300);
+			// alert('合成成功,请长按保存')
+		});
+	</script>
+</body>
+</html>

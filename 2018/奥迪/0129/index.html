@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>奥迪汽车金融推出首付低至20%，3年期4.88%低利率金融方案</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=640,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" href="http://guangzhou.auto.qq.com/css/conmon.css">
+    <link href="http://guangzhou.auto.qq.com/css/swiper.min3.4.2.css" rel="stylesheet">
+    <link href="http://guangzhou.auto.qq.com/css/animate3.5.1.css" rel="stylesheet">
+    <link href="http://act.yetcar.com/zxq_projectCode/yqmzdGD/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <style>
+        img {
+            border: none;
+            vertical-align: middle;
+            max-width: 100%;
+            display: block;
+            margin-top: -1px;
+        }
+        div {
+            margin-top: -1px;
+        }
+        html,body {
+            height: 100%;
+            margin: 0 auto;
+            max-width: 640px;
+        }
+        .con1,.con2 {
+            position: relative;
+        }
+        .con2 {
+            background-color:#FAB617;
+            height: 320px;
+        }
+        .swi1 {
+            position: absolute;
+            width: 640px;
+            height: 450px;
+            left: 0;
+            top: 0;
+        }
+        .conT1 {
+            position: absolute;
+            left: 0;
+            top: -31px;
+            width: 638px;
+            height: 104px;
+        }
+        #BD {
+            position: absolute;
+            left: 255px;
+            top: 81px;
+            width: 147px;
+            height: 6px;
+            background-color: #00183C;
+        }
+        .conT1 p {
+            text-align: center;
+            line-height: 34px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-top: 11px;
+            letter-spacing: 2px;
+        }
+        .conT2 p {
+            text-align: center;
+            line-height: 25px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 11px;
+            letter-spacing: 2px;
+        }
+        .conT2 {
+            position: absolute;
+            left: 0;
+            top: 104px;
+            width: 638px;
+            height: 196px;
+        }
+        .con4 {
+            background-color: #00183A;
+            height: 465px;
+            position: relative;
+        }
+        .form {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 592px;
+        }
+        .bm {
+            margin-top: 30px;
+            margin-left: 84px;
+        }
+        .bm p {
+            display: inline-block;
+            color: #FFFFFF;
+        }
+        .bm p input,.bm p select {
+            width: 100%;
+            height: 100%;
+            font-size: 25px;
+            color: white;
+            background-color: transparent;
+        }
+        select option {
+            color: #000;
+        }
+        .bm p:nth-child(1) {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .bm p:nth-child(2) {
+            width: 265px;
+            height: 44px;
+            font-size: 36px;
+            border: 1px solid white;
+        }
+        .ky {
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            border: 2px solid white;
+            margin-right: 7px;
+        }
+        .con5 {
+            position: relative;
+        }
+        #submit {
+            position: absolute;
+            left: 120px;
+            top: 6px;
+            width: 386px;
+            height: 31px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        #qr {
+            position: absolute;
+            left: 131px;
+            top: 69px;
+            width: 13px;
+            height: 15px;
+        }
+        .active {
+            background-color: deepskyblue;
+        }
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background: red;
+        }
+        .con6 {
+            position: relative;
+        }
+        .swi2 {
+            position: absolute;
+            width: 455px;
+            height: 284px;
+            left: 96px;
+            top: 157px;
+            /*overflow: hidden;*/
+        }
+        .swi2 .swiper-container {
+            width: 455px;
+            height: 284px;
+        }
+        .con7 {
+            position: relative;
+        }
+        .swi3 {
+            position: absolute;
+            width: 455px;
+            height: 284px;
+            left: 96px;
+            top: 109px;
+        }
+        .swi3 .swiper-container {
+            width: 455px;
+            height: 284px;
+        }
+        .con9 {
+            background-color: #AA1F24;
+            height: 375px;
+            position: relative;
+        }
+        .title {
+            position: absolute;
+            width: 640px;
+            height: 50px;
+            left: 0;
+            top: 0;
+            background: white;
+        }
+        .title span {
+            display: inline-block;
+            line-height: 50px;
+            font-size: 24px;
+        }
+        .title span:nth-child(1) {
+            margin-left: 19px;
+        }
+        .title span:nth-child(2) {
+            margin-left: 14px;
+        }
+        .title span:nth-child(3) {
+            margin-left: 164px;
+        }
+        .title span:nth-child(4) {
+            margin-left: 37px;
+        }
+        .list {
+            position: absolute;
+            width: 640px;
+            height: 300px;
+            left: 0;
+            top: 60px;
+            overflow: auto;
+        }
+        table {
+            margin: 0 auto;
+        }
+        table tr {
+            height: 60px;
+            border-bottom: 1px dashed white;
+        }
+        table td {
+            text-align: center;
+            color: white;
+        }
+        .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+            width: 10px;
+            border-radius: 0;
+            background-color: #f3ec34;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="con1">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/135/92/207/13483770.jpg" alt="">
+        <div class="swi1">
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/134/92/207/13483769.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/141/92/207/13483776.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="con2">
+        <div class="conT1">
+            <p>奥迪汽车金融推出<span style="color: red;">首付低至20%</span></p>
+            <p><span style="color: red">3年期4.88%</span>低利率金融方案,祝您圆梦奥迪,先人一步</p>
+        </div>
+        <p id="BD"></p>
+        <div class="conT2">
+            <p>2018年奥迪汽车金融"贷"给你全新购车盛惠,</p>
+            <p>贷款购买奥迪全系车型并选用无忧金融服务,</p>
+            <p>即可享3-4年低成本用车费用融资(包括购置税、保险等)。</p>
+            <p>奥迪汽车金融,助你超前一步,触碰未来。</p>
+            <p>具体活动详情敬请垂询一汽-大众奥迪特许经销商或访问一汽-大众奥迪官方网站。</p>
+        </div>
+    </div>
+    <div class="con3"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/136/92/207/13483771.jpg" alt=""></div>
+    <div class="con4">
+        <div class="form">
+            <div class="bm">
+                <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名&nbsp;:&nbsp;</p>
+                <p><input type="text" id="name"></p>
+            </div>
+            <div class="bm">
+                <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别&nbsp;:&nbsp;</p>
+                <p style="border: none"><span class="ky" data-sex="男"></span>先生&nbsp;&nbsp;&nbsp;&nbsp;<span class="ky" data-sex="女"></span>女士</p>
+            </div>
+            <div class="bm">
+                <p>手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机&nbsp;:&nbsp;</p>
+                <p><input type="tel" id="tel" maxlength="11"></p>
+            </div>
+            <div class="bm">
+                <p>意向车型&nbsp;:&nbsp;</p>
+                <p>
+                    <select id="series_id">
+                        <option value="0">-请选择车型-</option>
+                    </select>
+                </p>
+            </div>
+            <div class="bm">
+                <p style="font-size: 29px">经&nbsp;&nbsp;销&nbsp;&nbsp;商&nbsp;:&nbsp;</p>
+                <p>
+                    <select id="dealers">
+                        <option value="0">-请选择经销商-</option>
+                        <option value="上海永达汽车浦东销售服务有限公司">上海永达汽车浦东销售服务有限公司</option>
+                        <option value="上海开隆汽车贸易有限公司">上海开隆汽车贸易有限公司</option>
+                        <option value="上海东联沪港汽车销售有限公司">上海东联沪港汽车销售有限公司</option>
+                        <option value="上海一汽沪奥汽车销售有限公司">上海一汽沪奥汽车销售有限公司</option>
+                        <option value="上海西上海奥杰汽车销售服务有限公司">上海西上海奥杰汽车销售服务有限公司</option>
+                        <option value="上海宝友汽车销售服务有限公司">上海宝友汽车销售服务有限公司</option>
+                        <option value="上海东昌金桥豪迪汽车服务有限公司">上海东昌金桥豪迪汽车服务有限公司</option>
+                        <option value="上海奥汇汽车销售服务有限公司">上海奥汇汽车销售服务有限公司</option>
+                        <option value="上海德辰汽车销售有限公司">上海德辰汽车销售有限公司</option>
+                        <option value="上海交运起腾汽车销售服务有限公司">上海交运起腾汽车销售服务有限公司</option>
+                        <option value="上海永达奥诚汽车销售服务有限公司">上海永达奥诚汽车销售服务有限公司</option>
+                        <option value="上海永达奥诚中环汽车销售服务有限公司">上海永达奥诚中环汽车销售服务有限公司</option>
+                        <option value="上海永达弘杰汽车销售服务有限公司">上海永达弘杰汽车销售服务有限公司</option>
+                        <option value="上海东联松奥汽车销售服务有限公司">上海东联松奥汽车销售服务有限公司</option>
+                        <option value="上海骐润茂汽车销售有限公司">上海骐润茂汽车销售有限公司</option>
+                        <option value="上海五角场开隆汽车贸易有限公司">上海五角场开隆汽车贸易有限公司</option>
+                    </select>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="con5">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/137/92/207/13483772.jpg" alt="">
+        <button id="submit"></button>
+        <p id="qr"></p>
+    </div>
+    <div class="con6">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/138/92/207/13483773.jpg" alt="">
+        <div class="swi2">
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/154/92/207/13483789.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/155/92/207/13483790.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/156/92/207/13483791.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/157/92/207/13483792.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="con7">
+        <img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/139/92/207/13483774.jpg" alt="">
+        <div class="swi3">
+            <div class="swiper-container" id="swiper3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/158/92/207/13483793.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/159/92/207/13483794.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/160/92/207/13483795.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/161/92/207/13483796.jpg" alt=""></div>
+                </div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div class="con8"><img src="http://img1.gtimg.com/autoguangzhou/pics/hv1/140/92/207/13483775.jpg" alt=""></div>
+    <div class="con9">
+        <div class="title">
+            <span>城市</span>
+            <span>经销商</span>
+            <span>销售热线</span>
+            <span>地址</span>
+        </div>
+        <div class="list">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td width="100">上海</td>
+                    <td width="300">上海永达汽车浦东销售服务有限公司</td>
+                    <td width="200">021-50856789</td>
+                    <td width="200">上海市浦东新区康桥东路388号（近金科路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海开隆汽车贸易有限公司</td>
+                    <td>021-64058888</td>
+                    <td>上海市闵行区吴中路1439号</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海东联沪港汽车销售有限公司</td>
+                    <td>021-56913110</td>
+                    <td>上海市闸北区场中路1980号</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海一汽沪奥汽车销售有限公司</td>
+                    <td>021-52270000</td>
+                    <td>上海市闵行区北翟路1800号（北沈路口）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海东昌汽车嘉定销售服务有限公司</td>
+                    <td>021-69502678</td>
+                    <td>上海市嘉定区安亭镇国际汽车城核心贸易区步行街755号</td>
+                </tr>
+
+                <tr>
+                    <td>上海</td>
+                    <td>上海西上海奥杰汽车销售服务有限公司</td>
+                    <td>021-52828800</td>
+                    <td>上海市普陀区真北路2158号（近铜川路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海宝友汽车销售服务有限公司</td>
+                    <td>021-56120202</td>
+                    <td>上海市宝山区铁山路338号（近宝杨路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海东昌金桥豪迪汽车服务有限公司</td>
+                    <td>021-50325427</td>
+                    <td>上海浦东新区锦绣东路2053号（近川桥路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海奥汇汽车销售服务有限公司</td>
+                    <td>021-33736666</td>
+                    <td>上海市松江区沪松公路1610-A号</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海德辰汽车销售有限公司</td>
+                    <td>021-64893333</td>
+                    <td>上海市闵行区颛兴东路1280弄3号（都会路口）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海交运起腾汽车销售服务有限公司</td>
+                    <td>021-64419999</td>
+                    <td>上海市徐汇区枫林路858号（龙华中路口）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海永达奥诚汽车销售服务有限公司</td>
+                    <td>021-31156789</td>
+                    <td>上海市浦东新区申江路288号（近五洲大道口）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海永达奥诚中环汽车销售服务有限公司</td>
+                    <td>021-66226001</td>
+                    <td>上海市宝山区长江西路1139号（近江杨南路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海永达弘杰汽车销售服务有限公司</td>
+                    <td>021-31118888</td>
+                    <td>上海市浦东新区杨思路1279号（近东明路）</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海东联松奥汽车销售服务有限公司</td>
+                    <td>021-57777666</td>
+                    <td>上海市松江区北松公路6278号</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海骐润茂汽车销售有限公司</td>
+                    <td>021-57123000</td>
+                    <td>上海市奉贤区青村镇团青公路7239号</td>
+                </tr>
+                <tr>
+                    <td>上海</td>
+                    <td>上海五角场开隆汽车贸易有限公司</td>
+                    <td>021-52768888</td>
+                    <td>上海市杨浦区民约路98号（国和路口）</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://dongguan.auto.qq.com/js/publicJS/jquery.min.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/jquery.min3.2.1.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.min3.4.2.js"></script>
+<script src="http://guangzhou.auto.qq.com/js/swiper.animate.js"></script>
+<script src="http://act.yetcar.com/zxq_projectCode/yqmzdGD/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+    var swiper1 = new Swiper ('#swiper1', {
+        pagination : '.swiper-pagination',
+        loop : true,
+        autoplay : 3000,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    var swiper2 = new Swiper ('#swiper2', {
+        pagination : '.swiper-pagination',
+        loop : true,
+        autoplay : 3000,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    var swiper3 = new Swiper ('#swiper3', {
+        pagination : '.swiper-pagination',
+        loop : true,
+        autoplay : 3000,
+        prevButton:'.swiper-button-prev',
+        nextButton:'.swiper-button-next',
+    });
+    (function($){
+        $(window).load(function(){
+            $(".list").mCustomScrollbar({
+                scrollButtons:{
+                    enable:true
+                }
+            });
+        });
+    })(jQuery);
+    //车型
+    var GetBrand = function(brandid,resel){
+        var URL='http://www.yetcar.com/index.php?s=/Home/Data/getModels';
+        var Data= {
+            series_id:brandid
+        };
+        resel.html('<option value="0">-选择车型-</option>');
+        $.ajax({
+            type:"get",
+            url:URL,
+            data:Data,
+            async:true,
+            dataType:"jsonp",
+            success:function(data){
+                var dataArr=data.data;
+                for(var i=0;i<dataArr.length;i++){
+                    resel.append('<option value="'+dataArr[i].id+'">'+dataArr[i].name+'</option>')
+                }
+            }
+        })
+    };
+    GetBrand(8,$('#series_id'));
+    // 验证
+    $(function(){
+        var flag = true,sex='';
+        //性别
+        $('.ky').click(function () {
+            $('.ky').removeClass('active');
+            $(this).addClass('active');
+            sex = $(this).attr('data-sex');
+        });
+        $('#qr').click(function () {
+            $(this).addClass('active');
+        });
+        $("#submit").click(function() {
+            if(flag) {
+                var name=$("#name").val(),  //姓名
+                    tel=$("#tel").val(),           //电话
+                    series_id = $('#series_id').val(),  //车型
+                    brand_id = 8, //品牌
+                    act_id = 1355,   //活动id
+                    dealers=$('#dealers').val(),
+                    Url = "http://www.yetcar.com/index.php?s=/Home/GeneralActivity/baoming",
+                    Data= {
+                        name:name,
+                        phone:tel,
+                        brand_id:brand_id,
+                        series_id:series_id,
+                        sex: sex,
+                        dealers:dealers,
+                        act_id:act_id
+                    };
+                //判断填写是否正确
+                if(!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)){
+                    alert('请输入正确的中文名');
+                    return false;
+                }
+                if(sex==''){
+                    alert('请选择性别');
+                    return false;
+                }
+                if(!RegExp(/^(0|86|17951)?(13[0-9]|15[012356789]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(tel)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if(series_id==0){
+                    alert('请选择车型');
+                    return false;
+                }
+                if(dealers==0){
+                    alert('请选择经销商');
+                    return false;
+                }
+
+                //发送请求
+                $.ajax({
+                    type:"post",
+                    url:Url,
+                    data:Data,
+                    async:true,
+                    dataType:"jsonp",
+                    success:function(data){
+                        if(data.status==1){
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload();
+                        }else{
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+    });
+</script>
+<script src="http://guangzhou.auto.qq.com/js/supervise.js"></script>
+</html>

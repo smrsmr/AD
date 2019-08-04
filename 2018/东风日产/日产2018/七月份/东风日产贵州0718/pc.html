@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 不允许用户点击屏幕放大浏览 -->
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=1300" />
+    <title>摆平一切不平，逍客礼遇 激情一夏  3.58万 全新逍客“贷”回家</title>
+    <link rel="icon" type="image/x-icon" href="http://mat1.gtimg.com/www/icon/favicon2.ico">
+    <link rel="stylesheet" type="text/css" href="http://guangzhou.auto.qq.com/css/swiper-4.1.6.min.css"/>
+    <script src="http://guangzhou.auto.qq.com/js/swiper-4.1.6.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--<link href="http://guangzhou.auto.qq.com/2017web/jquery.mCustomScrollbar.css" rel="stylesheet" />-->
+</head>
+<style type="text/css">
+    *{padding: 0;margin: 0;}
+    html,body{font-family: "微软雅黑";font-size: 14px;}
+    body,h1,h2,h3,h4,h5,div,span,p,ul,ol,dl,dt,dd,a,input,img,select{margin: 0;padding: 0;list-style: none;border: 0;font-weight: normal;outline: none;}
+    .content{width: 100%;margin: auto;max-width: 1920px;margin: 0 auto;position: relative;}
+    .content>div{width: 100%;}
+    input,select{cursor: pointer;}
+    /*正式样式*/
+    .con1{height: 1202px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/163/86/209/13612318.jpg) center top no-repeat;}
+    .con2{height: 510px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/164/86/209/13612319.jpg) center top no-repeat;}
+    .con3{height: 1523px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/165/86/209/13612320.jpg) center top no-repeat;}
+    .con4{height: 882px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/166/86/209/13612321.jpg) center top no-repeat;}
+    .con5{height: 1033px;background: url(http://img1.gtimg.com/autoguangzhou/pics/hv1/167/86/209/13612322.jpg) center top no-repeat;}
+
+    .baoming{width: 1200px!important;height: auto;position: absolute;top: 1398px;left: 50%;margin-left: -600px;z-index: 300;}
+    .baoming .bmk{position: relative;width: 100%;height: 200px;background-size: 100%;margin-left: 0px;margin-bottom: 1637px;background: transparent;}
+    #name,#phone,select{box-sizing: border-box;width: 214px;height: 42px;margin-bottom: 20px;color: black;font-size: 18px;background: transparent;    vertical-align: top;}
+    #name,#city{margin-left: 200px;}
+    #phone{margin-left: 108px;width: 208px;}
+    #series_id{margin-left: 140px;width: 178px;}
+    #dealers{margin-left: 124px;width: 500px;}
+    select{margin-left: 170px;width: 210px;appearance:none;-moz-appearance:none;-webkit-appearance:none;-ms-appearance:none;-moz-appearance: none;}
+    #city,#dealers{margin-bottom: 10px;}
+    #button{width: 300px;height: 42px;margin-top: 5px;margin-left: 436px;background: transparent;}
+    /*正式样式结束*/
+    .footernew {width:910px;height:100px;color:#515151;text-align:center;font-size:12px;line-height:24px;margin:12px auto 20px auto;overflow:hidden;}
+    .footheight{height:60px;}
+    .footernew a {color:#515151;text-decoration:none;}
+    .footernew a.lchot {color:#bd0a01;}
+    .footernew a:hover {color:#bd0a01;text-decoration:underline;}
+    .footernew a:visited {color:#515151;}
+    .footernew div{width:546px; margin:0 auto;}
+    .footernew p{float:left;width:120px;height:50px;border:1px solid #d2d2d2;padding:0;line-height:20px; margin:6px;font-size:12px;}
+    .footernew .fl{float:left;padding:3px;}
+    .footernew .fr{float:right; width:72px;padding:5px 3px 0 3px;}
+    #cnzz_stat_icon_1260102516,
+    #cnzz_stat_icon_1260842227,
+    #cnzz_stat_icon_1260919928,
+    #cnzz_stat_icon_1255711023,
+    #cnzz_stat_icon_1260771396,
+    #cnzz_stat_icon_1261301380,
+    #cnzz_stat_icon_1261327484 {display: none;}
+    /*.swiper-slide-next{z-index: 1!important;}*/
+    /*.swiper-button-next, .swiper-container-rtl .swiper-button-prev{right: 14%;background-image: url(http://mat1.gtimg.com/autoguangzhou/images/ri-black.png);background-size: 100%;}*/
+    /*.swiper-button-prev, .swiper-container-rtl .swiper-button-next{left: 14%;background-image: url(http://mat1.gtimg.com/autoguangzhou/images/le-black.png);background-size: 100%;}*/
+    .pop{width: 100%;height: 16px;display: inline-block;color: black;cursor: pointer;margin: auto;text-align: center;}
+    #check{width: 16px;height: 16px;    vertical-align: bottom;}
+
+    /*轮播图*/
+    .swiper-slide{background-size: 100%;background-repeat: no-repeat;background-position: center;}
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        background-image: url(http://mat1.gtimg.com/autoguangzhou/images/ri-black.png);    background-size: 22px 80px;
+    }
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        background-image: url(http://mat1.gtimg.com/autoguangzhou/images/le-black.png);   background-size: 22px 80px;
+    }
+    /*滚动条*/
+    #scroll{width: 100%;height: 100%;overflow-y: scroll;}
+    #scroll h3{font-size: 14px;line-height: 19px;margin-top: 8px;}
+    #scroll p{    font-size: 12px;text-align: left;line-height: 18px;}
+    /*插件修改*/
+    /*长滑条*/
+    .mCSB_scrollTools .mCSB_draggerRail{
+        background-color: #000;
+    }
+    /*短滑块*/
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+        background-color: red;
+    }
+    .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+        background-color: rgba(0,0,0,0.9);
+    }
+    /*经销商*/
+    .tit{width: 100%;height: 50px;line-height: 50px;background: #c70028;color: white;}
+    .tit li{float: left;font-size: 26px;}
+    #scroll li{overflow: hidden;}
+    #scroll li h3,#scroll li p:nth-child(2),#scroll li p:nth-child(3){float: left;font-size: 18px;}
+    #scroll li{margin-top: 14px;}
+    .tit li:nth-child(1),#scroll li h3{width: 23%;padding-left: 2%;}
+    .tit li:nth-child(2),#scroll li p:nth-child(2){width: 55%;}
+    .tit li:nth-child(3),#scroll li p:nth-child(3){width: 20%;}
+</style>
+<body>
+<div class="content">
+    <div class="con1"></div>
+    <div class="con2"></div>
+    <div class="con3"></div>
+    <div class="con4"></div>
+    <div class="con5"></div>
+    <div class="baoming">
+        <div class="bmk">
+            <input type="text" name="name" id="name" value=""  placeholder="请输入您的姓名"/>
+            <input type="text" name="phone" id="phone" value="" placeholder="请输入您的电话" maxlength="11"/>
+            <select name="" id="series_id">
+            </select>
+            <select name="" id="city">
+                <option value="0">-请选择城市-</option>
+                <option value="350">贵阳市</option>
+                <option value="358">遵义市</option>
+                <option value="357">兴义市</option>
+                <option value="356">铜仁市</option>
+                <option value="355">六盘水市</option>
+                <option value="354">凯里市</option>
+                <option value="353 ">都匀市</option>
+                <option value="352">毕节市</option>
+                <option value="351">安顺市</option>
+            </select>
+            <select name="" id="dealers">
+                <option value="0">-请选择经销商-</option>
+            </select>
+            <span class="pop">
+					<div class="text">
+		                <input id="check" type="checkbox" checked="checked">
+		                <span>我同意<a style="color: black;text-decoration: none;" target="_blank" href="http://www.qq.com/privacy.htm">《隐私政策》</a></span>
+		            </div>
+	            </span>
+            <input type="button" id="button" value="" />
+        </div>
+        <div class="swiper-container " id="normal" style="width: 100%;height: 564px;overflow: hidden;margin: auto;margin-bottom: 300px;">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide" style="background-image:url(http://img1.gtimg.com/autodongguan/pics/hv1/175/136/199/12974830.jpg )"></div>
+                <div class="swiper-slide" style="background-image:url(http://act.yetcar.com/nissan/imagesgzqj/carimg1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(http://act.yetcar.com/nissanpc/imagesxa/bannerlb1-1.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(http://123.207.87.32/act/nissanpc/nissanSUVZJY/images/carxk.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(http://act.yetcar.com/nissan/2017/img/xiaoke.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(http://act.yetcar.com/nissanpc/imagesgy/qijun3.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(http://123.207.87.32/act/nissan/img/img0910/imgpc/jk4.jpg)"></div>
+            </div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div style="width: 90%;margin-left: 5%;height: 516px;overflow: hidden;">
+            <ul class="tit"><li>经销商</li><li>地址</li><li>销售热线</li></ul>
+            <div id="scroll">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--底部 开始-->
+<div class="foot" id="footer" bossZone="footer">
+    <div class="footernew" role="contentinfo" style="height:124px;">
+        <a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a href="http://www.tencent.com/about/corp.shtml" target="_blank" rel="nofollow">商务洽谈</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a> | <a href="http://kf.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">网站导航</a> | <a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini5.exe" rel="nofollow">客户端下载</a> | <a href="http://www.tencent.com/law/mo_law.shtml?/law/copyright.htm" target="_blank" rel="nofollow">版权所有</a><br>
+        <a href="http://szwljb.gov.cn/" target="_blank" rel="nofollow">深圳举报中心</a> | <a href="http://www.szga.gov.cn" target="_blank" rel="nofollow">深圳公安局</a> | <a href="http://www.qq.com/dzwfggcns.htm" target="_blank" rel="nofollow">抵制违法广告承诺书</a> | <a class="lchot" href="http://www.gdis.cn/admin/newstext_netsun.asp" target="_blank" rel="nofollow" style="color: #bd0a01;">阳光·绿色网络工程</a> | <a href="http://www.qq.com/copyright.shtml" target="_blank" rel="nofollow">版权保护投诉指引</a> | <a href="http://www.gdca.gov.cn/" target="_blank" rel="nofollow">广东省通管局</a><br>
+        <span style="line-height:30px;"><a href="http://www.qq.com/culture.shtml" target="_blank" rel="nofollow">粤网文[2017]6138-1456号</a> <a href="http://www.qq.com/internet_licence.htm" target="_blank" rel="nofollow">新出网证（粤）字010号</a> <a href="http://www.qq.com/cbst.shtml" target="_blank" rel="nofollow">网络视听许可证1904073号</a> 增值电信业务经营许可证：<a href="http://www.qq.com/icp.shtml" target="_blank" rel="nofollow">粤B2-20090059</a> <a href="http://www.qq.com/icp1.shtml" target="_blank" rel="nofollow">B2-20090028</a>
+		 </span><br>
+        <a href="http://www.qq.com/scio.htm" target="_blank" rel="nofollow">新闻信息服务许可证</a> <a href="http://www.qq.com/xwdz.shtml" target="_blank" rel="nofollow">粤府新函[2001]87号</a>
+        违法和不良信息举报电话：0755-83765566-9 <a style="" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002000001"><span>粤公网安备 44030002000001号</span><img style="vertical-align: text-bottom;"} src="http://mat1.gtimg.com/www/images/qq2012/icon_yuewangga1.png" width="16" height="16"></a><br>
+        <span style="font-family:Arial;">Copyright  1998 - 2017 Tencent. All Rights Reserved</span>
+    </div>
+</div>
+<div class="footernew footheight" style="width:1000px;" bossZone="footer">
+    <div style="width:680px;">
+        <p>
+            <span class="fl"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank" rel="nofollow"><img width="35" height="43" border="0" alt="经营性网站备案信息" src="http://mat1.qq.com/www/images/ind36.gif"></a></span>
+            <span class="fr"><a target="_blank" class="lcblack" href="http://www.hd315.gov.cn/beian/view.asp?bianhao=0272000112400002" target="_blank" rel="nofollow">经营性网站<br>
+				备案信息</a></span>
+        </p>
+        <p>
+            <span style="width:44px;" class="fl"><a href="http://www.12377.cn/" target="_blank" rel="nofollow"><img width="44" height="44" border="0" alt="中国互联网举报中心" src="http://mat1.gtimg.com/www/images/qq2012/buliang.png"></a></span>
+            <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.12377.cn/" target="_blank" rel="nofollow">中国互联网<br>
+				举报中心</a></span>
+        </p>
+        <p>
+            <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img width="44" height="42" border="0" alt="中国文明网传播文明" src="http://mat1.qq.com/www/images/allskin/wmlogo.gif"></a></span>
+            <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank" rel="nofollow">中国文明网<br>传播文明</a></span>
+        </p>
+        <p style="width:128px;height:52px;border:0;">
+            <span style="padding:0;" class="fl"><a href="https://ss.knet.cn/verifyseal.dll?sn=2010051300100001081&ct=df&a=1&pa=337337" target="_blank" rel="nofollow"><img border="0" alt="诚信网站" src="http://mat1.gtimg.com/www/images/qq2012/cxrz5.png"></a></span>
+        </p>
+        <p>
+            <span style="width:44px;" class="fl"><a href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank" rel="nofollow"><img src="http://mat1.gtimg.com/www/images/qq2012/gswj2015.jpg" title="深圳市市场监督管理局企业主体身份公示" alt="深圳市市场监督管理局企业主体身份公示"></a></span>
+            <span style="width:64px;" class="fr"><a class="lcblack" href="http://szcert.ebs.org.cn/6917b6fe-b844-4e12-97c5-85b8d1df30ed" target="_blank" rel="nofollow">工商网监<br>电子标识</a></span>
+        </p>
+    </div>
+</div>
+<a href="https://support.qq.com/products/4312" target="_blank" id="fankui" title="用户反馈" style="display:none" bossZone="fankui"></a>
+<a href="http://www.qq.com/sheweishouye.htm" target="_blank" id="homeSet" title="设为首页" style="display:none" bossZone="defaulthome"></a>
+<a href="javascript:void(0)" target="_self" id="toTop" title="返回顶部" style="display:none" bossZone="backtop"></a>
+<a href="http://dldir1.qq.com/dlomg/qqcom/mini/QQNewsMini6.exe" target="_self" id="minidown" title="腾讯网迷你版客户端下载" style="display:none" bossZone="minidown"></a>
+<!--底部 结束-->
+</body>
+<script src="http://mat1.gtimg.com/tech/css/huiyan/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var mes=[
+            {"name":"贵阳乾通","nameQC":"贵州乾通东旭汽车销售服务有限公司","nameCode":"J2601","city":"贵阳市","cityCode":"350","prov":"贵州省","provCode":"27","Ftel":"0851-3713222","Xtel":"0851-3813222","address":"贵阳市孟关国际汽贸城"},
+            {"name":"贵阳东风南方黔兴","nameQC":"贵州东风南方汽车销售服务有限公司","nameCode":"J2605","city":"贵阳市","cityCode":"350","prov":"贵州省","provCode":"27","Ftel":"0851-85116111","Xtel":"0851-85115111","address":"贵阳市贵黄大道前段31号"},
+            {"name":"遵义汇川","nameQC":"贵州遵义乾通东旭汽车销售服务有限公司","nameCode":"J2611","city":"遵义市","cityCode":"358","prov":"贵州省","provCode":"27","Ftel":"0851-28684011","Xtel":"0851-28455555","address":"贵州省遵义市汇川区董公寺镇210国道西侧"},
+            {"name":"凯里通源","nameQC":"贵州凯里经济开发区通源汽车销售有限公司","nameCode":"J2613","city":"凯里市","cityCode":"354","prov":"贵州省","provCode":"27","Ftel":"0855-8589777","Xtel":"0855-8589777","address":"贵州凯里经济开发区金源西大道经纬汽车城会展中心负二楼"},
+            {"name":"六盘水东风南方黔旺","nameQC":"贵州六盘水东风南方汽车销售服务有限公司","nameCode":"J2614","city":"六盘水市","cityCode":"355","prov":"贵州省","provCode":"27","Ftel":"0858-8165668","Xtel":"0858-8165111","address":"贵州省六盘水市红桥新区政府"},
+            {"name":"兴义恒信东顺","nameQC":"兴义市恒信东顺汽车销售服务有限公司","nameCode":"J2615","city":"兴义市","cityCode":"357","prov":"贵州省","provCode":"27","Ftel":"0859-3775222","Xtel":"0859-3734777","address":"贵州省兴义市木贾办事处（木贾物流园内）"},
+            {"name":"毕节佰润","nameQC":"贵州佰润汽车销售有限公司","nameCode":"J2616","city":"毕节市","cityCode":"352","prov":"贵州省","provCode":"27","Ftel":"0857-8915555","Xtel":"0857-8916666","address":"毕节市碧阳大道小坝路口旁"},
+            {"name":"安顺恒信东顺","nameQC":"安顺恒信东顺汽车销售服务有限公司","nameCode":"J2617","city":"安顺市","cityCode":"351","prov":"贵州省","provCode":"27","Ftel":"0853-3738555","Xtel":"0853-3738666","address":"贵州省安顺市西秀工业园区两六路"},
+            {"name":"铜仁恒信东顺万山","nameQC":"铜仁恒信东顺汽车销售服务有限公司","nameCode":"J2618","city":"铜仁市","cityCode":"356","prov":"贵州省","provCode":"27","Ftel":"0856-3235111","Xtel":"0856-3235111","address":"贵州省铜仁市万山区谢桥新区塘家寨村火焰塘村民组63号"},
+            {"name":"遵义东风南方黔发","nameQC":"贵州东风南方汽车销售服务有限公司遵义分公司","nameCode":"J2619","city":"遵义市","cityCode":"358","prov":"贵州省","provCode":"27","Ftel":"0852-7700033","Xtel":"0852-7700158","address":"贵州省遵义市遵义县龙坑镇中山社区宏达新苑"},
+            {"name":"都匀东风南方万胜","nameQC":"贵州东风南方汽车销售服务有限公司黔南州分公司","nameCode":"J2620","city":"都匀市","cityCode":"353","prov":"贵州省","provCode":"27","Ftel":"0854-8332299","Xtel":"0854-8333399","address":"贵州省都匀市开发区纬八西路南侧"},
+            {"name":"贵阳广汇华跃","nameQC":"贵州华跃汽车贸易服务有限公司","nameCode":"J2621","city":"贵阳市","cityCode":"350","prov":"贵州省","provCode":"27","Ftel":"0851-84721777","Xtel":"0851-84723222","address":"贵州省贵阳市金阳大道南段118号"},
+        ];
+        var l=mes.length,$li='';
+        for(var i=0;i<l;i++){
+            $li ='<li>'+
+                '<h3>'+mes[i].name+'</h3>'+
+                '<p>地址：'+mes[i].address+'</p>'+
+                '<p>电话：'+mes[i].tel+'</p>'+
+                '</li>'
+            $('#scroll>ul').append($li)
+        }
+        $('#city').change(function () {
+            $('#dealers').find('option:not(:first)').remove();
+            for(var i=0;i<l;i++){
+                if ($('#city option:checked').text()==mes[i].city){
+                    $('#dealers').append('<option value="'+mes[i].nameCode+'">'+mes[i].name+'</option>')
+                }
+            }
+        });
+        /*车型*/
+        var msg=[
+            {"SERIES_ID":"199","SERIES_NAME":"全新逍客","SERIES_NAME_EN":"全新逍客"},
+            {"SERIES_ID":"197","SERIES_NAME":"新楼兰","SERIES_NAME_EN":"new-murano"},
+            {"SERIES_ID":"205","SERIES_NAME":"新奇骏","SERIES_NAME_EN":"P32R"},
+            {"SERIES_ID":"21","SERIES_NAME":"逍客","SERIES_NAME_EN":"qashqai"},
+            {"SERIES_ID":"32","SERIES_NAME":"奇骏","SERIES_NAME_EN":"x-trail"},
+            {"SERIES_ID":"31","SERIES_NAME":"楼兰","SERIES_NAME_EN":"murano"},
+            {"SERIES_ID":"208","SERIES_NAME":"劲客","SERIES_NAME_EN":"P02F"},
+            {"SERIES_ID":"141","SERIES_NAME":"全新 GT-R","SERIES_NAME_EN":"newgtr"},
+            {"SERIES_ID":"17","SERIES_NAME":"玛驰","SERIES_NAME_EN":"march"},
+            {"SERIES_ID":"190","SERIES_NAME":"天籁公爵","SERIES_NAME_EN":"teana-vip"},
+            {"SERIES_ID":"191","SERIES_NAME":"途乐","SERIES_NAME_EN":"patrol"},
+            {"SERIES_ID":"194","SERIES_NAME":"蓝鸟","SERIES_NAME_EN":"蓝鸟"},
+            {"SERIES_ID":"20","SERIES_NAME":"骊威","SERIES_NAME_EN":"livina"},
+            {"SERIES_ID":"200","SERIES_NAME":"西玛","SERIES_NAME_EN":"Maxima"},
+            {"SERIES_ID":"201","SERIES_NAME":"新生代TIIDA","SERIES_NAME_EN":"new-tiida"},
+            {"SERIES_ID":"202","SERIES_NAME":"启辰T90 ",},
+            {"SERIES_ID":"203","SERIES_NAME":"全新天籁",},
+            {"SERIES_ID":"204","SERIES_NAME":"全新天籁公爵",},
+            {"SERIES_ID":"206","SERIES_NAME":"启辰M50V",},
+            {"SERIES_ID":"207","SERIES_NAME":"启辰D60",},
+            {"SERIES_ID":"209","SERIES_NAME":"全新T70","SERIES_NAME_EN":"全新T70"},
+            {"SERIES_ID":"210","SERIES_NAME":"全新途达","SERIES_NAME_EN":"TERRA"},
+            {"SERIES_ID":"24","SERIES_NAME":"新世代天籁","SERIES_NAME_EN":"teana"},
+            {"SERIES_ID":"26","SERIES_NAME":"轩逸经典","SERIES_NAME_EN":"sylphy"},
+            {"SERIES_ID":"28","SERIES_NAME":"阳光","SERIES_NAME_EN":"sunny"},
+            {"SERIES_ID":"29","SERIES_NAME":"新骐达","SERIES_NAME_EN":"tiida3"},
+            {"SERIES_ID":"30","SERIES_NAME":"新一代轩逸","SERIES_NAME_EN":"sylphy1"},
+            {"SERIES_ID":"33","SERIES_NAME":"贵士","SERIES_NAME_EN":"guest"},
+            {"SERIES_ID":"34","SERIES_NAME":"全新轩逸","SERIES_NAME_EN":"sylphy2"},
+            {"SERIES_ID":"70","SERIES_NAME":"启辰D50","SERIES_NAME_EN":"D50"},
+            {"SERIES_ID":"71","SERIES_NAME":"启辰R50","SERIES_NAME_EN":"R50"},
+            {"SERIES_ID":"72","SERIES_NAME":"骐达GTS","SERIES_NAME_EN":"gts"},
+        ]
+        var $opt1='<option value="0">-请选择车型-</option>';
+        for(var i=0,l=msg.length;i<l;i++){
+            $opt1 +='<option value="'+msg[i].SERIES_ID+'">'+msg[i].SERIES_NAME+'</option>'
+        }
+        $('#series_id').append($opt1)
+        /*轮播图*/
+        var swiper = new Swiper('#normal', {
+            //vertical
+            direction : 'horizontal',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            loop: true,
+            autoplay:true,
+        });
+        var flag = true;
+        $("input[type=button]").click(function() {
+            if (flag) {
+                var name = $('#name').val(), //姓名
+                    phone = $('#phone').val(), //电话
+                    series_id = $('#series_id').val(), //车型id
+                    dealers_code = $('#dealers').val(), //经销商编码
+                    dealers = $('#dealers option:checked').text(), //经销商
+                    car_name = $('#series_id option:checked').text(), //车型名
+                    brand_id = 11, //品牌id
+                    city = $('#city option:checked').text(), //城市名
+                    city_id =$('#city').val(), //城市id
+                    Url = "http://www.yetcar.com/index.php?s=/Home/Interface/currency_new";
+                var Data = {
+                    name: name,
+                    phone: phone,
+                    series_id: series_id,
+                    dealers_code: dealers_code,
+                    dealers: dealers,
+                    car_name: car_name,
+                    brand_id: brand_id,
+                    city: city,
+                    city_id: city_id,
+                    province: 27,
+                    detail_id: 176,
+//					type: 0, //测试
+//					smartcode: "A0000-000-000-00-00000", //测试
+                    type: 1,//正式
+                    smartcode: "A2018-1449-5728-2926-129341"//正式
+                };
+                //判断填写是否正确
+                if (name == '' || phone == '') {
+                    alert('信息没有填写完整');
+                    return false;
+                }
+                if (!name.match(/^[\u4e00-\u9fa5]{2,4}$/i)) {
+                    alert('请输入正确的中文名');
+                    return false;
+                };
+                if (!RegExp(/^(0|86|17951)?(13[0-9]|15[0-9]|17[0-9]|18[0-9]|14[57])[0-9]{8}$/).test(phone)) {
+                    alert('手机格式不正确');
+                    return false;
+                }
+                if (series_id == 0) {
+                    alert('请选择车型');
+                    return false;
+                }
+                if (city_id == 0) {
+                    alert('请选择城市');
+                    return false;
+                }
+                if (dealers_code == 0) {
+                    alert('请选择经销商');
+                    return false;
+                }
+                if(!$('#check').attr('checked')){
+                    alert('请同意《隐私政策》');
+                    return false;
+                }
+                //发送请求
+                $.ajax({
+                    type: "post",
+                    url: Url,
+                    data: Data,
+                    async: true,
+                    dataType: "jsonp",
+                    success: function(data) {
+                        if (data.status == 1) {
+                            alert('恭喜你，报名成功！');
+                            flag = false;
+                            window.location.reload()
+                        } else {
+                            alert("很抱歉，你报名失败。");
+                        }
+                    }
+                });
+            } else {
+                alert("请勿重复提交！")
+            }
+        })
+        /*---报名结束---*/
+    })
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260102516'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260102516%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260842227'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260842227%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260919928'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260919928%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255711023'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1255711023%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1260771396'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260771396%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261301380'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261301380%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1261327484'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1261327484%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</html>
