@@ -1,4 +1,6 @@
 //操作mongodb
+// 配置本地数据库 并且创建服务
+mongod.exe --logpath D:\mongodb\logs\mongodb.log --logappend --dbpath D:\mongodb\data --directoryperdb --serviceName MongoDB --install
 //链接本地数据库
 mongod --dbpath E:\web\mongodb
 cmd mongo

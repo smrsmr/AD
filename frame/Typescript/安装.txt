@@ -1,6 +1,0 @@
-// 全局安装typescript
-npm install typescript -g
-// 这个主要是解决模块的声明文件问题
-npm install @types/node --dev-save
-//生成tsconfig.json
-tsc --inti
